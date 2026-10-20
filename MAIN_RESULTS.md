@@ -57,7 +57,7 @@ where
 
 ```math
 C_{\mathrm{GM}}(W,H)
-=\frac{\left[\operatorname{tr}\!\left\{
+=\frac{\left[\mathrm{tr}\!\left\{
 (H^{-1/2}WH^{-1/2})^{1/2}\right\}\right]^2}{D-1}.
 ```
 
