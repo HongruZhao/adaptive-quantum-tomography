@@ -25,7 +25,9 @@ build/
 dist/
 *.whl
 simulation/reproduced_figures/
+simulation/reproduced_figures_*/
 simulation/results/smoke/
+simulation/results/smoke_*/
 simulation/results/new_paper/
 
 # Local logs and credentials; committed saved results are retained
