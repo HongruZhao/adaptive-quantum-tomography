@@ -1,0 +1,301 @@
+{
+  "status": "PASS",
+  "replications": 10000,
+  "base_loss_run_receipt_sha256": "edce242a2cb638a03e6e1036a208806b207ae0c62b09c469b4acc9f4c6126d6b",
+  "base_loss_data_unchanged": true,
+  "fresh_design_receipt": {
+    "status": "PASS",
+    "completed_utc": "2026-10-17T16:02:25.802011+00:00",
+    "replications": 10000,
+    "root_seed_unchanged": true,
+    "all_original_loss_streams_used": true,
+    "source_sha256": {
+      "src/adaptive_tomography/pure.py": "a1f3fe5aa5bdc7c79230303bb88883e2972a41ebc6f67b2d3e0b1b5123023baf",
+      "src/adaptive_tomography/estimators.py": "81f3b03f7bdf2a9947ffaa315bb8d5fb86a6a0ba3d77b1c30f22975befb33791",
+      "src/adaptive_tomography/schedules.py": "dd250aa425c8c446057a1e4c46734cd9d622e4c8f33ecd20058564ed2586f9c9",
+      "src/adaptive_tomography/design.py": "866e2811d9d061298a0b0d6046df4a52ab1f46278b4c683f9986dd43552843f5"
+    },
+    "base_output_sha256": {
+      "results.json": "d9496566e25279f885c5cddac10b9476cf72443af1219caa68f3389129ba64ed",
+      "samples.npz": "0d3b817f181b389c72f5b6fb3c23c9ee7275ee1cf8a51edcd9abd5757a16c213",
+      "apparatus.npz": "27a1892a4caeae4722ab4053301d9c468dff18e0523878e2b67746410319fd24"
+    },
+    "output_sha256": {
+      "pure_design_samples.npz": "5ca85d70fe8d748958744ddc21d0c58c437ab7b072438b9b3c937bef593ba1da",
+      "pure_design_summary.json": "b4335fd051688f0c492ddc91fc8628fa9e57d6ae47bd44b3209aa8befada07f4"
+    },
+    "Python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+    "NumPy": "1.26.4",
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "started_utc": "2026-10-17T15:53:14.433611+00:00",
+    "seconds": 551.251038,
+    "fresh_exact_Born_replay": true,
+    "all_saved_pure_losses_reproduced": true,
+    "all_saved_pure_tangent_errors_reproduced": true,
+    "maximum_absolute_loss_replay_difference": 8.972378395810665e-11,
+    "maximum_absolute_tangent_replay_difference": 9.206774231884651e-12,
+    "replay_comparison_tolerance": {
+      "rtol": 1e-10,
+      "atol": 1e-10
+    },
+    "original_individual_count_records_saved": false,
+    "replay_evidence": "Original random streams and algorithms replayed; every stored loss and tangent error matches to the stated tolerance.",
+    "estimator_sources_identical_to_original_run": true,
+    "executed_source_archives": {
+      "src/adaptive_tomography/design.py": "verification/EXECUTED_design.py"
+    },
+    "source_hash_scope": "Hashes of the full replay executed before the portable module-path lookup fix; the executed design module is archived.",
+    "current_portable_source_receipt": "verification/PORTABILITY_REBINDING.json"
+  },
+  "design_summary": {
+    "replications": 10000,
+    "horizons": [
+      256,
+      512,
+      1020,
+      2064,
+      3078,
+      4070,
+      5169,
+      6182,
+      7105,
+      8164,
+      9197,
+      10157,
+      11217,
+      12387,
+      13409,
+      14232,
+      15408,
+      16384
+    ],
+    "columns": [
+      "current_bures",
+      "average_bures"
+    ],
+    "aggregation": "Arithmetic mean of the separately inverted per-record information criteria",
+    "seed_sequence_pattern": [
+      2026101602,
+      3,
+      1,
+      "replicate"
+    ],
+    "replicate_indices": [
+      0,
+      9999
+    ],
+    "same_records_as_pure_loss_panel": true,
+    "seed_selection": false,
+    "smoothing_or_monotonicity_enforcement": false,
+    "pointwise_MC_error_band_multiplier": 1.96,
+    "rows": [
+      {
+        "n": 256,
+        "mean": [
+          3.069164539725927,
+          3.065661226795987
+        ],
+        "mc_se": [
+          0.0006909853344324934,
+          0.00040660136655683266
+        ]
+      },
+      {
+        "n": 512,
+        "mean": [
+          3.038217981478709,
+          3.0438931906513176
+        ],
+        "mc_se": [
+          0.00047089607112036865,
+          0.000325695362313632
+        ]
+      },
+      {
+        "n": 1020,
+        "mean": [
+          3.019935064820583,
+          3.0277113080894957
+        ],
+        "mc_se": [
+          0.0002634832648768787,
+          0.00025134509036406274
+        ]
+      },
+      {
+        "n": 2064,
+        "mean": [
+          3.0099228049132947,
+          3.016006927268164
+        ],
+        "mc_se": [
+          0.00012461004565529892,
+          0.00016432730470632379
+        ]
+      },
+      {
+        "n": 3078,
+        "mean": [
+          3.0066941977246633,
+          3.01143762131862
+        ],
+        "mc_se": [
+          8.198469125097464e-05,
+          0.00012236604908424725
+        ]
+      },
+      {
+        "n": 4070,
+        "mean": [
+          3.005066270542427,
+          3.0089339293965613
+        ],
+        "mc_se": [
+          6.0880011762681554e-05,
+          9.681932789809772e-05
+        ]
+      },
+      {
+        "n": 5169,
+        "mean": [
+          3.003941932226999,
+          3.0071943003209665
+        ],
+        "mc_se": [
+          4.6004138137776807e-05,
+          7.831032036877586e-05
+        ]
+      },
+      {
+        "n": 6182,
+        "mean": [
+          3.003283883195695,
+          3.0060995329599183
+        ],
+        "mc_se": [
+          3.871502270622279e-05,
+          6.651074439215752e-05
+        ]
+      },
+      {
+        "n": 7105,
+        "mean": [
+          3.0028601685737515,
+          3.005357468957467
+        ],
+        "mc_se": [
+          3.4051277773536204e-05,
+          5.85322049209944e-05
+        ]
+      },
+      {
+        "n": 8164,
+        "mean": [
+          3.0024894082198554,
+          3.0047026967801713
+        ],
+        "mc_se": [
+          2.963558512529062e-05,
+          5.150465708398774e-05
+        ]
+      },
+      {
+        "n": 9197,
+        "mean": [
+          3.0022123429710414,
+          3.004203425929889
+        ],
+        "mc_se": [
+          2.5880526281342524e-05,
+          4.609180403035636e-05
+        ]
+      },
+      {
+        "n": 10157,
+        "mean": [
+          3.0020266348152456,
+          3.003826830993174
+        ],
+        "mc_se": [
+          2.3798922146377245e-05,
+          4.2003189195926325e-05
+        ]
+      },
+      {
+        "n": 11217,
+        "mean": [
+          3.001827495278071,
+          3.003483370858463
+        ],
+        "mc_se": [
+          2.104799811420354e-05,
+          3.8290768693318214e-05
+        ]
+      },
+      {
+        "n": 12387,
+        "mean": [
+          3.001651399568942,
+          3.0031689140622326
+        ],
+        "mc_se": [
+          1.8980263024919517e-05,
+          3.491022796419022e-05
+        ]
+      },
+      {
+        "n": 13409,
+        "mean": [
+          3.001526752724576,
+          3.002937033257919
+        ],
+        "mc_se": [
+          1.7304725567255944e-05,
+          3.240947672360275e-05
+        ]
+      },
+      {
+        "n": 14232,
+        "mean": [
+          3.0014374467766487,
+          3.0027741169302646
+        ],
+        "mc_se": [
+          1.6233397151899412e-05,
+          3.064748199371164e-05
+        ]
+      },
+      {
+        "n": 15408,
+        "mean": [
+          3.001337686257747,
+          3.0025710910968892
+        ],
+        "mc_se": [
+          1.5227742986659574e-05,
+          2.8457910999283892e-05
+        ]
+      },
+      {
+        "n": 16384,
+        "mean": [
+          3.001249642822257,
+          3.0024237217381327
+        ],
+        "mc_se": [
+          1.4157989174482831e-05,
+          2.6862654173799018e-05
+        ]
+      }
+    ]
+  },
+  "figure_sha256": {
+    "source/paper/ejs/figures/algorithm3_bures.pdf": "da33e5e21de7ef3e80c976f7d4add5bb3236ad5676823ba2c37dfddda66d4d1a",
+    "source/paper/ejs/figures/algorithm3_bures.png": "c2946b6ee328130af4f1059f9d72eb01e209bbf1025223af5a9778fe1fa050fb",
+    "source/paper/ejs/figures/mixed_four_plots.pdf": "b4abe0e3c4694d2c9e052bcddcb8220e1eb0fb929f1789f171c1eb17e97bbf97",
+    "source/paper/ejs/figures/same_records_covariance.pdf": "556a38ced27418640cad736fc82a650a5718e0ef3aedbbe7370937aae8ab5497"
+  },
+  "Figure_1_information_panels_single_records": true,
+  "Figure_2_information_panel_all_original_loss_streams": true,
+  "Figure_2_loss_panel_numerical_values_unchanged": true
+}

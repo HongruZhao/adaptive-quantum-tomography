@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-10-17T16:02:25.802011+00:00",
+  "replications": 10000,
+  "root_seed_unchanged": true,
+  "all_original_loss_streams_used": true,
+  "source_sha256": {
+    "src/adaptive_tomography/pure.py": "a1f3fe5aa5bdc7c79230303bb88883e2972a41ebc6f67b2d3e0b1b5123023baf",
+    "src/adaptive_tomography/estimators.py": "81f3b03f7bdf2a9947ffaa315bb8d5fb86a6a0ba3d77b1c30f22975befb33791",
+    "src/adaptive_tomography/schedules.py": "dd250aa425c8c446057a1e4c46734cd9d622e4c8f33ecd20058564ed2586f9c9",
+    "src/adaptive_tomography/design.py": "866e2811d9d061298a0b0d6046df4a52ab1f46278b4c683f9986dd43552843f5"
+  },
+  "base_output_sha256": {
+    "results.json": "d9496566e25279f885c5cddac10b9476cf72443af1219caa68f3389129ba64ed",
+    "samples.npz": "0d3b817f181b389c72f5b6fb3c23c9ee7275ee1cf8a51edcd9abd5757a16c213",
+    "apparatus.npz": "27a1892a4caeae4722ab4053301d9c468dff18e0523878e2b67746410319fd24"
+  },
+  "output_sha256": {
+    "pure_design_samples.npz": "5ca85d70fe8d748958744ddc21d0c58c437ab7b072438b9b3c937bef593ba1da",
+    "pure_design_summary.json": "b4335fd051688f0c492ddc91fc8628fa9e57d6ae47bd44b3209aa8befada07f4"
+  },
+  "Python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+  "NumPy": "1.26.4",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "started_utc": "2026-10-17T15:53:14.433611+00:00",
+  "seconds": 551.251038,
+  "fresh_exact_Born_replay": true,
+  "all_saved_pure_losses_reproduced": true,
+  "all_saved_pure_tangent_errors_reproduced": true,
+  "maximum_absolute_loss_replay_difference": 8.972378395810665e-11,
+  "maximum_absolute_tangent_replay_difference": 9.206774231884651e-12,
+  "replay_comparison_tolerance": {
+    "rtol": 1e-10,
+    "atol": 1e-10
+  },
+  "original_individual_count_records_saved": false,
+  "replay_evidence": "Original random streams and algorithms replayed; every stored loss and tangent error matches to the stated tolerance.",
+  "estimator_sources_identical_to_original_run": true
+}

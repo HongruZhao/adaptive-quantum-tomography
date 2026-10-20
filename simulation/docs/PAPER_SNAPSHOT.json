@@ -1,0 +1,37 @@
+{
+  "prepared_client_date": "2026-10-18",
+  "recorded_utc": "2026-10-19T00:54:39.431490+00:00",
+  "title": "Adaptive quantum tomography by least squares with optimal asymptotic covariance",
+  "paper_authors": [
+    "Hongru Zhao",
+    "Robert Oliver VandenBerg"
+  ],
+  "documents": {
+    "main": {
+      "filename": "main.pdf",
+      "pages": 33,
+      "sha256": "facbe72e81fa184514cbe4185315c8de547674f62b6b03e21df03517744ffcd1"
+    },
+    "supplement": {
+      "filename": "supplement.pdf",
+      "pages": 26,
+      "sha256": "ad4dbf219654e4f28747eca8998f297aad0090063ce5f9a1fc252350602b6495"
+    }
+  },
+  "main_appendices": [
+    "A: Pure-state geometry",
+    "B: Conditional likelihood for the adaptive Gill-Massar bound"
+  ],
+  "supplement_parts": {
+    "I": "S1-S2: proofs for the main article",
+    "II": "S3-S8: supporting results; S9-S10: computational and numerical reproducibility"
+  },
+  "code_archives": {
+    "lean": "adaptive_quantum_tomography_main_paper_lean_20261018.zip",
+    "python": "adaptive_quantum_tomography_python_20261018.zip"
+  },
+  "mathematics_and_proof_arguments_unchanged": true,
+  "PDF_changes_for_this_documentation_edition": "Code-archive filenames in existing pink availability paragraphs; latest review round adds two pinpoint purple corrections on main p. 8 and supplement p. 17.",
+  "public_repository_URL": "To be supplied by the authors.",
+  "review_round": "Second external review, 2026-10-18; mathematical statements, proof arguments, numbering and Lean unchanged."
+}

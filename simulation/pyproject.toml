@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adaptive-quantum-tomography"
+version = "1.2.0"
+description = "Reproducible simulations of adaptive least-squares quantum tomography"
+readme = "README.md"
+requires-python = ">=3.9,<3.13"
+license = {text = "MIT"}
+authors = [{name = "Hongru Zhao"}]
+dependencies = ["numpy==1.26.4", "matplotlib==3.9.4"]
+
+[project.scripts]
+adaptive-tomography = "adaptive_tomography.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,108 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-10-17T16:03:13.537237+00:00",
+  "commands": [
+    {
+      "command": [
+        "<machine-local path omitted>",
+        "-B",
+        "-m",
+        "pip",
+        "wheel",
+        "--no-deps",
+        "--no-build-isolation",
+        "--wheel-dir",
+        "<machine-local path omitted>",
+        "."
+      ],
+      "exit_code": 0,
+      "log": "wheel_build.log"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "pip",
+        "install",
+        "--no-deps",
+        "--no-compile",
+        "--target",
+        "<machine-local path omitted>",
+        "<machine-local path omitted>"
+      ],
+      "exit_code": 0,
+      "log": "wheel_install.log"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "<machine-local path omitted>",
+        "-v"
+      ],
+      "exit_code": 0,
+      "log": "wheel_tests.log"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "adaptive_tomography",
+        "run",
+        "--config",
+        "<machine-local path omitted>",
+        "--output",
+        "<machine-local path omitted>"
+      ],
+      "exit_code": 0,
+      "log": "wheel_run.log"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "adaptive_tomography",
+        "design",
+        "--results",
+        "<machine-local path omitted>"
+      ],
+      "exit_code": 0,
+      "log": "wheel_replay.log"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "-m",
+        "adaptive_tomography",
+        "plot",
+        "--results",
+        "<machine-local path omitted>",
+        "--output",
+        "<machine-local path omitted>"
+      ],
+      "exit_code": 0,
+      "log": "wheel_plot.log"
+    }
+  ],
+  "tests_passed": 37,
+  "wheel": "<machine-local path omitted>",
+  "wheel_sha256": "5210371099a2aa4e8e94aa8b7123ce7e020382d0ac04d1efd32602c4b93e7c2f",
+  "isolated_wheel_run_replay_and_plot": true,
+  "module_hashes_nonempty_and_valid": true,
+  "effective_configuration_digest_valid": true,
+  "base_receipt_remains_valid_after_design_replay": true,
+  "dependency_downloads": false,
+  "simulation": "Four-replicate installation smoke; not the paper data",
+  "final_test_file_sha256": "ae2bbb6b9dd94ec4d6f9c1d17937ba251da50818cb271995ae9e0d01a7508a10",
+  "final_tests_include_source_and_effective_config_digest_assertions": true,
+  "_github_preparation_note": "Privacy-trimmed export of an inherited receipt; machine-local paths omitted. Raw logs are retained locally, not bundled. This is not a new execution receipt.",
+  "_source_receipt_sha256": "1f72aa846bf6dc1c961473df8558fa9ed585430d19d8f4eb5cea866e87898e81"
+}

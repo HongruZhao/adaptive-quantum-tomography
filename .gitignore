@@ -1,0 +1,36 @@
+# Operating system and editors
+.DS_Store
+.AppleDouble/
+*~
+*.swp
+.vscode/
+.idea/
+
+# Lean generated objects and dependencies
+.lake/
+*.olean
+*.ilean
+*.trace
+lean/verification/reproduction/
+
+# Python environments, bytecode, packaging and transient results
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+build/
+dist/
+*.whl
+simulation/reproduced_figures/
+simulation/results/smoke/
+simulation/results/new_paper/
+
+# Local logs and credentials; committed saved results are retained
+*.log
+.env
+.env.*
+*.pem
+*.key

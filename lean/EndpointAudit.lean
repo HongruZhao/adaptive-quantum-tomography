@@ -1,0 +1,8978 @@
+import AdaptiveTomography
+
+#check QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1
+#check QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1_mixed
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1_mixed
+#check QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1_pure
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1_pure
+#check QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1_pure_normalized
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1_pure_normalized
+
+set_option pp.universes false
+
+#eval IO.println "CURRENT_AUDIT_0_QubitOracle.AdaptiveDesign.P1Weighted.p1_main"
+#check QubitOracle.AdaptiveDesign.P1Weighted.p1_main
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.p1_main
+
+#eval IO.println "CURRENT_AUDIT_1_QubitOracle.AdaptiveDesign.P1Weighted.positive_batches_consistency_information"
+#check QubitOracle.AdaptiveDesign.P1Weighted.positive_batches_consistency_information
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.positive_batches_consistency_information
+
+#eval IO.println "CURRENT_AUDIT_2_QubitOracle.AdaptiveDesign.P1Weighted.controller_normal"
+#check QubitOracle.AdaptiveDesign.P1Weighted.controller_normal
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.controller_normal
+
+#eval IO.println "CURRENT_AUDIT_3_QubitOracle.AdaptiveDesign.P1Weighted.completed_batches_normal"
+#check QubitOracle.AdaptiveDesign.P1Weighted.completed_batches_normal
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.completed_batches_normal
+
+#eval IO.println "CURRENT_AUDIT_4_QubitOracle.AdaptiveDesign.P1Weighted.controller_eventually_eq"
+#check QubitOracle.AdaptiveDesign.P1Weighted.controller_eventually_eq
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.controller_eventually_eq
+
+#eval IO.println "CURRENT_AUDIT_5_QubitOracle.AdaptiveDesign.P1Weighted.covariance_eq_information_inv"
+#check QubitOracle.AdaptiveDesign.P1Weighted.covariance_eq_information_inv
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.covariance_eq_information_inv
+
+#eval IO.println "CURRENT_AUDIT_6_QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_consistency_and_information"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_consistency_and_information
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_consistency_and_information
+
+#eval IO.println "CURRENT_AUDIT_7_QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_actualBorn_information"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_actualBorn_information
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_actualBorn_information
+
+#eval IO.println "CURRENT_AUDIT_8_QubitOracle.AdaptiveDesign.TangentGLS.phasePair_optimalVariance"
+#check QubitOracle.AdaptiveDesign.TangentGLS.phasePair_optimalVariance
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.phasePair_optimalVariance
+
+#eval IO.println "CURRENT_AUDIT_9_QubitOracle.FinitePOVM"
+#check QubitOracle.FinitePOVM
+#print axioms QubitOracle.FinitePOVM
+
+#eval IO.println "CURRENT_AUDIT_10_QubitOracle.AdaptiveDesign.P1Weighted.probability"
+#check QubitOracle.AdaptiveDesign.P1Weighted.probability
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.probability
+
+#eval IO.println "CURRENT_AUDIT_11_QubitOracle.AdaptiveDesign.GeneralPOVM.bornProbability"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.bornProbability
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.bornProbability
+
+#eval IO.println "CURRENT_AUDIT_12_QubitOracle.referenceFisher"
+#check QubitOracle.referenceFisher
+#print axioms QubitOracle.referenceFisher
+
+#eval IO.println "CURRENT_AUDIT_13_QubitOracle.qubitClassicalFisher"
+#check QubitOracle.qubitClassicalFisher
+#print axioms QubitOracle.qubitClassicalFisher
+
+#eval IO.println "CURRENT_AUDIT_14_QubitOracle.AdaptiveDesign.TangentGLS.tangentSpace"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentSpace
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentSpace
+
+#eval IO.println "CURRENT_AUDIT_15_QubitOracle.AdaptiveDesign.SequentialRidgeController.batchBoundary"
+#check QubitOracle.AdaptiveDesign.SequentialRidgeController.batchBoundary
+#print axioms QubitOracle.AdaptiveDesign.SequentialRidgeController.batchBoundary
+
+#eval IO.println "CURRENT_AUDIT_16_QubitOracle.AdaptiveDesign.SequentialRidgeController.batchRefresh"
+#check QubitOracle.AdaptiveDesign.SequentialRidgeController.batchRefresh
+#print axioms QubitOracle.AdaptiveDesign.SequentialRidgeController.batchRefresh
+
+#eval IO.println "CURRENT_AUDIT_17_QubitOracle.AdaptiveDesign.SequentialRidgeController.batchRefresh_lastRefresh_tendsto"
+#check QubitOracle.AdaptiveDesign.SequentialRidgeController.batchRefresh_lastRefresh_tendsto
+#print axioms QubitOracle.AdaptiveDesign.SequentialRidgeController.batchRefresh_lastRefresh_tendsto
+
+#eval IO.println "CURRENT_AUDIT_18_QubitOracle.AdaptiveDesign.SequentialRidgeController.consistent_estimate_at_batch_refresh"
+#check QubitOracle.AdaptiveDesign.SequentialRidgeController.consistent_estimate_at_batch_refresh
+#print axioms QubitOracle.AdaptiveDesign.SequentialRidgeController.consistent_estimate_at_batch_refresh
+
+#eval IO.println "CURRENT_AUDIT_19_QubitOracle.AdaptiveDesign.P1.batchEndpoint"
+#check QubitOracle.AdaptiveDesign.P1.batchEndpoint
+#print axioms QubitOracle.AdaptiveDesign.P1.batchEndpoint
+
+#eval IO.println "CURRENT_AUDIT_20_QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.HermitianSpace"
+#check QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.HermitianSpace
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.HermitianSpace
+
+#eval IO.println "CURRENT_AUDIT_21_QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.inner_eq_trace"
+#check QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.inner_eq_trace
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.inner_eq_trace
+
+#eval IO.println "CURRENT_AUDIT_22_QubitOracle.AdaptiveDesign.ProbabilityCalculus.TightNorm"
+#check QubitOracle.AdaptiveDesign.ProbabilityCalculus.TightNorm
+#print axioms QubitOracle.AdaptiveDesign.ProbabilityCalculus.TightNorm
+
+#eval IO.println "CURRENT_AUDIT_23_QubitOracle.AdaptiveDesign.TangentGLS.OptimalVarianceStatement"
+#check QubitOracle.AdaptiveDesign.TangentGLS.OptimalVarianceStatement
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.OptimalVarianceStatement
+
+#eval IO.println "CURRENT_AUDIT_24_QubitOracle.blochNormSq"
+#check QubitOracle.blochNormSq
+#print axioms QubitOracle.blochNormSq
+
+#eval IO.println "CURRENT_AUDIT_25_QubitOracle.qubitProbability"
+#check QubitOracle.qubitProbability
+#print axioms QubitOracle.qubitProbability
+
+#eval IO.println "CURRENT_AUDIT_26_QubitOracle.qubitSLDFisherInv"
+#check QubitOracle.qubitSLDFisherInv
+#print axioms QubitOracle.qubitSLDFisherInv
+
+#eval IO.println "CURRENT_AUDIT_27_QubitOracle.AdaptiveDesign.P1Weighted.fisher"
+#check QubitOracle.AdaptiveDesign.P1Weighted.fisher
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.fisher
+
+#eval IO.println "CURRENT_AUDIT_28_QubitOracle.AdaptiveDesign.TangentGLS.tangentVector"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentVector
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentVector
+
+#eval IO.println "CURRENT_AUDIT_29_QubitOracle.AdaptiveDesign.TangentGLS.tangentVector_orthogonal"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentVector_orthogonal
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentVector_orthogonal
+
+#eval IO.println "CURRENT_AUDIT_30_QubitOracle.AdaptiveDesign.GeneralPOVM.labChartProbability_hasDerivAt_zero"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.labChartProbability_hasDerivAt_zero
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.labChartProbability_hasDerivAt_zero
+
+#eval IO.println "CURRENT_AUDIT_31_QubitOracle.AdaptiveDesign.GeneralPOVM.actualBornFisher_eq_fisher"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.actualBornFisher_eq_fisher
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.actualBornFisher_eq_fisher
+
+#eval IO.println "CURRENT_AUDIT_32_QubitOracle.sldFisher"
+#check QubitOracle.sldFisher
+#print axioms QubitOracle.sldFisher
+
+#eval IO.println "CURRENT_AUDIT_33_QubitOracle.modelClassicalFisher"
+#check QubitOracle.modelClassicalFisher
+#print axioms QubitOracle.modelClassicalFisher
+
+#eval IO.println "CURRENT_AUDIT_34_QubitOracle.AdaptiveDesign.GeneralPOVM.weightedGram_transport"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.weightedGram_transport
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.weightedGram_transport
+
+#eval IO.println "CURRENT_AUDIT_35_QubitOracle.AdaptiveDesign.GeneralPOVM.fisher_of_overlap_one"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.fisher_of_overlap_one
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.fisher_of_overlap_one
+
+#eval IO.println "CURRENT_AUDIT_36_QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.bind_scoreEnergy"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.bind_scoreEnergy
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.bind_scoreEnergy
+
+#eval IO.println "CURRENT_AUDIT_37_QubitOracle.Paper.PureMultilevelLossConstants.pureProjectorSquaredBures_eq_two_sub_two_sqrt_fidelity"
+#check QubitOracle.Paper.PureMultilevelLossConstants.pureProjectorSquaredBures_eq_two_sub_two_sqrt_fidelity
+#print axioms QubitOracle.Paper.PureMultilevelLossConstants.pureProjectorSquaredBures_eq_two_sub_two_sqrt_fidelity
+
+#eval IO.println "CURRENT_AUDIT_38_QubitOracle.rankOne_reference_gillMassar"
+#check QubitOracle.rankOne_reference_gillMassar
+#print axioms QubitOracle.rankOne_reference_gillMassar
+
+#eval IO.println "CURRENT_AUDIT_39_QubitOracle.qubit_interior_gillMassar"
+#check QubitOracle.qubit_interior_gillMassar
+#print axioms QubitOracle.qubit_interior_gillMassar
+
+#eval IO.println "CURRENT_AUDIT_40_QubitOracle.AdaptiveDesign.P1Weighted.inverse_trace_bound"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverse_trace_bound
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverse_trace_bound
+
+#eval IO.println "CURRENT_AUDIT_41_QubitOracle.AdaptiveDesign.FiniteRegularOracle.general_adaptive_oracle_qfi"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.general_adaptive_oracle_qfi
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.general_adaptive_oracle_qfi
+
+#eval IO.println "CURRENT_AUDIT_42_QubitOracle.AdaptiveDesign.OracleRisk.mixed_oracle_criterion"
+#check QubitOracle.AdaptiveDesign.OracleRisk.mixed_oracle_criterion
+#print axioms QubitOracle.AdaptiveDesign.OracleRisk.mixed_oracle_criterion
+
+#eval IO.println "CURRENT_AUDIT_43_QubitOracle.Paper.matrixTraceNorm_qubitDensityMatrix_sub"
+#check QubitOracle.Paper.matrixTraceNorm_qubitDensityMatrix_sub
+#print axioms QubitOracle.Paper.matrixTraceNorm_qubitDensityMatrix_sub
+
+#eval IO.println "CURRENT_AUDIT_44_QubitOracle.Paper.qubitDensityMatrix_sub_hilbertSchmidtSq"
+#check QubitOracle.Paper.qubitDensityMatrix_sub_hilbertSchmidtSq
+#print axioms QubitOracle.Paper.qubitDensityMatrix_sub_hilbertSchmidtSq
+
+#eval IO.println "CURRENT_AUDIT_45_QubitOracle.AdaptiveDesign.P1Weighted.residual_coordinate_mean"
+#check QubitOracle.AdaptiveDesign.P1Weighted.residual_coordinate_mean
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.residual_coordinate_mean
+
+#eval IO.println "CURRENT_AUDIT_46_QubitOracle.AdaptiveDesign.P1Weighted.residual_second_moment"
+#check QubitOracle.AdaptiveDesign.P1Weighted.residual_second_moment
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.residual_second_moment
+
+#eval IO.println "CURRENT_AUDIT_47_QubitOracle.AdaptiveDesign.P1Weighted.estimate_normalEquation"
+#check QubitOracle.AdaptiveDesign.P1Weighted.estimate_normalEquation
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.estimate_normalEquation
+
+#eval IO.println "CURRENT_AUDIT_48_QubitOracle.AdaptiveDesign.P1Weighted.ridge_posDef"
+#check QubitOracle.AdaptiveDesign.P1Weighted.ridge_posDef
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.ridge_posDef
+
+#eval IO.println "CURRENT_AUDIT_49_QubitOracle.AdaptiveDesign.P1Weighted.weight"
+#check QubitOracle.AdaptiveDesign.P1Weighted.weight
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.weight
+
+#eval IO.println "CURRENT_AUDIT_50_QubitOracle.AdaptiveDesign.P1Weighted.controller"
+#check QubitOracle.AdaptiveDesign.P1Weighted.controller
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.controller
+
+#eval IO.println "CURRENT_AUDIT_51_QubitOracle.AdaptiveDesign.P1Weighted.referenceAction"
+#check QubitOracle.AdaptiveDesign.P1Weighted.referenceAction
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.referenceAction
+
+#eval IO.println "CURRENT_AUDIT_52_QubitOracle.AdaptiveDesign.P1Weighted.radius"
+#check QubitOracle.AdaptiveDesign.P1Weighted.radius
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.radius
+
+#eval IO.println "CURRENT_AUDIT_53_QubitOracle.AdaptiveDesign.P1Weighted.clip"
+#check QubitOracle.AdaptiveDesign.P1Weighted.clip
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.clip
+
+#eval IO.println "CURRENT_AUDIT_54_QubitOracle.AdaptiveDesign.P1Weighted.clip_normSq"
+#check QubitOracle.AdaptiveDesign.P1Weighted.clip_normSq
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.clip_normSq
+
+#eval IO.println "CURRENT_AUDIT_55_QubitOracle.AdaptiveDesign.P1Weighted.informationTarget"
+#check QubitOracle.AdaptiveDesign.P1Weighted.informationTarget
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.informationTarget
+
+#eval IO.println "CURRENT_AUDIT_56_QubitOracle.AdaptiveDesign.P1Weighted.reference_fisher"
+#check QubitOracle.AdaptiveDesign.P1Weighted.reference_fisher
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.reference_fisher
+
+#eval IO.println "CURRENT_AUDIT_57_QubitOracle.AdaptiveDesign.P1Weighted.covarianceTarget"
+#check QubitOracle.AdaptiveDesign.P1Weighted.covarianceTarget
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.covarianceTarget
+
+#eval IO.println "CURRENT_AUDIT_58_QubitOracle.AdaptiveDesign.P1Weighted.positive_batches_normal"
+#check QubitOracle.AdaptiveDesign.P1Weighted.positive_batches_normal
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.positive_batches_normal
+
+#eval IO.println "CURRENT_AUDIT_59_QubitOracle.AdaptiveDesign.P1Weighted.informationTarget_optimal"
+#check QubitOracle.AdaptiveDesign.P1Weighted.informationTarget_optimal
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.informationTarget_optimal
+
+#eval IO.println "CURRENT_AUDIT_60_QubitOracle.AdaptiveDesign.P1Weighted.optimal_criterion_value"
+#check QubitOracle.AdaptiveDesign.P1Weighted.optimal_criterion_value
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.optimal_criterion_value
+
+#eval IO.println "CURRENT_AUDIT_61_QubitOracle.AdaptiveDesign.P1Weighted.weight_floor"
+#check QubitOracle.AdaptiveDesign.P1Weighted.weight_floor
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.weight_floor
+
+#eval IO.println "CURRENT_AUDIT_62_QubitOracle.AdaptiveDesign.P1Weighted.predictedGram_lower"
+#check QubitOracle.AdaptiveDesign.P1Weighted.predictedGram_lower
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.predictedGram_lower
+
+#eval IO.println "CURRENT_AUDIT_63_QubitOracle.AdaptiveDesign.P1Weighted.gram_innovation_rate"
+#check QubitOracle.AdaptiveDesign.P1Weighted.gram_innovation_rate
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.gram_innovation_rate
+
+#eval IO.println "CURRENT_AUDIT_64_QubitOracle.AdaptiveDesign.P1Weighted.residual_rate"
+#check QubitOracle.AdaptiveDesign.P1Weighted.residual_rate
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.residual_rate
+
+#eval IO.println "CURRENT_AUDIT_65_QubitOracle.AdaptiveDesign.P1Weighted.gram_coordinate_mean"
+#check QubitOracle.AdaptiveDesign.P1Weighted.gram_coordinate_mean
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.gram_coordinate_mean
+
+#eval IO.println "CURRENT_AUDIT_66_QubitOracle.AdaptiveDesign.P1Weighted.gram_reference"
+#check QubitOracle.AdaptiveDesign.P1Weighted.gram_reference
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.gram_reference
+
+#eval IO.println "CURRENT_AUDIT_67_QubitOracle.AdaptiveDesign.P1Weighted.normalizedError_decomposition"
+#check QubitOracle.AdaptiveDesign.P1Weighted.normalizedError_decomposition
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.normalizedError_decomposition
+
+#eval IO.println "CURRENT_AUDIT_68_QubitOracle.AdaptiveDesign.P1Weighted.sandwich_identity"
+#check QubitOracle.AdaptiveDesign.P1Weighted.sandwich_identity
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.sandwich_identity
+
+#eval IO.println "CURRENT_AUDIT_69_QubitOracle.AdaptiveDesign.P1Weighted.estimate_normal"
+#check QubitOracle.AdaptiveDesign.P1Weighted.estimate_normal
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.estimate_normal
+
+#eval IO.println "CURRENT_AUDIT_70_QubitOracle.chartState"
+#check QubitOracle.chartState
+#print axioms QubitOracle.chartState
+
+#eval IO.println "CURRENT_AUDIT_71_QubitOracle.chartState_normalized"
+#check QubitOracle.chartState_normalized
+#print axioms QubitOracle.chartState_normalized
+
+#eval IO.println "CURRENT_AUDIT_72_QubitOracle.AdaptiveDesign.PureMatrixController.controllerFrame_firstColumn"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.controllerFrame_firstColumn
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.controllerFrame_firstColumn
+
+#eval IO.println "CURRENT_AUDIT_73_QubitOracle.AdaptiveDesign.GeneralPOVM.Identifying"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.Identifying
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.Identifying
+
+#eval IO.println "CURRENT_AUDIT_74_QubitOracle.AdaptiveDesign.GeneralPOVM.Regular"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.Regular
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.Regular
+
+#eval IO.println "CURRENT_AUDIT_75_QubitOracle.AdaptiveDesign.PhasePair.RankOne"
+#check QubitOracle.AdaptiveDesign.PhasePair.RankOne
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.RankOne
+
+#eval IO.println "CURRENT_AUDIT_76_QubitOracle.AdaptiveDesign.PhasePair.gate"
+#check QubitOracle.AdaptiveDesign.PhasePair.gate
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.gate
+
+#eval IO.println "CURRENT_AUDIT_77_QubitOracle.AdaptiveDesign.PhasePair.gate_unitary"
+#check QubitOracle.AdaptiveDesign.PhasePair.gate_unitary
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.gate_unitary
+
+#eval IO.println "CURRENT_AUDIT_78_QubitOracle.AdaptiveDesign.PhasePair.paired_effect_false"
+#check QubitOracle.AdaptiveDesign.PhasePair.paired_effect_false
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.paired_effect_false
+
+#eval IO.println "CURRENT_AUDIT_79_QubitOracle.AdaptiveDesign.PhasePair.paired_effect_true"
+#check QubitOracle.AdaptiveDesign.PhasePair.paired_effect_true
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.paired_effect_true
+
+#eval IO.println "CURRENT_AUDIT_80_QubitOracle.AdaptiveDesign.PhasePair.paired_conditions"
+#check QubitOracle.AdaptiveDesign.PhasePair.paired_conditions
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.paired_conditions
+
+#eval IO.println "CURRENT_AUDIT_81_QubitOracle.AdaptiveDesign.PhasePair.paired_fisher_of_rankOne"
+#check QubitOracle.AdaptiveDesign.PhasePair.paired_fisher_of_rankOne
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.paired_fisher_of_rankOne
+
+#eval IO.println "CURRENT_AUDIT_82_QubitOracle.AdaptiveDesign.GeneralPOVM.regressionFrame"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.regressionFrame
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.regressionFrame
+
+#eval IO.println "CURRENT_AUDIT_83_QubitOracle.AdaptiveDesign.GeneralPOVM.exists_uniform_regression_coercivity"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.exists_uniform_regression_coercivity
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.exists_uniform_regression_coercivity
+
+#eval IO.println "CURRENT_AUDIT_84_QubitOracle.AdaptiveDesign.FiniteFrameCoercivity.exists_uniform_transport_coercivity"
+#check QubitOracle.AdaptiveDesign.FiniteFrameCoercivity.exists_uniform_transport_coercivity
+#print axioms QubitOracle.AdaptiveDesign.FiniteFrameCoercivity.exists_uniform_transport_coercivity
+
+#eval IO.println "CURRENT_AUDIT_85_QubitOracle.AdaptiveDesign.GeneralPOVM.rawEstimator"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.rawEstimator
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.rawEstimator
+
+#eval IO.println "CURRENT_AUDIT_86_QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector_is_nearest"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector_is_nearest
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector_is_nearest
+
+#eval IO.println "CURRENT_AUDIT_87_QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_normalEquation"
+#check QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_normalEquation
+#print axioms QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_normalEquation
+
+#eval IO.println "CURRENT_AUDIT_88_QubitOracle.AdaptiveDesign.ScheduledRidgeController.pathState_estimate_eq_ridgeEstimate"
+#check QubitOracle.AdaptiveDesign.ScheduledRidgeController.pathState_estimate_eq_ridgeEstimate
+#print axioms QubitOracle.AdaptiveDesign.ScheduledRidgeController.pathState_estimate_eq_ridgeEstimate
+
+#eval IO.println "CURRENT_AUDIT_89_QubitOracle.AdaptiveDesign.PureMatrixController.projectedMatrix_error_le_two"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.projectedMatrix_error_le_two
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.projectedMatrix_error_le_two
+
+#eval IO.println "CURRENT_AUDIT_90_QubitOracle.AdaptiveDesign.ExactHouseholder.matrix_firstColumn"
+#check QubitOracle.AdaptiveDesign.ExactHouseholder.matrix_firstColumn
+#print axioms QubitOracle.AdaptiveDesign.ExactHouseholder.matrix_firstColumn
+
+#eval IO.println "CURRENT_AUDIT_91_QubitOracle.AdaptiveDesign.ExactHouseholder.matrix_unitary"
+#check QubitOracle.AdaptiveDesign.ExactHouseholder.matrix_unitary
+#print axioms QubitOracle.AdaptiveDesign.ExactHouseholder.matrix_unitary
+
+#eval IO.println "CURRENT_AUDIT_92_QubitOracle.AdaptiveDesign.GeneralPOVM.measurementFrame_eq_frozenController"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.measurementFrame_eq_frozenController
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.measurementFrame_eq_frozenController
+
+#eval IO.println "CURRENT_AUDIT_93_QubitOracle.AdaptiveDesign.PhasePair.paired"
+#check QubitOracle.AdaptiveDesign.PhasePair.paired
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.paired
+
+#eval IO.println "CURRENT_AUDIT_94_QubitOracle.AdaptiveDesign.TangentGLS.tangentProjectionVector_eq_projection"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentProjectionVector_eq_projection
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentProjectionVector_eq_projection
+
+#eval IO.println "CURRENT_AUDIT_95_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_physical"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_physical
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_physical
+
+#eval IO.println "CURRENT_AUDIT_96_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_matrix_formula"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_matrix_formula
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_matrix_formula
+
+#eval IO.println "CURRENT_AUDIT_97_QubitOracle.AdaptiveDesign.TangentGLS.fittedProbability"
+#check QubitOracle.AdaptiveDesign.TangentGLS.fittedProbability
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.fittedProbability
+
+#eval IO.println "CURRENT_AUDIT_98_QubitOracle.AdaptiveDesign.TangentGLS.referenceFloor"
+#check QubitOracle.AdaptiveDesign.TangentGLS.referenceFloor
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.referenceFloor
+
+#eval IO.println "CURRENT_AUDIT_99_QubitOracle.AdaptiveDesign.TangentGLS.denominator"
+#check QubitOracle.AdaptiveDesign.TangentGLS.denominator
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.denominator
+
+#eval IO.println "CURRENT_AUDIT_100_QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_minimizes"
+#check QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_minimizes
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_minimizes
+
+#eval IO.println "CURRENT_AUDIT_101_QubitOracle.AdaptiveDesign.TangentGLS.correction_unique"
+#check QubitOracle.AdaptiveDesign.TangentGLS.correction_unique
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.correction_unique
+
+#eval IO.println "CURRENT_AUDIT_102_QubitOracle.AdaptiveDesign.TangentGLS.updatedVector"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedVector
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedVector
+
+#eval IO.println "CURRENT_AUDIT_103_QubitOracle.AdaptiveDesign.TangentGLS.updatedVector_norm"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedVector_norm
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedVector_norm
+
+#eval IO.println "CURRENT_AUDIT_104_QubitOracle.AdaptiveDesign.TangentGLS.correction_normalEquation"
+#check QubitOracle.AdaptiveDesign.TangentGLS.correction_normalEquation
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.correction_normalEquation
+
+#eval IO.println "CURRENT_AUDIT_105_QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection"
+#check QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection
+
+#eval IO.println "CURRENT_AUDIT_106_QubitOracle.AdaptiveDesign.ProtectedBornScore.moment_eq_fisher"
+#check QubitOracle.AdaptiveDesign.ProtectedBornScore.moment_eq_fisher
+#print axioms QubitOracle.AdaptiveDesign.ProtectedBornScore.moment_eq_fisher
+
+#eval IO.println "CURRENT_AUDIT_107_QubitOracle.AdaptiveDesign.GeneralPOVMQuarterRate.rawEstimator_quarterRate"
+#check QubitOracle.AdaptiveDesign.GeneralPOVMQuarterRate.rawEstimator_quarterRate
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVMQuarterRate.rawEstimator_quarterRate
+
+#eval IO.println "CURRENT_AUDIT_108_QubitOracle.AdaptiveDesign.GeneralPOVMQuarterRate.stateEstimator_quarterRate"
+#check QubitOracle.AdaptiveDesign.GeneralPOVMQuarterRate.stateEstimator_quarterRate
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVMQuarterRate.stateEstimator_quarterRate
+
+#eval IO.println "CURRENT_AUDIT_109_QubitOracle.AdaptiveDesign.TangentGLS.trueFrameCoordinates"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueFrameCoordinates
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueFrameCoordinates
+
+#eval IO.println "CURRENT_AUDIT_110_QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_consistency"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_consistency
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_consistency
+
+#eval IO.println "CURRENT_AUDIT_111_QubitOracle.AdaptiveDesign.TangentGLS.limitingCovariance_optimal"
+#check QubitOracle.AdaptiveDesign.TangentGLS.limitingCovariance_optimal
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.limitingCovariance_optimal
+
+#eval IO.println "CURRENT_AUDIT_112_QubitOracle.AdaptiveDesign.OracleRisk.pure_bures_covariance_constant"
+#check QubitOracle.AdaptiveDesign.OracleRisk.pure_bures_covariance_constant
+#print axioms QubitOracle.AdaptiveDesign.OracleRisk.pure_bures_covariance_constant
+
+#eval IO.println "CURRENT_AUDIT_113_QubitOracle.AdaptiveDesign.OracleRisk.pure_frobenius_covariance_constant"
+#check QubitOracle.AdaptiveDesign.OracleRisk.pure_frobenius_covariance_constant
+#print axioms QubitOracle.AdaptiveDesign.OracleRisk.pure_frobenius_covariance_constant
+
+#eval IO.println "CURRENT_AUDIT_114_QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_errorEquation"
+#check QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_errorEquation
+#print axioms QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_errorEquation
+
+#eval IO.println "CURRENT_AUDIT_115_QubitOracle.AdaptiveDesign.GeneralPOVM.responseVector_mean"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.responseVector_mean
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.responseVector_mean
+
+#eval IO.println "CURRENT_AUDIT_116_QubitOracle.AdaptiveDesign.GeneralPOVM.fisher_generalTruth_tendsto"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.fisher_generalTruth_tendsto
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.fisher_generalTruth_tendsto
+
+#eval IO.println "CURRENT_AUDIT_117_QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_exact_cancellation"
+#check QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_exact_cancellation
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_exact_cancellation
+
+#eval IO.println "CURRENT_AUDIT_118_QubitOracle.AdaptiveDesign.TangentGLS.actualProjectorError_linearization"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualProjectorError_linearization
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualProjectorError_linearization
+
+#eval IO.println "CURRENT_AUDIT_119_QubitOracle.OracleFrame"
+#check QubitOracle.OracleFrame
+#print axioms QubitOracle.OracleFrame
+
+#eval IO.println "CURRENT_AUDIT_120_QubitOracle.chiBasis"
+#check QubitOracle.chiBasis
+#print axioms QubitOracle.chiBasis
+
+#eval IO.println "CURRENT_AUDIT_121_QubitOracle.tauBasis"
+#check QubitOracle.tauBasis
+#print axioms QubitOracle.tauBasis
+
+#eval IO.println "CURRENT_AUDIT_122_QubitOracle.chiFisher_eq_realBlock"
+#check QubitOracle.chiFisher_eq_realBlock
+#print axioms QubitOracle.chiFisher_eq_realBlock
+
+#eval IO.println "CURRENT_AUDIT_123_QubitOracle.tauFisher_eq_imagBlock"
+#check QubitOracle.tauFisher_eq_imagBlock
+#print axioms QubitOracle.tauFisher_eq_imagBlock
+
+#eval IO.println "CURRENT_AUDIT_124_QubitOracle.equalMixtureFisher_eq_half_identity"
+#check QubitOracle.equalMixtureFisher_eq_half_identity
+#print axioms QubitOracle.equalMixtureFisher_eq_half_identity
+
+#eval IO.println "CURRENT_AUDIT_125_QubitOracle.AdaptiveDesign.OracleRisk.pure_bures_oracle_lower"
+#check QubitOracle.AdaptiveDesign.OracleRisk.pure_bures_oracle_lower
+#print axioms QubitOracle.AdaptiveDesign.OracleRisk.pure_bures_oracle_lower
+
+#eval IO.println "CURRENT_AUDIT_126_QubitOracle.AdaptiveDesign.OracleRisk.pure_frobenius_oracle_lower"
+#check QubitOracle.AdaptiveDesign.OracleRisk.pure_frobenius_oracle_lower
+#print axioms QubitOracle.AdaptiveDesign.OracleRisk.pure_frobenius_oracle_lower
+
+#eval IO.println "CURRENT_AUDIT_127_QubitOracle.chartFidelity_eq"
+#check QubitOracle.chartFidelity_eq
+#print axioms QubitOracle.chartFidelity_eq
+
+#eval IO.println "CURRENT_AUDIT_128_QubitOracle.Paper.PureMultilevelLossConstants.normalizedPureProjector_exactLossIdentities"
+#check QubitOracle.Paper.PureMultilevelLossConstants.normalizedPureProjector_exactLossIdentities
+#print axioms QubitOracle.Paper.PureMultilevelLossConstants.normalizedPureProjector_exactLossIdentities
+
+#eval IO.println "CURRENT_AUDIT_129_QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel
+
+#eval IO.println "CURRENT_AUDIT_130_QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.ofNeighborhood"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.ofNeighborhood
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.ofNeighborhood
+
+#eval IO.println "CURRENT_AUDIT_131_QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.LocallyUnbiased"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.LocallyUnbiased
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.LocallyUnbiased
+
+#eval IO.println "CURRENT_AUDIT_132_QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptiveExperiment"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptiveExperiment
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptiveExperiment
+
+#eval IO.println "CURRENT_AUDIT_133_QubitOracle.AdaptiveDesign.OracleMeanLoss.expectedLoss_tendsto_of_capped_and_secondMoment"
+#check QubitOracle.AdaptiveDesign.OracleMeanLoss.expectedLoss_tendsto_of_capped_and_secondMoment
+#print axioms QubitOracle.AdaptiveDesign.OracleMeanLoss.expectedLoss_tendsto_of_capped_and_secondMoment
+
+#eval IO.println "CURRENT_AUDIT_134_QubitOracle.AdaptiveDesign.P1Weighted.designCriterion"
+#check QubitOracle.AdaptiveDesign.P1Weighted.designCriterion
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.designCriterion
+
+#eval IO.println "CURRENT_AUDIT_135_QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw.actualResponse_average_ae_tendsto_zero"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw.actualResponse_average_ae_tendsto_zero
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw.actualResponse_average_ae_tendsto_zero
+
+#eval IO.println "CURRENT_AUDIT_136_QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristic.bounded_response_vector_clt"
+#check QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristic.bounded_response_vector_clt
+#print axioms QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristic.bounded_response_vector_clt
+
+#eval IO.println "CURRENT_AUDIT_137_QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.normalized_sum_ae"
+#check QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.normalized_sum_ae
+#print axioms QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.normalized_sum_ae
+
+#eval IO.println "CURRENT_AUDIT_138_QubitOracle.AdaptiveDesign.ExplorationRate.bounded_sum_threeQuarter_ae"
+#check QubitOracle.AdaptiveDesign.ExplorationRate.bounded_sum_threeQuarter_ae
+#print axioms QubitOracle.AdaptiveDesign.ExplorationRate.bounded_sum_threeQuarter_ae
+
+#eval IO.println "CURRENT_AUDIT_139_QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristic.characteristicSum_bound"
+#check QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristic.characteristicSum_bound
+#print axioms QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristic.characteristicSum_bound
+
+#eval IO.println "CURRENT_AUDIT_140_QubitOracle.AdaptiveDesign.AdaptiveBudgetMoments.vector_noise_ae"
+#check QubitOracle.AdaptiveDesign.AdaptiveBudgetMoments.vector_noise_ae
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBudgetMoments.vector_noise_ae
+
+#eval IO.println "CURRENT_AUDIT_141_QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.variance_weight_bound"
+#check QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.variance_weight_bound
+#print axioms QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.variance_weight_bound
+
+#eval IO.println "CURRENT_AUDIT_142_QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_bound"
+#check QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_bound
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_bound
+
+#eval IO.println "CURRENT_AUDIT_143_QubitOracle.qubitGillMassarValue_eq_trace"
+#check QubitOracle.qubitGillMassarValue_eq_trace
+#print axioms QubitOracle.qubitGillMassarValue_eq_trace
+
+#eval IO.println "CURRENT_AUDIT_144_QubitOracle.referenceFisher_trace"
+#check QubitOracle.referenceFisher_trace
+#print axioms QubitOracle.referenceFisher_trace
+
+#eval IO.println "CURRENT_AUDIT_145_QubitOracle.finitePOVM_risk_lower_bound"
+#check QubitOracle.finitePOVM_risk_lower_bound
+#print axioms QubitOracle.finitePOVM_risk_lower_bound
+
+#eval IO.println "CURRENT_AUDIT_146_QubitOracle.AdaptiveDesign.FiniteHistoryStatistics.actualStatistic_stronglyMeasurable"
+#check QubitOracle.AdaptiveDesign.FiniteHistoryStatistics.actualStatistic_stronglyMeasurable
+#print axioms QubitOracle.AdaptiveDesign.FiniteHistoryStatistics.actualStatistic_stronglyMeasurable
+
+#eval IO.println "CURRENT_AUDIT_147_QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_lipschitz"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_lipschitz
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_lipschitz
+
+#eval IO.println "CURRENT_AUDIT_148_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_exact_remainder"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_exact_remainder
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_exact_remainder
+
+#eval IO.println "CURRENT_AUDIT_149_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_remainder_bound_global"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_remainder_bound_global
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_remainder_bound_global
+
+#eval IO.println "CURRENT_AUDIT_150_QubitOracle.AdaptiveDesign.PhasePair.tail_projector_sum"
+#check QubitOracle.AdaptiveDesign.PhasePair.tail_projector_sum
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.tail_projector_sum
+
+#eval IO.println "CURRENT_AUDIT_151_QubitOracle.AdaptiveDesign.PhasePair.realify_sum"
+#check QubitOracle.AdaptiveDesign.PhasePair.realify_sum
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.realify_sum
+
+#eval IO.println "CURRENT_AUDIT_152_QubitOracle.AdaptiveDesign.P1Weighted.residual_mean"
+#check QubitOracle.AdaptiveDesign.P1Weighted.residual_mean
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.residual_mean
+
+#eval IO.println "CURRENT_AUDIT_153_QubitOracle.AdaptiveDesign.P1Weighted.clip_gap_floor"
+#check QubitOracle.AdaptiveDesign.P1Weighted.clip_gap_floor
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.clip_gap_floor
+
+#eval IO.println "CURRENT_AUDIT_154_QubitOracle.AdaptiveDesign.P1Weighted.predictedGram"
+#check QubitOracle.AdaptiveDesign.P1Weighted.predictedGram
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.predictedGram
+
+#eval IO.println "CURRENT_AUDIT_155_QubitOracle.AdaptiveDesign.P1Weighted.residual"
+#check QubitOracle.AdaptiveDesign.P1Weighted.residual
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.residual
+
+#eval IO.println "CURRENT_AUDIT_156_QubitOracle.AdaptiveDesign.P1Weighted.normal_error"
+#check QubitOracle.AdaptiveDesign.P1Weighted.normal_error
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.normal_error
+
+#eval IO.println "CURRENT_AUDIT_157_QubitOracle.AdaptiveDesign.P1Weighted.estimate_consistent"
+#check QubitOracle.AdaptiveDesign.P1Weighted.estimate_consistent
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.estimate_consistent
+
+#eval IO.println "CURRENT_AUDIT_158_QubitOracle.AdaptiveDesign.P1Weighted.reference_fisher_tendsto"
+#check QubitOracle.AdaptiveDesign.P1Weighted.reference_fisher_tendsto
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.reference_fisher_tendsto
+
+#eval IO.println "CURRENT_AUDIT_159_QubitOracle.AdaptiveDesign.P1Weighted.current_information_tendsto"
+#check QubitOracle.AdaptiveDesign.P1Weighted.current_information_tendsto
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.current_information_tendsto
+
+#eval IO.println "CURRENT_AUDIT_160_QubitOracle.AdaptiveDesign.P1Weighted.noiseCovariance"
+#check QubitOracle.AdaptiveDesign.P1Weighted.noiseCovariance
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.noiseCovariance
+
+#eval IO.println "CURRENT_AUDIT_161_QubitOracle.AdaptiveDesign.P1Weighted.meanGramTarget"
+#check QubitOracle.AdaptiveDesign.P1Weighted.meanGramTarget
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.meanGramTarget
+
+#eval IO.println "CURRENT_AUDIT_162_QubitOracle.AdaptiveDesign.P1Weighted.noiseTarget"
+#check QubitOracle.AdaptiveDesign.P1Weighted.noiseTarget
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.noiseTarget
+
+#eval IO.println "CURRENT_AUDIT_163_QubitOracle.AdaptiveDesign.P1Weighted.noise_reference"
+#check QubitOracle.AdaptiveDesign.P1Weighted.noise_reference
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.noise_reference
+
+#eval IO.println "CURRENT_AUDIT_164_QubitOracle.AdaptiveDesign.P1Weighted.noise_stability"
+#check QubitOracle.AdaptiveDesign.P1Weighted.noise_stability
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.noise_stability
+
+#eval IO.println "CURRENT_AUDIT_165_QubitOracle.AdaptiveDesign.P1Weighted.radialWeight"
+#check QubitOracle.AdaptiveDesign.P1Weighted.radialWeight
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.radialWeight
+
+#eval IO.println "CURRENT_AUDIT_166_QubitOracle.AdaptiveDesign.P1Weighted.observedGram_tendsto"
+#check QubitOracle.AdaptiveDesign.P1Weighted.observedGram_tendsto
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.observedGram_tendsto
+
+#eval IO.println "CURRENT_AUDIT_167_QubitOracle.AdaptiveDesign.P1Weighted.noise_current_tendsto"
+#check QubitOracle.AdaptiveDesign.P1Weighted.noise_current_tendsto
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.noise_current_tendsto
+
+#eval IO.println "CURRENT_AUDIT_168_QubitOracle.AdaptiveDesign.P1Weighted.influenceSum_clt"
+#check QubitOracle.AdaptiveDesign.P1Weighted.influenceSum_clt
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.influenceSum_clt
+
+#eval IO.println "CURRENT_AUDIT_169_QubitOracle.AdaptiveDesign.GeneralPOVM.responseInnovation_bound"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.responseInnovation_bound
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.responseInnovation_bound
+
+#eval IO.println "CURRENT_AUDIT_170_QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_error_bound"
+#check QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_error_bound
+#print axioms QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_error_bound
+
+#eval IO.println "CURRENT_AUDIT_171_QubitOracle.AdaptiveDesign.GeneralPOVM.rawEstimator_consistent"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.rawEstimator_consistent
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.rawEstimator_consistent
+
+#eval IO.println "CURRENT_AUDIT_172_QubitOracle.AdaptiveDesign.PureMatrixController.projectedMatrix_tendsto"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.projectedMatrix_tendsto
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.projectedMatrix_tendsto
+
+#eval IO.println "CURRENT_AUDIT_173_QubitOracle.AdaptiveDesign.GeneralPOVM.realify"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.realify
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.realify
+
+#eval IO.println "CURRENT_AUDIT_174_QubitOracle.AdaptiveDesign.GeneralPOVM.realify_orthogonal"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.realify_orthogonal
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.realify_orthogonal
+
+#eval IO.println "CURRENT_AUDIT_175_QubitOracle.AdaptiveDesign.GeneralPOVM.fisher_continuousAt"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.fisher_continuousAt
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.fisher_continuousAt
+
+#eval IO.println "CURRENT_AUDIT_176_QubitOracle.AdaptiveDesign.TangentGLS.actual_probabilities_eventually_regular"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_probabilities_eventually_regular
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_probabilities_eventually_regular
+
+#eval IO.println "CURRENT_AUDIT_177_QubitOracle.AdaptiveDesign.ProtectedBornScore.actual_score_clt"
+#check QubitOracle.AdaptiveDesign.ProtectedBornScore.actual_score_clt
+#print axioms QubitOracle.AdaptiveDesign.ProtectedBornScore.actual_score_clt
+
+#eval IO.println "CURRENT_AUDIT_178_QubitOracle.AdaptiveDesign.TangentGLS.actual_trueInformation_tendsto"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_trueInformation_tendsto
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_trueInformation_tendsto
+
+#eval IO.println "CURRENT_AUDIT_179_QubitOracle.AdaptiveDesign.TangentGLS.actualWeightRemainder_rootRate"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualWeightRemainder_rootRate
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualWeightRemainder_rootRate
+
+#eval IO.println "CURRENT_AUDIT_180_QubitOracle.AdaptiveDesign.AdaptiveBudgetMoments.scalarSum_secondMoment"
+#check QubitOracle.AdaptiveDesign.AdaptiveBudgetMoments.scalarSum_secondMoment
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBudgetMoments.scalarSum_secondMoment
+
+#eval IO.println "CURRENT_AUDIT_181_QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.score_identity"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.score_identity
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.score_identity
+
+#eval IO.println "CURRENT_AUDIT_182_QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptive_scoreEnergy_le"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptive_scoreEnergy_le
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptive_scoreEnergy_le
+
+#eval IO.println "CURRENT_AUDIT_183_QubitOracle.AdaptiveDesign.ExactHouseholder.phase"
+#check QubitOracle.AdaptiveDesign.ExactHouseholder.phase
+#print axioms QubitOracle.AdaptiveDesign.ExactHouseholder.phase
+
+#eval IO.println "CURRENT_AUDIT_184_QubitOracle.AdaptiveDesign.ExactHouseholder.vector"
+#check QubitOracle.AdaptiveDesign.ExactHouseholder.vector
+#print axioms QubitOracle.AdaptiveDesign.ExactHouseholder.vector
+
+#eval IO.println "CURRENT_AUDIT_185_QubitOracle.AdaptiveDesign.ExactHouseholder.denominator"
+#check QubitOracle.AdaptiveDesign.ExactHouseholder.denominator
+#print axioms QubitOracle.AdaptiveDesign.ExactHouseholder.denominator
+
+#eval IO.println "CURRENT_AUDIT_186_QubitOracle.AdaptiveDesign.ExactHouseholder.denominator_lower"
+#check QubitOracle.AdaptiveDesign.ExactHouseholder.denominator_lower
+#print axioms QubitOracle.AdaptiveDesign.ExactHouseholder.denominator_lower
+
+#eval IO.println "CURRENT_AUDIT_187_QubitOracle.AdaptiveDesign.ExactHouseholder.denominator_upper"
+#check QubitOracle.AdaptiveDesign.ExactHouseholder.denominator_upper
+#print axioms QubitOracle.AdaptiveDesign.ExactHouseholder.denominator_upper
+
+#eval IO.println "CURRENT_AUDIT_188_QubitOracle.AdaptiveDesign.ExactHouseholder.matrix"
+#check QubitOracle.AdaptiveDesign.ExactHouseholder.matrix
+#print axioms QubitOracle.AdaptiveDesign.ExactHouseholder.matrix
+
+#eval IO.println "CURRENT_AUDIT_189_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum
+
+#eval IO.println "CURRENT_AUDIT_190_QubitOracle.AdaptiveDesign.GlobalPFSIC.measurement_quadratic_injective"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.measurement_quadratic_injective
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.measurement_quadratic_injective
+
+#eval IO.println "CURRENT_AUDIT_191_QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceFisher"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceFisher
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceFisher
+
+#eval IO.println "CURRENT_AUDIT_192_QubitOracle.AdaptiveDesign.GlobalPFSIC.library_projector_sum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.library_projector_sum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.library_projector_sum
+
+#eval IO.println "CURRENT_AUDIT_193_QubitOracle.AdaptiveDesign.GlobalPFSIC.library_card"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.library_card
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.library_card
+
+#eval IO.println "CURRENT_AUDIT_194_QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude
+
+#eval IO.println "CURRENT_AUDIT_195_QubitOracle.AdaptiveDesign.GlobalPFSIC.effectWeight"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effectWeight
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effectWeight
+
+#eval IO.println "CURRENT_AUDIT_196_QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementVector"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementVector
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementVector
+
+#eval IO.println "CURRENT_AUDIT_197_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect
+
+#eval IO.println "CURRENT_AUDIT_198_QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceProbability"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceProbability
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceProbability
+
+#eval IO.println "CURRENT_AUDIT_199_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_pos"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_pos
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_pos
+
+#eval IO.println "CURRENT_AUDIT_200_QubitOracle.AdaptiveDesign.P2Adaptive.pureState_adaptive_consistency_and_information"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.pureState_adaptive_consistency_and_information
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.pureState_adaptive_consistency_and_information
+
+#eval IO.println "CURRENT_AUDIT_201_QubitOracle.AdaptiveDesign.P2Adaptive.pureState_adaptive_completedBatches"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.pureState_adaptive_completedBatches
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.pureState_adaptive_completedBatches
+
+#eval IO.println "CURRENT_AUDIT_202_QubitOracle.AdaptiveDesign.PVMGeometry.exploration_separates"
+#check QubitOracle.AdaptiveDesign.PVMGeometry.exploration_separates
+#print axioms QubitOracle.AdaptiveDesign.PVMGeometry.exploration_separates
+
+#eval IO.println "CURRENT_AUDIT_203_QubitOracle.AdaptiveDesign.GlobalPFSIC.libraryVector"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.libraryVector
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.libraryVector
+
+#eval IO.println "CURRENT_AUDIT_204_QubitOracle.AdaptiveDesign.PVMGeometry.canonicalOracleFrame"
+#check QubitOracle.AdaptiveDesign.PVMGeometry.canonicalOracleFrame
+#print axioms QubitOracle.AdaptiveDesign.PVMGeometry.canonicalOracleFrame
+
+#eval IO.println "CURRENT_AUDIT_205_QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.actualRidgeEstimate_rootTight"
+#check QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.actualRidgeEstimate_rootTight
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.actualRidgeEstimate_rootTight
+
+#eval IO.println "CURRENT_AUDIT_206_QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.rawEstimator_rootTight"
+#check QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.rawEstimator_rootTight
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.rawEstimator_rootTight
+
+#eval IO.println "CURRENT_AUDIT_207_QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.stateEstimator_rootTight"
+#check QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.stateEstimator_rootTight
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.stateEstimator_rootTight
+
+#eval IO.println "CURRENT_AUDIT_208_QubitOracle.AdaptiveDesign.PhasePair.paired_effectVector"
+#check QubitOracle.AdaptiveDesign.PhasePair.paired_effectVector
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.paired_effectVector
+
+#eval IO.println "CURRENT_AUDIT_209_QubitOracle.AdaptiveDesign.PhasePair.paired_frame_coercive"
+#check QubitOracle.AdaptiveDesign.PhasePair.paired_frame_coercive
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.paired_frame_coercive
+
+#eval IO.println "CURRENT_AUDIT_210_QubitOracle.AdaptiveDesign.TangentGLS.protected_residual_lipschitz"
+#check QubitOracle.AdaptiveDesign.TangentGLS.protected_residual_lipschitz
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.protected_residual_lipschitz
+
+#eval IO.println "CURRENT_AUDIT_211_QubitOracle.AdaptiveDesign.TangentGLS.record_fitted_score_difference_bound"
+#check QubitOracle.AdaptiveDesign.TangentGLS.record_fitted_score_difference_bound
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.record_fitted_score_difference_bound
+
+#eval IO.println "CURRENT_AUDIT_212_QubitOracle.AdaptiveDesign.TangentGLS.actual_ambientScore_average_zero"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_ambientScore_average_zero
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_ambientScore_average_zero
+
+#eval IO.println "CURRENT_AUDIT_213_QubitOracle.AdaptiveDesign.TangentGLS.actualDelta_norm_bound"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualDelta_norm_bound
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualDelta_norm_bound
+
+#eval IO.println "CURRENT_AUDIT_214_QubitOracle.AdaptiveDesign.TangentGLS.actualDelta_stronglyConsistent"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualDelta_stronglyConsistent
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualDelta_stronglyConsistent
+
+#eval IO.println "CURRENT_AUDIT_215_QubitOracle.AdaptiveDesign.TangentGLS.corrected_stronglyConsistent"
+#check QubitOracle.AdaptiveDesign.TangentGLS.corrected_stronglyConsistent
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.corrected_stronglyConsistent
+
+#eval IO.println "CURRENT_AUDIT_216_QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_coordinate"
+#check QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_coordinate
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_coordinate
+
+#eval IO.println "CURRENT_AUDIT_217_QubitOracle.AdaptiveDesign.TangentGLS.referenceCoordinate_reference"
+#check QubitOracle.AdaptiveDesign.TangentGLS.referenceCoordinate_reference
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.referenceCoordinate_reference
+
+#eval IO.println "CURRENT_AUDIT_218_QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_overlap"
+#check QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_overlap
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_overlap
+
+#eval IO.println "CURRENT_AUDIT_219_QubitOracle.AdaptiveDesign.TangentGLS.trueFrame_referenceParameter"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueFrame_referenceParameter
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueFrame_referenceParameter
+
+#eval IO.println "CURRENT_AUDIT_220_QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates
+
+#eval IO.println "CURRENT_AUDIT_221_QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_chart"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_chart
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_chart
+
+#eval IO.println "CURRENT_AUDIT_222_QubitOracle.AdaptiveDesign.TangentGLS.amplitude_factor_continuousAt"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitude_factor_continuousAt
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitude_factor_continuousAt
+
+#eval IO.println "CURRENT_AUDIT_223_QubitOracle.AdaptiveDesign.TangentGLS.amplitude_clt_of_projector_clt"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitude_clt_of_projector_clt
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitude_clt_of_projector_clt
+
+#eval IO.println "CURRENT_AUDIT_224_QubitOracle.AdaptiveDesign.TangentGLS.amplitude_optimalVariance"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitude_optimalVariance
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitude_optimalVariance
+
+#eval IO.println "CURRENT_AUDIT_225_QubitOracle.AdaptiveDesign.TangentGLS.phasePair_amplitude_optimalVariance"
+#check QubitOracle.AdaptiveDesign.TangentGLS.phasePair_amplitude_optimalVariance
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.phasePair_amplitude_optimalVariance
+
+#eval IO.println "CURRENT_AUDIT_226_QubitOracle.AdaptiveDesign.TangentGLS.reference_overlap"
+#check QubitOracle.AdaptiveDesign.TangentGLS.reference_overlap
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.reference_overlap
+
+#eval IO.println "CURRENT_AUDIT_227_QubitOracle.AdaptiveDesign.TangentGLS.referenceCoordinate_norm_sq"
+#check QubitOracle.AdaptiveDesign.TangentGLS.referenceCoordinate_norm_sq
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.referenceCoordinate_norm_sq
+
+#eval IO.println "CURRENT_AUDIT_228_QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_norm_sq"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_norm_sq
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_norm_sq
+
+#eval IO.println "CURRENT_AUDIT_229_QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_norm_sq"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_norm_sq
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_norm_sq
+
+#eval IO.println "CURRENT_AUDIT_230_QubitOracle.AdaptiveDesign.TangentGLS.infidelity_clt_of_amplitude_clt"
+#check QubitOracle.AdaptiveDesign.TangentGLS.infidelity_clt_of_amplitude_clt
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.infidelity_clt_of_amplitude_clt
+
+#eval IO.println "CURRENT_AUDIT_231_QubitOracle.AdaptiveDesign.TangentGLS.frobenius_clt_of_amplitude_clt"
+#check QubitOracle.AdaptiveDesign.TangentGLS.frobenius_clt_of_amplitude_clt
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.frobenius_clt_of_amplitude_clt
+
+#eval IO.println "CURRENT_AUDIT_232_QubitOracle.AdaptiveDesign.PureLossDistributions.doubled_gaussian"
+#check QubitOracle.AdaptiveDesign.PureLossDistributions.doubled_gaussian
+#print axioms QubitOracle.AdaptiveDesign.PureLossDistributions.doubled_gaussian
+
+#eval IO.println "CURRENT_AUDIT_233_QubitOracle.AdaptiveDesign.PureLossDistributions.doubled_gaussian_norm_law"
+#check QubitOracle.AdaptiveDesign.PureLossDistributions.doubled_gaussian_norm_law
+#print axioms QubitOracle.AdaptiveDesign.PureLossDistributions.doubled_gaussian_norm_law
+
+#eval IO.println "CURRENT_AUDIT_234_QubitOracle.AdaptiveDesign.PureLossDistributions.overlap_eq_fidelity"
+#check QubitOracle.AdaptiveDesign.PureLossDistributions.overlap_eq_fidelity
+#print axioms QubitOracle.AdaptiveDesign.PureLossDistributions.overlap_eq_fidelity
+
+#eval IO.println "CURRENT_AUDIT_235_QubitOracle.AdaptiveDesign.PureLossDistributions.Statement"
+#check QubitOracle.AdaptiveDesign.PureLossDistributions.Statement
+#print axioms QubitOracle.AdaptiveDesign.PureLossDistributions.Statement
+
+#eval IO.println "CURRENT_AUDIT_236_QubitOracle.AdaptiveDesign.PureLossDistributions.of_amplitude_clt"
+#check QubitOracle.AdaptiveDesign.PureLossDistributions.of_amplitude_clt
+#print axioms QubitOracle.AdaptiveDesign.PureLossDistributions.of_amplitude_clt
+
+#eval IO.println "CURRENT_AUDIT_237_QubitOracle.AdaptiveDesign.PureLossDistributions.povm"
+#check QubitOracle.AdaptiveDesign.PureLossDistributions.povm
+#print axioms QubitOracle.AdaptiveDesign.PureLossDistributions.povm
+
+#eval IO.println "CURRENT_AUDIT_238_QubitOracle.AdaptiveDesign.PureLossDistributions.phasePair"
+#check QubitOracle.AdaptiveDesign.PureLossDistributions.phasePair
+#print axioms QubitOracle.AdaptiveDesign.PureLossDistributions.phasePair
+
+#eval IO.println "CURRENT_AUDIT_239_QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.inverse_congruence"
+#check QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.inverse_congruence
+#print axioms QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.inverse_congruence
+
+#eval IO.println "CURRENT_AUDIT_240_QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.information_ratio_congruence"
+#check QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.information_ratio_congruence
+#print axioms QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.information_ratio_congruence
+
+#eval IO.println "CURRENT_AUDIT_241_QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.trace_information_invariant"
+#check QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.trace_information_invariant
+#print axioms QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.trace_information_invariant
+
+#eval IO.println "CURRENT_AUDIT_242_QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.weighted_covariance_trace_invariant"
+#check QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.weighted_covariance_trace_invariant
+#print axioms QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.weighted_covariance_trace_invariant
+
+#eval IO.println "CURRENT_AUDIT_243_QubitOracle.AdaptiveDesign.PureMatrixController.projector_distance_sq"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.projector_distance_sq
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.projector_distance_sq
+
+#eval IO.println "CURRENT_AUDIT_244_QubitOracle.AdaptiveDesign.PureMatrixController.nearest_iff_maximizes_rayleigh"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.nearest_iff_maximizes_rayleigh
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.nearest_iff_maximizes_rayleigh
+
+#eval IO.println "CURRENT_AUDIT_245_QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector_maximizes_rayleigh"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector_maximizes_rayleigh
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector_maximizes_rayleigh
+
+#eval IO.println "CURRENT_AUDIT_246_QubitOracle.AdaptiveDesign.PureMatrixController.hermitianOperator_selfAdjoint"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.hermitianOperator_selfAdjoint
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.hermitianOperator_selfAdjoint
+
+#eval IO.println "CURRENT_AUDIT_247_QubitOracle.AdaptiveDesign.PureMatrixController.hermitianOperator_quadratic"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.hermitianOperator_quadratic
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.hermitianOperator_quadratic
+
+#eval IO.println "CURRENT_AUDIT_248_QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector_leadingEigenvector"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector_leadingEigenvector
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector_leadingEigenvector
+
+#eval IO.println "CURRENT_AUDIT_249_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_value"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_value
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_value
+
+#eval IO.println "CURRENT_AUDIT_250_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_minimum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_minimum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_minimum
+
+#eval IO.println "CURRENT_AUDIT_251_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.coordinate_derivative"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.coordinate_derivative
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.coordinate_derivative
+
+#eval IO.println "CURRENT_AUDIT_252_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.localBornModel"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.localBornModel
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.localBornModel
+
+#eval IO.println "CURRENT_AUDIT_253_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.coordinates"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.coordinates
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.coordinates
+
+#eval IO.println "CURRENT_AUDIT_254_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.identityAction"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.identityAction
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.identityAction
+
+#eval IO.println "CURRENT_AUDIT_255_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureDomain"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureDomain
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureDomain
+
+#eval IO.println "CURRENT_AUDIT_256_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureDomain_nhds"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureDomain_nhds
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureDomain_nhds
+
+#eval IO.println "CURRENT_AUDIT_257_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureChart"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureChart
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureChart
+
+#eval IO.println "CURRENT_AUDIT_258_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureDerivative"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureDerivative
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureDerivative
+
+#eval IO.println "CURRENT_AUDIT_259_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureChart_derivative"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureChart_derivative
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureChart_derivative
+
+#eval IO.println "CURRENT_AUDIT_260_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureModel"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureModel
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureModel
+
+#eval IO.println "CURRENT_AUDIT_261_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureModel_mass"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureModel_mass
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureModel_mass
+
+#eval IO.println "CURRENT_AUDIT_262_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureAdaptiveModel"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureAdaptiveModel
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureAdaptiveModel
+
+#eval IO.println "CURRENT_AUDIT_263_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureRecordMass"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureRecordMass
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureRecordMass
+
+#eval IO.println "CURRENT_AUDIT_264_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureAdaptiveModel_exact_mass"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureAdaptiveModel_exact_mass
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureAdaptiveModel_exact_mass
+
+#eval IO.println "CURRENT_AUDIT_265_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedDomain"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedDomain
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedDomain
+
+#eval IO.println "CURRENT_AUDIT_266_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedDomain_nhds"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedDomain_nhds
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedDomain_nhds
+
+#eval IO.println "CURRENT_AUDIT_267_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixed_probability_nonnegative"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixed_probability_nonnegative
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixed_probability_nonnegative
+
+#eval IO.println "CURRENT_AUDIT_268_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixed_probability_total"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixed_probability_total
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixed_probability_total
+
+#eval IO.println "CURRENT_AUDIT_269_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixed_probability_derivative"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixed_probability_derivative
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixed_probability_derivative
+
+#eval IO.println "CURRENT_AUDIT_270_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedModel"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedModel
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedModel
+
+#eval IO.println "CURRENT_AUDIT_271_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedModel_mass"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedModel_mass
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedModel_mass
+
+#eval IO.println "CURRENT_AUDIT_272_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedAdaptiveModel"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedAdaptiveModel
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedAdaptiveModel
+
+#eval IO.println "CURRENT_AUDIT_273_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedRecordMass"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedRecordMass
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedRecordMass
+
+#eval IO.println "CURRENT_AUDIT_274_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedAdaptiveModel_exact_mass"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedAdaptiveModel_exact_mass
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedAdaptiveModel_exact_mass
+
+#eval IO.println "CURRENT_AUDIT_275_QubitOracle.AdaptiveDesign.AdaptiveBudgetConcentration.scalar_mgf"
+#check QubitOracle.AdaptiveDesign.AdaptiveBudgetConcentration.scalar_mgf
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBudgetConcentration.scalar_mgf
+
+#eval IO.println "CURRENT_AUDIT_276_QubitOracle.AdaptiveDesign.AdaptiveBudgetConcentration.scalar"
+#check QubitOracle.AdaptiveDesign.AdaptiveBudgetConcentration.scalar
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBudgetConcentration.scalar
+
+#eval IO.println "CURRENT_AUDIT_277_QubitOracle.AdaptiveDesign.AdaptiveBudgetHigherMoments.scalar"
+#check QubitOracle.AdaptiveDesign.AdaptiveBudgetHigherMoments.scalar
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBudgetHigherMoments.scalar
+
+#eval IO.println "CURRENT_AUDIT_278_QubitOracle.AdaptiveDesign.AdaptiveBudgetHigherMoments.vector"
+#check QubitOracle.AdaptiveDesign.AdaptiveBudgetHigherMoments.vector
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBudgetHigherMoments.vector
+
+#eval IO.println "CURRENT_AUDIT_279_QubitOracle.AdaptiveDesign.AdaptiveBudgetConcentration.vector"
+#check QubitOracle.AdaptiveDesign.AdaptiveBudgetConcentration.vector
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBudgetConcentration.vector
+
+#eval IO.println "CURRENT_AUDIT_280_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.map_initial"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.map_initial
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.map_initial
+
+#eval IO.println "CURRENT_AUDIT_281_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.initial_integral"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.initial_integral
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.initial_integral
+
+#eval IO.println "CURRENT_AUDIT_282_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.past"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.past
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.past
+
+#eval IO.println "CURRENT_AUDIT_283_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.centered_past"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.centered_past
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.centered_past
+
+#eval IO.println "CURRENT_AUDIT_284_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.scalar_variance_identity"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.scalar_variance_identity
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.scalar_variance_identity
+
+#eval IO.println "CURRENT_AUDIT_285_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.actual_mean_zero"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.actual_mean_zero
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.actual_mean_zero
+
+#eval IO.println "CURRENT_AUDIT_286_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.integral_response_le"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.integral_response_le
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.integral_response_le
+
+#eval IO.println "CURRENT_AUDIT_287_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_variance_identity"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_variance_identity
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_variance_identity
+
+#eval IO.println "CURRENT_AUDIT_288_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_secondMoment_sharp"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_secondMoment_sharp
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_secondMoment_sharp
+
+#eval IO.println "CURRENT_AUDIT_289_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_mean_inner_zero"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_mean_inner_zero
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_mean_inner_zero
+
+#eval IO.println "CURRENT_AUDIT_290_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_shift_secondMoment"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_shift_secondMoment
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_shift_secondMoment
+
+#eval IO.println "CURRENT_AUDIT_291_QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.twoSided_of_mgf"
+#check QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.twoSided_of_mgf
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.twoSided_of_mgf
+
+#eval IO.println "CURRENT_AUDIT_292_QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.scalar"
+#check QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.scalar
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.scalar
+
+#eval IO.println "CURRENT_AUDIT_293_QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.information_apply"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.information_apply
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.information_apply
+
+#eval IO.println "CURRENT_AUDIT_294_QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.score_product_add"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.score_product_add
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.score_product_add
+
+#eval IO.println "CURRENT_AUDIT_295_QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.bind_information"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.bind_information
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.bind_information
+
+#eval IO.println "CURRENT_AUDIT_296_QubitOracle.AdaptiveDesign.FiniteRegularOracle.conditionalInformationSum"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.conditionalInformationSum
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.conditionalInformationSum
+
+#eval IO.println "CURRENT_AUDIT_297_QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptive_information_eq_expected_sum"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptive_information_eq_expected_sum
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptive_information_eq_expected_sum
+
+#eval IO.println "CURRENT_AUDIT_298_QubitOracle.AdaptiveDesign.AdaptiveOperatorConcentration.normed"
+#check QubitOracle.AdaptiveDesign.AdaptiveOperatorConcentration.normed
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveOperatorConcentration.normed
+
+#eval IO.println "CURRENT_AUDIT_299_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment
+
+#eval IO.println "CURRENT_AUDIT_300_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.norm_add_pow_le"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.norm_add_pow_le
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.norm_add_pow_le
+
+#eval IO.println "CURRENT_AUDIT_301_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.of_dominated"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.of_dominated
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.of_dominated
+
+#eval IO.println "CURRENT_AUDIT_302_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.add"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.add
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.add
+
+#eval IO.println "CURRENT_AUDIT_303_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm
+
+#eval IO.println "CURRENT_AUDIT_304_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.const_mul"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.const_mul
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.const_mul
+
+#eval IO.println "CURRENT_AUDIT_305_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm_sq_of_four"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm_sq_of_four
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm_sq_of_four
+
+#eval IO.println "CURRENT_AUDIT_306_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.uniformMoment_of_bound"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.uniformMoment_of_bound
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.uniformMoment_of_bound
+
+#eval IO.println "CURRENT_AUDIT_307_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.finite_sum"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.finite_sum
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.finite_sum
+
+#eval IO.println "CURRENT_AUDIT_308_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.boundedMartingale_uniformMoment"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.boundedMartingale_uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.boundedMartingale_uniformMoment
+
+#eval IO.println "CURRENT_AUDIT_309_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.actualResponse_uniformMoment"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.actualResponse_uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.actualResponse_uniformMoment
+
+#eval IO.println "CURRENT_AUDIT_310_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.actualVectorResponse_uniformMoment"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.actualVectorResponse_uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.actualVectorResponse_uniformMoment
+
+#eval IO.println "CURRENT_AUDIT_311_QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.exp_chord"
+#check QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.exp_chord
+#print axioms QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.exp_chord
+
+#eval IO.println "CURRENT_AUDIT_312_QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.mgf_partialSum_le"
+#check QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.mgf_partialSum_le
+#print axioms QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.mgf_partialSum_le
+
+#eval IO.println "CURRENT_AUDIT_313_QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.partialSum_subGaussian"
+#check QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.partialSum_subGaussian
+#print axioms QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.partialSum_subGaussian
+
+#eval IO.println "CURRENT_AUDIT_314_QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_tail"
+#check QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_tail
+#print axioms QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_tail
+
+#eval IO.println "CURRENT_AUDIT_315_QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_rate_ae"
+#check QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_rate_ae
+#print axioms QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_rate_ae
+
+#eval IO.println "CURRENT_AUDIT_316_QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.strong_law"
+#check QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.strong_law
+#print axioms QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.strong_law
+
+#eval IO.println "CURRENT_AUDIT_317_QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_rate_of_ae_bounded"
+#check QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_rate_of_ae_bounded
+#print axioms QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_rate_of_ae_bounded
+
+#eval IO.println "CURRENT_AUDIT_318_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.exp_bound"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.exp_bound
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.exp_bound
+
+#eval IO.println "CURRENT_AUDIT_319_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.exp_memLp"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.exp_memLp
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.exp_memLp
+
+#eval IO.println "CURRENT_AUDIT_320_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.weighted_conditional_integral"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.weighted_conditional_integral
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.weighted_conditional_integral
+
+#eval IO.println "CURRENT_AUDIT_321_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.mgf_partialSum_le"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.mgf_partialSum_le
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.mgf_partialSum_le
+
+#eval IO.println "CURRENT_AUDIT_322_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.normalized_moment_le"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.normalized_moment_le
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.normalized_moment_le
+
+#eval IO.println "CURRENT_AUDIT_323_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.uniformMoment"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.uniformMoment
+
+#eval IO.println "CURRENT_AUDIT_324_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.upper_tail"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.upper_tail
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.upper_tail
+
+#eval IO.println "CURRENT_AUDIT_325_QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.normalizedRemainder"
+#check QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.normalizedRemainder
+#print axioms QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.normalizedRemainder
+
+#eval IO.println "CURRENT_AUDIT_326_QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.normalizedRemainder_tendsto"
+#check QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.normalizedRemainder_tendsto
+#print axioms QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.normalizedRemainder_tendsto
+
+#eval IO.println "CURRENT_AUDIT_327_QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.reconstruction"
+#check QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.reconstruction
+#print axioms QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.reconstruction
+
+#eval IO.println "CURRENT_AUDIT_328_QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.delta_method"
+#check QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.delta_method
+#print axioms QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.delta_method
+
+#eval IO.println "CURRENT_AUDIT_329_QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.variance_weight_summable"
+#check QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.variance_weight_summable
+#print axioms QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.variance_weight_summable
+
+#eval IO.println "CURRENT_AUDIT_330_QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.variance_weight_tsum_le_one"
+#check QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.variance_weight_tsum_le_one
+#print axioms QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.variance_weight_tsum_le_one
+
+#eval IO.println "CURRENT_AUDIT_331_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.finite_abs_sum_bernstein"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.finite_abs_sum_bernstein
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.finite_abs_sum_bernstein
+
+#eval IO.println "CURRENT_AUDIT_332_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.euclidean_norm_le_sum_abs"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.euclidean_norm_le_sum_abs
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.euclidean_norm_le_sum_abs
+
+#eval IO.println "CURRENT_AUDIT_333_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_bernstein"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_bernstein
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_bernstein
+
+#eval IO.println "CURRENT_AUDIT_334_QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.finiteSum"
+#check QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.finiteSum
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.finiteSum
+
+#eval IO.println "CURRENT_AUDIT_335_QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.vector"
+#check QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.vector
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.vector
+
+#eval IO.println "CURRENT_AUDIT_336_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_uniformMoment"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_uniformMoment
+
+#eval IO.println "CURRENT_AUDIT_337_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_real_moments"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_real_moments
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_real_moments
+
+#eval IO.println "CURRENT_AUDIT_338_QubitOracle.AdaptiveDesign.GaussianQuadraticMoments.norm_sq_memLp"
+#check QubitOracle.AdaptiveDesign.GaussianQuadraticMoments.norm_sq_memLp
+#print axioms QubitOracle.AdaptiveDesign.GaussianQuadraticMoments.norm_sq_memLp
+
+#eval IO.println "CURRENT_AUDIT_339_QubitOracle.AdaptiveDesign.GaussianQuadraticMoments.integral_norm_sq"
+#check QubitOracle.AdaptiveDesign.GaussianQuadraticMoments.integral_norm_sq
+#print axioms QubitOracle.AdaptiveDesign.GaussianQuadraticMoments.integral_norm_sq
+
+#eval IO.println "CURRENT_AUDIT_340_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalized_characteristic_tendsto"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalized_characteristic_tendsto
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalized_characteristic_tendsto
+
+#eval IO.println "CURRENT_AUDIT_341_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum
+
+#eval IO.println "CURRENT_AUDIT_342_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum_measurable"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum_measurable
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum_measurable
+
+#eval IO.println "CURRENT_AUDIT_343_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum_charFun"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum_charFun
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum_charFun
+
+#eval IO.println "CURRENT_AUDIT_344_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.scalar_clt"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.scalar_clt
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.scalar_clt
+
+#eval IO.println "CURRENT_AUDIT_345_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt
+
+#eval IO.println "CURRENT_AUDIT_346_QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.strong_law_of_ae_bounded"
+#check QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.strong_law_of_ae_bounded
+#print axioms QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.strong_law_of_ae_bounded
+
+#eval IO.println "CURRENT_AUDIT_347_QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.finite_coordinates"
+#check QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.finite_coordinates
+#print axioms QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.finite_coordinates
+
+#eval IO.println "CURRENT_AUDIT_348_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.condExp_finite_linear_sum"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.condExp_finite_linear_sum
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.condExp_finite_linear_sum
+
+#eval IO.println "CURRENT_AUDIT_349_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.conditionalCovariance"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.conditionalCovariance
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.conditionalCovariance
+
+#eval IO.println "CURRENT_AUDIT_350_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.inner_sq_expansion"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.inner_sq_expansion
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.inner_sq_expansion
+
+#eval IO.println "CURRENT_AUDIT_351_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.quadratic_expansion"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.quadratic_expansion
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.quadratic_expansion
+
+#eval IO.println "CURRENT_AUDIT_352_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.projected_variance_eq"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.projected_variance_eq
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.projected_variance_eq
+
+#eval IO.println "CURRENT_AUDIT_353_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt_of_covariance"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt_of_covariance
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt_of_covariance
+
+#eval IO.println "CURRENT_AUDIT_354_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt_of_ae_bounded_covariance"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt_of_ae_bounded_covariance
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt_of_ae_bounded_covariance
+
+#eval IO.println "CURRENT_AUDIT_355_QubitOracle.AdaptiveDesign.GeneralPOVM.coercivityConstant"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.coercivityConstant
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.coercivityConstant
+
+#eval IO.println "CURRENT_AUDIT_356_QubitOracle.AdaptiveDesign.GeneralPOVM.coercivityConstant_pos"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.coercivityConstant_pos
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.coercivityConstant_pos
+
+#eval IO.println "CURRENT_AUDIT_357_QubitOracle.AdaptiveDesign.GeneralPOVM.regressionFrame_coercive"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.regressionFrame_coercive
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.regressionFrame_coercive
+
+#eval IO.println "CURRENT_AUDIT_358_QubitOracle.AdaptiveDesign.GeneralPOVM.adaptiveProtocol"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.adaptiveProtocol
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.adaptiveProtocol
+
+#eval IO.println "CURRENT_AUDIT_359_QubitOracle.AdaptiveDesign.GeneralPOVM.actualState"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.actualState
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.actualState
+
+#eval IO.println "CURRENT_AUDIT_360_QubitOracle.AdaptiveDesign.GeneralPOVM.stateEstimator"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.stateEstimator
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.stateEstimator
+
+#eval IO.println "CURRENT_AUDIT_361_QubitOracle.AdaptiveDesign.GeneralPOVM.stateEstimator_physical"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.stateEstimator_physical
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.stateEstimator_physical
+
+#eval IO.println "CURRENT_AUDIT_362_QubitOracle.AdaptiveDesign.GeneralPOVM.measurementFrame"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.measurementFrame
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.measurementFrame
+
+#eval IO.println "CURRENT_AUDIT_363_QubitOracle.AdaptiveDesign.GeneralPOVM.measurementFrame_unitary"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.measurementFrame_unitary
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.measurementFrame_unitary
+
+#eval IO.println "CURRENT_AUDIT_364_QubitOracle.AdaptiveDesign.GeneralPOVM.designFisher"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.designFisher
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.designFisher
+
+#eval IO.println "CURRENT_AUDIT_365_QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_completedBatches"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_completedBatches
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_completedBatches
+
+#eval IO.println "CURRENT_AUDIT_366_QubitOracle.AdaptiveDesign.GlobalPFSIC.Outcome"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.Outcome
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.Outcome
+
+#eval IO.println "CURRENT_AUDIT_367_QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude_pos"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude_pos
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude_pos
+
+#eval IO.println "CURRENT_AUDIT_368_QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude_lt_one"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude_lt_one
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude_lt_one
+
+#eval IO.println "CURRENT_AUDIT_369_QubitOracle.AdaptiveDesign.GlobalPFSIC.effectWeight_pos"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effectWeight_pos
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effectWeight_pos
+
+#eval IO.println "CURRENT_AUDIT_370_QubitOracle.AdaptiveDesign.GlobalPFSIC.outcome_card"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.outcome_card
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.outcome_card
+
+#eval IO.println "CURRENT_AUDIT_371_QubitOracle.AdaptiveDesign.GlobalPFSIC.liftVector"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.liftVector
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.liftVector
+
+#eval IO.println "CURRENT_AUDIT_372_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_posSemidef"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_posSemidef
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_posSemidef
+
+#eval IO.println "CURRENT_AUDIT_373_QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementVector_normalized"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementVector_normalized
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementVector_normalized
+
+#eval IO.println "CURRENT_AUDIT_374_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_entry"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_entry
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_entry
+
+#eval IO.println "CURRENT_AUDIT_375_QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_zero_zero"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_zero_zero
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_zero_zero
+
+#eval IO.println "CURRENT_AUDIT_376_QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_succ_succ"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_succ_succ
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_succ_succ
+
+#eval IO.println "CURRENT_AUDIT_377_QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_zero_succ"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_zero_succ
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_zero_succ
+
+#eval IO.println "CURRENT_AUDIT_378_QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_succ_zero"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_succ_zero
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_succ_zero
+
+#eval IO.println "CURRENT_AUDIT_379_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_zero_zero"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_zero_zero
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_zero_zero
+
+#eval IO.println "CURRENT_AUDIT_380_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_succ_succ"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_succ_succ
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_succ_succ
+
+#eval IO.println "CURRENT_AUDIT_381_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_zero_succ_phase_sum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_zero_succ_phase_sum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_zero_succ_phase_sum
+
+#eval IO.println "CURRENT_AUDIT_382_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_succ_zero_phase_sum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_succ_zero_phase_sum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_succ_zero_phase_sum
+
+#eval IO.println "CURRENT_AUDIT_383_QubitOracle.AdaptiveDesign.GlobalPFSIC.head_normalization"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.head_normalization
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.head_normalization
+
+#eval IO.println "CURRENT_AUDIT_384_QubitOracle.AdaptiveDesign.GlobalPFSIC.tail_normalization"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.tail_normalization
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.tail_normalization
+
+#eval IO.println "CURRENT_AUDIT_385_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_zero_zero"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_zero_zero
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_zero_zero
+
+#eval IO.println "CURRENT_AUDIT_386_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_zero_succ"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_zero_succ
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_zero_succ
+
+#eval IO.println "CURRENT_AUDIT_387_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_succ_zero"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_succ_zero
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_succ_zero
+
+#eval IO.println "CURRENT_AUDIT_388_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_succ_succ"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_succ_succ
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_succ_succ
+
+#eval IO.println "CURRENT_AUDIT_389_QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM
+
+#eval IO.println "CURRENT_AUDIT_390_QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate
+
+#eval IO.println "CURRENT_AUDIT_391_QubitOracle.AdaptiveDesign.GlobalPFSIC.realifiedProjector"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.realifiedProjector
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.realifiedProjector
+
+#eval IO.println "CURRENT_AUDIT_392_QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate_covariance"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate_covariance
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate_covariance
+
+#eval IO.println "CURRENT_AUDIT_393_QubitOracle.AdaptiveDesign.GlobalPFSIC.realifiedProjector_family_sum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.realifiedProjector_family_sum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.realifiedProjector_family_sum
+
+#eval IO.println "CURRENT_AUDIT_394_QubitOracle.AdaptiveDesign.GlobalPFSIC.realifiedProjector_library_sum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.realifiedProjector_library_sum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.realifiedProjector_library_sum
+
+#eval IO.println "CURRENT_AUDIT_395_QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate_family_covariance"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate_family_covariance
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate_family_covariance
+
+#eval IO.println "CURRENT_AUDIT_396_QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate_library_covariance"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate_library_covariance
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate_library_covariance
+
+#eval IO.println "CURRENT_AUDIT_397_QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceGradient"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceGradient
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceGradient
+
+#eval IO.println "CURRENT_AUDIT_398_QubitOracle.AdaptiveDesign.GlobalPFSIC.fisher_ratio_cancel"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.fisher_ratio_cancel
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.fisher_ratio_cancel
+
+#eval IO.println "CURRENT_AUDIT_399_QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceFisher_term"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceFisher_term
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceFisher_term
+
+#eval IO.println "CURRENT_AUDIT_400_QubitOracle.AdaptiveDesign.GlobalPFSIC.tailBlock"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.tailBlock
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.tailBlock
+
+#eval IO.println "CURRENT_AUDIT_401_QubitOracle.AdaptiveDesign.GlobalPFSIC.headRow"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.headRow
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.headRow
+
+#eval IO.println "CURRENT_AUDIT_402_QubitOracle.AdaptiveDesign.GlobalPFSIC.headColumn"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.headColumn
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.headColumn
+
+#eval IO.println "CURRENT_AUDIT_403_QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_liftVector"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_liftVector
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_liftVector
+
+#eval IO.println "CURRENT_AUDIT_404_QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_measurementVector"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_measurementVector
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_measurementVector
+
+#eval IO.println "CURRENT_AUDIT_405_QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_phase_sum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_phase_sum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_phase_sum
+
+#eval IO.println "CURRENT_AUDIT_406_QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude_false_lt_true"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude_false_lt_true
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude_false_lt_true
+
+#eval IO.println "CURRENT_AUDIT_407_QubitOracle.AdaptiveDesign.GlobalPFSIC.two_latitudes_detect"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.two_latitudes_detect
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.two_latitudes_detect
+
+#eval IO.println "CURRENT_AUDIT_408_QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_measurementVector_eq_zero_iff"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_measurementVector_eq_zero_iff
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_measurementVector_eq_zero_iff
+
+#eval IO.println "CURRENT_AUDIT_409_QubitOracle.AdaptiveDesign.GlobalPFSIC.phase4"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.phase4
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.phase4
+
+#eval IO.println "CURRENT_AUDIT_410_QubitOracle.AdaptiveDesign.GlobalPFSIC.phase4_normSq"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.phase4_normSq
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.phase4_normSq
+
+#eval IO.println "CURRENT_AUDIT_411_QubitOracle.AdaptiveDesign.GlobalPFSIC.sum_phase4"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.sum_phase4
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.sum_phase4
+
+#eval IO.println "CURRENT_AUDIT_412_QubitOracle.AdaptiveDesign.GlobalPFSIC.sum_phase4_sq"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.sum_phase4_sq
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.sum_phase4_sq
+
+#eval IO.println "CURRENT_AUDIT_413_QubitOracle.AdaptiveDesign.GlobalPFSIC.coordinate"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.coordinate
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.coordinate
+
+#eval IO.println "CURRENT_AUDIT_414_QubitOracle.AdaptiveDesign.GlobalPFSIC.projector"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.projector
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.projector
+
+#eval IO.println "CURRENT_AUDIT_415_QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_apply"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_apply
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_apply
+
+#eval IO.println "CURRENT_AUDIT_416_QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_posSemidef"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_posSemidef
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_posSemidef
+
+#eval IO.println "CURRENT_AUDIT_417_QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector
+
+#eval IO.println "CURRENT_AUDIT_418_QubitOracle.AdaptiveDesign.GlobalPFSIC.LibraryIndex"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.LibraryIndex
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.LibraryIndex
+
+#eval IO.println "CURRENT_AUDIT_419_QubitOracle.AdaptiveDesign.GlobalPFSIC.coordinate_normSq"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.coordinate_normSq
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.coordinate_normSq
+
+#eval IO.println "CURRENT_AUDIT_420_QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector_normSq"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector_normSq
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector_normSq
+
+#eval IO.println "CURRENT_AUDIT_421_QubitOracle.AdaptiveDesign.GlobalPFSIC.libraryVector_normSq"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.libraryVector_normSq
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.libraryVector_normSq
+
+#eval IO.println "CURRENT_AUDIT_422_QubitOracle.AdaptiveDesign.GlobalPFSIC.coordinate_projector_sum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.coordinate_projector_sum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.coordinate_projector_sum
+
+#eval IO.println "CURRENT_AUDIT_423_QubitOracle.AdaptiveDesign.GlobalPFSIC.phase4_polarization"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.phase4_polarization
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.phase4_polarization
+
+#eval IO.println "CURRENT_AUDIT_424_QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector_projector_phase_sum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector_projector_phase_sum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector_projector_phase_sum
+
+#eval IO.println "CURRENT_AUDIT_425_QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector_projector_phase_sum_all"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector_projector_phase_sum_all
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector_projector_phase_sum_all
+
+#eval IO.println "CURRENT_AUDIT_426_QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic
+
+#eval IO.println "CURRENT_AUDIT_427_QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_coordinate"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_coordinate
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_coordinate
+
+#eval IO.println "CURRENT_AUDIT_428_QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_pairVector"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_pairVector
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_pairVector
+
+#eval IO.println "CURRENT_AUDIT_429_QubitOracle.AdaptiveDesign.GlobalPFSIC.library_quadratic_eq_zero_iff"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.library_quadratic_eq_zero_iff
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.library_quadratic_eq_zero_iff
+
+#eval IO.println "CURRENT_AUDIT_430_QubitOracle.AdaptiveDesign.GlobalPFSIC.library_quadratic_injective"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.library_quadratic_injective
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.library_quadratic_injective
+
+#eval IO.println "CURRENT_AUDIT_431_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm_sq_of_eight"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm_sq_of_eight
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm_sq_of_eight
+
+#eval IO.println "CURRENT_AUDIT_432_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.moment_of_good_event"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.moment_of_good_event
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.moment_of_good_event
+
+#eval IO.println "CURRENT_AUDIT_433_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.fourthMoment_of_good_event"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.fourthMoment_of_good_event
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.fourthMoment_of_good_event
+
+#eval IO.println "CURRENT_AUDIT_434_QubitOracle.AdaptiveDesign.GeneralPOVM.complexAnalysis"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.complexAnalysis
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.complexAnalysis
+
+#eval IO.println "CURRENT_AUDIT_435_QubitOracle.AdaptiveDesign.GeneralPOVM.complexAnalysis_injective"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.complexAnalysis_injective
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.complexAnalysis_injective
+
+#eval IO.println "CURRENT_AUDIT_436_QubitOracle.AdaptiveDesign.GeneralPOVM.identifying_card_bound"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.identifying_card_bound
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.identifying_card_bound
+
+#eval IO.println "CURRENT_AUDIT_437_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.sldPairing"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.sldPairing
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.sldPairing
+
+#eval IO.println "CURRENT_AUDIT_438_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.sldPairing_independent"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.sldPairing_independent
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.sldPairing_independent
+
+#eval IO.println "CURRENT_AUDIT_439_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm
+
+#eval IO.println "CURRENT_AUDIT_440_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_symmetric"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_symmetric
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_symmetric
+
+#eval IO.println "CURRENT_AUDIT_441_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_nonnegative"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_nonnegative
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_nonnegative
+
+#eval IO.println "CURRENT_AUDIT_442_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.born_hasFDerivAt"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.born_hasFDerivAt
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.born_hasFDerivAt
+
+#eval IO.println "CURRENT_AUDIT_443_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_chart"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_chart
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_chart
+
+#eval IO.println "CURRENT_AUDIT_444_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherBilin"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherBilin
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherBilin
+
+#eval IO.println "CURRENT_AUDIT_445_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.bilinear_coordinate_congruence"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.bilinear_coordinate_congruence
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.bilinear_coordinate_congruence
+
+#eval IO.println "CURRENT_AUDIT_446_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisher_coordinate_congruence"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisher_coordinate_congruence
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisher_coordinate_congruence
+
+#eval IO.println "CURRENT_AUDIT_447_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.chart_transition_derivative"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.chart_transition_derivative
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.chart_transition_derivative
+
+#eval IO.println "CURRENT_AUDIT_448_QubitOracle.AdaptiveDesign.L2MartingaleBudget.partialSum_memLp"
+#check QubitOracle.AdaptiveDesign.L2MartingaleBudget.partialSum_memLp
+#print axioms QubitOracle.AdaptiveDesign.L2MartingaleBudget.partialSum_memLp
+
+#eval IO.println "CURRENT_AUDIT_449_QubitOracle.AdaptiveDesign.L2MartingaleBudget.integral_cross_zero"
+#check QubitOracle.AdaptiveDesign.L2MartingaleBudget.integral_cross_zero
+#print axioms QubitOracle.AdaptiveDesign.L2MartingaleBudget.integral_cross_zero
+
+#eval IO.println "CURRENT_AUDIT_450_QubitOracle.AdaptiveDesign.L2MartingaleBudget.integral_partialSum_square"
+#check QubitOracle.AdaptiveDesign.L2MartingaleBudget.integral_partialSum_square
+#print axioms QubitOracle.AdaptiveDesign.L2MartingaleBudget.integral_partialSum_square
+
+#eval IO.println "CURRENT_AUDIT_451_QubitOracle.AdaptiveDesign.L2MartingaleBudget.partialSum_martingale"
+#check QubitOracle.AdaptiveDesign.L2MartingaleBudget.partialSum_martingale
+#print axioms QubitOracle.AdaptiveDesign.L2MartingaleBudget.partialSum_martingale
+
+#eval IO.println "CURRENT_AUDIT_452_QubitOracle.AdaptiveDesign.L2MartingaleBudget.partialSum_ae_converges"
+#check QubitOracle.AdaptiveDesign.L2MartingaleBudget.partialSum_ae_converges
+#print axioms QubitOracle.AdaptiveDesign.L2MartingaleBudget.partialSum_ae_converges
+
+#eval IO.println "CURRENT_AUDIT_453_QubitOracle.AdaptiveDesign.L2MartingaleBudget.normalized_sum_ae"
+#check QubitOracle.AdaptiveDesign.L2MartingaleBudget.normalized_sum_ae
+#print axioms QubitOracle.AdaptiveDesign.L2MartingaleBudget.normalized_sum_ae
+
+#eval IO.println "CURRENT_AUDIT_454_QubitOracle.AdaptiveDesign.L2MartingaleBudget.normalized_sum_ae_of_conditional_variance"
+#check QubitOracle.AdaptiveDesign.L2MartingaleBudget.normalized_sum_ae_of_conditional_variance
+#print axioms QubitOracle.AdaptiveDesign.L2MartingaleBudget.normalized_sum_ae_of_conditional_variance
+
+#eval IO.println "CURRENT_AUDIT_455_QubitOracle.AdaptiveDesign.L2MartingaleBudget.vector_normalized_sum_ae"
+#check QubitOracle.AdaptiveDesign.L2MartingaleBudget.vector_normalized_sum_ae
+#print axioms QubitOracle.AdaptiveDesign.L2MartingaleBudget.vector_normalized_sum_ae
+
+#eval IO.println "CURRENT_AUDIT_456_QubitOracle.AdaptiveDesign.L2MartingaleBudget.vector_normalized_sum_ae_of_conditional_variance"
+#check QubitOracle.AdaptiveDesign.L2MartingaleBudget.vector_normalized_sum_ae_of_conditional_variance
+#print axioms QubitOracle.AdaptiveDesign.L2MartingaleBudget.vector_normalized_sum_ae_of_conditional_variance
+
+#eval IO.println "CURRENT_AUDIT_457_QubitOracle.AdaptiveDesign.LibraryUnweighted.normalizedTangentLift"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.normalizedTangentLift
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.normalizedTangentLift
+
+#eval IO.println "CURRENT_AUDIT_458_QubitOracle.AdaptiveDesign.LibraryUnweighted.normalizedTangentLift_adjoint"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.normalizedTangentLift_adjoint
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.normalizedTangentLift_adjoint
+
+#eval IO.println "CURRENT_AUDIT_459_QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_lift"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_lift
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_lift
+
+#eval IO.println "CURRENT_AUDIT_460_QubitOracle.AdaptiveDesign.LibraryUnweighted.ambient_clt"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.ambient_clt
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.ambient_clt
+
+#eval IO.println "CURRENT_AUDIT_461_QubitOracle.AdaptiveDesign.LibraryUnweighted.batch_horizons_tendsto"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.batch_horizons_tendsto
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.batch_horizons_tendsto
+
+#eval IO.println "CURRENT_AUDIT_462_QubitOracle.AdaptiveDesign.LibraryUnweighted.completed_batch_amplitude_clt"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.completed_batch_amplitude_clt
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.completed_batch_amplitude_clt
+
+#eval IO.println "CURRENT_AUDIT_463_QubitOracle.AdaptiveDesign.LibraryUnweighted.completed_batch_ambient_clt"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.completed_batch_ambient_clt
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.completed_batch_ambient_clt
+
+#eval IO.println "CURRENT_AUDIT_464_QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_scalar"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_scalar
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_scalar
+
+#eval IO.println "CURRENT_AUDIT_465_QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_in_smoothChart"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_in_smoothChart
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_in_smoothChart
+
+#eval IO.println "CURRENT_AUDIT_466_QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_in_ambientSpace"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_in_ambientSpace
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_in_ambientSpace
+
+#eval IO.println "CURRENT_AUDIT_467_QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_excess"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_excess
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_excess
+
+#eval IO.println "CURRENT_AUDIT_468_QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_qubit"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_qubit
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_qubit
+
+#eval IO.println "CURRENT_AUDIT_469_QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_qutrit"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_qutrit
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_qutrit
+
+#eval IO.println "CURRENT_AUDIT_470_QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt
+
+#eval IO.println "CURRENT_AUDIT_471_QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt_continuous"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt_continuous
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt_continuous
+
+#eval IO.println "CURRENT_AUDIT_472_QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt_transport"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt_transport
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt_transport
+
+#eval IO.println "CURRENT_AUDIT_473_QubitOracle.AdaptiveDesign.LibraryUnweighted.frameProjector_reference"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.frameProjector_reference
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.frameProjector_reference
+
+#eval IO.println "CURRENT_AUDIT_474_QubitOracle.AdaptiveDesign.LibraryUnweighted.conjugate_reference"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.conjugate_reference
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.conjugate_reference
+
+#eval IO.println "CURRENT_AUDIT_475_QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt_aligned"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt_aligned
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt_aligned
+
+#eval IO.println "CURRENT_AUDIT_476_QubitOracle.AdaptiveDesign.LibraryUnweighted.projected_frame_limit"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.projected_frame_limit
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.projected_frame_limit
+
+#eval IO.println "CURRENT_AUDIT_477_QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate
+
+#eval IO.println "CURRENT_AUDIT_478_QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate_matrix"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate_matrix
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate_matrix
+
+#eval IO.println "CURRENT_AUDIT_479_QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate_measurable"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate_measurable
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate_measurable
+
+#eval IO.println "CURRENT_AUDIT_480_QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate_consistent"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate_consistent
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate_consistent
+
+#eval IO.println "CURRENT_AUDIT_481_QubitOracle.AdaptiveDesign.LibraryUnweighted.projection_remainder_zero"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.projection_remainder_zero
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.projection_remainder_zero
+
+#eval IO.println "CURRENT_AUDIT_482_QubitOracle.AdaptiveDesign.LibraryUnweighted.pure_linearization"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.pure_linearization
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.pure_linearization
+
+#eval IO.println "CURRENT_AUDIT_483_QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_coordinate"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_coordinate
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_coordinate
+
+#eval IO.println "CURRENT_AUDIT_484_QubitOracle.AdaptiveDesign.LibraryUnweighted.coordinates_minus_score_zero"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.coordinates_minus_score_zero
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.coordinates_minus_score_zero
+
+#eval IO.println "CURRENT_AUDIT_485_QubitOracle.AdaptiveDesign.LibraryUnweighted.coordinates_clt"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.coordinates_clt
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.coordinates_clt
+
+#eval IO.println "CURRENT_AUDIT_486_QubitOracle.AdaptiveDesign.LibraryUnweighted.amplitude_clt"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.amplitude_clt
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.amplitude_clt
+
+#eval IO.println "CURRENT_AUDIT_487_QubitOracle.AdaptiveDesign.LibraryUnweighted.smoothChart_clt"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.smoothChart_clt
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.smoothChart_clt
+
+#eval IO.println "CURRENT_AUDIT_488_QubitOracle.AdaptiveDesign.LibraryUnweighted.raw_eq_ridge"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.raw_eq_ridge
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.raw_eq_ridge
+
+#eval IO.println "CURRENT_AUDIT_489_QubitOracle.AdaptiveDesign.LibraryUnweighted.state_eq_of_agrees"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.state_eq_of_agrees
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.state_eq_of_agrees
+
+#eval IO.println "CURRENT_AUDIT_490_QubitOracle.AdaptiveDesign.LibraryUnweighted.statistic_measurable"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.statistic_measurable
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.statistic_measurable
+
+#eval IO.println "CURRENT_AUDIT_491_QubitOracle.AdaptiveDesign.LibraryUnweighted.raw_rootTight"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.raw_rootTight
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.raw_rootTight
+
+#eval IO.println "CURRENT_AUDIT_492_QubitOracle.AdaptiveDesign.LibraryUnweighted.raw_square_negligible"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.raw_square_negligible
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.raw_square_negligible
+
+#eval IO.println "CURRENT_AUDIT_493_QubitOracle.AdaptiveDesign.LibraryUnweighted.noiseSum"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.noiseSum
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.noiseSum
+
+#eval IO.println "CURRENT_AUDIT_494_QubitOracle.AdaptiveDesign.LibraryUnweighted.projectedGram"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.projectedGram
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.projectedGram
+
+#eval IO.println "CURRENT_AUDIT_495_QubitOracle.AdaptiveDesign.LibraryUnweighted.projectedGram_measurable"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.projectedGram_measurable
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.projectedGram_measurable
+
+#eval IO.println "CURRENT_AUDIT_496_QubitOracle.AdaptiveDesign.LibraryUnweighted.projectedGram_limit"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.projectedGram_limit
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.projectedGram_limit
+
+#eval IO.println "CURRENT_AUDIT_497_QubitOracle.AdaptiveDesign.LibraryUnweighted.tangent_truth_zero"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.tangent_truth_zero
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.tangent_truth_zero
+
+#eval IO.println "CURRENT_AUDIT_498_QubitOracle.AdaptiveDesign.LibraryUnweighted.projected_error_equation"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.projected_error_equation
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.projected_error_equation
+
+#eval IO.println "CURRENT_AUDIT_499_QubitOracle.AdaptiveDesign.LibraryUnweighted.tangent_linearization"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.tangent_linearization
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.tangent_linearization
+
+#eval IO.println "CURRENT_AUDIT_500_QubitOracle.AdaptiveDesign.LibraryUnweighted.quadratic_smul"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.quadratic_smul
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.quadratic_smul
+
+#eval IO.println "CURRENT_AUDIT_501_QubitOracle.AdaptiveDesign.LibraryUnweighted.quadratic_moment"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.quadratic_moment
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.quadratic_moment
+
+#eval IO.println "CURRENT_AUDIT_502_QubitOracle.AdaptiveDesign.LibraryUnweighted.actual_ray_limit"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.actual_ray_limit
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.actual_ray_limit
+
+#eval IO.println "CURRENT_AUDIT_503_QubitOracle.AdaptiveDesign.LibraryUnweighted.actual_moment_limit"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.actual_moment_limit
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.actual_moment_limit
+
+#eval IO.println "CURRENT_AUDIT_504_QubitOracle.AdaptiveDesign.LibraryUnweighted.probability_coordinate"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.probability_coordinate
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.probability_coordinate
+
+#eval IO.println "CURRENT_AUDIT_505_QubitOracle.AdaptiveDesign.LibraryUnweighted.effect_coordinate"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.effect_coordinate
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.effect_coordinate
+
+#eval IO.println "CURRENT_AUDIT_506_QubitOracle.AdaptiveDesign.LibraryUnweighted.innovation"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.innovation
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.innovation
+
+#eval IO.println "CURRENT_AUDIT_507_QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreResponse"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreResponse
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreResponse
+
+#eval IO.println "CURRENT_AUDIT_508_QubitOracle.AdaptiveDesign.LibraryUnweighted.innovation_mean"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.innovation_mean
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.innovation_mean
+
+#eval IO.println "CURRENT_AUDIT_509_QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreResponse_mean"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreResponse_mean
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreResponse_mean
+
+#eval IO.println "CURRENT_AUDIT_510_QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreBound"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreBound
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreBound
+
+#eval IO.println "CURRENT_AUDIT_511_QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreBound_nonnegative"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreBound_nonnegative
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreBound_nonnegative
+
+#eval IO.println "CURRENT_AUDIT_512_QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreResponse_bound"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreResponse_bound
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreResponse_bound
+
+#eval IO.println "CURRENT_AUDIT_513_QubitOracle.AdaptiveDesign.LibraryUnweighted.score_secondMoment"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.score_secondMoment
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.score_secondMoment
+
+#eval IO.println "CURRENT_AUDIT_514_QubitOracle.AdaptiveDesign.LibraryUnweighted.scaled_noise_constant"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.scaled_noise_constant
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.scaled_noise_constant
+
+#eval IO.println "CURRENT_AUDIT_515_QubitOracle.AdaptiveDesign.LibraryUnweighted.shifted_score_clt"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.shifted_score_clt
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.shifted_score_clt
+
+#eval IO.println "CURRENT_AUDIT_516_QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore
+
+#eval IO.println "CURRENT_AUDIT_517_QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_measurable"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_measurable
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_measurable
+
+#eval IO.println "CURRENT_AUDIT_518_QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_clt"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_clt
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_clt
+
+#eval IO.println "CURRENT_AUDIT_519_QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceCoordinate_effect"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceCoordinate_effect
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceCoordinate_effect
+
+#eval IO.println "CURRENT_AUDIT_520_QubitOracle.AdaptiveDesign.LibraryUnweighted.diagonalEffect"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.diagonalEffect
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.diagonalEffect
+
+#eval IO.println "CURRENT_AUDIT_521_QubitOracle.AdaptiveDesign.LibraryUnweighted.effect_decomposition"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.effect_decomposition
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.effect_decomposition
+
+#eval IO.println "CURRENT_AUDIT_522_QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceCoordinate_effect_phase_sum"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceCoordinate_effect_phase_sum
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceCoordinate_effect_phase_sum
+
+#eval IO.println "CURRENT_AUDIT_523_QubitOracle.AdaptiveDesign.LibraryUnweighted.reference_gram"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.reference_gram
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.reference_gram
+
+#eval IO.println "CURRENT_AUDIT_524_QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceFrame_coordinate"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceFrame_coordinate
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceFrame_coordinate
+
+#eval IO.println "CURRENT_AUDIT_525_QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceFrame_projection"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceFrame_projection
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceFrame_projection
+
+#eval IO.println "CURRENT_AUDIT_526_QubitOracle.AdaptiveDesign.LibraryUnweighted.gramConstant"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.gramConstant
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.gramConstant
+
+#eval IO.println "CURRENT_AUDIT_527_QubitOracle.AdaptiveDesign.LibraryUnweighted.noiseConstant"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.noiseConstant
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.noiseConstant
+
+#eval IO.println "CURRENT_AUDIT_528_QubitOracle.AdaptiveDesign.LibraryUnweighted.tangentVariance"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.tangentVariance
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.tangentVariance
+
+#eval IO.println "CURRENT_AUDIT_529_QubitOracle.AdaptiveDesign.LibraryUnweighted.constants_positive"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.constants_positive
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.constants_positive
+
+#eval IO.println "CURRENT_AUDIT_530_QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_ratio"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_ratio
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_ratio
+
+#eval IO.println "CURRENT_AUDIT_531_QubitOracle.AdaptiveDesign.LibraryUnweighted.phaseCoordinate_sum"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.phaseCoordinate_sum
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.phaseCoordinate_sum
+
+#eval IO.println "CURRENT_AUDIT_532_QubitOracle.AdaptiveDesign.LibraryUnweighted.gram"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.gram
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.gram
+
+#eval IO.println "CURRENT_AUDIT_533_QubitOracle.AdaptiveDesign.LibraryUnweighted.mean"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.mean
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.mean
+
+#eval IO.println "CURRENT_AUDIT_534_QubitOracle.AdaptiveDesign.LibraryUnweighted.moment"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.moment
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.moment
+
+#eval IO.println "CURRENT_AUDIT_535_QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_continuous"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_continuous
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_continuous
+
+#eval IO.println "CURRENT_AUDIT_536_QubitOracle.AdaptiveDesign.LibraryUnweighted.mean_continuous"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.mean_continuous
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.mean_continuous
+
+#eval IO.println "CURRENT_AUDIT_537_QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_continuous"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_continuous
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_continuous
+
+#eval IO.println "CURRENT_AUDIT_538_QubitOracle.AdaptiveDesign.LibraryUnweighted.gradient_product"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.gradient_product
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.gradient_product
+
+#eval IO.println "CURRENT_AUDIT_539_QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_scalar"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_scalar
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_scalar
+
+#eval IO.println "CURRENT_AUDIT_540_QubitOracle.AdaptiveDesign.LibraryUnweighted.noise_scalar"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.noise_scalar
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.noise_scalar
+
+#eval IO.println "CURRENT_AUDIT_541_QubitOracle.AdaptiveDesign.LibraryUnweighted.mean_at_alignment"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.mean_at_alignment
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.mean_at_alignment
+
+#eval IO.println "CURRENT_AUDIT_542_QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_at_alignment"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_at_alignment
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_at_alignment
+
+#eval IO.println "CURRENT_AUDIT_543_QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_at_alignment"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_at_alignment
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_at_alignment
+
+#eval IO.println "CURRENT_AUDIT_544_QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_limits"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_limits
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_limits
+
+#eval IO.println "CURRENT_AUDIT_545_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.bernstein_upper"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.bernstein_upper
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.bernstein_upper
+
+#eval IO.println "CURRENT_AUDIT_546_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.bernstein_abs"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.bernstein_abs
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.bernstein_abs
+
+#eval IO.println "CURRENT_AUDIT_547_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.phase_integrable"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.phase_integrable
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.phase_integrable
+
+#eval IO.println "CURRENT_AUDIT_548_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.conditional_taylor"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.conditional_taylor
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.conditional_taylor
+
+#eval IO.println "CURRENT_AUDIT_549_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.variance"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.variance
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.variance
+
+#eval IO.println "CURRENT_AUDIT_550_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.varianceError"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.varianceError
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.varianceError
+
+#eval IO.println "CURRENT_AUDIT_551_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.variance_norm_bound"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.variance_norm_bound
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.variance_norm_bound
+
+#eval IO.println "CURRENT_AUDIT_552_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.varianceError_integrable"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.varianceError_integrable
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.varianceError_integrable
+
+#eval IO.println "CURRENT_AUDIT_553_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.varianceError_tendsto"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.varianceError_tendsto
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.varianceError_tendsto
+
+#eval IO.println "CURRENT_AUDIT_554_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum
+
+#eval IO.println "CURRENT_AUDIT_555_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_zero"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_zero
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_zero
+
+#eval IO.println "CURRENT_AUDIT_556_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.phaseSum_integrable"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.phaseSum_integrable
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.phaseSum_integrable
+
+#eval IO.println "CURRENT_AUDIT_557_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_succ"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_succ
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_succ
+
+#eval IO.println "CURRENT_AUDIT_558_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.conditional_comparison"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.conditional_comparison
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.conditional_comparison
+
+#eval IO.println "CURRENT_AUDIT_559_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_step_bound"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_step_bound
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_step_bound
+
+#eval IO.println "CURRENT_AUDIT_560_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_bound"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_bound
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_bound
+
+#eval IO.println "CURRENT_AUDIT_561_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap
+
+#eval IO.println "CURRENT_AUDIT_562_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity
+
+#eval IO.println "CURRENT_AUDIT_563_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.bures"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.bures
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.bures
+
+#eval IO.println "CURRENT_AUDIT_564_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form
+
+#eval IO.println "CURRENT_AUDIT_565_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap_sq"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap_sq
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap_sq
+
+#eval IO.println "CURRENT_AUDIT_566_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap_pos"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap_pos
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap_pos
+
+#eval IO.println "CURRENT_AUDIT_567_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity_identity"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity_identity
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity_identity
+
+#eval IO.println "CURRENT_AUDIT_568_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity_nonneg"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity_nonneg
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity_nonneg
+
+#eval IO.println "CURRENT_AUDIT_569_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity_self"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity_self
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity_self
+
+#eval IO.println "CURRENT_AUDIT_570_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap_difference"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap_difference
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap_difference
+
+#eval IO.println "CURRENT_AUDIT_571_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.exact_loss"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.exact_loss
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.exact_loss
+
+#eval IO.println "CURRENT_AUDIT_572_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_continuous"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_continuous
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_continuous
+
+#eval IO.println "CURRENT_AUDIT_573_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_nonneg"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_nonneg
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_nonneg
+
+#eval IO.println "CURRENT_AUDIT_574_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_smul"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_smul
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_smul
+
+#eval IO.println "CURRENT_AUDIT_575_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_at_truth"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_at_truth
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_at_truth
+
+#eval IO.println "CURRENT_AUDIT_576_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_bound"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_bound
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_bound
+
+#eval IO.println "CURRENT_AUDIT_577_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.bloch_fidelity"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.bloch_fidelity
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.bloch_fidelity
+
+#eval IO.println "CURRENT_AUDIT_578_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.bloch_bures"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.bloch_bures
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.bloch_bures
+
+#eval IO.println "CURRENT_AUDIT_579_QubitOracle.AdaptiveDesign.MixedRelativeInformation.information_positive"
+#check QubitOracle.AdaptiveDesign.MixedRelativeInformation.information_positive
+#print axioms QubitOracle.AdaptiveDesign.MixedRelativeInformation.information_positive
+
+#eval IO.println "CURRENT_AUDIT_580_QubitOracle.AdaptiveDesign.MixedRelativeInformation.relativeInformation"
+#check QubitOracle.AdaptiveDesign.MixedRelativeInformation.relativeInformation
+#print axioms QubitOracle.AdaptiveDesign.MixedRelativeInformation.relativeInformation
+
+#eval IO.println "CURRENT_AUDIT_581_QubitOracle.AdaptiveDesign.MixedRelativeInformation.relative_positive"
+#check QubitOracle.AdaptiveDesign.MixedRelativeInformation.relative_positive
+#print axioms QubitOracle.AdaptiveDesign.MixedRelativeInformation.relative_positive
+
+#eval IO.println "CURRENT_AUDIT_582_QubitOracle.AdaptiveDesign.MixedRelativeInformation.relative_trace"
+#check QubitOracle.AdaptiveDesign.MixedRelativeInformation.relative_trace
+#print axioms QubitOracle.AdaptiveDesign.MixedRelativeInformation.relative_trace
+
+#eval IO.println "CURRENT_AUDIT_583_QubitOracle.AdaptiveDesign.MixedRelativeInformation.eigenvalues_in_unit_interval"
+#check QubitOracle.AdaptiveDesign.MixedRelativeInformation.eigenvalues_in_unit_interval
+#print axioms QubitOracle.AdaptiveDesign.MixedRelativeInformation.eigenvalues_in_unit_interval
+
+#eval IO.println "CURRENT_AUDIT_584_QubitOracle.AdaptiveDesign.MixedRelativeInformation.all_qubit_relative_eigenvalues"
+#check QubitOracle.AdaptiveDesign.MixedRelativeInformation.all_qubit_relative_eigenvalues
+#print axioms QubitOracle.AdaptiveDesign.MixedRelativeInformation.all_qubit_relative_eigenvalues
+
+#eval IO.println "CURRENT_AUDIT_585_QubitOracle.AdaptiveDesign.MultinomialGLSIdentity.covariance_identity"
+#check QubitOracle.AdaptiveDesign.MultinomialGLSIdentity.covariance_identity
+#print axioms QubitOracle.AdaptiveDesign.MultinomialGLSIdentity.covariance_identity
+
+#eval IO.println "CURRENT_AUDIT_586_QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_commutes"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_commutes
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_commutes
+
+#eval IO.println "CURRENT_AUDIT_587_QubitOracle.AdaptiveDesign.PureMatrixController.matrixCommutator"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.matrixCommutator
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.matrixCommutator
+
+#eval IO.println "CURRENT_AUDIT_588_QubitOracle.AdaptiveDesign.PureMatrixController.matrixCommutator_norm_le"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.matrixCommutator_norm_le
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.matrixCommutator_norm_le
+
+#eval IO.println "CURRENT_AUDIT_589_QubitOracle.AdaptiveDesign.PureMatrixController.tangentProjector_doubleCommutator"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.tangentProjector_doubleCommutator
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.tangentProjector_doubleCommutator
+
+#eval IO.println "CURRENT_AUDIT_590_QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_tangent_remainder"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_tangent_remainder
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_tangent_remainder
+
+#eval IO.println "CURRENT_AUDIT_591_QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_expansion"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_expansion
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_expansion
+
+#eval IO.println "CURRENT_AUDIT_592_QubitOracle.AdaptiveDesign.P1Weighted.bures_raw_fourthMoment"
+#check QubitOracle.AdaptiveDesign.P1Weighted.bures_raw_fourthMoment
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.bures_raw_fourthMoment
+
+#eval IO.println "CURRENT_AUDIT_593_QubitOracle.AdaptiveDesign.P1Weighted.bures_mean"
+#check QubitOracle.AdaptiveDesign.P1Weighted.bures_mean
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.bures_mean
+
+#eval IO.println "CURRENT_AUDIT_594_QubitOracle.AdaptiveDesign.P1Weighted.radial_projection_error"
+#check QubitOracle.AdaptiveDesign.P1Weighted.radial_projection_error
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.radial_projection_error
+
+#eval IO.println "CURRENT_AUDIT_595_QubitOracle.AdaptiveDesign.P1Weighted.bloch_norm_sq"
+#check QubitOracle.AdaptiveDesign.P1Weighted.bloch_norm_sq
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.bloch_norm_sq
+
+#eval IO.println "CURRENT_AUDIT_596_QubitOracle.AdaptiveDesign.P1Weighted.clip_error_bound"
+#check QubitOracle.AdaptiveDesign.P1Weighted.clip_error_bound
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.clip_error_bound
+
+#eval IO.println "CURRENT_AUDIT_597_QubitOracle.AdaptiveDesign.P1Weighted.controller_norm_le_one"
+#check QubitOracle.AdaptiveDesign.P1Weighted.controller_norm_le_one
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.controller_norm_le_one
+
+#eval IO.println "CURRENT_AUDIT_598_QubitOracle.AdaptiveDesign.P1Weighted.bures_controller_error_bound"
+#check QubitOracle.AdaptiveDesign.P1Weighted.bures_controller_error_bound
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.bures_controller_error_bound
+
+#eval IO.println "CURRENT_AUDIT_599_QubitOracle.AdaptiveDesign.P1Weighted.controller_error_bound"
+#check QubitOracle.AdaptiveDesign.P1Weighted.controller_error_bound
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.controller_error_bound
+
+#eval IO.println "CURRENT_AUDIT_600_QubitOracle.AdaptiveDesign.P1Weighted.controller_fourthMoment"
+#check QubitOracle.AdaptiveDesign.P1Weighted.controller_fourthMoment
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.controller_fourthMoment
+
+#eval IO.println "CURRENT_AUDIT_601_QubitOracle.AdaptiveDesign.P1Weighted.reportedError"
+#check QubitOracle.AdaptiveDesign.P1Weighted.reportedError
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.reportedError
+
+#eval IO.println "CURRENT_AUDIT_602_QubitOracle.AdaptiveDesign.P1Weighted.truth_eventually_in_clip_ball"
+#check QubitOracle.AdaptiveDesign.P1Weighted.truth_eventually_in_clip_ball
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.truth_eventually_in_clip_ball
+
+#eval IO.println "CURRENT_AUDIT_603_QubitOracle.AdaptiveDesign.P1Weighted.frobenius_controller_localization"
+#check QubitOracle.AdaptiveDesign.P1Weighted.frobenius_controller_localization
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.frobenius_controller_localization
+
+#eval IO.println "CURRENT_AUDIT_604_QubitOracle.AdaptiveDesign.P1Weighted.frobenius_weight_local_lower"
+#check QubitOracle.AdaptiveDesign.P1Weighted.frobenius_weight_local_lower
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.frobenius_weight_local_lower
+
+#eval IO.println "CURRENT_AUDIT_605_QubitOracle.AdaptiveDesign.P1Weighted.inverse_weight_bound"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverse_weight_bound
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverse_weight_bound
+
+#eval IO.println "CURRENT_AUDIT_606_QubitOracle.AdaptiveDesign.P1Weighted.optimalValue"
+#check QubitOracle.AdaptiveDesign.P1Weighted.optimalValue
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.optimalValue
+
+#eval IO.println "CURRENT_AUDIT_607_QubitOracle.AdaptiveDesign.P1Weighted.criterion_tendsto"
+#check QubitOracle.AdaptiveDesign.P1Weighted.criterion_tendsto
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.criterion_tendsto
+
+#eval IO.println "CURRENT_AUDIT_608_QubitOracle.AdaptiveDesign.P1Weighted.criteria_positive_batches"
+#check QubitOracle.AdaptiveDesign.P1Weighted.criteria_positive_batches
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.criteria_positive_batches
+
+#eval IO.println "CURRENT_AUDIT_609_QubitOracle.AdaptiveDesign.P1Weighted.residualSum"
+#check QubitOracle.AdaptiveDesign.P1Weighted.residualSum
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.residualSum
+
+#eval IO.println "CURRENT_AUDIT_610_QubitOracle.AdaptiveDesign.P1Weighted.residualSum_bound"
+#check QubitOracle.AdaptiveDesign.P1Weighted.residualSum_bound
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.residualSum_bound
+
+#eval IO.println "CURRENT_AUDIT_611_QubitOracle.AdaptiveDesign.P1Weighted.residualSum_moments"
+#check QubitOracle.AdaptiveDesign.P1Weighted.residualSum_moments
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.residualSum_moments
+
+#eval IO.println "CURRENT_AUDIT_612_QubitOracle.AdaptiveDesign.P1Weighted.residualSum_tail"
+#check QubitOracle.AdaptiveDesign.P1Weighted.residualSum_tail
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.residualSum_tail
+
+#eval IO.println "CURRENT_AUDIT_613_QubitOracle.AdaptiveDesign.P1Weighted.gramDeviation_tail"
+#check QubitOracle.AdaptiveDesign.P1Weighted.gramDeviation_tail
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.gramDeviation_tail
+
+#eval IO.println "CURRENT_AUDIT_614_QubitOracle.AdaptiveDesign.P1Weighted.rawError"
+#check QubitOracle.AdaptiveDesign.P1Weighted.rawError
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.rawError
+
+#eval IO.println "CURRENT_AUDIT_615_QubitOracle.AdaptiveDesign.P1Weighted.ridge_lower"
+#check QubitOracle.AdaptiveDesign.P1Weighted.ridge_lower
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.ridge_lower
+
+#eval IO.println "CURRENT_AUDIT_616_QubitOracle.AdaptiveDesign.P1Weighted.rawError_of_lower"
+#check QubitOracle.AdaptiveDesign.P1Weighted.rawError_of_lower
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.rawError_of_lower
+
+#eval IO.println "CURRENT_AUDIT_617_QubitOracle.AdaptiveDesign.P1Weighted.rawError_global_bound"
+#check QubitOracle.AdaptiveDesign.P1Weighted.rawError_global_bound
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.rawError_global_bound
+
+#eval IO.println "CURRENT_AUDIT_618_QubitOracle.AdaptiveDesign.P1Weighted.gram_lower_from_predicted"
+#check QubitOracle.AdaptiveDesign.P1Weighted.gram_lower_from_predicted
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.gram_lower_from_predicted
+
+#eval IO.println "CURRENT_AUDIT_619_QubitOracle.AdaptiveDesign.P1Weighted.bures_lower_of_noise"
+#check QubitOracle.AdaptiveDesign.P1Weighted.bures_lower_of_noise
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.bures_lower_of_noise
+
+#eval IO.println "CURRENT_AUDIT_620_QubitOracle.AdaptiveDesign.P1Weighted.predictedGram_lower_envelope"
+#check QubitOracle.AdaptiveDesign.P1Weighted.predictedGram_lower_envelope
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.predictedGram_lower_envelope
+
+#eval IO.println "CURRENT_AUDIT_621_QubitOracle.AdaptiveDesign.P1Weighted.frobenius_raw_fourthMoment"
+#check QubitOracle.AdaptiveDesign.P1Weighted.frobenius_raw_fourthMoment
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.frobenius_raw_fourthMoment
+
+#eval IO.println "CURRENT_AUDIT_622_QubitOracle.AdaptiveDesign.P1Weighted.quadratic_continuous"
+#check QubitOracle.AdaptiveDesign.P1Weighted.quadratic_continuous
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.quadratic_continuous
+
+#eval IO.println "CURRENT_AUDIT_623_QubitOracle.AdaptiveDesign.P1Weighted.gaussian_quadratic_memLp"
+#check QubitOracle.AdaptiveDesign.P1Weighted.gaussian_quadratic_memLp
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.gaussian_quadratic_memLp
+
+#eval IO.println "CURRENT_AUDIT_624_QubitOracle.AdaptiveDesign.P1Weighted.gaussian_quadratic_mean"
+#check QubitOracle.AdaptiveDesign.P1Weighted.gaussian_quadratic_mean
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.gaussian_quadratic_mean
+
+#eval IO.println "CURRENT_AUDIT_625_QubitOracle.AdaptiveDesign.P1Weighted.gramDeviation_moments"
+#check QubitOracle.AdaptiveDesign.P1Weighted.gramDeviation_moments
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.gramDeviation_moments
+
+#eval IO.println "CURRENT_AUDIT_626_QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum
+
+#eval IO.println "CURRENT_AUDIT_627_QubitOracle.AdaptiveDesign.P1Weighted.reporting_weight_pos"
+#check QubitOracle.AdaptiveDesign.P1Weighted.reporting_weight_pos
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.reporting_weight_pos
+
+#eval IO.println "CURRENT_AUDIT_628_QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum_nonneg"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum_nonneg
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum_nonneg
+
+#eval IO.println "CURRENT_AUDIT_629_QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum_bound"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum_bound
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum_bound
+
+#eval IO.println "CURRENT_AUDIT_630_QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum_measurable"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum_measurable
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum_measurable
+
+#eval IO.println "CURRENT_AUDIT_631_QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope"
+#check QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope
+
+#eval IO.println "CURRENT_AUDIT_632_QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope_moments"
+#check QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope_moments
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope_moments
+
+#eval IO.println "CURRENT_AUDIT_633_QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope_positive"
+#check QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope_positive
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope_positive
+
+#eval IO.println "CURRENT_AUDIT_634_QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope_controls"
+#check QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope_controls
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope_controls
+
+#eval IO.println "CURRENT_AUDIT_635_QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm
+
+#eval IO.println "CURRENT_AUDIT_636_QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm_of_lower"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm_of_lower
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm_of_lower
+
+#eval IO.println "CURRENT_AUDIT_637_QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm_measurable"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm_measurable
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm_measurable
+
+#eval IO.println "CURRENT_AUDIT_638_QubitOracle.AdaptiveDesign.P1Weighted.inverseGram_moments_of_envelope"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverseGram_moments_of_envelope
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverseGram_moments_of_envelope
+
+#eval IO.println "CURRENT_AUDIT_639_QubitOracle.AdaptiveDesign.P1Weighted.frobenius_inverseGram_moments"
+#check QubitOracle.AdaptiveDesign.P1Weighted.frobenius_inverseGram_moments
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.frobenius_inverseGram_moments
+
+#eval IO.println "CURRENT_AUDIT_640_QubitOracle.AdaptiveDesign.P1Weighted.bures_inverseGram_moments"
+#check QubitOracle.AdaptiveDesign.P1Weighted.bures_inverseGram_moments
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.bures_inverseGram_moments
+
+#eval IO.println "CURRENT_AUDIT_641_QubitOracle.AdaptiveDesign.P1Weighted.inverseGram_real_moments"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverseGram_real_moments
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverseGram_real_moments
+
+#eval IO.println "CURRENT_AUDIT_642_QubitOracle.AdaptiveDesign.P1Weighted.safeguard_variance_scale"
+#check QubitOracle.AdaptiveDesign.P1Weighted.safeguard_variance_scale
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.safeguard_variance_scale
+
+#eval IO.println "CURRENT_AUDIT_643_QubitOracle.AdaptiveDesign.P1Weighted.safeguard_budget_tendsto"
+#check QubitOracle.AdaptiveDesign.P1Weighted.safeguard_budget_tendsto
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.safeguard_budget_tendsto
+
+#eval IO.println "CURRENT_AUDIT_644_QubitOracle.AdaptiveDesign.P1Weighted.raw_localization"
+#check QubitOracle.AdaptiveDesign.P1Weighted.raw_localization
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.raw_localization
+
+#eval IO.println "CURRENT_AUDIT_645_QubitOracle.AdaptiveDesign.P1Weighted.quadratic_smul_vector"
+#check QubitOracle.AdaptiveDesign.P1Weighted.quadratic_smul_vector
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.quadratic_smul_vector
+
+#eval IO.println "CURRENT_AUDIT_646_QubitOracle.AdaptiveDesign.P1Weighted.quadratic_nonneg"
+#check QubitOracle.AdaptiveDesign.P1Weighted.quadratic_nonneg
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.quadratic_nonneg
+
+#eval IO.println "CURRENT_AUDIT_647_QubitOracle.AdaptiveDesign.P1Weighted.physical_quadratic_mean"
+#check QubitOracle.AdaptiveDesign.P1Weighted.physical_quadratic_mean
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.physical_quadratic_mean
+
+#eval IO.println "CURRENT_AUDIT_648_QubitOracle.AdaptiveDesign.P1Weighted.qubitFrobeniusLoss"
+#check QubitOracle.AdaptiveDesign.P1Weighted.qubitFrobeniusLoss
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.qubitFrobeniusLoss
+
+#eval IO.println "CURRENT_AUDIT_649_QubitOracle.AdaptiveDesign.P1Weighted.qubitFrobeniusLoss_eq"
+#check QubitOracle.AdaptiveDesign.P1Weighted.qubitFrobeniusLoss_eq
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.qubitFrobeniusLoss_eq
+
+#eval IO.println "CURRENT_AUDIT_650_QubitOracle.AdaptiveDesign.P1Weighted.frobenius_mean"
+#check QubitOracle.AdaptiveDesign.P1Weighted.frobenius_mean
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.frobenius_mean
+
+#eval IO.println "CURRENT_AUDIT_651_QubitOracle.AdaptiveDesign.P1Weighted.regressionFeature"
+#check QubitOracle.AdaptiveDesign.P1Weighted.regressionFeature
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.regressionFeature
+
+#eval IO.println "CURRENT_AUDIT_652_QubitOracle.AdaptiveDesign.P1Weighted.ridgeObjective"
+#check QubitOracle.AdaptiveDesign.P1Weighted.ridgeObjective
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.ridgeObjective
+
+#eval IO.println "CURRENT_AUDIT_653_QubitOracle.AdaptiveDesign.P1Weighted.vector_inner_bloch"
+#check QubitOracle.AdaptiveDesign.P1Weighted.vector_inner_bloch
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.vector_inner_bloch
+
+#eval IO.println "CURRENT_AUDIT_654_QubitOracle.AdaptiveDesign.P1Weighted.normalMap_regression"
+#check QubitOracle.AdaptiveDesign.P1Weighted.normalMap_regression
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.normalMap_regression
+
+#eval IO.println "CURRENT_AUDIT_655_QubitOracle.AdaptiveDesign.P1Weighted.regression_score"
+#check QubitOracle.AdaptiveDesign.P1Weighted.regression_score
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.regression_score
+
+#eval IO.println "CURRENT_AUDIT_656_QubitOracle.AdaptiveDesign.P1Weighted.estimate_eq_correction"
+#check QubitOracle.AdaptiveDesign.P1Weighted.estimate_eq_correction
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.estimate_eq_correction
+
+#eval IO.println "CURRENT_AUDIT_657_QubitOracle.AdaptiveDesign.P1Weighted.objective_regression"
+#check QubitOracle.AdaptiveDesign.P1Weighted.objective_regression
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.objective_regression
+
+#eval IO.println "CURRENT_AUDIT_658_QubitOracle.AdaptiveDesign.P1Weighted.estimate_unique_minimizer"
+#check QubitOracle.AdaptiveDesign.P1Weighted.estimate_unique_minimizer
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.estimate_unique_minimizer
+
+#eval IO.println "CURRENT_AUDIT_659_QubitOracle.AdaptiveDesign.P2Adaptive.pureParameter"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.pureParameter
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.pureParameter
+
+#eval IO.println "CURRENT_AUDIT_660_QubitOracle.AdaptiveDesign.P2Adaptive.coercivityConstant"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.coercivityConstant
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.coercivityConstant
+
+#eval IO.println "CURRENT_AUDIT_661_QubitOracle.AdaptiveDesign.P2Adaptive.coercivityConstant_pos"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.coercivityConstant_pos
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.coercivityConstant_pos
+
+#eval IO.println "CURRENT_AUDIT_662_QubitOracle.AdaptiveDesign.P2Adaptive.regressionFrame_coercive"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.regressionFrame_coercive
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.regressionFrame_coercive
+
+#eval IO.println "CURRENT_AUDIT_663_QubitOracle.AdaptiveDesign.P2Adaptive.physicalController"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.physicalController
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.physicalController
+
+#eval IO.println "CURRENT_AUDIT_664_QubitOracle.AdaptiveDesign.P2Adaptive.adaptiveProtocol"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.adaptiveProtocol
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.adaptiveProtocol
+
+#eval IO.println "CURRENT_AUDIT_665_QubitOracle.AdaptiveDesign.P2Adaptive.actualState"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.actualState
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.actualState
+
+#eval IO.println "CURRENT_AUDIT_666_QubitOracle.AdaptiveDesign.P2Adaptive.rawEstimator"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.rawEstimator
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.rawEstimator
+
+#eval IO.println "CURRENT_AUDIT_667_QubitOracle.AdaptiveDesign.P2Adaptive.stateEstimator"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.stateEstimator
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.stateEstimator
+
+#eval IO.println "CURRENT_AUDIT_668_QubitOracle.AdaptiveDesign.P2Adaptive.stateEstimator_physical"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.stateEstimator_physical
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.stateEstimator_physical
+
+#eval IO.println "CURRENT_AUDIT_669_QubitOracle.AdaptiveDesign.P2Adaptive.measurementFrame"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.measurementFrame
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.measurementFrame
+
+#eval IO.println "CURRENT_AUDIT_670_QubitOracle.AdaptiveDesign.P2Adaptive.measurementFrame_unitary"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.measurementFrame_unitary
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.measurementFrame_unitary
+
+#eval IO.println "CURRENT_AUDIT_671_QubitOracle.AdaptiveDesign.P2Adaptive.measurementFrame_eq_frozenController"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.measurementFrame_eq_frozenController
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.measurementFrame_eq_frozenController
+
+#eval IO.println "CURRENT_AUDIT_672_QubitOracle.AdaptiveDesign.P2Adaptive.rawEstimator_consistent"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.rawEstimator_consistent
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.rawEstimator_consistent
+
+#eval IO.println "CURRENT_AUDIT_673_QubitOracle.AdaptiveDesign.P2Adaptive.trueFrame"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.trueFrame
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.trueFrame
+
+#eval IO.println "CURRENT_AUDIT_674_QubitOracle.AdaptiveDesign.P2Adaptive.trueFrame_unitary"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.trueFrame_unitary
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.trueFrame_unitary
+
+#eval IO.println "CURRENT_AUDIT_675_QubitOracle.AdaptiveDesign.P2Adaptive.trueFrame_projector"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.trueFrame_projector
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.trueFrame_projector
+
+#eval IO.println "CURRENT_AUDIT_676_QubitOracle.AdaptiveDesign.P2Adaptive.designFisher"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.designFisher
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.designFisher
+
+#eval IO.println "CURRENT_AUDIT_677_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_bound"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_bound
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_bound
+
+#eval IO.println "CURRENT_AUDIT_678_QubitOracle.AdaptiveDesign.TangentGLS.actualProjectorError_norm_bound"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualProjectorError_norm_bound
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualProjectorError_norm_bound
+
+#eval IO.println "CURRENT_AUDIT_679_QubitOracle.AdaptiveDesign.POVMEstimatorMoments.raw_uniformMoment"
+#check QubitOracle.AdaptiveDesign.POVMEstimatorMoments.raw_uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.POVMEstimatorMoments.raw_uniformMoment
+
+#eval IO.println "CURRENT_AUDIT_680_QubitOracle.AdaptiveDesign.POVMEstimatorMoments.preliminary_uniformMoment"
+#check QubitOracle.AdaptiveDesign.POVMEstimatorMoments.preliminary_uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.POVMEstimatorMoments.preliminary_uniformMoment
+
+#eval IO.println "CURRENT_AUDIT_681_QubitOracle.AdaptiveDesign.POVMEstimatorMoments.score_uniformMoment"
+#check QubitOracle.AdaptiveDesign.POVMEstimatorMoments.score_uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.POVMEstimatorMoments.score_uniformMoment
+
+#eval IO.println "CURRENT_AUDIT_682_QubitOracle.AdaptiveDesign.POVMEstimatorMoments.correction_uniformMoment"
+#check QubitOracle.AdaptiveDesign.POVMEstimatorMoments.correction_uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.POVMEstimatorMoments.correction_uniformMoment
+
+#eval IO.println "CURRENT_AUDIT_683_QubitOracle.AdaptiveDesign.POVMEstimatorMoments.corrected_uniformMoment"
+#check QubitOracle.AdaptiveDesign.POVMEstimatorMoments.corrected_uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.POVMEstimatorMoments.corrected_uniformMoment
+
+#eval IO.println "CURRENT_AUDIT_684_QubitOracle.AdaptiveDesign.TangentGLS.tangentSpace_eq_of_projector_eq"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentSpace_eq_of_projector_eq
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentSpace_eq_of_projector_eq
+
+#eval IO.println "CURRENT_AUDIT_685_QubitOracle.AdaptiveDesign.TangentGLS.correctionOnSubmodule"
+#check QubitOracle.AdaptiveDesign.TangentGLS.correctionOnSubmodule
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.correctionOnSubmodule
+
+#eval IO.println "CURRENT_AUDIT_686_QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_phase_invariant"
+#check QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_phase_invariant
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_phase_invariant
+
+#eval IO.println "CURRENT_AUDIT_687_QubitOracle.AdaptiveDesign.TangentGLS.correctedState_phase_invariant"
+#check QubitOracle.AdaptiveDesign.TangentGLS.correctedState_phase_invariant
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.correctedState_phase_invariant
+
+#eval IO.println "CURRENT_AUDIT_688_QubitOracle.AdaptiveDesign.PhasePair.frameOperator_transport"
+#check QubitOracle.AdaptiveDesign.PhasePair.frameOperator_transport
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.frameOperator_transport
+
+#eval IO.println "CURRENT_AUDIT_689_QubitOracle.AdaptiveDesign.PhasePair.paired_frame_identity"
+#check QubitOracle.AdaptiveDesign.PhasePair.paired_frame_identity
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.paired_frame_identity
+
+#eval IO.println "CURRENT_AUDIT_690_QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.qubit_bures"
+#check QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.qubit_bures
+#print axioms QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.qubit_bures
+
+#eval IO.println "CURRENT_AUDIT_691_QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.controller_in_ball"
+#check QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.controller_in_ball
+#print axioms QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.controller_in_ball
+
+#eval IO.println "CURRENT_AUDIT_692_QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.mixed_bures_mean"
+#check QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.mixed_bures_mean
+#print axioms QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.mixed_bures_mean
+
+#eval IO.println "CURRENT_AUDIT_693_QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.pureDensity"
+#check QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.pureDensity
+#print axioms QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.pureDensity
+
+#eval IO.println "CURRENT_AUDIT_694_QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.pure_bures_loss"
+#check QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.pure_bures_loss
+#print axioms QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.pure_bures_loss
+
+#eval IO.println "CURRENT_AUDIT_695_QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.povm_bures_mean"
+#check QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.povm_bures_mean
+#print axioms QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.povm_bures_mean
+
+#eval IO.println "CURRENT_AUDIT_696_QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.phasePair_bures_mean"
+#check QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.phasePair_bures_mean
+#print axioms QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.phasePair_bures_mean
+
+#eval IO.println "CURRENT_AUDIT_697_QubitOracle.AdaptiveDesign.PhysicalModelCharacterization.qubit_positive_iff"
+#check QubitOracle.AdaptiveDesign.PhysicalModelCharacterization.qubit_positive_iff
+#print axioms QubitOracle.AdaptiveDesign.PhysicalModelCharacterization.qubit_positive_iff
+
+#eval IO.println "CURRENT_AUDIT_698_QubitOracle.AdaptiveDesign.PhysicalModelCharacterization.physical_bloch_coordinates_in_ball"
+#check QubitOracle.AdaptiveDesign.PhysicalModelCharacterization.physical_bloch_coordinates_in_ball
+#print axioms QubitOracle.AdaptiveDesign.PhysicalModelCharacterization.physical_bloch_coordinates_in_ball
+
+#eval IO.println "CURRENT_AUDIT_699_QubitOracle.AdaptiveDesign.PhysicalModelCharacterization.hermitian_projector_is_pure"
+#check QubitOracle.AdaptiveDesign.PhysicalModelCharacterization.hermitian_projector_is_pure
+#print axioms QubitOracle.AdaptiveDesign.PhysicalModelCharacterization.hermitian_projector_is_pure
+
+#eval IO.println "CURRENT_AUDIT_700_QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.positive_norm_sq_le_trace_sq"
+#check QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.positive_norm_sq_le_trace_sq
+#print axioms QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.positive_norm_sq_le_trace_sq
+
+#eval IO.println "CURRENT_AUDIT_701_QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.physical_norm_le_one"
+#check QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.physical_norm_le_one
+#print axioms QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.physical_norm_le_one
+
+#eval IO.println "CURRENT_AUDIT_702_QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.unit_barycenter_degenerate"
+#check QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.unit_barycenter_degenerate
+#print axioms QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.unit_barycenter_degenerate
+
+#eval IO.println "CURRENT_AUDIT_703_QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.physical_unbiased_at_pure"
+#check QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.physical_unbiased_at_pure
+#print axioms QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.physical_unbiased_at_pure
+
+#eval IO.println "CURRENT_AUDIT_704_QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.no_globally_unbiased_physical_estimator"
+#check QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.no_globally_unbiased_physical_estimator
+#print axioms QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.no_globally_unbiased_physical_estimator
+
+#eval IO.println "CURRENT_AUDIT_705_QubitOracle.AdaptiveDesign.PolynomialSqrtExponential.tendsto_zero"
+#check QubitOracle.AdaptiveDesign.PolynomialSqrtExponential.tendsto_zero
+#print axioms QubitOracle.AdaptiveDesign.PolynomialSqrtExponential.tendsto_zero
+
+#eval IO.println "CURRENT_AUDIT_706_QubitOracle.AdaptiveDesign.PolynomialSqrtExponential.summable"
+#check QubitOracle.AdaptiveDesign.PolynomialSqrtExponential.summable
+#print axioms QubitOracle.AdaptiveDesign.PolynomialSqrtExponential.summable
+
+#eval IO.println "CURRENT_AUDIT_707_QubitOracle.AdaptiveDesign.PolynomialSqrtExponential.summable_of_tail"
+#check QubitOracle.AdaptiveDesign.PolynomialSqrtExponential.summable_of_tail
+#print axioms QubitOracle.AdaptiveDesign.PolynomialSqrtExponential.summable_of_tail
+
+#eval IO.println "CURRENT_AUDIT_708_QubitOracle.AdaptiveDesign.PositiveEffectSchur.remainder"
+#check QubitOracle.AdaptiveDesign.PositiveEffectSchur.remainder
+#print axioms QubitOracle.AdaptiveDesign.PositiveEffectSchur.remainder
+
+#eval IO.println "CURRENT_AUDIT_709_QubitOracle.AdaptiveDesign.PositiveEffectSchur.remainder_positive"
+#check QubitOracle.AdaptiveDesign.PositiveEffectSchur.remainder_positive
+#print axioms QubitOracle.AdaptiveDesign.PositiveEffectSchur.remainder_positive
+
+#eval IO.println "CURRENT_AUDIT_710_QubitOracle.AdaptiveDesign.PositiveEffectSchur.remainder_diagonal"
+#check QubitOracle.AdaptiveDesign.PositiveEffectSchur.remainder_diagonal
+#print axioms QubitOracle.AdaptiveDesign.PositiveEffectSchur.remainder_diagonal
+
+#eval IO.println "CURRENT_AUDIT_711_QubitOracle.AdaptiveDesign.PositiveEffectSchur.trace_saturation_remainder_zero"
+#check QubitOracle.AdaptiveDesign.PositiveEffectSchur.trace_saturation_remainder_zero
+#print axioms QubitOracle.AdaptiveDesign.PositiveEffectSchur.trace_saturation_remainder_zero
+
+#eval IO.println "CURRENT_AUDIT_712_QubitOracle.AdaptiveDesign.PositiveEffectSchur.trace_saturation_rankOne"
+#check QubitOracle.AdaptiveDesign.PositiveEffectSchur.trace_saturation_rankOne
+#print axioms QubitOracle.AdaptiveDesign.PositiveEffectSchur.trace_saturation_rankOne
+
+#eval IO.println "CURRENT_AUDIT_713_QubitOracle.AdaptiveDesign.TangentGLS.referenceChartMatrix"
+#check QubitOracle.AdaptiveDesign.TangentGLS.referenceChartMatrix
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.referenceChartMatrix
+
+#eval IO.println "CURRENT_AUDIT_714_QubitOracle.AdaptiveDesign.TangentGLS.trueChartMatrix"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueChartMatrix
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueChartMatrix
+
+#eval IO.println "CURRENT_AUDIT_715_QubitOracle.AdaptiveDesign.PureChartCovariance.Coordinates"
+#check QubitOracle.AdaptiveDesign.PureChartCovariance.Coordinates
+#print axioms QubitOracle.AdaptiveDesign.PureChartCovariance.Coordinates
+
+#eval IO.println "CURRENT_AUDIT_716_QubitOracle.AdaptiveDesign.PureChartCovariance.qfiOperator"
+#check QubitOracle.AdaptiveDesign.PureChartCovariance.qfiOperator
+#print axioms QubitOracle.AdaptiveDesign.PureChartCovariance.qfiOperator
+
+#eval IO.println "CURRENT_AUDIT_717_QubitOracle.AdaptiveDesign.PureChartCovariance.inverseQfiOperator"
+#check QubitOracle.AdaptiveDesign.PureChartCovariance.inverseQfiOperator
+#print axioms QubitOracle.AdaptiveDesign.PureChartCovariance.inverseQfiOperator
+
+#eval IO.println "CURRENT_AUDIT_718_QubitOracle.AdaptiveDesign.PureChartCovariance.qfi_inverse"
+#check QubitOracle.AdaptiveDesign.PureChartCovariance.qfi_inverse
+#print axioms QubitOracle.AdaptiveDesign.PureChartCovariance.qfi_inverse
+
+#eval IO.println "CURRENT_AUDIT_719_QubitOracle.AdaptiveDesign.PureChartCovariance.qfi_is_sld"
+#check QubitOracle.AdaptiveDesign.PureChartCovariance.qfi_is_sld
+#print axioms QubitOracle.AdaptiveDesign.PureChartCovariance.qfi_is_sld
+
+#eval IO.println "CURRENT_AUDIT_720_QubitOracle.AdaptiveDesign.PureChartCovariance.covariance_normalized"
+#check QubitOracle.AdaptiveDesign.PureChartCovariance.covariance_normalized
+#print axioms QubitOracle.AdaptiveDesign.PureChartCovariance.covariance_normalized
+
+#eval IO.println "CURRENT_AUDIT_721_QubitOracle.AdaptiveDesign.PureChartCovariance.covariance_eq_twice_inverse_qfi"
+#check QubitOracle.AdaptiveDesign.PureChartCovariance.covariance_eq_twice_inverse_qfi
+#print axioms QubitOracle.AdaptiveDesign.PureChartCovariance.covariance_eq_twice_inverse_qfi
+
+#eval IO.println "CURRENT_AUDIT_722_QubitOracle.AdaptiveDesign.TangentGLS.projector_column_identity"
+#check QubitOracle.AdaptiveDesign.TangentGLS.projector_column_identity
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.projector_column_identity
+
+#eval IO.println "CURRENT_AUDIT_723_QubitOracle.AdaptiveDesign.TangentGLS.hermitian_diagonal_real"
+#check QubitOracle.AdaptiveDesign.TangentGLS.hermitian_diagonal_real
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.hermitian_diagonal_real
+
+#eval IO.println "CURRENT_AUDIT_724_QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_reconstruction"
+#check QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_reconstruction
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_reconstruction
+
+#eval IO.println "CURRENT_AUDIT_725_QubitOracle.AdaptiveDesign.TangentGLS.chart_amplitudeCoordinates"
+#check QubitOracle.AdaptiveDesign.TangentGLS.chart_amplitudeCoordinates
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.chart_amplitudeCoordinates
+
+#eval IO.println "CURRENT_AUDIT_726_QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_in_domain"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_in_domain
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_in_domain
+
+#eval IO.println "CURRENT_AUDIT_727_QubitOracle.AdaptiveDesign.TangentGLS.chartAmplitudeLinear"
+#check QubitOracle.AdaptiveDesign.TangentGLS.chartAmplitudeLinear
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.chartAmplitudeLinear
+
+#eval IO.println "CURRENT_AUDIT_728_QubitOracle.AdaptiveDesign.TangentGLS.chartState_continuous"
+#check QubitOracle.AdaptiveDesign.TangentGLS.chartState_continuous
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.chartState_continuous
+
+#eval IO.println "CURRENT_AUDIT_729_QubitOracle.AdaptiveDesign.TangentGLS.chartState_hasFDerivAt_zero"
+#check QubitOracle.AdaptiveDesign.TangentGLS.chartState_hasFDerivAt_zero
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.chartState_hasFDerivAt_zero
+
+#eval IO.println "CURRENT_AUDIT_730_QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_continuous"
+#check QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_continuous
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_continuous
+
+#eval IO.println "CURRENT_AUDIT_731_QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_hasFDerivAt_zero"
+#check QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_hasFDerivAt_zero
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_hasFDerivAt_zero
+
+#eval IO.println "CURRENT_AUDIT_732_QubitOracle.AdaptiveDesign.TangentGLS.trueChart_hasFDerivAt_zero"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueChart_hasFDerivAt_zero
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueChart_hasFDerivAt_zero
+
+#eval IO.println "CURRENT_AUDIT_733_QubitOracle.AdaptiveDesign.TangentGLS.chart_sld_metric"
+#check QubitOracle.AdaptiveDesign.TangentGLS.chart_sld_metric
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.chart_sld_metric
+
+#eval IO.println "CURRENT_AUDIT_734_QubitOracle.AdaptiveDesign.TangentGLS.trueChartPureVector"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueChartPureVector
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueChartPureVector
+
+#eval IO.println "CURRENT_AUDIT_735_QubitOracle.AdaptiveDesign.TangentGLS.trueChart_is_pure"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueChart_is_pure
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueChart_is_pure
+
+#eval IO.println "CURRENT_AUDIT_736_QubitOracle.AdaptiveDesign.TangentGLS.tangentRadiusSq_lt_four_of_ball"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentRadiusSq_lt_four_of_ball
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentRadiusSq_lt_four_of_ball
+
+#eval IO.println "CURRENT_AUDIT_737_QubitOracle.AdaptiveDesign.TangentGLS.trueChart_injectiveOn_ball"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueChart_injectiveOn_ball
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueChart_injectiveOn_ball
+
+#eval IO.println "CURRENT_AUDIT_738_QubitOracle.AdaptiveDesign.TangentGLS.pureProjectors_infinite"
+#check QubitOracle.AdaptiveDesign.TangentGLS.pureProjectors_infinite
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.pureProjectors_infinite
+
+#eval IO.println "CURRENT_AUDIT_739_QubitOracle.AdaptiveDesign.TangentGLS.basisPureVector"
+#check QubitOracle.AdaptiveDesign.TangentGLS.basisPureVector
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.basisPureVector
+
+#eval IO.println "CURRENT_AUDIT_740_QubitOracle.AdaptiveDesign.TangentGLS.basisPureVector_parameter"
+#check QubitOracle.AdaptiveDesign.TangentGLS.basisPureVector_parameter
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.basisPureVector_parameter
+
+#eval IO.println "CURRENT_AUDIT_741_QubitOracle.AdaptiveDesign.TangentGLS.basis_charts_cover"
+#check QubitOracle.AdaptiveDesign.TangentGLS.basis_charts_cover
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.basis_charts_cover
+
+#eval IO.println "CURRENT_AUDIT_742_QubitOracle.AdaptiveDesign.PureFisherLoewner.effect_cauchy_schwarz"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.effect_cauchy_schwarz
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.effect_cauchy_schwarz
+
+#eval IO.println "CURRENT_AUDIT_743_QubitOracle.AdaptiveDesign.PureFisherLoewner.scalar_effect_bound"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.scalar_effect_bound
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.scalar_effect_bound
+
+#eval IO.println "CURRENT_AUDIT_744_QubitOracle.AdaptiveDesign.PureFisherLoewner.directional_information_bound"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.directional_information_bound
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.directional_information_bound
+
+#eval IO.println "CURRENT_AUDIT_745_QubitOracle.AdaptiveDesign.PureFisherLoewner.complexDirection"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.complexDirection
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.complexDirection
+
+#eval IO.println "CURRENT_AUDIT_746_QubitOracle.AdaptiveDesign.PureFisherLoewner.direction_normSq"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.direction_normSq
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.direction_normSq
+
+#eval IO.println "CURRENT_AUDIT_747_QubitOracle.AdaptiveDesign.PureFisherLoewner.direction_gradient"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.direction_gradient
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.direction_gradient
+
+#eval IO.println "CURRENT_AUDIT_748_QubitOracle.AdaptiveDesign.PureFisherLoewner.weightedGram_quadratic"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.weightedGram_quadratic
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.weightedGram_quadratic
+
+#eval IO.println "CURRENT_AUDIT_749_QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_quadratic"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_quadratic
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_quadratic
+
+#eval IO.println "CURRENT_AUDIT_750_QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_information_le_identity"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_information_le_identity
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_information_le_identity
+
+#eval IO.println "CURRENT_AUDIT_751_QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_fisher_positive"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_fisher_positive
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_fisher_positive
+
+#eval IO.println "CURRENT_AUDIT_752_QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_fisher_loewner"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_fisher_loewner
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_fisher_loewner
+
+#eval IO.println "CURRENT_AUDIT_753_QubitOracle.AdaptiveDesign.PureFisherLoewner.rotated"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.rotated
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.rotated
+
+#eval IO.println "CURRENT_AUDIT_754_QubitOracle.AdaptiveDesign.PureFisherLoewner.actual_fisher_loewner"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.actual_fisher_loewner
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.actual_fisher_loewner
+
+#eval IO.println "CURRENT_AUDIT_755_QubitOracle.AdaptiveDesign.PureFisherLoewner.information_gap_congruence"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.information_gap_congruence
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.information_gap_congruence
+
+#eval IO.println "CURRENT_AUDIT_756_QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor"
+#check QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor
+#print axioms QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor
+
+#eval IO.println "CURRENT_AUDIT_757_QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor_continuous"
+#check QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor_continuous
+#print axioms QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor_continuous
+
+#eval IO.println "CURRENT_AUDIT_758_QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor_bounds"
+#check QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor_bounds
+#print axioms QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor_bounds
+
+#eval IO.println "CURRENT_AUDIT_759_QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor_self"
+#check QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor_self
+#print axioms QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor_self
+
+#eval IO.println "CURRENT_AUDIT_760_QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.bures_identity"
+#check QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.bures_identity
+#print axioms QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.bures_identity
+
+#eval IO.println "CURRENT_AUDIT_761_QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.both_mean_losses"
+#check QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.both_mean_losses
+#print axioms QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.both_mean_losses
+
+#eval IO.println "CURRENT_AUDIT_762_QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.povm"
+#check QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.povm
+#print axioms QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.povm
+
+#eval IO.println "CURRENT_AUDIT_763_QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.phasePair"
+#check QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.phasePair
+#print axioms QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.phasePair
+
+#eval IO.println "CURRENT_AUDIT_764_QubitOracle.AdaptiveDesign.PureSLDMetric.pureSLD"
+#check QubitOracle.AdaptiveDesign.PureSLDMetric.pureSLD
+#print axioms QubitOracle.AdaptiveDesign.PureSLDMetric.pureSLD
+
+#eval IO.println "CURRENT_AUDIT_765_QubitOracle.AdaptiveDesign.PureSLDMetric.sld_equation"
+#check QubitOracle.AdaptiveDesign.PureSLDMetric.sld_equation
+#print axioms QubitOracle.AdaptiveDesign.PureSLDMetric.sld_equation
+
+#eval IO.println "CURRENT_AUDIT_766_QubitOracle.AdaptiveDesign.PureSLDMetric.metricFromSLD"
+#check QubitOracle.AdaptiveDesign.PureSLDMetric.metricFromSLD
+#print axioms QubitOracle.AdaptiveDesign.PureSLDMetric.metricFromSLD
+
+#eval IO.println "CURRENT_AUDIT_767_QubitOracle.AdaptiveDesign.PureSLDMetric.metricFromSLD_eq"
+#check QubitOracle.AdaptiveDesign.PureSLDMetric.metricFromSLD_eq
+#print axioms QubitOracle.AdaptiveDesign.PureSLDMetric.metricFromSLD_eq
+
+#eval IO.println "CURRENT_AUDIT_768_QubitOracle.AdaptiveDesign.PureSLDMetric.trueLift_mem"
+#check QubitOracle.AdaptiveDesign.PureSLDMetric.trueLift_mem
+#print axioms QubitOracle.AdaptiveDesign.PureSLDMetric.trueLift_mem
+
+#eval IO.println "CURRENT_AUDIT_769_QubitOracle.AdaptiveDesign.PureSLDMetric.normalizedLift"
+#check QubitOracle.AdaptiveDesign.PureSLDMetric.normalizedLift
+#print axioms QubitOracle.AdaptiveDesign.PureSLDMetric.normalizedLift
+
+#eval IO.println "CURRENT_AUDIT_770_QubitOracle.AdaptiveDesign.PureSLDMetric.normalized_metric"
+#check QubitOracle.AdaptiveDesign.PureSLDMetric.normalized_metric
+#print axioms QubitOracle.AdaptiveDesign.PureSLDMetric.normalized_metric
+
+#eval IO.println "CURRENT_AUDIT_771_QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_self"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_self
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_self
+
+#eval IO.println "CURRENT_AUDIT_772_QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_continuousAt"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_continuousAt
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_continuousAt
+
+#eval IO.println "CURRENT_AUDIT_773_QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_comp_stronglyMeasurable"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_comp_stronglyMeasurable
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_comp_stronglyMeasurable
+
+#eval IO.println "CURRENT_AUDIT_774_QubitOracle.AdaptiveDesign.TangentGLS.smoothChart_clt_of_amplitude_clt"
+#check QubitOracle.AdaptiveDesign.TangentGLS.smoothChart_clt_of_amplitude_clt
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.smoothChart_clt_of_amplitude_clt
+
+#eval IO.println "CURRENT_AUDIT_775_QubitOracle.AdaptiveDesign.TangentGLS.smoothChart_optimalVariance"
+#check QubitOracle.AdaptiveDesign.TangentGLS.smoothChart_optimalVariance
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.smoothChart_optimalVariance
+
+#eval IO.println "CURRENT_AUDIT_776_QubitOracle.AdaptiveDesign.TangentGLS.phasePair_smoothChart_optimalVariance"
+#check QubitOracle.AdaptiveDesign.TangentGLS.phasePair_smoothChart_optimalVariance
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.phasePair_smoothChart_optimalVariance
+
+#eval IO.println "CURRENT_AUDIT_777_QubitOracle.AdaptiveDesign.TangentGLS.tangentCoordinateEquiv"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentCoordinateEquiv
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentCoordinateEquiv
+
+#eval IO.println "CURRENT_AUDIT_778_QubitOracle.AdaptiveDesign.TangentGLS.tangent_finrank"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangent_finrank
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangent_finrank
+
+#eval IO.println "CURRENT_AUDIT_779_QubitOracle.AdaptiveDesign.TangentGLS.measurementFisher"
+#check QubitOracle.AdaptiveDesign.TangentGLS.measurementFisher
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.measurementFisher
+
+#eval IO.println "CURRENT_AUDIT_780_QubitOracle.AdaptiveDesign.TangentGLS.measurementFisher_isometry"
+#check QubitOracle.AdaptiveDesign.TangentGLS.measurementFisher_isometry
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.measurementFisher_isometry
+
+#eval IO.println "CURRENT_AUDIT_781_QubitOracle.AdaptiveDesign.TangentGLS.measurementFisher_actual"
+#check QubitOracle.AdaptiveDesign.TangentGLS.measurementFisher_actual
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.measurementFisher_actual
+
+#eval IO.println "CURRENT_AUDIT_782_QubitOracle.AdaptiveDesign.TangentGLS.pure_metric_isometry"
+#check QubitOracle.AdaptiveDesign.TangentGLS.pure_metric_isometry
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.pure_metric_isometry
+
+#eval IO.println "CURRENT_AUDIT_783_QubitOracle.AdaptiveDesign.TangentGLS.pure_metric_horizontal"
+#check QubitOracle.AdaptiveDesign.TangentGLS.pure_metric_horizontal
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.pure_metric_horizontal
+
+#eval IO.println "CURRENT_AUDIT_784_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_intrinsic"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_intrinsic
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_intrinsic
+
+#eval IO.println "CURRENT_AUDIT_785_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_phase_invariant"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_phase_invariant
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_phase_invariant
+
+#eval IO.println "CURRENT_AUDIT_786_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.trace_sq_two"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.trace_sq_two
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.trace_sq_two
+
+#eval IO.println "CURRENT_AUDIT_787_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.sqrt_trace_sq_two"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.sqrt_trace_sq_two
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.sqrt_trace_sq_two
+
+#eval IO.println "CURRENT_AUDIT_788_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_fidelity_trace_det"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_fidelity_trace_det
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_fidelity_trace_det
+
+#eval IO.println "CURRENT_AUDIT_789_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_det"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_det
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_det
+
+#eval IO.println "CURRENT_AUDIT_790_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_product_trace"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_product_trace
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_product_trace
+
+#eval IO.println "CURRENT_AUDIT_791_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_fidelity_bloch"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_fidelity_bloch
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_fidelity_bloch
+
+#eval IO.println "CURRENT_AUDIT_792_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.rankOne_mul_self"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.rankOne_mul_self
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.rankOne_mul_self
+
+#eval IO.println "CURRENT_AUDIT_793_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.rankOne_sqrt"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.rankOne_sqrt
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.rankOne_sqrt
+
+#eval IO.println "CURRENT_AUDIT_794_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.pure_fidelity"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.pure_fidelity
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.pure_fidelity
+
+#eval IO.println "CURRENT_AUDIT_795_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.pure_bures"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.pure_bures
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.pure_bures
+
+#eval IO.println "CURRENT_AUDIT_796_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight
+
+#eval IO.println "CURRENT_AUDIT_797_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.vector"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.vector
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.vector
+
+#eval IO.println "CURRENT_AUDIT_798_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.reconstruction"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.reconstruction
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.reconstruction
+
+#eval IO.println "CURRENT_AUDIT_799_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight_nonneg"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight_nonneg
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight_nonneg
+
+#eval IO.println "CURRENT_AUDIT_800_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.vector_bound"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.vector_bound
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.vector_bound
+
+#eval IO.println "CURRENT_AUDIT_801_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight_positive"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight_positive
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight_positive
+
+#eval IO.println "CURRENT_AUDIT_802_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.ofPOVM"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.ofPOVM
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.ofPOVM
+
+#eval IO.println "CURRENT_AUDIT_803_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.effect_reconstruction"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.effect_reconstruction
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.effect_reconstruction
+
+#eval IO.println "CURRENT_AUDIT_804_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.probability_is_born"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.probability_is_born
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.probability_is_born
+
+#eval IO.println "CURRENT_AUDIT_805_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.all_qubit_gillMassar"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.all_qubit_gillMassar
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.all_qubit_gillMassar
+
+#eval IO.println "CURRENT_AUDIT_806_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalizedVector"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalizedVector
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalizedVector
+
+#eval IO.println "CURRENT_AUDIT_807_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.scaled_normalized"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.scaled_normalized
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.scaled_normalized
+
+#eval IO.println "CURRENT_AUDIT_808_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalized_vector_bound"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalized_vector_bound
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalized_vector_bound
+
+#eval IO.println "CURRENT_AUDIT_809_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.pauliLinear_real_smul"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.pauliLinear_real_smul
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.pauliLinear_real_smul
+
+#eval IO.println "CURRENT_AUDIT_810_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalized_reconstruction"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalized_reconstruction
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalized_reconstruction
+
+#eval IO.println "CURRENT_AUDIT_811_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalizedPOVM_constraints"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalizedPOVM_constraints
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalizedPOVM_constraints
+
+#eval IO.println "CURRENT_AUDIT_812_QubitOracle.AdaptiveDesign.QubitLocalInformation.qubit_eigenvalues"
+#check QubitOracle.AdaptiveDesign.QubitLocalInformation.qubit_eigenvalues
+#print axioms QubitOracle.AdaptiveDesign.QubitLocalInformation.qubit_eigenvalues
+
+#eval IO.println "CURRENT_AUDIT_813_QubitOracle.AdaptiveDesign.QubitLocalInformation.reciprocal_lipschitz"
+#check QubitOracle.AdaptiveDesign.QubitLocalInformation.reciprocal_lipschitz
+#print axioms QubitOracle.AdaptiveDesign.QubitLocalInformation.reciprocal_lipschitz
+
+#eval IO.println "CURRENT_AUDIT_814_QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation"
+#check QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation
+#print axioms QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation
+
+#eval IO.println "CURRENT_AUDIT_815_QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation_lipschitz"
+#check QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation_lipschitz
+#print axioms QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation_lipschitz
+
+#eval IO.println "CURRENT_AUDIT_816_QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation_matrix"
+#check QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation_matrix
+#print axioms QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation_matrix
+
+#eval IO.println "CURRENT_AUDIT_817_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.rpow_le_one_add_pow"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.rpow_le_one_add_pow
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.rpow_le_one_add_pow
+
+#eval IO.println "CURRENT_AUDIT_818_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.real_moment"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.real_moment
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.real_moment
+
+#eval IO.println "CURRENT_AUDIT_819_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.real_moments_of_all_integer"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.real_moments_of_all_integer
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.real_moments_of_all_integer
+
+#eval IO.println "CURRENT_AUDIT_820_QubitOracle.AdaptiveDesign.TangentGLS.gram_reindex"
+#check QubitOracle.AdaptiveDesign.TangentGLS.gram_reindex
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.gram_reindex
+
+#eval IO.println "CURRENT_AUDIT_821_QubitOracle.AdaptiveDesign.TangentGLS.score_reindex"
+#check QubitOracle.AdaptiveDesign.TangentGLS.score_reindex
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.score_reindex
+
+#eval IO.println "CURRENT_AUDIT_822_QubitOracle.AdaptiveDesign.TangentGLS.correction_reindex"
+#check QubitOracle.AdaptiveDesign.TangentGLS.correction_reindex
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.correction_reindex
+
+#eval IO.println "CURRENT_AUDIT_823_QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_permutation"
+#check QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_permutation
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_permutation
+
+#eval IO.println "CURRENT_AUDIT_824_QubitOracle.AdaptiveDesign.TangentGLS.recordRawFit"
+#check QubitOracle.AdaptiveDesign.TangentGLS.recordRawFit
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.recordRawFit
+
+#eval IO.println "CURRENT_AUDIT_825_QubitOracle.AdaptiveDesign.TangentGLS.recordRawFit_permutation"
+#check QubitOracle.AdaptiveDesign.TangentGLS.recordRawFit_permutation
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.recordRawFit_permutation
+
+#eval IO.println "CURRENT_AUDIT_826_QubitOracle.AdaptiveDesign.TangentGLS.estimateFromRaw_permutation"
+#check QubitOracle.AdaptiveDesign.TangentGLS.estimateFromRaw_permutation
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.estimateFromRaw_permutation
+
+#eval IO.println "CURRENT_AUDIT_827_QubitOracle.AdaptiveDesign.TangentGLS.fullRecordEstimate_permutation"
+#check QubitOracle.AdaptiveDesign.TangentGLS.fullRecordEstimate_permutation
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.fullRecordEstimate_permutation
+
+#eval IO.println "CURRENT_AUDIT_828_QubitOracle.AdaptiveDesign.TangentGLS.recordRawFit_unique_minimizer"
+#check QubitOracle.AdaptiveDesign.TangentGLS.recordRawFit_unique_minimizer
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.recordRawFit_unique_minimizer
+
+#eval IO.println "CURRENT_AUDIT_829_QubitOracle.AdaptiveDesign.TangentGLS.actual_raw_eq_recordRawFit"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_raw_eq_recordRawFit
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_raw_eq_recordRawFit
+
+#eval IO.println "CURRENT_AUDIT_830_QubitOracle.AdaptiveDesign.RegularReferenceVector.exists_regular_rotation"
+#check QubitOracle.AdaptiveDesign.RegularReferenceVector.exists_regular_rotation
+#print axioms QubitOracle.AdaptiveDesign.RegularReferenceVector.exists_regular_rotation
+
+#eval IO.println "CURRENT_AUDIT_831_QubitOracle.AdaptiveDesign.RegularReferenceVector.dense_nonzero_family"
+#check QubitOracle.AdaptiveDesign.RegularReferenceVector.dense_nonzero_family
+#print axioms QubitOracle.AdaptiveDesign.RegularReferenceVector.dense_nonzero_family
+
+#eval IO.println "CURRENT_AUDIT_832_QubitOracle.AdaptiveDesign.RegularReferenceVector.exists_regular_unit"
+#check QubitOracle.AdaptiveDesign.RegularReferenceVector.exists_regular_unit
+#print axioms QubitOracle.AdaptiveDesign.RegularReferenceVector.exists_regular_unit
+
+#eval IO.println "CURRENT_AUDIT_833_QubitOracle.AdaptiveDesign.RunningMaximumMoments.running"
+#check QubitOracle.AdaptiveDesign.RunningMaximumMoments.running
+#print axioms QubitOracle.AdaptiveDesign.RunningMaximumMoments.running
+
+#eval IO.println "CURRENT_AUDIT_834_QubitOracle.AdaptiveDesign.RunningMaximumMoments.base_le"
+#check QubitOracle.AdaptiveDesign.RunningMaximumMoments.base_le
+#print axioms QubitOracle.AdaptiveDesign.RunningMaximumMoments.base_le
+
+#eval IO.println "CURRENT_AUDIT_835_QubitOracle.AdaptiveDesign.RunningMaximumMoments.term_le"
+#check QubitOracle.AdaptiveDesign.RunningMaximumMoments.term_le
+#print axioms QubitOracle.AdaptiveDesign.RunningMaximumMoments.term_le
+
+#eval IO.println "CURRENT_AUDIT_836_QubitOracle.AdaptiveDesign.RunningMaximumMoments.measurable"
+#check QubitOracle.AdaptiveDesign.RunningMaximumMoments.measurable
+#print axioms QubitOracle.AdaptiveDesign.RunningMaximumMoments.measurable
+
+#eval IO.println "CURRENT_AUDIT_837_QubitOracle.AdaptiveDesign.RunningMaximumMoments.moment"
+#check QubitOracle.AdaptiveDesign.RunningMaximumMoments.moment
+#print axioms QubitOracle.AdaptiveDesign.RunningMaximumMoments.moment
+
+#eval IO.println "CURRENT_AUDIT_838_QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_norm_sq"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_norm_sq
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_norm_sq
+
+#eval IO.println "CURRENT_AUDIT_839_QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_norm_sq"
+#check QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_norm_sq
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_norm_sq
+
+#eval IO.println "CURRENT_AUDIT_840_QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_norm"
+#check QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_norm
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_norm
+
+#eval IO.println "CURRENT_AUDIT_841_QubitOracle.AdaptiveDesign.TangentGLS.tangent_trace_zero"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangent_trace_zero
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangent_trace_zero
+
+#eval IO.println "CURRENT_AUDIT_842_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_overlap"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_overlap
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_overlap
+
+#eval IO.println "CURRENT_AUDIT_843_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_sq"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_sq
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_sq
+
+#eval IO.println "CURRENT_AUDIT_844_QubitOracle.AdaptiveDesign.TangentGLS.tangent_norm_sq"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangent_norm_sq
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangent_norm_sq
+
+#eval IO.println "CURRENT_AUDIT_845_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_le"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_le
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_le
+
+#eval IO.println "CURRENT_AUDIT_846_QubitOracle.AdaptiveDesign.SmoothBornInformation.ambientForm"
+#check QubitOracle.AdaptiveDesign.SmoothBornInformation.ambientForm
+#print axioms QubitOracle.AdaptiveDesign.SmoothBornInformation.ambientForm
+
+#eval IO.println "CURRENT_AUDIT_847_QubitOracle.AdaptiveDesign.SmoothBornInformation.smooth_pullback"
+#check QubitOracle.AdaptiveDesign.SmoothBornInformation.smooth_pullback
+#print axioms QubitOracle.AdaptiveDesign.SmoothBornInformation.smooth_pullback
+
+#eval IO.println "CURRENT_AUDIT_848_QubitOracle.AdaptiveDesign.SmoothBornInformation.ambient_smooth"
+#check QubitOracle.AdaptiveDesign.SmoothBornInformation.ambient_smooth
+#print axioms QubitOracle.AdaptiveDesign.SmoothBornInformation.ambient_smooth
+
+#eval IO.println "CURRENT_AUDIT_849_QubitOracle.AdaptiveDesign.SmoothBornInformation.equals_intrinsic"
+#check QubitOracle.AdaptiveDesign.SmoothBornInformation.equals_intrinsic
+#print axioms QubitOracle.AdaptiveDesign.SmoothBornInformation.equals_intrinsic
+
+#eval IO.println "CURRENT_AUDIT_850_QubitOracle.AdaptiveDesign.SubGaussianPowerMoments.abs_pow_le_exponentials"
+#check QubitOracle.AdaptiveDesign.SubGaussianPowerMoments.abs_pow_le_exponentials
+#print axioms QubitOracle.AdaptiveDesign.SubGaussianPowerMoments.abs_pow_le_exponentials
+
+#eval IO.println "CURRENT_AUDIT_851_QubitOracle.AdaptiveDesign.SubGaussianPowerMoments.integral_abs_pow_le"
+#check QubitOracle.AdaptiveDesign.SubGaussianPowerMoments.integral_abs_pow_le
+#print axioms QubitOracle.AdaptiveDesign.SubGaussianPowerMoments.integral_abs_pow_le
+
+#eval IO.println "CURRENT_AUDIT_852_QubitOracle.AdaptiveDesign.SubGaussianPowerMoments.boundedMartingale_root_moments"
+#check QubitOracle.AdaptiveDesign.SubGaussianPowerMoments.boundedMartingale_root_moments
+#print axioms QubitOracle.AdaptiveDesign.SubGaussianPowerMoments.boundedMartingale_root_moments
+
+#eval IO.println "CURRENT_AUDIT_853_QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminary"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminary
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminary
+
+#eval IO.println "CURRENT_AUDIT_854_QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError
+
+#eval IO.println "CURRENT_AUDIT_855_QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_norm_bound"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_norm_bound
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_norm_bound
+
+#eval IO.println "CURRENT_AUDIT_856_QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_consistent"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_consistent
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_consistent
+
+#eval IO.println "CURRENT_AUDIT_857_QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_quarterRate"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_quarterRate
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_quarterRate
+
+#eval IO.println "CURRENT_AUDIT_858_QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_square_rootRate"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_square_rootRate
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_square_rootRate
+
+#eval IO.println "CURRENT_AUDIT_859_QubitOracle.AdaptiveDesign.TangentGLS.actual_ambientScore_rootTight"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_ambientScore_rootTight
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_ambientScore_rootTight
+
+#eval IO.println "CURRENT_AUDIT_860_QubitOracle.AdaptiveDesign.TangentGLS.actual_ambientDerivative_quarterRate"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_ambientDerivative_quarterRate
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_ambientDerivative_quarterRate
+
+#eval IO.println "CURRENT_AUDIT_861_QubitOracle.AdaptiveDesign.TangentGLS.actualTangentError_norm_le_two"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualTangentError_norm_le_two
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualTangentError_norm_le_two
+
+#eval IO.println "CURRENT_AUDIT_862_QubitOracle.AdaptiveDesign.TangentGLS.actualForcing_rootRate"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualForcing_rootRate
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualForcing_rootRate
+
+#eval IO.println "CURRENT_AUDIT_863_QubitOracle.AdaptiveDesign.TangentGLS.actualLinearError_rootRate"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualLinearError_rootRate
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualLinearError_rootRate
+
+#eval IO.println "CURRENT_AUDIT_864_QubitOracle.AdaptiveDesign.TangentGLS.actual_projectedScore_rootTight"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_projectedScore_rootTight
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_projectedScore_rootTight
+
+#eval IO.println "CURRENT_AUDIT_865_QubitOracle.AdaptiveDesign.TangentGLS.quarterScale_div_sqrt_zero"
+#check QubitOracle.AdaptiveDesign.TangentGLS.quarterScale_div_sqrt_zero
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.quarterScale_div_sqrt_zero
+
+#eval IO.println "CURRENT_AUDIT_866_QubitOracle.AdaptiveDesign.TangentGLS.actualDelta_quarterRate"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualDelta_quarterRate
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualDelta_quarterRate
+
+#eval IO.println "CURRENT_AUDIT_867_QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_apply"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_apply
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_apply
+
+#eval IO.println "CURRENT_AUDIT_868_QubitOracle.AdaptiveDesign.TangentGLS.trueFrameCoordinates_actual"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueFrameCoordinates_actual
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueFrameCoordinates_actual
+
+#eval IO.println "CURRENT_AUDIT_869_QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_ambientScore"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_ambientScore
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_ambientScore
+
+#eval IO.println "CURRENT_AUDIT_870_QubitOracle.AdaptiveDesign.TangentGLS.fullScore_eq_coordinate"
+#check QubitOracle.AdaptiveDesign.TangentGLS.fullScore_eq_coordinate
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.fullScore_eq_coordinate
+
+#eval IO.println "CURRENT_AUDIT_871_QubitOracle.AdaptiveDesign.TangentGLS.actual_coordinates_measurable"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_coordinates_measurable
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_coordinates_measurable
+
+#eval IO.println "CURRENT_AUDIT_872_QubitOracle.AdaptiveDesign.TangentGLS.actual_coordinates_minus_score_zero"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_coordinates_minus_score_zero
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_coordinates_minus_score_zero
+
+#eval IO.println "CURRENT_AUDIT_873_QubitOracle.AdaptiveDesign.TangentGLS.optimalVariance"
+#check QubitOracle.AdaptiveDesign.TangentGLS.optimalVariance
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.optimalVariance
+
+#eval IO.println "CURRENT_AUDIT_874_QubitOracle.AdaptiveDesign.TangentGLS.limitingCovariance_weightedTrace"
+#check QubitOracle.AdaptiveDesign.TangentGLS.limitingCovariance_weightedTrace
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.limitingCovariance_weightedTrace
+
+#eval IO.println "CURRENT_AUDIT_875_QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_error_equation"
+#check QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_error_equation
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_error_equation
+
+#eval IO.println "CURRENT_AUDIT_876_QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_self"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_self
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_self
+
+#eval IO.println "CURRENT_AUDIT_877_QubitOracle.AdaptiveDesign.TangentGLS.record_normalMap_val"
+#check QubitOracle.AdaptiveDesign.TangentGLS.record_normalMap_val
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.record_normalMap_val
+
+#eval IO.println "CURRENT_AUDIT_878_QubitOracle.AdaptiveDesign.TangentGLS.actualScoreSum"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualScoreSum
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualScoreSum
+
+#eval IO.println "CURRENT_AUDIT_879_QubitOracle.AdaptiveDesign.TangentGLS.actualDerivativeSum"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualDerivativeSum
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualDerivativeSum
+
+#eval IO.println "CURRENT_AUDIT_880_QubitOracle.AdaptiveDesign.TangentGLS.actual_score_eq_sum"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_score_eq_sum
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_score_eq_sum
+
+#eval IO.println "CURRENT_AUDIT_881_QubitOracle.AdaptiveDesign.TangentGLS.actual_derivative_eq_sum"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_derivative_eq_sum
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_derivative_eq_sum
+
+#eval IO.println "CURRENT_AUDIT_882_QubitOracle.AdaptiveDesign.TangentGLS.actual_record_normalMap_coercive"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_record_normalMap_coercive
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_record_normalMap_coercive
+
+#eval IO.println "CURRENT_AUDIT_883_QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_rootTight"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_rootTight
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_rootTight
+
+#eval IO.println "CURRENT_AUDIT_884_QubitOracle.AdaptiveDesign.TangentGLS.actualWeightRemainder_tight"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualWeightRemainder_tight
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualWeightRemainder_tight
+
+#eval IO.println "CURRENT_AUDIT_885_QubitOracle.AdaptiveDesign.TangentGLS.actualSecondOrderForcing"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualSecondOrderForcing
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualSecondOrderForcing
+
+#eval IO.println "CURRENT_AUDIT_886_QubitOracle.AdaptiveDesign.TangentGLS.actualSecondOrderForcing_tight"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualSecondOrderForcing_tight
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualSecondOrderForcing_tight
+
+#eval IO.println "CURRENT_AUDIT_887_QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError
+
+#eval IO.println "CURRENT_AUDIT_888_QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError_bound"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError_bound
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError_bound
+
+#eval IO.println "CURRENT_AUDIT_889_QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError_secondOrder"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError_secondOrder
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError_secondOrder
+
+#eval IO.println "CURRENT_AUDIT_890_QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_product_bound"
+#check QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_product_bound
+#print axioms QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_product_bound
+
+#eval IO.println "CURRENT_AUDIT_891_QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_square_norm"
+#check QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_square_norm
+#print axioms QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_square_norm
+
+#eval IO.println "CURRENT_AUDIT_892_QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_of_ae_eventually_bounded"
+#check QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_of_ae_eventually_bounded
+#print axioms QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_of_ae_eventually_bounded
+
+#eval IO.println "CURRENT_AUDIT_893_QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_eventual_ae_bound"
+#check QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_eventual_ae_bound
+#print axioms QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_eventual_ae_bound
+
+#eval IO.println "CURRENT_AUDIT_894_QubitOracle.AdaptiveDesign.TracelessHermitianDimension.hermitian_finrank"
+#check QubitOracle.AdaptiveDesign.TracelessHermitianDimension.hermitian_finrank
+#print axioms QubitOracle.AdaptiveDesign.TracelessHermitianDimension.hermitian_finrank
+
+#eval IO.println "CURRENT_AUDIT_895_QubitOracle.AdaptiveDesign.TracelessHermitianDimension.traceMap"
+#check QubitOracle.AdaptiveDesign.TracelessHermitianDimension.traceMap
+#print axioms QubitOracle.AdaptiveDesign.TracelessHermitianDimension.traceMap
+
+#eval IO.println "CURRENT_AUDIT_896_QubitOracle.AdaptiveDesign.TracelessHermitianDimension.identity"
+#check QubitOracle.AdaptiveDesign.TracelessHermitianDimension.identity
+#print axioms QubitOracle.AdaptiveDesign.TracelessHermitianDimension.identity
+
+#eval IO.println "CURRENT_AUDIT_897_QubitOracle.AdaptiveDesign.TracelessHermitianDimension.trace_identity"
+#check QubitOracle.AdaptiveDesign.TracelessHermitianDimension.trace_identity
+#print axioms QubitOracle.AdaptiveDesign.TracelessHermitianDimension.trace_identity
+
+#eval IO.println "CURRENT_AUDIT_898_QubitOracle.AdaptiveDesign.TracelessHermitianDimension.trace_surjective"
+#check QubitOracle.AdaptiveDesign.TracelessHermitianDimension.trace_surjective
+#print axioms QubitOracle.AdaptiveDesign.TracelessHermitianDimension.trace_surjective
+
+#eval IO.println "CURRENT_AUDIT_899_QubitOracle.AdaptiveDesign.TracelessHermitianDimension.traceless"
+#check QubitOracle.AdaptiveDesign.TracelessHermitianDimension.traceless
+#print axioms QubitOracle.AdaptiveDesign.TracelessHermitianDimension.traceless
+
+#eval IO.println "CURRENT_AUDIT_900_QubitOracle.AdaptiveDesign.TracelessHermitianDimension.traceless_finrank"
+#check QubitOracle.AdaptiveDesign.TracelessHermitianDimension.traceless_finrank
+#print axioms QubitOracle.AdaptiveDesign.TracelessHermitianDimension.traceless_finrank
+
+#eval IO.println "CURRENT_AUDIT_901_QubitOracle.AdaptiveDesign.TracelessHermitianDimension.tracelessBasis"
+#check QubitOracle.AdaptiveDesign.TracelessHermitianDimension.tracelessBasis
+#print axioms QubitOracle.AdaptiveDesign.TracelessHermitianDimension.tracelessBasis
+
+#eval IO.println "CURRENT_AUDIT_902_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm_sq"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm_sq
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm_sq
+
+#eval IO.println "CURRENT_AUDIT_903_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.mul"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.mul
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.mul
+
+#eval IO.println "CURRENT_AUDIT_904_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.weighted_tail"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.weighted_tail
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.weighted_tail
+
+#eval IO.println "CURRENT_AUDIT_905_QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.cap"
+#check QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.cap
+#print axioms QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.cap
+
+#eval IO.println "CURRENT_AUDIT_906_QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.cap_error"
+#check QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.cap_error
+#print axioms QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.cap_error
+
+#eval IO.println "CURRENT_AUDIT_907_QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.expected_cap_error"
+#check QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.expected_cap_error
+#print axioms QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.expected_cap_error
+
+#eval IO.println "CURRENT_AUDIT_908_QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.capped_mean_tendsto_of_weak"
+#check QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.capped_mean_tendsto_of_weak
+#print axioms QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.capped_mean_tendsto_of_weak
+
+#eval IO.println "CURRENT_AUDIT_909_QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.mean_tendsto_of_weak_and_secondMoment"
+#check QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.mean_tendsto_of_weak_and_secondMoment
+#print axioms QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.mean_tendsto_of_weak_and_secondMoment
+
+#eval IO.println "CURRENT_AUDIT_910_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.trace_inner"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.trace_inner
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.trace_inner
+
+#eval IO.println "CURRENT_AUDIT_911_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.trace_cauchy_schwarz"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.trace_cauchy_schwarz
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.trace_cauchy_schwarz
+
+#eval IO.println "CURRENT_AUDIT_912_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.sqrt_posDef"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.sqrt_posDef
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.sqrt_posDef
+
+#eval IO.println "CURRENT_AUDIT_913_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.sqrt_transpose"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.sqrt_transpose
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.sqrt_transpose
+
+#eval IO.println "CURRENT_AUDIT_914_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.weighted_trace_product"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.weighted_trace_product
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.weighted_trace_product
+
+#eval IO.println "CURRENT_AUDIT_915_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.weighted_trace_lower"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.weighted_trace_lower
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.weighted_trace_lower
+
+#eval IO.println "CURRENT_AUDIT_916_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer
+
+#eval IO.println "CURRENT_AUDIT_917_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer_properties"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer_properties
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer_properties
+
+#eval IO.println "CURRENT_AUDIT_918_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer_optimal"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer_optimal
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer_optimal
+
+#eval IO.println "CURRENT_AUDIT_919_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.congruence_posDef"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.congruence_posDef
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.congruence_posDef
+
+#eval IO.println "CURRENT_AUDIT_920_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.inverse_congruence"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.inverse_congruence
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.inverse_congruence
+
+#eval IO.println "CURRENT_AUDIT_921_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.whitened_trace"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.whitened_trace
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.whitened_trace
+
+#eval IO.println "CURRENT_AUDIT_922_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.gillMassar_weighted"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.gillMassar_weighted
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.gillMassar_weighted
+
+#eval IO.println "CURRENT_AUDIT_923_QubitOracle.mixedAxisFisher"
+#check QubitOracle.mixedAxisFisher
+#print axioms QubitOracle.mixedAxisFisher
+
+#eval IO.println "CURRENT_AUDIT_924_QubitOracle.mixedAxisFisher_denominator_pos"
+#check QubitOracle.mixedAxisFisher_denominator_pos
+#print axioms QubitOracle.mixedAxisFisher_denominator_pos
+
+#eval IO.println "CURRENT_AUDIT_925_QubitOracle.trace_qubitSLDFisherInv_mul_mixedAxisFisher"
+#check QubitOracle.trace_qubitSLDFisherInv_mul_mixedAxisFisher
+#print axioms QubitOracle.trace_qubitSLDFisherInv_mul_mixedAxisFisher
+
+#eval IO.println "CURRENT_AUDIT_926_QubitOracle.binaryAxisPlusProbability"
+#check QubitOracle.binaryAxisPlusProbability
+#print axioms QubitOracle.binaryAxisPlusProbability
+
+#eval IO.println "CURRENT_AUDIT_927_QubitOracle.binaryAxisMinusProbability"
+#check QubitOracle.binaryAxisMinusProbability
+#print axioms QubitOracle.binaryAxisMinusProbability
+
+#eval IO.println "CURRENT_AUDIT_928_QubitOracle.binaryAxisPlusScore"
+#check QubitOracle.binaryAxisPlusScore
+#print axioms QubitOracle.binaryAxisPlusScore
+
+#eval IO.println "CURRENT_AUDIT_929_QubitOracle.binaryAxisMinusScore"
+#check QubitOracle.binaryAxisMinusScore
+#print axioms QubitOracle.binaryAxisMinusScore
+
+#eval IO.println "CURRENT_AUDIT_930_QubitOracle.binaryAxis_scores_eq_probabilityDerivative_ratio"
+#check QubitOracle.binaryAxis_scores_eq_probabilityDerivative_ratio
+#print axioms QubitOracle.binaryAxis_scores_eq_probabilityDerivative_ratio
+
+#eval IO.println "CURRENT_AUDIT_931_QubitOracle.binaryAxis_expectedScore_eq_zero"
+#check QubitOracle.binaryAxis_expectedScore_eq_zero
+#print axioms QubitOracle.binaryAxis_expectedScore_eq_zero
+
+#eval IO.println "CURRENT_AUDIT_932_QubitOracle.binaryAxisFisherScalar"
+#check QubitOracle.binaryAxisFisherScalar
+#print axioms QubitOracle.binaryAxisFisherScalar
+
+#eval IO.println "CURRENT_AUDIT_933_QubitOracle.binaryAxisFisherScalar_eq"
+#check QubitOracle.binaryAxisFisherScalar_eq
+#print axioms QubitOracle.binaryAxisFisherScalar_eq
+
+#eval IO.println "CURRENT_AUDIT_934_QubitOracle.mixedAxisFisher_eq_binaryAxisFisherScalar_smul"
+#check QubitOracle.mixedAxisFisher_eq_binaryAxisFisherScalar_smul
+#print axioms QubitOracle.mixedAxisFisher_eq_binaryAxisFisherScalar_smul
+
+#eval IO.println "CURRENT_AUDIT_935_QubitOracle.Paper.mixedQubitBlochFidelitySqBetween"
+#check QubitOracle.Paper.mixedQubitBlochFidelitySqBetween
+#print axioms QubitOracle.Paper.mixedQubitBlochFidelitySqBetween
+
+#eval IO.println "CURRENT_AUDIT_936_QubitOracle.Paper.mixedQubitBlochRootFidelityBetween"
+#check QubitOracle.Paper.mixedQubitBlochRootFidelityBetween
+#print axioms QubitOracle.Paper.mixedQubitBlochRootFidelityBetween
+
+#eval IO.println "CURRENT_AUDIT_937_QubitOracle.Paper.mixedQubitBlochInfidelityBetween"
+#check QubitOracle.Paper.mixedQubitBlochInfidelityBetween
+#print axioms QubitOracle.Paper.mixedQubitBlochInfidelityBetween
+
+#eval IO.println "CURRENT_AUDIT_938_QubitOracle.Paper.mixedQubitBlochRootInfidelityBetween"
+#check QubitOracle.Paper.mixedQubitBlochRootInfidelityBetween
+#print axioms QubitOracle.Paper.mixedQubitBlochRootInfidelityBetween
+
+#eval IO.println "CURRENT_AUDIT_939_QubitOracle.Paper.mixedQubitBlochBuresSqBetween"
+#check QubitOracle.Paper.mixedQubitBlochBuresSqBetween
+#print axioms QubitOracle.Paper.mixedQubitBlochBuresSqBetween
+
+#eval IO.println "CURRENT_AUDIT_940_QubitOracle.Paper.mixedBlochEuclideanNorm"
+#check QubitOracle.Paper.mixedBlochEuclideanNorm
+#print axioms QubitOracle.Paper.mixedBlochEuclideanNorm
+
+#eval IO.println "CURRENT_AUDIT_941_QubitOracle.Paper.mixedBuresFidelityLocalRemainderEnvelope"
+#check QubitOracle.Paper.mixedBuresFidelityLocalRemainderEnvelope
+#print axioms QubitOracle.Paper.mixedBuresFidelityLocalRemainderEnvelope
+
+#eval IO.println "CURRENT_AUDIT_942_QubitOracle.Paper.blochNormSq_add_displacement"
+#check QubitOracle.Paper.blochNormSq_add_displacement
+#print axioms QubitOracle.Paper.blochNormSq_add_displacement
+
+#eval IO.println "CURRENT_AUDIT_943_QubitOracle.Paper.blochDot_add_displacement"
+#check QubitOracle.Paper.blochDot_add_displacement
+#print axioms QubitOracle.Paper.blochDot_add_displacement
+
+#eval IO.println "CURRENT_AUDIT_944_QubitOracle.Paper.mixedQubitBlochFidelitySqBetween_add_eq"
+#check QubitOracle.Paper.mixedQubitBlochFidelitySqBetween_add_eq
+#print axioms QubitOracle.Paper.mixedQubitBlochFidelitySqBetween_add_eq
+
+#eval IO.println "CURRENT_AUDIT_945_QubitOracle.Paper.mixedQubitBlochRootFidelityBetween_add_formula"
+#check QubitOracle.Paper.mixedQubitBlochRootFidelityBetween_add_formula
+#print axioms QubitOracle.Paper.mixedQubitBlochRootFidelityBetween_add_formula
+
+#eval IO.println "CURRENT_AUDIT_946_QubitOracle.Paper.mixedQubitBlochInfidelityBetween_add_formula"
+#check QubitOracle.Paper.mixedQubitBlochInfidelityBetween_add_formula
+#print axioms QubitOracle.Paper.mixedQubitBlochInfidelityBetween_add_formula
+
+#eval IO.println "CURRENT_AUDIT_947_QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_formula"
+#check QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_formula
+#print axioms QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_formula
+
+#eval IO.println "CURRENT_AUDIT_948_QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_eq_mixedBlochBuresSq"
+#check QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_eq_mixedBlochBuresSq
+#print axioms QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_eq_mixedBlochBuresSq
+
+#eval IO.println "CURRENT_AUDIT_949_QubitOracle.Paper.mixedQubitBlochRootInfidelityBetween_eq_half_bures"
+#check QubitOracle.Paper.mixedQubitBlochRootInfidelityBetween_eq_half_bures
+#print axioms QubitOracle.Paper.mixedQubitBlochRootInfidelityBetween_eq_half_bures
+
+#eval IO.println "CURRENT_AUDIT_950_QubitOracle.Paper.mixedBlochEuclideanNorm_nonnegative"
+#check QubitOracle.Paper.mixedBlochEuclideanNorm_nonnegative
+#print axioms QubitOracle.Paper.mixedBlochEuclideanNorm_nonnegative
+
+#eval IO.println "CURRENT_AUDIT_951_QubitOracle.Paper.mixedBlochEuclideanNorm_sq"
+#check QubitOracle.Paper.mixedBlochEuclideanNorm_sq
+#print axioms QubitOracle.Paper.mixedBlochEuclideanNorm_sq
+
+#eval IO.println "CURRENT_AUDIT_952_QubitOracle.Paper.abs_blochDot_le_mixedBlochEuclideanNorm"
+#check QubitOracle.Paper.abs_blochDot_le_mixedBlochEuclideanNorm
+#print axioms QubitOracle.Paper.abs_blochDot_le_mixedBlochEuclideanNorm
+
+#eval IO.println "CURRENT_AUDIT_953_QubitOracle.Paper.mixedBuresFidelityLocalRadius_implies_scalar_local"
+#check QubitOracle.Paper.mixedBuresFidelityLocalRadius_implies_scalar_local
+#print axioms QubitOracle.Paper.mixedBuresFidelityLocalRadius_implies_scalar_local
+
+#eval IO.println "CURRENT_AUDIT_954_QubitOracle.Paper.mixedBuresFidelityLocalRadius_keeps_inside"
+#check QubitOracle.Paper.mixedBuresFidelityLocalRadius_keeps_inside
+#print axioms QubitOracle.Paper.mixedBuresFidelityLocalRadius_keeps_inside
+
+#eval IO.println "CURRENT_AUDIT_955_QubitOracle.Paper.mixedBuresFidelityLocal_scalarRegion"
+#check QubitOracle.Paper.mixedBuresFidelityLocal_scalarRegion
+#print axioms QubitOracle.Paper.mixedBuresFidelityLocal_scalarRegion
+
+#eval IO.println "CURRENT_AUDIT_956_QubitOracle.Paper.mixedInteriorBuresQuadraticLoss_eq_generalQuadratic"
+#check QubitOracle.Paper.mixedInteriorBuresQuadraticLoss_eq_generalQuadratic
+#print axioms QubitOracle.Paper.mixedInteriorBuresQuadraticLoss_eq_generalQuadratic
+
+#eval IO.println "CURRENT_AUDIT_957_QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_secondOrder_decomposition"
+#check QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_secondOrder_decomposition
+#print axioms QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_secondOrder_decomposition
+
+#eval IO.println "CURRENT_AUDIT_958_QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_coordinate_remainder"
+#check QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_coordinate_remainder
+#print axioms QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_coordinate_remainder
+
+#eval IO.println "CURRENT_AUDIT_959_QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_local_remainder"
+#check QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_local_remainder
+#print axioms QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_local_remainder
+
+#eval IO.println "CURRENT_AUDIT_960_QubitOracle.Paper.mixedQubitBlochInfidelityBetween_add_secondOrder_expansion"
+#check QubitOracle.Paper.mixedQubitBlochInfidelityBetween_add_secondOrder_expansion
+#print axioms QubitOracle.Paper.mixedQubitBlochInfidelityBetween_add_secondOrder_expansion
+
+#eval IO.println "CURRENT_AUDIT_961_QubitOracle.Paper.mixedQubitBlochInfidelityBetween_add_coordinate_remainder"
+#check QubitOracle.Paper.mixedQubitBlochInfidelityBetween_add_coordinate_remainder
+#print axioms QubitOracle.Paper.mixedQubitBlochInfidelityBetween_add_coordinate_remainder
+
+#eval IO.println "CURRENT_AUDIT_962_QubitOracle.Paper.mixedQubitBlochFidelitySqBetween_add_secondOrder_expansion"
+#check QubitOracle.Paper.mixedQubitBlochFidelitySqBetween_add_secondOrder_expansion
+#print axioms QubitOracle.Paper.mixedQubitBlochFidelitySqBetween_add_secondOrder_expansion
+
+#eval IO.println "CURRENT_AUDIT_963_QubitOracle.Paper.mixedQubitBlochRootFidelityBetween_add_local_remainder"
+#check QubitOracle.Paper.mixedQubitBlochRootFidelityBetween_add_local_remainder
+#print axioms QubitOracle.Paper.mixedQubitBlochRootFidelityBetween_add_local_remainder
+
+#eval IO.println "CURRENT_AUDIT_964_QubitOracle.Paper.mixedQubitBlochRootInfidelityBetween_add_local_remainder"
+#check QubitOracle.Paper.mixedQubitBlochRootInfidelityBetween_add_local_remainder
+#print axioms QubitOracle.Paper.mixedQubitBlochRootInfidelityBetween_add_local_remainder
+
+#eval IO.println "CURRENT_AUDIT_965_QubitOracle.Paper.Label.lem_SI_mixed_bures_fidelity_local_remainder_qubit"
+#check QubitOracle.Paper.Label.lem_SI_mixed_bures_fidelity_local_remainder_qubit
+#print axioms QubitOracle.Paper.Label.lem_SI_mixed_bures_fidelity_local_remainder_qubit
+
+#eval IO.println "CURRENT_AUDIT_966_QubitOracle.AdaptiveDesign.P1.inverse_information_lower_bound"
+#check QubitOracle.AdaptiveDesign.P1.inverse_information_lower_bound
+#print axioms QubitOracle.AdaptiveDesign.P1.inverse_information_lower_bound
+
+#eval IO.println "CURRENT_AUDIT_967_QubitOracle.AdaptiveDesign.P1.qubitSLDFisherInv_posDef"
+#check QubitOracle.AdaptiveDesign.P1.qubitSLDFisherInv_posDef
+#print axioms QubitOracle.AdaptiveDesign.P1.qubitSLDFisherInv_posDef
+
+#eval IO.println "CURRENT_AUDIT_968_QubitOracle.AdaptiveDesign.P1.qubitSLDFisherInv_inv"
+#check QubitOracle.AdaptiveDesign.P1.qubitSLDFisherInv_inv
+#print axioms QubitOracle.AdaptiveDesign.P1.qubitSLDFisherInv_inv
+
+#eval IO.println "CURRENT_AUDIT_969_QubitOracle.AdaptiveDesign.P1.mixedBuresTarget_eq_third_sld"
+#check QubitOracle.AdaptiveDesign.P1.mixedBuresTarget_eq_third_sld
+#print axioms QubitOracle.AdaptiveDesign.P1.mixedBuresTarget_eq_third_sld
+
+#eval IO.println "CURRENT_AUDIT_970_QubitOracle.AdaptiveDesign.P1.buresDesignCriterion"
+#check QubitOracle.AdaptiveDesign.P1.buresDesignCriterion
+#print axioms QubitOracle.AdaptiveDesign.P1.buresDesignCriterion
+
+#eval IO.println "CURRENT_AUDIT_971_QubitOracle.AdaptiveDesign.P1.finite_qubitPOVM_bures_lower_bound"
+#check QubitOracle.AdaptiveDesign.P1.finite_qubitPOVM_bures_lower_bound
+#print axioms QubitOracle.AdaptiveDesign.P1.finite_qubitPOVM_bures_lower_bound
+
+#eval IO.println "CURRENT_AUDIT_972_QubitOracle.AdaptiveDesign.P1.mixedBuresTarget_bures_value"
+#check QubitOracle.AdaptiveDesign.P1.mixedBuresTarget_bures_value
+#print axioms QubitOracle.AdaptiveDesign.P1.mixedBuresTarget_bures_value
+
+#eval IO.println "CURRENT_AUDIT_973_QubitOracle.AdaptiveDesign.P1.mixedBuresTarget_optimal_over_finite_qubitPOVM"
+#check QubitOracle.AdaptiveDesign.P1.mixedBuresTarget_optimal_over_finite_qubitPOVM
+#print axioms QubitOracle.AdaptiveDesign.P1.mixedBuresTarget_optimal_over_finite_qubitPOVM
+
+#eval IO.println "CURRENT_AUDIT_974_QubitOracle.Paper.QubitMatrix"
+#check QubitOracle.Paper.QubitMatrix
+#print axioms QubitOracle.Paper.QubitMatrix
+
+#eval IO.println "CURRENT_AUDIT_975_QubitOracle.Paper.pauliLinear"
+#check QubitOracle.Paper.pauliLinear
+#print axioms QubitOracle.Paper.pauliLinear
+
+#eval IO.println "CURRENT_AUDIT_976_QubitOracle.Paper.cross3"
+#check QubitOracle.Paper.cross3
+#print axioms QubitOracle.Paper.cross3
+
+#eval IO.println "CURRENT_AUDIT_977_QubitOracle.Paper.pauliLinear_mul"
+#check QubitOracle.Paper.pauliLinear_mul
+#print axioms QubitOracle.Paper.pauliLinear_mul
+
+#eval IO.println "CURRENT_AUDIT_978_QubitOracle.Paper.affinePauli"
+#check QubitOracle.Paper.affinePauli
+#print axioms QubitOracle.Paper.affinePauli
+
+#eval IO.println "CURRENT_AUDIT_979_QubitOracle.Paper.qubitDensityMatrix"
+#check QubitOracle.Paper.qubitDensityMatrix
+#print axioms QubitOracle.Paper.qubitDensityMatrix
+
+#eval IO.println "CURRENT_AUDIT_980_QubitOracle.Paper.qubitDensityMatrix_trace"
+#check QubitOracle.Paper.qubitDensityMatrix_trace
+#print axioms QubitOracle.Paper.qubitDensityMatrix_trace
+
+#eval IO.println "CURRENT_AUDIT_981_QubitOracle.Paper.qubitDensityMatrix_hermitian_symmetry"
+#check QubitOracle.Paper.qubitDensityMatrix_hermitian_symmetry
+#print axioms QubitOracle.Paper.qubitDensityMatrix_hermitian_symmetry
+
+#eval IO.println "CURRENT_AUDIT_982_QubitOracle.Paper.axisProjectorMatrix"
+#check QubitOracle.Paper.axisProjectorMatrix
+#print axioms QubitOracle.Paper.axisProjectorMatrix
+
+#eval IO.println "CURRENT_AUDIT_983_QubitOracle.Paper.axisProjectorMatrix_trace"
+#check QubitOracle.Paper.axisProjectorMatrix_trace
+#print axioms QubitOracle.Paper.axisProjectorMatrix_trace
+
+#eval IO.println "CURRENT_AUDIT_984_QubitOracle.Paper.axisProjectorMatrix_hermitian_symmetry"
+#check QubitOracle.Paper.axisProjectorMatrix_hermitian_symmetry
+#print axioms QubitOracle.Paper.axisProjectorMatrix_hermitian_symmetry
+
+#eval IO.println "CURRENT_AUDIT_985_QubitOracle.Paper.qubitBornTrace"
+#check QubitOracle.Paper.qubitBornTrace
+#print axioms QubitOracle.Paper.qubitBornTrace
+
+#eval IO.println "CURRENT_AUDIT_986_QubitOracle.Paper.qubitBornTrace_eq"
+#check QubitOracle.Paper.qubitBornTrace_eq
+#print axioms QubitOracle.Paper.qubitBornTrace_eq
+
+#eval IO.println "CURRENT_AUDIT_987_QubitOracle.Paper.standardBasis3"
+#check QubitOracle.Paper.standardBasis3
+#print axioms QubitOracle.Paper.standardBasis3
+
+#eval IO.println "CURRENT_AUDIT_988_QubitOracle.Paper.qubitDensityDerivative"
+#check QubitOracle.Paper.qubitDensityDerivative
+#print axioms QubitOracle.Paper.qubitDensityDerivative
+
+#eval IO.println "CURRENT_AUDIT_989_QubitOracle.Paper.sldScalar"
+#check QubitOracle.Paper.sldScalar
+#print axioms QubitOracle.Paper.sldScalar
+
+#eval IO.println "CURRENT_AUDIT_990_QubitOracle.Paper.sldVector"
+#check QubitOracle.Paper.sldVector
+#print axioms QubitOracle.Paper.sldVector
+
+#eval IO.println "CURRENT_AUDIT_991_QubitOracle.Paper.sldMatrix"
+#check QubitOracle.Paper.sldMatrix
+#print axioms QubitOracle.Paper.sldMatrix
+
+#eval IO.println "CURRENT_AUDIT_992_QubitOracle.Paper.qubit_sld_expand"
+#check QubitOracle.Paper.qubit_sld_expand
+#print axioms QubitOracle.Paper.qubit_sld_expand
+
+#eval IO.println "CURRENT_AUDIT_993_QubitOracle.Paper.sld_coefficients_solve"
+#check QubitOracle.Paper.sld_coefficients_solve
+#print axioms QubitOracle.Paper.sld_coefficients_solve
+
+#eval IO.println "CURRENT_AUDIT_994_QubitOracle.Paper.qubit_sld_equation"
+#check QubitOracle.Paper.qubit_sld_equation
+#print axioms QubitOracle.Paper.qubit_sld_equation
+
+#eval IO.println "CURRENT_AUDIT_995_QubitOracle.Paper.symmetric_affinePauli_product"
+#check QubitOracle.Paper.symmetric_affinePauli_product
+#print axioms QubitOracle.Paper.symmetric_affinePauli_product
+
+#eval IO.println "CURRENT_AUDIT_996_QubitOracle.Paper.trace_qubitDensityMatrix_mul_affinePauli"
+#check QubitOracle.Paper.trace_qubitDensityMatrix_mul_affinePauli
+#print axioms QubitOracle.Paper.trace_qubitDensityMatrix_mul_affinePauli
+
+#eval IO.println "CURRENT_AUDIT_997_QubitOracle.Paper.symmetricSLDProduct"
+#check QubitOracle.Paper.symmetricSLDProduct
+#print axioms QubitOracle.Paper.symmetricSLDProduct
+
+#eval IO.println "CURRENT_AUDIT_998_QubitOracle.Paper.qubitSLDFisherFromSLD"
+#check QubitOracle.Paper.qubitSLDFisherFromSLD
+#print axioms QubitOracle.Paper.qubitSLDFisherFromSLD
+
+#eval IO.println "CURRENT_AUDIT_999_QubitOracle.Paper.qubitSLDFisher"
+#check QubitOracle.Paper.qubitSLDFisher
+#print axioms QubitOracle.Paper.qubitSLDFisher
+
+#eval IO.println "CURRENT_AUDIT_1000_QubitOracle.Paper.qubitSLDFisherFromSLD_eq_formula"
+#check QubitOracle.Paper.qubitSLDFisherFromSLD_eq_formula
+#print axioms QubitOracle.Paper.qubitSLDFisherFromSLD_eq_formula
+
+#eval IO.println "CURRENT_AUDIT_1001_QubitOracle.Paper.qubitSLDFisher_mul_inv"
+#check QubitOracle.Paper.qubitSLDFisher_mul_inv
+#print axioms QubitOracle.Paper.qubitSLDFisher_mul_inv
+
+#eval IO.println "CURRENT_AUDIT_1002_QubitOracle.Paper.qubitSLDFisherInv_mul"
+#check QubitOracle.Paper.qubitSLDFisherInv_mul
+#print axioms QubitOracle.Paper.qubitSLDFisherInv_mul
+
+#eval IO.println "CURRENT_AUDIT_1003_QubitOracle.Paper.qubitSLDFisher_eq_inv"
+#check QubitOracle.Paper.qubitSLDFisher_eq_inv
+#print axioms QubitOracle.Paper.qubitSLDFisher_eq_inv
+
+
+-- Section 5 proof route commented at the user request, 5 October 2026.
+/-
+import AdaptiveTomography
+
+set_option pp.universes false
+
+#eval IO.println "AUDIT_0_QubitOracle.AdaptiveDesign.P1Weighted.p1_main"
+#check QubitOracle.AdaptiveDesign.P1Weighted.p1_main
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.p1_main
+
+#eval IO.println "AUDIT_1_QubitOracle.AdaptiveDesign.P1Weighted.positive_batches_consistency_information"
+#check QubitOracle.AdaptiveDesign.P1Weighted.positive_batches_consistency_information
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.positive_batches_consistency_information
+
+#eval IO.println "AUDIT_2_QubitOracle.AdaptiveDesign.P1Weighted.controller_normal"
+#check QubitOracle.AdaptiveDesign.P1Weighted.controller_normal
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.controller_normal
+
+#eval IO.println "AUDIT_3_QubitOracle.AdaptiveDesign.P1Weighted.completed_batches_normal"
+#check QubitOracle.AdaptiveDesign.P1Weighted.completed_batches_normal
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.completed_batches_normal
+
+#eval IO.println "AUDIT_4_QubitOracle.AdaptiveDesign.P1Weighted.controller_eventually_eq"
+#check QubitOracle.AdaptiveDesign.P1Weighted.controller_eventually_eq
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.controller_eventually_eq
+
+#eval IO.println "AUDIT_5_QubitOracle.AdaptiveDesign.P1Weighted.covariance_eq_information_inv"
+#check QubitOracle.AdaptiveDesign.P1Weighted.covariance_eq_information_inv
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.covariance_eq_information_inv
+
+#eval IO.println "AUDIT_6_QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_consistency_and_information"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_consistency_and_information
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_consistency_and_information
+
+#eval IO.println "AUDIT_7_QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_actualBorn_information"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_actualBorn_information
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_actualBorn_information
+
+#eval IO.println "AUDIT_8_QubitOracle.AdaptiveDesign.TangentGLS.phasePair_optimalVariance"
+#check QubitOracle.AdaptiveDesign.TangentGLS.phasePair_optimalVariance
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.phasePair_optimalVariance
+
+#eval IO.println "AUDIT_9_QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pureState_PVM_actualBorn_information"
+#check QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pureState_PVM_actualBorn_information
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pureState_PVM_actualBorn_information
+
+#eval IO.println "AUDIT_10_QubitOracle.AdaptiveDesign.PVMPilotGLS.corrected_consistent"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.corrected_consistent
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.corrected_consistent
+
+#eval IO.println "AUDIT_11_QubitOracle.AdaptiveDesign.PVMPilotAdaptive.rawEstimator_meanSquare"
+#check QubitOracle.AdaptiveDesign.PVMPilotAdaptive.rawEstimator_meanSquare
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotAdaptive.rawEstimator_meanSquare
+
+#eval IO.println "AUDIT_12_QubitOracle.AdaptiveDesign.PVMPilotGLS.preliminary_meanSquare"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.preliminary_meanSquare
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.preliminary_meanSquare
+
+#eval IO.println "AUDIT_13_QubitOracle.AdaptiveDesign.PVMPilotGLS.optimalVariance"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.optimalVariance
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.optimalVariance
+
+#eval IO.println "AUDIT_14_QubitOracle.FinitePOVM"
+#check QubitOracle.FinitePOVM
+#print axioms QubitOracle.FinitePOVM
+
+#eval IO.println "AUDIT_15_QubitOracle.AdaptiveDesign.PVMPilotBorn.bornProbability"
+#check QubitOracle.AdaptiveDesign.PVMPilotBorn.bornProbability
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotBorn.bornProbability
+
+#eval IO.println "AUDIT_16_QubitOracle.AdaptiveDesign.P1Weighted.probability"
+#check QubitOracle.AdaptiveDesign.P1Weighted.probability
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.probability
+
+#eval IO.println "AUDIT_17_QubitOracle.AdaptiveDesign.GeneralPOVM.bornProbability"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.bornProbability
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.bornProbability
+
+#eval IO.println "AUDIT_18_QubitOracle.referenceFisher"
+#check QubitOracle.referenceFisher
+#print axioms QubitOracle.referenceFisher
+
+#eval IO.println "AUDIT_19_QubitOracle.qubitClassicalFisher"
+#check QubitOracle.qubitClassicalFisher
+#print axioms QubitOracle.qubitClassicalFisher
+
+#eval IO.println "AUDIT_20_QubitOracle.AdaptiveDesign.TangentGLS.tangentSpace"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentSpace
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentSpace
+
+#eval IO.println "AUDIT_21_QubitOracle.AdaptiveDesign.SequentialRidgeController.batchBoundary"
+#check QubitOracle.AdaptiveDesign.SequentialRidgeController.batchBoundary
+#print axioms QubitOracle.AdaptiveDesign.SequentialRidgeController.batchBoundary
+
+#eval IO.println "AUDIT_22_QubitOracle.AdaptiveDesign.SequentialRidgeController.batchRefresh"
+#check QubitOracle.AdaptiveDesign.SequentialRidgeController.batchRefresh
+#print axioms QubitOracle.AdaptiveDesign.SequentialRidgeController.batchRefresh
+
+#eval IO.println "AUDIT_23_QubitOracle.AdaptiveDesign.SequentialRidgeController.batchRefresh_lastRefresh_tendsto"
+#check QubitOracle.AdaptiveDesign.SequentialRidgeController.batchRefresh_lastRefresh_tendsto
+#print axioms QubitOracle.AdaptiveDesign.SequentialRidgeController.batchRefresh_lastRefresh_tendsto
+
+#eval IO.println "AUDIT_24_QubitOracle.AdaptiveDesign.SequentialRidgeController.consistent_estimate_at_batch_refresh"
+#check QubitOracle.AdaptiveDesign.SequentialRidgeController.consistent_estimate_at_batch_refresh
+#print axioms QubitOracle.AdaptiveDesign.SequentialRidgeController.consistent_estimate_at_batch_refresh
+
+#eval IO.println "AUDIT_25_QubitOracle.AdaptiveDesign.P1.batchEndpoint"
+#check QubitOracle.AdaptiveDesign.P1.batchEndpoint
+#print axioms QubitOracle.AdaptiveDesign.P1.batchEndpoint
+
+#eval IO.println "AUDIT_26_QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.HermitianSpace"
+#check QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.HermitianSpace
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.HermitianSpace
+
+#eval IO.println "AUDIT_27_QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.inner_eq_trace"
+#check QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.inner_eq_trace
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.inner_eq_trace
+
+#eval IO.println "AUDIT_28_QubitOracle.AdaptiveDesign.ProbabilityCalculus.TightNorm"
+#check QubitOracle.AdaptiveDesign.ProbabilityCalculus.TightNorm
+#print axioms QubitOracle.AdaptiveDesign.ProbabilityCalculus.TightNorm
+
+#eval IO.println "AUDIT_29_QubitOracle.AdaptiveDesign.TangentGLS.OptimalVarianceStatement"
+#check QubitOracle.AdaptiveDesign.TangentGLS.OptimalVarianceStatement
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.OptimalVarianceStatement
+
+#eval IO.println "AUDIT_30_QubitOracle.blochNormSq"
+#check QubitOracle.blochNormSq
+#print axioms QubitOracle.blochNormSq
+
+#eval IO.println "AUDIT_31_QubitOracle.qubitProbability"
+#check QubitOracle.qubitProbability
+#print axioms QubitOracle.qubitProbability
+
+#eval IO.println "AUDIT_32_QubitOracle.qubitSLDFisherInv"
+#check QubitOracle.qubitSLDFisherInv
+#print axioms QubitOracle.qubitSLDFisherInv
+
+#eval IO.println "AUDIT_33_QubitOracle.AdaptiveDesign.P1Weighted.fisher"
+#check QubitOracle.AdaptiveDesign.P1Weighted.fisher
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.fisher
+
+#eval IO.println "AUDIT_34_QubitOracle.AdaptiveDesign.TangentGLS.tangentVector"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentVector
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentVector
+
+#eval IO.println "AUDIT_35_QubitOracle.AdaptiveDesign.TangentGLS.tangentVector_orthogonal"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentVector_orthogonal
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentVector_orthogonal
+
+#eval IO.println "AUDIT_36_QubitOracle.AdaptiveDesign.GeneralPOVM.labChartProbability_hasDerivAt_zero"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.labChartProbability_hasDerivAt_zero
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.labChartProbability_hasDerivAt_zero
+
+#eval IO.println "AUDIT_37_QubitOracle.AdaptiveDesign.GeneralPOVM.actualBornFisher_eq_fisher"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.actualBornFisher_eq_fisher
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.actualBornFisher_eq_fisher
+
+#eval IO.println "AUDIT_38_QubitOracle.sldFisher"
+#check QubitOracle.sldFisher
+#print axioms QubitOracle.sldFisher
+
+#eval IO.println "AUDIT_39_QubitOracle.modelClassicalFisher"
+#check QubitOracle.modelClassicalFisher
+#print axioms QubitOracle.modelClassicalFisher
+
+#eval IO.println "AUDIT_40_QubitOracle.AdaptiveDesign.GeneralPOVM.weightedGram_transport"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.weightedGram_transport
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.weightedGram_transport
+
+#eval IO.println "AUDIT_41_QubitOracle.AdaptiveDesign.GeneralPOVM.fisher_of_overlap_one"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.fisher_of_overlap_one
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.fisher_of_overlap_one
+
+#eval IO.println "AUDIT_42_QubitOracle.AdaptiveDesign.PVMPilotAdaptive.actualBornFisher_eq_mixtureFisher"
+#check QubitOracle.AdaptiveDesign.PVMPilotAdaptive.actualBornFisher_eq_mixtureFisher
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotAdaptive.actualBornFisher_eq_mixtureFisher
+
+#eval IO.println "AUDIT_43_QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.bind_scoreEnergy"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.bind_scoreEnergy
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.bind_scoreEnergy
+
+#eval IO.println "AUDIT_44_QubitOracle.Paper.PureMultilevelLossConstants.pureProjectorSquaredBures_eq_two_sub_two_sqrt_fidelity"
+#check QubitOracle.Paper.PureMultilevelLossConstants.pureProjectorSquaredBures_eq_two_sub_two_sqrt_fidelity
+#print axioms QubitOracle.Paper.PureMultilevelLossConstants.pureProjectorSquaredBures_eq_two_sub_two_sqrt_fidelity
+
+#eval IO.println "AUDIT_45_QubitOracle.rankOne_reference_gillMassar"
+#check QubitOracle.rankOne_reference_gillMassar
+#print axioms QubitOracle.rankOne_reference_gillMassar
+
+#eval IO.println "AUDIT_46_QubitOracle.qubit_interior_gillMassar"
+#check QubitOracle.qubit_interior_gillMassar
+#print axioms QubitOracle.qubit_interior_gillMassar
+
+#eval IO.println "AUDIT_47_QubitOracle.AdaptiveDesign.P1Weighted.inverse_trace_bound"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverse_trace_bound
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverse_trace_bound
+
+#eval IO.println "AUDIT_48_QubitOracle.AdaptiveDesign.FiniteRegularOracle.general_adaptive_oracle_qfi"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.general_adaptive_oracle_qfi
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.general_adaptive_oracle_qfi
+
+#eval IO.println "AUDIT_49_QubitOracle.AdaptiveDesign.OracleRisk.mixed_oracle_criterion"
+#check QubitOracle.AdaptiveDesign.OracleRisk.mixed_oracle_criterion
+#print axioms QubitOracle.AdaptiveDesign.OracleRisk.mixed_oracle_criterion
+
+#eval IO.println "AUDIT_50_QubitOracle.Paper.matrixTraceNorm_qubitDensityMatrix_sub"
+#check QubitOracle.Paper.matrixTraceNorm_qubitDensityMatrix_sub
+#print axioms QubitOracle.Paper.matrixTraceNorm_qubitDensityMatrix_sub
+
+#eval IO.println "AUDIT_51_QubitOracle.Paper.qubitDensityMatrix_sub_hilbertSchmidtSq"
+#check QubitOracle.Paper.qubitDensityMatrix_sub_hilbertSchmidtSq
+#print axioms QubitOracle.Paper.qubitDensityMatrix_sub_hilbertSchmidtSq
+
+#eval IO.println "AUDIT_52_QubitOracle.AdaptiveDesign.P1Weighted.residual_coordinate_mean"
+#check QubitOracle.AdaptiveDesign.P1Weighted.residual_coordinate_mean
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.residual_coordinate_mean
+
+#eval IO.println "AUDIT_53_QubitOracle.AdaptiveDesign.P1Weighted.residual_second_moment"
+#check QubitOracle.AdaptiveDesign.P1Weighted.residual_second_moment
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.residual_second_moment
+
+#eval IO.println "AUDIT_54_QubitOracle.AdaptiveDesign.P1Weighted.estimate_normalEquation"
+#check QubitOracle.AdaptiveDesign.P1Weighted.estimate_normalEquation
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.estimate_normalEquation
+
+#eval IO.println "AUDIT_55_QubitOracle.AdaptiveDesign.P1Weighted.ridge_posDef"
+#check QubitOracle.AdaptiveDesign.P1Weighted.ridge_posDef
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.ridge_posDef
+
+#eval IO.println "AUDIT_56_QubitOracle.AdaptiveDesign.P1Weighted.weight"
+#check QubitOracle.AdaptiveDesign.P1Weighted.weight
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.weight
+
+#eval IO.println "AUDIT_57_QubitOracle.AdaptiveDesign.P1Weighted.controller"
+#check QubitOracle.AdaptiveDesign.P1Weighted.controller
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.controller
+
+#eval IO.println "AUDIT_58_QubitOracle.AdaptiveDesign.P1Weighted.referenceAction"
+#check QubitOracle.AdaptiveDesign.P1Weighted.referenceAction
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.referenceAction
+
+#eval IO.println "AUDIT_59_QubitOracle.AdaptiveDesign.P1Weighted.radius"
+#check QubitOracle.AdaptiveDesign.P1Weighted.radius
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.radius
+
+#eval IO.println "AUDIT_60_QubitOracle.AdaptiveDesign.P1Weighted.clip"
+#check QubitOracle.AdaptiveDesign.P1Weighted.clip
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.clip
+
+#eval IO.println "AUDIT_61_QubitOracle.AdaptiveDesign.P1Weighted.clip_normSq"
+#check QubitOracle.AdaptiveDesign.P1Weighted.clip_normSq
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.clip_normSq
+
+#eval IO.println "AUDIT_62_QubitOracle.AdaptiveDesign.P1Weighted.informationTarget"
+#check QubitOracle.AdaptiveDesign.P1Weighted.informationTarget
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.informationTarget
+
+#eval IO.println "AUDIT_63_QubitOracle.AdaptiveDesign.P1Weighted.reference_fisher"
+#check QubitOracle.AdaptiveDesign.P1Weighted.reference_fisher
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.reference_fisher
+
+#eval IO.println "AUDIT_64_QubitOracle.AdaptiveDesign.P1Weighted.covarianceTarget"
+#check QubitOracle.AdaptiveDesign.P1Weighted.covarianceTarget
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.covarianceTarget
+
+#eval IO.println "AUDIT_65_QubitOracle.AdaptiveDesign.P1Weighted.positive_batches_normal"
+#check QubitOracle.AdaptiveDesign.P1Weighted.positive_batches_normal
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.positive_batches_normal
+
+#eval IO.println "AUDIT_66_QubitOracle.AdaptiveDesign.P1Weighted.informationTarget_optimal"
+#check QubitOracle.AdaptiveDesign.P1Weighted.informationTarget_optimal
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.informationTarget_optimal
+
+#eval IO.println "AUDIT_67_QubitOracle.AdaptiveDesign.P1Weighted.optimal_criterion_value"
+#check QubitOracle.AdaptiveDesign.P1Weighted.optimal_criterion_value
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.optimal_criterion_value
+
+#eval IO.println "AUDIT_68_QubitOracle.AdaptiveDesign.P1Weighted.weight_floor"
+#check QubitOracle.AdaptiveDesign.P1Weighted.weight_floor
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.weight_floor
+
+#eval IO.println "AUDIT_69_QubitOracle.AdaptiveDesign.P1Weighted.predictedGram_lower"
+#check QubitOracle.AdaptiveDesign.P1Weighted.predictedGram_lower
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.predictedGram_lower
+
+#eval IO.println "AUDIT_70_QubitOracle.AdaptiveDesign.P1Weighted.gram_innovation_rate"
+#check QubitOracle.AdaptiveDesign.P1Weighted.gram_innovation_rate
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.gram_innovation_rate
+
+#eval IO.println "AUDIT_71_QubitOracle.AdaptiveDesign.P1Weighted.residual_rate"
+#check QubitOracle.AdaptiveDesign.P1Weighted.residual_rate
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.residual_rate
+
+#eval IO.println "AUDIT_72_QubitOracle.AdaptiveDesign.P1Weighted.gram_coordinate_mean"
+#check QubitOracle.AdaptiveDesign.P1Weighted.gram_coordinate_mean
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.gram_coordinate_mean
+
+#eval IO.println "AUDIT_73_QubitOracle.AdaptiveDesign.P1Weighted.gram_reference"
+#check QubitOracle.AdaptiveDesign.P1Weighted.gram_reference
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.gram_reference
+
+#eval IO.println "AUDIT_74_QubitOracle.AdaptiveDesign.P1Weighted.normalizedError_decomposition"
+#check QubitOracle.AdaptiveDesign.P1Weighted.normalizedError_decomposition
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.normalizedError_decomposition
+
+#eval IO.println "AUDIT_75_QubitOracle.AdaptiveDesign.P1Weighted.sandwich_identity"
+#check QubitOracle.AdaptiveDesign.P1Weighted.sandwich_identity
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.sandwich_identity
+
+#eval IO.println "AUDIT_76_QubitOracle.AdaptiveDesign.P1Weighted.estimate_normal"
+#check QubitOracle.AdaptiveDesign.P1Weighted.estimate_normal
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.estimate_normal
+
+#eval IO.println "AUDIT_77_QubitOracle.chartState"
+#check QubitOracle.chartState
+#print axioms QubitOracle.chartState
+
+#eval IO.println "AUDIT_78_QubitOracle.chartState_normalized"
+#check QubitOracle.chartState_normalized
+#print axioms QubitOracle.chartState_normalized
+
+#eval IO.println "AUDIT_79_QubitOracle.AdaptiveDesign.PureMatrixController.controllerFrame_firstColumn"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.controllerFrame_firstColumn
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.controllerFrame_firstColumn
+
+#eval IO.println "AUDIT_80_QubitOracle.AdaptiveDesign.GeneralPOVM.Identifying"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.Identifying
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.Identifying
+
+#eval IO.println "AUDIT_81_QubitOracle.AdaptiveDesign.GeneralPOVM.Regular"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.Regular
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.Regular
+
+#eval IO.println "AUDIT_82_QubitOracle.AdaptiveDesign.PhasePair.RankOne"
+#check QubitOracle.AdaptiveDesign.PhasePair.RankOne
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.RankOne
+
+#eval IO.println "AUDIT_83_QubitOracle.AdaptiveDesign.PhasePair.gate"
+#check QubitOracle.AdaptiveDesign.PhasePair.gate
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.gate
+
+#eval IO.println "AUDIT_84_QubitOracle.AdaptiveDesign.PhasePair.gate_unitary"
+#check QubitOracle.AdaptiveDesign.PhasePair.gate_unitary
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.gate_unitary
+
+#eval IO.println "AUDIT_85_QubitOracle.AdaptiveDesign.PhasePair.paired_effect_false"
+#check QubitOracle.AdaptiveDesign.PhasePair.paired_effect_false
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.paired_effect_false
+
+#eval IO.println "AUDIT_86_QubitOracle.AdaptiveDesign.PhasePair.paired_effect_true"
+#check QubitOracle.AdaptiveDesign.PhasePair.paired_effect_true
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.paired_effect_true
+
+#eval IO.println "AUDIT_87_QubitOracle.AdaptiveDesign.PhasePair.paired_conditions"
+#check QubitOracle.AdaptiveDesign.PhasePair.paired_conditions
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.paired_conditions
+
+#eval IO.println "AUDIT_88_QubitOracle.AdaptiveDesign.PhasePair.paired_fisher_of_rankOne"
+#check QubitOracle.AdaptiveDesign.PhasePair.paired_fisher_of_rankOne
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.paired_fisher_of_rankOne
+
+#eval IO.println "AUDIT_89_QubitOracle.AdaptiveDesign.GeneralPOVM.regressionFrame"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.regressionFrame
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.regressionFrame
+
+#eval IO.println "AUDIT_90_QubitOracle.AdaptiveDesign.GeneralPOVM.exists_uniform_regression_coercivity"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.exists_uniform_regression_coercivity
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.exists_uniform_regression_coercivity
+
+#eval IO.println "AUDIT_91_QubitOracle.AdaptiveDesign.FiniteFrameCoercivity.exists_uniform_transport_coercivity"
+#check QubitOracle.AdaptiveDesign.FiniteFrameCoercivity.exists_uniform_transport_coercivity
+#print axioms QubitOracle.AdaptiveDesign.FiniteFrameCoercivity.exists_uniform_transport_coercivity
+
+#eval IO.println "AUDIT_92_QubitOracle.AdaptiveDesign.GeneralPOVM.rawEstimator"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.rawEstimator
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.rawEstimator
+
+#eval IO.println "AUDIT_93_QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector_is_nearest"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector_is_nearest
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector_is_nearest
+
+#eval IO.println "AUDIT_94_QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_normalEquation"
+#check QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_normalEquation
+#print axioms QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_normalEquation
+
+#eval IO.println "AUDIT_95_QubitOracle.AdaptiveDesign.ScheduledRidgeController.pathState_estimate_eq_ridgeEstimate"
+#check QubitOracle.AdaptiveDesign.ScheduledRidgeController.pathState_estimate_eq_ridgeEstimate
+#print axioms QubitOracle.AdaptiveDesign.ScheduledRidgeController.pathState_estimate_eq_ridgeEstimate
+
+#eval IO.println "AUDIT_96_QubitOracle.AdaptiveDesign.PureMatrixController.projectedMatrix_error_le_two"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.projectedMatrix_error_le_two
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.projectedMatrix_error_le_two
+
+#eval IO.println "AUDIT_97_QubitOracle.AdaptiveDesign.ExactHouseholder.matrix_firstColumn"
+#check QubitOracle.AdaptiveDesign.ExactHouseholder.matrix_firstColumn
+#print axioms QubitOracle.AdaptiveDesign.ExactHouseholder.matrix_firstColumn
+
+#eval IO.println "AUDIT_98_QubitOracle.AdaptiveDesign.ExactHouseholder.matrix_unitary"
+#check QubitOracle.AdaptiveDesign.ExactHouseholder.matrix_unitary
+#print axioms QubitOracle.AdaptiveDesign.ExactHouseholder.matrix_unitary
+
+#eval IO.println "AUDIT_99_QubitOracle.AdaptiveDesign.GeneralPOVM.measurementFrame_eq_frozenController"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.measurementFrame_eq_frozenController
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.measurementFrame_eq_frozenController
+
+#eval IO.println "AUDIT_100_QubitOracle.AdaptiveDesign.PhasePair.paired"
+#check QubitOracle.AdaptiveDesign.PhasePair.paired
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.paired
+
+#eval IO.println "AUDIT_101_QubitOracle.AdaptiveDesign.TangentGLS.tangentProjectionVector_eq_projection"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentProjectionVector_eq_projection
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentProjectionVector_eq_projection
+
+#eval IO.println "AUDIT_102_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_physical"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_physical
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_physical
+
+#eval IO.println "AUDIT_103_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_matrix_formula"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_matrix_formula
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_matrix_formula
+
+#eval IO.println "AUDIT_104_QubitOracle.AdaptiveDesign.TangentGLS.fittedProbability"
+#check QubitOracle.AdaptiveDesign.TangentGLS.fittedProbability
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.fittedProbability
+
+#eval IO.println "AUDIT_105_QubitOracle.AdaptiveDesign.TangentGLS.referenceFloor"
+#check QubitOracle.AdaptiveDesign.TangentGLS.referenceFloor
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.referenceFloor
+
+#eval IO.println "AUDIT_106_QubitOracle.AdaptiveDesign.TangentGLS.denominator"
+#check QubitOracle.AdaptiveDesign.TangentGLS.denominator
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.denominator
+
+#eval IO.println "AUDIT_107_QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_minimizes"
+#check QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_minimizes
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_minimizes
+
+#eval IO.println "AUDIT_108_QubitOracle.AdaptiveDesign.TangentGLS.correction_unique"
+#check QubitOracle.AdaptiveDesign.TangentGLS.correction_unique
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.correction_unique
+
+#eval IO.println "AUDIT_109_QubitOracle.AdaptiveDesign.TangentGLS.updatedVector"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedVector
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedVector
+
+#eval IO.println "AUDIT_110_QubitOracle.AdaptiveDesign.TangentGLS.updatedVector_norm"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedVector_norm
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedVector_norm
+
+#eval IO.println "AUDIT_111_QubitOracle.AdaptiveDesign.TangentGLS.correction_normalEquation"
+#check QubitOracle.AdaptiveDesign.TangentGLS.correction_normalEquation
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.correction_normalEquation
+
+#eval IO.println "AUDIT_112_QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection"
+#check QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection
+
+#eval IO.println "AUDIT_113_QubitOracle.AdaptiveDesign.ProtectedBornScore.moment_eq_fisher"
+#check QubitOracle.AdaptiveDesign.ProtectedBornScore.moment_eq_fisher
+#print axioms QubitOracle.AdaptiveDesign.ProtectedBornScore.moment_eq_fisher
+
+#eval IO.println "AUDIT_114_QubitOracle.AdaptiveDesign.GeneralPOVMQuarterRate.rawEstimator_quarterRate"
+#check QubitOracle.AdaptiveDesign.GeneralPOVMQuarterRate.rawEstimator_quarterRate
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVMQuarterRate.rawEstimator_quarterRate
+
+#eval IO.println "AUDIT_115_QubitOracle.AdaptiveDesign.GeneralPOVMQuarterRate.stateEstimator_quarterRate"
+#check QubitOracle.AdaptiveDesign.GeneralPOVMQuarterRate.stateEstimator_quarterRate
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVMQuarterRate.stateEstimator_quarterRate
+
+#eval IO.println "AUDIT_116_QubitOracle.AdaptiveDesign.TangentGLS.trueFrameCoordinates"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueFrameCoordinates
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueFrameCoordinates
+
+#eval IO.println "AUDIT_117_QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_consistency"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_consistency
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_consistency
+
+#eval IO.println "AUDIT_118_QubitOracle.AdaptiveDesign.TangentGLS.limitingCovariance_optimal"
+#check QubitOracle.AdaptiveDesign.TangentGLS.limitingCovariance_optimal
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.limitingCovariance_optimal
+
+#eval IO.println "AUDIT_119_QubitOracle.AdaptiveDesign.OracleRisk.pure_bures_covariance_constant"
+#check QubitOracle.AdaptiveDesign.OracleRisk.pure_bures_covariance_constant
+#print axioms QubitOracle.AdaptiveDesign.OracleRisk.pure_bures_covariance_constant
+
+#eval IO.println "AUDIT_120_QubitOracle.AdaptiveDesign.OracleRisk.pure_frobenius_covariance_constant"
+#check QubitOracle.AdaptiveDesign.OracleRisk.pure_frobenius_covariance_constant
+#print axioms QubitOracle.AdaptiveDesign.OracleRisk.pure_frobenius_covariance_constant
+
+#eval IO.println "AUDIT_121_QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_errorEquation"
+#check QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_errorEquation
+#print axioms QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_errorEquation
+
+#eval IO.println "AUDIT_122_QubitOracle.AdaptiveDesign.GeneralPOVM.responseVector_mean"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.responseVector_mean
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.responseVector_mean
+
+#eval IO.println "AUDIT_123_QubitOracle.AdaptiveDesign.GeneralPOVM.fisher_generalTruth_tendsto"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.fisher_generalTruth_tendsto
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.fisher_generalTruth_tendsto
+
+#eval IO.println "AUDIT_124_QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_exact_cancellation"
+#check QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_exact_cancellation
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_exact_cancellation
+
+#eval IO.println "AUDIT_125_QubitOracle.AdaptiveDesign.TangentGLS.actualProjectorError_linearization"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualProjectorError_linearization
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualProjectorError_linearization
+
+#eval IO.println "AUDIT_126_QubitOracle.AdaptiveDesign.PVMGeneralGeometry.ExplorationLibrary"
+#check QubitOracle.AdaptiveDesign.PVMGeneralGeometry.ExplorationLibrary
+#print axioms QubitOracle.AdaptiveDesign.PVMGeneralGeometry.ExplorationLibrary
+
+#eval IO.println "AUDIT_127_QubitOracle.AdaptiveDesign.PVMGeneralGeometry.explorationFrame_coercive"
+#check QubitOracle.AdaptiveDesign.PVMGeneralGeometry.explorationFrame_coercive
+#print axioms QubitOracle.AdaptiveDesign.PVMGeneralGeometry.explorationFrame_coercive
+
+#eval IO.println "AUDIT_128_QubitOracle.AdaptiveDesign.PVMGeneralGeometry.identifies_of_spanning_generators"
+#check QubitOracle.AdaptiveDesign.PVMGeneralGeometry.identifies_of_spanning_generators
+#print axioms QubitOracle.AdaptiveDesign.PVMGeneralGeometry.identifies_of_spanning_generators
+
+#eval IO.println "AUDIT_129_QubitOracle.OracleFrame"
+#check QubitOracle.OracleFrame
+#print axioms QubitOracle.OracleFrame
+
+#eval IO.println "AUDIT_130_QubitOracle.chiBasis"
+#check QubitOracle.chiBasis
+#print axioms QubitOracle.chiBasis
+
+#eval IO.println "AUDIT_131_QubitOracle.tauBasis"
+#check QubitOracle.tauBasis
+#print axioms QubitOracle.tauBasis
+
+#eval IO.println "AUDIT_132_QubitOracle.chiFisher_eq_realBlock"
+#check QubitOracle.chiFisher_eq_realBlock
+#print axioms QubitOracle.chiFisher_eq_realBlock
+
+#eval IO.println "AUDIT_133_QubitOracle.tauFisher_eq_imagBlock"
+#check QubitOracle.tauFisher_eq_imagBlock
+#print axioms QubitOracle.tauFisher_eq_imagBlock
+
+#eval IO.println "AUDIT_134_QubitOracle.equalMixtureFisher_eq_half_identity"
+#check QubitOracle.equalMixtureFisher_eq_half_identity
+#print axioms QubitOracle.equalMixtureFisher_eq_half_identity
+
+#eval IO.println "AUDIT_135_QubitOracle.AdaptiveDesign.PVMPilotSchedule.Schedule"
+#check QubitOracle.AdaptiveDesign.PVMPilotSchedule.Schedule
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotSchedule.Schedule
+
+#eval IO.println "AUDIT_136_QubitOracle.AdaptiveDesign.PVMPilotSchedule.mass"
+#check QubitOracle.AdaptiveDesign.PVMPilotSchedule.mass
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotSchedule.mass
+
+#eval IO.println "AUDIT_137_QubitOracle.AdaptiveDesign.PVMPilotBorn.settingWeight"
+#check QubitOracle.AdaptiveDesign.PVMPilotBorn.settingWeight
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotBorn.settingWeight
+
+#eval IO.println "AUDIT_138_QubitOracle.AdaptiveDesign.PVMPilotBorn.bornProbability_sum"
+#check QubitOracle.AdaptiveDesign.PVMPilotBorn.bornProbability_sum
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotBorn.bornProbability_sum
+
+#eval IO.println "AUDIT_139_QubitOracle.AdaptiveDesign.PVMPilotRegression.response"
+#check QubitOracle.AdaptiveDesign.PVMPilotRegression.response
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotRegression.response
+
+#eval IO.println "AUDIT_140_QubitOracle.AdaptiveDesign.PVMPilotRegression.frame"
+#check QubitOracle.AdaptiveDesign.PVMPilotRegression.frame
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotRegression.frame
+
+#eval IO.println "AUDIT_141_QubitOracle.AdaptiveDesign.PVMPilotAdaptive.rawEstimator"
+#check QubitOracle.AdaptiveDesign.PVMPilotAdaptive.rawEstimator
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotAdaptive.rawEstimator
+
+#eval IO.println "AUDIT_142_QubitOracle.AdaptiveDesign.PVMPilotGLS.actualDelta_minimizes"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.actualDelta_minimizes
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.actualDelta_minimizes
+
+#eval IO.println "AUDIT_143_QubitOracle.AdaptiveDesign.PVMPilotGLS.correction_is_unweighted"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.correction_is_unweighted
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.correction_is_unweighted
+
+#eval IO.println "AUDIT_144_QubitOracle.AdaptiveDesign.PVMPilotGLS.actualEstimate"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.actualEstimate
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.actualEstimate
+
+#eval IO.println "AUDIT_145_QubitOracle.AdaptiveDesign.PVMPilotGLS.actualEstimatedState_physical"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.actualEstimatedState_physical
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.actualEstimatedState_physical
+
+#eval IO.println "AUDIT_146_QubitOracle.AdaptiveDesign.PVMPilotSchedule.OneStepBudget"
+#check QubitOracle.AdaptiveDesign.PVMPilotSchedule.OneStepBudget
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotSchedule.OneStepBudget
+
+#eval IO.println "AUDIT_147_QubitOracle.AdaptiveDesign.PVMPilotAdaptive.rawEstimator_quarterRate"
+#check QubitOracle.AdaptiveDesign.PVMPilotAdaptive.rawEstimator_quarterRate
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotAdaptive.rawEstimator_quarterRate
+
+#eval IO.println "AUDIT_148_QubitOracle.AdaptiveDesign.OracleRisk.pure_bures_oracle_lower"
+#check QubitOracle.AdaptiveDesign.OracleRisk.pure_bures_oracle_lower
+#print axioms QubitOracle.AdaptiveDesign.OracleRisk.pure_bures_oracle_lower
+
+#eval IO.println "AUDIT_149_QubitOracle.AdaptiveDesign.OracleRisk.pure_frobenius_oracle_lower"
+#check QubitOracle.AdaptiveDesign.OracleRisk.pure_frobenius_oracle_lower
+#print axioms QubitOracle.AdaptiveDesign.OracleRisk.pure_frobenius_oracle_lower
+
+#eval IO.println "AUDIT_150_QubitOracle.AdaptiveDesign.PVMPilotGLS.actual_normal_equation"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.actual_normal_equation
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.actual_normal_equation
+
+#eval IO.println "AUDIT_151_QubitOracle.AdaptiveDesign.PVMUniformMoments.stageGram_aligned"
+#check QubitOracle.AdaptiveDesign.PVMUniformMoments.stageGram_aligned
+#print axioms QubitOracle.AdaptiveDesign.PVMUniformMoments.stageGram_aligned
+
+#eval IO.println "AUDIT_152_QubitOracle.AdaptiveDesign.PVMUniformMoments.stageMoment_aligned"
+#check QubitOracle.AdaptiveDesign.PVMUniformMoments.stageMoment_aligned
+#print axioms QubitOracle.AdaptiveDesign.PVMUniformMoments.stageMoment_aligned
+
+#eval IO.println "AUDIT_153_QubitOracle.AdaptiveDesign.PVMPilotGLS.projectorError_linearization"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.projectorError_linearization
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.projectorError_linearization
+
+#eval IO.println "AUDIT_154_QubitOracle.chartFidelity_eq"
+#check QubitOracle.chartFidelity_eq
+#print axioms QubitOracle.chartFidelity_eq
+
+#eval IO.println "AUDIT_155_QubitOracle.Paper.PureMultilevelLossConstants.normalizedPureProjector_exactLossIdentities"
+#check QubitOracle.Paper.PureMultilevelLossConstants.normalizedPureProjector_exactLossIdentities
+#print axioms QubitOracle.Paper.PureMultilevelLossConstants.normalizedPureProjector_exactLossIdentities
+
+#eval IO.println "AUDIT_156_QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel
+
+#eval IO.println "AUDIT_157_QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.ofNeighborhood"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.ofNeighborhood
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.ofNeighborhood
+
+#eval IO.println "AUDIT_158_QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.LocallyUnbiased"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.LocallyUnbiased
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.LocallyUnbiased
+
+#eval IO.println "AUDIT_159_QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptiveExperiment"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptiveExperiment
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptiveExperiment
+
+#eval IO.println "AUDIT_160_QubitOracle.AdaptiveDesign.PVMPilotAdaptive.labChartProbability_hasDerivAt"
+#check QubitOracle.AdaptiveDesign.PVMPilotAdaptive.labChartProbability_hasDerivAt
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotAdaptive.labChartProbability_hasDerivAt
+
+#eval IO.println "AUDIT_161_QubitOracle.AdaptiveDesign.OracleMeanLoss.expectedLoss_tendsto_of_capped_and_secondMoment"
+#check QubitOracle.AdaptiveDesign.OracleMeanLoss.expectedLoss_tendsto_of_capped_and_secondMoment
+#print axioms QubitOracle.AdaptiveDesign.OracleMeanLoss.expectedLoss_tendsto_of_capped_and_secondMoment
+
+#eval IO.println "AUDIT_162_QubitOracle.AdaptiveDesign.P1Weighted.designCriterion"
+#check QubitOracle.AdaptiveDesign.P1Weighted.designCriterion
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.designCriterion
+
+#eval IO.println "AUDIT_163_QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw.actualResponse_average_ae_tendsto_zero"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw.actualResponse_average_ae_tendsto_zero
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw.actualResponse_average_ae_tendsto_zero
+
+#eval IO.println "AUDIT_164_QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristic.bounded_response_vector_clt"
+#check QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristic.bounded_response_vector_clt
+#print axioms QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristic.bounded_response_vector_clt
+
+#eval IO.println "AUDIT_165_QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.normalized_sum_ae"
+#check QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.normalized_sum_ae
+#print axioms QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.normalized_sum_ae
+
+#eval IO.println "AUDIT_166_QubitOracle.AdaptiveDesign.ExplorationRate.bounded_sum_threeQuarter_ae"
+#check QubitOracle.AdaptiveDesign.ExplorationRate.bounded_sum_threeQuarter_ae
+#print axioms QubitOracle.AdaptiveDesign.ExplorationRate.bounded_sum_threeQuarter_ae
+
+#eval IO.println "AUDIT_167_QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristic.characteristicSum_bound"
+#check QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristic.characteristicSum_bound
+#print axioms QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristic.characteristicSum_bound
+
+#eval IO.println "AUDIT_168_QubitOracle.AdaptiveDesign.AdaptiveBudgetMoments.vector_noise_ae"
+#check QubitOracle.AdaptiveDesign.AdaptiveBudgetMoments.vector_noise_ae
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBudgetMoments.vector_noise_ae
+
+#eval IO.println "AUDIT_169_QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.variance_weight_bound"
+#check QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.variance_weight_bound
+#print axioms QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.variance_weight_bound
+
+#eval IO.println "AUDIT_170_QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_bound"
+#check QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_bound
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_bound
+
+#eval IO.println "AUDIT_171_QubitOracle.qubitGillMassarValue_eq_trace"
+#check QubitOracle.qubitGillMassarValue_eq_trace
+#print axioms QubitOracle.qubitGillMassarValue_eq_trace
+
+#eval IO.println "AUDIT_172_QubitOracle.referenceFisher_trace"
+#check QubitOracle.referenceFisher_trace
+#print axioms QubitOracle.referenceFisher_trace
+
+#eval IO.println "AUDIT_173_QubitOracle.finitePOVM_risk_lower_bound"
+#check QubitOracle.finitePOVM_risk_lower_bound
+#print axioms QubitOracle.finitePOVM_risk_lower_bound
+
+#eval IO.println "AUDIT_174_QubitOracle.AdaptiveDesign.FiniteHistoryStatistics.actualStatistic_stronglyMeasurable"
+#check QubitOracle.AdaptiveDesign.FiniteHistoryStatistics.actualStatistic_stronglyMeasurable
+#print axioms QubitOracle.AdaptiveDesign.FiniteHistoryStatistics.actualStatistic_stronglyMeasurable
+
+#eval IO.println "AUDIT_175_QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_lipschitz"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_lipschitz
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_lipschitz
+
+#eval IO.println "AUDIT_176_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_exact_remainder"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_exact_remainder
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_exact_remainder
+
+#eval IO.println "AUDIT_177_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_remainder_bound_global"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_remainder_bound_global
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_remainder_bound_global
+
+#eval IO.println "AUDIT_178_QubitOracle.AdaptiveDesign.PhasePair.tail_projector_sum"
+#check QubitOracle.AdaptiveDesign.PhasePair.tail_projector_sum
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.tail_projector_sum
+
+#eval IO.println "AUDIT_179_QubitOracle.AdaptiveDesign.PhasePair.realify_sum"
+#check QubitOracle.AdaptiveDesign.PhasePair.realify_sum
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.realify_sum
+
+#eval IO.println "AUDIT_180_QubitOracle.AdaptiveDesign.P1Weighted.residual_mean"
+#check QubitOracle.AdaptiveDesign.P1Weighted.residual_mean
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.residual_mean
+
+#eval IO.println "AUDIT_181_QubitOracle.AdaptiveDesign.P1Weighted.clip_gap_floor"
+#check QubitOracle.AdaptiveDesign.P1Weighted.clip_gap_floor
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.clip_gap_floor
+
+#eval IO.println "AUDIT_182_QubitOracle.AdaptiveDesign.P1Weighted.predictedGram"
+#check QubitOracle.AdaptiveDesign.P1Weighted.predictedGram
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.predictedGram
+
+#eval IO.println "AUDIT_183_QubitOracle.AdaptiveDesign.P1Weighted.residual"
+#check QubitOracle.AdaptiveDesign.P1Weighted.residual
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.residual
+
+#eval IO.println "AUDIT_184_QubitOracle.AdaptiveDesign.P1Weighted.normal_error"
+#check QubitOracle.AdaptiveDesign.P1Weighted.normal_error
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.normal_error
+
+#eval IO.println "AUDIT_185_QubitOracle.AdaptiveDesign.P1Weighted.estimate_consistent"
+#check QubitOracle.AdaptiveDesign.P1Weighted.estimate_consistent
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.estimate_consistent
+
+#eval IO.println "AUDIT_186_QubitOracle.AdaptiveDesign.P1Weighted.reference_fisher_tendsto"
+#check QubitOracle.AdaptiveDesign.P1Weighted.reference_fisher_tendsto
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.reference_fisher_tendsto
+
+#eval IO.println "AUDIT_187_QubitOracle.AdaptiveDesign.P1Weighted.current_information_tendsto"
+#check QubitOracle.AdaptiveDesign.P1Weighted.current_information_tendsto
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.current_information_tendsto
+
+#eval IO.println "AUDIT_188_QubitOracle.AdaptiveDesign.P1Weighted.noiseCovariance"
+#check QubitOracle.AdaptiveDesign.P1Weighted.noiseCovariance
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.noiseCovariance
+
+#eval IO.println "AUDIT_189_QubitOracle.AdaptiveDesign.P1Weighted.meanGramTarget"
+#check QubitOracle.AdaptiveDesign.P1Weighted.meanGramTarget
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.meanGramTarget
+
+#eval IO.println "AUDIT_190_QubitOracle.AdaptiveDesign.P1Weighted.noiseTarget"
+#check QubitOracle.AdaptiveDesign.P1Weighted.noiseTarget
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.noiseTarget
+
+#eval IO.println "AUDIT_191_QubitOracle.AdaptiveDesign.P1Weighted.noise_reference"
+#check QubitOracle.AdaptiveDesign.P1Weighted.noise_reference
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.noise_reference
+
+#eval IO.println "AUDIT_192_QubitOracle.AdaptiveDesign.P1Weighted.noise_stability"
+#check QubitOracle.AdaptiveDesign.P1Weighted.noise_stability
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.noise_stability
+
+#eval IO.println "AUDIT_193_QubitOracle.AdaptiveDesign.P1Weighted.radialWeight"
+#check QubitOracle.AdaptiveDesign.P1Weighted.radialWeight
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.radialWeight
+
+#eval IO.println "AUDIT_194_QubitOracle.AdaptiveDesign.P1Weighted.observedGram_tendsto"
+#check QubitOracle.AdaptiveDesign.P1Weighted.observedGram_tendsto
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.observedGram_tendsto
+
+#eval IO.println "AUDIT_195_QubitOracle.AdaptiveDesign.P1Weighted.noise_current_tendsto"
+#check QubitOracle.AdaptiveDesign.P1Weighted.noise_current_tendsto
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.noise_current_tendsto
+
+#eval IO.println "AUDIT_196_QubitOracle.AdaptiveDesign.P1Weighted.influenceSum_clt"
+#check QubitOracle.AdaptiveDesign.P1Weighted.influenceSum_clt
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.influenceSum_clt
+
+#eval IO.println "AUDIT_197_QubitOracle.AdaptiveDesign.GeneralPOVM.responseInnovation_bound"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.responseInnovation_bound
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.responseInnovation_bound
+
+#eval IO.println "AUDIT_198_QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_error_bound"
+#check QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_error_bound
+#print axioms QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_error_bound
+
+#eval IO.println "AUDIT_199_QubitOracle.AdaptiveDesign.GeneralPOVM.rawEstimator_consistent"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.rawEstimator_consistent
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.rawEstimator_consistent
+
+#eval IO.println "AUDIT_200_QubitOracle.AdaptiveDesign.PureMatrixController.projectedMatrix_tendsto"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.projectedMatrix_tendsto
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.projectedMatrix_tendsto
+
+#eval IO.println "AUDIT_201_QubitOracle.AdaptiveDesign.GeneralPOVM.realify"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.realify
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.realify
+
+#eval IO.println "AUDIT_202_QubitOracle.AdaptiveDesign.GeneralPOVM.realify_orthogonal"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.realify_orthogonal
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.realify_orthogonal
+
+#eval IO.println "AUDIT_203_QubitOracle.AdaptiveDesign.GeneralPOVM.fisher_continuousAt"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.fisher_continuousAt
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.fisher_continuousAt
+
+#eval IO.println "AUDIT_204_QubitOracle.AdaptiveDesign.TangentGLS.actual_probabilities_eventually_regular"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_probabilities_eventually_regular
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_probabilities_eventually_regular
+
+#eval IO.println "AUDIT_205_QubitOracle.AdaptiveDesign.ProtectedBornScore.actual_score_clt"
+#check QubitOracle.AdaptiveDesign.ProtectedBornScore.actual_score_clt
+#print axioms QubitOracle.AdaptiveDesign.ProtectedBornScore.actual_score_clt
+
+#eval IO.println "AUDIT_206_QubitOracle.AdaptiveDesign.TangentGLS.actual_trueInformation_tendsto"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_trueInformation_tendsto
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_trueInformation_tendsto
+
+#eval IO.println "AUDIT_207_QubitOracle.AdaptiveDesign.TangentGLS.actualWeightRemainder_rootRate"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualWeightRemainder_rootRate
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualWeightRemainder_rootRate
+
+#eval IO.println "AUDIT_208_QubitOracle.AdaptiveDesign.PVMPilotRegression.noise_secondMoment"
+#check QubitOracle.AdaptiveDesign.PVMPilotRegression.noise_secondMoment
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotRegression.noise_secondMoment
+
+#eval IO.println "AUDIT_209_QubitOracle.AdaptiveDesign.AdaptiveBudgetMoments.scalarSum_secondMoment"
+#check QubitOracle.AdaptiveDesign.AdaptiveBudgetMoments.scalarSum_secondMoment
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBudgetMoments.scalarSum_secondMoment
+
+#eval IO.println "AUDIT_210_QubitOracle.AdaptiveDesign.PVMPilotGLS.trueGram_limit"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.trueGram_limit
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.trueGram_limit
+
+#eval IO.println "AUDIT_211_QubitOracle.AdaptiveDesign.PVMPilotGLS.actual_moment_limits"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.actual_moment_limits
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.actual_moment_limits
+
+#eval IO.println "AUDIT_212_QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.score_identity"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.score_identity
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.score_identity
+
+#eval IO.println "AUDIT_213_QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptive_scoreEnergy_le"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptive_scoreEnergy_le
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptive_scoreEnergy_le
+
+#eval IO.println "AUDIT_214_QubitOracle.AdaptiveDesign.ExactHouseholder.phase"
+#check QubitOracle.AdaptiveDesign.ExactHouseholder.phase
+#print axioms QubitOracle.AdaptiveDesign.ExactHouseholder.phase
+
+#eval IO.println "AUDIT_215_QubitOracle.AdaptiveDesign.ExactHouseholder.vector"
+#check QubitOracle.AdaptiveDesign.ExactHouseholder.vector
+#print axioms QubitOracle.AdaptiveDesign.ExactHouseholder.vector
+
+#eval IO.println "AUDIT_216_QubitOracle.AdaptiveDesign.ExactHouseholder.denominator"
+#check QubitOracle.AdaptiveDesign.ExactHouseholder.denominator
+#print axioms QubitOracle.AdaptiveDesign.ExactHouseholder.denominator
+
+#eval IO.println "AUDIT_217_QubitOracle.AdaptiveDesign.ExactHouseholder.denominator_lower"
+#check QubitOracle.AdaptiveDesign.ExactHouseholder.denominator_lower
+#print axioms QubitOracle.AdaptiveDesign.ExactHouseholder.denominator_lower
+
+#eval IO.println "AUDIT_218_QubitOracle.AdaptiveDesign.ExactHouseholder.denominator_upper"
+#check QubitOracle.AdaptiveDesign.ExactHouseholder.denominator_upper
+#print axioms QubitOracle.AdaptiveDesign.ExactHouseholder.denominator_upper
+
+#eval IO.println "AUDIT_219_QubitOracle.AdaptiveDesign.ExactHouseholder.matrix"
+#check QubitOracle.AdaptiveDesign.ExactHouseholder.matrix
+#print axioms QubitOracle.AdaptiveDesign.ExactHouseholder.matrix
+
+#eval IO.println "AUDIT_220_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum
+
+#eval IO.println "AUDIT_221_QubitOracle.AdaptiveDesign.GlobalPFSIC.measurement_quadratic_injective"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.measurement_quadratic_injective
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.measurement_quadratic_injective
+
+#eval IO.println "AUDIT_222_QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceFisher"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceFisher
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceFisher
+
+#eval IO.println "AUDIT_223_QubitOracle.AdaptiveDesign.GlobalPFSIC.library_projector_sum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.library_projector_sum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.library_projector_sum
+
+#eval IO.println "AUDIT_224_QubitOracle.AdaptiveDesign.GlobalPFSIC.library_card"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.library_card
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.library_card
+
+#eval IO.println "AUDIT_225_QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude
+
+#eval IO.println "AUDIT_226_QubitOracle.AdaptiveDesign.GlobalPFSIC.effectWeight"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effectWeight
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effectWeight
+
+#eval IO.println "AUDIT_227_QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementVector"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementVector
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementVector
+
+#eval IO.println "AUDIT_228_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect
+
+#eval IO.println "AUDIT_229_QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceProbability"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceProbability
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceProbability
+
+#eval IO.println "AUDIT_230_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_pos"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_pos
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_pos
+
+#eval IO.println "AUDIT_231_QubitOracle.AdaptiveDesign.P2Adaptive.pureState_adaptive_consistency_and_information"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.pureState_adaptive_consistency_and_information
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.pureState_adaptive_consistency_and_information
+
+#eval IO.println "AUDIT_232_QubitOracle.AdaptiveDesign.P2Adaptive.pureState_adaptive_completedBatches"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.pureState_adaptive_completedBatches
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.pureState_adaptive_completedBatches
+
+#eval IO.println "AUDIT_233_QubitOracle.AdaptiveDesign.PVMGeometry.exploration_separates"
+#check QubitOracle.AdaptiveDesign.PVMGeometry.exploration_separates
+#print axioms QubitOracle.AdaptiveDesign.PVMGeometry.exploration_separates
+
+#eval IO.println "AUDIT_234_QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pureState_PVM_consistency_and_information"
+#check QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pureState_PVM_consistency_and_information
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pureState_PVM_consistency_and_information
+
+#eval IO.println "AUDIT_235_QubitOracle.AdaptiveDesign.GlobalPFSIC.libraryVector"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.libraryVector
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.libraryVector
+
+#eval IO.println "AUDIT_236_QubitOracle.AdaptiveDesign.PVMGeometry.canonicalOracleFrame"
+#check QubitOracle.AdaptiveDesign.PVMGeometry.canonicalOracleFrame
+#print axioms QubitOracle.AdaptiveDesign.PVMGeometry.canonicalOracleFrame
+
+#eval IO.println "AUDIT_237_QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.actualRidgeEstimate_rootTight"
+#check QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.actualRidgeEstimate_rootTight
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.actualRidgeEstimate_rootTight
+
+#eval IO.println "AUDIT_238_QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.rawEstimator_rootTight"
+#check QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.rawEstimator_rootTight
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.rawEstimator_rootTight
+
+#eval IO.println "AUDIT_239_QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.stateEstimator_rootTight"
+#check QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.stateEstimator_rootTight
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.stateEstimator_rootTight
+
+#eval IO.println "AUDIT_240_QubitOracle.AdaptiveDesign.PhasePair.paired_effectVector"
+#check QubitOracle.AdaptiveDesign.PhasePair.paired_effectVector
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.paired_effectVector
+
+#eval IO.println "AUDIT_241_QubitOracle.AdaptiveDesign.PhasePair.paired_frame_coercive"
+#check QubitOracle.AdaptiveDesign.PhasePair.paired_frame_coercive
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.paired_frame_coercive
+
+#eval IO.println "AUDIT_242_QubitOracle.AdaptiveDesign.TangentGLS.protected_residual_lipschitz"
+#check QubitOracle.AdaptiveDesign.TangentGLS.protected_residual_lipschitz
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.protected_residual_lipschitz
+
+#eval IO.println "AUDIT_243_QubitOracle.AdaptiveDesign.TangentGLS.record_fitted_score_difference_bound"
+#check QubitOracle.AdaptiveDesign.TangentGLS.record_fitted_score_difference_bound
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.record_fitted_score_difference_bound
+
+#eval IO.println "AUDIT_244_QubitOracle.AdaptiveDesign.TangentGLS.actual_ambientScore_average_zero"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_ambientScore_average_zero
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_ambientScore_average_zero
+
+#eval IO.println "AUDIT_245_QubitOracle.AdaptiveDesign.TangentGLS.actualDelta_norm_bound"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualDelta_norm_bound
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualDelta_norm_bound
+
+#eval IO.println "AUDIT_246_QubitOracle.AdaptiveDesign.TangentGLS.actualDelta_stronglyConsistent"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualDelta_stronglyConsistent
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualDelta_stronglyConsistent
+
+#eval IO.println "AUDIT_247_QubitOracle.AdaptiveDesign.TangentGLS.corrected_stronglyConsistent"
+#check QubitOracle.AdaptiveDesign.TangentGLS.corrected_stronglyConsistent
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.corrected_stronglyConsistent
+
+#eval IO.println "AUDIT_248_QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_coordinate"
+#check QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_coordinate
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_coordinate
+
+#eval IO.println "AUDIT_249_QubitOracle.AdaptiveDesign.TangentGLS.referenceCoordinate_reference"
+#check QubitOracle.AdaptiveDesign.TangentGLS.referenceCoordinate_reference
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.referenceCoordinate_reference
+
+#eval IO.println "AUDIT_250_QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_overlap"
+#check QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_overlap
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_overlap
+
+#eval IO.println "AUDIT_251_QubitOracle.AdaptiveDesign.TangentGLS.trueFrame_referenceParameter"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueFrame_referenceParameter
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueFrame_referenceParameter
+
+#eval IO.println "AUDIT_252_QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates
+
+#eval IO.println "AUDIT_253_QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_chart"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_chart
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_chart
+
+#eval IO.println "AUDIT_254_QubitOracle.AdaptiveDesign.TangentGLS.amplitude_factor_continuousAt"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitude_factor_continuousAt
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitude_factor_continuousAt
+
+#eval IO.println "AUDIT_255_QubitOracle.AdaptiveDesign.TangentGLS.amplitude_clt_of_projector_clt"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitude_clt_of_projector_clt
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitude_clt_of_projector_clt
+
+#eval IO.println "AUDIT_256_QubitOracle.AdaptiveDesign.TangentGLS.amplitude_optimalVariance"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitude_optimalVariance
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitude_optimalVariance
+
+#eval IO.println "AUDIT_257_QubitOracle.AdaptiveDesign.TangentGLS.phasePair_amplitude_optimalVariance"
+#check QubitOracle.AdaptiveDesign.TangentGLS.phasePair_amplitude_optimalVariance
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.phasePair_amplitude_optimalVariance
+
+#eval IO.println "AUDIT_258_QubitOracle.AdaptiveDesign.TangentGLS.reference_overlap"
+#check QubitOracle.AdaptiveDesign.TangentGLS.reference_overlap
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.reference_overlap
+
+#eval IO.println "AUDIT_259_QubitOracle.AdaptiveDesign.TangentGLS.referenceCoordinate_norm_sq"
+#check QubitOracle.AdaptiveDesign.TangentGLS.referenceCoordinate_norm_sq
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.referenceCoordinate_norm_sq
+
+#eval IO.println "AUDIT_260_QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_norm_sq"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_norm_sq
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_norm_sq
+
+#eval IO.println "AUDIT_261_QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_norm_sq"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_norm_sq
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_norm_sq
+
+#eval IO.println "AUDIT_262_QubitOracle.AdaptiveDesign.TangentGLS.infidelity_clt_of_amplitude_clt"
+#check QubitOracle.AdaptiveDesign.TangentGLS.infidelity_clt_of_amplitude_clt
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.infidelity_clt_of_amplitude_clt
+
+#eval IO.println "AUDIT_263_QubitOracle.AdaptiveDesign.TangentGLS.frobenius_clt_of_amplitude_clt"
+#check QubitOracle.AdaptiveDesign.TangentGLS.frobenius_clt_of_amplitude_clt
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.frobenius_clt_of_amplitude_clt
+
+#eval IO.println "AUDIT_264_QubitOracle.AdaptiveDesign.PureLossDistributions.doubled_gaussian"
+#check QubitOracle.AdaptiveDesign.PureLossDistributions.doubled_gaussian
+#print axioms QubitOracle.AdaptiveDesign.PureLossDistributions.doubled_gaussian
+
+#eval IO.println "AUDIT_265_QubitOracle.AdaptiveDesign.PureLossDistributions.doubled_gaussian_norm_law"
+#check QubitOracle.AdaptiveDesign.PureLossDistributions.doubled_gaussian_norm_law
+#print axioms QubitOracle.AdaptiveDesign.PureLossDistributions.doubled_gaussian_norm_law
+
+#eval IO.println "AUDIT_266_QubitOracle.AdaptiveDesign.PureLossDistributions.overlap_eq_fidelity"
+#check QubitOracle.AdaptiveDesign.PureLossDistributions.overlap_eq_fidelity
+#print axioms QubitOracle.AdaptiveDesign.PureLossDistributions.overlap_eq_fidelity
+
+#eval IO.println "AUDIT_267_QubitOracle.AdaptiveDesign.PureLossDistributions.Statement"
+#check QubitOracle.AdaptiveDesign.PureLossDistributions.Statement
+#print axioms QubitOracle.AdaptiveDesign.PureLossDistributions.Statement
+
+#eval IO.println "AUDIT_268_QubitOracle.AdaptiveDesign.PureLossDistributions.of_amplitude_clt"
+#check QubitOracle.AdaptiveDesign.PureLossDistributions.of_amplitude_clt
+#print axioms QubitOracle.AdaptiveDesign.PureLossDistributions.of_amplitude_clt
+
+#eval IO.println "AUDIT_269_QubitOracle.AdaptiveDesign.PureLossDistributions.povm"
+#check QubitOracle.AdaptiveDesign.PureLossDistributions.povm
+#print axioms QubitOracle.AdaptiveDesign.PureLossDistributions.povm
+
+#eval IO.println "AUDIT_270_QubitOracle.AdaptiveDesign.PureLossDistributions.phasePair"
+#check QubitOracle.AdaptiveDesign.PureLossDistributions.phasePair
+#print axioms QubitOracle.AdaptiveDesign.PureLossDistributions.phasePair
+
+#eval IO.println "AUDIT_271_QubitOracle.AdaptiveDesign.PureLossDistributions.pvm"
+#check QubitOracle.AdaptiveDesign.PureLossDistributions.pvm
+#print axioms QubitOracle.AdaptiveDesign.PureLossDistributions.pvm
+
+#eval IO.println "AUDIT_272_QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.inverse_congruence"
+#check QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.inverse_congruence
+#print axioms QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.inverse_congruence
+
+#eval IO.println "AUDIT_273_QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.information_ratio_congruence"
+#check QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.information_ratio_congruence
+#print axioms QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.information_ratio_congruence
+
+#eval IO.println "AUDIT_274_QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.trace_information_invariant"
+#check QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.trace_information_invariant
+#print axioms QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.trace_information_invariant
+
+#eval IO.println "AUDIT_275_QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.weighted_covariance_trace_invariant"
+#check QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.weighted_covariance_trace_invariant
+#print axioms QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.weighted_covariance_trace_invariant
+
+#eval IO.println "AUDIT_276_QubitOracle.AdaptiveDesign.UniformHouseholderFrame.uniformVector_normalized"
+#check QubitOracle.AdaptiveDesign.UniformHouseholderFrame.uniformVector_normalized
+#print axioms QubitOracle.AdaptiveDesign.UniformHouseholderFrame.uniformVector_normalized
+
+#eval IO.println "AUDIT_277_QubitOracle.AdaptiveDesign.UniformHouseholderFrame.uniform_phase"
+#check QubitOracle.AdaptiveDesign.UniformHouseholderFrame.uniform_phase
+#print axioms QubitOracle.AdaptiveDesign.UniformHouseholderFrame.uniform_phase
+
+#eval IO.println "AUDIT_278_QubitOracle.AdaptiveDesign.UniformHouseholderFrame.matrix_im_zero"
+#check QubitOracle.AdaptiveDesign.UniformHouseholderFrame.matrix_im_zero
+#print axioms QubitOracle.AdaptiveDesign.UniformHouseholderFrame.matrix_im_zero
+
+#eval IO.println "AUDIT_279_QubitOracle.AdaptiveDesign.UniformHouseholderFrame.matrix_orthogonal"
+#check QubitOracle.AdaptiveDesign.UniformHouseholderFrame.matrix_orthogonal
+#print axioms QubitOracle.AdaptiveDesign.UniformHouseholderFrame.matrix_orthogonal
+
+#eval IO.println "AUDIT_280_QubitOracle.AdaptiveDesign.UniformHouseholderFrame.matrix_uniformFirstRow"
+#check QubitOracle.AdaptiveDesign.UniformHouseholderFrame.matrix_uniformFirstRow
+#print axioms QubitOracle.AdaptiveDesign.UniformHouseholderFrame.matrix_uniformFirstRow
+
+#eval IO.println "AUDIT_281_QubitOracle.AdaptiveDesign.UniformHouseholderFrame.frame"
+#check QubitOracle.AdaptiveDesign.UniformHouseholderFrame.frame
+#print axioms QubitOracle.AdaptiveDesign.UniformHouseholderFrame.frame
+
+#eval IO.println "AUDIT_282_QubitOracle.AdaptiveDesign.UniformHouseholderFrame.withHouseholder"
+#check QubitOracle.AdaptiveDesign.UniformHouseholderFrame.withHouseholder
+#print axioms QubitOracle.AdaptiveDesign.UniformHouseholderFrame.withHouseholder
+
+#eval IO.println "AUDIT_283_QubitOracle.AdaptiveDesign.UniformHouseholderFrame.withHouseholder_frame"
+#check QubitOracle.AdaptiveDesign.UniformHouseholderFrame.withHouseholder_frame
+#print axioms QubitOracle.AdaptiveDesign.UniformHouseholderFrame.withHouseholder_frame
+
+#eval IO.println "AUDIT_284_QubitOracle.AdaptiveDesign.PureMatrixController.projector_distance_sq"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.projector_distance_sq
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.projector_distance_sq
+
+#eval IO.println "AUDIT_285_QubitOracle.AdaptiveDesign.PureMatrixController.nearest_iff_maximizes_rayleigh"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.nearest_iff_maximizes_rayleigh
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.nearest_iff_maximizes_rayleigh
+
+#eval IO.println "AUDIT_286_QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector_maximizes_rayleigh"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector_maximizes_rayleigh
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector_maximizes_rayleigh
+
+#eval IO.println "AUDIT_287_QubitOracle.AdaptiveDesign.PureMatrixController.hermitianOperator_selfAdjoint"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.hermitianOperator_selfAdjoint
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.hermitianOperator_selfAdjoint
+
+#eval IO.println "AUDIT_288_QubitOracle.AdaptiveDesign.PureMatrixController.hermitianOperator_quadratic"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.hermitianOperator_quadratic
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.hermitianOperator_quadratic
+
+#eval IO.println "AUDIT_289_QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector_leadingEigenvector"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector_leadingEigenvector
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector_leadingEigenvector
+
+#eval IO.println "AUDIT_290_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_value"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_value
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_value
+
+#eval IO.println "AUDIT_291_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_minimum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_minimum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_minimum
+
+#eval IO.println "AUDIT_292_QubitOracle.AdaptiveDesign.PVMGeneralGeometry.exploitationFrame"
+#check QubitOracle.AdaptiveDesign.PVMGeneralGeometry.exploitationFrame
+#print axioms QubitOracle.AdaptiveDesign.PVMGeneralGeometry.exploitationFrame
+
+#eval IO.println "AUDIT_293_QubitOracle.AdaptiveDesign.PVMGeneralGeometry.withExploitationFrame"
+#check QubitOracle.AdaptiveDesign.PVMGeneralGeometry.withExploitationFrame
+#print axioms QubitOracle.AdaptiveDesign.PVMGeneralGeometry.withExploitationFrame
+
+#eval IO.println "AUDIT_294_QubitOracle.AdaptiveDesign.PVMGeneralGeometry.withExploitationFrame_frame"
+#check QubitOracle.AdaptiveDesign.PVMGeneralGeometry.withExploitationFrame_frame
+#print axioms QubitOracle.AdaptiveDesign.PVMGeneralGeometry.withExploitationFrame_frame
+
+#eval IO.println "AUDIT_295_QubitOracle.AdaptiveDesign.PVMGeneralGeometry.exploitationChiAction"
+#check QubitOracle.AdaptiveDesign.PVMGeneralGeometry.exploitationChiAction
+#print axioms QubitOracle.AdaptiveDesign.PVMGeneralGeometry.exploitationChiAction
+
+#eval IO.println "AUDIT_296_QubitOracle.AdaptiveDesign.PVMGeneralGeometry.exploitationTauAction"
+#check QubitOracle.AdaptiveDesign.PVMGeneralGeometry.exploitationTauAction
+#print axioms QubitOracle.AdaptiveDesign.PVMGeneralGeometry.exploitationTauAction
+
+#eval IO.println "AUDIT_297_QubitOracle.AdaptiveDesign.PVMPilotGLS.amplitude_optimalVariance"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.amplitude_optimalVariance
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.amplitude_optimalVariance
+
+#eval IO.println "AUDIT_298_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.coordinate_derivative"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.coordinate_derivative
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.coordinate_derivative
+
+#eval IO.println "AUDIT_299_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.localBornModel"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.localBornModel
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.localBornModel
+
+#eval IO.println "AUDIT_300_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.coordinates"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.coordinates
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.coordinates
+
+#eval IO.println "AUDIT_301_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.identityAction"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.identityAction
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.identityAction
+
+#eval IO.println "AUDIT_302_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureDomain"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureDomain
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureDomain
+
+#eval IO.println "AUDIT_303_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureDomain_nhds"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureDomain_nhds
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureDomain_nhds
+
+#eval IO.println "AUDIT_304_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureChart"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureChart
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureChart
+
+#eval IO.println "AUDIT_305_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureDerivative"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureDerivative
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureDerivative
+
+#eval IO.println "AUDIT_306_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureChart_derivative"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureChart_derivative
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureChart_derivative
+
+#eval IO.println "AUDIT_307_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureModel"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureModel
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureModel
+
+#eval IO.println "AUDIT_308_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureModel_mass"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureModel_mass
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureModel_mass
+
+#eval IO.println "AUDIT_309_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureAdaptiveModel"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureAdaptiveModel
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureAdaptiveModel
+
+#eval IO.println "AUDIT_310_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureRecordMass"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureRecordMass
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureRecordMass
+
+#eval IO.println "AUDIT_311_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureAdaptiveModel_exact_mass"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureAdaptiveModel_exact_mass
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureAdaptiveModel_exact_mass
+
+#eval IO.println "AUDIT_312_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedDomain"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedDomain
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedDomain
+
+#eval IO.println "AUDIT_313_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedDomain_nhds"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedDomain_nhds
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedDomain_nhds
+
+#eval IO.println "AUDIT_314_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixed_probability_nonnegative"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixed_probability_nonnegative
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixed_probability_nonnegative
+
+#eval IO.println "AUDIT_315_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixed_probability_total"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixed_probability_total
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixed_probability_total
+
+#eval IO.println "AUDIT_316_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixed_probability_derivative"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixed_probability_derivative
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixed_probability_derivative
+
+#eval IO.println "AUDIT_317_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedModel"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedModel
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedModel
+
+#eval IO.println "AUDIT_318_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedModel_mass"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedModel_mass
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedModel_mass
+
+#eval IO.println "AUDIT_319_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedAdaptiveModel"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedAdaptiveModel
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedAdaptiveModel
+
+#eval IO.println "AUDIT_320_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedRecordMass"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedRecordMass
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedRecordMass
+
+#eval IO.println "AUDIT_321_QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedAdaptiveModel_exact_mass"
+#check QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedAdaptiveModel_exact_mass
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedAdaptiveModel_exact_mass
+
+#eval IO.println "AUDIT_322_QubitOracle.AdaptiveDesign.AdaptiveBudgetConcentration.scalar_mgf"
+#check QubitOracle.AdaptiveDesign.AdaptiveBudgetConcentration.scalar_mgf
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBudgetConcentration.scalar_mgf
+
+#eval IO.println "AUDIT_323_QubitOracle.AdaptiveDesign.AdaptiveBudgetConcentration.scalar"
+#check QubitOracle.AdaptiveDesign.AdaptiveBudgetConcentration.scalar
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBudgetConcentration.scalar
+
+#eval IO.println "AUDIT_324_QubitOracle.AdaptiveDesign.AdaptiveBudgetHigherMoments.scalar"
+#check QubitOracle.AdaptiveDesign.AdaptiveBudgetHigherMoments.scalar
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBudgetHigherMoments.scalar
+
+#eval IO.println "AUDIT_325_QubitOracle.AdaptiveDesign.AdaptiveBudgetHigherMoments.vector"
+#check QubitOracle.AdaptiveDesign.AdaptiveBudgetHigherMoments.vector
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBudgetHigherMoments.vector
+
+#eval IO.println "AUDIT_326_QubitOracle.AdaptiveDesign.AdaptiveBudgetConcentration.vector"
+#check QubitOracle.AdaptiveDesign.AdaptiveBudgetConcentration.vector
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveBudgetConcentration.vector
+
+#eval IO.println "AUDIT_327_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.conditional_response"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.conditional_response
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.conditional_response
+
+#eval IO.println "AUDIT_328_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vector_response_integrable"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vector_response_integrable
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vector_response_integrable
+
+#eval IO.println "AUDIT_329_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vector_conditional_zero"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vector_conditional_zero
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vector_conditional_zero
+
+#eval IO.println "AUDIT_330_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vector_conditional_variance_le"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vector_conditional_variance_le
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vector_conditional_variance_le
+
+#eval IO.println "AUDIT_331_QubitOracle.AdaptiveDesign.PVMSharpPilot.actual_exploration_conditional_mean"
+#check QubitOracle.AdaptiveDesign.PVMSharpPilot.actual_exploration_conditional_mean
+#print axioms QubitOracle.AdaptiveDesign.PVMSharpPilot.actual_exploration_conditional_mean
+
+#eval IO.println "AUDIT_332_QubitOracle.AdaptiveDesign.PVMSharpPilot.actual_exploration_conditional_variance"
+#check QubitOracle.AdaptiveDesign.PVMSharpPilot.actual_exploration_conditional_variance
+#print axioms QubitOracle.AdaptiveDesign.PVMSharpPilot.actual_exploration_conditional_variance
+
+#eval IO.println "AUDIT_333_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.map_initial"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.map_initial
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.map_initial
+
+#eval IO.println "AUDIT_334_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.initial_integral"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.initial_integral
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.initial_integral
+
+#eval IO.println "AUDIT_335_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.past"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.past
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.past
+
+#eval IO.println "AUDIT_336_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.centered_past"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.centered_past
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.centered_past
+
+#eval IO.println "AUDIT_337_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.scalar_variance_identity"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.scalar_variance_identity
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.scalar_variance_identity
+
+#eval IO.println "AUDIT_338_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.actual_mean_zero"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.actual_mean_zero
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.actual_mean_zero
+
+#eval IO.println "AUDIT_339_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.integral_response_le"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.integral_response_le
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.integral_response_le
+
+#eval IO.println "AUDIT_340_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_variance_identity"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_variance_identity
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_variance_identity
+
+#eval IO.println "AUDIT_341_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_secondMoment_sharp"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_secondMoment_sharp
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_secondMoment_sharp
+
+#eval IO.println "AUDIT_342_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_mean_inner_zero"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_mean_inner_zero
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_mean_inner_zero
+
+#eval IO.println "AUDIT_343_QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_shift_secondMoment"
+#check QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_shift_secondMoment
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveExactMoments.vectorSum_shift_secondMoment
+
+#eval IO.println "AUDIT_344_QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.twoSided_of_mgf"
+#check QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.twoSided_of_mgf
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.twoSided_of_mgf
+
+#eval IO.println "AUDIT_345_QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.scalar"
+#check QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.scalar
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.scalar
+
+#eval IO.println "AUDIT_346_QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.information_apply"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.information_apply
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.information_apply
+
+#eval IO.println "AUDIT_347_QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.score_product_add"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.score_product_add
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.score_product_add
+
+#eval IO.println "AUDIT_348_QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.bind_information"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.bind_information
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.bind_information
+
+#eval IO.println "AUDIT_349_QubitOracle.AdaptiveDesign.FiniteRegularOracle.conditionalInformationSum"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.conditionalInformationSum
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.conditionalInformationSum
+
+#eval IO.println "AUDIT_350_QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptive_information_eq_expected_sum"
+#check QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptive_information_eq_expected_sum
+#print axioms QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptive_information_eq_expected_sum
+
+#eval IO.println "AUDIT_351_QubitOracle.AdaptiveDesign.AdaptiveOperatorConcentration.normed"
+#check QubitOracle.AdaptiveDesign.AdaptiveOperatorConcentration.normed
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveOperatorConcentration.normed
+
+#eval IO.println "AUDIT_352_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment
+
+#eval IO.println "AUDIT_353_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.norm_add_pow_le"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.norm_add_pow_le
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.norm_add_pow_le
+
+#eval IO.println "AUDIT_354_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.of_dominated"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.of_dominated
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.of_dominated
+
+#eval IO.println "AUDIT_355_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.add"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.add
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.add
+
+#eval IO.println "AUDIT_356_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm
+
+#eval IO.println "AUDIT_357_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.const_mul"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.const_mul
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.const_mul
+
+#eval IO.println "AUDIT_358_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm_sq_of_four"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm_sq_of_four
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm_sq_of_four
+
+#eval IO.println "AUDIT_359_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.uniformMoment_of_bound"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.uniformMoment_of_bound
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.uniformMoment_of_bound
+
+#eval IO.println "AUDIT_360_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.finite_sum"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.finite_sum
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.finite_sum
+
+#eval IO.println "AUDIT_361_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.boundedMartingale_uniformMoment"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.boundedMartingale_uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.boundedMartingale_uniformMoment
+
+#eval IO.println "AUDIT_362_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.actualResponse_uniformMoment"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.actualResponse_uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.actualResponse_uniformMoment
+
+#eval IO.println "AUDIT_363_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.actualVectorResponse_uniformMoment"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.actualVectorResponse_uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.actualVectorResponse_uniformMoment
+
+#eval IO.println "AUDIT_364_QubitOracle.AdaptiveDesign.PVMPilotSchedule.BatchMomentCondition"
+#check QubitOracle.AdaptiveDesign.PVMPilotSchedule.BatchMomentCondition
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotSchedule.BatchMomentCondition
+
+#eval IO.println "AUDIT_365_QubitOracle.AdaptiveDesign.PVMPilotSchedule.containingBatch"
+#check QubitOracle.AdaptiveDesign.PVMPilotSchedule.containingBatch
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotSchedule.containingBatch
+
+#eval IO.println "AUDIT_366_QubitOracle.AdaptiveDesign.PVMPilotSchedule.containingBatch_upper"
+#check QubitOracle.AdaptiveDesign.PVMPilotSchedule.containingBatch_upper
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotSchedule.containingBatch_upper
+
+#eval IO.println "AUDIT_367_QubitOracle.AdaptiveDesign.PVMPilotSchedule.containingBatch_lower"
+#check QubitOracle.AdaptiveDesign.PVMPilotSchedule.containingBatch_lower
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotSchedule.containingBatch_lower
+
+#eval IO.println "AUDIT_368_QubitOracle.AdaptiveDesign.PVMPilotSchedule.containingBatch_tendsto"
+#check QubitOracle.AdaptiveDesign.PVMPilotSchedule.containingBatch_tendsto
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotSchedule.containingBatch_tendsto
+
+#eval IO.println "AUDIT_369_QubitOracle.AdaptiveDesign.PVMPilotSchedule.boundary_le_lastRefresh"
+#check QubitOracle.AdaptiveDesign.PVMPilotSchedule.boundary_le_lastRefresh
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotSchedule.boundary_le_lastRefresh
+
+#eval IO.println "AUDIT_370_QubitOracle.AdaptiveDesign.PVMPilotSchedule.half_tendsto"
+#check QubitOracle.AdaptiveDesign.PVMPilotSchedule.half_tendsto
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotSchedule.half_tendsto
+
+#eval IO.println "AUDIT_371_QubitOracle.AdaptiveDesign.PVMPilotSchedule.held_budget"
+#check QubitOracle.AdaptiveDesign.PVMPilotSchedule.held_budget
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotSchedule.held_budget
+
+#eval IO.println "AUDIT_372_QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.exp_chord"
+#check QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.exp_chord
+#print axioms QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.exp_chord
+
+#eval IO.println "AUDIT_373_QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.mgf_partialSum_le"
+#check QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.mgf_partialSum_le
+#print axioms QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.mgf_partialSum_le
+
+#eval IO.println "AUDIT_374_QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.partialSum_subGaussian"
+#check QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.partialSum_subGaussian
+#print axioms QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.partialSum_subGaussian
+
+#eval IO.println "AUDIT_375_QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_tail"
+#check QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_tail
+#print axioms QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_tail
+
+#eval IO.println "AUDIT_376_QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_rate_ae"
+#check QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_rate_ae
+#print axioms QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_rate_ae
+
+#eval IO.println "AUDIT_377_QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.strong_law"
+#check QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.strong_law
+#print axioms QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.strong_law
+
+#eval IO.println "AUDIT_378_QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_rate_of_ae_bounded"
+#check QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_rate_of_ae_bounded
+#print axioms QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_rate_of_ae_bounded
+
+#eval IO.println "AUDIT_379_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.exp_bound"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.exp_bound
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.exp_bound
+
+#eval IO.println "AUDIT_380_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.exp_memLp"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.exp_memLp
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.exp_memLp
+
+#eval IO.println "AUDIT_381_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.weighted_conditional_integral"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.weighted_conditional_integral
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.weighted_conditional_integral
+
+#eval IO.println "AUDIT_382_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.mgf_partialSum_le"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.mgf_partialSum_le
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.mgf_partialSum_le
+
+#eval IO.println "AUDIT_383_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.normalized_moment_le"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.normalized_moment_le
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.normalized_moment_le
+
+#eval IO.println "AUDIT_384_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.uniformMoment"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.uniformMoment
+
+#eval IO.println "AUDIT_385_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.upper_tail"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.upper_tail
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.upper_tail
+
+#eval IO.println "AUDIT_386_QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.normalizedRemainder"
+#check QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.normalizedRemainder
+#print axioms QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.normalizedRemainder
+
+#eval IO.println "AUDIT_387_QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.normalizedRemainder_tendsto"
+#check QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.normalizedRemainder_tendsto
+#print axioms QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.normalizedRemainder_tendsto
+
+#eval IO.println "AUDIT_388_QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.reconstruction"
+#check QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.reconstruction
+#print axioms QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.reconstruction
+
+#eval IO.println "AUDIT_389_QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.delta_method"
+#check QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.delta_method
+#print axioms QubitOracle.AdaptiveDesign.ConsistentDeltaMethod.delta_method
+
+#eval IO.println "AUDIT_390_QubitOracle.AdaptiveDesign.ExplorationRareEventRate.polynomial_exp_tendsto"
+#check QubitOracle.AdaptiveDesign.ExplorationRareEventRate.polynomial_exp_tendsto
+#print axioms QubitOracle.AdaptiveDesign.ExplorationRareEventRate.polynomial_exp_tendsto
+
+#eval IO.println "AUDIT_391_QubitOracle.AdaptiveDesign.ExplorationRareEventRate.held_polynomial_exp"
+#check QubitOracle.AdaptiveDesign.ExplorationRareEventRate.held_polynomial_exp
+#print axioms QubitOracle.AdaptiveDesign.ExplorationRareEventRate.held_polynomial_exp
+
+#eval IO.println "AUDIT_392_QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.variance_weight_summable"
+#check QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.variance_weight_summable
+#print axioms QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.variance_weight_summable
+
+#eval IO.println "AUDIT_393_QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.variance_weight_tsum_le_one"
+#check QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.variance_weight_tsum_le_one
+#print axioms QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw.variance_weight_tsum_le_one
+
+#eval IO.println "AUDIT_394_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.finite_abs_sum_bernstein"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.finite_abs_sum_bernstein
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.finite_abs_sum_bernstein
+
+#eval IO.println "AUDIT_395_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.euclidean_norm_le_sum_abs"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.euclidean_norm_le_sum_abs
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.euclidean_norm_le_sum_abs
+
+#eval IO.println "AUDIT_396_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_bernstein"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_bernstein
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_bernstein
+
+#eval IO.println "AUDIT_397_QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.finiteSum"
+#check QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.finiteSum
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.finiteSum
+
+#eval IO.println "AUDIT_398_QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.vector"
+#check QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.vector
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveGaussianTails.vector
+
+#eval IO.println "AUDIT_399_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_uniformMoment"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_uniformMoment
+
+#eval IO.println "AUDIT_400_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_real_moments"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_real_moments
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_real_moments
+
+#eval IO.println "AUDIT_401_QubitOracle.AdaptiveDesign.GaussianQuadraticMoments.norm_sq_memLp"
+#check QubitOracle.AdaptiveDesign.GaussianQuadraticMoments.norm_sq_memLp
+#print axioms QubitOracle.AdaptiveDesign.GaussianQuadraticMoments.norm_sq_memLp
+
+#eval IO.println "AUDIT_402_QubitOracle.AdaptiveDesign.GaussianQuadraticMoments.integral_norm_sq"
+#check QubitOracle.AdaptiveDesign.GaussianQuadraticMoments.integral_norm_sq
+#print axioms QubitOracle.AdaptiveDesign.GaussianQuadraticMoments.integral_norm_sq
+
+#eval IO.println "AUDIT_403_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalized_characteristic_tendsto"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalized_characteristic_tendsto
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalized_characteristic_tendsto
+
+#eval IO.println "AUDIT_404_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum
+
+#eval IO.println "AUDIT_405_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum_measurable"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum_measurable
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum_measurable
+
+#eval IO.println "AUDIT_406_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum_charFun"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum_charFun
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum_charFun
+
+#eval IO.println "AUDIT_407_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.scalar_clt"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.scalar_clt
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.scalar_clt
+
+#eval IO.println "AUDIT_408_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt
+
+#eval IO.println "AUDIT_409_QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.strong_law_of_ae_bounded"
+#check QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.strong_law_of_ae_bounded
+#print axioms QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.strong_law_of_ae_bounded
+
+#eval IO.println "AUDIT_410_QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.finite_coordinates"
+#check QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.finite_coordinates
+#print axioms QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.finite_coordinates
+
+#eval IO.println "AUDIT_411_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.condExp_finite_linear_sum"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.condExp_finite_linear_sum
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.condExp_finite_linear_sum
+
+#eval IO.println "AUDIT_412_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.conditionalCovariance"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.conditionalCovariance
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.conditionalCovariance
+
+#eval IO.println "AUDIT_413_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.inner_sq_expansion"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.inner_sq_expansion
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.inner_sq_expansion
+
+#eval IO.println "AUDIT_414_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.quadratic_expansion"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.quadratic_expansion
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.quadratic_expansion
+
+#eval IO.println "AUDIT_415_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.projected_variance_eq"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.projected_variance_eq
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.projected_variance_eq
+
+#eval IO.println "AUDIT_416_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt_of_covariance"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt_of_covariance
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt_of_covariance
+
+#eval IO.println "AUDIT_417_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt_of_ae_bounded_covariance"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt_of_ae_bounded_covariance
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt_of_ae_bounded_covariance
+
+#eval IO.println "AUDIT_418_QubitOracle.AdaptiveDesign.GeneralPOVM.coercivityConstant"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.coercivityConstant
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.coercivityConstant
+
+#eval IO.println "AUDIT_419_QubitOracle.AdaptiveDesign.GeneralPOVM.coercivityConstant_pos"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.coercivityConstant_pos
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.coercivityConstant_pos
+
+#eval IO.println "AUDIT_420_QubitOracle.AdaptiveDesign.GeneralPOVM.regressionFrame_coercive"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.regressionFrame_coercive
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.regressionFrame_coercive
+
+#eval IO.println "AUDIT_421_QubitOracle.AdaptiveDesign.GeneralPOVM.adaptiveProtocol"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.adaptiveProtocol
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.adaptiveProtocol
+
+#eval IO.println "AUDIT_422_QubitOracle.AdaptiveDesign.GeneralPOVM.actualState"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.actualState
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.actualState
+
+#eval IO.println "AUDIT_423_QubitOracle.AdaptiveDesign.GeneralPOVM.stateEstimator"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.stateEstimator
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.stateEstimator
+
+#eval IO.println "AUDIT_424_QubitOracle.AdaptiveDesign.GeneralPOVM.stateEstimator_physical"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.stateEstimator_physical
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.stateEstimator_physical
+
+#eval IO.println "AUDIT_425_QubitOracle.AdaptiveDesign.GeneralPOVM.measurementFrame"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.measurementFrame
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.measurementFrame
+
+#eval IO.println "AUDIT_426_QubitOracle.AdaptiveDesign.GeneralPOVM.measurementFrame_unitary"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.measurementFrame_unitary
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.measurementFrame_unitary
+
+#eval IO.println "AUDIT_427_QubitOracle.AdaptiveDesign.GeneralPOVM.designFisher"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.designFisher
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.designFisher
+
+#eval IO.println "AUDIT_428_QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_completedBatches"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_completedBatches
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_completedBatches
+
+#eval IO.println "AUDIT_429_QubitOracle.AdaptiveDesign.GlobalPFSIC.Outcome"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.Outcome
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.Outcome
+
+#eval IO.println "AUDIT_430_QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude_pos"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude_pos
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude_pos
+
+#eval IO.println "AUDIT_431_QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude_lt_one"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude_lt_one
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude_lt_one
+
+#eval IO.println "AUDIT_432_QubitOracle.AdaptiveDesign.GlobalPFSIC.effectWeight_pos"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effectWeight_pos
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effectWeight_pos
+
+#eval IO.println "AUDIT_433_QubitOracle.AdaptiveDesign.GlobalPFSIC.outcome_card"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.outcome_card
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.outcome_card
+
+#eval IO.println "AUDIT_434_QubitOracle.AdaptiveDesign.GlobalPFSIC.liftVector"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.liftVector
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.liftVector
+
+#eval IO.println "AUDIT_435_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_posSemidef"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_posSemidef
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_posSemidef
+
+#eval IO.println "AUDIT_436_QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementVector_normalized"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementVector_normalized
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementVector_normalized
+
+#eval IO.println "AUDIT_437_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_entry"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_entry
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_entry
+
+#eval IO.println "AUDIT_438_QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_zero_zero"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_zero_zero
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_zero_zero
+
+#eval IO.println "AUDIT_439_QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_succ_succ"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_succ_succ
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_succ_succ
+
+#eval IO.println "AUDIT_440_QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_zero_succ"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_zero_succ
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_zero_succ
+
+#eval IO.println "AUDIT_441_QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_succ_zero"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_succ_zero
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_lift_succ_zero
+
+#eval IO.println "AUDIT_442_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_zero_zero"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_zero_zero
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_zero_zero
+
+#eval IO.println "AUDIT_443_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_succ_succ"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_succ_succ
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_succ_succ
+
+#eval IO.println "AUDIT_444_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_zero_succ_phase_sum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_zero_succ_phase_sum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_zero_succ_phase_sum
+
+#eval IO.println "AUDIT_445_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_succ_zero_phase_sum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_succ_zero_phase_sum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_succ_zero_phase_sum
+
+#eval IO.println "AUDIT_446_QubitOracle.AdaptiveDesign.GlobalPFSIC.head_normalization"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.head_normalization
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.head_normalization
+
+#eval IO.println "AUDIT_447_QubitOracle.AdaptiveDesign.GlobalPFSIC.tail_normalization"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.tail_normalization
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.tail_normalization
+
+#eval IO.println "AUDIT_448_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_zero_zero"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_zero_zero
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_zero_zero
+
+#eval IO.println "AUDIT_449_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_zero_succ"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_zero_succ
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_zero_succ
+
+#eval IO.println "AUDIT_450_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_succ_zero"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_succ_zero
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_succ_zero
+
+#eval IO.println "AUDIT_451_QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_succ_succ"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_succ_succ
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_sum_succ_succ
+
+#eval IO.println "AUDIT_452_QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM
+
+#eval IO.println "AUDIT_453_QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate
+
+#eval IO.println "AUDIT_454_QubitOracle.AdaptiveDesign.GlobalPFSIC.realifiedProjector"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.realifiedProjector
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.realifiedProjector
+
+#eval IO.println "AUDIT_455_QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate_covariance"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate_covariance
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate_covariance
+
+#eval IO.println "AUDIT_456_QubitOracle.AdaptiveDesign.GlobalPFSIC.realifiedProjector_family_sum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.realifiedProjector_family_sum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.realifiedProjector_family_sum
+
+#eval IO.println "AUDIT_457_QubitOracle.AdaptiveDesign.GlobalPFSIC.realifiedProjector_library_sum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.realifiedProjector_library_sum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.realifiedProjector_library_sum
+
+#eval IO.println "AUDIT_458_QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate_family_covariance"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate_family_covariance
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate_family_covariance
+
+#eval IO.println "AUDIT_459_QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate_library_covariance"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate_library_covariance
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.phaseCoordinate_library_covariance
+
+#eval IO.println "AUDIT_460_QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceGradient"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceGradient
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceGradient
+
+#eval IO.println "AUDIT_461_QubitOracle.AdaptiveDesign.GlobalPFSIC.fisher_ratio_cancel"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.fisher_ratio_cancel
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.fisher_ratio_cancel
+
+#eval IO.println "AUDIT_462_QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceFisher_term"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceFisher_term
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_referenceFisher_term
+
+#eval IO.println "AUDIT_463_QubitOracle.AdaptiveDesign.GlobalPFSIC.tailBlock"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.tailBlock
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.tailBlock
+
+#eval IO.println "AUDIT_464_QubitOracle.AdaptiveDesign.GlobalPFSIC.headRow"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.headRow
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.headRow
+
+#eval IO.println "AUDIT_465_QubitOracle.AdaptiveDesign.GlobalPFSIC.headColumn"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.headColumn
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.headColumn
+
+#eval IO.println "AUDIT_466_QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_liftVector"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_liftVector
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_liftVector
+
+#eval IO.println "AUDIT_467_QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_measurementVector"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_measurementVector
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_measurementVector
+
+#eval IO.println "AUDIT_468_QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_phase_sum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_phase_sum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_phase_sum
+
+#eval IO.println "AUDIT_469_QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude_false_lt_true"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude_false_lt_true
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.latitude_false_lt_true
+
+#eval IO.println "AUDIT_470_QubitOracle.AdaptiveDesign.GlobalPFSIC.two_latitudes_detect"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.two_latitudes_detect
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.two_latitudes_detect
+
+#eval IO.println "AUDIT_471_QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_measurementVector_eq_zero_iff"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_measurementVector_eq_zero_iff
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_measurementVector_eq_zero_iff
+
+#eval IO.println "AUDIT_472_QubitOracle.AdaptiveDesign.GlobalPFSIC.phase4"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.phase4
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.phase4
+
+#eval IO.println "AUDIT_473_QubitOracle.AdaptiveDesign.GlobalPFSIC.phase4_normSq"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.phase4_normSq
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.phase4_normSq
+
+#eval IO.println "AUDIT_474_QubitOracle.AdaptiveDesign.GlobalPFSIC.sum_phase4"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.sum_phase4
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.sum_phase4
+
+#eval IO.println "AUDIT_475_QubitOracle.AdaptiveDesign.GlobalPFSIC.sum_phase4_sq"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.sum_phase4_sq
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.sum_phase4_sq
+
+#eval IO.println "AUDIT_476_QubitOracle.AdaptiveDesign.GlobalPFSIC.coordinate"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.coordinate
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.coordinate
+
+#eval IO.println "AUDIT_477_QubitOracle.AdaptiveDesign.GlobalPFSIC.projector"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.projector
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.projector
+
+#eval IO.println "AUDIT_478_QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_apply"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_apply
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_apply
+
+#eval IO.println "AUDIT_479_QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_posSemidef"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_posSemidef
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.projector_posSemidef
+
+#eval IO.println "AUDIT_480_QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector
+
+#eval IO.println "AUDIT_481_QubitOracle.AdaptiveDesign.GlobalPFSIC.LibraryIndex"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.LibraryIndex
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.LibraryIndex
+
+#eval IO.println "AUDIT_482_QubitOracle.AdaptiveDesign.GlobalPFSIC.coordinate_normSq"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.coordinate_normSq
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.coordinate_normSq
+
+#eval IO.println "AUDIT_483_QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector_normSq"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector_normSq
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector_normSq
+
+#eval IO.println "AUDIT_484_QubitOracle.AdaptiveDesign.GlobalPFSIC.libraryVector_normSq"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.libraryVector_normSq
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.libraryVector_normSq
+
+#eval IO.println "AUDIT_485_QubitOracle.AdaptiveDesign.GlobalPFSIC.coordinate_projector_sum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.coordinate_projector_sum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.coordinate_projector_sum
+
+#eval IO.println "AUDIT_486_QubitOracle.AdaptiveDesign.GlobalPFSIC.phase4_polarization"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.phase4_polarization
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.phase4_polarization
+
+#eval IO.println "AUDIT_487_QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector_projector_phase_sum"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector_projector_phase_sum
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector_projector_phase_sum
+
+#eval IO.println "AUDIT_488_QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector_projector_phase_sum_all"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector_projector_phase_sum_all
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.pairVector_projector_phase_sum_all
+
+#eval IO.println "AUDIT_489_QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic
+
+#eval IO.println "AUDIT_490_QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_coordinate"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_coordinate
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_coordinate
+
+#eval IO.println "AUDIT_491_QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_pairVector"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_pairVector
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.quadratic_pairVector
+
+#eval IO.println "AUDIT_492_QubitOracle.AdaptiveDesign.GlobalPFSIC.library_quadratic_eq_zero_iff"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.library_quadratic_eq_zero_iff
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.library_quadratic_eq_zero_iff
+
+#eval IO.println "AUDIT_493_QubitOracle.AdaptiveDesign.GlobalPFSIC.library_quadratic_injective"
+#check QubitOracle.AdaptiveDesign.GlobalPFSIC.library_quadratic_injective
+#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.library_quadratic_injective
+
+#eval IO.println "AUDIT_494_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm_sq_of_eight"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm_sq_of_eight
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm_sq_of_eight
+
+#eval IO.println "AUDIT_495_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.moment_of_good_event"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.moment_of_good_event
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.moment_of_good_event
+
+#eval IO.println "AUDIT_496_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.fourthMoment_of_good_event"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.fourthMoment_of_good_event
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.fourthMoment_of_good_event
+
+#eval IO.println "AUDIT_497_QubitOracle.AdaptiveDesign.GeneralPOVM.complexAnalysis"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.complexAnalysis
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.complexAnalysis
+
+#eval IO.println "AUDIT_498_QubitOracle.AdaptiveDesign.GeneralPOVM.complexAnalysis_injective"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.complexAnalysis_injective
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.complexAnalysis_injective
+
+#eval IO.println "AUDIT_499_QubitOracle.AdaptiveDesign.GeneralPOVM.identifying_card_bound"
+#check QubitOracle.AdaptiveDesign.GeneralPOVM.identifying_card_bound
+#print axioms QubitOracle.AdaptiveDesign.GeneralPOVM.identifying_card_bound
+
+#eval IO.println "AUDIT_500_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.sldPairing"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.sldPairing
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.sldPairing
+
+#eval IO.println "AUDIT_501_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.sldPairing_independent"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.sldPairing_independent
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.sldPairing_independent
+
+#eval IO.println "AUDIT_502_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm
+
+#eval IO.println "AUDIT_503_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_symmetric"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_symmetric
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_symmetric
+
+#eval IO.println "AUDIT_504_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_nonnegative"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_nonnegative
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_nonnegative
+
+#eval IO.println "AUDIT_505_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.born_hasFDerivAt"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.born_hasFDerivAt
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.born_hasFDerivAt
+
+#eval IO.println "AUDIT_506_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_chart"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_chart
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_chart
+
+#eval IO.println "AUDIT_507_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherBilin"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherBilin
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherBilin
+
+#eval IO.println "AUDIT_508_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.bilinear_coordinate_congruence"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.bilinear_coordinate_congruence
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.bilinear_coordinate_congruence
+
+#eval IO.println "AUDIT_509_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisher_coordinate_congruence"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisher_coordinate_congruence
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisher_coordinate_congruence
+
+#eval IO.println "AUDIT_510_QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.chart_transition_derivative"
+#check QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.chart_transition_derivative
+#print axioms QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.chart_transition_derivative
+
+#eval IO.println "AUDIT_511_QubitOracle.AdaptiveDesign.L2MartingaleBudget.partialSum_memLp"
+#check QubitOracle.AdaptiveDesign.L2MartingaleBudget.partialSum_memLp
+#print axioms QubitOracle.AdaptiveDesign.L2MartingaleBudget.partialSum_memLp
+
+#eval IO.println "AUDIT_512_QubitOracle.AdaptiveDesign.L2MartingaleBudget.integral_cross_zero"
+#check QubitOracle.AdaptiveDesign.L2MartingaleBudget.integral_cross_zero
+#print axioms QubitOracle.AdaptiveDesign.L2MartingaleBudget.integral_cross_zero
+
+#eval IO.println "AUDIT_513_QubitOracle.AdaptiveDesign.L2MartingaleBudget.integral_partialSum_square"
+#check QubitOracle.AdaptiveDesign.L2MartingaleBudget.integral_partialSum_square
+#print axioms QubitOracle.AdaptiveDesign.L2MartingaleBudget.integral_partialSum_square
+
+#eval IO.println "AUDIT_514_QubitOracle.AdaptiveDesign.L2MartingaleBudget.partialSum_martingale"
+#check QubitOracle.AdaptiveDesign.L2MartingaleBudget.partialSum_martingale
+#print axioms QubitOracle.AdaptiveDesign.L2MartingaleBudget.partialSum_martingale
+
+#eval IO.println "AUDIT_515_QubitOracle.AdaptiveDesign.L2MartingaleBudget.partialSum_ae_converges"
+#check QubitOracle.AdaptiveDesign.L2MartingaleBudget.partialSum_ae_converges
+#print axioms QubitOracle.AdaptiveDesign.L2MartingaleBudget.partialSum_ae_converges
+
+#eval IO.println "AUDIT_516_QubitOracle.AdaptiveDesign.L2MartingaleBudget.normalized_sum_ae"
+#check QubitOracle.AdaptiveDesign.L2MartingaleBudget.normalized_sum_ae
+#print axioms QubitOracle.AdaptiveDesign.L2MartingaleBudget.normalized_sum_ae
+
+#eval IO.println "AUDIT_517_QubitOracle.AdaptiveDesign.L2MartingaleBudget.normalized_sum_ae_of_conditional_variance"
+#check QubitOracle.AdaptiveDesign.L2MartingaleBudget.normalized_sum_ae_of_conditional_variance
+#print axioms QubitOracle.AdaptiveDesign.L2MartingaleBudget.normalized_sum_ae_of_conditional_variance
+
+#eval IO.println "AUDIT_518_QubitOracle.AdaptiveDesign.L2MartingaleBudget.vector_normalized_sum_ae"
+#check QubitOracle.AdaptiveDesign.L2MartingaleBudget.vector_normalized_sum_ae
+#print axioms QubitOracle.AdaptiveDesign.L2MartingaleBudget.vector_normalized_sum_ae
+
+#eval IO.println "AUDIT_519_QubitOracle.AdaptiveDesign.L2MartingaleBudget.vector_normalized_sum_ae_of_conditional_variance"
+#check QubitOracle.AdaptiveDesign.L2MartingaleBudget.vector_normalized_sum_ae_of_conditional_variance
+#print axioms QubitOracle.AdaptiveDesign.L2MartingaleBudget.vector_normalized_sum_ae_of_conditional_variance
+
+#eval IO.println "AUDIT_520_QubitOracle.AdaptiveDesign.LibraryUnweighted.normalizedTangentLift"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.normalizedTangentLift
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.normalizedTangentLift
+
+#eval IO.println "AUDIT_521_QubitOracle.AdaptiveDesign.LibraryUnweighted.normalizedTangentLift_adjoint"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.normalizedTangentLift_adjoint
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.normalizedTangentLift_adjoint
+
+#eval IO.println "AUDIT_522_QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_lift"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_lift
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_lift
+
+#eval IO.println "AUDIT_523_QubitOracle.AdaptiveDesign.LibraryUnweighted.ambient_clt"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.ambient_clt
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.ambient_clt
+
+#eval IO.println "AUDIT_524_QubitOracle.AdaptiveDesign.LibraryUnweighted.batch_horizons_tendsto"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.batch_horizons_tendsto
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.batch_horizons_tendsto
+
+#eval IO.println "AUDIT_525_QubitOracle.AdaptiveDesign.LibraryUnweighted.completed_batch_amplitude_clt"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.completed_batch_amplitude_clt
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.completed_batch_amplitude_clt
+
+#eval IO.println "AUDIT_526_QubitOracle.AdaptiveDesign.LibraryUnweighted.completed_batch_ambient_clt"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.completed_batch_ambient_clt
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.completed_batch_ambient_clt
+
+#eval IO.println "AUDIT_527_QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_scalar"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_scalar
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_scalar
+
+#eval IO.println "AUDIT_528_QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_in_smoothChart"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_in_smoothChart
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_in_smoothChart
+
+#eval IO.println "AUDIT_529_QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_in_ambientSpace"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_in_ambientSpace
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_in_ambientSpace
+
+#eval IO.println "AUDIT_530_QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_excess"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_excess
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_excess
+
+#eval IO.println "AUDIT_531_QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_qubit"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_qubit
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_qubit
+
+#eval IO.println "AUDIT_532_QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_qutrit"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_qutrit
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_qutrit
+
+#eval IO.println "AUDIT_533_QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt
+
+#eval IO.println "AUDIT_534_QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt_continuous"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt_continuous
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt_continuous
+
+#eval IO.println "AUDIT_535_QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt_transport"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt_transport
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt_transport
+
+#eval IO.println "AUDIT_536_QubitOracle.AdaptiveDesign.LibraryUnweighted.frameProjector_reference"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.frameProjector_reference
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.frameProjector_reference
+
+#eval IO.println "AUDIT_537_QubitOracle.AdaptiveDesign.LibraryUnweighted.conjugate_reference"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.conjugate_reference
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.conjugate_reference
+
+#eval IO.println "AUDIT_538_QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt_aligned"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt_aligned
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.frameAt_aligned
+
+#eval IO.println "AUDIT_539_QubitOracle.AdaptiveDesign.LibraryUnweighted.projected_frame_limit"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.projected_frame_limit
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.projected_frame_limit
+
+#eval IO.println "AUDIT_540_QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate
+
+#eval IO.println "AUDIT_541_QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate_matrix"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate_matrix
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate_matrix
+
+#eval IO.println "AUDIT_542_QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate_measurable"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate_measurable
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate_measurable
+
+#eval IO.println "AUDIT_543_QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate_consistent"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate_consistent
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.pureEstimate_consistent
+
+#eval IO.println "AUDIT_544_QubitOracle.AdaptiveDesign.LibraryUnweighted.projection_remainder_zero"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.projection_remainder_zero
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.projection_remainder_zero
+
+#eval IO.println "AUDIT_545_QubitOracle.AdaptiveDesign.LibraryUnweighted.pure_linearization"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.pure_linearization
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.pure_linearization
+
+#eval IO.println "AUDIT_546_QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_coordinate"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_coordinate
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_coordinate
+
+#eval IO.println "AUDIT_547_QubitOracle.AdaptiveDesign.LibraryUnweighted.coordinates_minus_score_zero"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.coordinates_minus_score_zero
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.coordinates_minus_score_zero
+
+#eval IO.println "AUDIT_548_QubitOracle.AdaptiveDesign.LibraryUnweighted.coordinates_clt"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.coordinates_clt
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.coordinates_clt
+
+#eval IO.println "AUDIT_549_QubitOracle.AdaptiveDesign.LibraryUnweighted.amplitude_clt"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.amplitude_clt
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.amplitude_clt
+
+#eval IO.println "AUDIT_550_QubitOracle.AdaptiveDesign.LibraryUnweighted.smoothChart_clt"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.smoothChart_clt
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.smoothChart_clt
+
+#eval IO.println "AUDIT_551_QubitOracle.AdaptiveDesign.LibraryUnweighted.raw_eq_ridge"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.raw_eq_ridge
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.raw_eq_ridge
+
+#eval IO.println "AUDIT_552_QubitOracle.AdaptiveDesign.LibraryUnweighted.state_eq_of_agrees"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.state_eq_of_agrees
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.state_eq_of_agrees
+
+#eval IO.println "AUDIT_553_QubitOracle.AdaptiveDesign.LibraryUnweighted.statistic_measurable"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.statistic_measurable
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.statistic_measurable
+
+#eval IO.println "AUDIT_554_QubitOracle.AdaptiveDesign.LibraryUnweighted.raw_rootTight"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.raw_rootTight
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.raw_rootTight
+
+#eval IO.println "AUDIT_555_QubitOracle.AdaptiveDesign.LibraryUnweighted.raw_square_negligible"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.raw_square_negligible
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.raw_square_negligible
+
+#eval IO.println "AUDIT_556_QubitOracle.AdaptiveDesign.LibraryUnweighted.noiseSum"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.noiseSum
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.noiseSum
+
+#eval IO.println "AUDIT_557_QubitOracle.AdaptiveDesign.LibraryUnweighted.projectedGram"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.projectedGram
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.projectedGram
+
+#eval IO.println "AUDIT_558_QubitOracle.AdaptiveDesign.LibraryUnweighted.projectedGram_measurable"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.projectedGram_measurable
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.projectedGram_measurable
+
+#eval IO.println "AUDIT_559_QubitOracle.AdaptiveDesign.LibraryUnweighted.projectedGram_limit"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.projectedGram_limit
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.projectedGram_limit
+
+#eval IO.println "AUDIT_560_QubitOracle.AdaptiveDesign.LibraryUnweighted.tangent_truth_zero"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.tangent_truth_zero
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.tangent_truth_zero
+
+#eval IO.println "AUDIT_561_QubitOracle.AdaptiveDesign.LibraryUnweighted.projected_error_equation"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.projected_error_equation
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.projected_error_equation
+
+#eval IO.println "AUDIT_562_QubitOracle.AdaptiveDesign.LibraryUnweighted.tangent_linearization"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.tangent_linearization
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.tangent_linearization
+
+#eval IO.println "AUDIT_563_QubitOracle.AdaptiveDesign.LibraryUnweighted.quadratic_smul"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.quadratic_smul
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.quadratic_smul
+
+#eval IO.println "AUDIT_564_QubitOracle.AdaptiveDesign.LibraryUnweighted.quadratic_moment"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.quadratic_moment
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.quadratic_moment
+
+#eval IO.println "AUDIT_565_QubitOracle.AdaptiveDesign.LibraryUnweighted.actual_ray_limit"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.actual_ray_limit
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.actual_ray_limit
+
+#eval IO.println "AUDIT_566_QubitOracle.AdaptiveDesign.LibraryUnweighted.actual_moment_limit"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.actual_moment_limit
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.actual_moment_limit
+
+#eval IO.println "AUDIT_567_QubitOracle.AdaptiveDesign.LibraryUnweighted.probability_coordinate"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.probability_coordinate
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.probability_coordinate
+
+#eval IO.println "AUDIT_568_QubitOracle.AdaptiveDesign.LibraryUnweighted.effect_coordinate"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.effect_coordinate
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.effect_coordinate
+
+#eval IO.println "AUDIT_569_QubitOracle.AdaptiveDesign.LibraryUnweighted.innovation"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.innovation
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.innovation
+
+#eval IO.println "AUDIT_570_QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreResponse"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreResponse
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreResponse
+
+#eval IO.println "AUDIT_571_QubitOracle.AdaptiveDesign.LibraryUnweighted.innovation_mean"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.innovation_mean
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.innovation_mean
+
+#eval IO.println "AUDIT_572_QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreResponse_mean"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreResponse_mean
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreResponse_mean
+
+#eval IO.println "AUDIT_573_QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreBound"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreBound
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreBound
+
+#eval IO.println "AUDIT_574_QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreBound_nonnegative"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreBound_nonnegative
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreBound_nonnegative
+
+#eval IO.println "AUDIT_575_QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreResponse_bound"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreResponse_bound
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.scoreResponse_bound
+
+#eval IO.println "AUDIT_576_QubitOracle.AdaptiveDesign.LibraryUnweighted.score_secondMoment"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.score_secondMoment
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.score_secondMoment
+
+#eval IO.println "AUDIT_577_QubitOracle.AdaptiveDesign.LibraryUnweighted.scaled_noise_constant"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.scaled_noise_constant
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.scaled_noise_constant
+
+#eval IO.println "AUDIT_578_QubitOracle.AdaptiveDesign.LibraryUnweighted.shifted_score_clt"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.shifted_score_clt
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.shifted_score_clt
+
+#eval IO.println "AUDIT_579_QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore
+
+#eval IO.println "AUDIT_580_QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_measurable"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_measurable
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_measurable
+
+#eval IO.println "AUDIT_581_QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_clt"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_clt
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.fullScore_clt
+
+#eval IO.println "AUDIT_582_QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceCoordinate_effect"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceCoordinate_effect
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceCoordinate_effect
+
+#eval IO.println "AUDIT_583_QubitOracle.AdaptiveDesign.LibraryUnweighted.diagonalEffect"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.diagonalEffect
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.diagonalEffect
+
+#eval IO.println "AUDIT_584_QubitOracle.AdaptiveDesign.LibraryUnweighted.effect_decomposition"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.effect_decomposition
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.effect_decomposition
+
+#eval IO.println "AUDIT_585_QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceCoordinate_effect_phase_sum"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceCoordinate_effect_phase_sum
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceCoordinate_effect_phase_sum
+
+#eval IO.println "AUDIT_586_QubitOracle.AdaptiveDesign.LibraryUnweighted.reference_gram"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.reference_gram
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.reference_gram
+
+#eval IO.println "AUDIT_587_QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceFrame_coordinate"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceFrame_coordinate
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceFrame_coordinate
+
+#eval IO.println "AUDIT_588_QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceFrame_projection"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceFrame_projection
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceFrame_projection
+
+#eval IO.println "AUDIT_589_QubitOracle.AdaptiveDesign.LibraryUnweighted.gramConstant"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.gramConstant
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.gramConstant
+
+#eval IO.println "AUDIT_590_QubitOracle.AdaptiveDesign.LibraryUnweighted.noiseConstant"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.noiseConstant
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.noiseConstant
+
+#eval IO.println "AUDIT_591_QubitOracle.AdaptiveDesign.LibraryUnweighted.tangentVariance"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.tangentVariance
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.tangentVariance
+
+#eval IO.println "AUDIT_592_QubitOracle.AdaptiveDesign.LibraryUnweighted.constants_positive"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.constants_positive
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.constants_positive
+
+#eval IO.println "AUDIT_593_QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_ratio"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_ratio
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_ratio
+
+#eval IO.println "AUDIT_594_QubitOracle.AdaptiveDesign.LibraryUnweighted.phaseCoordinate_sum"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.phaseCoordinate_sum
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.phaseCoordinate_sum
+
+#eval IO.println "AUDIT_595_QubitOracle.AdaptiveDesign.LibraryUnweighted.gram"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.gram
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.gram
+
+#eval IO.println "AUDIT_596_QubitOracle.AdaptiveDesign.LibraryUnweighted.mean"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.mean
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.mean
+
+#eval IO.println "AUDIT_597_QubitOracle.AdaptiveDesign.LibraryUnweighted.moment"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.moment
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.moment
+
+#eval IO.println "AUDIT_598_QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_continuous"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_continuous
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_continuous
+
+#eval IO.println "AUDIT_599_QubitOracle.AdaptiveDesign.LibraryUnweighted.mean_continuous"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.mean_continuous
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.mean_continuous
+
+#eval IO.println "AUDIT_600_QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_continuous"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_continuous
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_continuous
+
+#eval IO.println "AUDIT_601_QubitOracle.AdaptiveDesign.LibraryUnweighted.gradient_product"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.gradient_product
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.gradient_product
+
+#eval IO.println "AUDIT_602_QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_scalar"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_scalar
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_scalar
+
+#eval IO.println "AUDIT_603_QubitOracle.AdaptiveDesign.LibraryUnweighted.noise_scalar"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.noise_scalar
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.noise_scalar
+
+#eval IO.println "AUDIT_604_QubitOracle.AdaptiveDesign.LibraryUnweighted.mean_at_alignment"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.mean_at_alignment
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.mean_at_alignment
+
+#eval IO.println "AUDIT_605_QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_at_alignment"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_at_alignment
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_at_alignment
+
+#eval IO.println "AUDIT_606_QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_at_alignment"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_at_alignment
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_at_alignment
+
+#eval IO.println "AUDIT_607_QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_limits"
+#check QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_limits
+#print axioms QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_limits
+
+#eval IO.println "AUDIT_608_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.bernstein_upper"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.bernstein_upper
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.bernstein_upper
+
+#eval IO.println "AUDIT_609_QubitOracle.AdaptiveDesign.BoundedVarianceMGF.bernstein_abs"
+#check QubitOracle.AdaptiveDesign.BoundedVarianceMGF.bernstein_abs
+#print axioms QubitOracle.AdaptiveDesign.BoundedVarianceMGF.bernstein_abs
+
+#eval IO.println "AUDIT_610_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.phase_integrable"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.phase_integrable
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.phase_integrable
+
+#eval IO.println "AUDIT_611_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.conditional_taylor"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.conditional_taylor
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.conditional_taylor
+
+#eval IO.println "AUDIT_612_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.variance"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.variance
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.variance
+
+#eval IO.println "AUDIT_613_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.varianceError"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.varianceError
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.varianceError
+
+#eval IO.println "AUDIT_614_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.variance_norm_bound"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.variance_norm_bound
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.variance_norm_bound
+
+#eval IO.println "AUDIT_615_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.varianceError_integrable"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.varianceError_integrable
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.varianceError_integrable
+
+#eval IO.println "AUDIT_616_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.varianceError_tendsto"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.varianceError_tendsto
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.varianceError_tendsto
+
+#eval IO.println "AUDIT_617_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum
+
+#eval IO.println "AUDIT_618_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_zero"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_zero
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_zero
+
+#eval IO.println "AUDIT_619_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.phaseSum_integrable"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.phaseSum_integrable
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.phaseSum_integrable
+
+#eval IO.println "AUDIT_620_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_succ"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_succ
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_succ
+
+#eval IO.println "AUDIT_621_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.conditional_comparison"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.conditional_comparison
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.conditional_comparison
+
+#eval IO.println "AUDIT_622_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_step_bound"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_step_bound
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_step_bound
+
+#eval IO.println "AUDIT_623_QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_bound"
+#check QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_bound
+#print axioms QubitOracle.AdaptiveDesign.MartingaleCharacteristic.characteristicSum_bound
+
+#eval IO.println "AUDIT_624_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap
+
+#eval IO.println "AUDIT_625_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity
+
+#eval IO.println "AUDIT_626_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.bures"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.bures
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.bures
+
+#eval IO.println "AUDIT_627_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form
+
+#eval IO.println "AUDIT_628_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap_sq"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap_sq
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap_sq
+
+#eval IO.println "AUDIT_629_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap_pos"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap_pos
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap_pos
+
+#eval IO.println "AUDIT_630_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity_identity"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity_identity
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity_identity
+
+#eval IO.println "AUDIT_631_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity_nonneg"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity_nonneg
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity_nonneg
+
+#eval IO.println "AUDIT_632_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity_self"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity_self
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.fidelity_self
+
+#eval IO.println "AUDIT_633_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap_difference"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap_difference
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.gap_difference
+
+#eval IO.println "AUDIT_634_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.exact_loss"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.exact_loss
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.exact_loss
+
+#eval IO.println "AUDIT_635_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_continuous"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_continuous
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_continuous
+
+#eval IO.println "AUDIT_636_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_nonneg"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_nonneg
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_nonneg
+
+#eval IO.println "AUDIT_637_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_smul"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_smul
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_smul
+
+#eval IO.println "AUDIT_638_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_at_truth"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_at_truth
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_at_truth
+
+#eval IO.println "AUDIT_639_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_bound"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_bound
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.form_bound
+
+#eval IO.println "AUDIT_640_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.bloch_fidelity"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.bloch_fidelity
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.bloch_fidelity
+
+#eval IO.println "AUDIT_641_QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.bloch_bures"
+#check QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.bloch_bures
+#print axioms QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic.bloch_bures
+
+#eval IO.println "AUDIT_642_QubitOracle.AdaptiveDesign.MixedRelativeInformation.information_positive"
+#check QubitOracle.AdaptiveDesign.MixedRelativeInformation.information_positive
+#print axioms QubitOracle.AdaptiveDesign.MixedRelativeInformation.information_positive
+
+#eval IO.println "AUDIT_643_QubitOracle.AdaptiveDesign.MixedRelativeInformation.relativeInformation"
+#check QubitOracle.AdaptiveDesign.MixedRelativeInformation.relativeInformation
+#print axioms QubitOracle.AdaptiveDesign.MixedRelativeInformation.relativeInformation
+
+#eval IO.println "AUDIT_644_QubitOracle.AdaptiveDesign.MixedRelativeInformation.relative_positive"
+#check QubitOracle.AdaptiveDesign.MixedRelativeInformation.relative_positive
+#print axioms QubitOracle.AdaptiveDesign.MixedRelativeInformation.relative_positive
+
+#eval IO.println "AUDIT_645_QubitOracle.AdaptiveDesign.MixedRelativeInformation.relative_trace"
+#check QubitOracle.AdaptiveDesign.MixedRelativeInformation.relative_trace
+#print axioms QubitOracle.AdaptiveDesign.MixedRelativeInformation.relative_trace
+
+#eval IO.println "AUDIT_646_QubitOracle.AdaptiveDesign.MixedRelativeInformation.eigenvalues_in_unit_interval"
+#check QubitOracle.AdaptiveDesign.MixedRelativeInformation.eigenvalues_in_unit_interval
+#print axioms QubitOracle.AdaptiveDesign.MixedRelativeInformation.eigenvalues_in_unit_interval
+
+#eval IO.println "AUDIT_647_QubitOracle.AdaptiveDesign.MixedRelativeInformation.all_qubit_relative_eigenvalues"
+#check QubitOracle.AdaptiveDesign.MixedRelativeInformation.all_qubit_relative_eigenvalues
+#print axioms QubitOracle.AdaptiveDesign.MixedRelativeInformation.all_qubit_relative_eigenvalues
+
+#eval IO.println "AUDIT_648_QubitOracle.AdaptiveDesign.MultinomialGLSIdentity.covariance_identity"
+#check QubitOracle.AdaptiveDesign.MultinomialGLSIdentity.covariance_identity
+#print axioms QubitOracle.AdaptiveDesign.MultinomialGLSIdentity.covariance_identity
+
+#eval IO.println "AUDIT_649_QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_commutes"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_commutes
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_commutes
+
+#eval IO.println "AUDIT_650_QubitOracle.AdaptiveDesign.PureMatrixController.matrixCommutator"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.matrixCommutator
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.matrixCommutator
+
+#eval IO.println "AUDIT_651_QubitOracle.AdaptiveDesign.PureMatrixController.matrixCommutator_norm_le"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.matrixCommutator_norm_le
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.matrixCommutator_norm_le
+
+#eval IO.println "AUDIT_652_QubitOracle.AdaptiveDesign.PureMatrixController.tangentProjector_doubleCommutator"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.tangentProjector_doubleCommutator
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.tangentProjector_doubleCommutator
+
+#eval IO.println "AUDIT_653_QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_tangent_remainder"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_tangent_remainder
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_tangent_remainder
+
+#eval IO.println "AUDIT_654_QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_expansion"
+#check QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_expansion
+#print axioms QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_expansion
+
+#eval IO.println "AUDIT_655_QubitOracle.AdaptiveDesign.OptionalPVMExploration.library"
+#check QubitOracle.AdaptiveDesign.OptionalPVMExploration.library
+#print axioms QubitOracle.AdaptiveDesign.OptionalPVMExploration.library
+
+#eval IO.println "AUDIT_656_QubitOracle.AdaptiveDesign.OptionalPVMExploration.library_count"
+#check QubitOracle.AdaptiveDesign.OptionalPVMExploration.library_count
+#print axioms QubitOracle.AdaptiveDesign.OptionalPVMExploration.library_count
+
+#eval IO.println "AUDIT_657_QubitOracle.AdaptiveDesign.OptionalPVMExploration.consistency_information"
+#check QubitOracle.AdaptiveDesign.OptionalPVMExploration.consistency_information
+#print axioms QubitOracle.AdaptiveDesign.OptionalPVMExploration.consistency_information
+
+#eval IO.println "AUDIT_658_QubitOracle.AdaptiveDesign.OptionalPVMExploration.held_alignment"
+#check QubitOracle.AdaptiveDesign.OptionalPVMExploration.held_alignment
+#print axioms QubitOracle.AdaptiveDesign.OptionalPVMExploration.held_alignment
+
+#eval IO.println "AUDIT_659_QubitOracle.AdaptiveDesign.P1Weighted.bures_raw_fourthMoment"
+#check QubitOracle.AdaptiveDesign.P1Weighted.bures_raw_fourthMoment
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.bures_raw_fourthMoment
+
+#eval IO.println "AUDIT_660_QubitOracle.AdaptiveDesign.P1Weighted.bures_mean"
+#check QubitOracle.AdaptiveDesign.P1Weighted.bures_mean
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.bures_mean
+
+#eval IO.println "AUDIT_661_QubitOracle.AdaptiveDesign.P1Weighted.radial_projection_error"
+#check QubitOracle.AdaptiveDesign.P1Weighted.radial_projection_error
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.radial_projection_error
+
+#eval IO.println "AUDIT_662_QubitOracle.AdaptiveDesign.P1Weighted.bloch_norm_sq"
+#check QubitOracle.AdaptiveDesign.P1Weighted.bloch_norm_sq
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.bloch_norm_sq
+
+#eval IO.println "AUDIT_663_QubitOracle.AdaptiveDesign.P1Weighted.clip_error_bound"
+#check QubitOracle.AdaptiveDesign.P1Weighted.clip_error_bound
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.clip_error_bound
+
+#eval IO.println "AUDIT_664_QubitOracle.AdaptiveDesign.P1Weighted.controller_norm_le_one"
+#check QubitOracle.AdaptiveDesign.P1Weighted.controller_norm_le_one
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.controller_norm_le_one
+
+#eval IO.println "AUDIT_665_QubitOracle.AdaptiveDesign.P1Weighted.bures_controller_error_bound"
+#check QubitOracle.AdaptiveDesign.P1Weighted.bures_controller_error_bound
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.bures_controller_error_bound
+
+#eval IO.println "AUDIT_666_QubitOracle.AdaptiveDesign.P1Weighted.controller_error_bound"
+#check QubitOracle.AdaptiveDesign.P1Weighted.controller_error_bound
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.controller_error_bound
+
+#eval IO.println "AUDIT_667_QubitOracle.AdaptiveDesign.P1Weighted.controller_fourthMoment"
+#check QubitOracle.AdaptiveDesign.P1Weighted.controller_fourthMoment
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.controller_fourthMoment
+
+#eval IO.println "AUDIT_668_QubitOracle.AdaptiveDesign.P1Weighted.reportedError"
+#check QubitOracle.AdaptiveDesign.P1Weighted.reportedError
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.reportedError
+
+#eval IO.println "AUDIT_669_QubitOracle.AdaptiveDesign.P1Weighted.truth_eventually_in_clip_ball"
+#check QubitOracle.AdaptiveDesign.P1Weighted.truth_eventually_in_clip_ball
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.truth_eventually_in_clip_ball
+
+#eval IO.println "AUDIT_670_QubitOracle.AdaptiveDesign.P1Weighted.frobenius_controller_localization"
+#check QubitOracle.AdaptiveDesign.P1Weighted.frobenius_controller_localization
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.frobenius_controller_localization
+
+#eval IO.println "AUDIT_671_QubitOracle.AdaptiveDesign.P1Weighted.frobenius_weight_local_lower"
+#check QubitOracle.AdaptiveDesign.P1Weighted.frobenius_weight_local_lower
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.frobenius_weight_local_lower
+
+#eval IO.println "AUDIT_672_QubitOracle.AdaptiveDesign.P1Weighted.inverse_weight_bound"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverse_weight_bound
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverse_weight_bound
+
+#eval IO.println "AUDIT_673_QubitOracle.AdaptiveDesign.P1Weighted.optimalValue"
+#check QubitOracle.AdaptiveDesign.P1Weighted.optimalValue
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.optimalValue
+
+#eval IO.println "AUDIT_674_QubitOracle.AdaptiveDesign.P1Weighted.criterion_tendsto"
+#check QubitOracle.AdaptiveDesign.P1Weighted.criterion_tendsto
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.criterion_tendsto
+
+#eval IO.println "AUDIT_675_QubitOracle.AdaptiveDesign.P1Weighted.criteria_positive_batches"
+#check QubitOracle.AdaptiveDesign.P1Weighted.criteria_positive_batches
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.criteria_positive_batches
+
+#eval IO.println "AUDIT_676_QubitOracle.AdaptiveDesign.P1Weighted.residualSum"
+#check QubitOracle.AdaptiveDesign.P1Weighted.residualSum
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.residualSum
+
+#eval IO.println "AUDIT_677_QubitOracle.AdaptiveDesign.P1Weighted.residualSum_bound"
+#check QubitOracle.AdaptiveDesign.P1Weighted.residualSum_bound
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.residualSum_bound
+
+#eval IO.println "AUDIT_678_QubitOracle.AdaptiveDesign.P1Weighted.residualSum_moments"
+#check QubitOracle.AdaptiveDesign.P1Weighted.residualSum_moments
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.residualSum_moments
+
+#eval IO.println "AUDIT_679_QubitOracle.AdaptiveDesign.P1Weighted.residualSum_tail"
+#check QubitOracle.AdaptiveDesign.P1Weighted.residualSum_tail
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.residualSum_tail
+
+#eval IO.println "AUDIT_680_QubitOracle.AdaptiveDesign.P1Weighted.gramDeviation_tail"
+#check QubitOracle.AdaptiveDesign.P1Weighted.gramDeviation_tail
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.gramDeviation_tail
+
+#eval IO.println "AUDIT_681_QubitOracle.AdaptiveDesign.P1Weighted.rawError"
+#check QubitOracle.AdaptiveDesign.P1Weighted.rawError
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.rawError
+
+#eval IO.println "AUDIT_682_QubitOracle.AdaptiveDesign.P1Weighted.ridge_lower"
+#check QubitOracle.AdaptiveDesign.P1Weighted.ridge_lower
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.ridge_lower
+
+#eval IO.println "AUDIT_683_QubitOracle.AdaptiveDesign.P1Weighted.rawError_of_lower"
+#check QubitOracle.AdaptiveDesign.P1Weighted.rawError_of_lower
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.rawError_of_lower
+
+#eval IO.println "AUDIT_684_QubitOracle.AdaptiveDesign.P1Weighted.rawError_global_bound"
+#check QubitOracle.AdaptiveDesign.P1Weighted.rawError_global_bound
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.rawError_global_bound
+
+#eval IO.println "AUDIT_685_QubitOracle.AdaptiveDesign.P1Weighted.gram_lower_from_predicted"
+#check QubitOracle.AdaptiveDesign.P1Weighted.gram_lower_from_predicted
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.gram_lower_from_predicted
+
+#eval IO.println "AUDIT_686_QubitOracle.AdaptiveDesign.P1Weighted.bures_lower_of_noise"
+#check QubitOracle.AdaptiveDesign.P1Weighted.bures_lower_of_noise
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.bures_lower_of_noise
+
+#eval IO.println "AUDIT_687_QubitOracle.AdaptiveDesign.P1Weighted.predictedGram_lower_envelope"
+#check QubitOracle.AdaptiveDesign.P1Weighted.predictedGram_lower_envelope
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.predictedGram_lower_envelope
+
+#eval IO.println "AUDIT_688_QubitOracle.AdaptiveDesign.P1Weighted.frobenius_raw_fourthMoment"
+#check QubitOracle.AdaptiveDesign.P1Weighted.frobenius_raw_fourthMoment
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.frobenius_raw_fourthMoment
+
+#eval IO.println "AUDIT_689_QubitOracle.AdaptiveDesign.P1Weighted.quadratic_continuous"
+#check QubitOracle.AdaptiveDesign.P1Weighted.quadratic_continuous
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.quadratic_continuous
+
+#eval IO.println "AUDIT_690_QubitOracle.AdaptiveDesign.P1Weighted.gaussian_quadratic_memLp"
+#check QubitOracle.AdaptiveDesign.P1Weighted.gaussian_quadratic_memLp
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.gaussian_quadratic_memLp
+
+#eval IO.println "AUDIT_691_QubitOracle.AdaptiveDesign.P1Weighted.gaussian_quadratic_mean"
+#check QubitOracle.AdaptiveDesign.P1Weighted.gaussian_quadratic_mean
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.gaussian_quadratic_mean
+
+#eval IO.println "AUDIT_692_QubitOracle.AdaptiveDesign.P1Weighted.gramDeviation_moments"
+#check QubitOracle.AdaptiveDesign.P1Weighted.gramDeviation_moments
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.gramDeviation_moments
+
+#eval IO.println "AUDIT_693_QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum
+
+#eval IO.println "AUDIT_694_QubitOracle.AdaptiveDesign.P1Weighted.reporting_weight_pos"
+#check QubitOracle.AdaptiveDesign.P1Weighted.reporting_weight_pos
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.reporting_weight_pos
+
+#eval IO.println "AUDIT_695_QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum_nonneg"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum_nonneg
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum_nonneg
+
+#eval IO.println "AUDIT_696_QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum_bound"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum_bound
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum_bound
+
+#eval IO.println "AUDIT_697_QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum_measurable"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum_measurable
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverseAllocationSum_measurable
+
+#eval IO.println "AUDIT_698_QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope"
+#check QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope
+
+#eval IO.println "AUDIT_699_QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope_moments"
+#check QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope_moments
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope_moments
+
+#eval IO.println "AUDIT_700_QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope_positive"
+#check QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope_positive
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope_positive
+
+#eval IO.println "AUDIT_701_QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope_controls"
+#check QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope_controls
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.allocationEnvelope_controls
+
+#eval IO.println "AUDIT_702_QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm
+
+#eval IO.println "AUDIT_703_QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm_of_lower"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm_of_lower
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm_of_lower
+
+#eval IO.println "AUDIT_704_QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm_measurable"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm_measurable
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm_measurable
+
+#eval IO.println "AUDIT_705_QubitOracle.AdaptiveDesign.P1Weighted.inverseGram_moments_of_envelope"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverseGram_moments_of_envelope
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverseGram_moments_of_envelope
+
+#eval IO.println "AUDIT_706_QubitOracle.AdaptiveDesign.P1Weighted.frobenius_inverseGram_moments"
+#check QubitOracle.AdaptiveDesign.P1Weighted.frobenius_inverseGram_moments
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.frobenius_inverseGram_moments
+
+#eval IO.println "AUDIT_707_QubitOracle.AdaptiveDesign.P1Weighted.bures_inverseGram_moments"
+#check QubitOracle.AdaptiveDesign.P1Weighted.bures_inverseGram_moments
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.bures_inverseGram_moments
+
+#eval IO.println "AUDIT_708_QubitOracle.AdaptiveDesign.P1Weighted.inverseGram_real_moments"
+#check QubitOracle.AdaptiveDesign.P1Weighted.inverseGram_real_moments
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.inverseGram_real_moments
+
+#eval IO.println "AUDIT_709_QubitOracle.AdaptiveDesign.P1Weighted.safeguard_variance_scale"
+#check QubitOracle.AdaptiveDesign.P1Weighted.safeguard_variance_scale
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.safeguard_variance_scale
+
+#eval IO.println "AUDIT_710_QubitOracle.AdaptiveDesign.P1Weighted.safeguard_budget_tendsto"
+#check QubitOracle.AdaptiveDesign.P1Weighted.safeguard_budget_tendsto
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.safeguard_budget_tendsto
+
+#eval IO.println "AUDIT_711_QubitOracle.AdaptiveDesign.P1Weighted.raw_localization"
+#check QubitOracle.AdaptiveDesign.P1Weighted.raw_localization
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.raw_localization
+
+#eval IO.println "AUDIT_712_QubitOracle.AdaptiveDesign.P1Weighted.quadratic_smul_vector"
+#check QubitOracle.AdaptiveDesign.P1Weighted.quadratic_smul_vector
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.quadratic_smul_vector
+
+#eval IO.println "AUDIT_713_QubitOracle.AdaptiveDesign.P1Weighted.quadratic_nonneg"
+#check QubitOracle.AdaptiveDesign.P1Weighted.quadratic_nonneg
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.quadratic_nonneg
+
+#eval IO.println "AUDIT_714_QubitOracle.AdaptiveDesign.P1Weighted.physical_quadratic_mean"
+#check QubitOracle.AdaptiveDesign.P1Weighted.physical_quadratic_mean
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.physical_quadratic_mean
+
+#eval IO.println "AUDIT_715_QubitOracle.AdaptiveDesign.P1Weighted.qubitFrobeniusLoss"
+#check QubitOracle.AdaptiveDesign.P1Weighted.qubitFrobeniusLoss
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.qubitFrobeniusLoss
+
+#eval IO.println "AUDIT_716_QubitOracle.AdaptiveDesign.P1Weighted.qubitFrobeniusLoss_eq"
+#check QubitOracle.AdaptiveDesign.P1Weighted.qubitFrobeniusLoss_eq
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.qubitFrobeniusLoss_eq
+
+#eval IO.println "AUDIT_717_QubitOracle.AdaptiveDesign.P1Weighted.frobenius_mean"
+#check QubitOracle.AdaptiveDesign.P1Weighted.frobenius_mean
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.frobenius_mean
+
+#eval IO.println "AUDIT_718_QubitOracle.AdaptiveDesign.P1Weighted.regressionFeature"
+#check QubitOracle.AdaptiveDesign.P1Weighted.regressionFeature
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.regressionFeature
+
+#eval IO.println "AUDIT_719_QubitOracle.AdaptiveDesign.P1Weighted.ridgeObjective"
+#check QubitOracle.AdaptiveDesign.P1Weighted.ridgeObjective
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.ridgeObjective
+
+#eval IO.println "AUDIT_720_QubitOracle.AdaptiveDesign.P1Weighted.vector_inner_bloch"
+#check QubitOracle.AdaptiveDesign.P1Weighted.vector_inner_bloch
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.vector_inner_bloch
+
+#eval IO.println "AUDIT_721_QubitOracle.AdaptiveDesign.P1Weighted.normalMap_regression"
+#check QubitOracle.AdaptiveDesign.P1Weighted.normalMap_regression
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.normalMap_regression
+
+#eval IO.println "AUDIT_722_QubitOracle.AdaptiveDesign.P1Weighted.regression_score"
+#check QubitOracle.AdaptiveDesign.P1Weighted.regression_score
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.regression_score
+
+#eval IO.println "AUDIT_723_QubitOracle.AdaptiveDesign.P1Weighted.estimate_eq_correction"
+#check QubitOracle.AdaptiveDesign.P1Weighted.estimate_eq_correction
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.estimate_eq_correction
+
+#eval IO.println "AUDIT_724_QubitOracle.AdaptiveDesign.P1Weighted.objective_regression"
+#check QubitOracle.AdaptiveDesign.P1Weighted.objective_regression
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.objective_regression
+
+#eval IO.println "AUDIT_725_QubitOracle.AdaptiveDesign.P1Weighted.estimate_unique_minimizer"
+#check QubitOracle.AdaptiveDesign.P1Weighted.estimate_unique_minimizer
+#print axioms QubitOracle.AdaptiveDesign.P1Weighted.estimate_unique_minimizer
+
+#eval IO.println "AUDIT_726_QubitOracle.AdaptiveDesign.P2Adaptive.pureParameter"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.pureParameter
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.pureParameter
+
+#eval IO.println "AUDIT_727_QubitOracle.AdaptiveDesign.P2Adaptive.coercivityConstant"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.coercivityConstant
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.coercivityConstant
+
+#eval IO.println "AUDIT_728_QubitOracle.AdaptiveDesign.P2Adaptive.coercivityConstant_pos"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.coercivityConstant_pos
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.coercivityConstant_pos
+
+#eval IO.println "AUDIT_729_QubitOracle.AdaptiveDesign.P2Adaptive.regressionFrame_coercive"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.regressionFrame_coercive
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.regressionFrame_coercive
+
+#eval IO.println "AUDIT_730_QubitOracle.AdaptiveDesign.P2Adaptive.physicalController"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.physicalController
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.physicalController
+
+#eval IO.println "AUDIT_731_QubitOracle.AdaptiveDesign.P2Adaptive.adaptiveProtocol"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.adaptiveProtocol
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.adaptiveProtocol
+
+#eval IO.println "AUDIT_732_QubitOracle.AdaptiveDesign.P2Adaptive.actualState"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.actualState
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.actualState
+
+#eval IO.println "AUDIT_733_QubitOracle.AdaptiveDesign.P2Adaptive.rawEstimator"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.rawEstimator
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.rawEstimator
+
+#eval IO.println "AUDIT_734_QubitOracle.AdaptiveDesign.P2Adaptive.stateEstimator"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.stateEstimator
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.stateEstimator
+
+#eval IO.println "AUDIT_735_QubitOracle.AdaptiveDesign.P2Adaptive.stateEstimator_physical"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.stateEstimator_physical
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.stateEstimator_physical
+
+#eval IO.println "AUDIT_736_QubitOracle.AdaptiveDesign.P2Adaptive.measurementFrame"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.measurementFrame
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.measurementFrame
+
+#eval IO.println "AUDIT_737_QubitOracle.AdaptiveDesign.P2Adaptive.measurementFrame_unitary"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.measurementFrame_unitary
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.measurementFrame_unitary
+
+#eval IO.println "AUDIT_738_QubitOracle.AdaptiveDesign.P2Adaptive.measurementFrame_eq_frozenController"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.measurementFrame_eq_frozenController
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.measurementFrame_eq_frozenController
+
+#eval IO.println "AUDIT_739_QubitOracle.AdaptiveDesign.P2Adaptive.rawEstimator_consistent"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.rawEstimator_consistent
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.rawEstimator_consistent
+
+#eval IO.println "AUDIT_740_QubitOracle.AdaptiveDesign.P2Adaptive.trueFrame"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.trueFrame
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.trueFrame
+
+#eval IO.println "AUDIT_741_QubitOracle.AdaptiveDesign.P2Adaptive.trueFrame_unitary"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.trueFrame_unitary
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.trueFrame_unitary
+
+#eval IO.println "AUDIT_742_QubitOracle.AdaptiveDesign.P2Adaptive.trueFrame_projector"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.trueFrame_projector
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.trueFrame_projector
+
+#eval IO.println "AUDIT_743_QubitOracle.AdaptiveDesign.P2Adaptive.designFisher"
+#check QubitOracle.AdaptiveDesign.P2Adaptive.designFisher
+#print axioms QubitOracle.AdaptiveDesign.P2Adaptive.designFisher
+
+#eval IO.println "AUDIT_744_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_bound"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_bound
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_bound
+
+#eval IO.println "AUDIT_745_QubitOracle.AdaptiveDesign.TangentGLS.actualProjectorError_norm_bound"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualProjectorError_norm_bound
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualProjectorError_norm_bound
+
+#eval IO.println "AUDIT_746_QubitOracle.AdaptiveDesign.POVMEstimatorMoments.raw_uniformMoment"
+#check QubitOracle.AdaptiveDesign.POVMEstimatorMoments.raw_uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.POVMEstimatorMoments.raw_uniformMoment
+
+#eval IO.println "AUDIT_747_QubitOracle.AdaptiveDesign.POVMEstimatorMoments.preliminary_uniformMoment"
+#check QubitOracle.AdaptiveDesign.POVMEstimatorMoments.preliminary_uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.POVMEstimatorMoments.preliminary_uniformMoment
+
+#eval IO.println "AUDIT_748_QubitOracle.AdaptiveDesign.POVMEstimatorMoments.score_uniformMoment"
+#check QubitOracle.AdaptiveDesign.POVMEstimatorMoments.score_uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.POVMEstimatorMoments.score_uniformMoment
+
+#eval IO.println "AUDIT_749_QubitOracle.AdaptiveDesign.POVMEstimatorMoments.correction_uniformMoment"
+#check QubitOracle.AdaptiveDesign.POVMEstimatorMoments.correction_uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.POVMEstimatorMoments.correction_uniformMoment
+
+#eval IO.println "AUDIT_750_QubitOracle.AdaptiveDesign.POVMEstimatorMoments.corrected_uniformMoment"
+#check QubitOracle.AdaptiveDesign.POVMEstimatorMoments.corrected_uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.POVMEstimatorMoments.corrected_uniformMoment
+
+#eval IO.println "AUDIT_751_QubitOracle.AdaptiveDesign.PVMPilotGLS.scoreSum_average_zero"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.scoreSum_average_zero
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.scoreSum_average_zero
+
+#eval IO.println "AUDIT_752_QubitOracle.AdaptiveDesign.PVMPilotGLS.normalRemainder_average_zero"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.normalRemainder_average_zero
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.normalRemainder_average_zero
+
+#eval IO.println "AUDIT_753_QubitOracle.AdaptiveDesign.PVMPilotGLS.correctedDelta_consistent"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.correctedDelta_consistent
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.correctedDelta_consistent
+
+#eval IO.println "AUDIT_754_QubitOracle.AdaptiveDesign.PVMPilotGLS.perturbation_norm_bound"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.perturbation_norm_bound
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.perturbation_norm_bound
+
+#eval IO.println "AUDIT_755_QubitOracle.AdaptiveDesign.PVMPilotGLS.recordOperator"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.recordOperator
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.recordOperator
+
+#eval IO.println "AUDIT_756_QubitOracle.AdaptiveDesign.PVMPilotGLS.recordOperatorError"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.recordOperatorError
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.recordOperatorError
+
+#eval IO.println "AUDIT_757_QubitOracle.AdaptiveDesign.PVMPilotGLS.recordOperator_tangent"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.recordOperator_tangent
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.recordOperator_tangent
+
+#eval IO.println "AUDIT_758_QubitOracle.AdaptiveDesign.PVMPilotGLS.recordOperator_projection"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.recordOperator_projection
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.recordOperator_projection
+
+#eval IO.println "AUDIT_759_QubitOracle.AdaptiveDesign.PVMPilotGLS.tangentError"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.tangentError
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.tangentError
+
+#eval IO.println "AUDIT_760_QubitOracle.AdaptiveDesign.PVMPilotGLS.normalRemainder"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.normalRemainder
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.normalRemainder
+
+#eval IO.println "AUDIT_761_QubitOracle.AdaptiveDesign.PVMPilotGLS.normalRemainder_bound"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.normalRemainder_bound
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.normalRemainder_bound
+
+#eval IO.println "AUDIT_762_QubitOracle.AdaptiveDesign.PVMPilotGLS.scoreSum_records"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.scoreSum_records
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.scoreSum_records
+
+#eval IO.println "AUDIT_763_QubitOracle.AdaptiveDesign.PVMPilotGLS.scaled_ambient_equation"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.scaled_ambient_equation
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.scaled_ambient_equation
+
+#eval IO.println "AUDIT_764_QubitOracle.AdaptiveDesign.PVMPilotGLS.fittedProjector_limit"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.fittedProjector_limit
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.fittedProjector_limit
+
+#eval IO.println "AUDIT_765_QubitOracle.AdaptiveDesign.PVMPilotGLS.operatorError_limit"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.operatorError_limit
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.operatorError_limit
+
+#eval IO.println "AUDIT_766_QubitOracle.AdaptiveDesign.PVMPilotGLS.operatorError_zero"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.operatorError_zero
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.operatorError_zero
+
+#eval IO.println "AUDIT_767_QubitOracle.AdaptiveDesign.PVMPilotGLS.projectedScore"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.projectedScore
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.projectedScore
+
+#eval IO.println "AUDIT_768_QubitOracle.AdaptiveDesign.PVMPilotGLS.linearError"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.linearError
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.linearError
+
+#eval IO.println "AUDIT_769_QubitOracle.AdaptiveDesign.PVMPilotGLS.forcing"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.forcing
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.forcing
+
+#eval IO.println "AUDIT_770_QubitOracle.AdaptiveDesign.PVMPilotGLS.linearError_equation"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.linearError_equation
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.linearError_equation
+
+#eval IO.println "AUDIT_771_QubitOracle.AdaptiveDesign.PVMPilotGLS.linearError_measurable"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.linearError_measurable
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.linearError_measurable
+
+#eval IO.println "AUDIT_772_QubitOracle.AdaptiveDesign.PVMPilotGLS.projectedScore_rootTight"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.projectedScore_rootTight
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.projectedScore_rootTight
+
+#eval IO.println "AUDIT_773_QubitOracle.AdaptiveDesign.PVMPilotGLS.scaled_normalRemainder_zero"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.scaled_normalRemainder_zero
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.scaled_normalRemainder_zero
+
+#eval IO.println "AUDIT_774_QubitOracle.AdaptiveDesign.PVMPilotGLS.forcing_zero"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.forcing_zero
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.forcing_zero
+
+#eval IO.println "AUDIT_775_QubitOracle.AdaptiveDesign.PVMPilotGLS.linearError_zero"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.linearError_zero
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.linearError_zero
+
+#eval IO.println "AUDIT_776_QubitOracle.AdaptiveDesign.PVMPilotGLS.score_uniformMoment"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.score_uniformMoment
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.score_uniformMoment
+
+#eval IO.println "AUDIT_777_QubitOracle.AdaptiveDesign.PVMPilotGLS.pilot_quadratic_fourthMoment"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.pilot_quadratic_fourthMoment
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.pilot_quadratic_fourthMoment
+
+#eval IO.println "AUDIT_778_QubitOracle.AdaptiveDesign.PVMPilotGLS.corrected_fourthMoment"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.corrected_fourthMoment
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.corrected_fourthMoment
+
+#eval IO.println "AUDIT_779_QubitOracle.AdaptiveDesign.PVMPilotGLS.deltaVector"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.deltaVector
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.deltaVector
+
+#eval IO.println "AUDIT_780_QubitOracle.AdaptiveDesign.PVMPilotGLS.projectorError"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.projectorError
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.projectorError
+
+#eval IO.println "AUDIT_781_QubitOracle.AdaptiveDesign.PVMPilotGLS.delta_quarterRate"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.delta_quarterRate
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.delta_quarterRate
+
+#eval IO.println "AUDIT_782_QubitOracle.AdaptiveDesign.PVMPilotGLS.delta_square_rootRate"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.delta_square_rootRate
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.delta_square_rootRate
+
+#eval IO.println "AUDIT_783_QubitOracle.AdaptiveDesign.PVMPilotGLS.ambientScore_rootTight"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.ambientScore_rootTight
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.ambientScore_rootTight
+
+#eval IO.println "AUDIT_784_QubitOracle.AdaptiveDesign.PVMFrameProjection.basisEffect_orthonormal"
+#check QubitOracle.AdaptiveDesign.PVMFrameProjection.basisEffect_orthonormal
+#print axioms QubitOracle.AdaptiveDesign.PVMFrameProjection.basisEffect_orthonormal
+
+#eval IO.println "AUDIT_785_QubitOracle.AdaptiveDesign.PVMFrameProjection.frame_norm_le"
+#check QubitOracle.AdaptiveDesign.PVMFrameProjection.frame_norm_le
+#print axioms QubitOracle.AdaptiveDesign.PVMFrameProjection.frame_norm_le
+
+#eval IO.println "AUDIT_786_QubitOracle.AdaptiveDesign.PVMFrameProjection.frame_operator_norm_le_one"
+#check QubitOracle.AdaptiveDesign.PVMFrameProjection.frame_operator_norm_le_one
+#print axioms QubitOracle.AdaptiveDesign.PVMFrameProjection.frame_operator_norm_le_one
+
+#eval IO.println "AUDIT_787_QubitOracle.AdaptiveDesign.PVMPilotGLS.scoreSum_bound"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.scoreSum_bound
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.scoreSum_bound
+
+#eval IO.println "AUDIT_788_QubitOracle.AdaptiveDesign.PVMPilotGLS.corrected_error_of_coercive"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.corrected_error_of_coercive
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.corrected_error_of_coercive
+
+#eval IO.println "AUDIT_789_QubitOracle.AdaptiveDesign.PVMPilotGLS.conditionalGramSum"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.conditionalGramSum
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.conditionalGramSum
+
+#eval IO.println "AUDIT_790_QubitOracle.AdaptiveDesign.PVMPilotGLS.gram_deviation_concentration"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.gram_deviation_concentration
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.gram_deviation_concentration
+
+#eval IO.println "AUDIT_791_QubitOracle.AdaptiveDesign.PVMPilotGLS.frameParameter_frozen"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.frameParameter_frozen
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.frameParameter_frozen
+
+#eval IO.println "AUDIT_792_QubitOracle.AdaptiveDesign.PVMPilotGLS.lateAlignmentFailure"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.lateAlignmentFailure
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.lateAlignmentFailure
+
+#eval IO.println "AUDIT_793_QubitOracle.AdaptiveDesign.PVMPilotGLS.late_alignment_concentration"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.late_alignment_concentration
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.late_alignment_concentration
+
+#eval IO.println "AUDIT_794_QubitOracle.AdaptiveDesign.PVMPilotGLS.gramFailure"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.gramFailure
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.gramFailure
+
+#eval IO.println "AUDIT_795_QubitOracle.AdaptiveDesign.PVMPilotGLS.gramFailure_rate"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.gramFailure_rate
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.gramFailure_rate
+
+#eval IO.println "AUDIT_796_QubitOracle.AdaptiveDesign.PVMPilotGLS.good_gram_with_rare_failure"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.good_gram_with_rare_failure
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.good_gram_with_rare_failure
+
+#eval IO.println "AUDIT_797_QubitOracle.AdaptiveDesign.PVMPilotGLS.realizedGram_bound"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.realizedGram_bound
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.realizedGram_bound
+
+#eval IO.println "AUDIT_798_QubitOracle.AdaptiveDesign.PVMPilotGLS.last_half_mean_bound"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.last_half_mean_bound
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.last_half_mean_bound
+
+#eval IO.println "AUDIT_799_QubitOracle.AdaptiveDesign.PVMPilotGLS.actual_normal_quadratic"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.actual_normal_quadratic
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.actual_normal_quadratic
+
+#eval IO.println "AUDIT_800_QubitOracle.AdaptiveDesign.PVMPilotGLS.good_gram_parameters"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.good_gram_parameters
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.good_gram_parameters
+
+#eval IO.println "AUDIT_801_QubitOracle.AdaptiveDesign.PVMPilotGLS.exploitationGram"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.exploitationGram
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.exploitationGram
+
+#eval IO.println "AUDIT_802_QubitOracle.AdaptiveDesign.PVMPilotGLS.basisGramOperator_quadratic"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.basisGramOperator_quadratic
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.basisGramOperator_quadratic
+
+#eval IO.println "AUDIT_803_QubitOracle.AdaptiveDesign.PVMPilotGLS.meanGram_nonnegative"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.meanGram_nonnegative
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.meanGram_nonnegative
+
+#eval IO.println "AUDIT_804_QubitOracle.AdaptiveDesign.PVMPilotGLS.meanGram_exploitation_lower"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.meanGram_exploitation_lower
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.meanGram_exploitation_lower
+
+#eval IO.println "AUDIT_805_QubitOracle.AdaptiveDesign.PVMPilotGLS.compress_exploitationGram"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.compress_exploitationGram
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.compress_exploitationGram
+
+#eval IO.println "AUDIT_806_QubitOracle.AdaptiveDesign.PVMPilotGLS.frameParameter"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.frameParameter
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.frameParameter
+
+#eval IO.println "AUDIT_807_QubitOracle.AdaptiveDesign.PVMPilotGLS.frameParameter_overlap"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.frameParameter_overlap
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.frameParameter_overlap
+
+#eval IO.println "AUDIT_808_QubitOracle.AdaptiveDesign.PVMPilotGLS.frameParameter_overlap_error"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.frameParameter_overlap_error
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.frameParameter_overlap_error
+
+#eval IO.println "AUDIT_809_QubitOracle.AdaptiveDesign.PVMPilotGLS.local_exploitationGram"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.local_exploitationGram
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.local_exploitationGram
+
+#eval IO.println "AUDIT_810_QubitOracle.AdaptiveDesign.PVMPilotGLS.quadratic_opNorm_bound"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.quadratic_opNorm_bound
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.quadratic_opNorm_bound
+
+#eval IO.println "AUDIT_811_QubitOracle.AdaptiveDesign.PVMPilotGLS.compress_tangent_inner"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.compress_tangent_inner
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.compress_tangent_inner
+
+#eval IO.println "AUDIT_812_QubitOracle.AdaptiveDesign.PVMPilotGLS.local_meanGram_coercive"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.local_meanGram_coercive
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.local_meanGram_coercive
+
+#eval IO.println "AUDIT_813_QubitOracle.AdaptiveDesign.PVMPilotGLS.quadratic_difference_bound"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.quadratic_difference_bound
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.quadratic_difference_bound
+
+#eval IO.println "AUDIT_814_QubitOracle.AdaptiveDesign.PVMPilotGLS.nearby_tangent_coercivity"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.nearby_tangent_coercivity
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.nearby_tangent_coercivity
+
+#eval IO.println "AUDIT_815_QubitOracle.AdaptiveDesign.PVMPilotGLS.trueCoordinates_actual"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.trueCoordinates_actual
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.trueCoordinates_actual
+
+#eval IO.println "AUDIT_816_QubitOracle.AdaptiveDesign.PVMPilotGLS.corrected_coordinates_measurable"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.corrected_coordinates_measurable
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.corrected_coordinates_measurable
+
+#eval IO.println "AUDIT_817_QubitOracle.AdaptiveDesign.PVMPilotGLS.corrected_coordinates_minus_score_zero"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.corrected_coordinates_minus_score_zero
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.corrected_coordinates_minus_score_zero
+
+#eval IO.println "AUDIT_818_QubitOracle.AdaptiveDesign.PVMPilotConcentration.noise"
+#check QubitOracle.AdaptiveDesign.PVMPilotConcentration.noise
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotConcentration.noise
+
+#eval IO.println "AUDIT_819_QubitOracle.AdaptiveDesign.PVMPilotConcentration.preliminary"
+#check QubitOracle.AdaptiveDesign.PVMPilotConcentration.preliminary
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotConcentration.preliminary
+
+#eval IO.println "AUDIT_820_QubitOracle.AdaptiveDesign.PVMPilotConcentration.preliminary_all"
+#check QubitOracle.AdaptiveDesign.PVMPilotConcentration.preliminary_all
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotConcentration.preliminary_all
+
+#eval IO.println "AUDIT_821_QubitOracle.AdaptiveDesign.PVMPilotHigherMoments.noise"
+#check QubitOracle.AdaptiveDesign.PVMPilotHigherMoments.noise
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotHigherMoments.noise
+
+#eval IO.println "AUDIT_822_QubitOracle.AdaptiveDesign.PVMPilotHigherMoments.raw"
+#check QubitOracle.AdaptiveDesign.PVMPilotHigherMoments.raw
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotHigherMoments.raw
+
+#eval IO.println "AUDIT_823_QubitOracle.AdaptiveDesign.PVMPilotHigherMoments.preliminary"
+#check QubitOracle.AdaptiveDesign.PVMPilotHigherMoments.preliminary
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotHigherMoments.preliminary
+
+#eval IO.println "AUDIT_824_QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pilotNoise"
+#check QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pilotNoise
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pilotNoise
+
+#eval IO.println "AUDIT_825_QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pilotNoise_bound"
+#check QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pilotNoise_bound
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pilotNoise_bound
+
+#eval IO.println "AUDIT_826_QubitOracle.AdaptiveDesign.PVMPilotAdaptive.raw_error_bound"
+#check QubitOracle.AdaptiveDesign.PVMPilotAdaptive.raw_error_bound
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotAdaptive.raw_error_bound
+
+#eval IO.println "AUDIT_827_QubitOracle.AdaptiveDesign.PVMPilotAdaptive.raw_error_square_le"
+#check QubitOracle.AdaptiveDesign.PVMPilotAdaptive.raw_error_square_le
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotAdaptive.raw_error_square_le
+
+#eval IO.println "AUDIT_828_QubitOracle.AdaptiveDesign.PVMPilotAdaptive.raw_error_square_integrable"
+#check QubitOracle.AdaptiveDesign.PVMPilotAdaptive.raw_error_square_integrable
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotAdaptive.raw_error_square_integrable
+
+#eval IO.println "AUDIT_829_QubitOracle.AdaptiveDesign.PVMPilotAdaptive.noiseMomentConstant"
+#check QubitOracle.AdaptiveDesign.PVMPilotAdaptive.noiseMomentConstant
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotAdaptive.noiseMomentConstant
+
+#eval IO.println "AUDIT_830_QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pilotNoise_secondMoment"
+#check QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pilotNoise_secondMoment
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pilotNoise_secondMoment
+
+#eval IO.println "AUDIT_831_QubitOracle.AdaptiveDesign.PVMPilotGLS.basis_probability_true"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.basis_probability_true
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.basis_probability_true
+
+#eval IO.println "AUDIT_832_QubitOracle.AdaptiveDesign.PVMPilotGLS.basis_coordinate"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.basis_coordinate
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.basis_coordinate
+
+#eval IO.println "AUDIT_833_QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateGram"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateGram
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateGram
+
+#eval IO.println "AUDIT_834_QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateMoment"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateMoment
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateMoment
+
+#eval IO.println "AUDIT_835_QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateGram_mixture"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateGram_mixture
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateGram_mixture
+
+#eval IO.println "AUDIT_836_QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateMoment_mixture"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateMoment_mixture
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateMoment_mixture
+
+#eval IO.println "AUDIT_837_QubitOracle.AdaptiveDesign.PVMPilotGLS.basis_projectedGram"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.basis_projectedGram
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.basis_projectedGram
+
+#eval IO.println "AUDIT_838_QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pilotObjective"
+#check QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pilotObjective
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pilotObjective
+
+#eval IO.println "AUDIT_839_QubitOracle.AdaptiveDesign.PVMPilotAdaptive.frame_inner_symmetric"
+#check QubitOracle.AdaptiveDesign.PVMPilotAdaptive.frame_inner_symmetric
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotAdaptive.frame_inner_symmetric
+
+#eval IO.println "AUDIT_840_QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pilotObjective_expansion"
+#check QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pilotObjective_expansion
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pilotObjective_expansion
+
+#eval IO.println "AUDIT_841_QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pilot_unique_minimizer"
+#check QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pilot_unique_minimizer
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotAdaptive.pilot_unique_minimizer
+
+#eval IO.println "AUDIT_842_QubitOracle.AdaptiveDesign.PVMPilotGLS.preliminary_square_integrable"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.preliminary_square_integrable
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.preliminary_square_integrable
+
+#eval IO.println "AUDIT_843_QubitOracle.AdaptiveDesign.PVMPilotGLS.Operator"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.Operator
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.Operator
+
+#eval IO.println "AUDIT_844_QubitOracle.AdaptiveDesign.PVMPilotGLS.basisGramOperator"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.basisGramOperator
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.basisGramOperator
+
+#eval IO.println "AUDIT_845_QubitOracle.AdaptiveDesign.PVMPilotGLS.meanGram"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.meanGram
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.meanGram
+
+#eval IO.println "AUDIT_846_QubitOracle.AdaptiveDesign.PVMPilotGLS.gramNoise"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.gramNoise
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.gramNoise
+
+#eval IO.println "AUDIT_847_QubitOracle.AdaptiveDesign.PVMPilotGLS.gramBound"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.gramBound
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.gramBound
+
+#eval IO.println "AUDIT_848_QubitOracle.AdaptiveDesign.PVMPilotGLS.gramBound_nonnegative"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.gramBound_nonnegative
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.gramBound_nonnegative
+
+#eval IO.println "AUDIT_849_QubitOracle.AdaptiveDesign.PVMPilotGLS.basisGramOperator_bound"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.basisGramOperator_bound
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.basisGramOperator_bound
+
+#eval IO.println "AUDIT_850_QubitOracle.AdaptiveDesign.PVMPilotGLS.meanGram_bound"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.meanGram_bound
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.meanGram_bound
+
+#eval IO.println "AUDIT_851_QubitOracle.AdaptiveDesign.PVMPilotGLS.gramNoise_bound"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.gramNoise_bound
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.gramNoise_bound
+
+#eval IO.println "AUDIT_852_QubitOracle.AdaptiveDesign.PVMPilotGLS.gramNoise_mean"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.gramNoise_mean
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.gramNoise_mean
+
+#eval IO.println "AUDIT_853_QubitOracle.AdaptiveDesign.PVMPilotGLS.realizedGram"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.realizedGram
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.realizedGram
+
+#eval IO.println "AUDIT_854_QubitOracle.AdaptiveDesign.PVMPilotGLS.compress"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.compress
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.compress
+
+#eval IO.println "AUDIT_855_QubitOracle.AdaptiveDesign.PVMPilotGLS.informationLift_sum_smul"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.informationLift_sum_smul
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.informationLift_sum_smul
+
+#eval IO.println "AUDIT_856_QubitOracle.AdaptiveDesign.PVMPilotGLS.compress_meanGram"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.compress_meanGram
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.compress_meanGram
+
+#eval IO.println "AUDIT_857_QubitOracle.AdaptiveDesign.PVMPilotGLS.informationLift_scalar"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.informationLift_scalar
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.informationLift_scalar
+
+#eval IO.println "AUDIT_858_QubitOracle.AdaptiveDesign.PVMPilotGLS.informationLift_gram_target"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.informationLift_gram_target
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.informationLift_gram_target
+
+#eval IO.println "AUDIT_859_QubitOracle.AdaptiveDesign.PVMPilotGLS.realizedGram_centered_ae"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.realizedGram_centered_ae
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.realizedGram_centered_ae
+
+#eval IO.println "AUDIT_860_QubitOracle.AdaptiveDesign.PVMPilotGLS.recordInformation_eq_realized"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.recordInformation_eq_realized
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.recordInformation_eq_realized
+
+#eval IO.println "AUDIT_861_QubitOracle.AdaptiveDesign.PVMPilotGLS.fittedGram_limit"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.fittedGram_limit
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.fittedGram_limit
+
+#eval IO.println "AUDIT_862_QubitOracle.AdaptiveDesign.PVMSharpMoments.basisEffect_norm"
+#check QubitOracle.AdaptiveDesign.PVMSharpMoments.basisEffect_norm
+#print axioms QubitOracle.AdaptiveDesign.PVMSharpMoments.basisEffect_norm
+
+#eval IO.println "AUDIT_863_QubitOracle.AdaptiveDesign.PVMSharpMoments.response_norm_square"
+#check QubitOracle.AdaptiveDesign.PVMSharpMoments.response_norm_square
+#print axioms QubitOracle.AdaptiveDesign.PVMSharpMoments.response_norm_square
+
+#eval IO.println "AUDIT_864_QubitOracle.AdaptiveDesign.PVMSharpMoments.noise_norm_square"
+#check QubitOracle.AdaptiveDesign.PVMSharpMoments.noise_norm_square
+#print axioms QubitOracle.AdaptiveDesign.PVMSharpMoments.noise_norm_square
+
+#eval IO.println "AUDIT_865_QubitOracle.AdaptiveDesign.PVMSharpMoments.noise_norm_square_le"
+#check QubitOracle.AdaptiveDesign.PVMSharpMoments.noise_norm_square_le
+#print axioms QubitOracle.AdaptiveDesign.PVMSharpMoments.noise_norm_square_le
+
+#eval IO.println "AUDIT_866_QubitOracle.AdaptiveDesign.PVMSharpPilot.budget"
+#check QubitOracle.AdaptiveDesign.PVMSharpPilot.budget
+#print axioms QubitOracle.AdaptiveDesign.PVMSharpPilot.budget
+
+#eval IO.println "AUDIT_867_QubitOracle.AdaptiveDesign.PVMSharpPilot.budget_nonnegative"
+#check QubitOracle.AdaptiveDesign.PVMSharpPilot.budget_nonnegative
+#print axioms QubitOracle.AdaptiveDesign.PVMSharpPilot.budget_nonnegative
+
+#eval IO.println "AUDIT_868_QubitOracle.AdaptiveDesign.PVMSharpPilot.gram_coercive"
+#check QubitOracle.AdaptiveDesign.PVMSharpPilot.gram_coercive
+#print axioms QubitOracle.AdaptiveDesign.PVMSharpPilot.gram_coercive
+
+#eval IO.println "AUDIT_869_QubitOracle.AdaptiveDesign.PVMSharpPilot.pilotNoise_secondMoment_sharp"
+#check QubitOracle.AdaptiveDesign.PVMSharpPilot.pilotNoise_secondMoment_sharp
+#print axioms QubitOracle.AdaptiveDesign.PVMSharpPilot.pilotNoise_secondMoment_sharp
+
+#eval IO.println "AUDIT_870_QubitOracle.AdaptiveDesign.PVMSharpPilot.raw_error_bound_sharp"
+#check QubitOracle.AdaptiveDesign.PVMSharpPilot.raw_error_bound_sharp
+#print axioms QubitOracle.AdaptiveDesign.PVMSharpPilot.raw_error_bound_sharp
+
+#eval IO.println "AUDIT_871_QubitOracle.AdaptiveDesign.PVMSharpPilot.rawEstimator_meanSquare_sharp"
+#check QubitOracle.AdaptiveDesign.PVMSharpPilot.rawEstimator_meanSquare_sharp
+#print axioms QubitOracle.AdaptiveDesign.PVMSharpPilot.rawEstimator_meanSquare_sharp
+
+#eval IO.println "AUDIT_872_QubitOracle.AdaptiveDesign.PVMSharpPilot.pure_rawEstimator_meanSquare"
+#check QubitOracle.AdaptiveDesign.PVMSharpPilot.pure_rawEstimator_meanSquare
+#print axioms QubitOracle.AdaptiveDesign.PVMSharpPilot.pure_rawEstimator_meanSquare
+
+#eval IO.println "AUDIT_873_QubitOracle.AdaptiveDesign.PVMUniformMoments.basisGram"
+#check QubitOracle.AdaptiveDesign.PVMUniformMoments.basisGram
+#print axioms QubitOracle.AdaptiveDesign.PVMUniformMoments.basisGram
+
+#eval IO.println "AUDIT_874_QubitOracle.AdaptiveDesign.PVMUniformMoments.basisMoment"
+#check QubitOracle.AdaptiveDesign.PVMUniformMoments.basisMoment
+#print axioms QubitOracle.AdaptiveDesign.PVMUniformMoments.basisMoment
+
+#eval IO.println "AUDIT_875_QubitOracle.AdaptiveDesign.PVMUniformMoments.gradient_sum"
+#check QubitOracle.AdaptiveDesign.PVMUniformMoments.gradient_sum
+#print axioms QubitOracle.AdaptiveDesign.PVMUniformMoments.gradient_sum
+
+#eval IO.println "AUDIT_876_QubitOracle.AdaptiveDesign.PVMUniformMoments.basisGram_eq_fisher"
+#check QubitOracle.AdaptiveDesign.PVMUniformMoments.basisGram_eq_fisher
+#print axioms QubitOracle.AdaptiveDesign.PVMUniformMoments.basisGram_eq_fisher
+
+#eval IO.println "AUDIT_877_QubitOracle.AdaptiveDesign.PVMUniformMoments.basisMoment_eq_gram"
+#check QubitOracle.AdaptiveDesign.PVMUniformMoments.basisMoment_eq_gram
+#print axioms QubitOracle.AdaptiveDesign.PVMUniformMoments.basisMoment_eq_gram
+
+#eval IO.println "AUDIT_878_QubitOracle.AdaptiveDesign.PVMUniformMoments.stageGram"
+#check QubitOracle.AdaptiveDesign.PVMUniformMoments.stageGram
+#print axioms QubitOracle.AdaptiveDesign.PVMUniformMoments.stageGram
+
+#eval IO.println "AUDIT_879_QubitOracle.AdaptiveDesign.PVMUniformMoments.stageMoment"
+#check QubitOracle.AdaptiveDesign.PVMUniformMoments.stageMoment
+#print axioms QubitOracle.AdaptiveDesign.PVMUniformMoments.stageMoment
+
+#eval IO.println "AUDIT_880_QubitOracle.AdaptiveDesign.PVMUniformMoments.basisGram_continuous"
+#check QubitOracle.AdaptiveDesign.PVMUniformMoments.basisGram_continuous
+#print axioms QubitOracle.AdaptiveDesign.PVMUniformMoments.basisGram_continuous
+
+#eval IO.println "AUDIT_881_QubitOracle.AdaptiveDesign.PVMUniformMoments.basisMoment_continuous"
+#check QubitOracle.AdaptiveDesign.PVMUniformMoments.basisMoment_continuous
+#print axioms QubitOracle.AdaptiveDesign.PVMUniformMoments.basisMoment_continuous
+
+#eval IO.println "AUDIT_882_QubitOracle.AdaptiveDesign.PVMUniformMoments.stageGram_continuous"
+#check QubitOracle.AdaptiveDesign.PVMUniformMoments.stageGram_continuous
+#print axioms QubitOracle.AdaptiveDesign.PVMUniformMoments.stageGram_continuous
+
+#eval IO.println "AUDIT_883_QubitOracle.AdaptiveDesign.PVMUniformMoments.stageMoment_continuous"
+#check QubitOracle.AdaptiveDesign.PVMUniformMoments.stageMoment_continuous
+#print axioms QubitOracle.AdaptiveDesign.PVMUniformMoments.stageMoment_continuous
+
+#eval IO.println "AUDIT_884_QubitOracle.AdaptiveDesign.PVMUniformMoments.stage_moments_tendsto"
+#check QubitOracle.AdaptiveDesign.PVMUniformMoments.stage_moments_tendsto
+#print axioms QubitOracle.AdaptiveDesign.PVMUniformMoments.stage_moments_tendsto
+
+#eval IO.println "AUDIT_885_QubitOracle.AdaptiveDesign.PVMPilotGLS.basisProbability_le_one"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.basisProbability_le_one
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.basisProbability_le_one
+
+#eval IO.println "AUDIT_886_QubitOracle.AdaptiveDesign.PVMPilotGLS.scoreResponse_unweighted"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.scoreResponse_unweighted
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.scoreResponse_unweighted
+
+#eval IO.println "AUDIT_887_QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateScore"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateScore
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateScore
+
+#eval IO.println "AUDIT_888_QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateScore_mean"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateScore_mean
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateScore_mean
+
+#eval IO.println "AUDIT_889_QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateScore_bound"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateScore_bound
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateScore_bound
+
+#eval IO.println "AUDIT_890_QubitOracle.AdaptiveDesign.PVMPilotGLS.quadratic_smul"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.quadratic_smul
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.quadratic_smul
+
+#eval IO.println "AUDIT_891_QubitOracle.AdaptiveDesign.PVMPilotGLS.quadratic_sum"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.quadratic_sum
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.quadratic_sum
+
+#eval IO.println "AUDIT_892_QubitOracle.AdaptiveDesign.PVMPilotGLS.quadratic_moment"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.quadratic_moment
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.quadratic_moment
+
+#eval IO.println "AUDIT_893_QubitOracle.AdaptiveDesign.PVMPilotGLS.basisMoment_quadratic"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.basisMoment_quadratic
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.basisMoment_quadratic
+
+#eval IO.println "AUDIT_894_QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateScore_secondMoment"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateScore_secondMoment
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.coordinateScore_secondMoment
+
+#eval IO.println "AUDIT_895_QubitOracle.AdaptiveDesign.PVMPilotGLS.actual_score_secondMoment_limit"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.actual_score_secondMoment_limit
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.actual_score_secondMoment_limit
+
+#eval IO.println "AUDIT_896_QubitOracle.AdaptiveDesign.PVMPilotGLS.shifted_score_clt"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.shifted_score_clt
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.shifted_score_clt
+
+#eval IO.println "AUDIT_897_QubitOracle.AdaptiveDesign.PVMPilotGLS.fullScore"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.fullScore
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.fullScore
+
+#eval IO.println "AUDIT_898_QubitOracle.AdaptiveDesign.PVMPilotGLS.fullScore_measurable"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.fullScore_measurable
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.fullScore_measurable
+
+#eval IO.println "AUDIT_899_QubitOracle.AdaptiveDesign.PVMPilotGLS.fullScore_clt"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.fullScore_clt
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.fullScore_clt
+
+#eval IO.println "AUDIT_900_QubitOracle.AdaptiveDesign.PVMPilotGLS.fullScore_eq_coordinate"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.fullScore_eq_coordinate
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.fullScore_eq_coordinate
+
+#eval IO.println "AUDIT_901_QubitOracle.AdaptiveDesign.PVMPilotSchedule.power_mass_ratio"
+#check QubitOracle.AdaptiveDesign.PVMPilotSchedule.power_mass_ratio
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotSchedule.power_mass_ratio
+
+#eval IO.println "AUDIT_902_QubitOracle.AdaptiveDesign.PVMPilotSchedule.powerSchedule"
+#check QubitOracle.AdaptiveDesign.PVMPilotSchedule.powerSchedule
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotSchedule.powerSchedule
+
+#eval IO.println "AUDIT_903_QubitOracle.AdaptiveDesign.PVMPilotSchedule.powerSchedule_oneStep"
+#check QubitOracle.AdaptiveDesign.PVMPilotSchedule.powerSchedule_oneStep
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotSchedule.powerSchedule_oneStep
+
+#eval IO.println "AUDIT_904_QubitOracle.AdaptiveDesign.TangentGLS.tangentSpace_eq_of_projector_eq"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentSpace_eq_of_projector_eq
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentSpace_eq_of_projector_eq
+
+#eval IO.println "AUDIT_905_QubitOracle.AdaptiveDesign.TangentGLS.correctionOnSubmodule"
+#check QubitOracle.AdaptiveDesign.TangentGLS.correctionOnSubmodule
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.correctionOnSubmodule
+
+#eval IO.println "AUDIT_906_QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_phase_invariant"
+#check QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_phase_invariant
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_phase_invariant
+
+#eval IO.println "AUDIT_907_QubitOracle.AdaptiveDesign.TangentGLS.correctedState_phase_invariant"
+#check QubitOracle.AdaptiveDesign.TangentGLS.correctedState_phase_invariant
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.correctedState_phase_invariant
+
+#eval IO.println "AUDIT_908_QubitOracle.AdaptiveDesign.PhasePair.frameOperator_transport"
+#check QubitOracle.AdaptiveDesign.PhasePair.frameOperator_transport
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.frameOperator_transport
+
+#eval IO.println "AUDIT_909_QubitOracle.AdaptiveDesign.PhasePair.paired_frame_identity"
+#check QubitOracle.AdaptiveDesign.PhasePair.paired_frame_identity
+#print axioms QubitOracle.AdaptiveDesign.PhasePair.paired_frame_identity
+
+#eval IO.println "AUDIT_910_QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.qubit_bures"
+#check QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.qubit_bures
+#print axioms QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.qubit_bures
+
+#eval IO.println "AUDIT_911_QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.controller_in_ball"
+#check QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.controller_in_ball
+#print axioms QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.controller_in_ball
+
+#eval IO.println "AUDIT_912_QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.mixed_bures_mean"
+#check QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.mixed_bures_mean
+#print axioms QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.mixed_bures_mean
+
+#eval IO.println "AUDIT_913_QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.pureDensity"
+#check QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.pureDensity
+#print axioms QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.pureDensity
+
+#eval IO.println "AUDIT_914_QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.pure_bures_loss"
+#check QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.pure_bures_loss
+#print axioms QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.pure_bures_loss
+
+#eval IO.println "AUDIT_915_QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.povm_bures_mean"
+#check QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.povm_bures_mean
+#print axioms QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.povm_bures_mean
+
+#eval IO.println "AUDIT_916_QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.phasePair_bures_mean"
+#check QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.phasePair_bures_mean
+#print axioms QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.phasePair_bures_mean
+
+#eval IO.println "AUDIT_917_QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.pvm_bures_mean"
+#check QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.pvm_bures_mean
+#print axioms QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.pvm_bures_mean
+
+#eval IO.println "AUDIT_918_QubitOracle.AdaptiveDesign.PhysicalModelCharacterization.qubit_positive_iff"
+#check QubitOracle.AdaptiveDesign.PhysicalModelCharacterization.qubit_positive_iff
+#print axioms QubitOracle.AdaptiveDesign.PhysicalModelCharacterization.qubit_positive_iff
+
+#eval IO.println "AUDIT_919_QubitOracle.AdaptiveDesign.PhysicalModelCharacterization.physical_bloch_coordinates_in_ball"
+#check QubitOracle.AdaptiveDesign.PhysicalModelCharacterization.physical_bloch_coordinates_in_ball
+#print axioms QubitOracle.AdaptiveDesign.PhysicalModelCharacterization.physical_bloch_coordinates_in_ball
+
+#eval IO.println "AUDIT_920_QubitOracle.AdaptiveDesign.PhysicalModelCharacterization.hermitian_projector_is_pure"
+#check QubitOracle.AdaptiveDesign.PhysicalModelCharacterization.hermitian_projector_is_pure
+#print axioms QubitOracle.AdaptiveDesign.PhysicalModelCharacterization.hermitian_projector_is_pure
+
+#eval IO.println "AUDIT_921_QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.positive_norm_sq_le_trace_sq"
+#check QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.positive_norm_sq_le_trace_sq
+#print axioms QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.positive_norm_sq_le_trace_sq
+
+#eval IO.println "AUDIT_922_QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.physical_norm_le_one"
+#check QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.physical_norm_le_one
+#print axioms QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.physical_norm_le_one
+
+#eval IO.println "AUDIT_923_QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.unit_barycenter_degenerate"
+#check QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.unit_barycenter_degenerate
+#print axioms QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.unit_barycenter_degenerate
+
+#eval IO.println "AUDIT_924_QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.physical_unbiased_at_pure"
+#check QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.physical_unbiased_at_pure
+#print axioms QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.physical_unbiased_at_pure
+
+#eval IO.println "AUDIT_925_QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.no_globally_unbiased_physical_estimator"
+#check QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.no_globally_unbiased_physical_estimator
+#print axioms QubitOracle.AdaptiveDesign.PhysicalUnbiasedness.no_globally_unbiased_physical_estimator
+
+#eval IO.println "AUDIT_926_QubitOracle.AdaptiveDesign.PolynomialSqrtExponential.tendsto_zero"
+#check QubitOracle.AdaptiveDesign.PolynomialSqrtExponential.tendsto_zero
+#print axioms QubitOracle.AdaptiveDesign.PolynomialSqrtExponential.tendsto_zero
+
+#eval IO.println "AUDIT_927_QubitOracle.AdaptiveDesign.PolynomialSqrtExponential.summable"
+#check QubitOracle.AdaptiveDesign.PolynomialSqrtExponential.summable
+#print axioms QubitOracle.AdaptiveDesign.PolynomialSqrtExponential.summable
+
+#eval IO.println "AUDIT_928_QubitOracle.AdaptiveDesign.PolynomialSqrtExponential.summable_of_tail"
+#check QubitOracle.AdaptiveDesign.PolynomialSqrtExponential.summable_of_tail
+#print axioms QubitOracle.AdaptiveDesign.PolynomialSqrtExponential.summable_of_tail
+
+#eval IO.println "AUDIT_929_QubitOracle.AdaptiveDesign.PositiveEffectSchur.remainder"
+#check QubitOracle.AdaptiveDesign.PositiveEffectSchur.remainder
+#print axioms QubitOracle.AdaptiveDesign.PositiveEffectSchur.remainder
+
+#eval IO.println "AUDIT_930_QubitOracle.AdaptiveDesign.PositiveEffectSchur.remainder_positive"
+#check QubitOracle.AdaptiveDesign.PositiveEffectSchur.remainder_positive
+#print axioms QubitOracle.AdaptiveDesign.PositiveEffectSchur.remainder_positive
+
+#eval IO.println "AUDIT_931_QubitOracle.AdaptiveDesign.PositiveEffectSchur.remainder_diagonal"
+#check QubitOracle.AdaptiveDesign.PositiveEffectSchur.remainder_diagonal
+#print axioms QubitOracle.AdaptiveDesign.PositiveEffectSchur.remainder_diagonal
+
+#eval IO.println "AUDIT_932_QubitOracle.AdaptiveDesign.PositiveEffectSchur.trace_saturation_remainder_zero"
+#check QubitOracle.AdaptiveDesign.PositiveEffectSchur.trace_saturation_remainder_zero
+#print axioms QubitOracle.AdaptiveDesign.PositiveEffectSchur.trace_saturation_remainder_zero
+
+#eval IO.println "AUDIT_933_QubitOracle.AdaptiveDesign.PositiveEffectSchur.trace_saturation_rankOne"
+#check QubitOracle.AdaptiveDesign.PositiveEffectSchur.trace_saturation_rankOne
+#print axioms QubitOracle.AdaptiveDesign.PositiveEffectSchur.trace_saturation_rankOne
+
+#eval IO.println "AUDIT_934_QubitOracle.AdaptiveDesign.TangentGLS.referenceChartMatrix"
+#check QubitOracle.AdaptiveDesign.TangentGLS.referenceChartMatrix
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.referenceChartMatrix
+
+#eval IO.println "AUDIT_935_QubitOracle.AdaptiveDesign.TangentGLS.trueChartMatrix"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueChartMatrix
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueChartMatrix
+
+#eval IO.println "AUDIT_936_QubitOracle.AdaptiveDesign.PureChartCovariance.Coordinates"
+#check QubitOracle.AdaptiveDesign.PureChartCovariance.Coordinates
+#print axioms QubitOracle.AdaptiveDesign.PureChartCovariance.Coordinates
+
+#eval IO.println "AUDIT_937_QubitOracle.AdaptiveDesign.PureChartCovariance.qfiOperator"
+#check QubitOracle.AdaptiveDesign.PureChartCovariance.qfiOperator
+#print axioms QubitOracle.AdaptiveDesign.PureChartCovariance.qfiOperator
+
+#eval IO.println "AUDIT_938_QubitOracle.AdaptiveDesign.PureChartCovariance.inverseQfiOperator"
+#check QubitOracle.AdaptiveDesign.PureChartCovariance.inverseQfiOperator
+#print axioms QubitOracle.AdaptiveDesign.PureChartCovariance.inverseQfiOperator
+
+#eval IO.println "AUDIT_939_QubitOracle.AdaptiveDesign.PureChartCovariance.qfi_inverse"
+#check QubitOracle.AdaptiveDesign.PureChartCovariance.qfi_inverse
+#print axioms QubitOracle.AdaptiveDesign.PureChartCovariance.qfi_inverse
+
+#eval IO.println "AUDIT_940_QubitOracle.AdaptiveDesign.PureChartCovariance.qfi_is_sld"
+#check QubitOracle.AdaptiveDesign.PureChartCovariance.qfi_is_sld
+#print axioms QubitOracle.AdaptiveDesign.PureChartCovariance.qfi_is_sld
+
+#eval IO.println "AUDIT_941_QubitOracle.AdaptiveDesign.PureChartCovariance.covariance_normalized"
+#check QubitOracle.AdaptiveDesign.PureChartCovariance.covariance_normalized
+#print axioms QubitOracle.AdaptiveDesign.PureChartCovariance.covariance_normalized
+
+#eval IO.println "AUDIT_942_QubitOracle.AdaptiveDesign.PureChartCovariance.covariance_eq_twice_inverse_qfi"
+#check QubitOracle.AdaptiveDesign.PureChartCovariance.covariance_eq_twice_inverse_qfi
+#print axioms QubitOracle.AdaptiveDesign.PureChartCovariance.covariance_eq_twice_inverse_qfi
+
+#eval IO.println "AUDIT_943_QubitOracle.AdaptiveDesign.TangentGLS.projector_column_identity"
+#check QubitOracle.AdaptiveDesign.TangentGLS.projector_column_identity
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.projector_column_identity
+
+#eval IO.println "AUDIT_944_QubitOracle.AdaptiveDesign.TangentGLS.hermitian_diagonal_real"
+#check QubitOracle.AdaptiveDesign.TangentGLS.hermitian_diagonal_real
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.hermitian_diagonal_real
+
+#eval IO.println "AUDIT_945_QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_reconstruction"
+#check QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_reconstruction
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_reconstruction
+
+#eval IO.println "AUDIT_946_QubitOracle.AdaptiveDesign.TangentGLS.chart_amplitudeCoordinates"
+#check QubitOracle.AdaptiveDesign.TangentGLS.chart_amplitudeCoordinates
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.chart_amplitudeCoordinates
+
+#eval IO.println "AUDIT_947_QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_in_domain"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_in_domain
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_in_domain
+
+#eval IO.println "AUDIT_948_QubitOracle.AdaptiveDesign.TangentGLS.chartAmplitudeLinear"
+#check QubitOracle.AdaptiveDesign.TangentGLS.chartAmplitudeLinear
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.chartAmplitudeLinear
+
+#eval IO.println "AUDIT_949_QubitOracle.AdaptiveDesign.TangentGLS.chartState_continuous"
+#check QubitOracle.AdaptiveDesign.TangentGLS.chartState_continuous
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.chartState_continuous
+
+#eval IO.println "AUDIT_950_QubitOracle.AdaptiveDesign.TangentGLS.chartState_hasFDerivAt_zero"
+#check QubitOracle.AdaptiveDesign.TangentGLS.chartState_hasFDerivAt_zero
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.chartState_hasFDerivAt_zero
+
+#eval IO.println "AUDIT_951_QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_continuous"
+#check QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_continuous
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_continuous
+
+#eval IO.println "AUDIT_952_QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_hasFDerivAt_zero"
+#check QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_hasFDerivAt_zero
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_hasFDerivAt_zero
+
+#eval IO.println "AUDIT_953_QubitOracle.AdaptiveDesign.TangentGLS.trueChart_hasFDerivAt_zero"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueChart_hasFDerivAt_zero
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueChart_hasFDerivAt_zero
+
+#eval IO.println "AUDIT_954_QubitOracle.AdaptiveDesign.TangentGLS.chart_sld_metric"
+#check QubitOracle.AdaptiveDesign.TangentGLS.chart_sld_metric
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.chart_sld_metric
+
+#eval IO.println "AUDIT_955_QubitOracle.AdaptiveDesign.TangentGLS.trueChartPureVector"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueChartPureVector
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueChartPureVector
+
+#eval IO.println "AUDIT_956_QubitOracle.AdaptiveDesign.TangentGLS.trueChart_is_pure"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueChart_is_pure
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueChart_is_pure
+
+#eval IO.println "AUDIT_957_QubitOracle.AdaptiveDesign.TangentGLS.tangentRadiusSq_lt_four_of_ball"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentRadiusSq_lt_four_of_ball
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentRadiusSq_lt_four_of_ball
+
+#eval IO.println "AUDIT_958_QubitOracle.AdaptiveDesign.TangentGLS.trueChart_injectiveOn_ball"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueChart_injectiveOn_ball
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueChart_injectiveOn_ball
+
+#eval IO.println "AUDIT_959_QubitOracle.AdaptiveDesign.TangentGLS.pureProjectors_infinite"
+#check QubitOracle.AdaptiveDesign.TangentGLS.pureProjectors_infinite
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.pureProjectors_infinite
+
+#eval IO.println "AUDIT_960_QubitOracle.AdaptiveDesign.TangentGLS.basisPureVector"
+#check QubitOracle.AdaptiveDesign.TangentGLS.basisPureVector
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.basisPureVector
+
+#eval IO.println "AUDIT_961_QubitOracle.AdaptiveDesign.TangentGLS.basisPureVector_parameter"
+#check QubitOracle.AdaptiveDesign.TangentGLS.basisPureVector_parameter
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.basisPureVector_parameter
+
+#eval IO.println "AUDIT_962_QubitOracle.AdaptiveDesign.TangentGLS.basis_charts_cover"
+#check QubitOracle.AdaptiveDesign.TangentGLS.basis_charts_cover
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.basis_charts_cover
+
+#eval IO.println "AUDIT_963_QubitOracle.AdaptiveDesign.PureFisherLoewner.effect_cauchy_schwarz"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.effect_cauchy_schwarz
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.effect_cauchy_schwarz
+
+#eval IO.println "AUDIT_964_QubitOracle.AdaptiveDesign.PureFisherLoewner.scalar_effect_bound"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.scalar_effect_bound
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.scalar_effect_bound
+
+#eval IO.println "AUDIT_965_QubitOracle.AdaptiveDesign.PureFisherLoewner.directional_information_bound"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.directional_information_bound
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.directional_information_bound
+
+#eval IO.println "AUDIT_966_QubitOracle.AdaptiveDesign.PureFisherLoewner.complexDirection"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.complexDirection
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.complexDirection
+
+#eval IO.println "AUDIT_967_QubitOracle.AdaptiveDesign.PureFisherLoewner.direction_normSq"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.direction_normSq
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.direction_normSq
+
+#eval IO.println "AUDIT_968_QubitOracle.AdaptiveDesign.PureFisherLoewner.direction_gradient"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.direction_gradient
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.direction_gradient
+
+#eval IO.println "AUDIT_969_QubitOracle.AdaptiveDesign.PureFisherLoewner.weightedGram_quadratic"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.weightedGram_quadratic
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.weightedGram_quadratic
+
+#eval IO.println "AUDIT_970_QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_quadratic"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_quadratic
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_quadratic
+
+#eval IO.println "AUDIT_971_QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_information_le_identity"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_information_le_identity
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_information_le_identity
+
+#eval IO.println "AUDIT_972_QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_fisher_positive"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_fisher_positive
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_fisher_positive
+
+#eval IO.println "AUDIT_973_QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_fisher_loewner"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_fisher_loewner
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_fisher_loewner
+
+#eval IO.println "AUDIT_974_QubitOracle.AdaptiveDesign.PureFisherLoewner.rotated"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.rotated
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.rotated
+
+#eval IO.println "AUDIT_975_QubitOracle.AdaptiveDesign.PureFisherLoewner.actual_fisher_loewner"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.actual_fisher_loewner
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.actual_fisher_loewner
+
+#eval IO.println "AUDIT_976_QubitOracle.AdaptiveDesign.PureFisherLoewner.information_gap_congruence"
+#check QubitOracle.AdaptiveDesign.PureFisherLoewner.information_gap_congruence
+#print axioms QubitOracle.AdaptiveDesign.PureFisherLoewner.information_gap_congruence
+
+#eval IO.println "AUDIT_977_QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor"
+#check QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor
+#print axioms QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor
+
+#eval IO.println "AUDIT_978_QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor_continuous"
+#check QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor_continuous
+#print axioms QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor_continuous
+
+#eval IO.println "AUDIT_979_QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor_bounds"
+#check QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor_bounds
+#print axioms QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor_bounds
+
+#eval IO.println "AUDIT_980_QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor_self"
+#check QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor_self
+#print axioms QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.buresFactor_self
+
+#eval IO.println "AUDIT_981_QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.bures_identity"
+#check QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.bures_identity
+#print axioms QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.bures_identity
+
+#eval IO.println "AUDIT_982_QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.both_mean_losses"
+#check QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.both_mean_losses
+#print axioms QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.both_mean_losses
+
+#eval IO.println "AUDIT_983_QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.povm"
+#check QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.povm
+#print axioms QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.povm
+
+#eval IO.println "AUDIT_984_QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.phasePair"
+#check QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.phasePair
+#print axioms QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.phasePair
+
+#eval IO.println "AUDIT_985_QubitOracle.AdaptiveDesign.PurePVMMeanLoss.pvm"
+#check QubitOracle.AdaptiveDesign.PurePVMMeanLoss.pvm
+#print axioms QubitOracle.AdaptiveDesign.PurePVMMeanLoss.pvm
+
+#eval IO.println "AUDIT_986_QubitOracle.AdaptiveDesign.PureSLDMetric.pureSLD"
+#check QubitOracle.AdaptiveDesign.PureSLDMetric.pureSLD
+#print axioms QubitOracle.AdaptiveDesign.PureSLDMetric.pureSLD
+
+#eval IO.println "AUDIT_987_QubitOracle.AdaptiveDesign.PureSLDMetric.sld_equation"
+#check QubitOracle.AdaptiveDesign.PureSLDMetric.sld_equation
+#print axioms QubitOracle.AdaptiveDesign.PureSLDMetric.sld_equation
+
+#eval IO.println "AUDIT_988_QubitOracle.AdaptiveDesign.PureSLDMetric.metricFromSLD"
+#check QubitOracle.AdaptiveDesign.PureSLDMetric.metricFromSLD
+#print axioms QubitOracle.AdaptiveDesign.PureSLDMetric.metricFromSLD
+
+#eval IO.println "AUDIT_989_QubitOracle.AdaptiveDesign.PureSLDMetric.metricFromSLD_eq"
+#check QubitOracle.AdaptiveDesign.PureSLDMetric.metricFromSLD_eq
+#print axioms QubitOracle.AdaptiveDesign.PureSLDMetric.metricFromSLD_eq
+
+#eval IO.println "AUDIT_990_QubitOracle.AdaptiveDesign.PureSLDMetric.trueLift_mem"
+#check QubitOracle.AdaptiveDesign.PureSLDMetric.trueLift_mem
+#print axioms QubitOracle.AdaptiveDesign.PureSLDMetric.trueLift_mem
+
+#eval IO.println "AUDIT_991_QubitOracle.AdaptiveDesign.PureSLDMetric.normalizedLift"
+#check QubitOracle.AdaptiveDesign.PureSLDMetric.normalizedLift
+#print axioms QubitOracle.AdaptiveDesign.PureSLDMetric.normalizedLift
+
+#eval IO.println "AUDIT_992_QubitOracle.AdaptiveDesign.PureSLDMetric.normalized_metric"
+#check QubitOracle.AdaptiveDesign.PureSLDMetric.normalized_metric
+#print axioms QubitOracle.AdaptiveDesign.PureSLDMetric.normalized_metric
+
+#eval IO.println "AUDIT_993_QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_self"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_self
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_self
+
+#eval IO.println "AUDIT_994_QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_continuousAt"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_continuousAt
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_continuousAt
+
+#eval IO.println "AUDIT_995_QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_comp_stronglyMeasurable"
+#check QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_comp_stronglyMeasurable
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_comp_stronglyMeasurable
+
+#eval IO.println "AUDIT_996_QubitOracle.AdaptiveDesign.TangentGLS.smoothChart_clt_of_amplitude_clt"
+#check QubitOracle.AdaptiveDesign.TangentGLS.smoothChart_clt_of_amplitude_clt
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.smoothChart_clt_of_amplitude_clt
+
+#eval IO.println "AUDIT_997_QubitOracle.AdaptiveDesign.TangentGLS.smoothChart_optimalVariance"
+#check QubitOracle.AdaptiveDesign.TangentGLS.smoothChart_optimalVariance
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.smoothChart_optimalVariance
+
+#eval IO.println "AUDIT_998_QubitOracle.AdaptiveDesign.TangentGLS.phasePair_smoothChart_optimalVariance"
+#check QubitOracle.AdaptiveDesign.TangentGLS.phasePair_smoothChart_optimalVariance
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.phasePair_smoothChart_optimalVariance
+
+#eval IO.println "AUDIT_999_QubitOracle.AdaptiveDesign.PVMPilotGLS.smoothChart_optimalVariance"
+#check QubitOracle.AdaptiveDesign.PVMPilotGLS.smoothChart_optimalVariance
+#print axioms QubitOracle.AdaptiveDesign.PVMPilotGLS.smoothChart_optimalVariance
+
+#eval IO.println "AUDIT_1000_QubitOracle.AdaptiveDesign.TangentGLS.tangentCoordinateEquiv"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentCoordinateEquiv
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentCoordinateEquiv
+
+#eval IO.println "AUDIT_1001_QubitOracle.AdaptiveDesign.TangentGLS.tangent_finrank"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangent_finrank
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangent_finrank
+
+#eval IO.println "AUDIT_1002_QubitOracle.AdaptiveDesign.TangentGLS.measurementFisher"
+#check QubitOracle.AdaptiveDesign.TangentGLS.measurementFisher
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.measurementFisher
+
+#eval IO.println "AUDIT_1003_QubitOracle.AdaptiveDesign.TangentGLS.measurementFisher_isometry"
+#check QubitOracle.AdaptiveDesign.TangentGLS.measurementFisher_isometry
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.measurementFisher_isometry
+
+#eval IO.println "AUDIT_1004_QubitOracle.AdaptiveDesign.TangentGLS.measurementFisher_actual"
+#check QubitOracle.AdaptiveDesign.TangentGLS.measurementFisher_actual
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.measurementFisher_actual
+
+#eval IO.println "AUDIT_1005_QubitOracle.AdaptiveDesign.TangentGLS.pure_metric_isometry"
+#check QubitOracle.AdaptiveDesign.TangentGLS.pure_metric_isometry
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.pure_metric_isometry
+
+#eval IO.println "AUDIT_1006_QubitOracle.AdaptiveDesign.TangentGLS.pure_metric_horizontal"
+#check QubitOracle.AdaptiveDesign.TangentGLS.pure_metric_horizontal
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.pure_metric_horizontal
+
+#eval IO.println "AUDIT_1007_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_intrinsic"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_intrinsic
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_intrinsic
+
+#eval IO.println "AUDIT_1008_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_phase_invariant"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_phase_invariant
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_phase_invariant
+
+#eval IO.println "AUDIT_1009_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.trace_sq_two"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.trace_sq_two
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.trace_sq_two
+
+#eval IO.println "AUDIT_1010_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.sqrt_trace_sq_two"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.sqrt_trace_sq_two
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.sqrt_trace_sq_two
+
+#eval IO.println "AUDIT_1011_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_fidelity_trace_det"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_fidelity_trace_det
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_fidelity_trace_det
+
+#eval IO.println "AUDIT_1012_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_det"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_det
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_det
+
+#eval IO.println "AUDIT_1013_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_product_trace"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_product_trace
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_product_trace
+
+#eval IO.println "AUDIT_1014_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_fidelity_bloch"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_fidelity_bloch
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_fidelity_bloch
+
+#eval IO.println "AUDIT_1015_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.rankOne_mul_self"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.rankOne_mul_self
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.rankOne_mul_self
+
+#eval IO.println "AUDIT_1016_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.rankOne_sqrt"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.rankOne_sqrt
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.rankOne_sqrt
+
+#eval IO.println "AUDIT_1017_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.pure_fidelity"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.pure_fidelity
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.pure_fidelity
+
+#eval IO.println "AUDIT_1018_QubitOracle.AdaptiveDesign.QuantumFidelityBridges.pure_bures"
+#check QubitOracle.AdaptiveDesign.QuantumFidelityBridges.pure_bures
+#print axioms QubitOracle.AdaptiveDesign.QuantumFidelityBridges.pure_bures
+
+#eval IO.println "AUDIT_1019_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight
+
+#eval IO.println "AUDIT_1020_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.vector"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.vector
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.vector
+
+#eval IO.println "AUDIT_1021_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.reconstruction"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.reconstruction
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.reconstruction
+
+#eval IO.println "AUDIT_1022_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight_nonneg"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight_nonneg
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight_nonneg
+
+#eval IO.println "AUDIT_1023_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.vector_bound"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.vector_bound
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.vector_bound
+
+#eval IO.println "AUDIT_1024_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight_positive"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight_positive
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight_positive
+
+#eval IO.println "AUDIT_1025_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.ofPOVM"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.ofPOVM
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.ofPOVM
+
+#eval IO.println "AUDIT_1026_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.effect_reconstruction"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.effect_reconstruction
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.effect_reconstruction
+
+#eval IO.println "AUDIT_1027_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.probability_is_born"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.probability_is_born
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.probability_is_born
+
+#eval IO.println "AUDIT_1028_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.all_qubit_gillMassar"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.all_qubit_gillMassar
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.all_qubit_gillMassar
+
+#eval IO.println "AUDIT_1029_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalizedVector"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalizedVector
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalizedVector
+
+#eval IO.println "AUDIT_1030_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.scaled_normalized"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.scaled_normalized
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.scaled_normalized
+
+#eval IO.println "AUDIT_1031_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalized_vector_bound"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalized_vector_bound
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalized_vector_bound
+
+#eval IO.println "AUDIT_1032_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.pauliLinear_real_smul"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.pauliLinear_real_smul
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.pauliLinear_real_smul
+
+#eval IO.println "AUDIT_1033_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalized_reconstruction"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalized_reconstruction
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalized_reconstruction
+
+#eval IO.println "AUDIT_1034_QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalizedPOVM_constraints"
+#check QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalizedPOVM_constraints
+#print axioms QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalizedPOVM_constraints
+
+#eval IO.println "AUDIT_1035_QubitOracle.AdaptiveDesign.QubitLocalInformation.qubit_eigenvalues"
+#check QubitOracle.AdaptiveDesign.QubitLocalInformation.qubit_eigenvalues
+#print axioms QubitOracle.AdaptiveDesign.QubitLocalInformation.qubit_eigenvalues
+
+#eval IO.println "AUDIT_1036_QubitOracle.AdaptiveDesign.QubitLocalInformation.reciprocal_lipschitz"
+#check QubitOracle.AdaptiveDesign.QubitLocalInformation.reciprocal_lipschitz
+#print axioms QubitOracle.AdaptiveDesign.QubitLocalInformation.reciprocal_lipschitz
+
+#eval IO.println "AUDIT_1037_QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation"
+#check QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation
+#print axioms QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation
+
+#eval IO.println "AUDIT_1038_QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation_lipschitz"
+#check QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation_lipschitz
+#print axioms QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation_lipschitz
+
+#eval IO.println "AUDIT_1039_QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation_matrix"
+#check QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation_matrix
+#print axioms QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation_matrix
+
+#eval IO.println "AUDIT_1040_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.rpow_le_one_add_pow"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.rpow_le_one_add_pow
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.rpow_le_one_add_pow
+
+#eval IO.println "AUDIT_1041_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.real_moment"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.real_moment
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.real_moment
+
+#eval IO.println "AUDIT_1042_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.real_moments_of_all_integer"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.real_moments_of_all_integer
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.real_moments_of_all_integer
+
+#eval IO.println "AUDIT_1043_QubitOracle.AdaptiveDesign.TangentGLS.gram_reindex"
+#check QubitOracle.AdaptiveDesign.TangentGLS.gram_reindex
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.gram_reindex
+
+#eval IO.println "AUDIT_1044_QubitOracle.AdaptiveDesign.TangentGLS.score_reindex"
+#check QubitOracle.AdaptiveDesign.TangentGLS.score_reindex
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.score_reindex
+
+#eval IO.println "AUDIT_1045_QubitOracle.AdaptiveDesign.TangentGLS.correction_reindex"
+#check QubitOracle.AdaptiveDesign.TangentGLS.correction_reindex
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.correction_reindex
+
+#eval IO.println "AUDIT_1046_QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_permutation"
+#check QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_permutation
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_permutation
+
+#eval IO.println "AUDIT_1047_QubitOracle.AdaptiveDesign.TangentGLS.recordRawFit"
+#check QubitOracle.AdaptiveDesign.TangentGLS.recordRawFit
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.recordRawFit
+
+#eval IO.println "AUDIT_1048_QubitOracle.AdaptiveDesign.TangentGLS.recordRawFit_permutation"
+#check QubitOracle.AdaptiveDesign.TangentGLS.recordRawFit_permutation
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.recordRawFit_permutation
+
+#eval IO.println "AUDIT_1049_QubitOracle.AdaptiveDesign.TangentGLS.estimateFromRaw_permutation"
+#check QubitOracle.AdaptiveDesign.TangentGLS.estimateFromRaw_permutation
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.estimateFromRaw_permutation
+
+#eval IO.println "AUDIT_1050_QubitOracle.AdaptiveDesign.TangentGLS.fullRecordEstimate_permutation"
+#check QubitOracle.AdaptiveDesign.TangentGLS.fullRecordEstimate_permutation
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.fullRecordEstimate_permutation
+
+#eval IO.println "AUDIT_1051_QubitOracle.AdaptiveDesign.TangentGLS.recordRawFit_unique_minimizer"
+#check QubitOracle.AdaptiveDesign.TangentGLS.recordRawFit_unique_minimizer
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.recordRawFit_unique_minimizer
+
+#eval IO.println "AUDIT_1052_QubitOracle.AdaptiveDesign.TangentGLS.actual_raw_eq_recordRawFit"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_raw_eq_recordRawFit
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_raw_eq_recordRawFit
+
+#eval IO.println "AUDIT_1053_QubitOracle.AdaptiveDesign.RegularReferenceVector.exists_regular_rotation"
+#check QubitOracle.AdaptiveDesign.RegularReferenceVector.exists_regular_rotation
+#print axioms QubitOracle.AdaptiveDesign.RegularReferenceVector.exists_regular_rotation
+
+#eval IO.println "AUDIT_1054_QubitOracle.AdaptiveDesign.RegularReferenceVector.dense_nonzero_family"
+#check QubitOracle.AdaptiveDesign.RegularReferenceVector.dense_nonzero_family
+#print axioms QubitOracle.AdaptiveDesign.RegularReferenceVector.dense_nonzero_family
+
+#eval IO.println "AUDIT_1055_QubitOracle.AdaptiveDesign.RegularReferenceVector.exists_regular_unit"
+#check QubitOracle.AdaptiveDesign.RegularReferenceVector.exists_regular_unit
+#print axioms QubitOracle.AdaptiveDesign.RegularReferenceVector.exists_regular_unit
+
+#eval IO.println "AUDIT_1056_QubitOracle.AdaptiveDesign.RunningMaximumMoments.running"
+#check QubitOracle.AdaptiveDesign.RunningMaximumMoments.running
+#print axioms QubitOracle.AdaptiveDesign.RunningMaximumMoments.running
+
+#eval IO.println "AUDIT_1057_QubitOracle.AdaptiveDesign.RunningMaximumMoments.base_le"
+#check QubitOracle.AdaptiveDesign.RunningMaximumMoments.base_le
+#print axioms QubitOracle.AdaptiveDesign.RunningMaximumMoments.base_le
+
+#eval IO.println "AUDIT_1058_QubitOracle.AdaptiveDesign.RunningMaximumMoments.term_le"
+#check QubitOracle.AdaptiveDesign.RunningMaximumMoments.term_le
+#print axioms QubitOracle.AdaptiveDesign.RunningMaximumMoments.term_le
+
+#eval IO.println "AUDIT_1059_QubitOracle.AdaptiveDesign.RunningMaximumMoments.measurable"
+#check QubitOracle.AdaptiveDesign.RunningMaximumMoments.measurable
+#print axioms QubitOracle.AdaptiveDesign.RunningMaximumMoments.measurable
+
+#eval IO.println "AUDIT_1060_QubitOracle.AdaptiveDesign.RunningMaximumMoments.moment"
+#check QubitOracle.AdaptiveDesign.RunningMaximumMoments.moment
+#print axioms QubitOracle.AdaptiveDesign.RunningMaximumMoments.moment
+
+#eval IO.println "AUDIT_1061_QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_norm_sq"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_norm_sq
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_norm_sq
+
+#eval IO.println "AUDIT_1062_QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_norm_sq"
+#check QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_norm_sq
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_norm_sq
+
+#eval IO.println "AUDIT_1063_QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_norm"
+#check QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_norm
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_norm
+
+#eval IO.println "AUDIT_1064_QubitOracle.AdaptiveDesign.TangentGLS.tangent_trace_zero"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangent_trace_zero
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangent_trace_zero
+
+#eval IO.println "AUDIT_1065_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_overlap"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_overlap
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_overlap
+
+#eval IO.println "AUDIT_1066_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_sq"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_sq
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_sq
+
+#eval IO.println "AUDIT_1067_QubitOracle.AdaptiveDesign.TangentGLS.tangent_norm_sq"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangent_norm_sq
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangent_norm_sq
+
+#eval IO.println "AUDIT_1068_QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_le"
+#check QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_le
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_le
+
+#eval IO.println "AUDIT_1069_QubitOracle.AdaptiveDesign.SmoothBornInformation.ambientForm"
+#check QubitOracle.AdaptiveDesign.SmoothBornInformation.ambientForm
+#print axioms QubitOracle.AdaptiveDesign.SmoothBornInformation.ambientForm
+
+#eval IO.println "AUDIT_1070_QubitOracle.AdaptiveDesign.SmoothBornInformation.smooth_pullback"
+#check QubitOracle.AdaptiveDesign.SmoothBornInformation.smooth_pullback
+#print axioms QubitOracle.AdaptiveDesign.SmoothBornInformation.smooth_pullback
+
+#eval IO.println "AUDIT_1071_QubitOracle.AdaptiveDesign.SmoothBornInformation.ambient_smooth"
+#check QubitOracle.AdaptiveDesign.SmoothBornInformation.ambient_smooth
+#print axioms QubitOracle.AdaptiveDesign.SmoothBornInformation.ambient_smooth
+
+#eval IO.println "AUDIT_1072_QubitOracle.AdaptiveDesign.SmoothBornInformation.equals_intrinsic"
+#check QubitOracle.AdaptiveDesign.SmoothBornInformation.equals_intrinsic
+#print axioms QubitOracle.AdaptiveDesign.SmoothBornInformation.equals_intrinsic
+
+#eval IO.println "AUDIT_1073_QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.spectralBasis"
+#check QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.spectralBasis
+#print axioms QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.spectralBasis
+
+#eval IO.println "AUDIT_1074_QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.spectral_expansion"
+#check QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.spectral_expansion
+#print axioms QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.spectral_expansion
+
+#eval IO.println "AUDIT_1075_QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.sum_effects"
+#check QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.sum_effects
+#print axioms QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.sum_effects
+
+#eval IO.println "AUDIT_1076_QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.identity_inner"
+#check QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.identity_inner
+#print axioms QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.identity_inner
+
+#eval IO.println "AUDIT_1077_QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.bases"
+#check QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.bases
+#print axioms QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.bases
+
+#eval IO.println "AUDIT_1078_QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.identifies"
+#check QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.identifies
+#print axioms QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.identifies
+
+#eval IO.println "AUDIT_1079_QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.library"
+#check QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.library
+#print axioms QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.library
+
+#eval IO.println "AUDIT_1080_QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.library_count"
+#check QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.library_count
+#print axioms QubitOracle.AdaptiveDesign.SpectralExplorationLibrary.library_count
+
+#eval IO.println "AUDIT_1081_QubitOracle.AdaptiveDesign.SubGaussianPowerMoments.abs_pow_le_exponentials"
+#check QubitOracle.AdaptiveDesign.SubGaussianPowerMoments.abs_pow_le_exponentials
+#print axioms QubitOracle.AdaptiveDesign.SubGaussianPowerMoments.abs_pow_le_exponentials
+
+#eval IO.println "AUDIT_1082_QubitOracle.AdaptiveDesign.SubGaussianPowerMoments.integral_abs_pow_le"
+#check QubitOracle.AdaptiveDesign.SubGaussianPowerMoments.integral_abs_pow_le
+#print axioms QubitOracle.AdaptiveDesign.SubGaussianPowerMoments.integral_abs_pow_le
+
+#eval IO.println "AUDIT_1083_QubitOracle.AdaptiveDesign.SubGaussianPowerMoments.boundedMartingale_root_moments"
+#check QubitOracle.AdaptiveDesign.SubGaussianPowerMoments.boundedMartingale_root_moments
+#print axioms QubitOracle.AdaptiveDesign.SubGaussianPowerMoments.boundedMartingale_root_moments
+
+#eval IO.println "AUDIT_1084_QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminary"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminary
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminary
+
+#eval IO.println "AUDIT_1085_QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError
+
+#eval IO.println "AUDIT_1086_QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_norm_bound"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_norm_bound
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_norm_bound
+
+#eval IO.println "AUDIT_1087_QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_consistent"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_consistent
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_consistent
+
+#eval IO.println "AUDIT_1088_QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_quarterRate"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_quarterRate
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_quarterRate
+
+#eval IO.println "AUDIT_1089_QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_square_rootRate"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_square_rootRate
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_square_rootRate
+
+#eval IO.println "AUDIT_1090_QubitOracle.AdaptiveDesign.TangentGLS.actual_ambientScore_rootTight"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_ambientScore_rootTight
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_ambientScore_rootTight
+
+#eval IO.println "AUDIT_1091_QubitOracle.AdaptiveDesign.TangentGLS.actual_ambientDerivative_quarterRate"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_ambientDerivative_quarterRate
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_ambientDerivative_quarterRate
+
+#eval IO.println "AUDIT_1092_QubitOracle.AdaptiveDesign.TangentGLS.actualTangentError_norm_le_two"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualTangentError_norm_le_two
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualTangentError_norm_le_two
+
+#eval IO.println "AUDIT_1093_QubitOracle.AdaptiveDesign.TangentGLS.actualForcing_rootRate"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualForcing_rootRate
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualForcing_rootRate
+
+#eval IO.println "AUDIT_1094_QubitOracle.AdaptiveDesign.TangentGLS.actualLinearError_rootRate"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualLinearError_rootRate
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualLinearError_rootRate
+
+#eval IO.println "AUDIT_1095_QubitOracle.AdaptiveDesign.TangentGLS.actual_projectedScore_rootTight"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_projectedScore_rootTight
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_projectedScore_rootTight
+
+#eval IO.println "AUDIT_1096_QubitOracle.AdaptiveDesign.TangentGLS.quarterScale_div_sqrt_zero"
+#check QubitOracle.AdaptiveDesign.TangentGLS.quarterScale_div_sqrt_zero
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.quarterScale_div_sqrt_zero
+
+#eval IO.println "AUDIT_1097_QubitOracle.AdaptiveDesign.TangentGLS.actualDelta_quarterRate"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualDelta_quarterRate
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualDelta_quarterRate
+
+#eval IO.println "AUDIT_1098_QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_apply"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_apply
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_apply
+
+#eval IO.println "AUDIT_1099_QubitOracle.AdaptiveDesign.TangentGLS.trueFrameCoordinates_actual"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueFrameCoordinates_actual
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueFrameCoordinates_actual
+
+#eval IO.println "AUDIT_1100_QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_ambientScore"
+#check QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_ambientScore
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_ambientScore
+
+#eval IO.println "AUDIT_1101_QubitOracle.AdaptiveDesign.TangentGLS.fullScore_eq_coordinate"
+#check QubitOracle.AdaptiveDesign.TangentGLS.fullScore_eq_coordinate
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.fullScore_eq_coordinate
+
+#eval IO.println "AUDIT_1102_QubitOracle.AdaptiveDesign.TangentGLS.actual_coordinates_measurable"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_coordinates_measurable
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_coordinates_measurable
+
+#eval IO.println "AUDIT_1103_QubitOracle.AdaptiveDesign.TangentGLS.actual_coordinates_minus_score_zero"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_coordinates_minus_score_zero
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_coordinates_minus_score_zero
+
+#eval IO.println "AUDIT_1104_QubitOracle.AdaptiveDesign.TangentGLS.optimalVariance"
+#check QubitOracle.AdaptiveDesign.TangentGLS.optimalVariance
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.optimalVariance
+
+#eval IO.println "AUDIT_1105_QubitOracle.AdaptiveDesign.TangentGLS.limitingCovariance_weightedTrace"
+#check QubitOracle.AdaptiveDesign.TangentGLS.limitingCovariance_weightedTrace
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.limitingCovariance_weightedTrace
+
+#eval IO.println "AUDIT_1106_QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_error_equation"
+#check QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_error_equation
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection_error_equation
+
+#eval IO.println "AUDIT_1107_QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_self"
+#check QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_self
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_self
+
+#eval IO.println "AUDIT_1108_QubitOracle.AdaptiveDesign.TangentGLS.record_normalMap_val"
+#check QubitOracle.AdaptiveDesign.TangentGLS.record_normalMap_val
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.record_normalMap_val
+
+#eval IO.println "AUDIT_1109_QubitOracle.AdaptiveDesign.TangentGLS.actualScoreSum"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualScoreSum
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualScoreSum
+
+#eval IO.println "AUDIT_1110_QubitOracle.AdaptiveDesign.TangentGLS.actualDerivativeSum"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualDerivativeSum
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualDerivativeSum
+
+#eval IO.println "AUDIT_1111_QubitOracle.AdaptiveDesign.TangentGLS.actual_score_eq_sum"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_score_eq_sum
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_score_eq_sum
+
+#eval IO.println "AUDIT_1112_QubitOracle.AdaptiveDesign.TangentGLS.actual_derivative_eq_sum"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_derivative_eq_sum
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_derivative_eq_sum
+
+#eval IO.println "AUDIT_1113_QubitOracle.AdaptiveDesign.TangentGLS.actual_record_normalMap_coercive"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actual_record_normalMap_coercive
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actual_record_normalMap_coercive
+
+#eval IO.println "AUDIT_1114_QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_rootTight"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_rootTight
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_rootTight
+
+#eval IO.println "AUDIT_1115_QubitOracle.AdaptiveDesign.TangentGLS.actualWeightRemainder_tight"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualWeightRemainder_tight
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualWeightRemainder_tight
+
+#eval IO.println "AUDIT_1116_QubitOracle.AdaptiveDesign.TangentGLS.actualSecondOrderForcing"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualSecondOrderForcing
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualSecondOrderForcing
+
+#eval IO.println "AUDIT_1117_QubitOracle.AdaptiveDesign.TangentGLS.actualSecondOrderForcing_tight"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualSecondOrderForcing_tight
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualSecondOrderForcing_tight
+
+#eval IO.println "AUDIT_1118_QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError
+
+#eval IO.println "AUDIT_1119_QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError_bound"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError_bound
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError_bound
+
+#eval IO.println "AUDIT_1120_QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError_secondOrder"
+#check QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError_secondOrder
+#print axioms QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError_secondOrder
+
+#eval IO.println "AUDIT_1121_QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_product_bound"
+#check QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_product_bound
+#print axioms QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_product_bound
+
+#eval IO.println "AUDIT_1122_QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_square_norm"
+#check QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_square_norm
+#print axioms QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_square_norm
+
+#eval IO.println "AUDIT_1123_QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_of_ae_eventually_bounded"
+#check QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_of_ae_eventually_bounded
+#print axioms QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_of_ae_eventually_bounded
+
+#eval IO.println "AUDIT_1124_QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_eventual_ae_bound"
+#check QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_eventual_ae_bound
+#print axioms QubitOracle.AdaptiveDesign.ProbabilityCalculus.tight_eventual_ae_bound
+
+#eval IO.println "AUDIT_1125_QubitOracle.AdaptiveDesign.TracelessHermitianDimension.hermitian_finrank"
+#check QubitOracle.AdaptiveDesign.TracelessHermitianDimension.hermitian_finrank
+#print axioms QubitOracle.AdaptiveDesign.TracelessHermitianDimension.hermitian_finrank
+
+#eval IO.println "AUDIT_1126_QubitOracle.AdaptiveDesign.TracelessHermitianDimension.traceMap"
+#check QubitOracle.AdaptiveDesign.TracelessHermitianDimension.traceMap
+#print axioms QubitOracle.AdaptiveDesign.TracelessHermitianDimension.traceMap
+
+#eval IO.println "AUDIT_1127_QubitOracle.AdaptiveDesign.TracelessHermitianDimension.identity"
+#check QubitOracle.AdaptiveDesign.TracelessHermitianDimension.identity
+#print axioms QubitOracle.AdaptiveDesign.TracelessHermitianDimension.identity
+
+#eval IO.println "AUDIT_1128_QubitOracle.AdaptiveDesign.TracelessHermitianDimension.trace_identity"
+#check QubitOracle.AdaptiveDesign.TracelessHermitianDimension.trace_identity
+#print axioms QubitOracle.AdaptiveDesign.TracelessHermitianDimension.trace_identity
+
+#eval IO.println "AUDIT_1129_QubitOracle.AdaptiveDesign.TracelessHermitianDimension.trace_surjective"
+#check QubitOracle.AdaptiveDesign.TracelessHermitianDimension.trace_surjective
+#print axioms QubitOracle.AdaptiveDesign.TracelessHermitianDimension.trace_surjective
+
+#eval IO.println "AUDIT_1130_QubitOracle.AdaptiveDesign.TracelessHermitianDimension.traceless"
+#check QubitOracle.AdaptiveDesign.TracelessHermitianDimension.traceless
+#print axioms QubitOracle.AdaptiveDesign.TracelessHermitianDimension.traceless
+
+#eval IO.println "AUDIT_1131_QubitOracle.AdaptiveDesign.TracelessHermitianDimension.traceless_finrank"
+#check QubitOracle.AdaptiveDesign.TracelessHermitianDimension.traceless_finrank
+#print axioms QubitOracle.AdaptiveDesign.TracelessHermitianDimension.traceless_finrank
+
+#eval IO.println "AUDIT_1132_QubitOracle.AdaptiveDesign.TracelessHermitianDimension.tracelessBasis"
+#check QubitOracle.AdaptiveDesign.TracelessHermitianDimension.tracelessBasis
+#print axioms QubitOracle.AdaptiveDesign.TracelessHermitianDimension.tracelessBasis
+
+#eval IO.println "AUDIT_1133_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm_sq"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm_sq
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.norm_sq
+
+#eval IO.println "AUDIT_1134_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.mul"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.mul
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.mul
+
+#eval IO.println "AUDIT_1135_QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.weighted_tail"
+#check QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.weighted_tail
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseMoments.UniformMoment.weighted_tail
+
+#eval IO.println "AUDIT_1136_QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.cap"
+#check QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.cap
+#print axioms QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.cap
+
+#eval IO.println "AUDIT_1137_QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.cap_error"
+#check QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.cap_error
+#print axioms QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.cap_error
+
+#eval IO.println "AUDIT_1138_QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.expected_cap_error"
+#check QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.expected_cap_error
+#print axioms QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.expected_cap_error
+
+#eval IO.println "AUDIT_1139_QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.capped_mean_tendsto_of_weak"
+#check QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.capped_mean_tendsto_of_weak
+#print axioms QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.capped_mean_tendsto_of_weak
+
+#eval IO.println "AUDIT_1140_QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.mean_tendsto_of_weak_and_secondMoment"
+#check QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.mean_tendsto_of_weak_and_secondMoment
+#print axioms QubitOracle.AdaptiveDesign.WeakMeanLossTransfer.mean_tendsto_of_weak_and_secondMoment
+
+#eval IO.println "AUDIT_1141_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.trace_inner"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.trace_inner
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.trace_inner
+
+#eval IO.println "AUDIT_1142_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.trace_cauchy_schwarz"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.trace_cauchy_schwarz
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.trace_cauchy_schwarz
+
+#eval IO.println "AUDIT_1143_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.sqrt_posDef"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.sqrt_posDef
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.sqrt_posDef
+
+#eval IO.println "AUDIT_1144_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.sqrt_transpose"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.sqrt_transpose
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.sqrt_transpose
+
+#eval IO.println "AUDIT_1145_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.weighted_trace_product"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.weighted_trace_product
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.weighted_trace_product
+
+#eval IO.println "AUDIT_1146_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.weighted_trace_lower"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.weighted_trace_lower
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.weighted_trace_lower
+
+#eval IO.println "AUDIT_1147_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer
+
+#eval IO.println "AUDIT_1148_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer_properties"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer_properties
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer_properties
+
+#eval IO.println "AUDIT_1149_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer_optimal"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer_optimal
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer_optimal
+
+#eval IO.println "AUDIT_1150_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.congruence_posDef"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.congruence_posDef
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.congruence_posDef
+
+#eval IO.println "AUDIT_1151_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.inverse_congruence"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.inverse_congruence
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.inverse_congruence
+
+#eval IO.println "AUDIT_1152_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.whitened_trace"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.whitened_trace
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.whitened_trace
+
+#eval IO.println "AUDIT_1153_QubitOracle.AdaptiveDesign.WeightedInformationOptimization.gillMassar_weighted"
+#check QubitOracle.AdaptiveDesign.WeightedInformationOptimization.gillMassar_weighted
+#print axioms QubitOracle.AdaptiveDesign.WeightedInformationOptimization.gillMassar_weighted
+
+#eval IO.println "AUDIT_1154_QubitOracle.mixedAxisFisher"
+#check QubitOracle.mixedAxisFisher
+#print axioms QubitOracle.mixedAxisFisher
+
+#eval IO.println "AUDIT_1155_QubitOracle.mixedAxisFisher_denominator_pos"
+#check QubitOracle.mixedAxisFisher_denominator_pos
+#print axioms QubitOracle.mixedAxisFisher_denominator_pos
+
+#eval IO.println "AUDIT_1156_QubitOracle.trace_qubitSLDFisherInv_mul_mixedAxisFisher"
+#check QubitOracle.trace_qubitSLDFisherInv_mul_mixedAxisFisher
+#print axioms QubitOracle.trace_qubitSLDFisherInv_mul_mixedAxisFisher
+
+#eval IO.println "AUDIT_1157_QubitOracle.binaryAxisPlusProbability"
+#check QubitOracle.binaryAxisPlusProbability
+#print axioms QubitOracle.binaryAxisPlusProbability
+
+#eval IO.println "AUDIT_1158_QubitOracle.binaryAxisMinusProbability"
+#check QubitOracle.binaryAxisMinusProbability
+#print axioms QubitOracle.binaryAxisMinusProbability
+
+#eval IO.println "AUDIT_1159_QubitOracle.binaryAxisPlusScore"
+#check QubitOracle.binaryAxisPlusScore
+#print axioms QubitOracle.binaryAxisPlusScore
+
+#eval IO.println "AUDIT_1160_QubitOracle.binaryAxisMinusScore"
+#check QubitOracle.binaryAxisMinusScore
+#print axioms QubitOracle.binaryAxisMinusScore
+
+#eval IO.println "AUDIT_1161_QubitOracle.binaryAxis_scores_eq_probabilityDerivative_ratio"
+#check QubitOracle.binaryAxis_scores_eq_probabilityDerivative_ratio
+#print axioms QubitOracle.binaryAxis_scores_eq_probabilityDerivative_ratio
+
+#eval IO.println "AUDIT_1162_QubitOracle.binaryAxis_expectedScore_eq_zero"
+#check QubitOracle.binaryAxis_expectedScore_eq_zero
+#print axioms QubitOracle.binaryAxis_expectedScore_eq_zero
+
+#eval IO.println "AUDIT_1163_QubitOracle.binaryAxisFisherScalar"
+#check QubitOracle.binaryAxisFisherScalar
+#print axioms QubitOracle.binaryAxisFisherScalar
+
+#eval IO.println "AUDIT_1164_QubitOracle.binaryAxisFisherScalar_eq"
+#check QubitOracle.binaryAxisFisherScalar_eq
+#print axioms QubitOracle.binaryAxisFisherScalar_eq
+
+#eval IO.println "AUDIT_1165_QubitOracle.mixedAxisFisher_eq_binaryAxisFisherScalar_smul"
+#check QubitOracle.mixedAxisFisher_eq_binaryAxisFisherScalar_smul
+#print axioms QubitOracle.mixedAxisFisher_eq_binaryAxisFisherScalar_smul
+
+#eval IO.println "AUDIT_1166_QubitOracle.Paper.mixedQubitBlochFidelitySqBetween"
+#check QubitOracle.Paper.mixedQubitBlochFidelitySqBetween
+#print axioms QubitOracle.Paper.mixedQubitBlochFidelitySqBetween
+
+#eval IO.println "AUDIT_1167_QubitOracle.Paper.mixedQubitBlochRootFidelityBetween"
+#check QubitOracle.Paper.mixedQubitBlochRootFidelityBetween
+#print axioms QubitOracle.Paper.mixedQubitBlochRootFidelityBetween
+
+#eval IO.println "AUDIT_1168_QubitOracle.Paper.mixedQubitBlochInfidelityBetween"
+#check QubitOracle.Paper.mixedQubitBlochInfidelityBetween
+#print axioms QubitOracle.Paper.mixedQubitBlochInfidelityBetween
+
+#eval IO.println "AUDIT_1169_QubitOracle.Paper.mixedQubitBlochRootInfidelityBetween"
+#check QubitOracle.Paper.mixedQubitBlochRootInfidelityBetween
+#print axioms QubitOracle.Paper.mixedQubitBlochRootInfidelityBetween
+
+#eval IO.println "AUDIT_1170_QubitOracle.Paper.mixedQubitBlochBuresSqBetween"
+#check QubitOracle.Paper.mixedQubitBlochBuresSqBetween
+#print axioms QubitOracle.Paper.mixedQubitBlochBuresSqBetween
+
+#eval IO.println "AUDIT_1171_QubitOracle.Paper.mixedBlochEuclideanNorm"
+#check QubitOracle.Paper.mixedBlochEuclideanNorm
+#print axioms QubitOracle.Paper.mixedBlochEuclideanNorm
+
+#eval IO.println "AUDIT_1172_QubitOracle.Paper.mixedBuresFidelityLocalRemainderEnvelope"
+#check QubitOracle.Paper.mixedBuresFidelityLocalRemainderEnvelope
+#print axioms QubitOracle.Paper.mixedBuresFidelityLocalRemainderEnvelope
+
+#eval IO.println "AUDIT_1173_QubitOracle.Paper.blochNormSq_add_displacement"
+#check QubitOracle.Paper.blochNormSq_add_displacement
+#print axioms QubitOracle.Paper.blochNormSq_add_displacement
+
+#eval IO.println "AUDIT_1174_QubitOracle.Paper.blochDot_add_displacement"
+#check QubitOracle.Paper.blochDot_add_displacement
+#print axioms QubitOracle.Paper.blochDot_add_displacement
+
+#eval IO.println "AUDIT_1175_QubitOracle.Paper.mixedQubitBlochFidelitySqBetween_add_eq"
+#check QubitOracle.Paper.mixedQubitBlochFidelitySqBetween_add_eq
+#print axioms QubitOracle.Paper.mixedQubitBlochFidelitySqBetween_add_eq
+
+#eval IO.println "AUDIT_1176_QubitOracle.Paper.mixedQubitBlochRootFidelityBetween_add_formula"
+#check QubitOracle.Paper.mixedQubitBlochRootFidelityBetween_add_formula
+#print axioms QubitOracle.Paper.mixedQubitBlochRootFidelityBetween_add_formula
+
+#eval IO.println "AUDIT_1177_QubitOracle.Paper.mixedQubitBlochInfidelityBetween_add_formula"
+#check QubitOracle.Paper.mixedQubitBlochInfidelityBetween_add_formula
+#print axioms QubitOracle.Paper.mixedQubitBlochInfidelityBetween_add_formula
+
+#eval IO.println "AUDIT_1178_QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_formula"
+#check QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_formula
+#print axioms QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_formula
+
+#eval IO.println "AUDIT_1179_QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_eq_mixedBlochBuresSq"
+#check QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_eq_mixedBlochBuresSq
+#print axioms QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_eq_mixedBlochBuresSq
+
+#eval IO.println "AUDIT_1180_QubitOracle.Paper.mixedQubitBlochRootInfidelityBetween_eq_half_bures"
+#check QubitOracle.Paper.mixedQubitBlochRootInfidelityBetween_eq_half_bures
+#print axioms QubitOracle.Paper.mixedQubitBlochRootInfidelityBetween_eq_half_bures
+
+#eval IO.println "AUDIT_1181_QubitOracle.Paper.mixedBlochEuclideanNorm_nonnegative"
+#check QubitOracle.Paper.mixedBlochEuclideanNorm_nonnegative
+#print axioms QubitOracle.Paper.mixedBlochEuclideanNorm_nonnegative
+
+#eval IO.println "AUDIT_1182_QubitOracle.Paper.mixedBlochEuclideanNorm_sq"
+#check QubitOracle.Paper.mixedBlochEuclideanNorm_sq
+#print axioms QubitOracle.Paper.mixedBlochEuclideanNorm_sq
+
+#eval IO.println "AUDIT_1183_QubitOracle.Paper.abs_blochDot_le_mixedBlochEuclideanNorm"
+#check QubitOracle.Paper.abs_blochDot_le_mixedBlochEuclideanNorm
+#print axioms QubitOracle.Paper.abs_blochDot_le_mixedBlochEuclideanNorm
+
+#eval IO.println "AUDIT_1184_QubitOracle.Paper.mixedBuresFidelityLocalRadius_implies_scalar_local"
+#check QubitOracle.Paper.mixedBuresFidelityLocalRadius_implies_scalar_local
+#print axioms QubitOracle.Paper.mixedBuresFidelityLocalRadius_implies_scalar_local
+
+#eval IO.println "AUDIT_1185_QubitOracle.Paper.mixedBuresFidelityLocalRadius_keeps_inside"
+#check QubitOracle.Paper.mixedBuresFidelityLocalRadius_keeps_inside
+#print axioms QubitOracle.Paper.mixedBuresFidelityLocalRadius_keeps_inside
+
+#eval IO.println "AUDIT_1186_QubitOracle.Paper.mixedBuresFidelityLocal_scalarRegion"
+#check QubitOracle.Paper.mixedBuresFidelityLocal_scalarRegion
+#print axioms QubitOracle.Paper.mixedBuresFidelityLocal_scalarRegion
+
+#eval IO.println "AUDIT_1187_QubitOracle.Paper.mixedInteriorBuresQuadraticLoss_eq_generalQuadratic"
+#check QubitOracle.Paper.mixedInteriorBuresQuadraticLoss_eq_generalQuadratic
+#print axioms QubitOracle.Paper.mixedInteriorBuresQuadraticLoss_eq_generalQuadratic
+
+#eval IO.println "AUDIT_1188_QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_secondOrder_decomposition"
+#check QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_secondOrder_decomposition
+#print axioms QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_secondOrder_decomposition
+
+#eval IO.println "AUDIT_1189_QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_coordinate_remainder"
+#check QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_coordinate_remainder
+#print axioms QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_coordinate_remainder
+
+#eval IO.println "AUDIT_1190_QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_local_remainder"
+#check QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_local_remainder
+#print axioms QubitOracle.Paper.mixedQubitBlochBuresSqBetween_add_local_remainder
+
+#eval IO.println "AUDIT_1191_QubitOracle.Paper.mixedQubitBlochInfidelityBetween_add_secondOrder_expansion"
+#check QubitOracle.Paper.mixedQubitBlochInfidelityBetween_add_secondOrder_expansion
+#print axioms QubitOracle.Paper.mixedQubitBlochInfidelityBetween_add_secondOrder_expansion
+
+#eval IO.println "AUDIT_1192_QubitOracle.Paper.mixedQubitBlochInfidelityBetween_add_coordinate_remainder"
+#check QubitOracle.Paper.mixedQubitBlochInfidelityBetween_add_coordinate_remainder
+#print axioms QubitOracle.Paper.mixedQubitBlochInfidelityBetween_add_coordinate_remainder
+
+#eval IO.println "AUDIT_1193_QubitOracle.Paper.mixedQubitBlochFidelitySqBetween_add_secondOrder_expansion"
+#check QubitOracle.Paper.mixedQubitBlochFidelitySqBetween_add_secondOrder_expansion
+#print axioms QubitOracle.Paper.mixedQubitBlochFidelitySqBetween_add_secondOrder_expansion
+
+#eval IO.println "AUDIT_1194_QubitOracle.Paper.mixedQubitBlochRootFidelityBetween_add_local_remainder"
+#check QubitOracle.Paper.mixedQubitBlochRootFidelityBetween_add_local_remainder
+#print axioms QubitOracle.Paper.mixedQubitBlochRootFidelityBetween_add_local_remainder
+
+#eval IO.println "AUDIT_1195_QubitOracle.Paper.mixedQubitBlochRootInfidelityBetween_add_local_remainder"
+#check QubitOracle.Paper.mixedQubitBlochRootInfidelityBetween_add_local_remainder
+#print axioms QubitOracle.Paper.mixedQubitBlochRootInfidelityBetween_add_local_remainder
+
+#eval IO.println "AUDIT_1196_QubitOracle.Paper.Label.lem_SI_mixed_bures_fidelity_local_remainder_qubit"
+#check QubitOracle.Paper.Label.lem_SI_mixed_bures_fidelity_local_remainder_qubit
+#print axioms QubitOracle.Paper.Label.lem_SI_mixed_bures_fidelity_local_remainder_qubit
+
+#eval IO.println "AUDIT_1197_QubitOracle.AdaptiveDesign.P1.inverse_information_lower_bound"
+#check QubitOracle.AdaptiveDesign.P1.inverse_information_lower_bound
+#print axioms QubitOracle.AdaptiveDesign.P1.inverse_information_lower_bound
+
+#eval IO.println "AUDIT_1198_QubitOracle.AdaptiveDesign.P1.qubitSLDFisherInv_posDef"
+#check QubitOracle.AdaptiveDesign.P1.qubitSLDFisherInv_posDef
+#print axioms QubitOracle.AdaptiveDesign.P1.qubitSLDFisherInv_posDef
+
+#eval IO.println "AUDIT_1199_QubitOracle.AdaptiveDesign.P1.qubitSLDFisherInv_inv"
+#check QubitOracle.AdaptiveDesign.P1.qubitSLDFisherInv_inv
+#print axioms QubitOracle.AdaptiveDesign.P1.qubitSLDFisherInv_inv
+
+#eval IO.println "AUDIT_1200_QubitOracle.AdaptiveDesign.P1.mixedBuresTarget_eq_third_sld"
+#check QubitOracle.AdaptiveDesign.P1.mixedBuresTarget_eq_third_sld
+#print axioms QubitOracle.AdaptiveDesign.P1.mixedBuresTarget_eq_third_sld
+
+#eval IO.println "AUDIT_1201_QubitOracle.AdaptiveDesign.P1.buresDesignCriterion"
+#check QubitOracle.AdaptiveDesign.P1.buresDesignCriterion
+#print axioms QubitOracle.AdaptiveDesign.P1.buresDesignCriterion
+
+#eval IO.println "AUDIT_1202_QubitOracle.AdaptiveDesign.P1.finite_qubitPOVM_bures_lower_bound"
+#check QubitOracle.AdaptiveDesign.P1.finite_qubitPOVM_bures_lower_bound
+#print axioms QubitOracle.AdaptiveDesign.P1.finite_qubitPOVM_bures_lower_bound
+
+#eval IO.println "AUDIT_1203_QubitOracle.AdaptiveDesign.P1.mixedBuresTarget_bures_value"
+#check QubitOracle.AdaptiveDesign.P1.mixedBuresTarget_bures_value
+#print axioms QubitOracle.AdaptiveDesign.P1.mixedBuresTarget_bures_value
+
+#eval IO.println "AUDIT_1204_QubitOracle.AdaptiveDesign.P1.mixedBuresTarget_optimal_over_finite_qubitPOVM"
+#check QubitOracle.AdaptiveDesign.P1.mixedBuresTarget_optimal_over_finite_qubitPOVM
+#print axioms QubitOracle.AdaptiveDesign.P1.mixedBuresTarget_optimal_over_finite_qubitPOVM
+
+#eval IO.println "AUDIT_1205_QubitOracle.Paper.QubitMatrix"
+#check QubitOracle.Paper.QubitMatrix
+#print axioms QubitOracle.Paper.QubitMatrix
+
+#eval IO.println "AUDIT_1206_QubitOracle.Paper.pauliLinear"
+#check QubitOracle.Paper.pauliLinear
+#print axioms QubitOracle.Paper.pauliLinear
+
+#eval IO.println "AUDIT_1207_QubitOracle.Paper.cross3"
+#check QubitOracle.Paper.cross3
+#print axioms QubitOracle.Paper.cross3
+
+#eval IO.println "AUDIT_1208_QubitOracle.Paper.pauliLinear_mul"
+#check QubitOracle.Paper.pauliLinear_mul
+#print axioms QubitOracle.Paper.pauliLinear_mul
+
+#eval IO.println "AUDIT_1209_QubitOracle.Paper.affinePauli"
+#check QubitOracle.Paper.affinePauli
+#print axioms QubitOracle.Paper.affinePauli
+
+#eval IO.println "AUDIT_1210_QubitOracle.Paper.qubitDensityMatrix"
+#check QubitOracle.Paper.qubitDensityMatrix
+#print axioms QubitOracle.Paper.qubitDensityMatrix
+
+#eval IO.println "AUDIT_1211_QubitOracle.Paper.qubitDensityMatrix_trace"
+#check QubitOracle.Paper.qubitDensityMatrix_trace
+#print axioms QubitOracle.Paper.qubitDensityMatrix_trace
+
+#eval IO.println "AUDIT_1212_QubitOracle.Paper.qubitDensityMatrix_hermitian_symmetry"
+#check QubitOracle.Paper.qubitDensityMatrix_hermitian_symmetry
+#print axioms QubitOracle.Paper.qubitDensityMatrix_hermitian_symmetry
+
+#eval IO.println "AUDIT_1213_QubitOracle.Paper.axisProjectorMatrix"
+#check QubitOracle.Paper.axisProjectorMatrix
+#print axioms QubitOracle.Paper.axisProjectorMatrix
+
+#eval IO.println "AUDIT_1214_QubitOracle.Paper.axisProjectorMatrix_trace"
+#check QubitOracle.Paper.axisProjectorMatrix_trace
+#print axioms QubitOracle.Paper.axisProjectorMatrix_trace
+
+#eval IO.println "AUDIT_1215_QubitOracle.Paper.axisProjectorMatrix_hermitian_symmetry"
+#check QubitOracle.Paper.axisProjectorMatrix_hermitian_symmetry
+#print axioms QubitOracle.Paper.axisProjectorMatrix_hermitian_symmetry
+
+#eval IO.println "AUDIT_1216_QubitOracle.Paper.qubitBornTrace"
+#check QubitOracle.Paper.qubitBornTrace
+#print axioms QubitOracle.Paper.qubitBornTrace
+
+#eval IO.println "AUDIT_1217_QubitOracle.Paper.qubitBornTrace_eq"
+#check QubitOracle.Paper.qubitBornTrace_eq
+#print axioms QubitOracle.Paper.qubitBornTrace_eq
+
+#eval IO.println "AUDIT_1218_QubitOracle.Paper.standardBasis3"
+#check QubitOracle.Paper.standardBasis3
+#print axioms QubitOracle.Paper.standardBasis3
+
+#eval IO.println "AUDIT_1219_QubitOracle.Paper.qubitDensityDerivative"
+#check QubitOracle.Paper.qubitDensityDerivative
+#print axioms QubitOracle.Paper.qubitDensityDerivative
+
+#eval IO.println "AUDIT_1220_QubitOracle.Paper.sldScalar"
+#check QubitOracle.Paper.sldScalar
+#print axioms QubitOracle.Paper.sldScalar
+
+#eval IO.println "AUDIT_1221_QubitOracle.Paper.sldVector"
+#check QubitOracle.Paper.sldVector
+#print axioms QubitOracle.Paper.sldVector
+
+#eval IO.println "AUDIT_1222_QubitOracle.Paper.sldMatrix"
+#check QubitOracle.Paper.sldMatrix
+#print axioms QubitOracle.Paper.sldMatrix
+
+#eval IO.println "AUDIT_1223_QubitOracle.Paper.qubit_sld_expand"
+#check QubitOracle.Paper.qubit_sld_expand
+#print axioms QubitOracle.Paper.qubit_sld_expand
+
+#eval IO.println "AUDIT_1224_QubitOracle.Paper.sld_coefficients_solve"
+#check QubitOracle.Paper.sld_coefficients_solve
+#print axioms QubitOracle.Paper.sld_coefficients_solve
+
+#eval IO.println "AUDIT_1225_QubitOracle.Paper.qubit_sld_equation"
+#check QubitOracle.Paper.qubit_sld_equation
+#print axioms QubitOracle.Paper.qubit_sld_equation
+
+#eval IO.println "AUDIT_1226_QubitOracle.Paper.symmetric_affinePauli_product"
+#check QubitOracle.Paper.symmetric_affinePauli_product
+#print axioms QubitOracle.Paper.symmetric_affinePauli_product
+
+#eval IO.println "AUDIT_1227_QubitOracle.Paper.trace_qubitDensityMatrix_mul_affinePauli"
+#check QubitOracle.Paper.trace_qubitDensityMatrix_mul_affinePauli
+#print axioms QubitOracle.Paper.trace_qubitDensityMatrix_mul_affinePauli
+
+#eval IO.println "AUDIT_1228_QubitOracle.Paper.symmetricSLDProduct"
+#check QubitOracle.Paper.symmetricSLDProduct
+#print axioms QubitOracle.Paper.symmetricSLDProduct
+
+#eval IO.println "AUDIT_1229_QubitOracle.Paper.qubitSLDFisherFromSLD"
+#check QubitOracle.Paper.qubitSLDFisherFromSLD
+#print axioms QubitOracle.Paper.qubitSLDFisherFromSLD
+
+#eval IO.println "AUDIT_1230_QubitOracle.Paper.qubitSLDFisher"
+#check QubitOracle.Paper.qubitSLDFisher
+#print axioms QubitOracle.Paper.qubitSLDFisher
+
+#eval IO.println "AUDIT_1231_QubitOracle.Paper.qubitSLDFisherFromSLD_eq_formula"
+#check QubitOracle.Paper.qubitSLDFisherFromSLD_eq_formula
+#print axioms QubitOracle.Paper.qubitSLDFisherFromSLD_eq_formula
+
+#eval IO.println "AUDIT_1232_QubitOracle.Paper.qubitSLDFisher_mul_inv"
+#check QubitOracle.Paper.qubitSLDFisher_mul_inv
+#print axioms QubitOracle.Paper.qubitSLDFisher_mul_inv
+
+#eval IO.println "AUDIT_1233_QubitOracle.Paper.qubitSLDFisherInv_mul"
+#check QubitOracle.Paper.qubitSLDFisherInv_mul
+#print axioms QubitOracle.Paper.qubitSLDFisherInv_mul
+
+#eval IO.println "AUDIT_1234_QubitOracle.Paper.qubitSLDFisher_eq_inv"
+#check QubitOracle.Paper.qubitSLDFisher_eq_inv
+#print axioms QubitOracle.Paper.qubitSLDFisher_eq_inv
+
+
+-/

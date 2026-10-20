@@ -1,0 +1,1110 @@
+[
+  {
+    "label": "sec:intro",
+    "document": "main",
+    "file": "ejs/introduction.tex",
+    "line": 1,
+    "kind": "section",
+    "main_appendix": false,
+    "number": "1",
+    "PDF_page": 1,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "sec:model",
+    "document": "main",
+    "file": "ejs/model.tex",
+    "line": 1,
+    "kind": "section",
+    "main_appendix": false,
+    "number": "2",
+    "PDF_page": 3,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "eq:batches",
+    "document": "main",
+    "file": "ejs/model.tex",
+    "line": 94,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "2.1",
+    "PDF_page": 4,
+    "claim_groups": [
+      "D03"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "sec:mixed-qubit-information",
+    "document": "main",
+    "file": "ejs/model.tex",
+    "line": 120,
+    "kind": "subsection",
+    "main_appendix": false,
+    "number": "2.2",
+    "PDF_page": 4,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "eq:pauli-coordinates",
+    "document": "main",
+    "file": "ejs/model.tex",
+    "line": 125,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "2.2",
+    "PDF_page": 4,
+    "claim_groups": [
+      "D01"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:qubit-born-information",
+    "document": "main",
+    "file": "ejs/model.tex",
+    "line": 146,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "2.3",
+    "PDF_page": 5,
+    "claim_groups": [
+      "D02"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "sec:information",
+    "document": "main",
+    "file": "ejs/model.tex",
+    "line": 217,
+    "kind": "subsection",
+    "main_appendix": false,
+    "number": "2.4",
+    "PDF_page": 6,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "sec:information-invariance",
+    "document": "main",
+    "file": "ejs/model.tex",
+    "line": 217,
+    "kind": "subsection",
+    "main_appendix": false,
+    "number": "2.4",
+    "PDF_page": 6,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "eq:classical-fisher-coordinates",
+    "document": "main",
+    "file": "ejs/model.tex",
+    "line": 241,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "2.4",
+    "PDF_page": 6,
+    "claim_groups": [
+      "A04"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "prop:pure-qfi",
+    "document": "main",
+    "file": "ejs/model.tex",
+    "line": 310,
+    "kind": "proposition",
+    "main_appendix": false,
+    "number": "2.1",
+    "PDF_page": 7,
+    "claim_groups": [
+      "T01"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:intrinsic-qfi",
+    "document": "main",
+    "file": "ejs/model.tex",
+    "line": 314,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "2.5",
+    "PDF_page": 7,
+    "claim_groups": [
+      "T01"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:information-invariance",
+    "document": "main",
+    "file": "ejs/model.tex",
+    "line": 353,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "2.6",
+    "PDF_page": 7,
+    "claim_groups": [
+      "D14"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "sec:gm",
+    "document": "main",
+    "file": "ejs/model.tex",
+    "line": 386,
+    "kind": "subsection",
+    "main_appendix": false,
+    "number": "2.5",
+    "PDF_page": 8,
+    "claim_groups": [
+      "P10"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:lossconventions",
+    "document": "main",
+    "file": "ejs/model.tex",
+    "line": 389,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "2.7",
+    "PDF_page": 8,
+    "claim_groups": [
+      "D13"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:gm-budget",
+    "document": "main",
+    "file": "ejs/model.tex",
+    "line": 415,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "2.8",
+    "PDF_page": 8,
+    "claim_groups": [
+      "P01"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:gm-weighted-bound",
+    "document": "main",
+    "file": "ejs/model.tex",
+    "line": 419,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "2.9",
+    "PDF_page": 8,
+    "claim_groups": [
+      "P01"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "tab:loss-summary",
+    "document": "main",
+    "file": "ejs/model.tex",
+    "line": 447,
+    "kind": "table",
+    "main_appendix": false,
+    "number": "1",
+    "PDF_page": 9,
+    "claim_groups": [
+      "D13"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "sec:mixed",
+    "document": "main",
+    "file": "ejs/mixed.tex",
+    "line": 1,
+    "kind": "section",
+    "main_appendix": false,
+    "number": "3",
+    "PDF_page": 9,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "sec:mixed-allocations",
+    "document": "main",
+    "file": "ejs/mixed.tex",
+    "line": 12,
+    "kind": "subsection",
+    "main_appendix": false,
+    "number": "3.1",
+    "PDF_page": 9,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "eq:bures-safeguard",
+    "document": "main",
+    "file": "ejs/mixed.tex",
+    "line": 35,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "3.1",
+    "PDF_page": 9,
+    "claim_groups": [
+      "D04"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:qubitcontroller",
+    "document": "main",
+    "file": "ejs/mixed.tex",
+    "line": 41,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "3.2",
+    "PDF_page": 9,
+    "claim_groups": [
+      "D04"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:qubit-pvms",
+    "document": "main",
+    "file": "ejs/mixed.tex",
+    "line": 59,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "3.3",
+    "PDF_page": 10,
+    "claim_groups": [
+      "D01"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:qubit-householder",
+    "document": "main",
+    "file": "ejs/mixed.tex",
+    "line": 103,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "3.4",
+    "PDF_page": 10,
+    "claim_groups": [
+      "D05"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "alg:mixed-bures",
+    "document": "main",
+    "file": "ejs/mixed.tex",
+    "line": 142,
+    "kind": "algorithm",
+    "main_appendix": false,
+    "number": "1",
+    "PDF_page": 11,
+    "claim_groups": [
+      "D04"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "alg:mixed-frobenius",
+    "document": "main",
+    "file": "ejs/mixed.tex",
+    "line": 165,
+    "kind": "algorithm",
+    "main_appendix": false,
+    "number": "2",
+    "PDF_page": 11,
+    "claim_groups": [
+      "D04"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "sec:mixed-limits",
+    "document": "main",
+    "file": "ejs/mixed.tex",
+    "line": 195,
+    "kind": "subsection",
+    "main_appendix": false,
+    "number": "3.2",
+    "PDF_page": 11,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "eq:mixedtargets",
+    "document": "main",
+    "file": "ejs/mixed.tex",
+    "line": 197,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "3.5",
+    "PDF_page": 11,
+    "claim_groups": [
+      "D05"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "thm:p1",
+    "document": "main",
+    "file": "ejs/mixed.tex",
+    "line": 212,
+    "kind": "theorem",
+    "main_appendix": false,
+    "number": "3.1",
+    "PDF_page": 12,
+    "claim_groups": [
+      "T02"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:p1limit",
+    "document": "main",
+    "file": "ejs/mixed.tex",
+    "line": 224,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "3.6",
+    "PDF_page": 12,
+    "claim_groups": [
+      "T02"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "thm:p1clt",
+    "document": "main",
+    "file": "ejs/mixed.tex",
+    "line": 245,
+    "kind": "theorem",
+    "main_appendix": false,
+    "number": "3.2",
+    "PDF_page": 12,
+    "claim_groups": [
+      "T02"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:p1clt",
+    "document": "main",
+    "file": "ejs/mixed.tex",
+    "line": 248,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "3.7",
+    "PDF_page": 12,
+    "claim_groups": [
+      "T02"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:mixedcovariance",
+    "document": "main",
+    "file": "ejs/mixed.tex",
+    "line": 255,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "3.8",
+    "PDF_page": 12,
+    "claim_groups": [
+      "T02"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "sec:persistent",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 1,
+    "kind": "section",
+    "main_appendix": false,
+    "number": "4",
+    "PDF_page": 13,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "sec:reference-ic",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 32,
+    "kind": "subsection",
+    "main_appendix": false,
+    "number": "4.2",
+    "PDF_page": 14,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "ex:reference-pvm",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 55,
+    "kind": "example",
+    "main_appendix": false,
+    "number": "4.1",
+    "PDF_page": 14,
+    "claim_groups": [
+      "D07"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:phaseunitary",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 81,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "4.3",
+    "PDF_page": 14,
+    "claim_groups": [
+      "D06"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "prop:phasepair",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 112,
+    "kind": "proposition",
+    "main_appendix": false,
+    "number": "4.1",
+    "PDF_page": 15,
+    "claim_groups": [
+      "T03"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:phasepairfisher",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 116,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "4.4",
+    "PDF_page": 15,
+    "claim_groups": [
+      "T03"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "rem:phase-pairing",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 128,
+    "kind": "remark",
+    "main_appendix": false,
+    "number": "1",
+    "PDF_page": 15,
+    "claim_groups": [
+      "D06"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "sec:pure-preliminary",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 145,
+    "kind": "subsection",
+    "main_appendix": false,
+    "number": "4.3",
+    "PDF_page": 15,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "eq:pureridge",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 155,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "4.5",
+    "PDF_page": 15,
+    "claim_groups": [
+      "D08"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "sec:ic-design-algorithm",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 182,
+    "kind": "subsection",
+    "main_appendix": false,
+    "number": "4.4",
+    "PDF_page": 16,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "eq:exact-householder",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 188,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "4.6",
+    "PDF_page": 16,
+    "claim_groups": [
+      "D09"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "sec:pure-tangent-correction",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 259,
+    "kind": "subsection",
+    "main_appendix": false,
+    "number": "4.5",
+    "PDF_page": 17,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "eq:inefficiency-example",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 266,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "4.7",
+    "PDF_page": 17,
+    "claim_groups": [
+      "P13"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:pure-tangent-objective",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 357,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "4.8",
+    "PDF_page": 18,
+    "claim_groups": [
+      "D10"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:pure-normalization",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 363,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "4.9",
+    "PDF_page": 18,
+    "claim_groups": [
+      "A06"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "alg:phase-paired",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 394,
+    "kind": "algorithm",
+    "main_appendix": false,
+    "number": "3",
+    "PDF_page": 19,
+    "claim_groups": [
+      "D09"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "thm:p2",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 443,
+    "kind": "theorem",
+    "main_appendix": false,
+    "number": "4.2",
+    "PDF_page": 20,
+    "claim_groups": [
+      "T04"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:p2limit",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 449,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "4.10",
+    "PDF_page": 20,
+    "claim_groups": [
+      "T04"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "thm:p2efficient",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 475,
+    "kind": "theorem",
+    "main_appendix": false,
+    "number": "4.3",
+    "PDF_page": 20,
+    "claim_groups": [
+      "T04"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:efficientchartCLT",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 490,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "4.11",
+    "PDF_page": 20,
+    "claim_groups": [
+      "T04"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "rem:pure-adaptive-novelty",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 505,
+    "kind": "remark",
+    "main_appendix": false,
+    "number": "2",
+    "PDF_page": 20,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "rem:chart-domain",
+    "document": "main",
+    "file": "ejs/persistent.tex",
+    "line": 526,
+    "kind": "subsection",
+    "main_appendix": false,
+    "number": "4.6",
+    "PDF_page": 21,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "sec:pure-geometry",
+    "document": "main",
+    "file": "ejs/pure_geometry.tex",
+    "line": 1,
+    "kind": "subsection",
+    "main_appendix": false,
+    "number": "4.1",
+    "PDF_page": 13,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "eq:referencechart",
+    "document": "main",
+    "file": "ejs/pure_geometry.tex",
+    "line": 10,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "4.1",
+    "PDF_page": 13,
+    "claim_groups": [
+      "A02"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:general-pure-chart",
+    "document": "main",
+    "file": "ejs/pure_geometry.tex",
+    "line": 30,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "4.2",
+    "PDF_page": 13,
+    "claim_groups": [
+      "A02"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "sec:oracle-loss",
+    "document": "main",
+    "file": "ejs/oracle_loss.tex",
+    "line": 1,
+    "kind": "section",
+    "main_appendix": false,
+    "number": "5",
+    "PDF_page": 21,
+    "claim_groups": [
+      "D11"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "sec:mixed-mean-loss",
+    "document": "main",
+    "file": "ejs/oracle_loss.tex",
+    "line": 3,
+    "kind": "section",
+    "main_appendix": false,
+    "number": "5",
+    "PDF_page": 21,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "sec:pure-mean-loss",
+    "document": "main",
+    "file": "ejs/oracle_loss.tex",
+    "line": 3,
+    "kind": "section",
+    "main_appendix": false,
+    "number": "5",
+    "PDF_page": 21,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "thm:oracle-risk",
+    "document": "main",
+    "file": "ejs/oracle_loss.tex",
+    "line": 39,
+    "kind": "theorem",
+    "main_appendix": false,
+    "number": "5.1",
+    "PDF_page": 21,
+    "claim_groups": [
+      "T05"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:oracle-finite-risk",
+    "document": "main",
+    "file": "ejs/oracle_loss.tex",
+    "line": 46,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "5.1",
+    "PDF_page": 21,
+    "claim_groups": [
+      "T05"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "cor:mixed-mean-loss",
+    "document": "main",
+    "file": "ejs/oracle_loss.tex",
+    "line": 69,
+    "kind": "corollary",
+    "main_appendix": false,
+    "number": "5.2",
+    "PDF_page": 22,
+    "claim_groups": [
+      "T06"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:mixed-oracle-mean-loss",
+    "document": "main",
+    "file": "ejs/oracle_loss.tex",
+    "line": 75,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "5.2",
+    "PDF_page": 22,
+    "claim_groups": [
+      "T06"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "cor:oracle-mean-loss",
+    "document": "main",
+    "file": "ejs/oracle_loss.tex",
+    "line": 90,
+    "kind": "corollary",
+    "main_appendix": false,
+    "number": "5.3",
+    "PDF_page": 22,
+    "claim_groups": [
+      "T07"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "eq:oracle-mean-loss",
+    "document": "main",
+    "file": "ejs/oracle_loss.tex",
+    "line": 94,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "5.3",
+    "PDF_page": 22,
+    "claim_groups": [
+      "T07"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "sec:numerics",
+    "document": "main",
+    "file": "ejs/numerics.tex",
+    "line": 2,
+    "kind": "section",
+    "main_appendix": false,
+    "number": "6",
+    "PDF_page": 23,
+    "claim_groups": [],
+    "classification": "numerical/document anchor; outside Lean numeric verification"
+  },
+  {
+    "label": "eq:numerical-criteria",
+    "document": "main",
+    "file": "ejs/numerics.tex",
+    "line": 26,
+    "kind": "equation",
+    "main_appendix": false,
+    "number": "6.1",
+    "PDF_page": 23,
+    "claim_groups": [
+      "D15"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "sec:simulation-mixed",
+    "document": "main",
+    "file": "ejs/numerics.tex",
+    "line": 54,
+    "kind": "subsection",
+    "main_appendix": false,
+    "number": "6.1",
+    "PDF_page": 24,
+    "claim_groups": [],
+    "classification": "numerical/document anchor; outside Lean numeric verification"
+  },
+  {
+    "label": "app:additional-simulations",
+    "document": "main",
+    "file": "ejs/numerics.tex",
+    "line": 55,
+    "kind": "subsection",
+    "main_appendix": false,
+    "number": "6.1",
+    "PDF_page": 24,
+    "claim_groups": [],
+    "classification": "numerical/document anchor; outside Lean numeric verification"
+  },
+  {
+    "label": "fig:mixed-eight",
+    "document": "main",
+    "file": "ejs/numerics.tex",
+    "line": 77,
+    "kind": "figure",
+    "main_appendix": false,
+    "number": "1",
+    "PDF_page": 24,
+    "claim_groups": [],
+    "classification": "numerical/document anchor; outside Lean numeric verification"
+  },
+  {
+    "label": "sec:simulation-pure",
+    "document": "main",
+    "file": "ejs/numerics.tex",
+    "line": 93,
+    "kind": "subsection",
+    "main_appendix": false,
+    "number": "6.2",
+    "PDF_page": 25,
+    "claim_groups": [],
+    "classification": "numerical/document anchor; outside Lean numeric verification"
+  },
+  {
+    "label": "fig:pure-bures",
+    "document": "main",
+    "file": "ejs/numerics.tex",
+    "line": 119,
+    "kind": "figure",
+    "main_appendix": false,
+    "number": "2",
+    "PDF_page": 25,
+    "claim_groups": [],
+    "classification": "numerical/document anchor; outside Lean numeric verification"
+  },
+  {
+    "label": "sec:discussion",
+    "document": "main",
+    "file": "ejs/discussion.tex",
+    "line": 1,
+    "kind": "section",
+    "main_appendix": false,
+    "number": "7",
+    "PDF_page": 26,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "app:pure-geometry",
+    "document": "main",
+    "file": "ejs/appendix_pure_geometry.tex",
+    "line": 2,
+    "kind": "section",
+    "main_appendix": true,
+    "number": "A",
+    "PDF_page": 26,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "def:pure-projective",
+    "document": "main",
+    "file": "ejs/appendix_pure_geometry.tex",
+    "line": 11,
+    "kind": "definition",
+    "main_appendix": true,
+    "number": "A.1",
+    "PDF_page": 26,
+    "claim_groups": [
+      "A01"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "def:pure-chart",
+    "document": "main",
+    "file": "ejs/appendix_pure_geometry.tex",
+    "line": 45,
+    "kind": "definition",
+    "main_appendix": true,
+    "number": "A.2",
+    "PDF_page": 27,
+    "claim_groups": [
+      "A02"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "def:pure-tangent",
+    "document": "main",
+    "file": "ejs/appendix_pure_geometry.tex",
+    "line": 103,
+    "kind": "definition",
+    "main_appendix": true,
+    "number": "A.3",
+    "PDF_page": 28,
+    "claim_groups": [
+      "A03"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "def:pure-metric",
+    "document": "main",
+    "file": "ejs/appendix_pure_geometry.tex",
+    "line": 141,
+    "kind": "definition",
+    "main_appendix": true,
+    "number": "A.4",
+    "PDF_page": 28,
+    "claim_groups": [
+      "A04"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "def:pure-projection",
+    "document": "main",
+    "file": "ejs/appendix_pure_geometry.tex",
+    "line": 166,
+    "kind": "definition",
+    "main_appendix": true,
+    "number": "A.5",
+    "PDF_page": 29,
+    "claim_groups": [
+      "A05"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "def:pure-retraction",
+    "document": "main",
+    "file": "ejs/appendix_pure_geometry.tex",
+    "line": 190,
+    "kind": "definition",
+    "main_appendix": true,
+    "number": "A.6",
+    "PDF_page": 29,
+    "claim_groups": [
+      "A06"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  },
+  {
+    "label": "app:oracle-main",
+    "document": "main",
+    "file": "ejs/appendix_adaptive_likelihood.tex",
+    "line": 1,
+    "kind": "section",
+    "main_appendix": true,
+    "number": "B",
+    "PDF_page": 29,
+    "claim_groups": [],
+    "classification": "structural/prose anchor; see clause groups for its mathematical content"
+  },
+  {
+    "label": "eq:finite-record-model",
+    "document": "main",
+    "file": "ejs/appendix_adaptive_likelihood.tex",
+    "line": 19,
+    "kind": "equation",
+    "main_appendix": true,
+    "number": "B.1",
+    "PDF_page": 29,
+    "claim_groups": [
+      "D12"
+    ],
+    "classification": "mapped mathematical claim or definition"
+  }
+]

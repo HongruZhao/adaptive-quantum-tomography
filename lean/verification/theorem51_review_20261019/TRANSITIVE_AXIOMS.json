@@ -1,0 +1,82 @@
+{
+  "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1_mixed": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1_pure": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.mixedModel_gillMassar": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.pureModel_gillMassar": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.PureChartData.model_gillMassar": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.score_centered": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.score_identity": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.bind_score": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.bind_scoreEnergy": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptive_scoreEnergy_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.weighted_score_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.FiniteRegularOracle.general_adaptive_oracle_qfi": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.pureAdaptiveModel_exact_mass": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel.mixedAdaptiveModel_exact_mass": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.RandomizedPVM.complete_born_law": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

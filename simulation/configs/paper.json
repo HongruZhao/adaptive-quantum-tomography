@@ -1,0 +1,52 @@
+{
+  "replications": 10000,
+  "root_seed": 2026101602,
+  "ridge": 1.0,
+  "correction_ridge": 1.0,
+  "mixed_truth_radius": 0.9,
+  "mixed_truth_direction": [
+    1.0,
+    2.0,
+    3.0
+  ],
+  "pure_dimension": 4,
+  "pure_truth_phase_increment": 0.37,
+  "optional_covariance_dimensions": [],
+  "optional_reporting_powers": [
+    12,
+    16,
+    20,
+    24
+  ],
+  "error_bar_multiplier": 1.96,
+  "main_batch_schedule": {
+    "kind": "growing",
+    "initial": 16,
+    "minimum": 16,
+    "denominator": 50,
+    "maximum": 16384
+  },
+  "main_reporting_targets": [
+    256,
+    512,
+    1024,
+    2048,
+    3072,
+    4096,
+    5120,
+    6144,
+    7168,
+    8192,
+    9216,
+    10240,
+    11264,
+    12288,
+    13312,
+    14336,
+    15360,
+    16384
+  ],
+  "main_horizontal_axis": "linear",
+  "optional_batch_schedule": "doubling",
+  "optional_maximum_reporting_power": 24
+}

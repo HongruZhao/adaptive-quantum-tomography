@@ -1,0 +1,2386 @@
+{
+  "QubitOracle.AdaptiveDesign.ExactHouseholder.denominator_pos": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.scaledMeanLoss": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureLossDistributions.Statement": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureFisherLoewner.information_gap_congruence": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.averageCriterion": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPOVMClass.toClass": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.tangentLift_adjoint": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.estimate_normalEquation": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ExactHouseholder.denominator_upper": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.phasePair_completed_chart_clt": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.reference": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.phasePair_bures_mean": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ExactHouseholder.matrix": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.hermitianBorel": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.ctorIdx": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.actualEstimate": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperMeanLosses.pureOutput._proof_1": [],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.parametrization_hasDerivative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.zero_mem_source": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.tangentLift._proof_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperMeanLosses.pure_bures_comm": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ProjectiveStateManifold.real_dimension": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.gaussian._proof_1": [
+    "propext"
+  ],
+  "QubitOracle.AdaptiveDesign.WeightedInformationOptimization.weighted_trace_lower": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.controller_eventually_eq": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureFisherLoewner.scalar_effect_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.estimate": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PhasePair.frameOperator_transport": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.identifying": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Conclusions.ambient_normality": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ProjectiveStateManifold.projectorManifold": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.informationTarget": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError_secondOrder": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.ambientRetraction_tangent": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperMeanLosses.corollary_5_3": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.tangent_finrank": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.correction_minimizes": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PhasePair.paired_effect_false": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PhasePair.RankOne": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.actual_raw_eq_recordRawFit": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.mk.injEq": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Conclusions.average_information": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.mk.injEq": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MixedPaperAxisOrder.paperOrder": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.GeneralPOVM.rawEstimator": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.amplitude_clt_of_projector_clt": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.dimension_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PhasePair.paired_effect_true": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.QubitEffectRepresentation.effect_reconstruction": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.p1_main": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight_nonneg": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.POVMEstimatorMoments.preliminary_uniformMoment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureLossDistributions.phasePair": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperBasisBound.one_basis_not_spanning": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem31.last_refresh_at_batch_endpoint": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.corrected": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.fubiniStudy._proof_10": [
+    "propext"
+  ],
+  "QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.OneQubitPhysicalParameter": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Conclusions.conditional_information": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.criteria_positive_batches": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.bilinear_coordinate_congruence": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.Loss.squaredFrobenius": [],
+  "QubitOracle.AdaptiveDesign.P1Weighted.bures_raw_fourthMoment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_in_domain": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.Loss.squaredFrobenius.elim": [],
+  "QubitOracle.AdaptiveDesign.PureFisherLoewner.actual_fisher_loewner": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Conclusions.raw_root_rate": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.mk._flat_ctor": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.ProjectiveStateGeometry.unitPhaseSetoid_iff": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.extension_measurable": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.parametrization_at_truth": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.inverse_smooth": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.lifted_score": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperBasisBound.reducedFamily": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.fubiniStudy._proof_2": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.mk": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.batches_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.jacobian": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_lift": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_actualBorn_information": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.Loss._sizeOf_1": [],
+  "QubitOracle.AdaptiveDesign.GeneralPOVM.bornProbability": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.FinitePOVM": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureFisherLoewner.weightedGram_quadratic": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.AffineProjectorCharts.chart": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.QuantumFidelityBridges.pure_bures": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperBasisBound.necessary_number_of_bases": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.fubiniStudy._proof_4": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseChartedSpace": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.fubiniStudy._proof_5": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.quantumBuresDistanceSq": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem31.weights_in_batch": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SequentialRidgeController.batchRefresh": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.denominator": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.positive_batches_normal": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.measure._proof_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseChart": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.change": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalizedVector": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.QuantumModel": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.trueChart_is_pure": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.ProjectiveStateGeometry.phase_action_free": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.limitLaw_gaussian": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.fubiniStudy_horizontal": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.tangentCoordinateEquiv": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.ambient_clt": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.limitLaw_tangent_covariance": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.horizon": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherBilin": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_fisher_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.derivativeEquiv._proof_3": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.derivativeEquiv": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.mk.inj": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.POVMEstimatorMoments.corrected_uniformMoment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.rawEstimator_rootTight": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseChart_formula._simp_1_7": [
+    "propext"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem31.label_order": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.QubitEffectRepresentation.reconstruction": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.mixed_quantumInformation": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.gramCLM_eq_matrix": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.eta": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.raw": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.GeneralPOVM.Identifying": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.fubiniStudy": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Conclusions.mk": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.chart_amplitudeCoordinates": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.regular": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPOVMClass.Policy": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints.mixed_bures_mean": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperBasisBound.necessary_number_of_bases._proof_1_1": [
+    "propext",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.recordRawFit_unique_minimizer": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPOVMClass.relabel_effect": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.normalization_retraction_smooth": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Conclusions.mk._flat_ctor": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.quantumInformation_eq_four_fubiniStudy": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperMeanLosses.pureOutput": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseChart_formula._simp_1_2": [
+    "propext"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.fubiniStudy._proof_6": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.hermitianBorel": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.QubitEffectRepresentation.vector_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.AffineProjectorCharts.charts_cover": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseChartedSpace._proof_2": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.fubiniStudy_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.QubitEffectRepresentation.ofPOVM": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalized_vector_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.correction_normalEquation": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.measure.congr_simp": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem31.action_in_batch": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.parametrization.eq_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.scaledMeanLoss_eq": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_excess": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Conclusions.ambient_tangent_support": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.reference_probability": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PhasePair.paired_conditions": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.AffineProjectorCharts.chart_transition_smooth": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.POVMEstimatorMoments.raw_uniformMoment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MixedPaperAxisOrder.paper_bures_weights": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperMeanLosses.hermitianBorel": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.lambda": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.information_eq_safeRatio": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem31.axes_between_refresh": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.PureMultilevelMatrixTraceDistance.pure_quantumTraceDistance_sq_eq_half_frobenius": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureFisherLoewner.direction_normSq": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptive_information_eq_expected_sum": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Conclusions.ambient_centered": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SequentialRidgeController.consistent_estimate_at_batch_refresh": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.controller_normal": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.GeneralPOVM.regressionFrame": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.lambda_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.fubiniStudy._proof_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.derivativeEquiv._proof_4": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseToProjector_smooth._simp_1_1": [
+    "propext"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.probability": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_normalEquation": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SmoothBornInformation.equals_intrinsic": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.WeightedInformationOptimization.trace_cauchy_schwarz": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem31.theorem_3_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SequentialRidgeController.batchBoundary": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ExactHouseholder.vector": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem31.axes_at_refresh": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.inverse_congruence": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Conclusions.ambient_gaussian": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PhasePair.paired_frame_coercive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.FiniteRegularOracle.general_adaptive_oracle_qfi": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.extension.eq_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.pairedRegular": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureFisherLoewner.direction_gradient": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_symmetric": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseToProjector_smooth": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.limitLaw_mean": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperMeanLosses.corollary_5_2": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_chart": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperBasisBound.effects_mem_reduced_span": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.fubiniStudy_horizontal_complex": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPOVMClass.relabel._proof_2": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.chartState": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureChartCovariance.qfi_is_sld": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseChart_formula._simp_1_5": [
+    "propext"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.updatedState_matrix_formula": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.currentCriterion": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.normalization_retraction_joint_smooth": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MixedRelativeInformation.eigenvalues_in_unit_interval": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseChartedSpace._proof_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem31.axes_use_held_estimate": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.sldPairing": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.extension_agrees_locally": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.updatedState_exact_remainder": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseChart_formula._simp_1_1": [
+    "propext"
+  ],
+  "QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.chart_transition_derivative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.WeightedInformationOptimization.weighted_trace_product": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.frobenius_raw_fourthMoment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.updatedState": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperMeanLosses.hermitianMeasurable": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.born_hasFDerivAt": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PositiveEffectSchur.trace_saturation_rankOne": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PurePOVMMeanLoss.phasePair": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.WeightedInformationOptimization.inverse_congruence": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Conclusions": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureChartCovariance.covariance_eq_twice_inverse_qfi": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.Loss.ctorElimType": [],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseChart.eq_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.inverse_comp_jacobian": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalizedPOVM_constraints": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.GeneralPOVM.adaptive_consistency": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.gaussian": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.WeightedInformationOptimization.whitened_trace": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.derivativeEquiv._proof_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MultinomialGLSIdentity.covariance_identity": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperMeanLosses.mixedOutput": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector_leadingEigenvector": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.tangentSpace_mem": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.ambient_clt": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.Loss.value": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.alignedRay": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.actualRecords": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem31.last_refresh_in_batch._proof_1_4": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.squaredFrobenius": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem31.last_refresh_in_batch": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.Loss.value.match_1": [],
+  "QubitOracle.Paper.MainPaperPureLimits.limitLaw_covariance": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.residual_mean": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.tangentLift._proof_2": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.PureQuantumInformation.proposition_2_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_qubit": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PhasePair.gate": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.tangentLift.eq_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.trueChart_injectiveOn_ball": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.reference": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.information": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.positive_batches_consistency_information": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseProjectorHomeomorph._proof_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.frobenius_mean": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1.batchEndpoint": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.Coordinates": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.scaledMeanLoss.eq_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.normalization_retraction_derivative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.quantumFidelity": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm_nonnegative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.QuantumFidelityBridges.pure_fidelity": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.mixedModel_information": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.correction": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.parametrization": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Conclusions.alignment_consistent": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.tangentLift": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.quantumTraceDistance_sq_eq_half_hilbertSchmidtSq_all_qubits": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.batches": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ExactHouseholder.phase": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureFisherLoewner.effect_cauchy_schwarz": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.controller_fourthMoment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.derivativeEquiv._proof_5": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureSLDMetric.normalized_metric": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.reference_fisher": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.GeneralPOVM.Regular": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.mk": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.controller": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.batch_horizons_tendsto": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Conclusions.preliminary_consistent": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.clip_normSq": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.corrected_stronglyConsistent": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.chartState_normalized": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.FiniteDensityMatrix": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseManifold": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.trueChart_hasFDerivAt_zero": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ReferenceIdentificationSpanning.identifying_iff_span": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.eta_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.tangentSpace": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.completed_batches_normal": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.Loss.ctorIdx": [],
+  "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1_mixed": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer_optimal": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_in_smoothChart": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.recordCorrection": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SmoothBornInformation.ambientForm": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.extension_zero": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.LocallyUnbiased": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MixedPaperAxisOrder.paper_frobenius_weights": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.ofNeighborhood": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureSLDMetric.metricFromSLD": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ProjectiveProjectorEquivalence.rayToProjector_inverse_range": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.chart_sld_metric": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseChart_formula": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperMeanLosses.pureOutput.congr_simp": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.limitLaw": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.fubiniStudy_apply": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseCompact": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem31.instNonemptyLabeledBinaryOutcome_mainPaperTheorem31": [
+    "propext"
+  ],
+  "QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.score_identity": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPOVMClass.History": [],
+  "QubitOracle.AdaptiveDesign.ExactHouseholder.matrix_unitary": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.inverseJacobian": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MixedRelativeInformation.all_qubit_relative_eigenvalues": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.Loss.toCtorIdx": [],
+  "QubitOracle.AdaptiveDesign.QubitEffectRepresentation.pauliLinear_real_smul": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates._sizeOf_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.optimal_criterion_value": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.limitingCovariance_weightedTrace": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_idem": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.projectorToPhase_smooth._simp_1_1": [
+    "propext"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.protocol._proof_1": [],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.Loss.squaredFrobenius.sizeOf_spec": [],
+  "QubitOracle.AdaptiveDesign.QuantumFidelityBridges.qubit_fidelity_bloch": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.fubiniStudy._proof_7": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureMatrixController.nearest_iff_maximizes_rayleigh": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation_lipschitz": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.fubiniStudy._proof_9": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ProjectiveProjectorEquivalence.rayToProjector_formula": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Conclusions.ambient_covariance": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.phasePair_smoothChart_optimalVariance": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Conclusions.chart_sld_information": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MixedRelativeInformation.relative_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseToProjector_smooth._simp_1_2": [
+    "propext"
+  ],
+  "QubitOracle.AdaptiveDesign.SmoothBornInformation.ambient_smooth": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.pure_metric_horizontal": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisherForm": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem31.shared_axis_construction": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SmoothBornInformation.smooth_pullback": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MixedRelativeInformation.information_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.rankOne_reference_gillMassar": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.radius": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.measure_probability": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.GeneralPOVMRootRate.stateEstimator_rootTight": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ExactHouseholder.matrix_firstColumn": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.limitLaw.eq_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.jacobian_comp_inverse": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseClassProjector_continuous": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureLossDistributions.doubled_gaussian_norm_law": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPOVMClass.relabel": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer_properties": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.projectorToPhase_smooth": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.WeightedInformationOptimization.trace_inner": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Conclusions.corrected_consistent": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.QubitEffectRepresentation.normalized_reconstruction": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate_projection": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs._sizeOf_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureFisherLoewner.rotated": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_limits": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperBasisBound.span_dimension_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.phasePair_completed_ambient_clt": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem31.instMeasurableSpaceLabeledBinaryOutcome_mainPaperTheorem31": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1_pure": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.mk._flat_ctor": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Conclusions.chart_covariance": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseChart_formula._simp_1_4": [
+    "propext"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem31.axes_in_batch": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.protocol": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.sldPairing_independent": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseChart_formula._simp_1_3": [
+    "propext"
+  ],
+  "QubitOracle.Paper.MainPaperPOVMClass.POVMClass": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.estimate_unique_minimizer": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureMatrixController.tangentProjector_doubleCommutator": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureFisherLoewner.directional_information_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.updatedState_phase_invariant": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Conclusions.chart_normality": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPOVMClass.relabel._proof_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.extension_hasDerivative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.normal_error": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.residual_second_moment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates._sizeOf_inst": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.WeightedInformationOptimization.gillMassar_weighted": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.mk.sizeOf_spec": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.Coordinates": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.extension": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MixedRelativeInformation.relativeInformation": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.objective": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.parametrization_sld": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.weight": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.derivativeEquiv._proof_2": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.fittedCorrection_exact_cancellation": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.actualProjectorError_linearization": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem31.last_refresh_in_batch._proof_1_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PhasePair.gate_unitary": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.QubitEffectRepresentation.vector": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.basis_charts_cover": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.identifying": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.Loss.squaredBures.elim": [],
+  "QubitOracle.Paper.MainPaperTheorem42.hermitianMeasurable": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.measure": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.qubit_interior_gillMassar": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.referenceAction": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPOVMClass.toClass_effect": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SequentialRidgeController.batchRefresh_lastRefresh_tendsto": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.FiniteRegularOracle.Record": [],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.paired": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.Loss.ctorElim": [],
+  "QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_information_le_identity": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PhasePair.paired_fisher_of_rankOne": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.limitLaw_tangent_support": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.Loss.squaredBures.sizeOf_spec": [],
+  "QubitOracle.Paper.MainPaperGeometry.fubiniStudy._proof_8": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PVMGeometry.single_pvm_span_dimension": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseChart_formula._simp_1_6": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.FiniteRegularOracle.adaptiveExperiment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel.score": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.trace_information_invariant": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperMeanLosses.instNonemptyLabeledBinaryOutcome": [
+    "propext"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.inverse_hasDerivative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.local_projector_curve_velocity": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_chart": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.hasDerivative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.Loss.squaredBures": [],
+  "QubitOracle.Paper.MainPaperBasisBound.one_basis_not_spanning._proof_1_1": [
+    "propext",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.FiniteFrameCoercivity.exists_uniform_transport_coercivity": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.fubiniStudy_symmetric": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.projectorToPhase_smooth._simp_1_2": [
+    "propext"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem31.last_refresh_in_batch._proof_1_3": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.preliminary": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_self": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PositiveEffectSchur.remainder_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.FiniteRegularOracle.RegularModel": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.fullRecordEstimate_permutation": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.observedGram_tendsto": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.QubitLocalInformation.axisInformation_matrix": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.qubitDensityMatrix": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.WeightedInformationOptimization.sqrt_transpose": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Conclusions.preliminary_root_rate": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.QubitEffectRepresentation.weight": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.Loss": [],
+  "QubitOracle.Paper.MainPaperMeanLosses.instMeasurableSpaceLabeledBinaryOutcome": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MixedRelativeInformation.relative_trace": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperMeanLosses.qubit_bures_comm": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.WeightedInformationOptimization.sqrt_posDef": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureSLDMetric.metricFromSLD_eq": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureFisherLoewner.complexDirection": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperNumericalDefinitions.Loss._sizeOf_inst": [],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phase_transition_smooth": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseProjectorHomeomorph": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.covariance_eq_information_inv": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs._sizeOf_inst": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Conclusions.raw_consistent": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.fubiniStudy_coordinate_smooth": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperMeanLosses.mixedOutput._proof_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.QubitEffectRepresentation.probability_is_born": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_quadratic": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureTangentCurves.every_tangent_is_smooth_curve_derivative": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.referenceFloor": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.fubiniStudy._proof_3": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPhaseQuotient.phaseProjectorDiffeomorph": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureFisherLoewner.reference_fisher_loewner": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.covarianceTarget": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.QubitEffectRepresentation.scaled_normalized": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ProjectiveStateManifold.rayProjectorDiffeomorph": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.ctorIdx": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureLimits.hermitianMeasurable": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.sandwich_identity": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.WeightedInformationOptimization.minimizer": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.weighted_covariance_trace_invariant": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.QubitEffectRepresentation.all_qubit_gillMassar": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.clip": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.mk.sizeOf_spec": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.tangentVector_add": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.designCriterion": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.mk.inj": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.pairedIdentifying": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.policy": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ScheduledRidgeController.pathState_estimate_eq_ridgeEstimate": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.tangent_inner_horizontal": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.ridgeObjective": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ProjectiveProjectorEquivalence.PureProjector": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry.fisher_coordinate_congruence": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.InformationCoordinateInvariance.information_ratio_congruence": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperGeometry.ambientRetraction": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperBasisBound.reducedFamily.match_1": [],
+  "QubitOracle.Paper.MainPaperPOVMClass.relabel.eq_1": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.correction_unique": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.theorem_4_2": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem42.Inputs.rankOne": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.tangentVector_orthogonal": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.covariance_in_ambientSpace": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.smooth": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.WeightedInformationOptimization.congruence_posDef": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperPureCharts.SmoothCoordinates.parametrization_locally_physical": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.GeneralPOVM.exists_uniform_regression_coercivity": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.Paper.MainPaperTheorem31.last_refresh_in_batch._proof_1_2": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

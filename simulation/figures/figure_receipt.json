@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "replications": 10000,
+  "new_simulation_run_by_plotter": false,
+  "pure_design_panel": "Mean per-record criteria over all original pure loss replicates",
+  "pure_design_means_and_MCSEs_recomputed": true,
+  "pure_design_seed_selection": false,
+  "source_design_samples_sha256": "5ca85d70fe8d748958744ddc21d0c58c437ab7b072438b9b3c937bef593ba1da",
+  "source_design_summary_sha256": "b4335fd051688f0c492ddc91fc8628fa9e57d6ae47bd44b3209aa8befada07f4",
+  "saved_primary_means_and_MCSEs_recomputed": true,
+  "saved_optional_covariance_bias_loss_and_paired_diagnostics_recomputed": true,
+  "Matplotlib": "3.9.4",
+  "source_results_sha256": "d9496566e25279f885c5cddac10b9476cf72443af1219caa68f3389129ba64ed",
+  "files": {
+    "figure1_mixed.pdf": "30ce5ae64fbb48f5f8680f8439d5fc23c8eda205dc107b9e50cda9a01cef9d2e",
+    "figure1_mixed.png": "f209fea6bd9037d93737763c2cff6501b85b51eb63ad9f1204f3e44e86c09a95",
+    "figureS_covariance.pdf": "cb6b528e90a9b0c04f56125217e6c272b8d8f6c87be3acab1f278cefe3803a69",
+    "figure2_pure_bures.png": "c2946b6ee328130af4f1059f9d72eb01e209bbf1025223af5a9778fe1fa050fb",
+    "figure2_pure_bures.pdf": "da33e5e21de7ef3e80c976f7d4add5bb3236ad5676823ba2c37dfddda66d4d1a",
+    "figureS_covariance.png": "ae0439a9167dff3820c0a85e1738ec814b341e65e63bbcf1ee955fb1e1986f62"
+  }
+}

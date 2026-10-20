@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-10-17T05:57:26.803689+00:00",
+  "package_version": "1.1.0",
+  "unresolved_discrepancies": [],
+  "resolved_discrepancies": [
+    "Fresh D=2 optional variance and table values replaced the earlier release values.",
+    "Optional initial vector e0 is now explicitly stated."
+  ],
+  "full_run_repeated_by_reviewer": false,
+  "full_saved_arrays_independently_checked": true,
+  "replications_per_study": 10000,
+  "studies": [
+    "mixed_bures",
+    "mixed_frobenius",
+    "pure_algorithm3",
+    "optional_D2",
+    "optional_D4"
+  ],
+  "official_run_seconds": 629.720839125,
+  "all_printed_numerical_cells_checked": true,
+  "printed_numerical_claims": {
+    "mixed_F": {
+      "mean": 2.9725502314451804,
+      "MCSE": 0.025239554237067675,
+      "printed_mean": "2.9726",
+      "printed_MCSE": "0.0252"
+    },
+    "mixed_B": {
+      "mean": 2.296081780459952,
+      "MCSE": 0.018800545955996215,
+      "printed_mean": "2.2961",
+      "printed_MCSE": "0.0188"
+    },
+    "pure_corrected_B": {
+      "mean": 3.0187922100325535,
+      "MCSE": 0.017362852879935258,
+      "printed_mean": "3.0188",
+      "printed_MCSE": "0.0174"
+    },
+    "pure_preliminary_B": {
+      "mean": 6.57031727084866,
+      "MCSE": 0.03969265668429958,
+      "printed_mean": "6.5703",
+      "printed_MCSE": "0.0397"
+    },
+    "optional_D2_variances": "(1.3381,0.9935)",
+    "optional_D2_uncorrected_table_row": "2 & Uncorrected & 1.325, 1.352 & 0.013 & 2.676 (0.027)",
+    "optional_D2_corrected_table_row": "2 & Corrected & 0.984, 1.004 & 0.016 & 1.987 (0.020)",
+    "optional_D4_variances": "(1.2831,0.9933)",
+    "optional_D4_uncorrected_table_row": "4 & Uncorrected & 1.233, 1.252, 1.264, 1.292, 1.312, 1.346 & 0.016 & 7.698 (0.045)",
+    "optional_D4_corrected_table_row": "4 & Corrected & 0.942, 0.970, 0.983, 1.013, 1.019, 1.033 & 0.013 & 5.959 (0.035)"
+  },
+  "acquisition_reporting_and_all_record_formulas_correspond": true,
+  "citation_attribution_checked": true,
+  "runtime_and_config_match_pre_run_review_and_full_receipt": true,
+  "primary_actual_axes_linear_optional_axes_logarithmic": true,
+  "independent_figure_PNGs_byte_identical": true,
+  "active_paper_PDF_artwork_matches_official_package": true,
+  "package_documentation_checked": true,
+  "optional_replay_cause_evidence": "Identical optional source/formulas, seed, truth and schedule; D=2 replicate 8 reproduces both saved runs. At batch9 the PCG64 states match before the call, input probabilities differ by 5.1e-17, and counts/subsequent PCG64 states diverge. Internal binomial cache and precise allocation cause were not isolated.",
+  "evidence_boundary": "Finite-array and implementation correspondence review; no new asymptotic proof, hardware validation, Lean build, archive extraction or SSD manifest validation by this reviewer.",
+  "sha256": {
+    "source/paper/ejs/numerics.tex": "220303314788b34b9c67347526fd19e526d99ef638e27d4424919637dead3ce3",
+    "source/paper/ejs/supplement_examples.tex": "3da14891d6152aa79901c8206ac4cc83a30e96b73c10affc76d19dee2937f57b",
+    "source/paper/ejs/discussion.tex": "6c1d0bbf074c66542109e7ca63ec2396eb6a13b529235afd979998df4aecf69f",
+    "source/paper/ejs/references.bib": "579ac31ce6f7fafafdb8035b650003614ea7d006d1da71369289ffd2dd939ed2",
+    "submission_20261017/python/README.md": "78d95f2ed1df593a179cc5ac938562f1a6f38ae3479c92e960d8ce5dd43822ca",
+    "submission_20261017/python/docs/REPRODUCIBILITY.md": "f4587eb54e081363ad4ad318019de86278811186ac0f4a95debb41549363fcea",
+    "submission_20261017/python/docs/ALGORITHM_CORRESPONDENCE.md": "f9eac8a63d99d41e9238dbdcad1d82bda273cc5285bb2ea8608ba689331cce55",
+    "submission_20261017/python/results/paper/run_receipt.json": "edce242a2cb638a03e6e1036a208806b207ae0c62b09c469b4acc9f4c6126d6b",
+    "submission_20261017/python/figures/figure_receipt.json": "2743e76a3211f1ba60589df5198100d7c080f4d9b7f733c840828b2dc07e8306",
+    "audit/PRACTICAL_GROWING_BATCHES_LINEAR_FIGURES_20261017/INDEPENDENT_ARRAY_CHECKS.json": "e50ef9f22916228abd179830447e29af15c9b96078bd4f3c7748f2f245f942f8",
+    "audit/PRACTICAL_GROWING_BATCHES_LINEAR_FIGURES_20261017/INDEPENDENT_APPARATUS_CHECK.json": "85b4baa20dda46e1b3ac79e6903b3e57f70caa41d033ec9dfecc8c2098d9e987",
+    "audit/PRACTICAL_GROWING_BATCHES_LINEAR_FIGURES_20261017/INDEPENDENT_FULL_FIGURE_CHECK.json": "80f6dae35beeba0b70403b2183ef4e5a21276f033c6e721e42157dcf772b1277",
+    "audit/PRACTICAL_GROWING_BATCHES_LINEAR_FIGURES_20261017/INDEPENDENT_OPTIONAL_REPLAY_CHECK.json": "fdd97b8478050a3035910a6e81d8785a8c967bcad3f479f8950150eea0cd71ad",
+    "audit/PRACTICAL_GROWING_BATCHES_LINEAR_FIGURES_20261017/INDEPENDENT_FINAL_REVIEW.md": "7d0bb3fe9f78f7ab0901ada8f15c50dd1792a5dac701bbcb62c8efd70dfcf681",
+    "audit/PRACTICAL_GROWING_BATCHES_LINEAR_FIGURES_20261017/check_full_results_independent.py": "e9ae777aa0a7aee4b655d7201766dc94ebc246e8f1e64ef29b9c758b9e970c27",
+    "audit/PRACTICAL_GROWING_BATCHES_LINEAR_FIGURES_20261017/check_full_figures_independent.py": "224ce954bef2453f88884c8478fbc1e12a4225ebc968fc8155184744459714a4",
+    "audit/PRACTICAL_GROWING_BATCHES_LINEAR_FIGURES_20261017/check_optional_replay.py": "1816db4f331e44d481c804dd0f34773049d9d9e4eabb16e4ef3f9ff9f2ae8d1c"
+  }
+}

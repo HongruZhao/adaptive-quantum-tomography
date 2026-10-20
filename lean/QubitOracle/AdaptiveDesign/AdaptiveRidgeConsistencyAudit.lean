@@ -1,0 +1,6 @@
+import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
+
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw.actualResponse_condExp_zero
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw.actualResponse_average_ae_tendsto_zero
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency.actualVectorResponse_average_ae_tendsto_zero
+#print axioms QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency.actualRidgeEstimate_tendsto_ae

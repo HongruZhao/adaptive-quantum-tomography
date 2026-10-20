@@ -1,0 +1,23 @@
+name = "adaptive_tomography"
+version = "0.1.0"
+defaultTargets = ["AdaptiveTomography", "MainPaperAudit"]
+
+[[lean_lib]]
+name = "QubitOracle"
+
+[[lean_lib]]
+name = "AdaptiveTomography"
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "641fbd329d4ffb62bef83c51f54088469056bd36"
+
+[[lean_lib]]
+name = "MainPaper"
+
+[[lean_lib]]
+name = "MainPaperTheorem31"
+
+[[lean_lib]]
+name = "MainPaperAudit"

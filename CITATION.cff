@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying manuscript when using these research materials."
+title: "Adaptive quantum tomography by least squares with optimal asymptotic covariance: research companion"
+type: software
+url: "https://github.com/HongruZhao/adaptive-quantum-tomography"
+repository-code: "https://github.com/HongruZhao/adaptive-quantum-tomography"
+authors:
+  - family-names: Zhao
+    given-names: Hongru
+  - family-names: VandenBerg
+    given-names: Robert Oliver
+preferred-citation:
+  type: article
+  title: "Adaptive quantum tomography by least squares with optimal asymptotic covariance"
+  authors:
+    - family-names: Zhao
+      given-names: Hongru
+    - family-names: VandenBerg
+      given-names: Robert Oliver
+  year: 2026

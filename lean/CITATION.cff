@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying paper when using these proof sources."
+title: "Adaptive quantum tomography by least squares with optimal asymptotic covariance: main-paper Lean proof sources"
+type: software
+authors:
+  - family-names: Zhao
+    given-names: Hongru
+version: 0.2.0
+date-released: 2026-10-17
+license: MIT
+
+preferred-citation:
+  type: article
+  title: "Adaptive quantum tomography by least squares with optimal asymptotic covariance"
+  authors:
+    - family-names: Zhao
+      given-names: Hongru
+    - family-names: VandenBerg
+      given-names: Robert Oliver
+  year: 2026
