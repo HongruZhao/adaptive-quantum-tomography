@@ -198,7 +198,7 @@ where $C_{\mathrm{GM}}$ is defined in (2.9).
 
 **Proved conclusion:** `oracleConstant W M.quantumInformation (M.systemDimension-1) ≤ n * quadraticRisk W T`, with quantum information derived from the actual model. The Born regularity, score identities and Gill–Massar information inequality are proved internally. The finite decision-tree/finite-sum proof establishes the scalar whitened-information consequence needed for the risk bound; the paper's sigma-field notation is not a separate Lean object. The theorem permits singular positive-semidefinite weights and does not invert classical record information.
 
-**Verification:** group **T05**. On **20 October 2026**, the combined theorem and both model-specific alternatives were freshly source-compiled, their exact types and transitive axioms checked, and both defining endpoint modules kernel replayed. See the [endpoint receipt](lean/verification/20261020/MAIN_ENDPOINT_CHECKS.json). The [19 October focused check](lean/verification/theorem51_review_20261019/EXECUTION_CHECKS.json) remains separately dated historical evidence.
+**Verification:** group **T05**. On **20 October 2026**, the combined theorem and both model-specific alternatives were freshly source-compiled, their exact types and transitive axioms checked, and both defining endpoint modules kernel replayed. See the [endpoint receipt](lean/verification/20261020/MAIN_ENDPOINT_CHECKS.json).
 
 ## Corollary 5.2 — Mixed-qubit expected-loss attainment
 
@@ -250,6 +250,8 @@ Under the hypotheses of Theorem 4.3, the reported tangent-corrected projector of
 
 ## What was actually verified
 
+**Official verification record: 20 October 2026.**
+
 The statements above are tied to the documented source-level semantic correspondence, not just similarly named identifiers. The [ledger](lean/docs/MAIN_PAPER_CORRESPONDENCE.json) has **43 claim groups and 211 selected endpoints**; all 211 occur in the freshly checked 498-declaration inventory. The current nine displayed main results use groups T01–T07: two groups each bundle a pair of current theorem numbers.
 
 | Dated evidence | Established scope | Boundary |
@@ -260,8 +262,6 @@ The statements above are tied to the documented source-level semantic correspond
 | [20 October 2026: numerical reproduction](simulation/verification/20261020/EXECUTION_CHECKS.json) | All saved principal arrays compared only after fresh generation: mixed arrays bitwise identical; maximum pure scaled-loss difference **6.79 × 10⁻¹¹**, within recorded tolerance; separate observation instrumentation checked **1,818 new multinomial draws** | Pure arrays are not claimed bitwise identical; a simulation is not a proof of the asymptotic theorems |
 | [20 October 2026: independent simulation audit](simulation/verification/20261020/INDEPENDENT_ALGORITHM_AUDIT.md) | Separate source-to-paper review and **five independent check groups** passed: dense objective reconstruction, physical Born probabilities, truth-blind estimation, edge cases, and fresh altered-seed generation with saved-array loading disabled; no main-algorithm mismatch or manufactured-result path found | Independent finite checks and code review, not mechanical verification of Python or proof that every possible bug is absent |
 | [20 October 2026: statement and source preservation](lean/verification/20261020/ENDPOINT_INDEPENDENT_REVIEW.md) and [final hash guard](lean/verification/20261020/FINAL_PRESERVATION.json) | All nine printed statements and explicit Lean hypotheses independently reviewed; paper, all 633 Lean sources and numerical implementation preserved | Semantic correspondence is independently reviewed; it is not a mechanized LaTeX-to-Lean translation |
-
-The [17 October build](lean/verification/VERIFICATION_SUMMARY.json) and [19 October focused review](lean/verification/theorem51_review_20261019/EXECUTION_CHECKS.json) retain their original dates. The new evidence above was actually executed on **20 October**, in both UTC and America/Chicago. A stale expected hash for the unchanged `lakefile.toml` initially stopped a local preflight before Lean execution; [only verification metadata was repaired](lean/verification/20261020/VERIFICATION_METADATA_REPAIR.json), with the failed preflight preserved. No proof source or build definition changed.
 
 For the selected audited endpoint dependencies, the only axioms are `propext`, `Classical.choice`, and `Quot.sound`; no `sorryAx` or scientific input axiom occurs in those selected sets. The [full retained tree](lean/) has 633 canonical source files and also contains historical material: [twelve legacy scientific axiom leaves](lean/verification/LEGACY_AXIOM_INVENTORY.json) are documented outside the selected endpoint dependencies. Source presence does not establish a statement match or a fresh verification of every declaration.
 

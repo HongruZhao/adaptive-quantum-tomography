@@ -67,6 +67,8 @@
     }
   },
   "paper_pdf_sha256": "047cf51621838e36fd8d32b4a41b4ace8210c660c0c4ea873b7922ee3547959e",
-  "main_results_markdown_sha256": "e5025c976b6e362f76460578d96d7ec432b4126290c75ca0a9f1859c32b784c5",
-  "scope": "Paper wording, mathematics, numbering, proofs, all 633 Lean sources, numerical implementation/configurations/tests, original build definition/pins and historical arrays preserved. Documentation/evidence and one stale expected build-input hash are the only intentional edits."
+  "main_results_markdown_sha256": "d294f76cff5d5646a0a5998fd2123fe256643113007dd28d3022414253f35236",
+  "scope": "Paper wording, mathematics, numbering, proofs, all 633 Lean sources, numerical implementation/configurations/tests, original build definition/pins and historical arrays preserved. Documentation/evidence and one stale expected build-input hash are the only intentional edits.",
+  "documentation_rechecked_utc": "2026-10-20T13:57:14.669303+00:00",
+  "documentation_update": "At the author request, MAIN_RESULTS identifies 20 October as the official verification record and omits earlier-check discussion. All nine statement blocks, mathematical sources and execution receipts remain unchanged."
 }
