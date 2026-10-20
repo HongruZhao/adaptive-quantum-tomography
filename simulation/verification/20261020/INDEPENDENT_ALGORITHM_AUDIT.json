@@ -1,0 +1,126 @@
+{
+  "status": "PASS",
+  "review_date_America_Chicago": "2026-10-20",
+  "started_utc": "2026-10-20T07:06:10.071716+00:00",
+  "completed_utc": "2026-10-20T07:06:11.448964+00:00",
+  "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+  "numpy": "1.26.4",
+  "checks": {
+    "mixed_dense_record_replay": {
+      "rules": 2,
+      "batches_per_rule": 4,
+      "copies_per_rule": 128,
+      "objective": "individual binary records + augmented dense least squares",
+      "loss_check": "independent 2x2 density matrices and matrix-square-root Bures"
+    },
+    "pure_dense_record_replay": {
+      "dimension": 4,
+      "batches": 4,
+      "copies": 128,
+      "maximum_loss_difference": 1.4637180356658064e-12,
+      "objective": "expanded full categorical objective; independent Gram-Schmidt tangent basis; augmented least squares"
+    },
+    "metamorphic_and_adversarial": {
+      "reference_dimensions": [
+        2,
+        3,
+        4,
+        7
+      ],
+      "householder_vectors": 16,
+      "scaled_record_and_ridge_equivariance": true,
+      "ambient_unitary_equivariance_of_preliminary_fit": true,
+      "active_probability_clipping_dense_objective": true,
+      "physical_branch_basis_Born_law_all_104_labels": true,
+      "algebraic_eigenvalue_and_exact_tie_checks": true
+    },
+    "fixed_record_truth_blindness": {
+      "mixed_both_rules_same_records_identical_designs": true,
+      "pure_same_records_identical_preliminary_and_corrected_projectors": true,
+      "truth_changed_only_sampling_diagnostic_and_loss_evaluation": true
+    },
+    "fresh_generator_and_aggregation": {
+      "replications_per_study": 4,
+      "main_copies_per_replicate": 256,
+      "studies": [
+        "mixed_bures",
+        "mixed_frobenius",
+        "pure_algorithm3",
+        "optional_D2",
+        "optional_D4"
+      ],
+      "array_loading_disabled_during_fresh_generation": true,
+      "every_main_replicate_regenerated": true,
+      "all_main_means_and_unbiased_MCSEs_recomputed": true,
+      "all_pure_information_criteria_included_after_per_record_inversion": true,
+      "three_figure_sets_rendered_from_fresh_samples": true,
+      "root_seed": 202610200713,
+      "reduced_configuration": {
+        "replications": 4,
+        "root_seed": 202610200713,
+        "ridge": 1.0,
+        "correction_ridge": 1.0,
+        "mixed_truth_radius": 0.9,
+        "mixed_truth_direction": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "pure_dimension": 4,
+        "pure_truth_phase_increment": 0.37,
+        "optional_covariance_dimensions": [
+          2,
+          4
+        ],
+        "optional_reporting_powers": [
+          6,
+          7,
+          8
+        ],
+        "error_bar_multiplier": 1.96,
+        "main_batch_schedule": {
+          "kind": "growing",
+          "initial": 16,
+          "minimum": 16,
+          "denominator": 50,
+          "maximum": 256
+        },
+        "main_reporting_targets": [
+          64,
+          128,
+          256
+        ],
+        "main_horizontal_axis": "linear",
+        "optional_batch_schedule": "doubling",
+        "optional_maximum_reporting_power": 8
+      }
+    }
+  },
+  "source_files_hash_checked": 689,
+  "protected_sources_unchanged": true,
+  "independent_check_script_sha256": "57f07d810b1d0c1b03e4eb36500724da89ba8447c646fe00520c7be8be83202d",
+  "limitations": [
+    "Small finite tests do not prove asymptotic theorems.",
+    "This audit is not a formal verification of Python.",
+    "Archived arrays alone cannot authenticate their historical execution date.",
+    "This independent run does not replace the full 10000-replicate paper experiment."
+  ],
+  "assessment": "PASS for reviewed main Algorithms 1\u20133 and stated fresh finite checks; no evidence of manufactured simulation outputs or hidden algorithm substitution found.",
+  "report": "INDEPENDENT_ALGORITHM_AUDIT.md",
+  "check_script": "independent_checks.py",
+  "source_baseline": "INDEPENDENT_SOURCE_BASELINE.json",
+  "fresh_raw_data": "independent_small_run/",
+  "fresh_figures": "independent_small_run_figures/",
+  "historical_receipts_redated": false,
+  "full_size_oct20_execution": "See the separate current-source 10000-replicate execution report; this independent run is reduced and uses a different seed.",
+  "protected_source_classes": {
+    "Lean_sources": 633,
+    "simulation_modules": 10,
+    "simulation_configs": 2,
+    "test_modules": 3,
+    "canonical_paper_TeX": 40,
+    "main_PDF": 1
+  },
+  "report_sha256": "5f54a6c7c15486749812b38e51dedcdbd4e3253d318b901b7203463d64ed51f7",
+  "check_script_sha256": "57f07d810b1d0c1b03e4eb36500724da89ba8447c646fe00520c7be8be83202d"
+}

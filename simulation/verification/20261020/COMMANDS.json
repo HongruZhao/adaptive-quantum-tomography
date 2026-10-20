@@ -1,0 +1,141 @@
+[
+  {
+    "name": "integrity",
+    "command": [
+      "python",
+      "-B",
+      "scripts/check_release.py"
+    ],
+    "started": {
+      "utc": "2026-10-20T07:03:11.771534+00:00",
+      "America_Chicago": "2026-10-20T02:03:11.771534-05:00"
+    },
+    "completed": {
+      "utc": "2026-10-20T07:03:11.828225+00:00",
+      "America_Chicago": "2026-10-20T02:03:11.828225-05:00"
+    },
+    "seconds": 0.056551792,
+    "exit_code": 0
+  },
+  {
+    "name": "tests",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "started": {
+      "utc": "2026-10-20T07:03:11.828536+00:00",
+      "America_Chicago": "2026-10-20T02:03:11.828536-05:00"
+    },
+    "completed": {
+      "utc": "2026-10-20T07:03:13.015791+00:00",
+      "America_Chicago": "2026-10-20T02:03:13.015791-05:00"
+    },
+    "seconds": 1.1872725,
+    "exit_code": 0
+  },
+  {
+    "name": "pilot16",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "adaptive_tomography",
+      "run",
+      "--config",
+      "configs/paper.json",
+      "--replications",
+      "16",
+      "--output",
+      "<fresh-audit-output>/pilot16"
+    ],
+    "started": {
+      "utc": "2026-10-20T07:03:13.016084+00:00",
+      "America_Chicago": "2026-10-20T02:03:13.016084-05:00"
+    },
+    "completed": {
+      "utc": "2026-10-20T07:03:14.294705+00:00",
+      "America_Chicago": "2026-10-20T02:03:14.294705-05:00"
+    },
+    "seconds": 1.27864,
+    "exit_code": 0
+  },
+  {
+    "name": "full10000",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "adaptive_tomography",
+      "run",
+      "--config",
+      "configs/paper.json",
+      "--output",
+      "<fresh-audit-output>/full10000"
+    ],
+    "started": {
+      "utc": "2026-10-20T07:03:41.454912+00:00",
+      "America_Chicago": "2026-10-20T02:03:41.454912-05:00"
+    },
+    "completed": {
+      "utc": "2026-10-20T07:16:18.657349+00:00",
+      "America_Chicago": "2026-10-20T02:16:18.657349-05:00"
+    },
+    "seconds": 757.202863042,
+    "exit_code": 0
+  },
+  {
+    "name": "full10000_plots",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "adaptive_tomography",
+      "plot",
+      "--results",
+      "<fresh-audit-output>/full10000",
+      "--output",
+      "<fresh-audit-output>/full10000/figures"
+    ],
+    "started": {
+      "utc": "2026-10-20T07:16:18.658288+00:00",
+      "America_Chicago": "2026-10-20T02:16:18.658288-05:00"
+    },
+    "completed": {
+      "utc": "2026-10-20T07:16:32.220920+00:00",
+      "America_Chicago": "2026-10-20T02:16:32.220920-05:00"
+    },
+    "seconds": 13.562655500000005,
+    "exit_code": 0
+  },
+  {
+    "name": "saved_data_replot",
+    "command": [
+      "python",
+      "-B",
+      "-m",
+      "adaptive_tomography",
+      "plot",
+      "--results",
+      "results/paper",
+      "--output",
+      "<fresh-audit-output>/saved_data_replot"
+    ],
+    "started": {
+      "utc": "2026-10-20T07:16:32.221303+00:00",
+      "America_Chicago": "2026-10-20T02:16:32.221303-05:00"
+    },
+    "completed": {
+      "utc": "2026-10-20T07:16:33.937626+00:00",
+      "America_Chicago": "2026-10-20T02:16:33.937626-05:00"
+    },
+    "seconds": 1.7163723749999917,
+    "exit_code": 0
+  }
+]

@@ -1,7 +1,8 @@
 # Saved formal verification evidence
 
-These JSON files are curated exports of earlier verification evidence. They are not receipts of a new build during the 20 October repository preparation. Raw execution logs, caches, compiled objects, failed setup attempts, and machine-local locators are retained in the authors' working archive and are not bundled here.
+The [20261020/ report](20261020/README.md) records the newly executed 20 October source build, statement/axiom checks, nine-result endpoint review and selected kernel replay. The other dated files below preserve earlier verification evidence; they have not been relabelled as new runs. Raw execution logs, caches, compiled objects, machine-local locators, and the complete initial preflight log are retained in the authors' working archive and are not bundled here.
 
+- `20261020/`: fresh 508-module source compilation, 498 types/axioms, nine main results / 17 mapped declarations, 17 selected-module replays, compiler/import freshness receipts and metadata-only preflight repair.
 - `VERIFICATION_SUMMARY.json`: 17 October fresh 567-module source build, selected declaration audit, and 17-module replay summary.
 - `BUILD_INPUTS.json`: source hashes, topological build order, and replay list for the 508-module current-result closure used by `scripts/verify.py`.
 - `CANONICAL_SOURCE_SHA256.json`: all 633 canonical source hashes, newly copied and compared for package integrity only.

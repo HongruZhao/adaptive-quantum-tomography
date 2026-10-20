@@ -1,0 +1,11 @@
+{
+  "path": "verification/BUILD_INPUTS.json",
+  "changed_field": "source_sha256[lakefile.toml]",
+  "old_expected_sha256": "34e446fca712a5703104c8197adfba3060705daf6b99ff71f25fa495a6004261",
+  "unchanged_current_lakefile_sha256": "c41a28814f5c69f437dc9c4dc981642fe629f45023bf18fcd903c7f03c10be60",
+  "reason": "The verification metadata retained a prior subset-project lakefile hash; the GitHub full project lakefile is byte-identical to the 17 October native full project lakefile. Only this metadata value was updated.",
+  "lean_sources_changed": false,
+  "lakefile_changed": false,
+  "toolchain_or_dependency_pins_changed": false,
+  "initial_preflight_failure": "A local hash preflight raised AssertionError before starting Lean. The published verifier itself had not yet been invoked; this was not a failed Lean compilation."
+}

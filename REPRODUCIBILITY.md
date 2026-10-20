@@ -1,6 +1,6 @@
 # Reproducibility
 
-This repository separates mathematical proof checks, Python tests, small simulation runs, and saved-data plotting. Each establishes a different fact. **[The main article](https://github.com/HongruZhao/adaptive-quantum-tomography/blob/main/ejs_main.pdf)** is available to authorized collaborators while this repository is private. The supplement PDF is not included.
+This repository separates mathematical proof checks, Python tests, fresh simulations, and saved-data plotting. Each establishes a different fact. **[The main article](https://github.com/HongruZhao/adaptive-quantum-tomography/blob/main/ejs_main.pdf)** is available to authorized collaborators while this repository is private. The supplement PDF is not included.
 
 ## Integrity checks
 
@@ -11,7 +11,7 @@ python3 -B lean/scripts/check_release.py
 python3 -B simulation/scripts/check_release.py
 ```
 
-These Python-only commands compare packaged files with their manifests. They do not compile Lean or run simulations. The manifests identify the prepared code folders; separate dated receipts document earlier executions.
+These Python-only commands compare packaged files with their manifests. They do not compile Lean or run simulations. The manifests identify the prepared code folders; separate dated receipts document actual executions, including the new 20 October checks.
 
 ## Lean proof reproduction
 
@@ -19,7 +19,7 @@ Install Git, Python 3.9 or newer, and [elan](https://github.com/leanprover/elan)
 
 ```sh
 cd lean
-python3 -B scripts/verify.py --cache --replay
+LAKE_ARTIFACT_CACHE=false python3 -B scripts/verify.py --cache --replay
 ```
 
 The command obtains pinned dependencies and their upstream cache, builds the selected 508-module current-result closure plus the explicit `MainPaper` and `MainPaperAudit` roots, checks 498 selected elaborated declaration types and their axiom sets, verifies dependency revisions, and replays 17 designated modules. First-run dependency/cache acquisition requires network access. The original toolchain is Lean v4.33.0-rc2; Mathlib is pinned to commit `641fbd329d4ffb62bef83c51f54088469056bd36`.
@@ -33,11 +33,11 @@ lake env lean MainPaperAudit.lean
 
 A clean verification run rejects existing project proof objects. The explicit `--incremental` flag permits their reuse. Upstream caches are distinct from project objects. New logs and receipts go to `lean/verification/reproduction/`, which is ignored by Git. The runner does not build every retained historical source, rebuild upstream Mathlib from source, or replay every dependency.
 
-Read [LEAN_FORMALIZATION.md](LEAN_FORMALIZATION.md) for proof assumptions, result correspondence, and dated evidence. All 633 canonical sources are retained unchanged; the repository preparation is not a new full Lean build.
+Read [LEAN_FORMALIZATION.md](LEAN_FORMALIZATION.md) for proof assumptions, result correspondence, and dated evidence. All 633 canonical sources are retained unchanged. The [fresh 20 October report](lean/verification/20261020/README.md) records source compilation of the selected 508-module closure, the 498-type/axiom audit, and 17-module replay; it does not claim compilation of every historical source.
 
 ## Python environment and tests
 
-Use Python 3.9–3.12. The saved experiments and the fresh 20 October smoke check used **Python 3.9.6, NumPy 1.26.4, and Matplotlib 3.9.4**. The two numerical libraries are pinned in `simulation/requirements.txt`.
+Use Python 3.9–3.12. The saved experiments and the fresh 20 October full run used **Python 3.9.6, NumPy 1.26.4, and Matplotlib 3.9.4**. The two numerical libraries are pinned in `simulation/requirements.txt`.
 
 From the repository root:
 
@@ -67,7 +67,7 @@ python3 -B -m adaptive_tomography plot --results results/smoke_20261020 --output
 
 This runs eight replicates for the mixed Bures, mixed Frobenius, and pure-state procedures, each with a maximum of 1,024 copies, and draws the two smoke figures. It uses the default current-paper configuration with the requested replicate/count overrides; no numerical source or configuration file is edited. Generated dated smoke outputs are ignored by Git. Use a new output directory when rerunning to preserve earlier records.
 
-The 20 October smoke run completed successfully in the pinned environment, with finite valid loss arrays and successful figure generation. It is an execution/reproduction check, not a fresh run of the submitted 10,000-replicate studies.
+The earlier 20 October smoke check completed successfully. The separately dated [new full-size execution](simulation/verification/20261020/FRESH_SIMULATION.md) subsequently ran all three 10,000-replicate studies with the unchanged paper configuration. The two checks are distinct.
 
 ## Redraw the supplied paper figures
 
@@ -87,7 +87,7 @@ OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 \
 python3 -B -m adaptive_tomography plot --results results/new_paper --output results/new_paper/figures
 ```
 
-The principal supplied studies used 10,000 replicates and 16,384 copies per replicate, in 202 predetermined batches. After the first batch of sixteen, the nominal next batch size is `max(16, ceil(N/50))`, with $N$ the number already observed. Only the final batch is shortened to meet the fixed total. Reporting occurs at eighteen selected completed batches. The full experiment takes substantially longer than a smoke run.
+The principal supplied studies used 10,000 replicates and 16,384 copies per replicate, in 202 predetermined batches. After the first batch of sixteen, the nominal next batch size is `max(16, ceil(N/50))`, with $N$ the number already observed. Only the final batch is shortened to meet the fixed total. Reporting occurs at eighteen selected completed batches. The new full run on 20 October completed in 757.04 seconds in the recorded pinned environment; runtime depends on the machine.
 
 Preserve `results/paper/`; use a new output directory. The default configuration runs the three current main-figure studies. `configs/historical_full_run_20261017.json` retains the older five-study configuration, including optional covariance studies that are not current article simulations.
 
@@ -97,4 +97,10 @@ The [simulation verification guide](simulation/docs/VERIFICATION.md) and [saved 
 
 All replicates contribute to the summaries. Saved arrays contain scaled losses and tangent errors, not every per-copy count record. A fixed seed and stream rule do not guarantee bitwise-identical adaptive paths across numerical environments. See [the data dictionary](simulation/docs/DATA_DICTIONARY.md) and [detailed numerical guide](simulation/docs/REPRODUCIBILITY.md) for stream roles, reporting endpoints, Monte Carlo uncertainty, and replay limits.
 
-The dated snapshots inside the code folders identify the 18 October documentation edition. The root main PDF is a newer editorial revision with the same mathematical statements, assumptions, proof arguments, numbering, Lean sources, and numerical implementation. Earlier snapshot hashes intentionally retain their actual dates rather than being relabeled as the current PDF's hashes. No fresh full Lean build or full 10,000-replicate Monte Carlo rerun is claimed for the 20 October repository preparation.
+The dated snapshots inside the code folders identify the 18 October documentation edition. The root main PDF is a newer editorial revision with the same mathematical statements, assumptions, proof arguments, numbering, Lean sources, and numerical implementation. Earlier snapshot hashes intentionally retain their actual dates rather than being relabeled as the current PDF's hashes. The later [20 October Lean check](lean/verification/20261020/README.md) freshly compiled the selected current-result closure, and the [20 October Python check](simulation/verification/20261020/FRESH_SIMULATION.md) freshly ran the three full 10,000-replicate studies. Their actual times and scope are recorded separately from the earlier repository preparation.
+
+## Independent simulation–paper review, 20 October 2026
+
+The [independent audit](simulation/verification/20261020/INDEPENDENT_ALGORITHM_AUDIT.md) compares Algorithms 1–3 with the implementation and supplies [a runnable independent checker](simulation/verification/20261020/independent_checks.py). Five additional check groups passed, including dense ridge/tangent objectives, all 104 complete-label Born probabilities, fixed-record truth-blindness and altered-seed fresh sampling with saved-array loading disabled. It found no main-algorithm mismatch or manufactured-result path. Its reduced independent runs are explicitly separate from the full execution.
+
+The [full execution checks](simulation/verification/20261020/EXECUTION_CHECKS.json) recompute all means and Monte Carlo errors from all 30,000 fresh records, check physical ranges and compare principal arrays only after generation. Mixed arrays reproduce bitwise; the largest pure scaled-loss difference is 6.79 × 10⁻¹¹, within the recorded tolerance. The historical optional covariance studies were not rerun at full size. Python execution and code review remain distinct from formal Lean verification.

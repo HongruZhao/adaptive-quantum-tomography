@@ -1,0 +1,30 @@
+{
+  "verification_date": "2026-10-20",
+  "scope": "Only inline math delimiter wrappers changed in four observed malformed GitHub paragraphs. All mathematical expression bodies and statement wording unchanged. Paper/Lean sources unaffected.",
+  "supported_syntax_reference": "https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions",
+  "paragraphs": [
+    {
+      "line": 11,
+      "before_sha256": "1b87a7c5532d20ee7e03ffd3119c342d5e6fb2b3911de0c57574e0d66e61a740",
+      "after_sha256": "09a3ef69fa0055447f8774d61cf1d6dac47378269d4379c506c5a884e24f249f"
+    },
+    {
+      "line": 14,
+      "before_sha256": "a787b2e65371109abc8982e0f06665cfed912769a2ca21cd39e27d3b34d0382a",
+      "after_sha256": "96ad59fd06793a4e448f623947552aacf692992ab1763935eadbb2cb508b0b36"
+    },
+    {
+      "line": 32,
+      "before_sha256": "92bd738659d376d879fcbd8560172d8217882ccf2bff5642e5f01616c7f0e0ce",
+      "after_sha256": "21f604d89f183bdad8f1f93b43fa6a534c137512aa54dd79d3b16586143bd1a7"
+    },
+    {
+      "line": 114,
+      "before_sha256": "8ad639d2e17040f96c6a90cc25431c96ecd88296b7b62937b555387941beb74a",
+      "after_sha256": "500d157ec39b399e6eef68e7731fe4feb745e2581a61d7a32e8e2699882f235e"
+    }
+  ],
+  "expected_inline_expressions": 112,
+  "expected_display_blocks": 11,
+  "expected_rendered_math_total": 123
+}

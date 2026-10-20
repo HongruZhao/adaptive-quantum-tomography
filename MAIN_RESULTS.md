@@ -1,17 +1,17 @@
 # Main results and their Lean statements
 
-This page reproduces **all five main-paper theorem statements**, together with the two main propositions and two corollaries, from the [current main article](https://github.com/HongruZhao/adaptive-quantum-tomography/blob/main/ejs_main.pdf). Statement wording and every mathematical clause are retained; project-specific TeX macros are expanded and cross-references use the article's printed numbers. Each statement is followed by its actual Lean assumptions, proved conclusions, and dated verification evidence. This is a theorem-to-code record, not a claim of a new proof run.
+This page reproduces **all five main-paper theorem statements**, together with the two main propositions and two corollaries, from the [current main article](https://github.com/HongruZhao/adaptive-quantum-tomography/blob/main/ejs_main.pdf). Statement wording and every mathematical clause are retained; project-specific TeX macros are expanded and cross-references use the article's printed numbers. Each statement is followed by its actual Lean assumptions, proved conclusions, and dated verification evidence. A fresh source build, declaration audit and selected kernel replay passed on **20 October 2026**; dated simulation execution and an independent algorithm audit are recorded in the final table.
 
-The full statement and type inventories are the [43-group, 211-endpoint correspondence ledger](lean/docs/MAIN_PAPER_CORRESPONDENCE.json), [elaborated Lean types](lean/verification/ELABORATED_STATEMENTS.json), and [LEAN_FORMALIZATION.md](LEAN_FORMALIZATION.md). Some current paper theorems are clauses of one older combined Lean declaration; the correspondence below identifies that explicitly.
+The full statement and type inventories are the [43-group, 211-endpoint correspondence ledger](lean/docs/MAIN_PAPER_CORRESPONDENCE.json), [freshly elaborated Lean types](lean/verification/20261020/ELABORATED_STATEMENTS.json), and [LEAN_FORMALIZATION.md](LEAN_FORMALIZATION.md). Some current paper theorems are clauses of one older combined Lean declaration; the correspondence below identifies that explicitly.
 
 ## Notation and algorithm prerequisites
 
 The definitions and algorithms referenced by the statements are in the [main article](https://github.com/HongruZhao/adaptive-quantum-tomography/blob/main/ejs_main.pdf), Sections 2–5 and Appendices A–B.
 
-- States are $D\times D$ density matrices. Pure states are rank-one projectors $P=hh^*$ with $\lVert h\rVert=1$; $d=D-1$ and their real dimension is $2d$. Their tangent space is $T_P=\lbrace A=A^*:PA+AP=A\rbrace $. The coordinate-free SLD quantum Fisher information is $\mathcal H_P$; $H(\theta)$ is its coordinate matrix. Classical information is $\mathcal J_{a,P}$ as a tangent-space form and $\mathcal I_a(\theta)$ as a coordinate matrix. A randomized design has information $\mathcal I_{\xi_t}$.
+- States are $`D\times D`$ density matrices. Pure states are rank-one projectors $`P=hh^*`$ with $`\lVert h\rVert=1`$; $`d=D-1`$ and their real dimension is $`2d`$. Their tangent space is $`T_P=\lbrace A=A^*:PA+AP=A\rbrace `$. The coordinate-free SLD quantum Fisher information is $`\mathcal H_P`$; $`H(\theta)`$ is its coordinate matrix. Classical information is $`\mathcal J_{a,P}`$ as a tangent-space form and $`\mathcal I_a(\theta)`$ as a coordinate matrix. A randomized design has information $`\mathcal I_{\xi_t}`$.
 - Equation (2.1) fixes **predetermined positive finite integers** $m_j$ and defines $N_0=0$, $N_j=\sum_{k=1}^j m_k$, and $n_-(t)=N_{j-1}$ for $N_{j-1}<t\le N_j$. These are the completed-batch sample sizes and the last update before copy $t$.
 - **Algorithms 1–2, mixed qubits:** $\theta_0\in\mathbb R^3$, $\lVert\theta_0\rVert<1$, $s_0=\sqrt{1-\lVert\theta_0\rVert^2}$, and $H_0=H(\theta_0)$. With $G_n=\sum_{t\le n}a_ta_t^{\mathsf T}$ and $B_n=\sum_{t\le n}a_tY_t$, the ridge fit is $\widehat\theta_n=(\lambda I_3+G_n)^{-1}B_n$. Algorithm 1 uses the safeguard $c_n=\widehat\theta_n\mathbf1_{\lbrace \lVert\widehat\theta_n\rVert<1\rbrace }$ in (3.1); Algorithm 2 projects onto the ball of radius $\sqrt{1-(n+1)^{-1/2}}$ in (3.2). Equation (3.4) specifies their common radial/transverse axis construction. Their allocations are $\pi_B=(1/3,1/3,1/3)$ and $\pi_F(c)=(\sqrt{1-\lVert c\rVert^2},1,1)/(2+\sqrt{1-\lVert c\rVert^2})$, and their information targets in (3.5) are $\mathcal I_B^\star=H_0/3$ and $\mathcal I_F^\star=H_0^{1/2}/(2+s_0)$.
-- **Proposition 4.1 and Algorithm 3, pure states:** a finite reference POVM $\mathsf F=\lbrace F_r\rbrace $ has nonzero rank-one effects, (C1) $\mathrm{span}_{\mathbb R}\lbrace F_r\rbrace =\mathrm{Herm}(\mathbb C^D)$, and (C2) $\mathrm{tr}(P_{\mathrm{ref}}F_r)>0$ for all $r$. Here $P_{\mathrm{ref}}=e_0e_0^*$. The paired effects in (4.3) are $E_{0,r}=F_r/2$ and $E_{1,r}=V^*F_rV/2$, where $V=I_D+(i-1)P_{\mathrm{ref}}$. Equation (4.1) is the reference amplitude chart with $H(0)=I_{2d}$. Algorithm 3 uses the matrix ridge fit $\widehat A_n$ in (4.5), its largest-algebraic-eigenvalue rank-one projection $\widehat P_n$, and the fitted-tangent weighted ridge correction (4.8), followed by the normalization (4.9) giving $\widehat P_n^{\mathrm{eff}}$. The denominator floor is $\tau=\frac14\min_z\mathrm{tr}(P_{\mathrm{ref}}E_z)>0$; $\lambda,\eta>0$. The measurement-alignment unitary is fixed by (4.6). All these estimators use the actual recorded adaptive setting–outcome data. The corresponding exact Lean definitions are [Inputs and its estimators](lean/QubitOracle/Paper/MainPaperTheorem42.lean#L23).
+- **Proposition 4.1 and Algorithm 3, pure states:** a finite reference POVM $`\mathsf F=\lbrace F_r\rbrace `$ has nonzero rank-one effects, (C1) $`\mathrm{span}_{\mathbb R}\lbrace F_r\rbrace =\mathrm{Herm}(\mathbb C^D)`$, and (C2) $`\mathrm{tr}(P_{\mathrm{ref}}F_r)>0`$ for all $`r`$. Here $`P_{\mathrm{ref}}=e_0e_0^*`$. The paired effects in (4.3) are $`E_{0,r}=F_r/2`$ and $`E_{1,r}=V^*F_rV/2`$, where $`V=I_D+(i-1)P_{\mathrm{ref}}`$. Equation (4.1) is the reference amplitude chart with $`H(0)=I_{2d}`$. Algorithm 3 uses the matrix ridge fit $`\widehat A_n`$ in (4.5), its largest-algebraic-eigenvalue rank-one projection $`\widehat P_n`$, and the fitted-tangent weighted ridge correction (4.8), followed by the normalization (4.9) giving $`\widehat P_n^{\mathrm{eff}}`$. The denominator floor is $`\tau=\frac14\min_z\mathrm{tr}(P_{\mathrm{ref}}E_z)>0`$; $`\lambda,\eta>0`$. The measurement-alignment unitary is fixed by (4.6). All these estimators use the actual recorded adaptive setting–outcome data. The corresponding exact Lean definitions are [Inputs and its estimators](lean/QubitOracle/Paper/MainPaperTheorem42.lean#L23).
 - **Theorem 5.1, policies and likelihood:** either the interior Bloch model ($D=2$) or a smooth local pure-state parametrization $\rho(\theta)=\Gamma(\theta)$ is used. A prescribed parameter-independent policy $\zeta_t$ maps the complete outcome history to a finite single-copy POVM. Finite setting randomization is represented by weighting effects and recording both setting and readout. Appendix B assumes finite record-label sets independent of $\theta$ at each fixed horizon and existence at $\theta_0$ of all first partial derivatives of every conditional outcome probability, with effects fixed when the history is fixed; zero probabilities are allowed and their scores are zero. A finite-valued estimator is locally unbiased when $m_n(\theta_0)=\theta_0$ and the Jacobian of $m_n(\theta)=\mathbb E_\theta T_n$ at $\theta_0$ is the identity. Equation (2.9) defines
 
 ```math
@@ -29,7 +29,7 @@ Let $P=hh^*$ with $\lVert h\rVert=1$. The pairing $\mathcal{H}_P$ is independent
 \mathcal{H}_P[A,B]=2\mathrm{tr}(AB),\qquad \mathcal{H}_P[hv^*+vh^*,hv^*+vh^*]=4\lVert v\rVert^2.
 ```
 
-In a chart (Definition A.2) with tangent basis $A_j=\partial_j\Gamma(\theta)$, $[H(\theta)]_{jk}=\mathcal{H}_P[A_j,A_k]$ and $\mathcal{H}_P[A,B]=u^{\mathsf{T}}H(\theta)w$ whenever $A=\sum_{j=1}^p u_jA_j$ and $B=\sum_{k=1}^p w_kA_k$, with $u,w\in\mathbb{R}^p$.
+In a chart (Definition A.2) with tangent basis $`A_j=\partial_j\Gamma(\theta)`$, $`[H(\theta)]_{jk}=\mathcal{H}_P[A_j,A_k]`$ and $`\mathcal{H}_P[A,B]=u^{\mathsf{T}}H(\theta)w`$ whenever $`A=\sum_{j=1}^p u_jA_j`$ and $`B=\sum_{k=1}^p w_kA_k`$, with $`u,w\in\mathbb{R}^p`$.
 
 ### Lean correspondence and verification
 
@@ -39,7 +39,7 @@ In a chart (Definition A.2) with tangent basis $A_j=\partial_j\Gamma(\theta)$, $
 
 **Proved conclusions:** equality of every admissible SLD pairing with `quantumInformation`, the intrinsic trace formula, the horizontal-vector squared-norm formula, all coordinate entries and the coordinate contraction. SLD independence follows from equality to the same intrinsic pairing; it is not an assumed information identity.
 
-**Verification:** correspondence group **T01**; its declaration type and standard-only transitive axiom set occur in the saved 17 October audit, and its defining module is among the 17 replayed modules. This Markdown revision performs no new Lean compilation or replay.
+**Verification:** group **T01**. On **20 October 2026**, the defining module was freshly source-compiled and kernel replayed; the declaration type and transitive axioms were freshly checked. See the [nine-result endpoint receipt](lean/verification/20261020/MAIN_ENDPOINT_CHECKS.json).
 
 ## Theorem 3.1 — Strong consistency and Fisher information convergence
 
@@ -66,7 +66,7 @@ Both safeguards, (3.1) and (3.2), are eventually inactive almost surely.
 
 **Proved conclusions used here:** the endpoint's first almost-sure conjunction gives raw and physical-output consistency, current conditional information convergence, average conditional information convergence, and average realized-axis information convergence. Its final almost-sure clause proves eventual equality of the safeguard and raw estimator. [`action_in_batch`](lean/MainPaperTheorem31.lean#L72) and [`label_order`](lean/MainPaperTheorem31.lean#L102) identify the actual batch-held action and Lean's transverse/transverse/radial label order with the paper's radial-first order. Lean copy indices start at zero.
 
-**Verification:** group **T02**. The combined declaration and bridges are in the saved 498-declaration inventory with standard-only transitive axioms; `MainPaperTheorem31` was source-built and kernel replayed on 17 October. The two displayed paper theorems are read from the checked conjunction, not inferred from the old filename.
+**Verification:** group **T02**. On **20 October 2026**, the combined theorem, covariance identity and batch/label bridges were freshly compiled and their types and axioms checked; `MainPaperTheorem31` was kernel replayed. The two current paper theorems remain clauses of that one checked conjunction. See the [endpoint receipt](lean/verification/20261020/MAIN_ENDPOINT_CHECKS.json).
 
 ## Theorem 3.2 — Asymptotic normality with inverse-information covariance
 
@@ -99,7 +99,7 @@ The assertions cover the maximally mixed state, single-shot updates, and all com
 
 **Proved conclusions used here:** inverse-information Gaussian limits for both errors and the loss-specific covariance identity. The full-sample limits imply the stated completed-batch subsequences.
 
-**Verification:** group **T02**, the same 17 October checked declaration/module evidence as Theorem 3.1; this is a clause-level split of one audited statement, not a second independent source build or a new proof check.
+**Verification:** group **T02**, using the same **20 October 2026** combined declaration and selected-module replay as Theorem 3.1. This is a clause-level split of one freshly checked statement, not a separately named `theorem_3_2`. See the [endpoint receipt](lean/verification/20261020/MAIN_ENDPOINT_CHECKS.json).
 
 ## Proposition 4.1 — Phase pairing
 
@@ -111,7 +111,7 @@ The effects (4.3) form an informationally complete measurement on the full state
 \mathcal{I}_{\mathsf{E}}(0)=H(0)/2=I_{2d}/2
 ```
 
-Equivalently, $\mathcal{J}_{\mathsf{E},P_{\mathrm{ref}}}=\tfrac12\mathcal{H}_{P_{\mathrm{ref}}}$ as bilinear forms on $T_{P_{\mathrm{ref}}}$; this is Fisher symmetry at $P_{\mathrm{ref}}$.
+Equivalently, $`\mathcal{J}_{\mathsf{E},P_{\mathrm{ref}}}=\tfrac12\mathcal{H}_{P_{\mathrm{ref}}}`$ as bilinear forms on $`T_{P_{\mathrm{ref}}}`$; this is Fisher symmetry at $`P_{\mathrm{ref}}`$.
 
 ### Lean correspondence and verification
 
@@ -121,7 +121,7 @@ Equivalently, $\mathcal{J}_{\mathsf{E},P_{\mathrm{ref}}}=\tfrac12\mathcal{H}_{P_
 
 **Proved conclusions:** `paired_conditions` gives `Identifying (paired P) ∧ Regular (paired P) ∧ FisherSymmetric (paired P)`; the Fisher assertion is proved by `paired_fisher_of_rankOne`, rather than being an assumption. The coordinate-free reading uses Proposition 2.1's metric normalization and the information-coordinate bridges in the ledger. This is one conjunction plus its Fisher component, not a claim of two distinct versions of Proposition 4.1.
 
-**Verification:** group **T03**. Both declarations have saved elaborated types and standard-only axiom sets; `PhasePairPOVM` was source-built and kernel replayed in the 17 October audit. No new Lean execution accompanies the present documentation rewrite.
+**Verification:** group **T03**. On **20 October 2026**, both declarations were freshly compiled and their elaborated types and standard-only transitive axiom sets checked; `PhasePairPOVM` was kernel replayed. See the [endpoint receipt](lean/verification/20261020/MAIN_ENDPOINT_CHECKS.json).
 
 ## Theorem 4.2 — Strong consistency and Fisher information convergence
 
@@ -151,7 +151,7 @@ Here $t\to\infty$ runs through all measured copies. The limits indexed by $n$ ho
 
 **Proved conclusions used here:** [`Conclusions`](lean/QubitOracle/Paper/MainPaperTheorem42.lean#L79) fields `raw_consistent`, `preliminary_consistent`, `corrected_consistent`, `alignment_consistent`, `conditional_information`, and `average_information`. These fields are outputs of the theorem, not assumptions in `Inputs`. Normalized amplitude coordinates have SLD matrix `I`; the information limit is `I/2`, representing the displayed intrinsic form.
 
-**Verification:** group **T04**. `Inputs`, `Conclusions` and the combined theorem have saved elaborated types and standard-only axiom sets. `MainPaperTheorem42` and its selected chart/limit modules were source-built and kernel replayed on 17 October. No new Lean build is claimed here.
+**Verification:** group **T04**. On **20 October 2026**, `Inputs`, `Conclusions` and the combined theorem were freshly compiled and their types and axioms checked. `MainPaperTheorem42` and its selected chart/limit modules were kernel replayed. See the [endpoint receipt](lean/verification/20261020/MAIN_ENDPOINT_CHECKS.json).
 
 ## Theorem 4.3 — Estimation rates and asymptotic normality
 
@@ -174,7 +174,7 @@ Equivalently, $n^{1/2}(\widehat P_n^{\mathrm{eff}}-P_0)$ converges in distributi
 
 **Proved conclusions used here:** `raw_root_rate`, `preliminary_root_rate`, `chart_normality`, `chart_covariance`, and `chart_sld_information`; and `ambient_normality`, `ambient_gaussian`, `ambient_centered`, `ambient_tangent_support`, and `ambient_covariance`. The chart covariance is twice inverse SLD information. The ambient covariance is the Frobenius inner product on tangent vectors, giving identity in an orthonormal tangent basis. The raw-rate fields use `TightNorm` for the root-sample-size scaled errors; the Gaussian limits explicitly use completed-batch horizons.
 
-**Verification:** group **T04**, using the same audited combined theorem and 17 October selected-module replay as Theorem 4.2. This distinguishes the complete Lean statement from the two current typeset theorem numbers.
+**Verification:** group **T04**, using the same **20 October 2026** combined declaration and selected-module replay as Theorem 4.2. The complete checked `Conclusions` structure supplies both current printed theorem statements. See the [endpoint receipt](lean/verification/20261020/MAIN_ENDPOINT_CHECKS.json).
 
 ## Theorem 5.1 — Adaptive Gill–Massar bound
 
@@ -198,7 +198,7 @@ where $C_{\mathrm{GM}}$ is defined in (2.9).
 
 **Proved conclusion:** `oracleConstant W M.quantumInformation (M.systemDimension-1) ≤ n * quadraticRisk W T`, with quantum information derived from the actual model. The Born regularity, score identities and Gill–Massar information inequality are proved internally. The finite decision-tree/finite-sum proof establishes the scalar whitened-information consequence needed for the risk bound; the paper's sigma-field notation is not a separate Lean object. The theorem permits singular positive-semidefinite weights and does not invert classical record information.
 
-**Verification:** group **T05**. The combined endpoint and both alternatives have saved 17 October elaborated-type/axiom evidence; both oracle endpoint modules were among that round's 17 replayed modules. A **19 October focused check** freshly replayed seven existing source-identical proof modules and checked 16 endpoint types and axiom sets, including these three endpoints. The replayed objects and 633 source hashes matched the 17 October source-build receipt. This was not a new full source compilation or whole-dependency replay; see the [focused receipt](lean/verification/theorem51_review_20261019/EXECUTION_CHECKS.json).
+**Verification:** group **T05**. On **20 October 2026**, the combined theorem and both model-specific alternatives were freshly source-compiled, their exact types and transitive axioms checked, and both defining endpoint modules kernel replayed. See the [endpoint receipt](lean/verification/20261020/MAIN_ENDPOINT_CHECKS.json). The [19 October focused check](lean/verification/theorem51_review_20261019/EXECUTION_CHECKS.json) remains separately dated historical evidence.
 
 ## Corollary 5.2 — Mixed-qubit expected-loss attainment
 
@@ -223,7 +223,7 @@ Under the hypotheses of Theorem 3.2, let $c_n$ be the safeguarded output (3.1) f
 
 **Proved conclusions:** the scaled integrals of actual physical squared Bures and Frobenius losses tend to `9/4` and `(2+mixedRadialGap truth.val)^2/2` along `batchEndpoint m j`. The companion [`qubit_bures_comm`](lean/QubitOracle/Paper/MainPaperMeanLosses.lean#L24) justifies the paper's estimate-first Bures argument order. The matrix-square-root Bures loss and physical outputs are used, rather than only the quadratic Taylor approximation.
 
-**Verification:** group **T06**. The combined endpoint and Bures symmetry bridge have saved elaborated types and standard-only axiom sets; `MainPaperMeanLosses` was source-built and kernel replayed on 17 October. The expected-loss conclusions use proved moment estimates, not numerical simulation evidence. No new Lean run is claimed here.
+**Verification:** group **T06**. On **20 October 2026**, the combined expected-loss endpoint and Bures-order bridge were freshly compiled, their types and standard-only axiom sets checked, and `MainPaperMeanLosses` kernel replayed. The expectation limits use proved moment estimates, not the simulation. See the [endpoint receipt](lean/verification/20261020/MAIN_ENDPOINT_CHECKS.json).
 
 ## Corollary 5.3 — Pure-state expected-loss attainment
 
@@ -246,17 +246,22 @@ Under the hypotheses of Theorem 4.3, the reported tangent-corrected projector of
 
 **Proved conclusions:** scaled actual physical Bures and squared Frobenius loss integrals tend to `d` and `2*d` along `A.horizon j`. [`pure_bures_comm`](lean/QubitOracle/Paper/MainPaperMeanLosses.lean#L31) supplies the estimate-first Bures argument order. Both limits are proved for the same corrected procedure.
 
-**Verification:** group **T07**. The combined declaration and Bures bridge have saved elaborated-type and standard-only-axiom evidence, and their defining module was source-built and kernel replayed on 17 October. This is saved formal proof evidence, not an assertion that a central limit theorem alone implies an expected-loss limit.
+**Verification:** group **T07**. On **20 October 2026**, the combined declaration and Bures bridge were freshly compiled, their types and standard-only axiom sets checked, and their defining module kernel replayed. This verifies the formal expected-loss conclusion, rather than inferring it from a central limit theorem. See the [endpoint receipt](lean/verification/20261020/MAIN_ENDPOINT_CHECKS.json).
 
 ## What was actually verified
 
-The statements above are tied to the documented source-level semantic correspondence, not just similarly named identifiers. The [ledger](lean/docs/MAIN_PAPER_CORRESPONDENCE.json) has **43 claim groups and 211 selected endpoints**; all 211 occur in the saved 498-declaration inventory. The current nine displayed main results use groups T01–T07: two groups each bundle a pair of current theorem numbers.
+The statements above are tied to the documented source-level semantic correspondence, not just similarly named identifiers. The [ledger](lean/docs/MAIN_PAPER_CORRESPONDENCE.json) has **43 claim groups and 211 selected endpoints**; all 211 occur in the freshly checked 498-declaration inventory. The current nine displayed main results use groups T01–T07: two groups each bundle a pair of current theorem numbers.
 
 | Dated evidence | Established scope | Boundary |
 |---|---|---|
-| [17 October 2026 verification](lean/verification/VERIFICATION_SUMMARY.json) | Fresh source compilation of 567 project modules in the native workspace, elaborated types and transitive axioms for 498 selected declarations, and kernel replay of 17 selected modules, including the main combined endpoint modules linked above | No fresh build of all 633 retained source files, replay of every dependency, or rebuild of upstream Mathlib; the archive was not independently rebuilt a second time |
-| [19 October Theorem 5.1 check](lean/verification/theorem51_review_20261019/EXECUTION_CHECKS.json) | Fresh kernel replay of seven source-identical existing proof modules; 16 endpoint types and axiom sets inspected; source/object equality with the 17 October evidence | No full new source build or whole-project replay |
-| Current documentation | Complete main-result statements, current printed references, exact Lean declaration/field correspondence, and preserved source hashes | No new Lean execution or simulation rerun |
+| [20 October 2026: fresh Lean build](lean/verification/20261020/README.md) | **508 project modules** compiled from source; explicit `MainPaper` and `MainPaperAudit` roots passed; **498 declaration types and transitive axiom sets** checked; all **nine main results**, seven principal groups and **17 mapped declarations** covered | Pinned upstream libraries were reused; no claim to rebuild all 633 historical sources or upstream Mathlib |
+| [20 October 2026: kernel replay](lean/verification/20261020/SUMMARY.json) | **17 selected modules** freshly replayed with `leanchecker`, including the main combined endpoint modules | Selected-module replay, not replay of the whole dependency closure |
+| [20 October 2026: Python tests and full simulation](simulation/verification/20261020/FRESH_SIMULATION.md) | **37 tests passed**; exact paper configuration freshly ran **10,000 replicates for each of three studies**, **16,384 copies and 202 batches** per replicate; all means, Monte Carlo errors, physical ranges and both fresh figures checked | Python 3.9.6 / NumPy 1.26.4 / Matplotlib 3.9.4; historical optional covariance studies were not fully rerun |
+| [20 October 2026: numerical reproduction](simulation/verification/20261020/EXECUTION_CHECKS.json) | All saved principal arrays compared only after fresh generation: mixed arrays bitwise identical; maximum pure scaled-loss difference **6.79 × 10⁻¹¹**, within recorded tolerance; separate observation instrumentation checked **1,818 new multinomial draws** | Pure arrays are not claimed bitwise identical; a simulation is not a proof of the asymptotic theorems |
+| [20 October 2026: independent simulation audit](simulation/verification/20261020/INDEPENDENT_ALGORITHM_AUDIT.md) | Separate source-to-paper review and **five independent check groups** passed: dense objective reconstruction, physical Born probabilities, truth-blind estimation, edge cases, and fresh altered-seed generation with saved-array loading disabled; no main-algorithm mismatch or manufactured-result path found | Independent finite checks and code review, not mechanical verification of Python or proof that every possible bug is absent |
+| [20 October 2026: statement and source preservation](lean/verification/20261020/ENDPOINT_INDEPENDENT_REVIEW.md) and [final hash guard](lean/verification/20261020/FINAL_PRESERVATION.json) | All nine printed statements and explicit Lean hypotheses independently reviewed; paper, all 633 Lean sources and numerical implementation preserved | Semantic correspondence is independently reviewed; it is not a mechanized LaTeX-to-Lean translation |
+
+The [17 October build](lean/verification/VERIFICATION_SUMMARY.json) and [19 October focused review](lean/verification/theorem51_review_20261019/EXECUTION_CHECKS.json) retain their original dates. The new evidence above was actually executed on **20 October**, in both UTC and America/Chicago. A stale expected hash for the unchanged `lakefile.toml` initially stopped a local preflight before Lean execution; [only verification metadata was repaired](lean/verification/20261020/VERIFICATION_METADATA_REPAIR.json), with the failed preflight preserved. No proof source or build definition changed.
 
 For the selected audited endpoint dependencies, the only axioms are `propext`, `Classical.choice`, and `Quot.sound`; no `sorryAx` or scientific input axiom occurs in those selected sets. The [full retained tree](lean/) has 633 canonical source files and also contains historical material: [twelve legacy scientific axiom leaves](lean/verification/LEGACY_AXIOM_INVENTORY.json) are documented outside the selected endpoint dependencies. Source presence does not establish a statement match or a fresh verification of every declaration.
 

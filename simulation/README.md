@@ -2,7 +2,7 @@
 
 Companion to **Adaptive quantum tomography by least squares with optimal asymptotic covariance**, by Hongru Zhao and Robert Oliver VandenBerg.
 
-Code version **1.2.0**; documentation prepared **18 October 2026** for the current 33-page main article and 26-page supplement. The implementation and saved numerical arrays are unchanged. The default paper configuration now runs only the three studies needed for the paper's two figures; the original full configuration, including the removed covariance simulation, is retained separately for provenance.
+Code version **1.2.0**; documentation and fresh verification updated **20 October 2026**. The current [main paper](../ejs_main.pdf) has **34 pages**. Numerical sources, configurations, tests and preserved paper-result arrays are unchanged. The default paper configuration runs the three studies needed for its two figures; the original five-study configuration, including the removed covariance simulation, is retained separately for provenance.
 
 ## What this package provides
 
@@ -17,11 +17,13 @@ The paper's two-part supplement describes proofs and supporting results. The old
 
 Use Python **3.9-3.12**. The saved experiment used Python 3.9.6, NumPy 1.26.4 and Matplotlib 3.9.4; the two library versions are pinned in `requirements.txt`.
 
+Run the following commands from this `simulation/` directory.
+
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
-python -m pip install --no-deps -e .
+export PYTHONPATH="$PWD/src"
 python -B scripts/check_release.py
 python -B -m unittest discover -s tests -v
 ```
@@ -64,8 +66,8 @@ Use a new output directory to preserve `results/paper/`. The full experiment is 
 - [Algorithm correspondence](docs/ALGORITHM_CORRESPONDENCE.md): paper formulas and functions.
 - [Reproducibility](docs/REPRODUCIBILITY.md): exact settings, streams, batching and replay limits.
 - [Data dictionary](docs/DATA_DICTIONARY.md): array shapes, axes and saved evidence.
-- [Verification guide](docs/VERIFICATION.md): saved full-run evidence versus new package checks.
-- [Paper snapshot](docs/PAPER_SNAPSHOT.json): manuscript hashes and current labels.
+- [Verification guide](docs/VERIFICATION.md): fresh 20 October execution, independent algorithm review, and historical evidence.
+- [Historical paper snapshot](docs/PAPER_SNAPSHOT.json): the preserved 18 October manuscript hashes and labels.
 
 At dimension 4, 104 complete labels mean **2 phase branches x 13 bases x 4 readouts**. One copy uses one randomly selected four-outcome projective measurement. Grouped multinomial batch counts implement that complete conditional experiment; the code does not measure all 104 labels on one copy.
 
@@ -73,11 +75,15 @@ The main budget is **16,384 = 2^14** copies in 202 predetermined batches. The se
 
 ## Evidence, citation and license
 
-The [package review](verification/PACKAGE_REVIEW_20261018.json) states which tests, smoke runs and saved-data plotting checks were newly run. The dated 17 October full-run and diagnostic-replay receipts are preserved. A full 10,000-replicate Monte Carlo rerun is not claimed for this documentation edition.
+On **20 October 2026**, the unchanged GitHub code passed **37 tests** and a fresh run of the exact `configs/paper.json`: **10,000 replicates for each of the three studies**, each acquiring **16,384 copies in 202 predetermined batches**. The run took **757.04 seconds** in the pinned Python 3.9.6 / NumPy 1.26.4 / Matplotlib 3.9.4 environment. All means and Monte Carlo standard errors were recalculated from the new arrays, and both current paper figures rendered successfully. See the [fresh execution report](verification/20261020/FRESH_SIMULATION.md), [full run receipt](verification/20261020/FULL_RUN_RECEIPT.json), [output checks](verification/20261020/EXECUTION_CHECKS.json), and [test output](verification/20261020/TEST_OUTPUT.txt).
 
-The software retains its MIT license and original software-author metadata. `CITATION.cff` also identifies the accompanying two-author paper as the preferred citation. The GitHub URL will be added when supplied; no remote publication was performed.
+A separately assigned reviewer checked the implementation against the paper's exact Algorithms 1-3 and ran **five new independent check groups**, including a different-seed, four-replicate verification run and independent dense reconstructions of the stated objectives. The [independent algorithm audit](verification/20261020/INDEPENDENT_ALGORITHM_AUDIT.md) found no hidden algorithm substitution, truth-dependent design, discarded replicate or manufactured simulation curve. Its [receipt](verification/20261020/INDEPENDENT_ALGORITHM_AUDIT.json) and [runnable checker](verification/20261020/independent_checks.py) state the exact scope and limitations. This is numerical evidence and code review; Python is not mechanically verified by the Lean proofs.
+
+The [18 October package review](verification/PACKAGE_REVIEW_20261018.json) and dated 17 October full-run and diagnostic-replay receipts remain unchanged. They describe their original executions and are separate from the new 20 October evidence. The removed historical optional covariance studies were not rerun at full size on 20 October.
+
+The software retains its MIT license and original software-author metadata. `CITATION.cff` also identifies the accompanying two-author paper as the preferred citation. The current private repository is [HongruZhao/adaptive-quantum-tomography](https://github.com/HongruZhao/adaptive-quantum-tomography); access is limited to authorized collaborators.
 
 
 ## Repository preparation note: 20 October 2026
 
-The implementation, configurations, tests, saved arrays, and existing MIT license are unchanged from the documentation release. The repository root PDFs are the newer editorial revision; the dated `docs/PAPER_SNAPSHOT.json` intentionally retains the earlier paper hashes. Raw execution logs are omitted, and two inherited JSON metadata exports explicitly remove machine-local paths. The new `MANIFEST.json` and `SHA256SUMS` identify this prepared folder. None of these packaging changes is a new Monte Carlo run or Lean verification.
+The implementation, configurations, tests, preserved saved arrays and existing MIT license are unchanged from the 18 October documentation release. The repository hosts the current **34-page main PDF**; `docs/PAPER_SNAPSHOT.json` intentionally retains the earlier **33-page main / 26-page supplement** snapshot and its hashes. Historical receipts have not been redated. The new execution and independent-review records under `verification/20261020/` describe work actually performed on 20 October. Full fresh output arrays remain in the local audit; their hashes and shapes are published in the execution report rather than committing a second large result bundle. `MANIFEST.json` and `SHA256SUMS` identify the distributed files.

@@ -1,0 +1,65 @@
+{
+  "prop:pure-qfi": {
+    "file": "source/paper/ejs/model.tex",
+    "first_line": 311,
+    "kind": "proposition",
+    "sha256": "a556b425e8c1ec17a3784a2e505164ae4e51b16f1ffeaf18c8a44bcd6b70c7c9",
+    "source": "\\begin{proposition}[Pure-state quantum Fisher information]\\label{prop:pure-qfi}\nLet $P=hh^*$ with $\\norm h=1$. The pairing $\\mathcal H_P$ is independent\nof the chosen directional SLDs. For $A,B\\in T_P$ and\n$v\\in\\C^D$ with $h^*v=0$, it satisfies\n\\begin{equation}\\label{eq:intrinsic-qfi}\n \\mathcal H_P[A,B]=2\\tr(AB),\\qquad \\mathcal H_P[hv^*+vh^*,hv^*+vh^*]=4\\norm v^2.\n\\end{equation}\nIn a chart (Definition~\\ref{def:pure-chart}) with tangent basis $A_j=\\partial_j\\Gamma(\\theta)$,\n$[H(\\theta)]_{jk}=\\mathcal H_P[A_j,A_k]$ and\n$\\mathcal H_P[A,B]=u^{\\mathsf T}H(\\theta)w$ whenever\n$A=\\sum_{j=1}^p u_jA_j$ and $B=\\sum_{k=1}^p w_kA_k$, with\n$u,w\\in\\R^p$.\n\\end{proposition}"
+  },
+  "thm:p1": {
+    "file": "source/paper/ejs/mixed.tex",
+    "first_line": 215,
+    "kind": "theorem",
+    "sha256": "85784e1d1a8d9743e69033b6ea0139fc6e01c0df2f90d08c127911b47eb3f62d",
+    "source": "\\begin{theorem}[Strong consistency and Fisher information convergence]\n\\label{thm:p1}\nLet $L=B$ denote Algorithm~\\ref{alg:mixed-bures} with allocation\n$\\pi_B$, and $L=F$ denote Algorithm~\\ref{alg:mixed-frobenius} with\nallocation $\\pi_F(c_{n_-(t)})$ on copy $t$.\nBoth rules use the adaptive measurement axes\n$v_{n_-(t),k}$ defined in~\\eqref{eq:qubit-householder}, with the\ndesign estimate $c_{n_-(t)}$ from the corresponding algorithm.\nHere $n_-(t)=N_{j-1}$\nfor $N_{j-1}<t\\le N_j$, as defined in~\\eqref{eq:batches}.\nFor either rule $L\\in\\{B,F\\}$, every fixed interior truth, every\n$\\lambda>0$, and every batch sequence~\\eqref{eq:batches}, the\nimplemented estimator satisfies almost surely\n\\begin{equation}\\label{eq:p1limit}\n \\begin{gathered}\n \\widehat\\theta_n\\to\\theta_0,\\qquad c_n\\to\\theta_0,\\qquad\n \\mathcal I_{\\xi_t}(\\theta_0)\\to\\mathcal I_L^\\star,\\\\\n \\frac1n\\sum_{t\\le n}\\mathcal I_{\\xi_t}(\\theta_0)\\to\\mathcal I_L^\\star,\n \\qquad \\frac1n\\sum_{t\\le n}\\mathcal I_{a_t}(\\theta_0)\\to\\mathcal I_L^\\star.\n \\end{gathered}\n\\end{equation}\nBoth safeguards, \\eqref{eq:bures-safeguard} and~\\eqref{eq:qubitcontroller},\nare eventually inactive almost surely.\n\\end{theorem}"
+  },
+  "thm:p1clt": {
+    "file": "source/paper/ejs/mixed.tex",
+    "first_line": 248,
+    "kind": "theorem",
+    "sha256": "9b2d708748dfe3ad70b6b1265f5d7d6a5e1ec654fedb5b8ac99489c3cebaa6c8",
+    "source": "\\begin{theorem}[Asymptotic normality with inverse-information covariance]\n\\label{thm:p1clt}\nUnder the hypotheses of Theorem~\\ref{thm:p1}, the ridge estimator and\nthe physical output are asymptotically normal:\n\\begin{equation}\\label{eq:p1clt}\n n^{1/2}(\\widehat\\theta_n-\\theta_0)\\Longrightarrow\n \\mathcal N_3(0,\\Sigma_L),\\qquad \\Sigma_L=(\\mathcal I_L^\\star)^{-1},\n\\end{equation}\nand the asymptotic normality in~\\eqref{eq:p1clt} also holds with $c_n$\nin place of $\\widehat\\theta_n$.\nExplicitly,\n\\begin{equation}\\label{eq:mixedcovariance}\n \\begin{split}\n \\Sigma_B&=3(\\Id_3-\\theta_0\\theta_0^{\\mathsf T}),\\\\\n \\Sigma_F&=(2+s_0)\\left(\\Id_3-\n              \\frac{\\theta_0\\theta_0^{\\mathsf T}}{1+s_0}\\right).\n \\end{split}\n\\end{equation}\nThe assertions cover the maximally mixed state, single-shot updates,\nand all completed-batch subsequences.\n\\end{theorem}"
+  },
+  "prop:phasepair": {
+    "file": "source/paper/ejs/persistent.tex",
+    "first_line": 112,
+    "kind": "proposition",
+    "sha256": "f8919b3f7a7fc46dd4c80b5834be98857911823ceb416cd85d785f326ac3cbd7",
+    "source": "\\begin{proposition}[Phase pairing]\\label{prop:phasepair}\nThe effects~\\eqref{eq:phaseunitary} form an informationally complete\nmeasurement on the full state space and have positive reference probabilities.\nIn the reference coordinates~\\eqref{eq:referencechart}, centered at $P_{\\rm ref}$,\n\\begin{equation}\\label{eq:phasepairfisher}\n \\mathcal I_{\\mathsf E}(0)=H(0)/2=\\Id_{2d}/2\n\\end{equation}\nEquivalently, $\\mathcal J_{\\mathsf E,P_{\\rm ref}}=\\tfrac12\\mathcal H_{P_{\\rm ref}}$ as bilinear\nforms on $T_{P_{\\rm ref}}$; this is Fisher symmetry at $P_{\\rm ref}$.\n\\end{proposition}"
+  },
+  "thm:p2": {
+    "file": "source/paper/ejs/persistent.tex",
+    "first_line": 442,
+    "kind": "theorem",
+    "sha256": "5548f1d80ac0d46a8d535e1a994318ba0557a3b85e88704fb5f014289a5ad0fb",
+    "source": "\\begin{theorem}[Strong consistency and Fisher information convergence]\n\\label{thm:p2}\nFix $D\\ge2$, a reference POVM satisfying (C1)--(C2) with rank-one effects,\n$\\lambda,\\eta>0$, a pure truth $P_0$, and batches~\\eqref{eq:batches}.\nThe paired adaptive experiment and estimators in\nAlgorithm~\\ref{alg:phase-paired}, defined by~\\eqref{eq:pureridge}\nand~\\eqref{eq:pure-tangent-objective}, satisfy, almost surely,\n\\begin{equation}\\label{eq:p2limit}\n \\begin{aligned}\n \\widehat A_n&\\to P_0,\\quad\\widehat P_n\\to P_0,\n       \\quad\\widehat P_n^{\\rm eff}\\to P_0,\n       &&(n=N_j,\\ j\\to\\infty),\\\\\n U_tP_{\\rm ref}U_t^*&\\to P_0,\\qquad \\mathcal J_{a_t,P_0}\\to \\mathcal H_{P_0}/2,\n       &&(t\\to\\infty),\\\\\n \\frac1n\\sum_{t\\le n}\\mathcal J_{a_t,P_0}&\\to \\mathcal H_{P_0}/2,\n       &&(n=N_j,\\ j\\to\\infty).\n \\end{aligned}\n\\end{equation}\nHere $t\\to\\infty$ runs through all measured copies. The limits indexed\nby $n$ hold along the completed-batch sample sizes $n=N_j$, $j\\to\\infty$,\nwhere $N_j$ is the cumulative number of copies after batch $j$\ndefined in~\\eqref{eq:batches}.\n\\end{theorem}"
+  },
+  "thm:p2efficient": {
+    "file": "source/paper/ejs/persistent.tex",
+    "first_line": 474,
+    "kind": "theorem",
+    "sha256": "6476e74514aaa8858b7c9c0cdf4e9364766049dd6bbf282904d3649a7c8bba6d",
+    "source": "\\begin{theorem}[Estimation rates and asymptotic normality]\n\\label{thm:p2efficient}\nUnder the hypotheses of Theorem~\\ref{thm:p2}, the estimators in\nAlgorithm~\\ref{alg:phase-paired} satisfy the following conclusions\nalong $n=N_j$, $j\\to\\infty$.\n\n\\noindent\\textup{(i) Estimation rates.}\nThe matrix least-squares estimator and its rank-one projection satisfy\n$\\|\\widehat A_n-P_0\\|_F=O_p(n^{-1/2})$ and\n$\\|\\widehat P_n-P_0\\|_F=O_p(n^{-1/2})$.\n\n\\noindent\\textup{(ii) Asymptotic normality.} In any fixed\nsmooth pure-state chart $(\\mathcal U,\\varphi)$ as in\nDefinition~\\ref{def:pure-chart}, with $P_0\\in\\mathcal U$, let\n$\\theta_0=\\varphi(P_0)$ and let $H(\\theta_0)$ be the matrix in\nthe parametrization $\\Gamma(\\theta)=\\varphi^{-1}(\\theta)$. Then\n\\begin{equation}\\label{eq:efficientchartCLT}\n n^{1/2}\\{\\varphi(\\widehat P_n^{\\rm eff})-\\varphi(P_0)\\}\n \\Longrightarrow\\mathcal N_{2d}(0,2H(\\theta_0)^{-1}).\n\\end{equation}\nEquivalently, $n^{1/2}(\\widehat P_n^{\\rm eff}-P_0)$ converges in\ndistribution to a centered Gaussian supported on the true tangent space,\nwith identity covariance in Frobenius-orthonormal tangent coordinates.\n\\end{theorem}"
+  },
+  "thm:oracle-risk": {
+    "file": "source/paper/ejs/oracle_loss.tex",
+    "first_line": 39,
+    "kind": "theorem",
+    "sha256": "52cce8ff5bebd3be4e913f6d37c7e7d104e32fea275c1060c641a825e068618c",
+    "source": "\\begin{theorem}[Adaptive Gill--Massar bound]\\label{thm:oracle-risk}\nFor either model above, let $H=H(\\theta_0)\\succ0$ be the\nSLD quantum Fisher information matrix and $W\\succeq0$ a weight in the\nsame coordinates. For any sequence of policies $(\\zeta_t)_{t\\ge1}$ as above,\nunder the conditional-likelihood assumptions in\nAppendix~\\ref{app:oracle-main}, every finite-valued coordinate estimator $T_n$ locally unbiased\nat $\\theta_0$ and every $n\\ge1$ satisfy\n\\begin{equation}\\label{eq:oracle-finite-risk}\n n\\,\\E_{\\theta_0}\\!\\left[\n (T_n-\\theta_0)^{\\mathsf T}W(T_n-\\theta_0)\\right]\n \\ge C_{\\rm GM}(W,H),\n\\end{equation}\nwhere $C_{\\rm GM}$ is defined in~\\eqref{eq:gm-weighted-bound}.\n\\end{theorem}"
+  },
+  "cor:mixed-mean-loss": {
+    "file": "source/paper/ejs/oracle_loss.tex",
+    "first_line": 69,
+    "kind": "corollary",
+    "sha256": "a7084d4c48463f7c60ff5ec6c70cc761825f61c4ee38d1a3b6a6549f4bf4b075",
+    "source": "\\begin{corollary}[Mixed-qubit expected-loss attainment]\\label{cor:mixed-mean-loss}\nUnder the hypotheses of Theorem~\\ref{thm:p1clt}, let $c_n$ be the\nsafeguarded output~\\eqref{eq:bures-safeguard} for\nAlgorithm~\\ref{alg:mixed-bures} or the projected\noutput~\\eqref{eq:qubitcontroller} for Algorithm~\\ref{alg:mixed-frobenius}.\nAlong $n=N_j$, $j\\to\\infty$,\n\\begin{equation}\\label{eq:mixed-oracle-mean-loss}\n \\begin{aligned}\n n\\,\\E_{\\theta_0}D_B^2\\{\\rho(c_n),\\rho(\\theta_0)\\}\n   &\\longrightarrow 9/4 &&\\text{(Algorithm~\\ref{alg:mixed-bures})},\\\\\n n\\,\\E_{\\theta_0}\\norm{\\rho(c_n)-\\rho(\\theta_0)}_F^2\n   &\\longrightarrow (2+s_0)^2/2 &&\\text{(Algorithm~\\ref{alg:mixed-frobenius})}.\n \\end{aligned}\n\\end{equation}\n\\end{corollary}"
+  },
+  "cor:oracle-mean-loss": {
+    "file": "source/paper/ejs/oracle_loss.tex",
+    "first_line": 90,
+    "kind": "corollary",
+    "sha256": "b71cb39d1ed0a1bb1c2f51a63be4ab752dfbc2972126d9f378c04249b92c16f6",
+    "source": "\\begin{corollary}[Pure-state expected-loss attainment]\\label{cor:oracle-mean-loss}\nUnder the hypotheses of Theorem~\\ref{thm:p2efficient}, the reported\ntangent-corrected projector of Algorithm~\\ref{alg:phase-paired}\nsatisfies, along $n=N_j$, $j\\to\\infty$,\n\\begin{equation}\\label{eq:oracle-mean-loss}\n \\begin{split}\n n\\,\\E_{P_0}D_B(\\widehat P_n^{\\rm eff},P_0)^2&\\longrightarrow d,\\\\\n n\\,\\E_{P_0}\\norm{\\widehat P_n^{\\rm eff}-P_0}_F^2&\\longrightarrow2d.\n \\end{split}\n\\end{equation}\n\\end{corollary}"
+  }
+}

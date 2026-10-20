@@ -24,7 +24,7 @@ Install [elan](https://github.com/leanprover/elan), Git, and Python 3.9 or newer
 ```sh
 cd lean
 python3 -B scripts/check_release.py
-python3 -B scripts/verify.py --cache --replay
+LAKE_ARTIFACT_CACHE=false python3 -B scripts/verify.py --cache --replay
 ```
 
 The first command verifies package hashes only. The second obtains the pinned upstream cache, builds the 508-module current-result closure and the explicit `MainPaper` and `MainPaperAudit` roots, checks 498 selected declarations and their transitive axioms, and requests kernel replay of 17 selected modules. First-run dependency acquisition needs network access. Use a clean checkout for fresh project compilation; add `--incremental` only when intentionally reusing project proof objects. New receipts are written to `lean/verification/reproduction/`.
@@ -70,9 +70,11 @@ The current paper figures are `figure1_mixed.pdf` and `figure2_pure_bures.pdf`. 
 
 ## Verification evidence and limits
 
-The 17 October 2026 saved evidence records a fresh source build of 567 project modules in the larger native workspace, audits of 498 selected declarations, and kernel replay of 17 selected modules. The 19 October focused review replayed seven existing source-identical proof modules and inspected sixteen declarations. For audited selected endpoints, only `propext`, `Classical.choice`, and `Quot.sound` occur. Twelve scientific axiom leaves in retained imported historical material are inventoried separately and do not enter those selected endpoint dependencies.
+**Fresh checks passed on 20 October 2026.** The [Lean report](lean/verification/20261020/README.md) records 508 project modules compiled from source, 498 declaration types and transitive axiom sets checked, all nine main results covered by 17 mapped declarations, and 17 selected modules kernel replayed. All selected axiom sets contain only `propext`, `Classical.choice` and `Quot.sound`. Pinned upstream library objects were reused; all 633 retained sources and the paper stayed unchanged.
 
-**The entire 633-source tree is not asserted to be axiom free or freshly rebuilt by this repository preparation.** The dated receipts do not establish a new build when the repository is downloaded. The Lean mathematics does not mechanically verify the Python implementation or Monte Carlo values. The 20 October Python checks include 37 fresh tests and a fresh eight-replicate smoke experiment with plotting; they are not a new full 10,000-replicate run.
+The [Python report](simulation/verification/20261020/FRESH_SIMULATION.md) records 37 passing tests and a fresh full paper run: 10,000 replicates for each of three studies, with 16,384 copies and 202 batches per replicate. Every loss mean and Monte Carlo error was checked and both figures rendered. Mixed arrays reproduce bitwise; pure arrays agree within the recorded floating-point tolerance. A [separate independent audit](simulation/verification/20261020/INDEPENDENT_ALGORITHM_AUDIT.md) found no main-algorithm mismatch or manufactured-result path and supplies additional runnable checks.
+
+The [final verification table](MAIN_RESULTS.md#what-was-actually-verified) distinguishes these new executions from older evidence. The selected Lean checks do not establish an axiom-free build of every historical declaration or replay of every dependency. Twelve documented legacy scientific axiom leaves remain outside the selected endpoint dependencies. Lean does not mechanically verify the Python implementation or Monte Carlo values.
 
 ## Citation and licenses
 

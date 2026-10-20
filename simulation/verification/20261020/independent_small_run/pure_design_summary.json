@@ -1,0 +1,62 @@
+{
+  "replications": 4,
+  "horizons": [
+    64,
+    128,
+    256
+  ],
+  "columns": [
+    "current_bures",
+    "average_bures"
+  ],
+  "aggregation": "Arithmetic mean of the separately inverted per-record information criteria",
+  "seed_sequence_pattern": [
+    202610200713,
+    3,
+    1,
+    "replicate"
+  ],
+  "replicate_indices": [
+    0,
+    3
+  ],
+  "same_records_as_pure_loss_panel": true,
+  "seed_selection": false,
+  "smoothing_or_monotonicity_enforcement": false,
+  "pointwise_MC_error_band_multiplier": 1.96,
+  "rows": [
+    {
+      "n": 64,
+      "mean": [
+        3.147580511682826,
+        3.162170326709382
+      ],
+      "mc_se": [
+        0.0515398675341331,
+        0.04254809660534764
+      ]
+    },
+    {
+      "n": 128,
+      "mean": [
+        3.132926454168325,
+        3.080596916276164
+      ],
+      "mc_se": [
+        0.06573308680822404,
+        0.025855355247327867
+      ]
+    },
+    {
+      "n": 256,
+      "mean": [
+        3.0423377845808117,
+        3.044451485151483
+      ],
+      "mc_se": [
+        0.025799118841302742,
+        0.006320874368619943
+      ]
+    }
+  ]
+}

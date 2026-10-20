@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-10-20T07:03:41.589623+00:00",
+  "completed_utc": "2026-10-20T07:16:18.625967+00:00",
+  "seconds": 757.036921042,
+  "study_seconds": {
+    "mixed_bures": 53.447310792,
+    "mixed_frobenius": 56.677189709,
+    "pure_algorithm3": 645.944493542
+  },
+  "replications_per_study": 10000,
+  "fresh_simulation": true,
+  "Python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+  "NumPy": "1.26.4",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "configuration": {
+    "replications": 10000,
+    "root_seed": 2026101602,
+    "ridge": 1.0,
+    "correction_ridge": 1.0,
+    "mixed_truth_radius": 0.9,
+    "mixed_truth_direction": [
+      1.0,
+      2.0,
+      3.0
+    ],
+    "pure_dimension": 4,
+    "pure_truth_phase_increment": 0.37,
+    "optional_covariance_dimensions": [],
+    "optional_reporting_powers": [
+      12,
+      16,
+      20,
+      24
+    ],
+    "error_bar_multiplier": 1.96,
+    "main_batch_schedule": {
+      "kind": "growing",
+      "initial": 16,
+      "minimum": 16,
+      "denominator": 50,
+      "maximum": 16384
+    },
+    "main_reporting_targets": [
+      256,
+      512,
+      1024,
+      2048,
+      3072,
+      4096,
+      5120,
+      6144,
+      7168,
+      8192,
+      9216,
+      10240,
+      11264,
+      12288,
+      13312,
+      14336,
+      15360,
+      16384
+    ],
+    "main_horizontal_axis": "linear",
+    "optional_batch_schedule": "doubling",
+    "optional_maximum_reporting_power": 24
+  },
+  "configuration_sha256": "b1c2050a3d98c708bdd091be0ee0e2577240a0cf07c052a61a1db5d9a6e00979",
+  "source_sha256": {
+    "src/adaptive_tomography/simulation.py": "30ae9a4a0a350f40aa6587d4ddedcaaf3840b369b13a302e3470eb0e7c00576c",
+    "src/adaptive_tomography/optional.py": "85d90c355476ef9849a1393c072dd92e0c124e08cb34c9a32b20ad7e1828116f",
+    "src/adaptive_tomography/pure.py": "a1f3fe5aa5bdc7c79230303bb88883e2972a41ebc6f67b2d3e0b1b5123023baf",
+    "src/adaptive_tomography/plotting.py": "783d6d286511d5f8ce89e99f2c8785d20278d0e7692a031d9095f53b2a772484",
+    "src/adaptive_tomography/design.py": "b6731db4a712fe0563b95db54d0a032cbf4c10d765bd379565b9624750901c83",
+    "src/adaptive_tomography/__init__.py": "48e1bd80080ca6b32cb785f3916725980acfba52a394a134b062f696625a1ebc",
+    "src/adaptive_tomography/mixed.py": "207ba1741e481bde4b87c5a60f4bdcc0479f3ffb0dba496dfa18acbf20a603b9",
+    "src/adaptive_tomography/estimators.py": "81f3b03f7bdf2a9947ffaa315bb8d5fb86a6a0ba3d77b1c30f22975befb33791",
+    "src/adaptive_tomography/__main__.py": "dfe0f4c46ec66e045ac18d8ec183bc33eb27800fabdc63d4f843d8cb7c190579",
+    "src/adaptive_tomography/schedules.py": "dd250aa425c8c446057a1e4c46734cd9d622e4c8f33ecd20058564ed2586f9c9"
+  },
+  "source_unchanged_during_execution": true,
+  "output_sha256": {
+    "results.json": "88f83efae2137bd773529108ed97e938477f05b5ad12d6bd3a63fd0b11376dc1",
+    "samples.npz": "ffb243e1bcc99125eb158b73308f8f2fe0e04d4e136deb56052859fd73221817",
+    "apparatus.npz": "5edfb5e83a0627d59134fd8e1f3284a3ab155be25a819b5f339796478f5f15f4"
+  }
+}

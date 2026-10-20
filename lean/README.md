@@ -9,7 +9,7 @@ This folder contains all **633 canonical Lean source files**, together with the 
 | Match current paper results to Lean | [docs/PAPER_TO_LEAN.md](docs/PAPER_TO_LEAN.md) |
 | Read principal source entry points | [docs/CODE_GUIDE.md](docs/CODE_GUIDE.md) |
 | Check prepared-package hashes only | `python3 -B scripts/check_release.py` |
-| Reproduce selected proof and axiom checks | `python3 -B scripts/verify.py --cache --replay` |
+| Reproduce selected proof and axiom checks | `LAKE_ARTIFACT_CACHE=false python3 -B scripts/verify.py --cache --replay` |
 | Inspect dated verification evidence | [verification/README.md](verification/README.md) |
 
 The paper has nine named theorems, propositions, and corollaries. Existing Lean identifiers bundle some split paper statements: `theorem_3_1` contains current Theorems 3.1 and 3.2, and `theorem_4_2` contains current Theorems 4.2 and 4.3. `Inputs` lists hypotheses; the proving theorem supplies its `Conclusions`.
@@ -20,7 +20,7 @@ Install Git, Python 3.9 or newer, and [elan](https://github.com/leanprover/elan)
 
 ```sh
 python3 -B scripts/check_release.py
-python3 -B scripts/verify.py --cache --replay
+LAKE_ARTIFACT_CACHE=false python3 -B scripts/verify.py --cache --replay
 ```
 
 The first command checks file integrity only. The second builds the 508-module current-result closure, builds the explicit `MainPaper` and `MainPaperAudit` roots, inspects 498 selected declaration types and axiom sets, checks dependency revisions, and replays 17 selected modules. It writes new timestamped receipts under `verification/reproduction/`. A fresh run rejects existing project proof objects; use `--incremental` only to expressly reuse them. Upstream caches are separate from project proof objects.
@@ -36,7 +36,7 @@ The original `lakefile.toml` remains unchanged. Its plain `lake build` defaults 
 
 ## Evidence boundary
 
-The saved 17 October 2026 evidence records a fresh build of 567 project modules in the larger native workspace, audits of 498 selected declarations, and replay of 17 selected modules. The 19 October focused adaptive-bound review replays seven existing source-identical proof modules and inspects sixteen declarations. Neither is a fresh full build performed during this repository preparation.
+The [fresh 20 October 2026 report](verification/20261020/README.md) records source compilation of the exact 508-module current-result closure, 498 declaration/type/axiom checks, all nine main results through 17 mapped declarations, and 17 selected-module kernel replays. Every project compiler trace/import binding was checked for freshness. Pinned upstream objects were reused; all 633 Lean sources and the original build definition/pins stayed unchanged. Historical 17 and 19 October receipts remain separately dated. A stale expected build-definition hash was corrected in verification metadata only, with the failed preflight preserved.
 
 The audited selected declarations use only standard logical axioms. Twelve legacy scientific axiom leaves in retained imported historical material are inventoried separately and do not enter those selected endpoint dependencies. **No axiom-free claim is made for every declaration in the full 633-source tree.** This development does not mechanically verify Python code, Monte Carlo values, hardware, runtime, or literature attribution.
 

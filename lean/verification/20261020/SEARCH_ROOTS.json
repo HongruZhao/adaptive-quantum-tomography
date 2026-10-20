@@ -1,0 +1,78 @@
+{
+  "lean_version": "Lean (version 4.33.0-rc2, arm64-apple-darwin24.6.0, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
+  "lean_path_root_kinds": [
+    "pinned_upstream_package",
+    "pinned_upstream_package",
+    "pinned_upstream_package",
+    "pinned_upstream_package",
+    "pinned_upstream_package",
+    "pinned_upstream_package",
+    "pinned_upstream_package",
+    "pinned_upstream_package",
+    "pinned_upstream_package",
+    "fresh_project",
+    "pinned_toolchain"
+  ],
+  "prior_project_object_roots_present": false,
+  "project_named_objects_in_upstream_or_toolchain_roots": false,
+  "upstream_tracked_worktrees_clean": true,
+  "inherited_lean_path": null,
+  "upstream_revisions": {
+    "mathlib": "641fbd329d4ffb62bef83c51f54088469056bd36",
+    "plausible": "123d15766ba49356c02ebad2a4462dfe12d79899",
+    "LeanSearchClient": "f5c090429dff3cf66cb65562526c9ea6e8edfbcb",
+    "importGraph": "bb3469a87774349fe01898d8bf2fc6a1ce6411ca",
+    "proofwidgets": "222c58dad7706a6e7cae46c0edd65ea881d3ee27",
+    "aesop": "7db8190085343afde2f5d2cdcc9bac719b6ec02c",
+    "Qq": "ef42f8944eaf5b6cbfbe75d1917d824c7dd6cf33",
+    "batteries": "76e1c118b0700b4ceafe99532e887d6431625e1a",
+    "Cli": "1319485273bf87833fa472afbcefdedecb16b45f"
+  },
+  "upstream_state_rechecked_after_build": [
+    {
+      "package": "mathlib",
+      "revision": "641fbd329d4ffb62bef83c51f54088469056bd36",
+      "tracked_worktree_clean": true
+    },
+    {
+      "package": "plausible",
+      "revision": "123d15766ba49356c02ebad2a4462dfe12d79899",
+      "tracked_worktree_clean": true
+    },
+    {
+      "package": "LeanSearchClient",
+      "revision": "f5c090429dff3cf66cb65562526c9ea6e8edfbcb",
+      "tracked_worktree_clean": true
+    },
+    {
+      "package": "importGraph",
+      "revision": "bb3469a87774349fe01898d8bf2fc6a1ce6411ca",
+      "tracked_worktree_clean": true
+    },
+    {
+      "package": "proofwidgets",
+      "revision": "222c58dad7706a6e7cae46c0edd65ea881d3ee27",
+      "tracked_worktree_clean": true
+    },
+    {
+      "package": "aesop",
+      "revision": "7db8190085343afde2f5d2cdcc9bac719b6ec02c",
+      "tracked_worktree_clean": true
+    },
+    {
+      "package": "Qq",
+      "revision": "ef42f8944eaf5b6cbfbe75d1917d824c7dd6cf33",
+      "tracked_worktree_clean": true
+    },
+    {
+      "package": "batteries",
+      "revision": "76e1c118b0700b4ceafe99532e887d6431625e1a",
+      "tracked_worktree_clean": true
+    },
+    {
+      "package": "Cli",
+      "revision": "1319485273bf87833fa472afbcefdedecb16b45f",
+      "tracked_worktree_clean": true
+    }
+  ]
+}

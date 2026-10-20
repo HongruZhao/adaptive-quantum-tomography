@@ -1,0 +1,179 @@
+{
+  "status": "PASS",
+  "started": {
+    "utc": "2026-10-20T07:04:48.160337+00:00",
+    "America_Chicago": "2026-10-20T02:04:48.160337-05:00"
+  },
+  "completed": {
+    "utc": "2026-10-20T07:04:48.493688+00:00",
+    "America_Chicago": "2026-10-20T02:04:48.493688-05:00"
+  },
+  "instrumentation_only_changes_no_simulation_source_edits": true,
+  "replications_per_study": 2,
+  "studies": 3,
+  "diagnostic_histories": 3,
+  "generated_histories": 9,
+  "batch_count_draws": 1818,
+  "simulated_copies_including_diagnostic_histories": 147456,
+  "existing_result_directory_reads_blocked": true,
+  "numpy_load_blocked": true,
+  "all_born_probability_vectors_checked": true,
+  "all_multinomial_counts_checked": true,
+  "streams": [
+    {
+      "seed_entropy": [
+        2026101602,
+        1,
+        0,
+        0
+      ],
+      "batch_calls": 202,
+      "copies": 16384,
+      "probability_lengths": [
+        6
+      ],
+      "nonnegative_normalized_probabilities": true,
+      "nonnegative_integer_counts_sum_to_batch_size": true,
+      "adaptive_probabilities_changed": true,
+      "generated_batch_records_sha256": "0b538e323bee891abbde81c228fac9fda7e86da8211c402acfa08bba190644cb"
+    },
+    {
+      "seed_entropy": [
+        2026101602,
+        1,
+        1,
+        0
+      ],
+      "batch_calls": 202,
+      "copies": 16384,
+      "probability_lengths": [
+        6
+      ],
+      "nonnegative_normalized_probabilities": true,
+      "nonnegative_integer_counts_sum_to_batch_size": true,
+      "adaptive_probabilities_changed": true,
+      "generated_batch_records_sha256": "9ee256dd5cd2c79301151a76f44c3e76a7b56ef31a81dabc3e9715b13553a162"
+    },
+    {
+      "seed_entropy": [
+        2026101602,
+        1,
+        1,
+        1
+      ],
+      "batch_calls": 202,
+      "copies": 16384,
+      "probability_lengths": [
+        6
+      ],
+      "nonnegative_normalized_probabilities": true,
+      "nonnegative_integer_counts_sum_to_batch_size": true,
+      "adaptive_probabilities_changed": true,
+      "generated_batch_records_sha256": "587857c4af574df3aa0c34406052cd20b394fdaeaf89c3d0b6d1048cf52bbbac"
+    },
+    {
+      "seed_entropy": [
+        2026101602,
+        2,
+        0,
+        0
+      ],
+      "batch_calls": 202,
+      "copies": 16384,
+      "probability_lengths": [
+        6
+      ],
+      "nonnegative_normalized_probabilities": true,
+      "nonnegative_integer_counts_sum_to_batch_size": true,
+      "adaptive_probabilities_changed": true,
+      "generated_batch_records_sha256": "0a7671d59a35764a8d8b27faf19f7423126cc811389387aa52439a833beacd22"
+    },
+    {
+      "seed_entropy": [
+        2026101602,
+        2,
+        1,
+        0
+      ],
+      "batch_calls": 202,
+      "copies": 16384,
+      "probability_lengths": [
+        6
+      ],
+      "nonnegative_normalized_probabilities": true,
+      "nonnegative_integer_counts_sum_to_batch_size": true,
+      "adaptive_probabilities_changed": true,
+      "generated_batch_records_sha256": "836a05f183dc8d83fd9dec34c47c529c5fd28674f821bf7d618b9ee6c52ce0b1"
+    },
+    {
+      "seed_entropy": [
+        2026101602,
+        2,
+        1,
+        1
+      ],
+      "batch_calls": 202,
+      "copies": 16384,
+      "probability_lengths": [
+        6
+      ],
+      "nonnegative_normalized_probabilities": true,
+      "nonnegative_integer_counts_sum_to_batch_size": true,
+      "adaptive_probabilities_changed": true,
+      "generated_batch_records_sha256": "4384367f85fb646bf6a7f7730c5eb2e24667cada69c572fa900652c9b9023990"
+    },
+    {
+      "seed_entropy": [
+        2026101602,
+        3,
+        0,
+        0
+      ],
+      "batch_calls": 202,
+      "copies": 16384,
+      "probability_lengths": [
+        104
+      ],
+      "nonnegative_normalized_probabilities": true,
+      "nonnegative_integer_counts_sum_to_batch_size": true,
+      "adaptive_probabilities_changed": true,
+      "generated_batch_records_sha256": "1c18a8a09ee0a0868ef811c8c4b220d603c26418b671ae25472e6e06b2472d8c"
+    },
+    {
+      "seed_entropy": [
+        2026101602,
+        3,
+        1,
+        0
+      ],
+      "batch_calls": 202,
+      "copies": 16384,
+      "probability_lengths": [
+        104
+      ],
+      "nonnegative_normalized_probabilities": true,
+      "nonnegative_integer_counts_sum_to_batch_size": true,
+      "adaptive_probabilities_changed": true,
+      "generated_batch_records_sha256": "dda0a3241bbcb47f88e0d3d9d1be3f0150a325960ba15fb1a10560130112498e"
+    },
+    {
+      "seed_entropy": [
+        2026101602,
+        3,
+        1,
+        1
+      ],
+      "batch_calls": 202,
+      "copies": 16384,
+      "probability_lengths": [
+        104
+      ],
+      "nonnegative_normalized_probabilities": true,
+      "nonnegative_integer_counts_sum_to_batch_size": true,
+      "adaptive_probabilities_changed": true,
+      "generated_batch_records_sha256": "f688ebb95d3afc9e5b1bff5663bf3c5191cd09282d98ff3e582adf0f7996f44e"
+    }
+  ],
+  "source_config_tests_unchanged": true,
+  "scope": "Confirms fresh count sampling and adaptive updates execute; code-to-paper correspondence is audited separately."
+}

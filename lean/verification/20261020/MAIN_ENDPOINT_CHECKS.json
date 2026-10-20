@@ -1,0 +1,390 @@
+{
+  "current_printed_paper_results": 9,
+  "current_claim_groups": 7,
+  "mapped_group_declarations": 17,
+  "paper_results": [
+    {
+      "paper_result": "Proposition 2.1",
+      "group": "T01",
+      "status": "PASS",
+      "principal_endpoint": "QubitOracle.Paper.PureQuantumInformation.proposition_2_1",
+      "principal_endpoint_elaborated_type_sha256": "32c5a7b18ac5e7f2c76d5bccd24ee5b78334b969019b83f92403cccfa3fb3e17",
+      "principal_endpoint_transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "principal_endpoint_module_freshly_source_compiled": true,
+      "principal_endpoint_module_kernel_replayed": true,
+      "audited_group_endpoints": [
+        "QubitOracle.Paper.PureQuantumInformation.proposition_2_1"
+      ],
+      "paper_correspondence": "Complete combined intrinsic SLD information proposition."
+    },
+    {
+      "paper_result": "Theorem 3.1",
+      "group": "T02",
+      "status": "PASS",
+      "principal_endpoint": "QubitOracle.Paper.MainPaperTheorem31.theorem_3_1",
+      "principal_endpoint_elaborated_type_sha256": "afea52f90a6afc5dba6b4733fea15ce147f8ebe5c61747ef48a11964aa5add74",
+      "principal_endpoint_transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "principal_endpoint_module_freshly_source_compiled": true,
+      "principal_endpoint_module_kernel_replayed": true,
+      "audited_group_endpoints": [
+        "QubitOracle.Paper.MainPaperTheorem31.theorem_3_1",
+        "QubitOracle.Paper.MainPaperTheorem31.action_in_batch",
+        "QubitOracle.Paper.MainPaperTheorem31.label_order",
+        "QubitOracle.AdaptiveDesign.P1Weighted.covariance_eq_information_inv"
+      ],
+      "paper_correspondence": "Consistency and information-convergence clauses of the combined endpoint for current Theorems 3.1 and 3.2; batch/action and label-order bridges checked."
+    },
+    {
+      "paper_result": "Theorem 3.2",
+      "group": "T02",
+      "status": "PASS",
+      "principal_endpoint": "QubitOracle.Paper.MainPaperTheorem31.theorem_3_1",
+      "principal_endpoint_elaborated_type_sha256": "afea52f90a6afc5dba6b4733fea15ce147f8ebe5c61747ef48a11964aa5add74",
+      "principal_endpoint_transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "principal_endpoint_module_freshly_source_compiled": true,
+      "principal_endpoint_module_kernel_replayed": true,
+      "audited_group_endpoints": [
+        "QubitOracle.Paper.MainPaperTheorem31.theorem_3_1",
+        "QubitOracle.Paper.MainPaperTheorem31.action_in_batch",
+        "QubitOracle.Paper.MainPaperTheorem31.label_order",
+        "QubitOracle.AdaptiveDesign.P1Weighted.covariance_eq_information_inv"
+      ],
+      "paper_correspondence": "Gaussian-limit clauses of the same combined endpoint; covariance identity bridge also freshly source compiled and type/axiom audited."
+    },
+    {
+      "paper_result": "Proposition 4.1",
+      "group": "T03",
+      "status": "PASS",
+      "principal_endpoint": "QubitOracle.AdaptiveDesign.PhasePair.paired_conditions",
+      "principal_endpoint_elaborated_type_sha256": "da630241a83d22b808f92222e83cb42af3c957c9dd5c2ece19a289043c0ea38e",
+      "principal_endpoint_transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "principal_endpoint_module_freshly_source_compiled": true,
+      "principal_endpoint_module_kernel_replayed": true,
+      "audited_group_endpoints": [
+        "QubitOracle.AdaptiveDesign.PhasePair.paired_conditions",
+        "QubitOracle.AdaptiveDesign.PhasePair.paired_fisher_of_rankOne"
+      ],
+      "paper_correspondence": "Phase-pair identifying, regular and Fisher-symmetry conjunction, with paired_fisher_of_rankOne checked."
+    },
+    {
+      "paper_result": "Theorem 4.2",
+      "group": "T04",
+      "status": "PASS",
+      "principal_endpoint": "QubitOracle.Paper.MainPaperTheorem42.theorem_4_2",
+      "principal_endpoint_elaborated_type_sha256": "a05502103362146c9b3d7c1bb6cde44775a02dbb1dcf7e82af55fa8ed366a173",
+      "principal_endpoint_transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "principal_endpoint_module_freshly_source_compiled": true,
+      "principal_endpoint_module_kernel_replayed": true,
+      "audited_group_endpoints": [
+        "QubitOracle.Paper.MainPaperTheorem42.Inputs",
+        "QubitOracle.Paper.MainPaperTheorem42.Conclusions",
+        "QubitOracle.Paper.MainPaperTheorem42.theorem_4_2"
+      ],
+      "paper_correspondence": "Consistency, alignment and information fields of Conclusions from the combined endpoint for current Theorems 4.2 and 4.3."
+    },
+    {
+      "paper_result": "Theorem 4.3",
+      "group": "T04",
+      "status": "PASS",
+      "principal_endpoint": "QubitOracle.Paper.MainPaperTheorem42.theorem_4_2",
+      "principal_endpoint_elaborated_type_sha256": "a05502103362146c9b3d7c1bb6cde44775a02dbb1dcf7e82af55fa8ed366a173",
+      "principal_endpoint_transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "principal_endpoint_module_freshly_source_compiled": true,
+      "principal_endpoint_module_kernel_replayed": true,
+      "audited_group_endpoints": [
+        "QubitOracle.Paper.MainPaperTheorem42.Inputs",
+        "QubitOracle.Paper.MainPaperTheorem42.Conclusions",
+        "QubitOracle.Paper.MainPaperTheorem42.theorem_4_2"
+      ],
+      "paper_correspondence": "Rate and chart/ambient Gaussian-limit fields of Conclusions from the same combined endpoint; no separately claimed theorem_4_3 declaration."
+    },
+    {
+      "paper_result": "Theorem 5.1",
+      "group": "T05",
+      "status": "PASS",
+      "principal_endpoint": "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1",
+      "principal_endpoint_elaborated_type_sha256": "5bef9ee8b506a3c05116143ab566b24be6c4358fa6d599fe453a49a532e7512d",
+      "principal_endpoint_transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "principal_endpoint_module_freshly_source_compiled": true,
+      "principal_endpoint_module_kernel_replayed": true,
+      "audited_group_endpoints": [
+        "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1",
+        "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1_mixed",
+        "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1_pure"
+      ],
+      "paper_correspondence": "Combined finite adaptive single-copy bound; mixed and pure alternatives separately checked. Fixed parameter-independent policy; finite complete labels; local unbiasedness and positive-semidefinite weight are explicit hypotheses."
+    },
+    {
+      "paper_result": "Corollary 5.2",
+      "group": "T06",
+      "status": "PASS",
+      "principal_endpoint": "QubitOracle.Paper.MainPaperMeanLosses.corollary_5_2",
+      "principal_endpoint_elaborated_type_sha256": "61d32ab3fc1c1a36099537ee3859dd61d774f2e5d3ce0975c4e0e338b8e964b8",
+      "principal_endpoint_transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "principal_endpoint_module_freshly_source_compiled": true,
+      "principal_endpoint_module_kernel_replayed": true,
+      "audited_group_endpoints": [
+        "QubitOracle.Paper.MainPaperMeanLosses.corollary_5_2",
+        "QubitOracle.Paper.MainPaperMeanLosses.qubit_bures_comm"
+      ],
+      "paper_correspondence": "Combined two physical mixed expected-loss limits; Bures argument-order bridge checked."
+    },
+    {
+      "paper_result": "Corollary 5.3",
+      "group": "T07",
+      "status": "PASS",
+      "principal_endpoint": "QubitOracle.Paper.MainPaperMeanLosses.corollary_5_3",
+      "principal_endpoint_elaborated_type_sha256": "f3810b00fbebf7a0eca125047dad2fd86ddd014cf11d448a4ddd2587dd20d576",
+      "principal_endpoint_transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "principal_endpoint_module_freshly_source_compiled": true,
+      "principal_endpoint_module_kernel_replayed": true,
+      "audited_group_endpoints": [
+        "QubitOracle.Paper.MainPaperMeanLosses.corollary_5_3",
+        "QubitOracle.Paper.MainPaperMeanLosses.pure_bures_comm"
+      ],
+      "paper_correspondence": "Combined two corrected pure-state expected-loss limits at completed batches; Bures argument-order bridge checked."
+    }
+  ],
+  "group_endpoint_checks": {
+    "QubitOracle.Paper.PureQuantumInformation.proposition_2_1": {
+      "status": "PASS",
+      "elaborated_type_sha256": "32c5a7b18ac5e7f2c76d5bccd24ee5b78334b969019b83f92403cccfa3fb3e17",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "defining_module": "QubitOracle.Paper.PureQuantumInformationProposition",
+      "defining_module_freshly_source_compiled": true,
+      "defining_module_explicitly_kernel_replayed": true
+    },
+    "QubitOracle.Paper.MainPaperTheorem31.theorem_3_1": {
+      "status": "PASS",
+      "elaborated_type_sha256": "afea52f90a6afc5dba6b4733fea15ce147f8ebe5c61747ef48a11964aa5add74",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "defining_module": "MainPaperTheorem31",
+      "defining_module_freshly_source_compiled": true,
+      "defining_module_explicitly_kernel_replayed": true
+    },
+    "QubitOracle.Paper.MainPaperTheorem31.action_in_batch": {
+      "status": "PASS",
+      "elaborated_type_sha256": "50d80e378979777c7b9c4e343b58eafae8527dddd7da81bb4bdfea4630a2a126",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "defining_module": "MainPaperTheorem31",
+      "defining_module_freshly_source_compiled": true,
+      "defining_module_explicitly_kernel_replayed": true
+    },
+    "QubitOracle.Paper.MainPaperTheorem31.label_order": {
+      "status": "PASS",
+      "elaborated_type_sha256": "96490c38531d19184945ddb1e9d3260d305c497c2383e9de2e9f50235831e9b0",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "defining_module": "MainPaperTheorem31",
+      "defining_module_freshly_source_compiled": true,
+      "defining_module_explicitly_kernel_replayed": true
+    },
+    "QubitOracle.AdaptiveDesign.P1Weighted.covariance_eq_information_inv": {
+      "status": "PASS",
+      "elaborated_type_sha256": "64d3a9829c4611f5775ca29425d94edae94e323bcbca34147528658b9233195e",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "defining_module": "QubitOracle.AdaptiveDesign.P1WeightedCovariance",
+      "defining_module_freshly_source_compiled": true,
+      "defining_module_explicitly_kernel_replayed": false
+    },
+    "QubitOracle.AdaptiveDesign.PhasePair.paired_conditions": {
+      "status": "PASS",
+      "elaborated_type_sha256": "da630241a83d22b808f92222e83cb42af3c957c9dd5c2ece19a289043c0ea38e",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "defining_module": "QubitOracle.AdaptiveDesign.PhasePairPOVM",
+      "defining_module_freshly_source_compiled": true,
+      "defining_module_explicitly_kernel_replayed": true
+    },
+    "QubitOracle.AdaptiveDesign.PhasePair.paired_fisher_of_rankOne": {
+      "status": "PASS",
+      "elaborated_type_sha256": "73d57796ac355f638571b4ec53c46f1370920db22c670530e9f9e03738971a3f",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "defining_module": "QubitOracle.AdaptiveDesign.PhasePairPOVM",
+      "defining_module_freshly_source_compiled": true,
+      "defining_module_explicitly_kernel_replayed": true
+    },
+    "QubitOracle.Paper.MainPaperTheorem42.Inputs": {
+      "status": "PASS",
+      "elaborated_type_sha256": "e87cd051fa73ceffe44fa71154a1f243b6a21a7115ac4fdf592f3c29dec1f244",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "defining_module": "QubitOracle.Paper.MainPaperTheorem42",
+      "defining_module_freshly_source_compiled": true,
+      "defining_module_explicitly_kernel_replayed": true
+    },
+    "QubitOracle.Paper.MainPaperTheorem42.Conclusions": {
+      "status": "PASS",
+      "elaborated_type_sha256": "cc2542f6c42f3e8c19dd76021eb0a1bc38a1479d9942d3081be53741de0295d8",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "defining_module": "QubitOracle.Paper.MainPaperTheorem42",
+      "defining_module_freshly_source_compiled": true,
+      "defining_module_explicitly_kernel_replayed": true
+    },
+    "QubitOracle.Paper.MainPaperTheorem42.theorem_4_2": {
+      "status": "PASS",
+      "elaborated_type_sha256": "a05502103362146c9b3d7c1bb6cde44775a02dbb1dcf7e82af55fa8ed366a173",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "defining_module": "QubitOracle.Paper.MainPaperTheorem42",
+      "defining_module_freshly_source_compiled": true,
+      "defining_module_explicitly_kernel_replayed": true
+    },
+    "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1": {
+      "status": "PASS",
+      "elaborated_type_sha256": "5bef9ee8b506a3c05116143ab566b24be6c4358fa6d599fe453a49a532e7512d",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "defining_module": "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracleCharts",
+      "defining_module_freshly_source_compiled": true,
+      "defining_module_explicitly_kernel_replayed": true
+    },
+    "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1_mixed": {
+      "status": "PASS",
+      "elaborated_type_sha256": "fda6504a9c49ff14f0a39eeec511ff672aa10e518944a7caa8820aa3a0ec73f5",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "defining_module": "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle",
+      "defining_module_freshly_source_compiled": true,
+      "defining_module_explicitly_kernel_replayed": true
+    },
+    "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle.theorem_5_1_pure": {
+      "status": "PASS",
+      "elaborated_type_sha256": "b6013577ccd0a7d07d93fb307c5d94a011106cf31f5d890bb8c32c6133f5db5e",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "defining_module": "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracleCharts",
+      "defining_module_freshly_source_compiled": true,
+      "defining_module_explicitly_kernel_replayed": true
+    },
+    "QubitOracle.Paper.MainPaperMeanLosses.corollary_5_2": {
+      "status": "PASS",
+      "elaborated_type_sha256": "61d32ab3fc1c1a36099537ee3859dd61d774f2e5d3ce0975c4e0e338b8e964b8",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "defining_module": "QubitOracle.Paper.MainPaperMeanLosses",
+      "defining_module_freshly_source_compiled": true,
+      "defining_module_explicitly_kernel_replayed": true
+    },
+    "QubitOracle.Paper.MainPaperMeanLosses.qubit_bures_comm": {
+      "status": "PASS",
+      "elaborated_type_sha256": "7b8f182af5b495166888aa71b9636ac9a8e03bb830f01beb6839a244fd42ed50",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "defining_module": "QubitOracle.Paper.MainPaperMeanLosses",
+      "defining_module_freshly_source_compiled": true,
+      "defining_module_explicitly_kernel_replayed": true
+    },
+    "QubitOracle.Paper.MainPaperMeanLosses.corollary_5_3": {
+      "status": "PASS",
+      "elaborated_type_sha256": "f3810b00fbebf7a0eca125047dad2fd86ddd014cf11d448a4ddd2587dd20d576",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "defining_module": "QubitOracle.Paper.MainPaperMeanLosses",
+      "defining_module_freshly_source_compiled": true,
+      "defining_module_explicitly_kernel_replayed": true
+    },
+    "QubitOracle.Paper.MainPaperMeanLosses.pure_bures_comm": {
+      "status": "PASS",
+      "elaborated_type_sha256": "da95390d76a4c12995d29b7868947c5be3af875178bbf2b633f2d4d0cc8d60df",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "defining_module": "QubitOracle.Paper.MainPaperMeanLosses",
+      "defining_module_freshly_source_compiled": true,
+      "defining_module_explicitly_kernel_replayed": true
+    }
+  }
+}

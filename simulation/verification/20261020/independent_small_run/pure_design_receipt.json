@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-10-20T07:06:10.264669+00:00",
+  "replications": 4,
+  "root_seed_unchanged": true,
+  "all_original_loss_streams_used": true,
+  "source_sha256": {
+    "src/adaptive_tomography/pure.py": "a1f3fe5aa5bdc7c79230303bb88883e2972a41ebc6f67b2d3e0b1b5123023baf",
+    "src/adaptive_tomography/estimators.py": "81f3b03f7bdf2a9947ffaa315bb8d5fb86a6a0ba3d77b1c30f22975befb33791",
+    "src/adaptive_tomography/schedules.py": "dd250aa425c8c446057a1e4c46734cd9d622e4c8f33ecd20058564ed2586f9c9",
+    "src/adaptive_tomography/design.py": "b6731db4a712fe0563b95db54d0a032cbf4c10d765bd379565b9624750901c83"
+  },
+  "base_output_sha256": {
+    "results.json": "7474b4865c42de9977b251dbb3c1575f07cd0e92e44035ae6e962ef77f6aa14d",
+    "samples.npz": "3c7f5ac80b3ce0cedd098bb09b8b3e7046718da4c3f1a7a0c5971a5b095707f2",
+    "apparatus.npz": "27a1892a4caeae4722ab4053301d9c468dff18e0523878e2b67746410319fd24"
+  },
+  "output_sha256": {
+    "pure_design_samples.npz": "6854ca2da41df3d4d79dda9f4ffaa0008443f793f38b180197b2a359f760b51a",
+    "pure_design_summary.json": "8760fe5f46e0206d51722f73019b1e72c64e6d6edacd9791c73da79bdb6d6425"
+  },
+  "Python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+  "NumPy": "1.26.4",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "fresh_joint_simulation": true,
+  "same_simulation_call_as_loss_panel": true
+}

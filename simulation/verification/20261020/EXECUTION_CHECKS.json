@@ -1,0 +1,440 @@
+{
+  "status": "PASS",
+  "started_checks": {
+    "utc": "2026-10-20T07:16:35.064192+00:00",
+    "America_Chicago": "2026-10-20T02:16:35.064192-05:00"
+  },
+  "completed_checks": {
+    "utc": "2026-10-20T07:16:35.366875+00:00",
+    "America_Chicago": "2026-10-20T02:16:35.366875-05:00"
+  },
+  "verification_date": "2026-10-20",
+  "time_zone": "America/Chicago",
+  "source_baseline_git_commit": "8893cf286113ef1acbe91e4e6d2252b7c40c1ccc",
+  "main_paper_pdf_sha256": "047cf51621838e36fd8d32b4a41b4ace8210c660c0c4ea873b7922ee3547959e",
+  "environment": {
+    "Python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+    "NumPy": "1.26.4",
+    "Matplotlib": "3.9.4",
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "imports_resolve_to_github_simulation_source": true,
+    "thread_limits": 1,
+    "plot_backend": "Agg",
+    "dependencies": "Preinstalled pinned numerical libraries; no new network download claimed."
+  },
+  "release_integrity": {
+    "status": "PASS",
+    "tracked_files_checked": 64,
+    "integrity_only": true,
+    "Lean_compilation_or_simulation_performed": false,
+    "errors": []
+  },
+  "tests": {
+    "passed": 37,
+    "failed": 0,
+    "log_sha256": "5d79eeb439b1a9fea8678726d5e6930eb7ebb27d6969b372e9d6835ac0977238"
+  },
+  "fresh_full_current_paper_run": {
+    "configuration_exactly_matches_configs_paper_json": true,
+    "replications_per_study": 10000,
+    "studies": 3,
+    "copies_per_record": 16384,
+    "batches_per_record": 202,
+    "complete_monte_carlo_records": 30000,
+    "monte_carlo_copies_across_three_studies": 491520000,
+    "monte_carlo_batch_count_draws": 6060000,
+    "diagnostic_histories": 3,
+    "root_seed": 2026101602,
+    "reporting_horizons": [
+      256,
+      512,
+      1020,
+      2064,
+      3078,
+      4070,
+      5169,
+      6182,
+      7105,
+      8164,
+      9197,
+      10157,
+      11217,
+      12387,
+      13409,
+      14232,
+      15408,
+      16384
+    ],
+    "optional_historical_covariance_studies_rerun": false,
+    "fresh_run_receipt": {
+      "status": "PASS",
+      "started_utc": "2026-10-20T07:03:41.589623+00:00",
+      "completed_utc": "2026-10-20T07:16:18.625967+00:00",
+      "seconds": 757.036921042,
+      "study_seconds": {
+        "mixed_bures": 53.447310792,
+        "mixed_frobenius": 56.677189709,
+        "pure_algorithm3": 645.944493542
+      },
+      "replications_per_study": 10000,
+      "fresh_simulation": true,
+      "Python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+      "NumPy": "1.26.4",
+      "platform": "macOS-27.0-arm64-arm-64bit",
+      "configuration": {
+        "replications": 10000,
+        "root_seed": 2026101602,
+        "ridge": 1.0,
+        "correction_ridge": 1.0,
+        "mixed_truth_radius": 0.9,
+        "mixed_truth_direction": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "pure_dimension": 4,
+        "pure_truth_phase_increment": 0.37,
+        "optional_covariance_dimensions": [],
+        "optional_reporting_powers": [
+          12,
+          16,
+          20,
+          24
+        ],
+        "error_bar_multiplier": 1.96,
+        "main_batch_schedule": {
+          "kind": "growing",
+          "initial": 16,
+          "minimum": 16,
+          "denominator": 50,
+          "maximum": 16384
+        },
+        "main_reporting_targets": [
+          256,
+          512,
+          1024,
+          2048,
+          3072,
+          4096,
+          5120,
+          6144,
+          7168,
+          8192,
+          9216,
+          10240,
+          11264,
+          12288,
+          13312,
+          14336,
+          15360,
+          16384
+        ],
+        "main_horizontal_axis": "linear",
+        "optional_batch_schedule": "doubling",
+        "optional_maximum_reporting_power": 24
+      },
+      "configuration_sha256": "b1c2050a3d98c708bdd091be0ee0e2577240a0cf07c052a61a1db5d9a6e00979",
+      "source_sha256": {
+        "src/adaptive_tomography/simulation.py": "30ae9a4a0a350f40aa6587d4ddedcaaf3840b369b13a302e3470eb0e7c00576c",
+        "src/adaptive_tomography/optional.py": "85d90c355476ef9849a1393c072dd92e0c124e08cb34c9a32b20ad7e1828116f",
+        "src/adaptive_tomography/pure.py": "a1f3fe5aa5bdc7c79230303bb88883e2972a41ebc6f67b2d3e0b1b5123023baf",
+        "src/adaptive_tomography/plotting.py": "783d6d286511d5f8ce89e99f2c8785d20278d0e7692a031d9095f53b2a772484",
+        "src/adaptive_tomography/design.py": "b6731db4a712fe0563b95db54d0a032cbf4c10d765bd379565b9624750901c83",
+        "src/adaptive_tomography/__init__.py": "48e1bd80080ca6b32cb785f3916725980acfba52a394a134b062f696625a1ebc",
+        "src/adaptive_tomography/mixed.py": "207ba1741e481bde4b87c5a60f4bdcc0479f3ffb0dba496dfa18acbf20a603b9",
+        "src/adaptive_tomography/estimators.py": "81f3b03f7bdf2a9947ffaa315bb8d5fb86a6a0ba3d77b1c30f22975befb33791",
+        "src/adaptive_tomography/__main__.py": "dfe0f4c46ec66e045ac18d8ec183bc33eb27800fabdc63d4f843d8cb7c190579",
+        "src/adaptive_tomography/schedules.py": "dd250aa425c8c446057a1e4c46734cd9d622e4c8f33ecd20058564ed2586f9c9"
+      },
+      "source_unchanged_during_execution": true,
+      "output_sha256": {
+        "results.json": "88f83efae2137bd773529108ed97e938477f05b5ad12d6bd3a63fd0b11376dc1",
+        "samples.npz": "ffb243e1bcc99125eb158b73308f8f2fe0e04d4e136deb56052859fd73221817",
+        "apparatus.npz": "5edfb5e83a0627d59134fd8e1f3284a3ab155be25a819b5f339796478f5f15f4"
+      }
+    },
+    "numeric_checks": {
+      "mixed_bures": {
+        "shape": [
+          10000,
+          18,
+          2
+        ],
+        "all_replicates_finite": true,
+        "all_scaled_losses_in_physical_range": true,
+        "all_replicates_used_in_means_and_mcse": true,
+        "maximum_mean_recalculation_error": 0.0,
+        "maximum_mcse_recalculation_error": 0.0,
+        "final_scaled_loss_mean": [
+          3.3292865307842905,
+          2.296081780459952
+        ],
+        "final_scaled_loss_mcse": [
+          0.030936605775596867,
+          0.018800545955996215
+        ]
+      },
+      "mixed_frobenius": {
+        "shape": [
+          10000,
+          18,
+          2
+        ],
+        "all_replicates_finite": true,
+        "all_scaled_losses_in_physical_range": true,
+        "all_replicates_used_in_means_and_mcse": true,
+        "maximum_mean_recalculation_error": 0.0,
+        "maximum_mcse_recalculation_error": 0.0,
+        "final_scaled_loss_mean": [
+          2.9725502314451804,
+          2.7130204322123266
+        ],
+        "final_scaled_loss_mcse": [
+          0.025239554237067675,
+          0.025187810252405102
+        ]
+      },
+      "pure_algorithm3": {
+        "shape": [
+          10000,
+          18,
+          2,
+          2
+        ],
+        "all_replicates_finite": true,
+        "all_scaled_losses_in_physical_range": true,
+        "all_replicates_used_in_means_and_mcse": true,
+        "maximum_mean_recalculation_error": 0.0,
+        "maximum_mcse_recalculation_error": 0.0,
+        "final_scaled_loss_mean": [
+          [
+            13.138836367763082,
+            6.570317270848658
+          ],
+          [
+            6.037214318394547,
+            3.018792210032548
+          ]
+        ],
+        "final_scaled_loss_mcse": [
+          [
+            0.07936327065106535,
+            0.0396926566842998
+          ],
+          [
+            0.0347214350787687,
+            0.017362852879935203
+          ]
+        ]
+      }
+    },
+    "pure_design_all_replicates_checked": true
+  },
+  "same_seed_prefix_reproducibility": {
+    "pilot16": {
+      "mixed_bures_losses": {
+        "bitwise_equal": true,
+        "maximum_absolute_difference": 0.0
+      },
+      "mixed_frobenius_losses": {
+        "bitwise_equal": true,
+        "maximum_absolute_difference": 0.0
+      },
+      "pure_losses": {
+        "bitwise_equal": false,
+        "maximum_absolute_difference": 1.8030021919912542e-12
+      },
+      "pure_tangent_errors": {
+        "bitwise_equal": false,
+        "maximum_absolute_difference": 4.27158308724529e-13
+      }
+    },
+    "instrumented2": {
+      "mixed_bures_losses": {
+        "bitwise_equal": true,
+        "maximum_absolute_difference": 0.0
+      },
+      "mixed_frobenius_losses": {
+        "bitwise_equal": true,
+        "maximum_absolute_difference": 0.0
+      },
+      "pure_losses": {
+        "bitwise_equal": false,
+        "maximum_absolute_difference": 1.8030021919912542e-12
+      },
+      "pure_tangent_errors": {
+        "bitwise_equal": false,
+        "maximum_absolute_difference": 3.044786645034492e-13
+      }
+    }
+  },
+  "published_primary_array_comparison_after_fresh_generation": {
+    "mixed_bures_losses": {
+      "shape": [
+        10000,
+        18,
+        2
+      ],
+      "bitwise_equal": true,
+      "maximum_absolute_difference": 0.0
+    },
+    "mixed_frobenius_losses": {
+      "shape": [
+        10000,
+        18,
+        2
+      ],
+      "bitwise_equal": true,
+      "maximum_absolute_difference": 0.0
+    },
+    "pure_losses": {
+      "shape": [
+        10000,
+        18,
+        2,
+        2
+      ],
+      "bitwise_equal": false,
+      "maximum_absolute_difference": 6.790301654291397e-11
+    },
+    "pure_tangent_errors": {
+      "shape": [
+        10000,
+        18,
+        2,
+        6
+      ],
+      "bitwise_equal": false,
+      "maximum_absolute_difference": 1.3150036615172667e-11
+    },
+    "horizons": {
+      "shape": [
+        18
+      ],
+      "bitwise_equal": true,
+      "maximum_absolute_difference": 0.0
+    },
+    "main_batch_sizes": {
+      "shape": [
+        202
+      ],
+      "bitwise_equal": true,
+      "maximum_absolute_difference": 0.0
+    },
+    "main_batch_endpoints": {
+      "shape": [
+        202
+      ],
+      "bitwise_equal": true,
+      "maximum_absolute_difference": 0.0
+    },
+    "pure_design_criteria": {
+      "shape": [
+        10000,
+        18,
+        2
+      ],
+      "bitwise_equal": false,
+      "maximum_absolute_difference": 4.986677737406353e-12
+    }
+  },
+  "published_primary_array_comparison_tolerance": {
+    "rtol": 1e-10,
+    "atol": 1e-10
+  },
+  "published_main_apparatus_bitwise_comparison": {
+    "pure_reference": true,
+    "pure_reference_bases": true,
+    "pure_labels": true,
+    "pure_truth": true,
+    "mixed_truth": true
+  },
+  "all_compared_saved_primary_arrays_bitwise_identical": false,
+  "saved_results_unchanged_by_post_run_checks": true,
+  "fresh_figures": {
+    "status": "PASS",
+    "replications": 10000,
+    "new_simulation_run_by_plotter": false,
+    "pure_design_panel": "Mean per-record criteria over all original pure loss replicates",
+    "pure_design_means_and_MCSEs_recomputed": true,
+    "pure_design_seed_selection": false,
+    "source_design_samples_sha256": "542495668e6f3a83195b06144a106d6f0dbfa317abdf59abeb4d9acb71906705",
+    "source_design_summary_sha256": "3ea6e0af2e80a276551d23bf8b9386496829f8ec8e680555d1f8d5355c575f02",
+    "saved_primary_means_and_MCSEs_recomputed": true,
+    "saved_optional_covariance_bias_loss_and_paired_diagnostics_recomputed": true,
+    "Matplotlib": "3.9.4",
+    "source_results_sha256": "88f83efae2137bd773529108ed97e938477f05b5ad12d6bd3a63fd0b11376dc1",
+    "files": {
+      "figure1_mixed.pdf": "614c514537790a53848443ca7eae24e8434adafdc4798fdaa7fa8424da8c2503",
+      "figure1_mixed.png": "f209fea6bd9037d93737763c2cff6501b85b51eb63ad9f1204f3e44e86c09a95",
+      "figure2_pure_bures.png": "c2946b6ee328130af4f1059f9d72eb01e209bbf1025223af5a9778fe1fa050fb",
+      "figure2_pure_bures.pdf": "25039d8bea98077c01ae770816d257743f6c55f99dce50d1ff32e3c804ac7446"
+    }
+  },
+  "saved_data_replot": {
+    "status": "PASS",
+    "replications": 10000,
+    "new_simulation_run_by_plotter": false,
+    "pure_design_panel": "Mean per-record criteria over all original pure loss replicates",
+    "pure_design_means_and_MCSEs_recomputed": true,
+    "pure_design_seed_selection": false,
+    "source_design_samples_sha256": "5ca85d70fe8d748958744ddc21d0c58c437ab7b072438b9b3c937bef593ba1da",
+    "source_design_summary_sha256": "b4335fd051688f0c492ddc91fc8628fa9e57d6ae47bd44b3209aa8befada07f4",
+    "saved_primary_means_and_MCSEs_recomputed": true,
+    "saved_optional_covariance_bias_loss_and_paired_diagnostics_recomputed": true,
+    "Matplotlib": "3.9.4",
+    "source_results_sha256": "d9496566e25279f885c5cddac10b9476cf72443af1219caa68f3389129ba64ed",
+    "files": {
+      "figure1_mixed.pdf": "5e6710f2ba43273e685813cddf6af781448354a3577c987bd8374b25bf0fc68f",
+      "figure1_mixed.png": "f209fea6bd9037d93737763c2cff6501b85b51eb63ad9f1204f3e44e86c09a95",
+      "figureS_covariance.pdf": "ca406dce26487181d02f9bc6eeab3d96ba063d5cf0ad1541c09f09e4ec68a13b",
+      "figure2_pure_bures.png": "c2946b6ee328130af4f1059f9d72eb01e209bbf1025223af5a9778fe1fa050fb",
+      "figure2_pure_bures.pdf": "c04ee2c3efc843162126feec13d7fa2db8afd4bab3cea268142c922b38e2452e",
+      "figureS_covariance.png": "ae0439a9167dff3820c0a85e1738ec814b341e65e63bbcf1ee955fb1e1986f62"
+    }
+  },
+  "source_config_test_files_checked": 18,
+  "source_config_test_files_changed": [],
+  "source_hashes": {
+    "configs/historical_full_run_20261017.json": "9fc225bc2e0605f4c44378ebf697b302707fd97fb674c3741ac55bf1c407f5be",
+    "configs/paper.json": "81302681213a9b33c154b0199b4a642d7d5f54a0a761eb88256dc83f183adde1",
+    "pyproject.toml": "ee7d471bf379e3f2809ae82e1cbee77837c9a405b2cdfa55c6acfba7c215f48e",
+    "requirements.txt": "8bcf4152f1a616c73ac783285da5c253d37c701c0f1404a8b414fa20361dc51c",
+    "scripts/check_release.py": "735350d51c38ab4e6cd35704e120eba333e1cc9055de4c305735c489fbe23c6a",
+    "src/adaptive_tomography/__init__.py": "48e1bd80080ca6b32cb785f3916725980acfba52a394a134b062f696625a1ebc",
+    "src/adaptive_tomography/__main__.py": "dfe0f4c46ec66e045ac18d8ec183bc33eb27800fabdc63d4f843d8cb7c190579",
+    "src/adaptive_tomography/design.py": "b6731db4a712fe0563b95db54d0a032cbf4c10d765bd379565b9624750901c83",
+    "src/adaptive_tomography/estimators.py": "81f3b03f7bdf2a9947ffaa315bb8d5fb86a6a0ba3d77b1c30f22975befb33791",
+    "src/adaptive_tomography/mixed.py": "207ba1741e481bde4b87c5a60f4bdcc0479f3ffb0dba496dfa18acbf20a603b9",
+    "src/adaptive_tomography/optional.py": "85d90c355476ef9849a1393c072dd92e0c124e08cb34c9a32b20ad7e1828116f",
+    "src/adaptive_tomography/plotting.py": "783d6d286511d5f8ce89e99f2c8785d20278d0e7692a031d9095f53b2a772484",
+    "src/adaptive_tomography/pure.py": "a1f3fe5aa5bdc7c79230303bb88883e2972a41ebc6f67b2d3e0b1b5123023baf",
+    "src/adaptive_tomography/schedules.py": "dd250aa425c8c446057a1e4c46734cd9d622e4c8f33ecd20058564ed2586f9c9",
+    "src/adaptive_tomography/simulation.py": "30ae9a4a0a350f40aa6587d4ddedcaaf3840b369b13a302e3470eb0e7c00576c",
+    "tests/test_design_ensemble.py": "ae2bbb6b9dd94ec4d6f9c1d17937ba251da50818cb271995ae9e0d01a7508a10",
+    "tests/test_growing_batches.py": "4010ac9130007489d29d93c813e794a02e7aa3859ee8dccb73ec94ace29c59f6",
+    "tests/test_paper_algorithms.py": "b9075108f431f1916cdbbf9db73ab159d58875be7d26e9bfdbd3342c55e2ce1e"
+  },
+  "new_output_hashes": {
+    "apparatus.npz": "5edfb5e83a0627d59134fd8e1f3284a3ab155be25a819b5f339796478f5f15f4",
+    "results.json": "88f83efae2137bd773529108ed97e938477f05b5ad12d6bd3a63fd0b11376dc1",
+    "pure_design_receipt.json": "ec195111151fdb820945cbb3d001efd9ea951ce0c5ee7c780ce0e1d832eae1f6",
+    "pure_design_samples.npz": "542495668e6f3a83195b06144a106d6f0dbfa317abdf59abeb4d9acb71906705",
+    "pure_design_summary.json": "3ea6e0af2e80a276551d23bf8b9386496829f8ec8e680555d1f8d5355c575f02",
+    "samples.npz": "ffb243e1bcc99125eb158b73308f8f2fe0e04d4e136deb56052859fd73221817",
+    "progress.json": "ed2bad3f95ee9a2c41612f1426ea2bf738280ce95dc2eb1e9740ed15054a71c9",
+    "run_receipt.json": "c0051e0c4af69447158f804c6df33be8c33d5a2801bf82517c886e76b4dfcb17"
+  },
+  "scope": "Fresh execution and reproducibility evidence for the unchanged Python implementation. Independent code-to-paper audit is separate. This is not a Lean proof of Python.",
+  "fresh_plot_visual_QA": {
+    "status": "PASS",
+    "checked_utc": "2026-10-20T07:17:32.698299+00:00",
+    "checked_America_Chicago": "2026-10-20T02:17:32.698299-05:00",
+    "method": "Rendered both freshly generated PNGs and visually inspected all panels, labels, legends, axes and error bars.",
+    "findings": "Both figures are complete and legible; no clipping or broken mathematical labels observed.",
+    "png_sha256": {
+      "figure1_mixed.png": "f209fea6bd9037d93737763c2cff6501b85b51eb63ad9f1204f3e44e86c09a95",
+      "figure2_pure_bures.png": "c2946b6ee328130af4f1059f9d72eb01e209bbf1025223af5a9778fe1fa050fb"
+    }
+  }
+}
