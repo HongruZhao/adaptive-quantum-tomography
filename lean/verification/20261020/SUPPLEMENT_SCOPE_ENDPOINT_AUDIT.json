@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-10-20T22:33:08.081979+00:00",
+  "completed_utc": "2026-10-20T22:33:18.243474+00:00",
+  "declarations_checked": 7,
+  "rows": [
+    {
+      "declaration": "QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_expansion",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "PASS"
+    },
+    {
+      "declaration": "QubitOracle.AdaptiveDesign.TangentGLS.amplitude_clt_of_projector_clt",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "PASS"
+    },
+    {
+      "declaration": "QubitOracle.AdaptiveDesign.TangentGLS.smoothChart_clt_of_amplitude_clt",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "PASS"
+    },
+    {
+      "declaration": "QubitOracle.AdaptiveDesign.PureChartCovariance.covariance_eq_twice_inverse_qfi",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "PASS"
+    },
+    {
+      "declaration": "QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError_secondOrder",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "PASS"
+    },
+    {
+      "declaration": "QubitOracle.AdaptiveDesign.TangentGLS.actual_fittedInformation_tendsto",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "PASS"
+    },
+    {
+      "declaration": "QubitOracle.AdaptiveDesign.TangentGLS.actualLinearError_rootRate",
+      "transitive_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "audit_source_sha256": "8af6388daf1f0f911c4d5f577838b23d489f5a599741fa5c63bbcbe7f9714d89",
+  "type_and_axiom_log_sha256": "0f723cf9ac9262981d6d28885a368356a5601cb94f800a5a4c7e8e7017e60c5d",
+  "project_Lean_sources_changed": false,
+  "fresh_project_rebuild_performed": false,
+  "verified_unchanged_project_objects_reused": true,
+  "printed_supplement_statement_alignment": "Separate source-level review; LaTeX semantics are not mechanically parsed by Lean."
+}

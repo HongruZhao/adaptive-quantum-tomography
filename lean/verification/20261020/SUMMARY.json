@@ -60,11 +60,16 @@
   "sorry_dependencies": [],
   "status": "PASS",
   "supplement_declaration_checks": 138,
-  "supplement_generality_differences": [
-    "Lemma S4.1: arbitrary nearest-projector selection",
-    "Lemma S4.2: in-probability-only consistency",
-    "Lemma S6.2: generic predictable process and arbitrary qualifying preliminary fit"
-  ],
+  "supplement_generality_differences": [],
+  "supplement_scope_alignment": {
+    "Lean_code_and_build_inputs_changed": false,
+    "all_three_identified_scope_differences_resolved": true,
+    "fresh_project_rebuild_for_scope_revision": false,
+    "report": "SUPPLEMENT_SCOPE_ALIGNMENT.json",
+    "resolution": "Current supplementary statements specialize to the unchanged Lean scope; normalized-operator and direct-score arguments replace the standalone inverse limit.",
+    "status": "PASS",
+    "targeted_existing_endpoint_checks": 7
+  },
   "upstream_Mathlib_rebuilt_from_source": false,
   "upstream_dependency_objects_reused": true,
   "whole_retained_mathematical_axioms": [

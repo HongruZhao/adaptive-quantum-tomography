@@ -25,11 +25,11 @@ The defaults are `MainPaperAudit` and `SupplementAudit`; all distributed modules
 ## Read
 
 - [Main results](../MAIN_RESULTS.md): printed statements, assumptions and entry points.
-- [Supplementary coverage](../SUPPLEMENT_RESULTS.md): exact checked cases and generality differences.
+- [Supplementary coverage](../SUPPLEMENT_RESULTS.md): current checked cases and component correspondence.
 - [Formalization scope](../LEAN_FORMALIZATION.md): interfaces and evidence boundaries.
 - [Code guide](docs/CODE_GUIDE.md): proof structure and reading order.
 - [Official verification](verification/20261020/README.md): current source, type, axiom and replay evidence.
 
 Lean **v4.33.0-rc2** and Mathlib **641fbd329d4ffb62bef83c51f54088469056bd36** are pinned. Project proof objects and upstream caches are not distributed. The only transitive axioms of retained mathematical declarations are `propext`, `Classical.choice` and `Quot.sound`.
 
-The main algorithms' checked cases are distinguished from broader supplementary formulations. Lean does not verify the companion Python program. The repository and prepared Zenodo archive require explicit author approval before public release. The code retains its MIT license.
+The current supplement uses the fixed selection, almost-sure consistency and actual-procedure cases represented by the unchanged Lean code; the scope audit distinguishes component proofs from combined endpoints. Lean does not verify the companion Python program. The repository and prepared Zenodo archive require explicit author approval before public release. The code retains its MIT license.

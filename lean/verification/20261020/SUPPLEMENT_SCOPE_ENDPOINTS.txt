@@ -1,0 +1,130 @@
+@QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_expansion : ∀ {d : ℕ}
+  (truth : ↑(QubitOracle.AdaptiveDesign.PureMatrixController.PureVector d))
+  (A : QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.HermitianSpace (d + 1)),
+  ‖↑(QubitOracle.AdaptiveDesign.P2Adaptive.pureParameter d
+              (QubitOracle.AdaptiveDesign.PureMatrixController.nearestVector d
+                (QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.toMatrix A))) -
+          ↑(QubitOracle.AdaptiveDesign.P2Adaptive.pureParameter d truth) -
+        (QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector truth)
+          (A - ↑(QubitOracle.AdaptiveDesign.P2Adaptive.pureParameter d truth))‖ ≤
+    20 * ‖A - ↑(QubitOracle.AdaptiveDesign.P2Adaptive.pureParameter d truth)‖ ^ 2
+'QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_expansion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@QubitOracle.AdaptiveDesign.TangentGLS.amplitude_clt_of_projector_clt : ∀ {Ω : Type u_1} [inst : MeasurableSpace Ω]
+  {μ : MeasureTheory.Measure Ω} [inst_1 : MeasureTheory.IsProbabilityMeasure μ] {d : ℕ}
+  (truth : ↑(QubitOracle.AdaptiveDesign.PureMatrixController.PureVector d))
+  {covMatrix : Matrix (QubitOracle.TangentIndex d) (QubitOracle.TangentIndex d) ℝ}
+  (A : ℕ → Ω → QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.HermitianSpace (d + 1)),
+  (∀ (n : ℕ), MeasureTheory.StronglyMeasurable (A n)) →
+    (∀ᵐ (ω : Ω) ∂μ,
+        Filter.Tendsto (fun n => A n ω) Filter.atTop
+          (nhds ↑(QubitOracle.AdaptiveDesign.P2Adaptive.pureParameter d truth))) →
+      MeasureTheory.TendstoInDistribution
+          (fun n ω =>
+            √↑n •
+              2 •
+                (QubitOracle.AdaptiveDesign.TangentGLS.trueCoordinate truth)
+                  (A n ω - ↑(QubitOracle.AdaptiveDesign.P2Adaptive.pureParameter d truth)))
+          Filter.atTop id (fun x => μ) (ProbabilityTheory.multivariateGaussian 0 covMatrix) →
+        MeasureTheory.TendstoInDistribution
+          (fun n ω => √↑n • QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates truth (A n ω)) Filter.atTop id
+          (fun x => μ) (ProbabilityTheory.multivariateGaussian 0 covMatrix)
+'QubitOracle.AdaptiveDesign.TangentGLS.amplitude_clt_of_projector_clt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@QubitOracle.AdaptiveDesign.TangentGLS.smoothChart_clt_of_amplitude_clt : ∀ {d : ℕ}
+  (truth : ↑(QubitOracle.AdaptiveDesign.PureMatrixController.PureVector d))
+  {covMatrix : Matrix (QubitOracle.TangentIndex d) (QubitOracle.TangentIndex d) ℝ} {Ω : Type u_1}
+  [inst : MeasurableSpace Ω] {μ : MeasureTheory.Measure Ω} [inst_1 : MeasureTheory.IsProbabilityMeasure μ]
+  (A : ℕ → Ω → QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.HermitianSpace (d + 1)),
+  (∀ (n : ℕ), MeasureTheory.StronglyMeasurable (A n)) →
+    (∀ᵐ (ω : Ω) ∂μ,
+        Filter.Tendsto (fun n => A n ω) Filter.atTop
+          (nhds ↑(QubitOracle.AdaptiveDesign.P2Adaptive.pureParameter d truth))) →
+      MeasureTheory.TendstoInDistribution
+          (fun n ω => √↑n • QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates truth (A n ω)) Filter.atTop id
+          (fun x => μ) (ProbabilityTheory.multivariateGaussian 0 covMatrix) →
+        ∀ (φ : EuclideanSpace ℝ (QubitOracle.TangentIndex d) → EuclideanSpace ℝ (QubitOracle.TangentIndex d)),
+          Measurable φ →
+            ∀ (J : EuclideanSpace ℝ (QubitOracle.TangentIndex d) →L[ℝ] EuclideanSpace ℝ (QubitOracle.TangentIndex d)),
+              HasFDerivAt φ J 0 →
+                MeasureTheory.TendstoInDistribution
+                  (fun n ω =>
+                    √↑n • (φ (QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates truth (A n ω)) - φ 0))
+                  Filter.atTop (fun z => J z) (fun x => μ) (ProbabilityTheory.multivariateGaussian 0 covMatrix)
+'QubitOracle.AdaptiveDesign.TangentGLS.smoothChart_clt_of_amplitude_clt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@QubitOracle.AdaptiveDesign.PureChartCovariance.covariance_eq_twice_inverse_qfi : ∀ {d : ℕ}
+  (J :
+    QubitOracle.AdaptiveDesign.PureChartCovariance.Coordinates d ≃L[ℝ]
+      QubitOracle.AdaptiveDesign.PureChartCovariance.Coordinates d)
+  (u v : QubitOracle.AdaptiveDesign.PureChartCovariance.Coordinates d),
+  ((ProbabilityTheory.covarianceBilin
+          (MeasureTheory.Measure.map (⇑J) (ProbabilityTheory.multivariateGaussian 0 (2 • 1))))
+        u)
+      v =
+    2 * inner ℝ u ((QubitOracle.AdaptiveDesign.PureChartCovariance.inverseQfiOperator J) v)
+'QubitOracle.AdaptiveDesign.PureChartCovariance.covariance_eq_twice_inverse_qfi' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError_secondOrder : ∀ {d : ℕ} {O : Type} [inst : Fintype O]
+  [inst_1 : MeasurableSpace O] [inst_2 : MeasurableSingletonClass O] [inst_3 : Nonempty O]
+  (P : QubitOracle.FinitePOVM (Fin (d + 1)) O) (hI : QubitOracle.AdaptiveDesign.GeneralPOVM.Identifying P)
+  (hp : QubitOracle.AdaptiveDesign.GeneralPOVM.Regular P)
+  (truth : ↑(QubitOracle.AdaptiveDesign.PureMatrixController.PureVector d)) (regularization ridge : ℝ)
+  (hr : 0 < regularization) (hη : 0 < ridge) (batchSize : ℕ → ℕ),
+  (∀ (j : ℕ), 0 < batchSize j) →
+    QubitOracle.AdaptiveDesign.ProbabilityCalculus.TightNorm
+      (QubitOracle.Paper.adaptiveInfiniteTrajectoryMeasure
+        (QubitOracle.AdaptiveDesign.GeneralPOVM.adaptiveProtocol P hI regularization hr batchSize) truth)
+      (fun n path =>
+        ↑(n + 1) •
+          QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError P hI hp truth regularization ridge hr hη
+            batchSize (n + 1) path)
+      Filter.atTop
+'QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError_secondOrder' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@QubitOracle.AdaptiveDesign.TangentGLS.actual_fittedInformation_tendsto : ∀ {d : ℕ} {O : Type} [inst : Fintype O]
+  [inst_1 : MeasurableSpace O] [inst_2 : MeasurableSingletonClass O] [inst_3 : Nonempty O]
+  (P : QubitOracle.FinitePOVM (Fin (d + 1)) O) (hI : QubitOracle.AdaptiveDesign.GeneralPOVM.Identifying P),
+  QubitOracle.AdaptiveDesign.GeneralPOVM.Regular P →
+    QubitOracle.AdaptiveDesign.GeneralPOVM.FisherSymmetric P →
+      ∀ (truth : ↑(QubitOracle.AdaptiveDesign.PureMatrixController.PureVector d)) (regularization : ℝ)
+        (hr : 0 < regularization) (batchSize : ℕ → ℕ),
+        (∀ (j : ℕ), 0 < batchSize j) →
+          ∀ᵐ (path :
+            QubitOracle.Paper.AdaptiveInfinitePath
+              O) ∂QubitOracle.Paper.adaptiveInfiniteTrajectoryMeasure
+              (QubitOracle.AdaptiveDesign.GeneralPOVM.adaptiveProtocol P hI regularization hr batchSize) truth,
+            Filter.Tendsto
+              (fun n =>
+                (↑n)⁻¹ •
+                  QubitOracle.AdaptiveDesign.TangentGLS.recordInformation
+                    (QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminary P hI regularization hr batchSize path n)
+                    (QubitOracle.AdaptiveDesign.TangentGLS.actualRecords P hI regularization hr batchSize path n)
+                    (QubitOracle.AdaptiveDesign.TangentGLS.referenceFloor P))
+              Filter.atTop (nhds (QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector truth))
+'QubitOracle.AdaptiveDesign.TangentGLS.actual_fittedInformation_tendsto' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@QubitOracle.AdaptiveDesign.TangentGLS.actualLinearError_rootRate : ∀ {d : ℕ} {O : Type} [inst : Fintype O]
+  [inst_1 : MeasurableSpace O] [inst_2 : MeasurableSingletonClass O] [inst_3 : Nonempty O]
+  (P : QubitOracle.FinitePOVM (Fin (d + 1)) O) (hI : QubitOracle.AdaptiveDesign.GeneralPOVM.Identifying P)
+  (hp : QubitOracle.AdaptiveDesign.GeneralPOVM.Regular P),
+  QubitOracle.AdaptiveDesign.GeneralPOVM.FisherSymmetric P →
+    ∀ (truth : ↑(QubitOracle.AdaptiveDesign.PureMatrixController.PureVector d)) (regularization ridge : ℝ)
+      (hr : 0 < regularization) (hη : 0 < ridge) (batchSize : ℕ → ℕ),
+      (∀ (j : ℕ), 0 < batchSize j) →
+        MeasureTheory.TendstoInMeasure
+          (QubitOracle.Paper.adaptiveInfiniteTrajectoryMeasure
+            (QubitOracle.AdaptiveDesign.GeneralPOVM.adaptiveProtocol P hI regularization hr batchSize) truth)
+          (fun n path =>
+            QubitOracle.AdaptiveDesign.TangentGLS.actualLinearError P hI hp truth regularization ridge hr hη batchSize
+              (n + 1) path)
+          Filter.atTop fun x => 0
+'QubitOracle.AdaptiveDesign.TangentGLS.actualLinearError_rootRate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -5,7 +5,9 @@
   "fresh_full_run_evidence": "20261020/FULL_RUN_RECEIPT.json",
   "main_pages": 34,
   "main_pdf": "../../ejs_main.pdf",
-  "main_pdf_sha256": "345bb120f2570fc7b334b3db0baff2afbf7edb61050f8e8130796d7527a47446",
+  "main_pdf_pixel_identical_to_previous": true,
+  "main_pdf_sha256": "7366aebf1080b9738ec7ed7f0ad1e10cb64c119008a34e7cf9b405d97365e9d4",
+  "main_scientific_sources_unchanged": true,
   "numerical_input_sha256": {
     "configs/historical_full_run_20261017.json": "9fc225bc2e0605f4c44378ebf697b302707fd97fb674c3741ac55bf1c407f5be",
     "configs/paper.json": "81302681213a9b33c154b0199b4a642d7d5f54a0a761eb88256dc83f183adde1",

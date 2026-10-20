@@ -1,8 +1,9 @@
 {
   "abstract_words": 194,
   "main_pages": 34,
-  "main_pdf_sha256": "345bb120f2570fc7b334b3db0baff2afbf7edb61050f8e8130796d7527a47446",
-  "paper_mathematical_statements_and_arguments_unchanged": true,
+  "main_pdf_sha256": "7366aebf1080b9738ec7ed7f0ad1e10cb64c119008a34e7cf9b405d97365e9d4",
+  "main_scientific_sources_unchanged": true,
+  "main_statement_and_algorithm_sources_unchanged": true,
   "printed_main_result_count": 9,
   "printed_statement_block_sha256": [
     "6bebbe0b454781938c4de82109d7380cf0c0b1d950d7fe38da812244b0f50ce2",
@@ -16,5 +17,9 @@
     "246be651af7da20902de4b95073966bc38323f3703340772b7227de0ebdd077f"
   ],
   "proof_source_preservation": "SOURCE_AND_STATEMENT_PRESERVATION.json",
-  "result_numbering_unchanged": true
+  "result_numbering_unchanged": true,
+  "supplement_pdf_sha256": "636cd23ecffddd32fb6053af689fe3dbcd3823c4016c254d743efe225871755b",
+  "supplement_scope_report": "SUPPLEMENT_SCOPE_ALIGNMENT.json",
+  "supplementary_proof_presentation_revised": true,
+  "supplementary_statements_specialized_to_existing_Lean_scope": true
 }

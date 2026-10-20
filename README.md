@@ -9,7 +9,7 @@ The paper studies interior mixed qubits and pure states in fixed finite dimensio
 | File | Contents |
 |---|---|
 | [MAIN_RESULTS.md](MAIN_RESULTS.md) | All nine numbered main results, with their printed statements and Lean correspondence |
-| [SUPPLEMENT_RESULTS.md](SUPPLEMENT_RESULTS.md) | Supplementary result coverage, including the precise remaining generality differences |
+| [SUPPLEMENT_RESULTS.md](SUPPLEMENT_RESULTS.md) | Supplementary statement scope and component proof correspondence |
 | [lean/](lean/) | Reduced proof source tree, dependency pins, verification scripts and current evidence |
 | [simulation/](simulation/) | Numerical implementation, tests, configuration and saved data |
 | [LEAN_FORMALIZATION.md](LEAN_FORMALIZATION.md) | Formal assumptions and verification scope |
@@ -61,7 +61,7 @@ The paper figures are `figure1_mixed.pdf` and `figure2_pure_bures.pdf`. The supp
 
 The official evidence is dated **20 October 2026**. The [Lean report](lean/verification/20261020/README.md) separates source compilation, statement checks, axiom dependencies and kernel replay. The [Python report](simulation/verification/20261020/FRESH_SIMULATION.md) records **37 passing tests** and **10,000 replicates for each of three studies**, with **16,384 copies in 202 batches** per replicate. A [separate algorithm audit](simulation/verification/20261020/INDEPENDENT_ALGORITHM_AUDIT.md) checks the numerical procedures against Algorithms 1–3 and tests fresh generation.
 
-All retained mathematical Lean declarations depend only on the standard logical axioms `propext`, `Classical.choice` and `Quot.sound`. The supplementary coverage table identifies broader printed variants without an exactly matching endpoint; a successful build is not a claim of complete formalization of every supplementary statement. Lean does not mechanically verify the Python program or its numerical output.
+All retained mathematical Lean declarations depend only on the standard logical axioms `propext`, `Classical.choice` and `Quot.sound`. The supplementary coverage table records the current restricted statements and their component proofs; the three identified scope differences are resolved without changing Lean. A successful build is not a claim of complete mechanical formalization of every sentence in the supplement. Lean does not mechanically verify the Python program or its numerical output.
 
 ## Citation and licenses
 

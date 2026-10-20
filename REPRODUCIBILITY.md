@@ -14,7 +14,7 @@ LAKE_ARTIFACT_CACHE=false python3 -B scripts/verify.py --cache --replay
 
 The integrity check does not build proofs. The verifier builds all distributed project modules, checks the two declaration inventories and all retained mathematical axiom dependencies, and replays the listed modules. It rejects existing project objects unless `--incremental` is specified. Pinned upstream library caches are separate from project proof objects. First-run dependency acquisition needs network access.
 
-For development, `lake build` and `lake env lean SupplementAudit.lean` run both main and supplementary audits. The exact proof scope and generality differences are in [LEAN_FORMALIZATION.md](LEAN_FORMALIZATION.md) and [SUPPLEMENT_RESULTS.md](SUPPLEMENT_RESULTS.md). The [official report](lean/verification/20261020/README.md) records the actual execution, rather than treating archive integrity as proof verification.
+For development, `lake build` and `lake env lean SupplementAudit.lean` run both main and supplementary audits. The exact current proof scope and component correspondence are in [LEAN_FORMALIZATION.md](LEAN_FORMALIZATION.md) and [SUPPLEMENT_RESULTS.md](SUPPLEMENT_RESULTS.md). The [official report](lean/verification/20261020/README.md) records the actual execution, rather than treating archive integrity as proof verification.
 
 ## Python
 

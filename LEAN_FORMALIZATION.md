@@ -27,7 +27,7 @@ The official checks are in the [20 October 2026 report](lean/verification/202610
 
 All retained mathematical declarations have only `propext`, `Classical.choice` and `Quot.sound` in their transitive axiom dependencies. The audit rejects `sorryAx` and any scientific axiom. Main declaration types match the saved reference exactly; supporting declaration types and retained proof blocks are checked separately.
 
-The [supplementary coverage table](SUPPLEMENT_RESULTS.md) is essential to interpreting this evidence: the general in-probability coordinate-transfer lemma, arbitrary nearest-projector selection, and generic fitted-weight cancellation have broader printed formulations than the checked specialized endpoints. The instances used for the main procedures are covered. This release does not claim complete formalization of those broader variants.
+The [supplementary coverage table](SUPPLEMENT_RESULTS.md) records the current statement scope. Lemmas S4.1, S4.2 and S6.2 are specialized to the fixed selection, almost-sure consistency and actual adaptive procedure already represented by Lean. S6.2 uses normalized normal-operator convergence and direct score linearization. The [scope audit](lean/verification/20261020/SUPPLEMENT_SCOPE_ALIGNMENT.md) checks their applications and seven existing declaration types/axiom sets. No Lean code, main theorem statement or algorithm changed. Component-based correspondence is distinguished from a single combined endpoint; complete mechanical verification of the entire supplementary text is not claimed.
 
 ## Reproduce
 
