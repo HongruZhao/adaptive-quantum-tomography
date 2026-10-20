@@ -1,5 +1,16 @@
 import QubitOracle.AdaptiveDesign.P1ControllerBounds
-
+import QubitOracle.AdaptiveDesign.ExplorationRidgeConsistency
+import QubitOracle.AdaptiveDesign.P1FiniteSampleBounds
+import QubitOracle.AdaptiveDesign.P1ObservedRidge
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedConsistency
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
 /-! Localization of the actual observed-axis ridge estimator. The
 expanding-ball safeguard supplies excitation before consistency is used. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

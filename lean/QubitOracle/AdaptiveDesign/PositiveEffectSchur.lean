@@ -1,6 +1,10 @@
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
 import QubitOracle.AdaptiveDesign.PhasePairPOVM
 import QubitOracle.AdaptiveDesign.TangentGLSRetraction
-
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.TwoBasis
 /-! A positive effect's Schur remainder. The proof uses an explicit
 congruence, so it also applies when the effect is singular. -/
 namespace QubitOracle.AdaptiveDesign.PositiveEffectSchur

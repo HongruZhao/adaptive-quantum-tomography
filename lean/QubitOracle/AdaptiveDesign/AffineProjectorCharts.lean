@@ -1,5 +1,11 @@
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PhysicalModelCharacterization
+import QubitOracle.AdaptiveDesign.ProjectiveProjectorEquivalence
 import QubitOracle.AdaptiveDesign.ProjectiveStateTopology
-
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.Paper.ProjectiveStateGeometry
+import QubitOracle.Paper.PureStateFoundations
 /-! Affine projective charts for the actual matrix-defined pure-state space.
 These rational charts use the induced matrix topology. Inverse and
 overlap smoothness are proved from their formulas.

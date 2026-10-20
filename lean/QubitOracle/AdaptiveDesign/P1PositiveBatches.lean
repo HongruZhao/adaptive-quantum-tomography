@@ -1,11 +1,8 @@
-import QubitOracle.Paper.P1AdaptiveRidgeConsistency
+import Mathlib
 
-/-! P1 for every prescribed sequence of positive finite batch sizes.
-The refresh indicator is explicitly the set of cumulative batch endpoints.
-It is false strictly inside every batch, so the recursive policy really
-holds its selected frame fixed until the next batch starts. -/
+/-! Supporting definitions and proved lemmas used by the manuscript. -/
 namespace QubitOracle.AdaptiveDesign.P1
-open QubitOracle.Paper Filter MeasureTheory
+open Filter MeasureTheory
 open scoped BigOperators Topology
 noncomputable section
 
@@ -55,44 +52,8 @@ theorem batchRefresh_false_inside (m : Nat → Nat) (hm : ∀ j, 0 < m j)
   have hhigh : k < j+1 := hmono.lt_iff_lt.mp (hk ▸ hu)
   omega
 
-/-- Every finite positive batch schedule, including unit-shot updates, has
-strongly consistent all-data ridge estimates and the optimal Bures information
-limit on its actual adaptive Born path measure. No external scientific axiom
-or assumption of estimator consistency occurs. -/
-theorem mixed_qubit_positive_batches
-    (m : Nat → Nat) (hm : ∀ j, 0 < m j)
-    (ridge : Real) (_hridge : 0 < ridge)
-    (theta : OneQubitPhysicalParameter)
-    (ht : QubitOracle.blochNormSq theta.1 < 1) :
-    ∀ᵐ path ∂pathMeasure (adaptiveRidgePolicy ridge (batchRefresh m)) theta,
-      Tendsto (fun n => pathRidgeEstimator ridge (batchRefresh m) n path)
-        atTop (nhds theta.1) ∧
-      Tendsto (fun n => frameFisher theta.1
-        (actualFrame (adaptiveRidgePolicy ridge (batchRefresh m)) n path))
-        atTop (nhds (mixedBuresTarget theta.1)) ∧
-      (∀ i j : Fin 3, Tendsto (fun N : Nat => (N : Real)⁻¹ *
-        ∑ k ∈ Finset.range N, frameFisher theta.1
-          (actualFrame (adaptiveRidgePolicy ridge (batchRefresh m)) k path) i j)
-        atTop (nhds (mixedBuresTarget theta.1 i j))) ∧
-      (∀ i j : Fin 3, Tendsto (fun N : Nat => (N : Real)⁻¹ *
-        ∑ k ∈ Finset.range N,
-          QubitOracle.mixedAxisFisher theta.1
-            (actualAxis (adaptiveRidgePolicy ridge (batchRefresh m)) k path) i j)
-        atTop (nhds (mixedBuresTarget theta.1 i j))) :=
-  mixed_qubit_consistency_and_optimal_information ridge (batchRefresh m)
-    (batchRefresh_unbounded m hm) theta ht
 
 
-/-- The physical controller sequence itself is consistent at every interior
-truth, because its fallback to the center becomes inactive eventually. -/
-theorem mixed_qubit_controller_positive_batches
-    (m : Nat → Nat) (ridge : Real) (theta : OneQubitPhysicalParameter)
-    (ht : QubitOracle.blochNormSq theta.1 < 1) :
-    ∀ᵐ path ∂pathMeasure (adaptiveRidgePolicy ridge (batchRefresh m)) theta,
-      Tendsto (fun n => interiorize (pathRidgeEstimator ridge (batchRefresh m) n path))
-        atTop (nhds theta.1) := by
-  filter_upwards [pathRidgeEstimator_tendsto_ae ridge (batchRefresh m) theta] with path hp
-  exact interiorize_tendsto ht hp
 
 end
 end QubitOracle.AdaptiveDesign.P1

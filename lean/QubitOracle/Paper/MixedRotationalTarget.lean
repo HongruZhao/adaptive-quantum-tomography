@@ -1,5 +1,5 @@
+import QubitOracle.FiniteGillMassar
 import QubitOracle.Paper.MixedStageStability
-
 /-!
 # Continuous rotationally invariant mixed-qubit oracle targets
 

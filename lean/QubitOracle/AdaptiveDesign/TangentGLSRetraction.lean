@@ -1,6 +1,9 @@
-import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
 import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
-
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.Paper.PureStateFoundations
 /-!
 # Exact matrix form of the implemented vector update
 

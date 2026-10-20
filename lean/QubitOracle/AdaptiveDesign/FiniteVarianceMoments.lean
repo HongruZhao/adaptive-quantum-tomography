@@ -1,6 +1,8 @@
+import QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
+import QubitOracle.AdaptiveDesign.BoundedMartingaleSecondMoment
+import QubitOracle.AdaptiveDesign.BoundedVarianceMGF
 import QubitOracle.AdaptiveDesign.FiniteBernsteinTails
 import QubitOracle.AdaptiveDesign.RealMomentBounds
-
 /-! Variance-budget moments for arbitrary filtered finite-dimensional
 martingale differences. No adaptive-tomography law is assumed here. -/
 namespace QubitOracle.AdaptiveDesign.BoundedVarianceMGF

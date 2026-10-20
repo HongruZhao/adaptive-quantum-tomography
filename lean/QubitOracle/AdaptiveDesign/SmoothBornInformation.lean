@@ -1,6 +1,11 @@
-import QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry
 import Mathlib.Analysis.InnerProductSpace.Calculus
-
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.FiniteGillMassar
 /-! Smoothness of the intrinsic Born information where all probabilities
 are positive. The ambient bilinear form restricts to the pure-state tangent
 space; no claim of continuity at zero-probability effects is made. -/

@@ -1,6 +1,11 @@
-import QubitOracle.AdaptiveDesign.P1WeightedBorn
 import QubitOracle.AdaptiveDesign.ExplorationRidgeConsistency
-
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.MixedRadialTangentStage
+import QubitOracle.Paper.MixedRotationalTarget
+import QubitOracle.Paper.MixedStageStability
+import QubitOracle.Paper.P1AdaptiveRidgePolicy
+import QubitOracle.Paper.P1UniformFrameInformation
 /-! The two actual P1 allocation rules and the expanding-interior controller.
 The floor is derived before consistency; no excitation assumption is hidden. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

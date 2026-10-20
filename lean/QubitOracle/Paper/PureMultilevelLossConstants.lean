@@ -1,5 +1,6 @@
+import QubitOracle.Paper.PureMultilevelDeterministicGeometryClosed
 import QubitOracle.Paper.PureMultilevelProjectorGeometry
-
+import QubitOracle.Paper.PureStateFoundations
 /-!
 # Exact loss constants for finite-dimensional pure states
 

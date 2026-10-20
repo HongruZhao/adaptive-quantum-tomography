@@ -1,5 +1,4 @@
 import QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
-
 /-! Finite-prefix maximum moments from summable exceptional-event
 weights. This avoids treating a future-dependent bound as predictable. -/
 namespace QubitOracle.AdaptiveDesign.RunningMaximumMoments

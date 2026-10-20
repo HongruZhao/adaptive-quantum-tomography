@@ -1,6 +1,18 @@
+import QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
+import QubitOracle.AdaptiveDesign.ExplorationRidgeConsistency
 import QubitOracle.AdaptiveDesign.P1ControllerLocalization
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.AdaptiveDesign.P1WeightedNormality
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
+import QubitOracle.AdaptiveDesign.PolynomialSqrtExponential
 import QubitOracle.AdaptiveDesign.RunningMaximumMoments
-
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
+import QubitOracle.Paper.P1AdaptiveRidgePolicy
 /-! Uniform moments of a bound on all inverse Frobenius allocation
 weights used so far. Only the concrete localization theorem is used. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

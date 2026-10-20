@@ -1,5 +1,4 @@
 import Mathlib
-
 /-! The multinomial covariance identity used by tangent GLS. A zero sum
 of probability derivatives removes the multinomial rank-one term. -/
 namespace QubitOracle.AdaptiveDesign.MultinomialGLSIdentity

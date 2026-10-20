@@ -1,6 +1,18 @@
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
 import QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.PureSLDMetric
 import QubitOracle.AdaptiveDesign.SharpTangentGeometry
-
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.AdaptiveDesign.TangentGLSRetraction
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.TwoBasis
 /-! Concrete tangent dimension and simultaneous rotation invariance.
 The coordinate equivalence is constructed, not supplied as a dimension
 or manifold assumption. -/

@@ -1,12 +1,13 @@
 cff-version: 1.2.0
 message: "Please cite the accompanying paper when using these proof sources."
-title: "Adaptive quantum tomography by least squares with optimal asymptotic covariance: main-paper Lean proof sources"
+title: "Adaptive quantum tomography by least squares with optimal asymptotic covariance: Lean formalization"
 type: software
+repository-code: "https://github.com/HongruZhao/adaptive-quantum-tomography"
 authors:
   - family-names: Zhao
     given-names: Hongru
-version: 0.2.0
-date-released: 2026-10-17
+version: "2026.10.20"
+date-released: 2026-10-20
 license: MIT
 
 preferred-citation:

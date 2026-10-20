@@ -1,6 +1,7 @@
-import QubitOracle.Paper.MixedOracleCoordinateFree
 import Mathlib.Analysis.InnerProductSpace.Positive
-
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.MixedOracleGeometry
+import QubitOracle.Paper.QubitFoundations
 /-!
 # Feasible normalized information region
 

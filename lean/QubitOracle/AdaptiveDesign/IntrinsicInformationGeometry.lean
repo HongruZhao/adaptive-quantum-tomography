@@ -1,6 +1,12 @@
-import QubitOracle.AdaptiveDesign.PureChartDifferential
 import QubitOracle.AdaptiveDesign.InformationCoordinateInvariance
-
+import QubitOracle.AdaptiveDesign.PureChartDifferential
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.PureStateFoundations
 /-! Intrinsic information, its actual Born derivative, and independence
 of the arbitrary kernel part of a pure-state SLD. -/
 namespace QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry

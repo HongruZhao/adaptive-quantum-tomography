@@ -1,6 +1,17 @@
-import QubitOracle.AdaptiveDesign.PhasePairPOVM
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
 import QubitOracle.AdaptiveDesign.GeneralPOVMBorn
-
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PhasePairPOVM
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.SequentialRidgeController
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.TwoBasis
 /-! # Adaptive phase-paired tomography, without a Fisher-symmetry input
 
 The actual labelled Born experiment, all-observation ridge estimator,

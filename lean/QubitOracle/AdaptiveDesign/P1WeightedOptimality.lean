@@ -1,5 +1,13 @@
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedController
 import QubitOracle.AdaptiveDesign.P1WeightedCovariance
-
+import QubitOracle.AdaptiveDesign.P1WeightedGeometry
+import QubitOracle.AdaptiveDesign.P1WeightedInformation
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.MixedOracleGeometry
+import QubitOracle.Paper.MixedOracleMatrix
+import QubitOracle.Paper.MixedRotationalTarget
+import QubitOracle.Paper.P1BuresOptimality
 /-! Both sharp P1 design criteria, against every regular finite qubit POVM.
 These are inverse-information criteria; no expected-risk or minimax limit is
 silently inferred from a pointwise central limit theorem. -/

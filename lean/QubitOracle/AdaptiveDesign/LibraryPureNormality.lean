@@ -1,7 +1,23 @@
-import QubitOracle.AdaptiveDesign.LibraryRidgeLinearization
-import QubitOracle.AdaptiveDesign.NearestPureExpansion
 import QubitOracle.AdaptiveDesign.PureChartCovariance
-
+import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
+import QubitOracle.AdaptiveDesign.GlobalPFSIC
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.LibraryRidgeLinearization
+import QubitOracle.AdaptiveDesign.LibraryScoreCLT
+import QubitOracle.AdaptiveDesign.LibraryUnweightedMoments
+import QubitOracle.AdaptiveDesign.NearestPureExpansion
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.ProbabilityCalculus
+import QubitOracle.AdaptiveDesign.ProbabilityZeroAlgebra
+import QubitOracle.AdaptiveDesign.PureAmplitudeChart
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.PureSmoothChartEndpoints
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.TwoBasis
 /-! Gaussian limits for the literal nearest-pure estimator of the
 optional library, without a Fisher correction or an assumed CLT input. -/
 namespace QubitOracle.AdaptiveDesign.LibraryUnweighted

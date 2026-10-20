@@ -1,0 +1,1879 @@
+[
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.FiniteRegularOracle:olean",
+      "+QubitOracle.AdaptiveDesign.FiniteAdaptiveOracle:olean"
+    ],
+    "completed_utc": "2026-10-20T16:48:59.400122+00:00",
+    "exit_code": 0,
+    "log": "source_001.log",
+    "started_utc": "2026-10-20T16:48:56.131504+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.GeneralWeightedOracle:olean",
+      "+QubitOracle.AdaptiveDesign.AdaptiveInformationChainRule:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:00.942527+00:00",
+    "exit_code": 0,
+    "log": "source_002.log",
+    "started_utc": "2026-10-20T16:48:59.400422+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.InformationCoordinateInvariance:olean",
+      "+QubitOracle.AdaptiveDesign.CoerciveLeastSquares:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:07.333551+00:00",
+    "exit_code": 0,
+    "log": "source_003.log",
+    "started_utc": "2026-10-20T16:49:00.942948+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.FiniteFrameCoercivity:olean",
+      "+QubitOracle.AdaptiveDesign.GlobalPFSICLibrary:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:10.478406+00:00",
+    "exit_code": 0,
+    "log": "source_004.log",
+    "started_utc": "2026-10-20T16:49:07.334614+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.GlobalPFSIC:olean",
+      "+QubitOracle.AdaptiveDesign.GlobalPFSICIdentification:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:13.618449+00:00",
+    "exit_code": 0,
+    "log": "source_005.log",
+    "started_utc": "2026-10-20T16:49:10.478776+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel:olean",
+      "+QubitOracle.LocalChart:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:16.734884+00:00",
+    "exit_code": 0,
+    "log": "source_006.log",
+    "started_utc": "2026-10-20T16:49:13.618995+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.TwoBasis:olean",
+      "+QubitOracle.FiniteGillMassar:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:19.866482+00:00",
+    "exit_code": 0,
+    "log": "source_007.log",
+    "started_utc": "2026-10-20T16:49:16.735282+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.GlobalPFSICFisher:olean",
+      "+QubitOracle.Paper.CompactLimitTransfer:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:22.999730+00:00",
+    "exit_code": 0,
+    "log": "source_008.log",
+    "started_utc": "2026-10-20T16:49:19.866858+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.RankOneStageContinuity:olean",
+      "+QubitOracle.AdaptiveDesign.GlobalPFSICTransport:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:26.123620+00:00",
+    "exit_code": 0,
+    "log": "source_009.log",
+    "started_utc": "2026-10-20T16:49:23.000079+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.FiniteKernelPathSpace:olean",
+      "+QubitOracle.AdaptiveDesign.GlobalPFSICBornModel:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:29.222145+00:00",
+    "exit_code": 0,
+    "log": "source_010.log",
+    "started_utc": "2026-10-20T16:49:26.124304+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.ExactHouseholder:olean",
+      "+QubitOracle.Paper.PureMultilevelNearestPureProjection:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:32.370523+00:00",
+    "exit_code": 0,
+    "log": "source_011.log",
+    "started_utc": "2026-10-20T16:49:29.222521+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.PureMultilevelCompactNearestProjection:olean",
+      "+QubitOracle.Paper.PureStateFoundations:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:35.493735+00:00",
+    "exit_code": 0,
+    "log": "source_012.log",
+    "started_utc": "2026-10-20T16:49:32.371014+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.PureMultilevelRankOneProjectorCompact:olean",
+      "+QubitOracle.AdaptiveDesign.PureMatrixController:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:38.625178+00:00",
+    "exit_code": 0,
+    "log": "source_013.log",
+    "started_utc": "2026-10-20T16:49:35.494204+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.PureHermitianController:olean",
+      "+QubitOracle.Paper.CramerWold:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:41.765988+00:00",
+    "exit_code": 0,
+    "log": "source_014.log",
+    "started_utc": "2026-10-20T16:49:38.625598+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.MartingaleCLT:olean",
+      "+QubitOracle.Paper.AdaptiveTrajectoryExperiment:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:43.246331+00:00",
+    "exit_code": 0,
+    "log": "source_015.log",
+    "started_utc": "2026-10-20T16:49:41.766386+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.BoundedConditionalSubGaussian:olean",
+      "+QubitOracle.Paper.BoundedMartingaleAzumaStrongLaw:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:44.694219+00:00",
+    "exit_code": 0,
+    "log": "source_016.log",
+    "started_utc": "2026-10-20T16:49:43.246773+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw:olean",
+      "+QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:46.248889+00:00",
+    "exit_code": 0,
+    "log": "source_017.log",
+    "started_utc": "2026-10-20T16:49:44.694633+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.SequentialRidgeController:olean",
+      "+QubitOracle.AdaptiveDesign.RidgeBatchSchedule:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:47.808560+00:00",
+    "exit_code": 0,
+    "log": "source_018.log",
+    "started_utc": "2026-10-20T16:49:46.249312+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P2AdaptiveTheorem:olean",
+      "+QubitOracle.AdaptiveDesign.GeneralPOVMModel:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:51.322420+00:00",
+    "exit_code": 0,
+    "log": "source_019.log",
+    "started_utc": "2026-10-20T16:49:47.809006+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.GeneralPOVMTransport:olean",
+      "+QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:55.316250+00:00",
+    "exit_code": 0,
+    "log": "source_020.log",
+    "started_utc": "2026-10-20T16:49:51.322995+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P2BornFisherIdentification:olean",
+      "+QubitOracle.AdaptiveDesign.GeneralPOVMBorn:olean"
+    ],
+    "completed_utc": "2026-10-20T16:49:58.459918+00:00",
+    "exit_code": 0,
+    "log": "source_021.log",
+    "started_utc": "2026-10-20T16:49:55.316695+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.TangentGLSAlgebra:olean",
+      "+QubitOracle.AdaptiveDesign.TangentGLSGeometry:olean"
+    ],
+    "completed_utc": "2026-10-20T16:50:01.600943+00:00",
+    "exit_code": 0,
+    "log": "source_022.log",
+    "started_utc": "2026-10-20T16:49:58.460471+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.PhasePairPOVM:olean",
+      "+QubitOracle.AdaptiveDesign.PhasePairAdaptive:olean"
+    ],
+    "completed_utc": "2026-10-20T16:50:04.752950+00:00",
+    "exit_code": 0,
+    "log": "source_023.log",
+    "started_utc": "2026-10-20T16:50:01.601433+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.TangentGLSEstimator:olean",
+      "+QubitOracle.AdaptiveDesign.TangentGLSWeightExpansion:olean"
+    ],
+    "completed_utc": "2026-10-20T16:50:07.990165+00:00",
+    "exit_code": 0,
+    "log": "source_024.log",
+    "started_utc": "2026-10-20T16:50:04.753420+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.TangentGLSProjection:olean",
+      "+QubitOracle.AdaptiveDesign.TangentGLSRetraction:olean"
+    ],
+    "completed_utc": "2026-10-20T16:50:11.235722+00:00",
+    "exit_code": 0,
+    "log": "source_025.log",
+    "started_utc": "2026-10-20T16:50:07.990642+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.TangentGLSBounds:olean",
+      "+QubitOracle.AdaptiveDesign.TangentGLSCoordinates:olean"
+    ],
+    "completed_utc": "2026-10-20T16:50:14.798496+00:00",
+    "exit_code": 0,
+    "log": "source_026.log",
+    "started_utc": "2026-10-20T16:50:11.236658+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.RankOneLosses:olean",
+      "+QubitOracle.AdaptiveDesign.PureAmplitudeChart:olean"
+    ],
+    "completed_utc": "2026-10-20T16:50:18.026208+00:00",
+    "exit_code": 0,
+    "log": "source_027.log",
+    "started_utc": "2026-10-20T16:50:14.798943+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.PureAmplitudeLoss:olean",
+      "+QubitOracle.AdaptiveDesign.PureChartCoverage:olean"
+    ],
+    "completed_utc": "2026-10-20T16:50:21.235013+00:00",
+    "exit_code": 0,
+    "log": "source_028.log",
+    "started_utc": "2026-10-20T16:50:18.026706+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.PureSLDMetric:olean",
+      "+QubitOracle.AdaptiveDesign.PureChartDifferential:olean"
+    ],
+    "completed_utc": "2026-10-20T16:50:24.465561+00:00",
+    "exit_code": 0,
+    "log": "source_029.log",
+    "started_utc": "2026-10-20T16:50:21.235787+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.PureChartDomain:olean",
+      "+QubitOracle.AdaptiveDesign.PVMGeometry:olean"
+    ],
+    "completed_utc": "2026-10-20T16:50:27.683536+00:00",
+    "exit_code": 0,
+    "log": "source_030.log",
+    "started_utc": "2026-10-20T16:50:24.466030+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.PureFiniteAtlas:olean",
+      "+QubitOracle.Paper.QuantumDistances:olean"
+    ],
+    "completed_utc": "2026-10-20T16:50:30.906100+00:00",
+    "exit_code": 0,
+    "log": "source_031.log",
+    "started_utc": "2026-10-20T16:50:27.684051+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.MixedAxisFisher:olean",
+      "+QubitOracle.Paper.QubitFoundations:olean"
+    ],
+    "completed_utc": "2026-10-20T16:50:34.086039+00:00",
+    "exit_code": 0,
+    "log": "source_032.log",
+    "started_utc": "2026-10-20T16:50:30.906749+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.OneQubitBlochPhysicalState:olean",
+      "+QubitOracle.Paper.PureMultilevelDeterministicGeometryClosed:olean"
+    ],
+    "completed_utc": "2026-10-20T16:50:37.321394+00:00",
+    "exit_code": 0,
+    "log": "source_033.log",
+    "started_utc": "2026-10-20T16:50:34.086637+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.PureMultilevelProjectorGeometry:olean",
+      "+QubitOracle.Paper.PureMultilevelLossConstants:olean"
+    ],
+    "completed_utc": "2026-10-20T16:50:40.514662+00:00",
+    "exit_code": 0,
+    "log": "source_034.log",
+    "started_utc": "2026-10-20T16:50:37.322161+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.PureMultilevelMatrixTraceDistance:olean",
+      "+QubitOracle.AdaptiveDesign.QuantumFidelityBridges:olean"
+    ],
+    "completed_utc": "2026-10-20T16:50:43.748930+00:00",
+    "exit_code": 0,
+    "log": "source_035.log",
+    "started_utc": "2026-10-20T16:50:40.515181+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.OneQubitMatrixTraceDistance:olean",
+      "+QubitOracle.Paper.OneQubitDensityMatrixBlochRepresentation:olean"
+    ],
+    "completed_utc": "2026-10-20T16:50:46.949400+00:00",
+    "exit_code": 0,
+    "log": "source_036.log",
+    "started_utc": "2026-10-20T16:50:43.749446+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.PhysicalModelCharacterization:olean",
+      "+QubitOracle.AdaptiveDesign.QubitEffectRepresentation:olean"
+    ],
+    "completed_utc": "2026-10-20T16:50:50.180528+00:00",
+    "exit_code": 0,
+    "log": "source_037.log",
+    "started_utc": "2026-10-20T16:50:46.949940+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel:olean",
+      "+QubitOracle.AdaptiveDesign.PureFisherLoewner:olean"
+    ],
+    "completed_utc": "2026-10-20T16:50:53.541294+00:00",
+    "exit_code": 0,
+    "log": "source_038.log",
+    "started_utc": "2026-10-20T16:50:50.181077+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.MixedOracleGeometry:olean",
+      "+QubitOracle.Paper.MixedOracleFeasible:olean"
+    ],
+    "completed_utc": "2026-10-20T16:50:56.758530+00:00",
+    "exit_code": 0,
+    "log": "source_039.log",
+    "started_utc": "2026-10-20T16:50:53.542518+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.MixedOracleMatrix:olean",
+      "+QubitOracle.Paper.MixedStageStability:olean"
+    ],
+    "completed_utc": "2026-10-20T16:50:59.975897+00:00",
+    "exit_code": 0,
+    "log": "source_040.log",
+    "started_utc": "2026-10-20T16:50:56.759394+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.MixedRotationalTarget:olean",
+      "+QubitOracle.Paper.P1BuresOptimality:olean"
+    ],
+    "completed_utc": "2026-10-20T16:51:03.170682+00:00",
+    "exit_code": 0,
+    "log": "source_041.log",
+    "started_utc": "2026-10-20T16:50:59.976503+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle:olean",
+      "+QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracleCharts:olean"
+    ],
+    "completed_utc": "2026-10-20T16:51:06.384876+00:00",
+    "exit_code": 0,
+    "log": "source_042.log",
+    "started_utc": "2026-10-20T16:51:03.171307+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.ProjectiveStateGeometry:olean",
+      "+QubitOracle.AdaptiveDesign.ProjectiveProjectorEquivalence:olean"
+    ],
+    "completed_utc": "2026-10-20T16:51:09.589738+00:00",
+    "exit_code": 0,
+    "log": "source_043.log",
+    "started_utc": "2026-10-20T16:51:06.385665+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.ProjectiveStateTopology:olean",
+      "+QubitOracle.AdaptiveDesign.AffineProjectorCharts:olean"
+    ],
+    "completed_utc": "2026-10-20T16:51:12.920038+00:00",
+    "exit_code": 0,
+    "log": "source_044.log",
+    "started_utc": "2026-10-20T16:51:09.590364+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.FiniteHistoryStatistics:olean",
+      "+QubitOracle.AdaptiveDesign.ProbabilityZeroAlgebra:olean"
+    ],
+    "completed_utc": "2026-10-20T16:51:16.317442+00:00",
+    "exit_code": 0,
+    "log": "source_045.log",
+    "started_utc": "2026-10-20T16:51:12.920737+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.FiniteAdaptiveBornScoreClosure:olean",
+      "+QubitOracle.AdaptiveDesign.BoundedResponseQuarterRate:olean"
+    ],
+    "completed_utc": "2026-10-20T16:51:19.653908+00:00",
+    "exit_code": 0,
+    "log": "source_046.log",
+    "started_utc": "2026-10-20T16:51:16.318216+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.ProbabilityCalculus:olean",
+      "+QubitOracle.AdaptiveDesign.AdaptiveResponseTightness:olean"
+    ],
+    "completed_utc": "2026-10-20T16:51:23.089132+00:00",
+    "exit_code": 0,
+    "log": "source_047.log",
+    "started_utc": "2026-10-20T16:51:19.655059+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.FiniteDimensionalResponseRates:olean",
+      "+QubitOracle.AdaptiveDesign.GeneralPOVMQuarterRate:olean"
+    ],
+    "completed_utc": "2026-10-20T16:51:26.533303+00:00",
+    "exit_code": 0,
+    "log": "source_048.log",
+    "started_utc": "2026-10-20T16:51:23.089887+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.ProtectedGLSWeightBounds:olean",
+      "+QubitOracle.AdaptiveDesign.TangentGLSRecordBounds:olean"
+    ],
+    "completed_utc": "2026-10-20T16:51:30.334971+00:00",
+    "exit_code": 0,
+    "log": "source_049.log",
+    "started_utc": "2026-10-20T16:51:26.534000+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.TangentGLSAmbient:olean",
+      "+QubitOracle.AdaptiveDesign.TangentGLSActualRates:olean"
+    ],
+    "completed_utc": "2026-10-20T16:51:33.900984+00:00",
+    "exit_code": 0,
+    "log": "source_050.log",
+    "started_utc": "2026-10-20T16:51:30.336247+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.GeneralPOVMProbabilityLimits:olean",
+      "+QubitOracle.Paper.ElementaryReferenceAlgebra:olean"
+    ],
+    "completed_utc": "2026-10-20T16:51:37.398954+00:00",
+    "exit_code": 0,
+    "log": "source_051.log",
+    "started_utc": "2026-10-20T16:51:33.901767+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.ElementaryPVMBases:olean",
+      "+QubitOracle.AdaptiveDesign.ElementaryPVMIdentification:olean"
+    ],
+    "completed_utc": "2026-10-20T16:51:40.963947+00:00",
+    "exit_code": 0,
+    "log": "source_052.log",
+    "started_utc": "2026-10-20T16:51:37.399594+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.RandomizedPVM:olean",
+      "+QubitOracle.Paper.ReferenceReflection:olean"
+    ],
+    "completed_utc": "2026-10-20T16:51:44.475993+00:00",
+    "exit_code": 0,
+    "log": "source_053.log",
+    "started_utc": "2026-10-20T16:51:40.964592+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.ReferenceRegularity:olean",
+      "+QubitOracle.AdaptiveDesign.ElementaryReferencePOVM:olean"
+    ],
+    "completed_utc": "2026-10-20T16:51:48.046514+00:00",
+    "exit_code": 0,
+    "log": "source_054.log",
+    "started_utc": "2026-10-20T16:51:44.476770+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.GeneralPOVMRootRate:olean",
+      "+QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry:olean"
+    ],
+    "completed_utc": "2026-10-20T16:51:51.632278+00:00",
+    "exit_code": 0,
+    "log": "source_055.log",
+    "started_utc": "2026-10-20T16:51:48.047175+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.ConsistentDeltaMethod:olean",
+      "+QubitOracle.AdaptiveDesign.BoundedAdaptiveResponseCLT:olean"
+    ],
+    "completed_utc": "2026-10-20T16:51:55.256722+00:00",
+    "exit_code": 0,
+    "log": "source_056.log",
+    "started_utc": "2026-10-20T16:51:51.633114+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.AdaptiveConditionalMoments:olean",
+      "+QubitOracle.AdaptiveDesign.FiniteCharacteristicTaylor:olean"
+    ],
+    "completed_utc": "2026-10-20T16:51:58.927312+00:00",
+    "exit_code": 0,
+    "log": "source_057.log",
+    "started_utc": "2026-10-20T16:51:55.257660+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristicProcess:olean",
+      "+QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristicBounds:olean"
+    ],
+    "completed_utc": "2026-10-20T16:52:00.452507+00:00",
+    "exit_code": 0,
+    "log": "source_058.log",
+    "started_utc": "2026-10-20T16:51:58.928022+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristicLimit:olean",
+      "+QubitOracle.AdaptiveDesign.FiniteAdaptiveResponseCLT:olean"
+    ],
+    "completed_utc": "2026-10-20T16:52:04.140777+00:00",
+    "exit_code": 0,
+    "log": "source_059.log",
+    "started_utc": "2026-10-20T16:52:00.453269+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.ProtectedBornScore:olean",
+      "+QubitOracle.AdaptiveDesign.EfficientBornScoreCLT:olean"
+    ],
+    "completed_utc": "2026-10-20T16:52:07.821884+00:00",
+    "exit_code": 0,
+    "log": "source_060.log",
+    "started_utc": "2026-10-20T16:52:04.141814+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.TangentGLSInformation:olean",
+      "+QubitOracle.AdaptiveDesign.TangentGLSOperatorBounds:olean"
+    ],
+    "completed_utc": "2026-10-20T16:52:11.434480+00:00",
+    "exit_code": 0,
+    "log": "source_061.log",
+    "started_utc": "2026-10-20T16:52:07.822617+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.TangentGLSFittedInformation:olean",
+      "+QubitOracle.AdaptiveDesign.TangentGLSStochasticRemainder:olean"
+    ],
+    "completed_utc": "2026-10-20T16:52:15.058210+00:00",
+    "exit_code": 0,
+    "log": "source_062.log",
+    "started_utc": "2026-10-20T16:52:11.435439+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.TangentGLSRecordIdentities:olean",
+      "+QubitOracle.AdaptiveDesign.TangentGLSLinearization:olean"
+    ],
+    "completed_utc": "2026-10-20T16:52:18.706531+00:00",
+    "exit_code": 0,
+    "log": "source_063.log",
+    "started_utc": "2026-10-20T16:52:15.059003+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.TangentGLSAsymptoticLinearization:olean",
+      "+QubitOracle.AdaptiveDesign.TangentGLSNormalizedError:olean"
+    ],
+    "completed_utc": "2026-10-20T16:52:22.386637+00:00",
+    "exit_code": 0,
+    "log": "source_064.log",
+    "started_utc": "2026-10-20T16:52:18.707486+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.TangentGLSVarianceStatement:olean",
+      "+QubitOracle.GillMassarBridge:olean"
+    ],
+    "completed_utc": "2026-10-20T16:52:26.075738+00:00",
+    "exit_code": 0,
+    "log": "source_065.log",
+    "started_utc": "2026-10-20T16:52:22.387439+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.TangentGLSOptimalVariance:olean",
+      "+QubitOracle.AdaptiveDesign.TangentGLSStrongConsistency:olean"
+    ],
+    "completed_utc": "2026-10-20T16:52:29.789984+00:00",
+    "exit_code": 0,
+    "log": "source_066.log",
+    "started_utc": "2026-10-20T16:52:26.076577+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.PureAmplitudeEndpoints:olean",
+      "+QubitOracle.AdaptiveDesign.PureSmoothChartEndpoints:olean"
+    ],
+    "completed_utc": "2026-10-20T16:52:33.475397+00:00",
+    "exit_code": 0,
+    "log": "source_067.log",
+    "started_utc": "2026-10-20T16:52:29.790951+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.PureChartCovariance:olean",
+      "+QubitOracle.AdaptiveDesign.LibraryUnweightedMoments:olean"
+    ],
+    "completed_utc": "2026-10-20T16:52:37.145956+00:00",
+    "exit_code": 0,
+    "log": "source_068.log",
+    "started_utc": "2026-10-20T16:52:33.476351+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.LibraryTangentFrame:olean",
+      "+QubitOracle.AdaptiveDesign.LibraryFrameLimit:olean"
+    ],
+    "completed_utc": "2026-10-20T16:52:40.854329+00:00",
+    "exit_code": 0,
+    "log": "source_069.log",
+    "started_utc": "2026-10-20T16:52:37.146785+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.LibraryScoreCLT:olean",
+      "+QubitOracle.AdaptiveDesign.LibraryRidgeLinearization:olean"
+    ],
+    "completed_utc": "2026-10-20T16:52:44.566678+00:00",
+    "exit_code": 0,
+    "log": "source_070.log",
+    "started_utc": "2026-10-20T16:52:40.855284+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.SharpTangentGeometry:olean",
+      "+QubitOracle.AdaptiveDesign.NearestPureVariational:olean"
+    ],
+    "completed_utc": "2026-10-20T16:52:48.542689+00:00",
+    "exit_code": 0,
+    "log": "source_071.log",
+    "started_utc": "2026-10-20T16:52:44.567557+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.NearestPureEigenvector:olean",
+      "+QubitOracle.AdaptiveDesign.NearestPureExpansion:olean"
+    ],
+    "completed_utc": "2026-10-20T16:52:52.222742+00:00",
+    "exit_code": 0,
+    "log": "source_072.log",
+    "started_utc": "2026-10-20T16:52:48.543878+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.LibraryPureNormality:olean",
+      "+QubitOracle.AdaptiveDesign.LibraryCovariance:olean"
+    ],
+    "completed_utc": "2026-10-20T16:52:56.286760+00:00",
+    "exit_code": 0,
+    "log": "source_073.log",
+    "started_utc": "2026-10-20T16:52:52.224173+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.ExplorationRate:olean",
+      "+QubitOracle.AdaptiveDesign.AdaptiveExplorationRate:olean"
+    ],
+    "completed_utc": "2026-10-20T16:52:58.148505+00:00",
+    "exit_code": 0,
+    "log": "source_074.log",
+    "started_utc": "2026-10-20T16:52:56.288172+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P1PositiveBatches:olean",
+      "+QubitOracle.Paper.MixedProbabilityFloor:olean"
+    ],
+    "completed_utc": "2026-10-20T16:53:01.796548+00:00",
+    "exit_code": 0,
+    "log": "source_075.log",
+    "started_utc": "2026-10-20T16:52:58.149367+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.OneQubitCyclicBornPath:olean",
+      "+QubitOracle.Paper.ProtocolRegularity:olean"
+    ],
+    "completed_utc": "2026-10-20T16:53:05.568089+00:00",
+    "exit_code": 0,
+    "log": "source_076.log",
+    "started_utc": "2026-10-20T16:53:01.797778+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.ConcreteProtocolA1A3:olean",
+      "+QubitOracle.Paper.OneQubitGeneralScheduleAdaptiveBornProtocol:olean"
+    ],
+    "completed_utc": "2026-10-20T16:53:09.354896+00:00",
+    "exit_code": 0,
+    "log": "source_077.log",
+    "started_utc": "2026-10-20T16:53:05.569262+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.OneQubitGeneralScheduleAdaptiveScoreCondExp:olean",
+      "+QubitOracle.Paper.OneQubitAPSRLSContract:olean"
+    ],
+    "completed_utc": "2026-10-20T16:53:13.039861+00:00",
+    "exit_code": 0,
+    "log": "source_078.log",
+    "started_utc": "2026-10-20T16:53:09.355868+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.OneQubitPureCoordinateCore:olean",
+      "+QubitOracle.Paper.OneQubitRotationTransport:olean"
+    ],
+    "completed_utc": "2026-10-20T16:53:16.752334+00:00",
+    "exit_code": 0,
+    "log": "source_079.log",
+    "started_utc": "2026-10-20T16:53:13.040649+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.OneQubitFixedDesignInformation:olean",
+      "+QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel:olean"
+    ],
+    "completed_utc": "2026-10-20T16:53:21.141492+00:00",
+    "exit_code": 0,
+    "log": "source_080.log",
+    "started_utc": "2026-10-20T16:53:16.753436+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.P1UniformFrameBorn:olean",
+      "+QubitOracle.AdaptiveDesign.P1WeightedBorn:olean"
+    ],
+    "completed_utc": "2026-10-20T16:53:26.291905+00:00",
+    "exit_code": 0,
+    "log": "source_081.log",
+    "started_utc": "2026-10-20T16:53:21.142659+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.ScheduledRidgeController:olean",
+      "+QubitOracle.AdaptiveDesign.ExplorationRidgeConsistency:olean"
+    ],
+    "completed_utc": "2026-10-20T16:53:29.183623+00:00",
+    "exit_code": 0,
+    "log": "source_082.log",
+    "started_utc": "2026-10-20T16:53:26.293377+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.MixedRadialTangentStage:olean",
+      "+QubitOracle.Paper.MixedInformationBound:olean"
+    ],
+    "completed_utc": "2026-10-20T16:53:35.377209+00:00",
+    "exit_code": 0,
+    "log": "source_083.log",
+    "started_utc": "2026-10-20T16:53:29.184872+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.MixedInformationMartingale:olean",
+      "+QubitOracle.Paper.OneQubitTwoStageInformationConvergence:olean"
+    ],
+    "completed_utc": "2026-10-20T16:53:41.234924+00:00",
+    "exit_code": 0,
+    "log": "source_084.log",
+    "started_utc": "2026-10-20T16:53:35.378949+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.OneQubitLocalContinuousFrame:olean",
+      "+QubitOracle.Paper.OneQubitGeneralScheduleFrobeniusTraceInformation:olean"
+    ],
+    "completed_utc": "2026-10-20T16:53:46.854961+00:00",
+    "exit_code": 0,
+    "log": "source_085.log",
+    "started_utc": "2026-10-20T16:53:41.236253+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.P1UniformFrameInformation:olean",
+      "+QubitOracle.Paper.P1AdaptiveRidgePolicy:olean"
+    ],
+    "completed_utc": "2026-10-20T16:53:52.357878+00:00",
+    "exit_code": 0,
+    "log": "source_086.log",
+    "started_utc": "2026-10-20T16:53:46.856473+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P1WeightedController:olean",
+      "+QubitOracle.AdaptiveDesign.P1WeightedPolicy:olean"
+    ],
+    "completed_utc": "2026-10-20T16:53:57.185332+00:00",
+    "exit_code": 0,
+    "log": "source_087.log",
+    "started_utc": "2026-10-20T16:53:52.359378+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P1WeightedMoments:olean",
+      "+QubitOracle.AdaptiveDesign.P1ObservedRidge:olean"
+    ],
+    "completed_utc": "2026-10-20T16:54:02.027530+00:00",
+    "exit_code": 0,
+    "log": "source_088.log",
+    "started_utc": "2026-10-20T16:53:57.186705+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P1WeightedConsistency:olean",
+      "+QubitOracle.AdaptiveDesign.P1WeightedInformation:olean"
+    ],
+    "completed_utc": "2026-10-20T16:54:06.844991+00:00",
+    "exit_code": 0,
+    "log": "source_089.log",
+    "started_utc": "2026-10-20T16:54:02.028817+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.OneQubitPrespecifiedBatchCumulativeInformationClosure:olean",
+      "+QubitOracle.AdaptiveDesign.P1WeightedGeometry:olean"
+    ],
+    "completed_utc": "2026-10-20T16:54:11.165766+00:00",
+    "exit_code": 0,
+    "log": "source_090.log",
+    "started_utc": "2026-10-20T16:54:06.846394+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.MixedPaperAxisOrder:olean",
+      "+QubitOracle.AdaptiveDesign.WeightedInformationOptimization:olean"
+    ],
+    "completed_utc": "2026-10-20T16:54:14.940719+00:00",
+    "exit_code": 0,
+    "log": "source_091.log",
+    "started_utc": "2026-10-20T16:54:11.166757+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.MixedRelativeInformation:olean",
+      "+QubitOracle.AdaptiveDesign.MultinomialGLSIdentity:olean"
+    ],
+    "completed_utc": "2026-10-20T16:54:18.776777+00:00",
+    "exit_code": 0,
+    "log": "source_092.log",
+    "started_utc": "2026-10-20T16:54:14.941632+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.SubGaussianPowerMoments:olean",
+      "+QubitOracle.AdaptiveDesign.AdaptiveResponseMoments:olean"
+    ],
+    "completed_utc": "2026-10-20T16:54:22.614529+00:00",
+    "exit_code": 0,
+    "log": "source_093.log",
+    "started_utc": "2026-10-20T16:54:18.777897+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.GoodEventMoments:olean",
+      "+QubitOracle.AdaptiveDesign.P1CharacteristicProcess:olean"
+    ],
+    "completed_utc": "2026-10-20T16:54:26.434740+00:00",
+    "exit_code": 0,
+    "log": "source_094.log",
+    "started_utc": "2026-10-20T16:54:22.615474+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P1CharacteristicBounds:olean",
+      "+QubitOracle.AdaptiveDesign.P1CharacteristicLimit:olean"
+    ],
+    "completed_utc": "2026-10-20T16:54:30.354026+00:00",
+    "exit_code": 0,
+    "log": "source_095.log",
+    "started_utc": "2026-10-20T16:54:26.435969+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P1BoundedResponseCLT:olean",
+      "+QubitOracle.AdaptiveDesign.P1WeightedLimits:olean"
+    ],
+    "completed_utc": "2026-10-20T16:54:34.692371+00:00",
+    "exit_code": 0,
+    "log": "source_096.log",
+    "started_utc": "2026-10-20T16:54:30.355722+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P1WeightedCovariance:olean",
+      "+QubitOracle.AdaptiveDesign.P1WeightedCLT:olean"
+    ],
+    "completed_utc": "2026-10-20T16:54:39.379790+00:00",
+    "exit_code": 0,
+    "log": "source_097.log",
+    "started_utc": "2026-10-20T16:54:34.693710+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P1WeightedNormality:olean",
+      "+QubitOracle.AdaptiveDesign.P1WeightedOptimality:olean"
+    ],
+    "completed_utc": "2026-10-20T16:54:43.906623+00:00",
+    "exit_code": 0,
+    "log": "source_098.log",
+    "started_utc": "2026-10-20T16:54:39.380810+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P1WeightedEndpoints:olean",
+      "+QubitOracle.AdaptiveDesign.BoundedMartingaleSecondMoment:olean"
+    ],
+    "completed_utc": "2026-10-20T16:54:48.230905+00:00",
+    "exit_code": 0,
+    "log": "source_099.log",
+    "started_utc": "2026-10-20T16:54:43.908648+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.ExplorationKronecker:olean",
+      "+QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw:olean"
+    ],
+    "completed_utc": "2026-10-20T16:54:52.297897+00:00",
+    "exit_code": 0,
+    "log": "source_100.log",
+    "started_utc": "2026-10-20T16:54:48.231979+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.L2MartingaleBudget:olean",
+      "+QubitOracle.AdaptiveDesign.BoundedVarianceMGF:olean"
+    ],
+    "completed_utc": "2026-10-20T16:54:56.185639+00:00",
+    "exit_code": 0,
+    "log": "source_101.log",
+    "started_utc": "2026-10-20T16:54:52.298926+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.AdaptiveGaussianTails:olean",
+      "+QubitOracle.AdaptiveDesign.FiniteGaussianTails:olean"
+    ],
+    "completed_utc": "2026-10-20T16:55:00.367063+00:00",
+    "exit_code": 0,
+    "log": "source_102.log",
+    "started_utc": "2026-10-20T16:54:56.186628+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P1FiniteSampleBounds:olean",
+      "+QubitOracle.AdaptiveDesign.P1BuresFourthMoment:olean"
+    ],
+    "completed_utc": "2026-10-20T16:55:04.147098+00:00",
+    "exit_code": 0,
+    "log": "source_103.log",
+    "started_utc": "2026-10-20T16:55:00.368630+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P1ControllerBounds:olean",
+      "+QubitOracle.AdaptiveDesign.PolynomialSqrtExponential:olean"
+    ],
+    "completed_utc": "2026-10-20T16:55:07.953044+00:00",
+    "exit_code": 0,
+    "log": "source_104.log",
+    "started_utc": "2026-10-20T16:55:04.148068+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P1Localization:olean",
+      "+QubitOracle.AdaptiveDesign.P1ControllerLocalization:olean"
+    ],
+    "completed_utc": "2026-10-20T16:55:11.790715+00:00",
+    "exit_code": 0,
+    "log": "source_105.log",
+    "started_utc": "2026-10-20T16:55:07.954083+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P1GramMoments:olean",
+      "+QubitOracle.AdaptiveDesign.RunningMaximumMoments:olean"
+    ],
+    "completed_utc": "2026-10-20T16:55:15.609968+00:00",
+    "exit_code": 0,
+    "log": "source_106.log",
+    "started_utc": "2026-10-20T16:55:11.791687+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P1InverseAllocationMoments:olean",
+      "+QubitOracle.AdaptiveDesign.UniformProductMoments:olean"
+    ],
+    "completed_utc": "2026-10-20T16:55:19.410987+00:00",
+    "exit_code": 0,
+    "log": "source_107.log",
+    "started_utc": "2026-10-20T16:55:15.611666+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P1FrobeniusFourthMoment:olean",
+      "+QubitOracle.AdaptiveDesign.P1ControllerFourthMoment:olean"
+    ],
+    "completed_utc": "2026-10-20T16:55:23.244540+00:00",
+    "exit_code": 0,
+    "log": "source_108.log",
+    "started_utc": "2026-10-20T16:55:19.411951+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P1CriterionConvergence:olean",
+      "+QubitOracle.AdaptiveDesign.P1GaussianQuadratic:olean"
+    ],
+    "completed_utc": "2026-10-20T16:55:27.069154+00:00",
+    "exit_code": 0,
+    "log": "source_109.log",
+    "started_utc": "2026-10-20T16:55:23.245597+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.WeakMeanLossTransfer:olean",
+      "+QubitOracle.AdaptiveDesign.P1QuadraticMeanLoss:olean"
+    ],
+    "completed_utc": "2026-10-20T16:55:30.887543+00:00",
+    "exit_code": 0,
+    "log": "source_110.log",
+    "started_utc": "2026-10-20T16:55:27.071104+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P1RidgeOptimization:olean",
+      "+QubitOracle.AdaptiveDesign.POVMEstimatorMoments:olean"
+    ],
+    "completed_utc": "2026-10-20T16:55:34.696822+00:00",
+    "exit_code": 0,
+    "log": "source_111.log",
+    "started_utc": "2026-10-20T16:55:30.889116+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.PhasePairFrameBound:olean",
+      "+QubitOracle.AdaptiveDesign.PhasePairFrameIdentity:olean"
+    ],
+    "completed_utc": "2026-10-20T16:55:38.542363+00:00",
+    "exit_code": 0,
+    "log": "source_112.log",
+    "started_utc": "2026-10-20T16:55:34.697848+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.OneQubitMixedBuresFidelityLocalRemainder:olean",
+      "+QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic:olean"
+    ],
+    "completed_utc": "2026-10-20T16:55:42.464241+00:00",
+    "exit_code": 0,
+    "log": "source_113.log",
+    "started_utc": "2026-10-20T16:55:38.543627+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P1BuresMeanLoss:olean",
+      "+QubitOracle.AdaptiveDesign.GaussianQuadraticMoments:olean"
+    ],
+    "completed_utc": "2026-10-20T16:55:46.294808+00:00",
+    "exit_code": 0,
+    "log": "source_114.log",
+    "started_utc": "2026-10-20T16:55:42.466098+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.PureLossDistributions:olean",
+      "+QubitOracle.AdaptiveDesign.PurePOVMMeanLoss:olean"
+    ],
+    "completed_utc": "2026-10-20T16:55:50.167721+00:00",
+    "exit_code": 0,
+    "log": "source_115.log",
+    "started_utc": "2026-10-20T16:55:46.295877+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints:olean",
+      "+QubitOracle.AdaptiveDesign.PositiveEffectSchur:olean"
+    ],
+    "completed_utc": "2026-10-20T16:55:54.187205+00:00",
+    "exit_code": 0,
+    "log": "source_116.log",
+    "started_utc": "2026-10-20T16:55:50.168927+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.ProjectiveStateManifold:olean",
+      "+QubitOracle.AdaptiveDesign.PureTangentCurves:olean"
+    ],
+    "completed_utc": "2026-10-20T16:55:58.064189+00:00",
+    "exit_code": 0,
+    "log": "source_117.log",
+    "started_utc": "2026-10-20T16:55:54.188369+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.PureTangentDimension:olean",
+      "+QubitOracle.AdaptiveDesign.QubitLocalInformation:olean"
+    ],
+    "completed_utc": "2026-10-20T16:56:01.887243+00:00",
+    "exit_code": 0,
+    "log": "source_118.log",
+    "started_utc": "2026-10-20T16:55:58.065283+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.RecordPermutation:olean",
+      "+QubitOracle.AdaptiveDesign.TracelessHermitianDimension:olean"
+    ],
+    "completed_utc": "2026-10-20T16:56:05.744858+00:00",
+    "exit_code": 0,
+    "log": "source_119.log",
+    "started_utc": "2026-10-20T16:56:01.888560+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.ReferenceIdentificationSpanning:olean",
+      "+QubitOracle.AdaptiveDesign.SinglePVMDimension:olean"
+    ],
+    "completed_utc": "2026-10-20T16:56:09.595018+00:00",
+    "exit_code": 0,
+    "log": "source_120.log",
+    "started_utc": "2026-10-20T16:56:05.745952+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.SmoothBornInformation:olean",
+      "+QubitOracle.AdaptiveDesign.TightRemainderBounds:olean"
+    ],
+    "completed_utc": "2026-10-20T16:56:13.463095+00:00",
+    "exit_code": 0,
+    "log": "source_121.log",
+    "started_utc": "2026-10-20T16:56:09.596102+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.TangentGLSSecondOrderCancellation:olean",
+      "+QubitOracle.Paper.MainPaperBasisBound:olean"
+    ],
+    "completed_utc": "2026-10-20T16:56:17.298199+00:00",
+    "exit_code": 0,
+    "log": "source_122.log",
+    "started_utc": "2026-10-20T16:56:13.464174+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.MainPaperGeometry:olean",
+      "+QubitOracle.Paper.MainPaperPureCharts:olean"
+    ],
+    "completed_utc": "2026-10-20T16:56:21.154694+00:00",
+    "exit_code": 0,
+    "log": "source_123.log",
+    "started_utc": "2026-10-20T16:56:17.299207+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.MainPaperPureLimits:olean",
+      "+QubitOracle.Paper.MainPaperTheorem42:olean"
+    ],
+    "completed_utc": "2026-10-20T16:56:25.276879+00:00",
+    "exit_code": 0,
+    "log": "source_124.log",
+    "started_utc": "2026-10-20T16:56:21.156298+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.MainPaperMeanLosses:olean",
+      "+QubitOracle.Paper.MainPaperNumericalDefinitions:olean"
+    ],
+    "completed_utc": "2026-10-20T16:56:29.147292+00:00",
+    "exit_code": 0,
+    "log": "source_125.log",
+    "started_utc": "2026-10-20T16:56:25.278366+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.MainPaperPOVMClass:olean",
+      "+QubitOracle.Paper.MainPaperPhaseQuotient:olean"
+    ],
+    "completed_utc": "2026-10-20T16:56:33.085732+00:00",
+    "exit_code": 0,
+    "log": "source_126.log",
+    "started_utc": "2026-10-20T16:56:29.148381+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.Paper.PureQuantumInformationProposition:olean",
+      "+MainPaperTheorem31:olean"
+    ],
+    "completed_utc": "2026-10-20T16:56:36.990839+00:00",
+    "exit_code": 0,
+    "log": "source_127.log",
+    "started_utc": "2026-10-20T16:56:33.087226+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+MainPaper:olean",
+      "+MainPaperAudit:olean"
+    ],
+    "completed_utc": "2026-10-20T16:56:41.010967+00:00",
+    "exit_code": 0,
+    "log": "source_128.log",
+    "started_utc": "2026-10-20T16:56:36.991936+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding:olean",
+      "+QubitOracle.AdaptiveDesign.FiniteBernsteinTails:olean"
+    ],
+    "completed_utc": "2026-10-20T16:56:45.098490+00:00",
+    "exit_code": 0,
+    "log": "source_129.log",
+    "started_utc": "2026-10-20T16:56:41.012407+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.RealMomentBounds:olean",
+      "+QubitOracle.AdaptiveDesign.FiniteVarianceMoments:olean"
+    ],
+    "completed_utc": "2026-10-20T16:56:48.944184+00:00",
+    "exit_code": 0,
+    "log": "source_130.log",
+    "started_utc": "2026-10-20T16:56:45.099606+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.SupplementProbability:olean",
+      "+QubitOracle.AdaptiveDesign.GlobalPFSICReferenceMinimum:olean"
+    ],
+    "completed_utc": "2026-10-20T16:56:52.779648+00:00",
+    "exit_code": 0,
+    "log": "source_131.log",
+    "started_utc": "2026-10-20T16:56:48.945796+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.P1InverseGramMoments:olean",
+      "+QubitOracle.AdaptiveDesign.SupplementMoments:olean"
+    ],
+    "completed_utc": "2026-10-20T16:56:56.685411+00:00",
+    "exit_code": 0,
+    "log": "source_132.log",
+    "started_utc": "2026-10-20T16:56:52.781879+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate:olean",
+      "+QubitOracle.AdaptiveDesign.MartingaleCharacteristicBounds:olean"
+    ],
+    "completed_utc": "2026-10-20T16:57:00.539786+00:00",
+    "exit_code": 0,
+    "log": "source_133.log",
+    "started_utc": "2026-10-20T16:56:56.686675+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.GeneralBoundedMartingaleCLT:olean",
+      "+QubitOracle.AdaptiveDesign.GeneralBoundedMartingaleStrongLaw:olean"
+    ],
+    "completed_utc": "2026-10-20T16:57:04.481129+00:00",
+    "exit_code": 0,
+    "log": "source_134.log",
+    "started_utc": "2026-10-20T16:57:00.541478+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+QubitOracle.AdaptiveDesign.GeneralMartingaleCovarianceCLT:olean",
+      "+Supplement:olean"
+    ],
+    "completed_utc": "2026-10-20T16:57:08.736381+00:00",
+    "exit_code": 0,
+    "log": "source_135.log",
+    "started_utc": "2026-10-20T16:57:04.482314+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "+SupplementAudit:olean"
+    ],
+    "completed_utc": "2026-10-20T16:57:12.730285+00:00",
+    "exit_code": 0,
+    "log": "source_136.log",
+    "started_utc": "2026-10-20T16:57:08.737913+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "build",
+      "MainPaperAudit",
+      "SupplementAudit"
+    ],
+    "completed_utc": "2026-10-20T16:57:17.033736+00:00",
+    "exit_code": 0,
+    "log": "default_targets.log",
+    "started_utc": "2026-10-20T16:57:12.731387+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "MainPaperAudit.lean"
+    ],
+    "completed_utc": "2026-10-20T16:57:54.260847+00:00",
+    "exit_code": 0,
+    "log": "main_audit.log",
+    "started_utc": "2026-10-20T16:57:17.034885+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "lean",
+      "SupplementAudit.lean"
+    ],
+    "completed_utc": "2026-10-20T16:59:23.349820+00:00",
+    "exit_code": 0,
+    "log": "supplement_audit.log",
+    "started_utc": "2026-10-20T16:57:54.262395+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "-v",
+      "MainPaper",
+      "MainPaperAudit"
+    ],
+    "completed_utc": "2026-10-20T16:59:59.155032+00:00",
+    "exit_code": 0,
+    "log": "replay_001.log",
+    "started_utc": "2026-10-20T16:59:23.577020+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "-v",
+      "MainPaperTheorem31",
+      "QubitOracle.Paper.MainPaperPOVMClass"
+    ],
+    "completed_utc": "2026-10-20T17:00:24.777047+00:00",
+    "exit_code": 0,
+    "log": "replay_002.log",
+    "started_utc": "2026-10-20T16:59:59.156738+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "-v",
+      "QubitOracle.Paper.MainPaperNumericalDefinitions",
+      "QubitOracle.Paper.MainPaperBasisBound"
+    ],
+    "completed_utc": "2026-10-20T17:00:47.827103+00:00",
+    "exit_code": 0,
+    "log": "replay_003.log",
+    "started_utc": "2026-10-20T17:00:24.778675+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "-v",
+      "QubitOracle.Paper.MainPaperGeometry",
+      "QubitOracle.Paper.MainPaperPhaseQuotient"
+    ],
+    "completed_utc": "2026-10-20T17:01:25.051715+00:00",
+    "exit_code": 0,
+    "log": "replay_004.log",
+    "started_utc": "2026-10-20T17:00:47.828341+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "-v",
+      "QubitOracle.Paper.MainPaperPureCharts",
+      "QubitOracle.Paper.MainPaperPureLimits"
+    ],
+    "completed_utc": "2026-10-20T17:01:48.654927+00:00",
+    "exit_code": 0,
+    "log": "replay_005.log",
+    "started_utc": "2026-10-20T17:01:25.053746+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "-v",
+      "QubitOracle.Paper.MainPaperTheorem42",
+      "QubitOracle.Paper.MainPaperMeanLosses"
+    ],
+    "completed_utc": "2026-10-20T17:02:19.330968+00:00",
+    "exit_code": 0,
+    "log": "replay_006.log",
+    "started_utc": "2026-10-20T17:01:48.656422+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "-v",
+      "QubitOracle.Paper.PureQuantumInformationProposition",
+      "QubitOracle.AdaptiveDesign.PhasePairPOVM"
+    ],
+    "completed_utc": "2026-10-20T17:02:56.060606+00:00",
+    "exit_code": 0,
+    "log": "replay_007.log",
+    "started_utc": "2026-10-20T17:02:19.332459+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "-v",
+      "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle",
+      "QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracleCharts"
+    ],
+    "completed_utc": "2026-10-20T17:03:20.897447+00:00",
+    "exit_code": 0,
+    "log": "replay_008.log",
+    "started_utc": "2026-10-20T17:02:56.063615+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "-v",
+      "QubitOracle.AdaptiveDesign.PureLossDistributions",
+      "Supplement"
+    ],
+    "completed_utc": "2026-10-20T17:03:52.521723+00:00",
+    "exit_code": 0,
+    "log": "replay_009.log",
+    "started_utc": "2026-10-20T17:03:20.898588+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "-v",
+      "SupplementAudit",
+      "QubitOracle.AdaptiveDesign.SupplementMoments"
+    ],
+    "completed_utc": "2026-10-20T17:04:30.659228+00:00",
+    "exit_code": 0,
+    "log": "replay_010.log",
+    "started_utc": "2026-10-20T17:03:52.523821+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "-v",
+      "QubitOracle.AdaptiveDesign.SupplementProbability",
+      "QubitOracle.AdaptiveDesign.GlobalPFSICReferenceMinimum"
+    ],
+    "completed_utc": "2026-10-20T17:05:06.733771+00:00",
+    "exit_code": 0,
+    "log": "replay_011.log",
+    "started_utc": "2026-10-20T17:04:30.661891+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "-v",
+      "QubitOracle.AdaptiveDesign.GeneralMartingaleCovarianceCLT",
+      "QubitOracle.AdaptiveDesign.GeneralBoundedMartingaleStrongLaw"
+    ],
+    "completed_utc": "2026-10-20T17:05:31.494166+00:00",
+    "exit_code": 0,
+    "log": "replay_012.log",
+    "started_utc": "2026-10-20T17:05:06.735473+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "-v",
+      "QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate",
+      "QubitOracle.AdaptiveDesign.NearestPureExpansion"
+    ],
+    "completed_utc": "2026-10-20T17:06:02.649671+00:00",
+    "exit_code": 0,
+    "log": "replay_013.log",
+    "started_utc": "2026-10-20T17:05:31.495833+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "-v",
+      "QubitOracle.AdaptiveDesign.SharpTangentGeometry",
+      "QubitOracle.AdaptiveDesign.TangentGLSSecondOrderCancellation"
+    ],
+    "completed_utc": "2026-10-20T17:06:45.567879+00:00",
+    "exit_code": 0,
+    "log": "replay_014.log",
+    "started_utc": "2026-10-20T17:06:02.651723+00:00"
+  },
+  {
+    "command": [
+      "lake",
+      "env",
+      "leanchecker",
+      "-v",
+      "QubitOracle.AdaptiveDesign.P1InverseGramMoments",
+      "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM"
+    ],
+    "completed_utc": "2026-10-20T17:07:14.991329+00:00",
+    "exit_code": 0,
+    "log": "replay_015.log",
+    "started_utc": "2026-10-20T17:06:45.570701+00:00"
+  }
+]

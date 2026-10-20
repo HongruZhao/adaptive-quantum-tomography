@@ -1,5 +1,7 @@
 import QubitOracle.AdaptiveDesign.AdaptiveGaussianTails
-
+import QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw
+import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
 namespace QubitOracle.AdaptiveDesign.AdaptiveGaussianTails
 open QubitOracle.Paper Filter MeasureTheory ProbabilityTheory
 open AdaptiveRidgeConsistency AdaptiveResponseStrongLaw

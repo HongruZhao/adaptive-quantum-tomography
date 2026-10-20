@@ -1,5 +1,17 @@
+import QubitOracle.AdaptiveDesign.FiniteFrameCoercivity
+import QubitOracle.AdaptiveDesign.GlobalPFSIC
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
 import QubitOracle.AdaptiveDesign.LibraryTangentFrame
-
+import QubitOracle.AdaptiveDesign.LibraryUnweightedMoments
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSAmbient
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
+import QubitOracle.Paper.CompactLimitTransfer
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.Paper.RankOneStageContinuity
 /-! Operator convergence follows from consistency of the fitted ray;
 no convergence of the chosen complementary basis is assumed. -/
 namespace QubitOracle.AdaptiveDesign.LibraryUnweighted

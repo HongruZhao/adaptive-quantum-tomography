@@ -1,5 +1,27 @@
+import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMProbabilityLimits
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.ProtectedGLSWeightBounds
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.SequentialRidgeController
+import QubitOracle.AdaptiveDesign.TangentGLSActualRates
+import QubitOracle.AdaptiveDesign.TangentGLSAlgebra
+import QubitOracle.AdaptiveDesign.TangentGLSAmbient
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.AdaptiveDesign.TangentGLSLinearization
 import QubitOracle.AdaptiveDesign.TangentGLSNormalizedError
-
+import QubitOracle.AdaptiveDesign.TangentGLSRecordBounds
+import QubitOracle.AdaptiveDesign.TangentGLSRecordIdentities
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
 /-! Strong consistency of the actual all-record normalized GLS output.
 The proof uses only identification and a positive denominator floor. It
 does not infer almost-sure convergence from a central limit theorem and

@@ -1,6 +1,22 @@
-import QubitOracle.AdaptiveDesign.PureAmplitudeEndpoints
 import QubitOracle.AdaptiveDesign.ConsistentDeltaMethod
-
+import QubitOracle.AdaptiveDesign.FiniteHistoryStatistics
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PhasePairPOVM
+import QubitOracle.AdaptiveDesign.PureAmplitudeChart
+import QubitOracle.AdaptiveDesign.PureAmplitudeEndpoints
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.AdaptiveDesign.TangentGLSStrongConsistency
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.TwoBasis
 /-! Coordinate changes for the actual pure-state estimators. A chart
 transition is represented by its measurable extension and Frechet derivative
 at zero. Neither the observations nor the estimator are assumed independent.
@@ -106,34 +122,6 @@ theorem phasePair_smoothChart_optimalVariance
     truth regularization ridge hr hη batchSize hpositive φ hφm J hφ
 end TangentGLS
 
--- Section 5 proof route commented at the user request, 5 October 2026.
-/-
-namespace PVMPilotGLS
-variable [PVMPilotSchedule.Schedule]
-variable {d : ℕ} [PVMGeneralGeometry.ExplorationLibrary d]
-
-theorem smoothChart_optimalVariance (truth : PureVector d) (ridge : ℝ) (hr : 0 < ridge)
-    (batchSize : ℕ → ℕ) (hpositive : ∀ j, 0 < batchSize j) (hbudget : PVMPilotSchedule.OneStepBudget)
-    (φ : EuclideanSpace ℝ (TangentIndex d) → EuclideanSpace ℝ (TangentIndex d))
-    (hφm : Measurable φ) (J : EuclideanSpace ℝ (TangentIndex d) →L[ℝ] EuclideanSpace ℝ (TangentIndex d))
-    (hφ : HasFDerivAt φ J 0) :
-    TendstoInDistribution
-      (fun (n : ℕ) path => Real.sqrt (n:ℝ) • (φ (amplitudeCoordinates truth
-        (pureParameter d (actualEstimate ridge hr batchSize path n)).val)-φ 0))
-      atTop (fun z => J z)
-      (fun _ => adaptiveInfiniteTrajectoryMeasure (PVMPilotAdaptive.adaptiveProtocol d batchSize) (pureParameter d truth))
-      (multivariateGaussian 0 ((2:ℝ) • (1 : Matrix (TangentIndex d) (TangentIndex d) ℝ))) := by
-  apply smoothChart_clt_of_amplitude_clt truth
-  · intro n
-    exact actualStatistic_stronglyMeasurable batchSize n
-      (fun raw data => (pureParameter d
-        (estimateFromRaw raw data (floor d) ridge (floor_pos d) hr)).val)
-  · exact corrected_consistent truth ridge hr batchSize hpositive
-  · exact amplitude_optimalVariance truth ridge hr batchSize hpositive hbudget
-  · exact hφm
-  · exact hφ
-end PVMPilotGLS
--/
 
 
 end

@@ -1,7 +1,6 @@
 import Mathlib
 import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
 import Mathlib.LinearAlgebra.Matrix.Trace
-
 /-! Exact matrix identities in the paper's information-invariance display.
 The same invertible Jacobian changes the classical and quantum metrics;
 the loss weight must be transformed as well. -/

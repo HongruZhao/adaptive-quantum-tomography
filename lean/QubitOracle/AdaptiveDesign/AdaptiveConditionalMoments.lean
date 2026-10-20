@@ -1,5 +1,8 @@
+import QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw
+import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
 import QubitOracle.AdaptiveDesign.BoundedAdaptiveResponseCLT
-
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MartingaleCLT
 /-!
 # Conditional moments of the actual adaptive observations
 

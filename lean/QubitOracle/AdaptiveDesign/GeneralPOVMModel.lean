@@ -1,5 +1,13 @@
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
+import QubitOracle.AdaptiveDesign.FiniteFrameCoercivity
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
 import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
-
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.FiniteKernelPathSpace
+import QubitOracle.Paper.PureStateFoundations
 /-! # Arbitrary finite, globally identifying POVMs
 No rank, equal-weight, phase, latitude, or library restriction is imposed.
 The actual Born kernel, response mean, bounded innovations and uniform frame

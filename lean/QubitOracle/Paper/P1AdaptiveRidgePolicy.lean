@@ -1,5 +1,11 @@
+import QubitOracle.AdaptiveDesign.SequentialRidgeController
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.MixedStageStability
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
+import QubitOracle.Paper.P1UniformFrameBorn
 import QubitOracle.Paper.P1UniformFrameInformation
-
 /-! # A concrete history-only adaptive ridge policy
 The sufficient statistics contain every observation. Batch boundaries control
 when the frame is refreshed, not which observations enter the ridge fit.

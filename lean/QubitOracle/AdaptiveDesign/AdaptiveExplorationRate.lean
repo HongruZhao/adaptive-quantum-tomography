@@ -1,6 +1,7 @@
-import QubitOracle.AdaptiveDesign.ExplorationRate
+import QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw
 import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
-
+import QubitOracle.AdaptiveDesign.ExplorationRate
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
 /-! Quantitative response law under the literal history-dependent Born kernel. -/
 namespace QubitOracle.AdaptiveDesign.ExplorationRate
 open Filter MeasureTheory ProbabilityTheory QubitOracle.Paper

@@ -1,6 +1,9 @@
-import QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding
 import Mathlib.Analysis.PSeries
-
+import QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding
+import QubitOracle.AdaptiveDesign.BoundedMartingaleSecondMoment
+import QubitOracle.AdaptiveDesign.BoundedResponseQuarterRate
+import QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw
+import QubitOracle.AdaptiveDesign.L2MartingaleBudget
 /-! The square-root n log n almost-sure bound in the supplement, proved
 on arbitrary probability spaces. The bound is at every sufficiently large
 positive horizon, not only along a selected subsequence. -/

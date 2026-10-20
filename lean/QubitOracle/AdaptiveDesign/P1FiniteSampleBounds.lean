@@ -1,6 +1,23 @@
 import QubitOracle.AdaptiveDesign.P1WeightedEndpoints
+import QubitOracle.AdaptiveDesign.AdaptiveGaussianTails
+import QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
+import QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
 import QubitOracle.AdaptiveDesign.FiniteGaussianTails
-
+import QubitOracle.AdaptiveDesign.P1ObservedRidge
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedConsistency
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.AdaptiveDesign.P1WeightedGeometry
+import QubitOracle.AdaptiveDesign.P1WeightedLimits
+import QubitOracle.AdaptiveDesign.P1WeightedMoments
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
+import QubitOracle.Paper.P1AdaptiveRidgePolicy
 /-! Actual mixed-qubit residual and Gram tails, and pathwise ridge
 error inequalities, uniform over deterministic refresh schedules. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

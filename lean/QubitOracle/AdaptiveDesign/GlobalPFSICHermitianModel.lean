@@ -1,6 +1,8 @@
-import QubitOracle.AdaptiveDesign.GlobalPFSICIdentification
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
 import QubitOracle.AdaptiveDesign.FiniteFrameCoercivity
-
+import QubitOracle.AdaptiveDesign.GlobalPFSIC
+import QubitOracle.AdaptiveDesign.GlobalPFSICIdentification
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
 /-! # Real Hilbert space of Hermitian matrices for the physical PFSIC model -/
 namespace QubitOracle.AdaptiveDesign.GlobalPFSICHermitian
 

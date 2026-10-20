@@ -1,6 +1,26 @@
-import QubitOracle.AdaptiveDesign.TangentGLSFittedInformation
 import QubitOracle.AdaptiveDesign.TangentGLSStochasticRemainder
-
+import QubitOracle.AdaptiveDesign.TangentGLSFittedInformation
+import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
+import QubitOracle.AdaptiveDesign.FiniteFrameCoercivity
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMProbabilityLimits
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.SequentialRidgeController
+import QubitOracle.AdaptiveDesign.TangentGLSAlgebra
+import QubitOracle.AdaptiveDesign.TangentGLSAmbient
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.AdaptiveDesign.TangentGLSOperatorBounds
+import QubitOracle.AdaptiveDesign.TangentGLSRecordBounds
+import QubitOracle.AdaptiveDesign.TangentGLSWeightExpansion
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
 /-! Exact bridges from the literal finite-record solve to predictable
 fixed-truth responses. No sample split or predictable fitted weights. -/
 namespace QubitOracle.AdaptiveDesign.TangentGLS

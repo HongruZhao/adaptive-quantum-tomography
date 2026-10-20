@@ -1,5 +1,8 @@
 import QubitOracle.Paper.ElementaryPVMBases
-
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.Paper.ElementaryReferenceAlgebra
+import QubitOracle.Paper.ProjectiveStateGeometry
+import QubitOracle.Paper.PureStateFoundations
 /-! The fixed minus Householder reflection used by the reference PVMs.
 It differs from the adaptive phase-adjusted Householder completion.
 -/

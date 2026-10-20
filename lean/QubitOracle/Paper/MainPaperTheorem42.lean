@@ -1,6 +1,32 @@
-import QubitOracle.Paper.MainPaperPureLimits
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GeneralPOVMBorn
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMRootRate
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PhasePairAdaptive
+import QubitOracle.AdaptiveDesign.PhasePairPOVM
+import QubitOracle.AdaptiveDesign.ProbabilityCalculus
+import QubitOracle.AdaptiveDesign.PureAmplitudeChart
+import QubitOracle.AdaptiveDesign.PureChartCovariance
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.PureSLDMetric
+import QubitOracle.AdaptiveDesign.RidgeBatchSchedule
+import QubitOracle.AdaptiveDesign.SequentialRidgeController
+import QubitOracle.AdaptiveDesign.TangentGLSActualRates
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
 import QubitOracle.AdaptiveDesign.TangentGLSSecondOrderCancellation
-
+import QubitOracle.AdaptiveDesign.TangentGLSStrongConsistency
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MainPaperPureCharts
+import QubitOracle.Paper.MainPaperPureLimits
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.TwoBasis
 set_option autoImplicit false
 
 /-! One complete exported endpoint for Theorem 4.2. `Inputs` contains

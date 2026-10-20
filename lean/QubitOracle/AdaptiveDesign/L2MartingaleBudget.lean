@@ -1,6 +1,7 @@
-import QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw
 import Mathlib.MeasureTheory.Function.L2Space
-
+import QubitOracle.AdaptiveDesign.BoundedMartingaleSecondMoment
+import QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw
+import QubitOracle.AdaptiveDesign.ExplorationKronecker
 /-! The exploration-budget strong law with square-integrable increments.
 There is no deterministic bound on an individual increment. This supplies
 the probability lemma at the generality stated in the supplement. -/

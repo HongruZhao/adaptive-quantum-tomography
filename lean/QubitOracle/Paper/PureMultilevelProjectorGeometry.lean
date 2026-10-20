@@ -1,6 +1,7 @@
 import QubitOracle.Paper.PureMultilevelDeterministicGeometryClosed
+import QubitOracle.Paper.PureStateFoundations
 import QubitOracle.RankOneLosses
-
+import QubitOracle.TwoBasis
 namespace QubitOracle.Paper
 namespace PureMultilevelProjectorGeometry
 

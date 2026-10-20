@@ -1,5 +1,5 @@
 import QubitOracle.AdaptiveDesign.GlobalPFSIC
-
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
 /-!
 # Global identification by the explicit finite PFSIC
 

@@ -1,5 +1,9 @@
+import QubitOracle.AdaptiveDesign.AdaptiveExplorationRate
+import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
 import QubitOracle.AdaptiveDesign.ScheduledRidgeController
-
+import QubitOracle.AdaptiveDesign.SequentialRidgeController
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
 /-! Vanishing exploration still gives consistency on the actual adaptive law.
 The rate is proved from bounded innovations, not assumed of the estimator. -/
 namespace QubitOracle.AdaptiveDesign.ExplorationRidge

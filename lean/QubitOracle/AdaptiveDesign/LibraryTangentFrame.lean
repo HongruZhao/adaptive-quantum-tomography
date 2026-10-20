@@ -1,5 +1,20 @@
+import QubitOracle.AdaptiveDesign.FiniteFrameCoercivity
+import QubitOracle.AdaptiveDesign.GeneralPOVMBorn
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSIC
+import QubitOracle.AdaptiveDesign.GlobalPFSICFisher
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
 import QubitOracle.AdaptiveDesign.LibraryUnweightedMoments
-
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSAmbient
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
+import QubitOracle.AdaptiveDesign.TangentGLSInformation
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.RankOneStageContinuity
+import QubitOracle.TwoBasis
 /-! The optional POVM's unweighted frame is scalar on the true tangent
 space, including absence of coupling to all normal Hermitian directions. -/
 namespace QubitOracle.AdaptiveDesign.LibraryUnweighted

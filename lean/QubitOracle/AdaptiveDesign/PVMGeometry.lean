@@ -1,7 +1,12 @@
-import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
-import QubitOracle.AdaptiveDesign.PureMatrixController
 import QubitOracle.Paper.RankOneStageContinuity
-
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
+import QubitOracle.AdaptiveDesign.FiniteFrameCoercivity
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.TwoBasis
 /-! Projective bases, a concrete globally identifying exploration family,
 and the two locally Fisher-optimal projective bases. -/
 namespace QubitOracle.AdaptiveDesign.PVMGeometry

@@ -4,7 +4,6 @@ import Mathlib.Analysis.Calculus.LocalExtr.Basic
 import Mathlib.Analysis.SpecialFunctions.Sqrt
 import Mathlib.LinearAlgebra.Matrix.Trace
 import Mathlib.Tactic
-
 /-!
 # Finite regular classical experiments and the weighted oracle inequality
 

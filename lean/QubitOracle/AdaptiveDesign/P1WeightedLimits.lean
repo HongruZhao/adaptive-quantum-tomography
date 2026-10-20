@@ -1,5 +1,18 @@
+import QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedController
 import QubitOracle.AdaptiveDesign.P1WeightedGeometry
-
+import QubitOracle.AdaptiveDesign.P1WeightedInformation
+import QubitOracle.AdaptiveDesign.P1WeightedMoments
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.MixedStageStability
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
+import QubitOracle.Paper.P1AdaptiveRidgePolicy
+import QubitOracle.Paper.P1UniformFrameBorn
 /-! Limits of the actual regression Gram and conditional residual covariance.
 No convergence of the chosen eigenvectors is needed, even at the center. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

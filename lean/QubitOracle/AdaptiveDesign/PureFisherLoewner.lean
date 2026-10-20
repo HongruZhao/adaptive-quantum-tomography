@@ -1,6 +1,8 @@
-import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
 import Mathlib.Analysis.Matrix.PosDef
-
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.FiniteGillMassar
+import QubitOracle.TwoBasis
 /-! The full pure-state information bound, including zero Born probabilities.
 The proof applies Cauchy--Schwarz in the seminorm induced by each effect. -/
 namespace QubitOracle.AdaptiveDesign.PureFisherLoewner

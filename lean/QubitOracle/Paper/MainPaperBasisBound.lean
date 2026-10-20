@@ -1,14 +1,16 @@
 import QubitOracle.AdaptiveDesign.SinglePVMDimension
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.PVMGeometry
 import QubitOracle.AdaptiveDesign.TracelessHermitianDimension
-
 set_option autoImplicit false
 
-/-! The necessary B >= D+1 number of bases in main Appendix D.5.
+/-! The necessary B >= D+1 number of bases in Supplement S2.4.
 The shared identity removes one generator from each additional basis;
 this is stronger than merely counting all B*D recorded effects. -/
 namespace QubitOracle.Paper.MainPaperBasisBound
 open QubitOracle QubitOracle.Paper QubitOracle.AdaptiveDesign
-open GlobalPFSICHermitian GlobalPFSICBorn PureMatrixController P2Adaptive
+open GlobalPFSICHermitian GlobalPFSICBorn PureMatrixController
 open PVMGeometry TracelessHermitianDimension
 open scoped BigOperators
 noncomputable section

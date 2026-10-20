@@ -1,6 +1,5 @@
-import QubitOracle.AdaptiveDesign.ExplorationRate
 import Mathlib.Topology.Order.LiminfLimsup
-
+import QubitOracle.AdaptiveDesign.ExplorationRate
 namespace QubitOracle.AdaptiveDesign.PolynomialSqrtExponential
 open Filter
 open scoped Topology BigOperators

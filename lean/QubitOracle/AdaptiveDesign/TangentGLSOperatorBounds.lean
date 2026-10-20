@@ -1,5 +1,13 @@
 import QubitOracle.AdaptiveDesign.TangentGLSInformation
-
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.ProtectedGLSWeightBounds
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSAlgebra
+import QubitOracle.AdaptiveDesign.TangentGLSAmbient
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.AdaptiveDesign.TangentGLSRecordBounds
 /-! Quantitative stability of the protected information operator. All
 bounds hold for arbitrary finite records and the actual fitted probabilities. -/
 namespace QubitOracle.AdaptiveDesign.TangentGLS

@@ -1,10 +1,26 @@
-import QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel
-import QubitOracle.AdaptiveDesign.GeneralWeightedOracle
 import QubitOracle.AdaptiveDesign.InformationCoordinateInvariance
+import QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel
+import QubitOracle.AdaptiveDesign.FiniteAdaptiveOracle
+import QubitOracle.AdaptiveDesign.FiniteRegularOracle
+import QubitOracle.AdaptiveDesign.GeneralPOVMBorn
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GeneralWeightedOracle
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PureAmplitudeChart
 import QubitOracle.AdaptiveDesign.PureFisherLoewner
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.QubitEffectRepresentation
+import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
+import QubitOracle.AdaptiveDesign.TangentGLSProjection
+import QubitOracle.FiniteGillMassar
 import QubitOracle.Paper.P1BuresOptimality
 import QubitOracle.Paper.QubitFoundations
-
+import QubitOracle.RankOneLosses
+import QubitOracle.TwoBasis
 /-!
 # Theorem 5.1: the oracle bound for adaptive single-copy measurements
 

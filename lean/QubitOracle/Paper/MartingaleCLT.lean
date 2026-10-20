@@ -1,8 +1,7 @@
+import QubitOracle.Paper.CramerWold
 import Mathlib.Probability.Distributions.Gaussian.Multivariate
 import Mathlib.Probability.Martingale.Basic
 import Mathlib.MeasureTheory.Function.ConvergenceInDistribution
-import QubitOracle.Paper.CramerWold
-
 namespace QubitOracle.Paper
 
 open Filter MeasureTheory ProbabilityTheory
@@ -37,25 +36,6 @@ def hallHeydeArrayConditionalLindeberg
     mu[(fun omega => if epsilon < |increment n k omega| then increment n k omega ^ 2 else 0) |
       filtration n k] omega
 
-axiom hallHeyde1980_corollary3_1
-    {Omega : Type*} [MeasurableSpace Omega]
-    (mu : Measure Omega) [IsProbabilityMeasure mu]
-    (filtration : ℕ → Filtration ℕ (inferInstance : MeasurableSpace Omega))
-    (increment : ℕ → ℕ → Omega → ℝ)
-    (variance : ℝ) (hvarianceNonnegative : 0 ≤ variance)
-    (hmartingale : ∀ n, Martingale (martingaleArrayPartialSum increment n) (filtration n) mu)
-    (hsquareIntegrable : ∀ n k, MemLp (increment n k) 2 mu)
-    (hnested : ∀ n k, filtration n k ≤ filtration (n + 1) k)
-    (hLindeberg : ∀ epsilon : ℝ, 0 < epsilon →
-      TendstoInMeasure mu
-        (hallHeydeArrayConditionalLindeberg mu filtration increment epsilon)
-        atTop (fun _ => 0))
-    (hConditionalVariance :
-      TendstoInMeasure mu
-        (hallHeydeArrayConditionalVariance mu filtration increment)
-        atTop (fun _ => variance)) :
-    TendstoInDistribution (martingaleArrayTerminalSum increment) atTop id
-      (fun _ => mu) (gaussianReal 0 variance.toNNReal)
 
 structure MartingaleCLTProblem (D : Type*) [Fintype D] where
   Omega : Type
@@ -148,87 +128,8 @@ theorem multivariateGaussian_map_inner
       covarianceBilin_multivariateGaussian hM]
     rfl
 
-theorem martingale_score_clt
-    {D : Type*} [Fintype D]
-    (problem : MartingaleCLTProblem D) (M : Matrix D D ℝ)
-    (hM : M.PosDef)
-    (hMDS : problem.IsSquareIntegrableMartingaleDifferenceArray)
-    (hLindeberg : problem.HasConditionalLindeberg)
-    (hCovariance : problem.ConditionalCovarianceConverges M) :
-    problem.SumConvergesToGaussian M := by
-  letI : MeasurableSpace problem.Omega := problem.measurableSpace
-  letI : IsProbabilityMeasure problem.mu := problem.probabilityMeasure
-  intro u
-  apply hallHeyde1980_corollary3_1 problem.mu problem.filtration
-    (problem.projectedIncrement u) (martingaleScoreQuadraticForm M u)
-  · exact hM.posSemidef.dotProduct_mulVec_nonneg (fun i => u i)
-  · exact hMDS.1 u
-  · exact hMDS.2.1 u
-  · exact hMDS.2.2
-  · exact hLindeberg u
-  · exact hCovariance u
 
-/-- Backward-compatible paper-facing name for the source-shaped score CLT. -/
-theorem adaptiveScoreCLT_of_martingale_conditions
-    {D : Type*} [Fintype D]
-    (problem : MartingaleCLTProblem D) (M : Matrix D D ℝ)
-    (hM : M.PosDef)
-    (hMDS : problem.IsSquareIntegrableMartingaleDifferenceArray)
-    (hLindeberg : problem.HasConditionalLindeberg)
-    (hCovariance : problem.ConditionalCovarianceConverges M) :
-    problem.SumConvergesToGaussian M :=
-  martingale_score_clt problem M hM hMDS hLindeberg hCovariance
 
-/-- Hall--Heyde in every direction, followed by the proved Cramer--Wold
-device, gives the genuine multivariate score limit. -/
-theorem martingale_score_clt_multivariate
-    {D : Type*} [Fintype D] [DecidableEq D]
-    (problem : MartingaleCLTProblem D) (M : Matrix D D ℝ)
-    (hM : M.PosDef)
-    (hMDS : problem.IsSquareIntegrableMartingaleDifferenceArray)
-    (hLindeberg : problem.HasConditionalLindeberg)
-    (hCovariance : problem.ConditionalCovarianceConverges M)
-    (hTerminalMeasurable :
-      letI : MeasurableSpace problem.Omega := problem.measurableSpace
-      ∀ n, AEMeasurable (problem.terminalSum n) problem.mu) :
-    problem.VectorSumConvergesToGaussian M := by
-  letI : MeasurableSpace problem.Omega := problem.measurableSpace
-  letI : IsProbabilityMeasure problem.mu := problem.probabilityMeasure
-  apply cramerWold_tendstoInDistribution problem.terminalSum hTerminalMeasurable
-  intro u
-  have hscalar := martingale_score_clt problem M hM hMDS hLindeberg hCovariance u
-  refine
-    { forall_aemeasurable := fun n => by
-        apply (hscalar.forall_aemeasurable n).congr
-        filter_upwards [] with omega
-        simp [MartingaleCLTProblem.terminalSum, martingaleArrayTerminalSum,
-          martingaleArrayPartialSum, MartingaleCLTProblem.projectedIncrement,
-          inner_sum]
-      aemeasurable_limit := by fun_prop
-      tendsto := ?_ }
-  have hprojection (n : ℕ) :
-      (fun omega => ⟪u, problem.terminalSum n omega⟫) =
-        martingaleArrayTerminalSum (problem.projectedIncrement u) n := by
-    funext omega
-    simp [MartingaleCLTProblem.terminalSum, martingaleArrayTerminalSum,
-      martingaleArrayPartialSum, MartingaleCLTProblem.projectedIncrement,
-      inner_sum]
-  simp_rw [hprojection]
-  let pvec : ProbabilityMeasure ℝ :=
-    ⟨(multivariateGaussian 0 M).map (innerSL ℝ u),
-      Measure.isProbabilityMeasure_map (by fun_prop)⟩
-  let pscalar : ProbabilityMeasure ℝ :=
-    ⟨gaussianReal 0 (martingaleScoreQuadraticForm M u).toNNReal, inferInstance⟩
-  have hlimit : pvec = pscalar := by
-    apply Subtype.ext
-    exact multivariateGaussian_map_inner M hM.posSemidef u
-  have htarget :
-      (⟨(multivariateGaussian 0 M).map (fun x => ⟪u, x⟫),
-        Measure.isProbabilityMeasure_map (by fun_prop)⟩ : ProbabilityMeasure ℝ) = pvec := by
-    apply Subtype.ext
-    rfl
-  rw [htarget, hlimit]
-  simpa [pscalar] using hscalar.tendsto
 
 end
 

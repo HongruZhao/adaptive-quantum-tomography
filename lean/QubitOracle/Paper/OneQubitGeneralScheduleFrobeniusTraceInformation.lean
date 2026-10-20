@@ -1,25 +1,20 @@
-import QubitOracle.Paper.OneQubitGeneralScheduleCumulativePilotInformation
-import QubitOracle.Paper.OneQubitPrespecifiedBatchSafeguardedEstimatorAsymptotics
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.MixedAxisFisher
+import QubitOracle.Paper.MixedInformationMartingale
+import QubitOracle.Paper.MixedOracleFeasible
 import QubitOracle.Paper.MixedRadialTangentStage
-
-/-!
-# Concrete arbitrary-batch Frobenius/trace information convergence
-
-This file closes the loss-specific information layer for the literal
-cumulative Pauli pilot on an arbitrary predetermined batch schedule.  The
-controller is radially clipped and then shrunk strictly inside the Bloch ball.
-At every controller value, including the center, a deterministic total
-Householder frame supplies one radial and two tangent axes.  The existing
-rotation-free stage theorem then gives convergence to the exact
-Frobenius/squared-trace optimal information target.
--/
+import QubitOracle.Paper.MixedRotationalTarget
+import QubitOracle.Paper.MixedStageStability
+import QubitOracle.Paper.OneQubitAPSRLSContract
+import QubitOracle.Paper.OneQubitFixedDesignInformation
+import QubitOracle.Paper.OneQubitLocalContinuousFrame
+import QubitOracle.Paper.OneQubitTwoStageInformationConvergence
+/-! Supporting definitions and proved lemmas used by the manuscript. -/
 
 namespace QubitOracle.Paper
 
 open Filter MeasureTheory Set Matrix
 open scoped BigOperators Topology Matrix
-open OneQubitPredeterminedBatchHeadline
-open PureMultilevelSequentialBatchAdaptive
 
 noncomputable section
 
@@ -31,98 +26,9 @@ private theorem generalSchedule_blochNormSq_mul_vector
   simp_rw [mul_pow]
   rw [Finset.mul_sum]
 
-/-- The cumulative past-only Pauli controller, clipped to the Bloch ball and
-shrunk by a deterministic vanishing ridge.  It is strictly interior on every
-finite sample path. -/
-noncomputable def cumulativePauliPastSafeInteriorController
-    (schedule : CumulativePauliPilotBatchSchedule) (k : Nat)
-    (omega : PauliPilotConsistencySampleSpace) : RLSVector 3 :=
-  fun i => (1 - prespecifiedBatchRidge k ^ 2) *
-    oneQubitBlochBallRadialClip
-      (cumulativePauliPastController schedule k omega) i
 
-theorem cumulativePauliPastSafeInteriorController_strictInterior
-    (schedule : CumulativePauliPilotBatchSchedule) (k : Nat)
-    (omega : PauliPilotConsistencySampleSpace) :
-    QubitOracle.blochNormSq
-      (cumulativePauliPastSafeInteriorController schedule k omega) < 1 := by
-  rw [show cumulativePauliPastSafeInteriorController schedule k omega =
-      fun i => (1 - prespecifiedBatchRidge k ^ 2) *
-        oneQubitBlochBallRadialClip
-          (cumulativePauliPastController schedule k omega) i by rfl,
-    generalSchedule_blochNormSq_mul_vector]
-  have hridgePos := prespecifiedBatchRidge_pos k
-  have hridgeLe := prespecifiedBatchRidge_le_one k
-  have hridgeSqPos : 0 < prespecifiedBatchRidge k ^ 2 :=
-    sq_pos_of_pos hridgePos
-  have hridgeSqLe : prespecifiedBatchRidge k ^ 2 <= 1 := by
-    nlinarith [sq_nonneg (prespecifiedBatchRidge k - 1)]
-  have hfactorSq : (1 - prespecifiedBatchRidge k ^ 2) ^ 2 < 1 := by
-    nlinarith
-  have hclip := oneQubitBlochBallRadialClip_physical
-    (cumulativePauliPastController schedule k omega)
-  calc
-    (1 - prespecifiedBatchRidge k ^ 2) ^ 2 *
-        QubitOracle.blochNormSq
-          (oneQubitBlochBallRadialClip
-            (cumulativePauliPastController schedule k omega)) <=
-        (1 - prespecifiedBatchRidge k ^ 2) ^ 2 * 1 :=
-      mul_le_mul_of_nonneg_left hclip (sq_nonneg _)
-    _ < 1 := by simpa using hfactorSq
 
-/-- Coordinatewise convergence survives clipping and the vanishing interior
-shrinkage. -/
-theorem cumulativePauliPastSafeInteriorController_tendsto_of_coordinatewise
-    (schedule : CumulativePauliPilotBatchSchedule)
-    (theta : RLSVector 3) (omega : PauliPilotConsistencySampleSpace)
-    (hcontroller : forall j : Fin 3,
-      Tendsto
-        (fun k => cumulativePauliPastController schedule k omega j)
-        atTop (nhds (theta j)))
-    (hInterior : QubitOracle.blochNormSq theta < 1) :
-    forall j : Fin 3,
-      Tendsto
-        (fun k => cumulativePauliPastSafeInteriorController
-          schedule k omega j)
-        atTop (nhds (theta j)) := by
-  have hnorm := blochNormSq_tendsto_of_coordinatewise
-    (fun k => cumulativePauliPastController schedule k omega) theta hcontroller
-  have heventuallyInterior : ∀ᶠ k in atTop,
-      QubitOracle.blochNormSq
-        (cumulativePauliPastController schedule k omega) < 1 :=
-    (tendsto_order.1 hnorm).2 1 hInterior
-  have hfactor : Tendsto
-      (fun k => 1 - prespecifiedBatchRidge k ^ 2)
-      atTop (nhds 1) := by
-    convert tendsto_const_nhds.sub
-      (prespecifiedBatchRidge_tendsto_zero.pow 2) using 1 <;> norm_num
-  intro j
-  have hclip : Tendsto
-      (fun k => oneQubitBlochBallRadialClip
-        (cumulativePauliPastController schedule k omega) j)
-      atTop (nhds (theta j)) := by
-    apply (hcontroller j).congr'
-    filter_upwards [heventuallyInterior] with k hk
-    rw [oneQubitBlochBallRadialClip_eq_self _ hk.le]
-  simpa [cumulativePauliPastSafeInteriorController] using hfactor.mul hclip
 
-/-- The exact Born pilot therefore drives the safeguarded interior controller
-to every interior qubit truth almost surely. -/
-theorem cumulativePauliPastSafeInteriorController_tendsto_ae_closed
-    (schedule : CumulativePauliPilotBatchSchedule)
-    (theta : RLSVector 3) (hInterior : QubitOracle.blochNormSq theta < 1) :
-    ∀ᵐ omega ∂pauliPilotConsistencyMeasure theta,
-      forall j : Fin 3,
-        Tendsto
-          (fun k => cumulativePauliPastSafeInteriorController
-            schedule k omega j)
-          atTop (nhds (theta j)) := by
-  filter_upwards
-      [cumulativePauliPastController_tendsto_ae_closed
-        schedule theta hInterior.le]
-      with omega hcontroller
-  exact cumulativePauliPastSafeInteriorController_tendsto_of_coordinatewise
-    schedule theta omega hcontroller hInterior
 
 /-! ## A total deterministic radial/tangent frame -/
 
@@ -286,34 +192,6 @@ theorem generalScheduleFrobeniusTraceControllerInformation_entry_norm_le
     _ = (1 - QubitOracle.blochNormSq theta)⁻¹ := by
       rw [← Finset.sum_mul, hmassSum, one_mul]
 
-theorem generalSchedulePauliExploration_sub_frobeniusTrace_entry_norm_le
-    (theta x : RLSVector 3)
-    (hThetaInterior : QubitOracle.blochNormSq theta < 1)
-    (hXInterior : QubitOracle.blochNormSq x < 1)
-    (i j : Fin 3) :
-    ‖generalSchedulePauliExplorationInformation theta i j -
-      generalScheduleFrobeniusTraceControllerInformation theta x i j‖ <=
-        2 * (1 - QubitOracle.blochNormSq theta)⁻¹ := by
-  have hexplore := generalScheduleEqualAxisInformation_entry_norm_le
-    theta qubitPauliCoordinateAxis hThetaInterior
-      qubitPauliCoordinateAxis_normSq i j
-  have hexploit :=
-    generalScheduleFrobeniusTraceControllerInformation_entry_norm_le
-      theta x hThetaInterior hXInterior i j
-  have hexplore' :
-      ‖generalSchedulePauliExplorationInformation theta i j‖ <=
-        (1 - QubitOracle.blochNormSq theta)⁻¹ := by
-    simpa [generalSchedulePauliExplorationInformation] using hexplore
-  calc
-    ‖generalSchedulePauliExplorationInformation theta i j -
-        generalScheduleFrobeniusTraceControllerInformation theta x i j‖ <=
-      ‖generalSchedulePauliExplorationInformation theta i j‖ +
-        ‖generalScheduleFrobeniusTraceControllerInformation theta x i j‖ :=
-      norm_sub_le _ _
-    _ <= (1 - QubitOracle.blochNormSq theta)⁻¹ +
-        (1 - QubitOracle.blochNormSq theta)⁻¹ :=
-      add_le_add hexplore' hexploit
-    _ = 2 * (1 - QubitOracle.blochNormSq theta)⁻¹ := by ring
 
 /-! ## The same total controller closes Bures information at the center -/
 
@@ -326,279 +204,15 @@ noncomputable def generalScheduleCanonicalBuresControllerInformation
     (radialTangentMass (1 / 3 : Real) (1 / 3 : Real))
     (radialTangentAxes frame.tangentFirst frame.tangentSecond frame.radial)
 
-theorem generalScheduleCanonicalBuresControllerInformation_eq_equalAxis
-    (theta x : RLSVector 3) :
-    generalScheduleCanonicalBuresControllerInformation theta x =
-      generalScheduleEqualAxisInformation theta
-        (radialTangentAxes
-          (mixedCanonicalRadialTangentFrame x).tangentFirst
-          (mixedCanonicalRadialTangentFrame x).tangentSecond
-          (mixedCanonicalRadialTangentFrame x).radial) := by
-  ext i j
-  simp [generalScheduleCanonicalBuresControllerInformation,
-    generalScheduleEqualAxisInformation, mixedStageInformation,
-    radialTangentMass, Fin.sum_univ_succ]
-  ring
 
-theorem generalScheduleCanonicalBuresControllerInformation_entry_norm_le
-    (theta x : RLSVector 3)
-    (hThetaInterior : QubitOracle.blochNormSq theta < 1)
-    (i j : Fin 3) :
-    ‖generalScheduleCanonicalBuresControllerInformation theta x i j‖ <=
-      (1 - QubitOracle.blochNormSq theta)⁻¹ := by
-  rw [generalScheduleCanonicalBuresControllerInformation_eq_equalAxis]
-  apply generalScheduleEqualAxisInformation_entry_norm_le
-    theta
-      (radialTangentAxes
-        (mixedCanonicalRadialTangentFrame x).tangentFirst
-        (mixedCanonicalRadialTangentFrame x).tangentSecond
-        (mixedCanonicalRadialTangentFrame x).radial)
-      hThetaInterior
-  exact radialTangentAxes_unit x (mixedCanonicalRadialTangentFrame x)
 
-theorem generalSchedulePauliExploration_sub_canonicalBures_entry_norm_le
-    (theta x : RLSVector 3)
-    (hThetaInterior : QubitOracle.blochNormSq theta < 1)
-    (i j : Fin 3) :
-    ‖generalSchedulePauliExplorationInformation theta i j -
-      generalScheduleCanonicalBuresControllerInformation theta x i j‖ <=
-        2 * (1 - QubitOracle.blochNormSq theta)⁻¹ := by
-  have hexplore :
-      ‖generalSchedulePauliExplorationInformation theta i j‖ <=
-        (1 - QubitOracle.blochNormSq theta)⁻¹ := by
-    simpa [generalSchedulePauliExplorationInformation] using
-      generalScheduleEqualAxisInformation_entry_norm_le
-        theta qubitPauliCoordinateAxis hThetaInterior
-          qubitPauliCoordinateAxis_normSq i j
-  have hexploit :=
-    generalScheduleCanonicalBuresControllerInformation_entry_norm_le
-      theta x hThetaInterior i j
-  calc
-    ‖generalSchedulePauliExplorationInformation theta i j -
-        generalScheduleCanonicalBuresControllerInformation theta x i j‖ <=
-      ‖generalSchedulePauliExplorationInformation theta i j‖ +
-        ‖generalScheduleCanonicalBuresControllerInformation theta x i j‖ :=
-      norm_sub_le _ _
-    _ <= (1 - QubitOracle.blochNormSq theta)⁻¹ +
-        (1 - QubitOracle.blochNormSq theta)⁻¹ :=
-      add_le_add hexplore hexploit
-    _ = 2 * (1 - QubitOracle.blochNormSq theta)⁻¹ := by ring
 
-/-- Literal total predictable Bures Fisher matrix driven by the same safe
-past-only controller and cyclic-Pauli exploration. -/
-noncomputable def cumulativePauliPastFullCanonicalBuresInformation
-    (schedule : CumulativePauliPilotBatchSchedule)
-    (theta : RLSVector 3)
-    (omega : PauliPilotConsistencySampleSpace) :
-    Nat -> Matrix (Fin 3) (Fin 3) Real :=
-  batchedPredictableMatrixAverage schedule.budget.batchSize
-    schedule.budget.explorationSize
-    (fun k => generalScheduleCanonicalBuresControllerInformation theta
-      (cumulativePauliPastSafeInteriorController schedule k omega))
-    (fun _ => generalSchedulePauliExplorationInformation theta)
 
-/-- The concrete arbitrary-batch Bures Fisher limit now includes the maximally
-mixed state; no nonzero direction or seed assumption is needed. -/
-theorem cumulativePauliPastFullCanonicalBuresInformation_tendsto_ae_closed
-    (schedule : CumulativePauliPilotBatchSchedule)
-    (theta : RLSVector 3) (hInterior : QubitOracle.blochNormSq theta < 1) :
-    ∀ᵐ omega ∂pauliPilotConsistencyMeasure theta,
-      BatchMatrixEntrywiseTendsto
-        (cumulativePauliPastFullCanonicalBuresInformation
-          schedule theta omega)
-        (mixedBuresTarget theta) := by
-  filter_upwards
-      [cumulativePauliPastSafeInteriorController_tendsto_ae_closed
-        schedule theta hInterior]
-      with omega hcontrollerCoordinates
-  have hcontroller : Tendsto
-      (fun k => cumulativePauliPastSafeInteriorController schedule k omega)
-      atTop (nhds theta) :=
-    tendsto_pi_nhds.2 hcontrollerCoordinates
-  have hexploitMatrix := mixedBuresStage_tendsto
-    theta hInterior
-    (fun k => cumulativePauliPastSafeInteriorController schedule k omega)
-    hcontroller
-    (fun k => cumulativePauliPastSafeInteriorController_strictInterior
-      schedule k omega)
-    (fun k => mixedCanonicalRadialTangentFrame
-      (cumulativePauliPastSafeInteriorController schedule k omega))
-  have hexploitation : BatchMatrixEntrywiseTendsto
-      (fun k => generalScheduleCanonicalBuresControllerInformation theta
-        (cumulativePauliPastSafeInteriorController schedule k omega))
-      (mixedBuresTarget theta) := by
-    intro i j
-    exact tendsto_pi_nhds.1 (tendsto_pi_nhds.1 hexploitMatrix i) j
-  have htotal : Tendsto
-      (fun K => ∑ k ∈ Finset.range K,
-        (schedule.budget.batchSize k : Real)) atTop atTop := by
-    simpa [cumulativeCount] using
-      schedule.budget.totalSamples_tendsto_atTop
-  apply batchedPredictableMatrixAverage_tendsto
-    schedule.budget.batchSize schedule.budget.explorationSize
-    (fun k => generalScheduleCanonicalBuresControllerInformation theta
-      (cumulativePauliPastSafeInteriorController schedule k omega))
-    (fun _ => generalSchedulePauliExplorationInformation theta)
-    (mixedBuresTarget theta)
-    (fun _ _ => 2 * (1 - QubitOracle.blochNormSq theta)⁻¹)
-    htotal hexploitation
-  · intro i j
-    exact mul_nonneg (by norm_num)
-      (inv_nonneg.mpr (sub_nonneg.mpr hInterior.le))
-  · intro k i j
-    exact generalSchedulePauliExploration_sub_canonicalBures_entry_norm_le
-      theta (cumulativePauliPastSafeInteriorController schedule k omega)
-      hInterior i j
-  · simpa [cumulativeCount] using
-      schedule.budget.cumulativeExplorationFraction_tendsto_zero
 
-/-- The literal total predictable Fisher matrix for Frobenius and squared
-trace loss: cyclic-Pauli exploration plus the safe past-controller
-radial/tangent exploitation design. -/
-noncomputable def cumulativePauliPastFullFrobeniusTraceInformation
-    (schedule : CumulativePauliPilotBatchSchedule)
-    (theta : RLSVector 3)
-    (omega : PauliPilotConsistencySampleSpace) :
-    Nat -> Matrix (Fin 3) (Fin 3) Real :=
-  batchedPredictableMatrixAverage schedule.budget.batchSize
-    schedule.budget.explorationSize
-    (fun k => generalScheduleFrobeniusTraceControllerInformation theta
-      (cumulativePauliPastSafeInteriorController schedule k omega))
-    (fun _ => generalSchedulePauliExplorationInformation theta)
 
-/-- For arbitrary predetermined batches with divergent cumulative Pauli pilot
-and vanishing cumulative exploration fraction, the concrete adaptive Fisher
-matrix converges almost surely to the exact Frobenius/trace optimal target. -/
-theorem cumulativePauliPastFullFrobeniusTraceInformation_tendsto_ae_closed
-    (schedule : CumulativePauliPilotBatchSchedule)
-    (theta : RLSVector 3) (hInterior : QubitOracle.blochNormSq theta < 1) :
-    ∀ᵐ omega ∂pauliPilotConsistencyMeasure theta,
-      BatchMatrixEntrywiseTendsto
-        (cumulativePauliPastFullFrobeniusTraceInformation
-          schedule theta omega)
-        (mixedFrobeniusTraceTarget theta) := by
-  filter_upwards
-      [cumulativePauliPastSafeInteriorController_tendsto_ae_closed
-        schedule theta hInterior]
-      with omega hcontrollerCoordinates
-  have hcontroller : Tendsto
-      (fun k => cumulativePauliPastSafeInteriorController schedule k omega)
-      atTop (nhds theta) := by
-    exact tendsto_pi_nhds.2 hcontrollerCoordinates
-  have hexploitMatrix := mixedFrobeniusTraceStage_tendsto
-    theta hInterior
-    (fun k => cumulativePauliPastSafeInteriorController schedule k omega)
-    hcontroller
-    (fun k => cumulativePauliPastSafeInteriorController_strictInterior
-      schedule k omega)
-    (fun k => mixedCanonicalRadialTangentFrame
-      (cumulativePauliPastSafeInteriorController schedule k omega))
-  have hexploitation : BatchMatrixEntrywiseTendsto
-      (fun k => generalScheduleFrobeniusTraceControllerInformation theta
-        (cumulativePauliPastSafeInteriorController schedule k omega))
-      (mixedFrobeniusTraceTarget theta) := by
-    intro i j
-    exact tendsto_pi_nhds.1 (tendsto_pi_nhds.1 hexploitMatrix i) j
-  have htotal : Tendsto
-      (fun K => ∑ k ∈ Finset.range K,
-        (schedule.budget.batchSize k : Real)) atTop atTop := by
-    simpa [cumulativeCount] using
-      schedule.budget.totalSamples_tendsto_atTop
-  apply batchedPredictableMatrixAverage_tendsto
-    schedule.budget.batchSize schedule.budget.explorationSize
-    (fun k => generalScheduleFrobeniusTraceControllerInformation theta
-      (cumulativePauliPastSafeInteriorController schedule k omega))
-    (fun _ => generalSchedulePauliExplorationInformation theta)
-    (mixedFrobeniusTraceTarget theta)
-    (fun _ _ => 2 * (1 - QubitOracle.blochNormSq theta)⁻¹)
-    htotal hexploitation
-  · intro i j
-    exact mul_nonneg (by norm_num)
-      (inv_nonneg.mpr (sub_nonneg.mpr hInterior.le))
-  · intro k i j
-    exact generalSchedulePauliExploration_sub_frobeniusTrace_entry_norm_le
-      theta (cumulativePauliPastSafeInteriorController schedule k omega)
-      hInterior
-      (cumulativePauliPastSafeInteriorController_strictInterior
-        schedule k omega) i j
-  · simpa [cumulativeCount] using
-      schedule.budget.cumulativeExplorationFraction_tendsto_zero
 
-/-- Squared trace distance has the same optimal design as Frobenius loss, so
-the identical concrete predictable Fisher matrix has the same target. -/
-theorem cumulativePauliPastFullSquaredTraceInformation_tendsto_ae_closed
-    (schedule : CumulativePauliPilotBatchSchedule)
-    (theta : RLSVector 3) (hInterior : QubitOracle.blochNormSq theta < 1) :
-    ∀ᵐ omega ∂pauliPilotConsistencyMeasure theta,
-      BatchMatrixEntrywiseTendsto
-        (cumulativePauliPastFullFrobeniusTraceInformation
-          schedule theta omega)
-        (mixedFrobeniusTraceTarget theta) :=
-  cumulativePauliPastFullFrobeniusTraceInformation_tendsto_ae_closed
-    schedule theta hInterior
 
-/-- Bundled exact endpoint for the arbitrary-batch mixed-qubit
-Frobenius/squared-trace adaptive design. -/
-theorem cumulativePauliPastFrobeniusTraceInformation_core_closed
-    (schedule : CumulativePauliPilotBatchSchedule)
-    (theta : RLSVector 3) (hInterior : QubitOracle.blochNormSq theta < 1) :
-    (forall k omega,
-      QubitOracle.blochNormSq
-        (cumulativePauliPastSafeInteriorController schedule k omega) < 1) /\
-    (∀ᵐ omega ∂pauliPilotConsistencyMeasure theta,
-      forall j : Fin 3,
-        Tendsto
-          (fun k => cumulativePauliPastSafeInteriorController
-            schedule k omega j)
-          atTop (nhds (theta j))) /\
-    (∀ᵐ omega ∂pauliPilotConsistencyMeasure theta,
-      BatchMatrixEntrywiseTendsto
-        (cumulativePauliPastFullFrobeniusTraceInformation
-          schedule theta omega)
-        (mixedFrobeniusTraceTarget theta)) := by
-  exact
-    ⟨fun k omega =>
-        cumulativePauliPastSafeInteriorController_strictInterior
-          schedule k omega,
-      cumulativePauliPastSafeInteriorController_tendsto_ae_closed
-        schedule theta hInterior,
-      cumulativePauliPastFullFrobeniusTraceInformation_tendsto_ae_closed
-        schedule theta hInterior⟩
 
-/-- Joint non-LAN information theorem for the same concrete arbitrary-batch
-protocol and all three rotationally invariant mixed-qubit losses. -/
-theorem cumulativePauliPastMixedQubitInformation_core_closed
-    (schedule : CumulativePauliPilotBatchSchedule)
-    (theta : RLSVector 3) (hInterior : QubitOracle.blochNormSq theta < 1) :
-    (forall k omega,
-      QubitOracle.blochNormSq
-        (cumulativePauliPastSafeInteriorController schedule k omega) < 1) /\
-    (∀ᵐ omega ∂pauliPilotConsistencyMeasure theta,
-      forall j : Fin 3,
-        Tendsto
-          (fun k => cumulativePauliPastSafeInteriorController
-            schedule k omega j)
-          atTop (nhds (theta j))) /\
-    (∀ᵐ omega ∂pauliPilotConsistencyMeasure theta,
-      BatchMatrixEntrywiseTendsto
-        (cumulativePauliPastFullCanonicalBuresInformation
-          schedule theta omega)
-        (mixedBuresTarget theta)) /\
-    (∀ᵐ omega ∂pauliPilotConsistencyMeasure theta,
-      BatchMatrixEntrywiseTendsto
-        (cumulativePauliPastFullFrobeniusTraceInformation
-          schedule theta omega)
-        (mixedFrobeniusTraceTarget theta)) := by
-  exact
-    ⟨fun k omega =>
-        cumulativePauliPastSafeInteriorController_strictInterior
-          schedule k omega,
-      cumulativePauliPastSafeInteriorController_tendsto_ae_closed
-        schedule theta hInterior,
-      cumulativePauliPastFullCanonicalBuresInformation_tendsto_ae_closed
-        schedule theta hInterior,
-      cumulativePauliPastFullFrobeniusTraceInformation_tendsto_ae_closed
-        schedule theta hInterior⟩
 
 end
 

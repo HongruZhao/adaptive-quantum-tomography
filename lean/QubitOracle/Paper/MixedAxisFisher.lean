@@ -1,5 +1,4 @@
 import QubitOracle.FiniteGillMassar
-
 /-!
 # Fisher information for one-axis mixed-qubit measurements
 
@@ -145,11 +144,6 @@ theorem mixedAxisFisher_eq_binaryAxisFisherScalar_smul
   rw [binaryAxisFisherScalar_eq (blochDot r u) hdot]
   rfl
 
-#print axioms trace_qubitSLDFisherInv_mul_mixedAxisFisher
-#print axioms binaryAxis_scores_eq_probabilityDerivative_ratio
-#print axioms binaryAxis_expectedScore_eq_zero
-#print axioms binaryAxisFisherScalar_eq
-#print axioms mixedAxisFisher_eq_binaryAxisFisherScalar_smul
 
 end
 

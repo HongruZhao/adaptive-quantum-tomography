@@ -1,6 +1,21 @@
 import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSIC
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICIdentification
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
 import QubitOracle.AdaptiveDesign.P2BornFisherIdentification
-
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.SequentialRidgeController
+import QubitOracle.FiniteGillMassar
+import QubitOracle.LocalChart
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.TwoBasis
 /-! # Physical Born derivatives for arbitrary Hermitian effects
 This calculus bridge does not require rank-one effects or the explicit library.
 -/

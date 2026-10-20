@@ -1,17 +1,9 @@
+import QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw
 import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
-import QubitOracle.Paper.MartingaleCLTConsolidated
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
 import QubitOracle.Paper.FiniteAdaptiveBornScoreClosure
-
-/-!
-# Bounded centered responses on the actual adaptive path: CLT
-
-The experiment and all increments below are literal adaptive responses.
-Martingale differences and Lindeberg are proved from a finite-action mean
-identity and a uniform bound. The only remaining stochastic input to this
-generic theorem is convergence of the displayed conditional variance;
-applications must prove that input from their actual measurement design.
-The general scalar CLT uses the existing source-faithful Hall--Heyde atom.
--/
+import QubitOracle.Paper.MartingaleCLT
+/-! Supporting definitions and proved lemmas used by the manuscript. -/
 
 namespace QubitOracle.AdaptiveDesign.BoundedAdaptiveResponseCLT
 
@@ -207,19 +199,6 @@ theorem problem_lindeberg
       (tendsto_const_nhds : Tendsto (fun _ : ℕ => (0 : ENNReal)) atTop (𝓝 0))
   exact hc.congr' (hz.mono fun n hn => ae_of_all _ (congrFun hn.symm)) EventuallyEq.rfl
 
-/-- Gaussian limits for bounded centered adaptive responses. The covariance
-convergence remains explicit and must be verified by the concrete model. -/
-theorem scalar_clt_of_covariance
-    (protocol : PredictableAdaptiveProtocol Theta Action Outcome) (theta : Theta)
-    (g : Action → Outcome → EuclideanSpace ℝ I)
-    (hmean : ∀ a, ∫ y, g a y ∂protocol.response theta a = 0)
-    (C : ℝ) (hbound : ∀ a y, ‖g a y‖ ≤ C)
-    (M : Matrix I I ℝ) (hM : M.PosDef)
-    (hcov : (problem protocol theta g).ConditionalCovarianceConverges M) :
-    (problem protocol theta g).SumConvergesToGaussian M :=
-  martingale_score_clt_consolidated (problem protocol theta g) M hM
-    (problem_martingale_conditions protocol theta g hmean C hbound)
-    (problem_lindeberg protocol theta g C hbound) hcov
 
 theorem actualVectorResponse_measurable
     (protocol : PredictableAdaptiveProtocol Theta Action Outcome)
@@ -244,18 +223,6 @@ theorem problem_terminal_measurable
   exact (Finset.measurable_sum (Finset.range n) (fun k _ =>
     (actualVectorResponse_measurable protocol g (k+1)).const_smul (normalization n))).aemeasurable
 
-theorem vector_clt_of_covariance
-    (protocol : PredictableAdaptiveProtocol Theta Action Outcome) (theta : Theta)
-    (g : Action → Outcome → EuclideanSpace ℝ I)
-    (hmean : ∀ a, ∫ y, g a y ∂protocol.response theta a = 0)
-    (C : ℝ) (hbound : ∀ a y, ‖g a y‖ ≤ C)
-    (M : Matrix I I ℝ) (hM : M.PosDef)
-    (hcov : (problem protocol theta g).ConditionalCovarianceConverges M) :
-    (problem protocol theta g).VectorSumConvergesToGaussian M :=
-  martingale_score_clt_multivariate_consolidated (problem protocol theta g) M hM
-    (problem_martingale_conditions protocol theta g hmean C hbound)
-    (problem_lindeberg protocol theta g C hbound) hcov
-    (problem_terminal_measurable protocol theta g)
 
 end
 end QubitOracle.AdaptiveDesign.BoundedAdaptiveResponseCLT

@@ -1,8 +1,21 @@
-import QubitOracle.AdaptiveDesign.P1InverseAllocationMoments
-import QubitOracle.AdaptiveDesign.P1GramMoments
-import QubitOracle.AdaptiveDesign.UniformProductMoments
+import QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
 import QubitOracle.AdaptiveDesign.GoodEventMoments
-
+import QubitOracle.AdaptiveDesign.P1FiniteSampleBounds
+import QubitOracle.AdaptiveDesign.P1GramMoments
+import QubitOracle.AdaptiveDesign.P1InverseAllocationMoments
+import QubitOracle.AdaptiveDesign.P1ObservedRidge
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedConsistency
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.AdaptiveDesign.P1WeightedEndpoints
+import QubitOracle.AdaptiveDesign.P1WeightedNormality
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
+import QubitOracle.AdaptiveDesign.UniformProductMoments
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
 /-! Fourth moments of the literal Frobenius adaptive ridge estimator.
 Random inverse-allocation bounds and Gram noise need not be independent. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

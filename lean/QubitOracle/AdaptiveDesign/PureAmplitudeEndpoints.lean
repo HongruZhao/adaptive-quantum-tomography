@@ -1,7 +1,21 @@
+import QubitOracle.AdaptiveDesign.FiniteHistoryStatistics
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PhasePairPOVM
 import QubitOracle.AdaptiveDesign.PureAmplitudeChart
-import QubitOracle.AdaptiveDesign.TangentGLSStrongConsistency
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
 import QubitOracle.AdaptiveDesign.TangentGLSOptimalVariance
--- import QubitOracle.AdaptiveDesign.PVMOptimalVariance -- Section 5 disabled
+import QubitOracle.AdaptiveDesign.TangentGLSStrongConsistency
+import QubitOracle.AdaptiveDesign.TangentGLSVarianceStatement
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.TwoBasis
 
 /-! Actual-algorithm central limit theorems in the paper's amplitude
 chart. These endpoints discharge the consistency and measurability
@@ -57,30 +71,6 @@ theorem phasePair_amplitude_optimalVariance
     truth regularization ridge hr hη batchSize hpositive
 end TangentGLS
 
--- Section 5 proof route commented at the user request, 5 October 2026.
-/-
-namespace PVMPilotGLS
-variable [PVMPilotSchedule.Schedule]
-variable {d : ℕ} [PVMGeneralGeometry.ExplorationLibrary d]
-
-theorem amplitude_optimalVariance (truth : PureVector d) (ridge : ℝ) (hr : 0 < ridge)
-    (batchSize : ℕ → ℕ) (hpositive : ∀ j, 0 < batchSize j) (hbudget : PVMPilotSchedule.OneStepBudget) :
-    TendstoInDistribution
-      (fun (n : ℕ) path => Real.sqrt (n:ℝ) • amplitudeCoordinates truth
-        (pureParameter d (actualEstimate ridge hr batchSize path n)).val)
-      atTop id
-      (fun _ => adaptiveInfiniteTrajectoryMeasure (PVMPilotAdaptive.adaptiveProtocol d batchSize) (pureParameter d truth))
-      (multivariateGaussian 0 ((2:ℝ) • (1 : Matrix (TangentIndex d) (TangentIndex d) ℝ))) := by
-  apply amplitude_clt_of_projector_clt truth
-  · intro n
-    exact actualStatistic_stronglyMeasurable batchSize n
-      (fun raw data => (pureParameter d
-        (estimateFromRaw raw data (floor d) ridge (floor_pos d) hr)).val)
-  · exact corrected_consistent truth ridge hr batchSize hpositive
-  · have hh := optimalVariance truth ridge hr batchSize hpositive hbudget
-    simpa only [trueCoordinates_actual, projectorError] using hh
-end PVMPilotGLS
--/
 
 
 end

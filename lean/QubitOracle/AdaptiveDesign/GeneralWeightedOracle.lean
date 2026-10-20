@@ -1,7 +1,7 @@
-import QubitOracle.AdaptiveDesign.FiniteAdaptiveOracle
 import Mathlib.Analysis.Matrix.Order
 import Mathlib.Analysis.SpecialFunctions.ContinuousFunctionalCalculus.Rpow.Basic
-
+import QubitOracle.AdaptiveDesign.FiniteAdaptiveOracle
+import QubitOracle.AdaptiveDesign.FiniteRegularOracle
 /-!
 # Arbitrary positive-semidefinite loss matrices
 

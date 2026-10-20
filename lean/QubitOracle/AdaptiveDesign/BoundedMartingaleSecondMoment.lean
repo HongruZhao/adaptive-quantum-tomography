@@ -1,6 +1,5 @@
 import QubitOracle.AdaptiveDesign.AdaptiveConditionalMoments
 import Mathlib.Probability.Martingale.Convergence
-
 /-! Elementary second-moment accounting for bounded martingale differences.
 Unlike a uniform Azuma bound, this retains the exploration probabilities. -/
 namespace QubitOracle.AdaptiveDesign.BoundedMartingaleSecondMoment

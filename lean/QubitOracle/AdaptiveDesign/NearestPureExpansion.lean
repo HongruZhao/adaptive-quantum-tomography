@@ -1,6 +1,14 @@
-import QubitOracle.AdaptiveDesign.NearestPureEigenvector
 import QubitOracle.AdaptiveDesign.SharpTangentGeometry
-
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.NearestPureEigenvector
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.AdaptiveDesign.TangentGLSProjection
+import QubitOracle.AdaptiveDesign.TangentGLSWeightExpansion
+import QubitOracle.Paper.PureStateFoundations
 /-! A global quadratic first-order expansion of the actual nearest pure
 projector. Commutation of the fitted spectral projector replaces a
 local choice of eigenvector and an unproved spectral perturbation input. -/

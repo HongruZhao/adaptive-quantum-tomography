@@ -1,5 +1,16 @@
 import QubitOracle.AdaptiveDesign.P1FiniteSampleBounds
-
+import QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
+import QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw
+import QubitOracle.AdaptiveDesign.P1ObservedRidge
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedConsistency
+import QubitOracle.AdaptiveDesign.P1WeightedMoments
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
 /-! All polynomial moments of the actual observed-axis Gram martingale,
 without independence of the adaptively selected axes. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

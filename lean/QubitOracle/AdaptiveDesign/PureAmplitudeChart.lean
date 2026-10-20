@@ -1,7 +1,15 @@
-import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
-import QubitOracle.RankOneLosses
 import Mathlib.MeasureTheory.Function.ConvergenceInDistribution
-
+import QubitOracle.AdaptiveDesign.GeneralPOVMBorn
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.RankOneLosses
+import QubitOracle.TwoBasis
 /-! Exact amplitude-chart coordinates and transfer from the projector
 coordinates used in the score CLT. The inverse chart is extended by zero
 at an orthogonal ray; consistency makes that extension immaterial. -/

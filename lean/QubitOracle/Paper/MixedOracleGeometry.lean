@@ -1,8 +1,7 @@
-import QubitOracle.Paper.MixedOracle
 import QubitOracle.Paper.QubitFoundations
 import Mathlib.MeasureTheory.Integral.Bochner.Basic
 import Mathlib.LinearAlgebra.Matrix.ToLin
-
+import QubitOracle.FiniteGillMassar
 /-!
 # Coordinate-free mixed-qubit oracle geometry
 

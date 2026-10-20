@@ -1,6 +1,7 @@
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.PureMultilevelMatrixTraceDistance
 import QubitOracle.Paper.QuantumDistances
 import QubitOracle.Paper.QubitFoundations
-
 /-!
 # Exact physical trace distance for Bloch qubits
 

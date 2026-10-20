@@ -1,7 +1,7 @@
-import QubitOracle.AdaptiveDesign.BoundedVarianceMGF
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.Series
 import Mathlib.Analysis.Convex.SpecificFunctions.Basic
-
+import QubitOracle.AdaptiveDesign.BoundedMartingaleSecondMoment
+import QubitOracle.AdaptiveDesign.BoundedVarianceMGF
 /-! The sharp bounded-increment exponential bound on arbitrary probability
 spaces. Convexity of the exponential and conditional centering replace any
 regular-conditional-distribution assumption. -/

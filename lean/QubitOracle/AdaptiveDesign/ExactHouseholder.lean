@@ -1,6 +1,5 @@
-import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
 import Mathlib
-
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
 /-! A deterministic phase-adjusted Householder completion with a denominator
 bounded below by two. No random unitary or arbitrary complement is selected. -/
 namespace QubitOracle.AdaptiveDesign.ExactHouseholder

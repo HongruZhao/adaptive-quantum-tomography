@@ -1,7 +1,8 @@
 import QubitOracle.AdaptiveDesign.L2MartingaleBudget
 import Mathlib.Analysis.Complex.Exponential
 import QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
-
+import QubitOracle.AdaptiveDesign.BoundedMartingaleSecondMoment
+import QubitOracle.AdaptiveDesign.SubGaussianPowerMoments
 /-! A variance-sensitive exponential bound for bounded martingale sums.
 The argument uses elementary Taylor bounds and conditional expectation;
 it works on an arbitrary probability space. -/

@@ -1,6 +1,5 @@
 import QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
 import Mathlib.MeasureTheory.Function.ConvergenceInDistribution
-
 /-! Passing from weak convergence of a nonnegative loss to its expectation.
 Fixed bounded continuous truncations are derived from weak convergence.
 There is no assumed diagonal truncated-risk limit. -/

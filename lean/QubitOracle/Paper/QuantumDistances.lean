@@ -1,6 +1,5 @@
 import Mathlib.Analysis.Matrix.Order
 import Mathlib.Analysis.SpecialFunctions.ContinuousFunctionalCalculus.Rpow.Basic
-
 /-!
 # Finite-dimensional quantum distances
 

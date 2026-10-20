@@ -1,0 +1,30 @@
+{
+  "abstract_words": 194,
+  "all_numerical_inputs_unchanged": true,
+  "date": "2026-10-20",
+  "fresh_full_run_evidence": "20261020/FULL_RUN_RECEIPT.json",
+  "main_pages": 34,
+  "main_pdf": "../../ejs_main.pdf",
+  "main_pdf_sha256": "345bb120f2570fc7b334b3db0baff2afbf7edb61050f8e8130796d7527a47446",
+  "numerical_input_sha256": {
+    "configs/historical_full_run_20261017.json": "9fc225bc2e0605f4c44378ebf697b302707fd97fb674c3741ac55bf1c407f5be",
+    "configs/paper.json": "81302681213a9b33c154b0199b4a642d7d5f54a0a761eb88256dc83f183adde1",
+    "pyproject.toml": "ee7d471bf379e3f2809ae82e1cbee77837c9a405b2cdfa55c6acfba7c215f48e",
+    "requirements.txt": "8bcf4152f1a616c73ac783285da5c253d37c701c0f1404a8b414fa20361dc51c",
+    "scripts/check_release.py": "735350d51c38ab4e6cd35704e120eba333e1cc9055de4c305735c489fbe23c6a",
+    "src/adaptive_tomography/__init__.py": "48e1bd80080ca6b32cb785f3916725980acfba52a394a134b062f696625a1ebc",
+    "src/adaptive_tomography/__main__.py": "dfe0f4c46ec66e045ac18d8ec183bc33eb27800fabdc63d4f843d8cb7c190579",
+    "src/adaptive_tomography/design.py": "b6731db4a712fe0563b95db54d0a032cbf4c10d765bd379565b9624750901c83",
+    "src/adaptive_tomography/estimators.py": "81f3b03f7bdf2a9947ffaa315bb8d5fb86a6a0ba3d77b1c30f22975befb33791",
+    "src/adaptive_tomography/mixed.py": "207ba1741e481bde4b87c5a60f4bdcc0479f3ffb0dba496dfa18acbf20a603b9",
+    "src/adaptive_tomography/optional.py": "85d90c355476ef9849a1393c072dd92e0c124e08cb34c9a32b20ad7e1828116f",
+    "src/adaptive_tomography/plotting.py": "783d6d286511d5f8ce89e99f2c8785d20278d0e7692a031d9095f53b2a772484",
+    "src/adaptive_tomography/pure.py": "a1f3fe5aa5bdc7c79230303bb88883e2972a41ebc6f67b2d3e0b1b5123023baf",
+    "src/adaptive_tomography/schedules.py": "dd250aa425c8c446057a1e4c46734cd9d622e4c8f33ecd20058564ed2586f9c9",
+    "src/adaptive_tomography/simulation.py": "30ae9a4a0a350f40aa6587d4ddedcaaf3840b369b13a302e3470eb0e7c00576c",
+    "tests/test_design_ensemble.py": "ae2bbb6b9dd94ec4d6f9c1d17937ba251da50818cb271995ae9e0d01a7508a10",
+    "tests/test_growing_batches.py": "4010ac9130007489d29d93c813e794a02e7aa3859ee8dccb73ec94ace29c59f6",
+    "tests/test_paper_algorithms.py": "b9075108f431f1916cdbbf9db73ab159d58875be7d26e9bfdbd3342c55e2ce1e"
+  },
+  "typesetting_update_is_not_a_new_full_simulation": true
+}

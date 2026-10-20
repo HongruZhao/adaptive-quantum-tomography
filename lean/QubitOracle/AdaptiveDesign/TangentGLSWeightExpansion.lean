@@ -1,5 +1,9 @@
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSAlgebra
 import QubitOracle.AdaptiveDesign.TangentGLSEstimator
-
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
 /-!
 # Same-record fitted-weight expansion
 

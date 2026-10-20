@@ -1,8 +1,7 @@
-import QubitOracle.Paper.PureStateFoundations
-import QubitOracle.Paper.PureMultilevelCompactNearestProjection
 import Mathlib.Analysis.Matrix.Normed
 import Mathlib.Analysis.Normed.Module.FiniteDimension
-
+import QubitOracle.Paper.PureMultilevelCompactNearestProjection
+import QubitOracle.Paper.PureStateFoundations
 /-!
 # Compactness of finite-dimensional pure projectors
 

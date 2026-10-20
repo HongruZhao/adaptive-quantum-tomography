@@ -1,6 +1,11 @@
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
 import QubitOracle.AdaptiveDesign.TangentGLSProjection
 import QubitOracle.AdaptiveDesign.TangentGLSRetraction
-
+import QubitOracle.AdaptiveDesign.TangentGLSWeightExpansion
+import QubitOracle.Paper.PureStateFoundations
 /-! Quantitative bounds for the actual intrinsic GLS update. -/
 
 namespace QubitOracle.AdaptiveDesign.TangentGLS

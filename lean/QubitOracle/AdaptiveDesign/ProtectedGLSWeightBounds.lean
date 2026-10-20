@@ -1,5 +1,5 @@
+import QubitOracle.AdaptiveDesign.TangentGLSAlgebra
 import QubitOracle.AdaptiveDesign.TangentGLSWeightExpansion
-
 /-! Uniform finite-row bounds for fitted inverse-probability weights.
 The fitted argument is arbitrary: these inequalities do not assume it is
 predictable or independent of the observed outcome. -/

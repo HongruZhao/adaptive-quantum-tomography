@@ -1,14 +1,14 @@
-# Verification instructions
+# Verification
 
-Use the [root formalization guide](../../LEAN_FORMALIZATION.md) for exact dated evidence, scope, and assumptions.
+The official evidence is in [verification/20261020](../verification/20261020/README.md). It records the source inventory, dependency pins, exact declaration types, transitive axioms and actual replay list for the distributed source tree.
 
 ```sh
 python3 -B scripts/check_release.py
-python3 -B scripts/verify.py --cache --replay
+LAKE_ARTIFACT_CACHE=false python3 -B scripts/verify.py --cache --replay
 ```
 
-Run these from `lean/`. The first command is an integrity check. The second builds the 508-module current-result closure and explicit `MainPaper` and `MainPaperAudit` roots, checks the 498 selected declaration types and transitive axiom sets, verifies pinned dependency revisions, and requests replay of 17 selected modules. It does not claim a build of all 633 retained sources or replay of every dependency.
+The first command verifies packaged hashes only. The second builds all project modules, runs the main and supplementary audits, verifies exact saved types and standard-only axioms, checks pins, and replays the designated modules. Fresh project compilation uses an empty project build directory; upstream pinned dependencies may use caches. `--incremental` records intentional object reuse.
 
-A clean run rejects existing project proof objects; `--incremental` permits their reuse. New logs and receipts go to `verification/reproduction/`. Network access is needed for initial pinned dependencies and cache acquisition.
+The main audit checks 498 declaration entries. The supplementary audit checks 138 entries and traverses the type/value dependencies of every retained mathematical declaration. Overlap between these inventories is reported, not counted twice as distinct results. The audit rejects any axiom other than `propext`, `Classical.choice` and `Quot.sound`, including `sorryAx`.
 
-The 17 October summary records the larger workspace's 567-module source build. The 19 October receipt records a seven-module focused replay of existing source-identical objects. These are saved, dated evidence, not new execution performed by the 20 October GitHub preparation. The selected endpoints use only standard logical axioms; the documented retained legacy axioms are not silently promoted to verified hypotheses.
+The source build checks proof terms, while separate `leanchecker` replay provides the additional evidence described by its module list. Neither step mechanically establishes LaTeX-to-Lean semantic correspondence or verifies the Python implementation. The correspondence ledgers state the precise coverage and remaining supplementary generality differences.

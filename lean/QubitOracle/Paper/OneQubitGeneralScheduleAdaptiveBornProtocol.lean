@@ -1,14 +1,10 @@
-import QubitOracle.Paper.OneQubitGeneralScheduleAdaptiveDesign
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.ConcreteProtocolA1A3
+import QubitOracle.Paper.MixedProbabilityFloor
 import QubitOracle.Paper.OneQubitCyclicBornPath
-
-/-!
-# Exact nested Born protocol for arbitrary predetermined qubit batches
-
-This module supplies the exact binary Born response kernel for every physical
-Bloch parameter and combines it with the concrete history-only arbitrary-batch
-design.  Mathlib's Ionescu--Tulcea construction then gives one literal nested
-infinite observation stream with its natural finite prefixes.
--/
+import QubitOracle.Paper.ProtocolRegularity
+/-! Supporting definitions and proved lemmas used by the manuscript. -/
 
 namespace QubitOracle.Paper
 
@@ -153,48 +149,9 @@ theorem generalAxisBornResponseKernel_singleton
   cases y <;>
     simp [generalAxisBornMeasure, Measure.add_apply, Measure.smul_apply]
 
-/-- Exact predictable adaptive protocol for any admissible predetermined
-batch schedule and deterministic frame seed. -/
-def generalScheduleAdaptiveBornProtocol
-    (schedule : CumulativePauliPilotBatchSchedule) (b : Fin 3 -> Real) :
-    PredictableAdaptiveProtocol OneQubitPhysicalParameter
-      MixedMeasurementAxis BinaryOutcome where
-  response := generalAxisBornResponseKernel
-  response_isMarkov := generalAxisBornResponseKernel_isMarkov
-  design := generalScheduleHistoryMeasurementAxis schedule b
-  design_measurable := generalScheduleHistoryMeasurementAxis_measurable schedule b
 
-/-- Its next-outcome conditional law is exactly the Born law at the concrete
-history-selected axis. -/
-theorem generalScheduleAdaptiveBornProtocol_conditional_mass
-    (schedule : CumulativePauliPilotBatchSchedule) (b : Fin 3 -> Real)
-    (theta : OneQubitPhysicalParameter) (n : Nat)
-    (history : AdaptiveTrajectory BinaryOutcome) (y : BinaryOutcome) :
-    adaptiveStepKernel (generalScheduleAdaptiveBornProtocol schedule b)
-        theta n history {y} =
-      ENNReal.ofReal
-        (binaryBornProbability
-          (QubitOracle.blochDot
-            (generalScheduleHistoryAxis schedule b n history) theta.1) y) := by
-  rw [adaptiveStepKernel_apply]
-  exact generalAxisBornResponseKernel_singleton theta
-    (generalScheduleHistoryMeasurementAxis schedule b n history) y
 
-/-- One literal nested infinite observation law for the arbitrary schedule. -/
-def generalScheduleAdaptiveBornPathMeasure
-    (schedule : CumulativePauliPilotBatchSchedule) (b : Fin 3 -> Real)
-    (theta : OneQubitPhysicalParameter) :
-    Measure (AdaptiveInfinitePath BinaryOutcome) :=
-  adaptiveInfiniteTrajectoryMeasure
-    (generalScheduleAdaptiveBornProtocol schedule b) theta
 
-instance generalScheduleAdaptiveBornPathMeasure_isProbability
-    (schedule : CumulativePauliPilotBatchSchedule) (b : Fin 3 -> Real)
-    (theta : OneQubitPhysicalParameter) :
-    IsProbabilityMeasure
-      (generalScheduleAdaptiveBornPathMeasure schedule b theta) := by
-  unfold generalScheduleAdaptiveBornPathMeasure
-  infer_instance
 
 /-- The first `n` observations are literally the natural prefix of the same
 infinite Born path. -/

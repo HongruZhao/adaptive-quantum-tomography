@@ -1,7 +1,29 @@
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
 import QubitOracle.AdaptiveDesign.P1BuresMeanLoss
--- import QubitOracle.AdaptiveDesign.PurePVMMeanLoss -- Section 5 disabled
+import QubitOracle.AdaptiveDesign.P1ControllerBounds
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
+import QubitOracle.AdaptiveDesign.PhasePairPOVM
+import QubitOracle.AdaptiveDesign.PureMatrixController
 import QubitOracle.AdaptiveDesign.PurePOVMMeanLoss
 import QubitOracle.AdaptiveDesign.QuantumFidelityBridges
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.AdaptiveDesign.TangentGLSNormalizedError
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.OneQubitBlochPhysicalState
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
+import QubitOracle.Paper.OneQubitMixedBuresFidelityLocalRemainder
+import QubitOracle.Paper.PureMultilevelDeterministicGeometryClosed
+import QubitOracle.Paper.PureMultilevelMatrixTraceDistance
+import QubitOracle.Paper.QuantumDistances
 
 /-! Expected-risk endpoints using the literal positive-matrix-square-root
 Bures loss, rather than only its proved scalar representation. -/
@@ -83,20 +105,6 @@ theorem phasePair_bures_mean
     (PhasePair.paired_regular P hp) (PhasePair.paired_fisher_of_rankOne P hp hR)
     truth regularization ridge hr hη batchSize hpositive
 
--- Section 5 proof route commented at the user request, 5 October 2026.
-/-
-theorem pvm_bures_mean [PVMPilotSchedule.Schedule] [PVMGeneralGeometry.ExplorationLibrary d]
-    (truth : PureVector d) (ridge : ℝ) (hr : 0 < ridge)
-    (batchSize : ℕ → ℕ) (hp : ∀ j, 0 < batchSize j)
-    (hbudget : PVMPilotSchedule.OneStepBudget) (hbatch : PVMPilotSchedule.BatchMomentCondition batchSize) :
-    Tendsto (fun n : ℕ => (n:ℝ)*∫ path,
-      quantumBuresDistanceSq (pureDensity truth)
-        (pureDensity (PVMPilotGLS.actualEstimate ridge hr batchSize path n))
-      ∂adaptiveInfiniteTrajectoryMeasure (PVMPilotAdaptive.adaptiveProtocol d batchSize) (pureParameter d truth))
-      atTop (𝓝 (d:ℝ)) := by
-  simpa only [pure_bures_loss] using (PurePVMMeanLoss.pvm truth ridge hr batchSize hp hbudget hbatch).2
-
--/
 
 end
 end QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints

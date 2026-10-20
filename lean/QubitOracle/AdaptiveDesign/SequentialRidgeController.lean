@@ -1,5 +1,6 @@
 import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
-
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
 /-!
 # A literal all-observation ridge controller with frozen batches
 

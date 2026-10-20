@@ -1,5 +1,10 @@
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
 import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
-
+import QubitOracle.AdaptiveDesign.GlobalPFSICFisher
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.FiniteGillMassar
+import QubitOracle.TwoBasis
 /-! # Phase pairing of an arbitrary finite rank-one POVM
 
 The starting POVM is globally identifying and regular at the reference ray.
@@ -9,9 +14,8 @@ No complement-library identity is used.
 
 The hardware gate gives +pi/2 only to the reference level. Applying it to
 the state before measuring P conjugates effects by its adjoint; branch
-therefore stores gate.conjTranspose. This preserves the previous paired
-effects, since the adjoint gate differs from the old complement-phase
-matrix by the global scalar -i.
+therefore stores gate.conjTranspose. The adjoint gate differs from the complement-phase
+matrix by the global scalar -i, so the two conventions give the same effects.
 -/
 namespace QubitOracle.AdaptiveDesign.PhasePair
 open QubitOracle QubitOracle.Paper GeneralPOVM
@@ -42,7 +46,7 @@ theorem gate_adjoint_unitary (d : ℕ) :
   simpa only [Matrix.star_eq_conjTranspose, Matrix.conjTranspose_conjTranspose] using
     Matrix.mem_unitaryGroup_iff'.mp (gate_unitary d)
 
-/-- The adjoint state gate is globally phase-equivalent to the old
+/-- The adjoint state gate is globally phase-equivalent to the
 complement-phase matrix, so conjugating effects gives the same experiment. -/
 theorem gate_adjoint_eq_globalPhase_complement (d : ℕ) :
     (gate d).conjTranspose = (-Complex.I) •

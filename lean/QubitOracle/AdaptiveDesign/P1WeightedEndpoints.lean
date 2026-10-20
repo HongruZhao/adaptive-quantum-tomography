@@ -1,6 +1,21 @@
+import QubitOracle.AdaptiveDesign.P1PositiveBatches
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedConsistency
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.AdaptiveDesign.P1WeightedGeometry
+import QubitOracle.AdaptiveDesign.P1WeightedInformation
 import QubitOracle.AdaptiveDesign.P1WeightedNormality
 import QubitOracle.AdaptiveDesign.P1WeightedOptimality
-
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedAxisFisher
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.MixedRotationalTarget
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
+import QubitOracle.Paper.P1BuresOptimality
+import QubitOracle.Paper.QubitFoundations
 /-! Physical-controller and completed-batch endpoints for both P1 rules. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted
 open QubitOracle QubitOracle.Paper Filter MeasureTheory ProbabilityTheory

@@ -1,13 +1,15 @@
+import QubitOracle.AdaptiveDesign.GlobalPFSIC
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
 import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
-import QubitOracle.AdaptiveDesign.GlobalPFSICBorn
-
-/-!
-# The information in P2 is the Fisher information of its literal Born law
-
-This bridge identifies both probabilities and derivatives. The fixed true
-frame occurs only in the chart used to evaluate information; the implemented
-measurement protocol and its ridge/pure estimators do not take that frame.
--/
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.FiniteGillMassar
+import QubitOracle.LocalChart
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.TwoBasis
+/-! Supporting definitions and proved lemmas used by the manuscript. -/
 
 namespace QubitOracle.AdaptiveDesign.P2Adaptive
 
@@ -73,35 +75,7 @@ theorem trace_rankOneDensity_transportedEffect {d : ℕ}
   rw [← h]
   simp
 
-theorem labChartProbability_eq_genericBornProbability {d : ℕ}
-    (T U : Matrix (Fin (d+1)) (Fin (d+1)) ℂ)
-    (o : Outcome d) (x : TangentIndex d) (t : ℝ) :
-    labChartProbability T U o x t =
-      genericBornProbability (effectWeight d)
-        ((T.conjTranspose * U).mulVec (measurementVector o)) x t := by
-  rw [labChartProbability, trace_rankOneDensity_transportedEffect]
-  simp only [basisBornProbability, basisBornAmplitude_transport, Matrix.mulVec_mulVec]
-  rfl
 
-/-- Each chart derivative used in the P2 information is the derivative of
-the exact laboratory Born probability, with the measurement kept fixed. -/
-theorem labChartProbability_hasDerivAt_zero {d : ℕ}
-    (T U : Matrix (Fin (d+1)) (Fin (d+1)) ℂ)
-    (o : Outcome d) (x : TangentIndex d) :
-    HasDerivAt (labChartProbability T U o x)
-      (transportedGradient (T.conjTranspose * U) o x) 0 := by
-  have h := genericBornProbability_hasDerivAt_zero (effectWeight d)
-    ((T.conjTranspose * U).mulVec (measurementVector o)) x
-  have hg : genericEffectGradient (effectWeight d)
-      ((T.conjTranspose * U).mulVec (measurementVector o)) x =
-      transportedGradient (T.conjTranspose * U) o x := by
-    cases x <;> simp only [genericEffectGradient, transportedGradient, transportedEffect_projector]
-  rw [hg] at h
-  have heq : labChartProbability T U o x = genericBornProbability (effectWeight d)
-      ((T.conjTranspose * U).mulVec (measurementVector o)) x :=
-    funext (labChartProbability_eq_genericBornProbability T U o x)
-  rw [heq]
-  exact h
 
 theorem pureStateNormSq_unitary_mulVec {d : ℕ}
     (T : Matrix (Fin (d+1)) (Fin (d+1)) ℂ)
@@ -156,29 +130,7 @@ def actualBornFisher {d : ℕ} (hd : 0 < d) (truth : PureVector d) (U : Action d
     (deriv (labChartProbability (trueFrame d truth) U.matrix o x) 0 *
       deriv (labChartProbability (trueFrame d truth) U.matrix o y) 0)
 
-theorem actualBornFisher_eq_transportedFisher {d : ℕ} (hd : 0 < d)
-    (truth : PureVector d) (U : Action d) :
-    actualBornFisher hd truth U =
-      transportedFisher ((trueFrame d truth).conjTranspose * U.matrix) := by
-  have hderiv : ∀ (o : Outcome d) (x : TangentIndex d),
-      deriv (labChartProbability (trueFrame d truth) U.matrix o x) 0 =
-        transportedGradient ((trueFrame d truth).conjTranspose * U.matrix) o x :=
-    fun o x => (labChartProbability_hasDerivAt_zero (trueFrame d truth) U.matrix o x).deriv
-  funext x y
-  unfold actualBornFisher transportedFisher
-  apply Finset.sum_congr rfl
-  intro o ho
-  rw [bornProbability_pure_eq_transportedMass, hderiv, hderiv]
 
-/-- The information converging in the final P2 theorem is this literal
-Born Fisher information of its current, batch-frozen measurement action. -/
-theorem designFisher_eq_actualBornFisher {d : ℕ} (hd : 0 < d)
-    (batchSize : ℕ → ℕ) (truth : PureVector d)
-    (path : AdaptiveInfinitePath (Outcome d)) (n : ℕ) :
-    designFisher hd batchSize truth path n =
-      actualBornFisher hd truth (actualState hd batchSize path n).action := by
-  rw [actualBornFisher_eq_transportedFisher]
-  rfl
 
 end
 

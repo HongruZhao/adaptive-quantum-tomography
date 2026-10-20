@@ -1,6 +1,13 @@
-import QubitOracle.AdaptiveDesign.P1CharacteristicBounds
 import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
-
+import QubitOracle.AdaptiveDesign.FiniteCharacteristicTaylor
+import QubitOracle.AdaptiveDesign.P1CharacteristicBounds
+import QubitOracle.AdaptiveDesign.P1CharacteristicProcess
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.FiniteAdaptiveBornScoreClosure
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
 /-! A direct characteristic-function limit for bounded adaptive responses
 whose current conditional variance converges. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

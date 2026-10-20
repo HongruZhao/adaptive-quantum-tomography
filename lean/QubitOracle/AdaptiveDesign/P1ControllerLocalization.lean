@@ -1,6 +1,17 @@
-import QubitOracle.AdaptiveDesign.P1Localization
 import QubitOracle.AdaptiveDesign.PolynomialSqrtExponential
-
+import QubitOracle.AdaptiveDesign.ExplorationRidgeConsistency
+import QubitOracle.AdaptiveDesign.P1ControllerBounds
+import QubitOracle.AdaptiveDesign.P1FiniteSampleBounds
+import QubitOracle.AdaptiveDesign.P1Localization
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.MixedRotationalTarget
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
 namespace QubitOracle.AdaptiveDesign.P1Weighted
 open QubitOracle QubitOracle.Paper Filter MeasureTheory ProbabilityTheory
 open scoped BigOperators Topology

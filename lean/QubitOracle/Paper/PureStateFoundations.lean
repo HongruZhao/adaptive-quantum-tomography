@@ -1,5 +1,4 @@
 import Mathlib
-
 /-!
 # Generic finite-dimensional pure-state foundations
 

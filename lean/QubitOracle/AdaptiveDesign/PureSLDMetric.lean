@@ -1,5 +1,10 @@
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
 import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
-
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.TwoBasis
 /-! The symmetric-logarithmic-derivative metric on pure-state tangents.
 These are identities of actual Hermitian matrices, not a postulated
 information matrix. -/

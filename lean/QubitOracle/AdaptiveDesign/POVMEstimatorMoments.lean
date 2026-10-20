@@ -1,7 +1,29 @@
-import QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
 import QubitOracle.AdaptiveDesign.GeneralPOVMRootRate
+import QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
+import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
+import QubitOracle.AdaptiveDesign.FiniteHistoryStatistics
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.RidgeBatchSchedule
+import QubitOracle.AdaptiveDesign.SequentialRidgeController
+import QubitOracle.AdaptiveDesign.TangentGLSActualRates
+import QubitOracle.AdaptiveDesign.TangentGLSAmbient
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.AdaptiveDesign.TangentGLSLinearization
+import QubitOracle.AdaptiveDesign.TangentGLSNormalizedError
+import QubitOracle.AdaptiveDesign.TangentGLSRecordIdentities
 import QubitOracle.AdaptiveDesign.TangentGLSStrongConsistency
-
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.PureStateFoundations
 /-! Root-n moments of the actual all-record POVM estimators. The constants
 may depend on the fixed POVM, dimension and ridge parameters. No sample split,
 extra moment assumption, Fisher symmetry or batch-growth condition is used. -/

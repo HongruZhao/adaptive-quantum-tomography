@@ -1,6 +1,11 @@
 import QubitOracle.AdaptiveDesign.P1WeightedEndpoints
+import QubitOracle.AdaptiveDesign.P1ObservedRidge
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
 import QubitOracle.AdaptiveDesign.TangentGLSAlgebra
-
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.MixedProbabilityFloor
 /-! The displayed mixed-qubit least-squares optimization problem has
 the literal recursive ridge estimate as its unique minimizer. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

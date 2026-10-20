@@ -1,7 +1,7 @@
+import Mathlib.MeasureTheory.Function.FactorsThrough
 import QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw
 import QubitOracle.AdaptiveDesign.FiniteCharacteristicTaylor
-import Mathlib.MeasureTheory.Function.FactorsThrough
-
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
 /-! Exact conditional characteristic-function recursion for any finite-outcome
 adaptive experiment. Generalized from the direct P1 proof. No limit theorem is assumed. -/
 namespace QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristic

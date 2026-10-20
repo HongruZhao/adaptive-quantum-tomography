@@ -1,5 +1,4 @@
 import QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
-
 /-! Products and tail weights for uniform moments. No independence is
 needed: the elementary inequality 2ab ≤ a²+b² suffices. -/
 namespace QubitOracle.AdaptiveDesign.AdaptiveResponseMoments

@@ -1,19 +1,18 @@
-# Reading the Lean sources
+# Proof source guide
 
-Start with [MainPaper.lean](../MainPaper.lean), then use the [current result map](PAPER_TO_LEAN.md). The full folder retains all 633 canonical Lean sources. The selected current-result dependency closure has 508 modules; reading every retained source is unnecessary to locate the principal statements.
+Start with `MainPaper.lean` and `Supplement.lean`, then read the named result interfaces:
 
-| Topic | Entry file | What to look for |
-|---|---|---|
-| Mixed Algorithms 1-2 and current Theorems 3.1-3.2 | [MainPaperTheorem31.lean](../MainPaperTheorem31.lean) | Exact axis and batch bridges; the combined `theorem_3_1` conclusion |
-| Pure Algorithm 3 and current Theorems 4.2-4.3 | [MainPaperTheorem42.lean](../QubitOracle/Paper/MainPaperTheorem42.lean) | `Inputs`, actual process/estimators, `Conclusions`, then the proving theorem |
-| Smooth coordinate and ambient limits | [MainPaperPureLimits.lean](../QubitOracle/Paper/MainPaperPureLimits.lean) | Transfer of the actual corrected-estimator limit |
-| Expected physical losses | [MainPaperMeanLosses.lean](../QubitOracle/Paper/MainPaperMeanLosses.lean) | `corollary_5_2` and `corollary_5_3` |
-| Adaptive lower bound | [AdaptiveSingleCopyOracle.lean](../QubitOracle/AdaptiveDesign/AdaptiveSingleCopyOracle.lean) | Model assumptions, finite histories and weighted bound |
-| Geometry definitions | [MainPaperGeometry.lean](../QubitOracle/Paper/MainPaperGeometry.lean) | Fubini-Study pairing, tangent and retraction bridges |
-| Audit surface | [MainPaperAudit.lean](../MainPaperAudit.lean) | Exact selected elaborated declarations and transitive-axiom checks |
+| Interface | Role |
+|---|---|
+| `MainPaperTheorem31.lean` | Mixed-qubit procedures, consistency, information and Gaussian limits |
+| `QubitOracle/Paper/MainPaperTheorem42.lean` | Pure-state preliminary fit, alignment and corrected estimator |
+| `QubitOracle/Paper/MainPaperPureCharts.lean` | Smooth coordinates and inverse-information covariance |
+| `QubitOracle/Paper/MainPaperMeanLosses.lean` | Expected physical losses |
+| `QubitOracle/AdaptiveDesign/AdaptiveSingleCopyOracleCharts.lean` | Finite adaptive lower bound for mixed and pure models |
+| `QubitOracle/AdaptiveDesign/PhasePairPOVM.lean` | Phase pairing, identification and Fisher symmetry |
+| `QubitOracle/AdaptiveDesign/SupplementProbability.lean` | Bounded martingale tail and real-moment consequences |
+| `QubitOracle/AdaptiveDesign/SupplementMoments.lean` | All-real mixed-estimator moment consequences |
 
-An `Inputs` structure lists hypotheses. A `Conclusions` structure lists propositions. The theorem constructing `Conclusions` is the proof; the existence of an input or conclusion structure alone is not proof evidence. The preserved identifiers follow the earlier combined theorem numbering, so use the current map rather than inferring paper numbers from filenames.
+`QubitOracle/AdaptiveDesign/` contains probability, regression, geometry and tangent-correction proofs. `QubitOracle/Paper/` connects concrete measurement laws to the result interfaces. Root audit files are metaprograms for reporting and rejecting unsupported axiom dependencies; they are not mathematical assumptions.
 
-Definitions of preliminary estimates, reported estimates, conditional information and physical losses are distinct. In particular, the preliminary pure estimator is not assigned the corrected estimator's asymptotic covariance. The exact positive finite batch and coordinate conventions are recorded in the correspondence ledger.
-
-The source distribution contains some historical declarations retained because their modules are imported. The selected endpoint audit, rather than a search for the word `axiom`, determines whether those declarations occur in the audited proof dependencies. See [VERIFICATION.md](VERIFICATION.md).
+The default build includes every distributed module. The [main ledger](MAIN_PAPER_CORRESPONDENCE.json) and [supplementary ledger](SUPPLEMENT_CORRESPONDENCE.json) are the authoritative guides to statement coverage. File names and identifiers do not by themselves establish a match to a numbered result.

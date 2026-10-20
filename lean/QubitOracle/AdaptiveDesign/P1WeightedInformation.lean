@@ -1,5 +1,22 @@
+import QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw
+import QubitOracle.AdaptiveDesign.P1PositiveBatches
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
 import QubitOracle.AdaptiveDesign.P1WeightedConsistency
-
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedAxisFisher
+import QubitOracle.Paper.MixedInformationMartingale
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.MixedRadialTangentStage
+import QubitOracle.Paper.MixedRotationalTarget
+import QubitOracle.Paper.MixedStageStability
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitGeneralScheduleFrobeniusTraceInformation
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
+import QubitOracle.Paper.P1AdaptiveRidgePolicy
+import QubitOracle.Paper.P1UniformFrameBorn
 /-! Both P1 Fisher limits for the actual protocol, including the empirical
 realized-setting average and arbitrary positive finite batch schedules. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

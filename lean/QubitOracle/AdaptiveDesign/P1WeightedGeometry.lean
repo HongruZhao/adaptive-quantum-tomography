@@ -1,5 +1,16 @@
 import QubitOracle.AdaptiveDesign.P1WeightedInformation
-
+import QubitOracle.AdaptiveDesign.P1ObservedRidge
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.ConcreteProtocolA1A3
+import QubitOracle.Paper.MixedRadialTangentStage
+import QubitOracle.Paper.MixedRotationalTarget
+import QubitOracle.Paper.OneQubitGeneralScheduleFrobeniusTraceInformation
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
+import QubitOracle.Paper.OneQubitPrespecifiedBatchCumulativeInformationClosure
+import QubitOracle.Paper.P1UniformFrameBorn
+import QubitOracle.Paper.P1UniformFrameInformation
 /-! Closed, center-safe formulas for the least-squares Gram and residual
 covariance. These are distinct from Fisher information. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

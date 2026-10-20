@@ -1,6 +1,7 @@
+import QubitOracle.FiniteGillMassar
 import QubitOracle.Paper.MixedAxisFisher
+import QubitOracle.Paper.MixedOracleGeometry
 import QubitOracle.Paper.MixedOracleMatrix
-
 /-!
 # Uniform information bound for an interior mixed qubit
 

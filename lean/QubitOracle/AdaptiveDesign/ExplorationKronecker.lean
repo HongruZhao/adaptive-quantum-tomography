@@ -1,4 +1,4 @@
-import QubitOracle.AdaptiveDesign.PVMExplorationSchedule
+import Mathlib
 
 /-! Deterministic summation by parts for an arbitrary accumulated budget. -/
 namespace QubitOracle.AdaptiveDesign.ExplorationKronecker

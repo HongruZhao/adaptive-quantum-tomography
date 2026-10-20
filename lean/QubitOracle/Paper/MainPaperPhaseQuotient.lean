@@ -1,5 +1,9 @@
+import QubitOracle.AdaptiveDesign.AffineProjectorCharts
+import QubitOracle.AdaptiveDesign.ProjectiveProjectorEquivalence
 import QubitOracle.AdaptiveDesign.ProjectiveStateManifold
-
+import QubitOracle.AdaptiveDesign.ProjectiveStateTopology
+import QubitOracle.Paper.ProjectiveStateGeometry
+import QubitOracle.Paper.PureStateFoundations
 set_option autoImplicit false
 
 /-! Definition A.1: the actual quotient topology on unit vectors modulo

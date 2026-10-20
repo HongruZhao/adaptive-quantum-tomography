@@ -1,5 +1,4 @@
 import Mathlib
-
 /-!
 # Explicit finite complement library for a globally identifying PFSIC
 

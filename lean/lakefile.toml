@@ -1,12 +1,9 @@
 name = "adaptive_tomography"
 version = "0.1.0"
-defaultTargets = ["AdaptiveTomography", "MainPaperAudit"]
+defaultTargets = ["MainPaperAudit", "SupplementAudit"]
 
 [[lean_lib]]
 name = "QubitOracle"
-
-[[lean_lib]]
-name = "AdaptiveTomography"
 
 [[require]]
 name = "mathlib"
@@ -21,3 +18,9 @@ name = "MainPaperTheorem31"
 
 [[lean_lib]]
 name = "MainPaperAudit"
+
+[[lean_lib]]
+name = "Supplement"
+
+[[lean_lib]]
+name = "SupplementAudit"

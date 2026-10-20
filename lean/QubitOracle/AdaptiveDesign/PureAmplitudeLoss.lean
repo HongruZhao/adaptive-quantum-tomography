@@ -1,5 +1,13 @@
+import QubitOracle.AdaptiveDesign.GeneralPOVMBorn
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
 import QubitOracle.AdaptiveDesign.PureAmplitudeChart
-
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.TwoBasis
 /-! Exact physical pure-state losses in the amplitude chart. -/
 namespace QubitOracle.AdaptiveDesign.TangentGLS
 open QubitOracle QubitOracle.Paper GlobalPFSICHermitian PureMatrixController P2Adaptive

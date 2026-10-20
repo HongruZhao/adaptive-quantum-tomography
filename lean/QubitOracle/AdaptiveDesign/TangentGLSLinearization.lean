@@ -1,5 +1,22 @@
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSActualRates
+import QubitOracle.AdaptiveDesign.TangentGLSAlgebra
+import QubitOracle.AdaptiveDesign.TangentGLSAmbient
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.AdaptiveDesign.TangentGLSFittedInformation
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.AdaptiveDesign.TangentGLSOperatorBounds
 import QubitOracle.AdaptiveDesign.TangentGLSRecordIdentities
-
+import QubitOracle.AdaptiveDesign.TangentGLSStochasticRemainder
+import QubitOracle.AdaptiveDesign.TangentGLSWeightExpansion
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
 /-! Linearization of the actual all-record correction. The coercive normal
 equation turns the proved score and weight remainders into an estimator
 remainder, rather than assuming that the solve is asymptotically efficient. -/

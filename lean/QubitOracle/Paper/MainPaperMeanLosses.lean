@@ -1,6 +1,32 @@
-import QubitOracle.Paper.MainPaperTheorem42
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P1PositiveBatches
+import QubitOracle.AdaptiveDesign.P1QuadraticMeanLoss
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PhasePairPOVM
 import QubitOracle.AdaptiveDesign.PhysicalMeanLossEndpoints
-
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.PurePOVMMeanLoss
+import QubitOracle.AdaptiveDesign.QuantumFidelityBridges
+import QubitOracle.AdaptiveDesign.RidgeBatchSchedule
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.AdaptiveDesign.TangentGLSNormalizedError
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MainPaperPureLimits
+import QubitOracle.Paper.MainPaperTheorem42
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.MixedRotationalTarget
+import QubitOracle.Paper.OneQubitBlochPhysicalState
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
+import QubitOracle.Paper.PureMultilevelDeterministicGeometryClosed
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.Paper.QuantumDistances
 set_option autoImplicit false
 
 /-! Combined completed-batch endpoints for Corollaries 5.2 and 5.3.

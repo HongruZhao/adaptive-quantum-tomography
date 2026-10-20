@@ -1,7 +1,7 @@
-import QubitOracle.AdaptiveDesign.MartingaleBernstein
+import Mathlib
 
 namespace QubitOracle.AdaptiveDesign.BoundedVarianceMGF
-open MeasureTheory ProbabilityTheory Filter BoundedMartingaleSecondMoment
+open MeasureTheory ProbabilityTheory Filter
 open scoped BigOperators Topology
 noncomputable section
 set_option backward.isDefEq.respectTransparency.types false
@@ -68,50 +68,6 @@ theorem euclidean_norm_le_sum_abs {I : Type*} [Fintype I] (x : EuclideanSpace �
   simp only [sq_abs] at hs
   nlinarith [norm_nonneg x,Finset.sum_nonneg (fun i (_ : i ∈ (Finset.univ : Finset I)) => abs_nonneg (x i))]
 
-theorem vector_bernstein {I : Type*} [Fintype I]
-    (F : Filtration ℕ mΩ) (X : ℕ → Ω → EuclideanSpace ℝ I)
-    (ha : ∀ n, StronglyMeasurable[F (n+1)] (X n))
-    (hc : ∀ n, μ[X n | F n] =ᵐ[μ] 0)
-    (C : ℝ) (hC : 0 ≤ C) (hb : ∀ n ω, ‖X n ω‖ ≤ C)
-    (v : ℕ → ℝ) (hv : ∀ n, ∀ᵐ ω ∂μ, μ[fun ω => ‖X n ω‖^2 | F n] ω ≤ v n)
-    (n : ℕ) (V : ℝ) (hV : 0 ≤ V) (hbudget : ∑ k ∈ Finset.range n, v k ≤ V)
-    (x : ℝ) (hx : 0 ≤ x) :
-    μ.real {ω | x ≤ ‖∑ k ∈ Finset.range n, X k ω‖} ≤
-      2*((Fintype.card I:ℝ)+1)*Real.exp
-        (-(x^2)/(4*(1+C)*((Fintype.card I:ℝ)+1)^2*(1+V+x))) := by
-  have hai (i : I) (k : ℕ) : StronglyMeasurable[F (k+1)] (fun ω => X k ω i) :=
-    (EuclideanSpace.proj i).continuous.comp_stronglyMeasurable (ha k)
-  have hib (i : I) (k : ℕ) (ω : Ω) : ‖X k ω i‖ ≤ C :=
-    (PiLp.norm_apply_le (X k ω) i).trans (hb k ω)
-  have hi (k : ℕ) : Integrable (X k) μ := Integrable.of_bound
-    ((ha k).mono (F.le (k+1))).aestronglyMeasurable C (Eventually.of_forall (hb k))
-  have hci (i : I) (k : ℕ) : μ[(fun ω => X k ω i) | F k] =ᵐ[μ] 0 := by
-    have he := (EuclideanSpace.proj i).comp_condExp_comm (m:=F k) (hi k)
-    filter_upwards [he,hc k] with ω heω hcω
-    simpa [Function.comp_def,hcω] using heω.symm
-  have hvi (i : I) (k : ℕ) :
-      ∀ᵐ ω ∂μ, μ[fun ω => (X k ω i)^2 | F k] ω ≤ v k := by
-    have hleft : Integrable (fun ω => (X k ω i)^2) μ := Integrable.of_bound
-      (((hai i k).mono (F.le (k+1))).pow 2).aestronglyMeasurable (C^2)
-      (Eventually.of_forall (fun ω => by rw [norm_pow]; exact pow_le_pow_left₀ (norm_nonneg _) (hib i k ω) 2))
-    have hright : Integrable (fun ω => ‖X k ω‖^2) μ := Integrable.of_bound
-      (((ha k).mono (F.le (k+1))).norm.pow 2).aestronglyMeasurable (C^2)
-      (Eventually.of_forall (fun ω => by rw [norm_pow,norm_norm]; exact pow_le_pow_left₀ (norm_nonneg _) (hb k ω) 2))
-    have hm := condExp_mono (m:=F k) hleft hright (Eventually.of_forall (fun ω => by
-      have hh := pow_le_pow_left₀ (norm_nonneg _) (PiLp.norm_apply_le (X k ω) i) 2
-      simpa only [Real.norm_eq_abs,sq_abs] using hh))
-    filter_upwards [hm,hv k] with ω hmω hvω
-    exact hmω.trans hvω
-  have ht := finite_abs_sum_bernstein (μ:=μ)
-    (fun i ω => partialSum (fun k ω => X k ω i) n ω) V C hV hC
-    (fun i t ht => bernstein_abs F _ (hai i) (hci i) C hC (hib i) v (hvi i) n V hV hbudget t ht) x hx
-  apply (measureReal_mono ?_).trans ht
-  intro ω hω
-  change x ≤ ‖∑ k ∈ Finset.range n, X k ω‖ at hω
-  change x ≤ ∑ i, |partialSum (fun k ω => X k ω i) n ω|
-  apply hω.trans
-  simpa only [partialSum,WithLp.ofLp_sum,Finset.sum_apply] using
-    euclidean_norm_le_sum_abs (∑ k ∈ Finset.range n, X k ω)
 
 end
 end QubitOracle.AdaptiveDesign.BoundedVarianceMGF

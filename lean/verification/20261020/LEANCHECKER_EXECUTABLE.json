@@ -1,8 +1,0 @@
-{
-  "pinned_toolchain": "leanprover/lean4:v4.33.0-rc2",
-  "executable": "bin/leanchecker",
-  "sha256": "257f505f8241ab595c6b557d661fd832dbdace6839ab35d9d1600b3dcbce5880",
-  "size": 78128,
-  "interface_used": "lake env leanchecker -v <selected modules>",
-  "lake_env_resolves_to_pinned_toolchain_executable": true
-}

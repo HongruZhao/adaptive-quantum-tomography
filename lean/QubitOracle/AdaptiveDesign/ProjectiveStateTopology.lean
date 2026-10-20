@@ -1,5 +1,6 @@
 import QubitOracle.AdaptiveDesign.ProjectiveProjectorEquivalence
-
+import QubitOracle.Paper.ProjectiveStateGeometry
+import QubitOracle.Paper.PureStateFoundations
 /-! The quotient and subspace topologies in the ray-to-projector map.
 These are the actual quotient topology on nonzero vectors and the
 induced topology on Hermitian idempotents, not transported definitions.

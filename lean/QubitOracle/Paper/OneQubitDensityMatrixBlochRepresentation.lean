@@ -1,5 +1,7 @@
+import QubitOracle.FiniteGillMassar
 import QubitOracle.Paper.OneQubitMatrixTraceDistance
-
+import QubitOracle.Paper.QuantumDistances
+import QubitOracle.Paper.QubitFoundations
 /-!
 # Bloch representation of every physical one-qubit density matrix
 

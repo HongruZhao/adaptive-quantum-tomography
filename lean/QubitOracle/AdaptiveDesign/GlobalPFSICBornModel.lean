@@ -1,7 +1,10 @@
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
+import QubitOracle.AdaptiveDesign.FiniteFrameCoercivity
+import QubitOracle.AdaptiveDesign.GlobalPFSIC
 import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
 import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
 import QubitOracle.Paper.FiniteKernelPathSpace
-
 /-!
 # Exact physical Born response and all-observation regression frame
 

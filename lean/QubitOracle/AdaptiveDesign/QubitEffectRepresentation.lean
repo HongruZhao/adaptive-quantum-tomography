@@ -1,6 +1,6 @@
-import QubitOracle.FiniteGillMassar
 import QubitOracle.AdaptiveDesign.PhysicalModelCharacterization
-
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.QubitFoundations
 /-! Bloch effect coordinates derived from arbitrary positive qubit effects,
 including zero effects. Completeness is proved from the actual matrix sum. -/
 namespace QubitOracle.AdaptiveDesign.QubitEffectRepresentation

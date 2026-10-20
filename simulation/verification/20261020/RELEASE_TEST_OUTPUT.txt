@@ -1,0 +1,42 @@
+test_average_of_inverse_criteria_differs_from_inverse_of_mean_information (test_design_ensemble.DesignEnsembleTests) ... ok
+test_every_replication_and_each_distinct_reporting_size_enters_summary (test_design_ensemble.DesignEnsembleTests) ... ok
+test_fresh_run_then_design_replay_preserves_valid_base_receipt (test_design_ensemble.DesignEnsembleTests) ... ok
+test_nonfinite_or_incomplete_replicates_are_rejected (test_design_ensemble.DesignEnsembleTests) ... ok
+test_row_extraction_keeps_current_then_accumulated_order (test_design_ensemble.DesignEnsembleTests) ... ok
+test_saving_preserves_all_original_data_and_documents_aggregation (test_design_ensemble.DesignEnsembleTests) ... ok
+test_summary_uses_unbiased_MCSE_without_forcing_monotonicity (test_design_ensemble.DesignEnsembleTests) ... ok
+test_batch_sizes_are_independent_of_observed_counts (test_growing_batches.GrowingBatchEstimatorTests) ... ok
+test_mixed_all_202_batches_enter_literal_scalar_ridge_fit (test_growing_batches.GrowingBatchEstimatorTests) ... ok
+test_mixed_reports_do_not_change_the_measurement_record (test_growing_batches.GrowingBatchEstimatorTests) ... ok
+test_pure_all_records_enter_ridge_and_tangent_correction (test_growing_batches.GrowingBatchEstimatorTests) ... ok
+test_pure_reports_do_not_change_the_measurement_record (test_growing_batches.GrowingBatchEstimatorTests) ... ok
+test_full_schedule_matches_independent_recurrence (test_growing_batches.PredeterminedScheduleTests) ... ok
+test_invalid_batch_vectors_are_rejected (test_growing_batches.PredeterminedScheduleTests) ... ok
+test_nearest_ties_choose_earlier_completed_batch (test_growing_batches.PredeterminedScheduleTests) ... ok
+test_only_final_batch_can_be_clipped (test_growing_batches.PredeterminedScheduleTests) ... ok
+test_optional_default_remains_doubling (test_growing_batches.PredeterminedScheduleTests) ... ok
+test_published_reports_are_nearest_actual_endpoints (test_growing_batches.PredeterminedScheduleTests) ... ok
+test_unreachable_reports_are_rejected_without_splitting (test_growing_batches.PredeterminedScheduleTests) ... ok
+test_bures_open_ball_reset (test_paper_algorithms.MixedPaperAlgorithmTests) ... ok
+test_exact_reference_and_pole_axes (test_paper_algorithms.MixedPaperAlgorithmTests) ... ok
+test_fixed_records_do_not_use_truth_for_selection (test_paper_algorithms.MixedPaperAlgorithmTests) ... ok
+test_frobenius_radius_and_initial_safeguard (test_paper_algorithms.MixedPaperAlgorithmTests) ... ok
+test_generic_radial_transverse_axes_and_allocation (test_paper_algorithms.MixedPaperAlgorithmTests) ... ok
+test_scalar_losses_equal_physical_matrix_losses (test_paper_algorithms.MixedPaperAlgorithmTests) ... ok
+test_unreachable_or_unordered_horizons_are_rejected (test_paper_algorithms.MixedPaperAlgorithmTests) ... ok
+test_all_record_order_invariance (test_paper_algorithms.PurePaperAlgorithmTests) ... ok
+test_complete_reference_law_and_label_probabilities (test_paper_algorithms.PurePaperAlgorithmTests) ... ok
+test_expanded_independent_complement_tangent_objective (test_paper_algorithms.PurePaperAlgorithmTests) ... ok
+test_expanded_individual_record_ridge_objective (test_paper_algorithms.PurePaperAlgorithmTests) ... ok
+test_fixed_largest_algebraic_eigenvalue_ties_and_phase (test_paper_algorithms.PurePaperAlgorithmTests) ... ok
+test_fixed_records_do_not_use_truth_for_alignment (test_paper_algorithms.PurePaperAlgorithmTests) ... ok
+test_householder_first_column_and_unitarity (test_paper_algorithms.PurePaperAlgorithmTests) ... ok
+test_optional_reference_sandwich_targets (test_paper_algorithms.PurePaperAlgorithmTests) ... ok
+test_pure_physical_loss_identity (test_paper_algorithms.PurePaperAlgorithmTests) ... ok
+test_reference_fisher_and_fixed_floor (test_paper_algorithms.PurePaperAlgorithmTests) ... ok
+test_unreachable_or_unordered_horizons_are_rejected (test_paper_algorithms.PurePaperAlgorithmTests) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 2.004s
+
+OK

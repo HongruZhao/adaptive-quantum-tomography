@@ -1,8 +1,10 @@
-import QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristicBounds
 import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
-import QubitOracle.Paper.FiniteAdaptiveBornScoreClosure
 import Mathlib.Analysis.Asymptotics.SpecificAsymptotics
-
+import QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristicBounds
+import QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristicProcess
+import QubitOracle.AdaptiveDesign.FiniteCharacteristicTaylor
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.FiniteAdaptiveBornScoreClosure
 /-! A direct characteristic-function limit for bounded adaptive responses
 whose current conditional variance converges. -/
 namespace QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristic

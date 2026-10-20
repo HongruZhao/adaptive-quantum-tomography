@@ -1,5 +1,9 @@
+import QubitOracle.AdaptiveDesign.FiniteFrameCoercivity
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
 import QubitOracle.AdaptiveDesign.PhasePairFrameBound
-
+import QubitOracle.AdaptiveDesign.PhasePairPOVM
+import QubitOracle.FiniteGillMassar
 namespace QubitOracle.AdaptiveDesign.PhasePair
 open QubitOracle QubitOracle.Paper GeneralPOVM GlobalPFSICHermitian FiniteFrameCoercivity
 open scoped BigOperators InnerProductSpace

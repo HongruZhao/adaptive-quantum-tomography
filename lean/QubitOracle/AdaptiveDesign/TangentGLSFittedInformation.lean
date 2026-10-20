@@ -1,5 +1,25 @@
+import QubitOracle.AdaptiveDesign.FiniteHistoryStatistics
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GeneralPOVMBorn
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMProbabilityLimits
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.SequentialRidgeController
+import QubitOracle.AdaptiveDesign.TangentGLSActualRates
+import QubitOracle.AdaptiveDesign.TangentGLSAlgebra
+import QubitOracle.AdaptiveDesign.TangentGLSAmbient
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.AdaptiveDesign.TangentGLSInformation
 import QubitOracle.AdaptiveDesign.TangentGLSOperatorBounds
-
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.TwoBasis
 /-! The actual fitted information operator converges almost surely. This
 uses consistency and the reference Fisher limit, with no independence
 assumption on the fitted weights. -/

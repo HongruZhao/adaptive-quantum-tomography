@@ -1,6 +1,15 @@
-import QubitOracle.AdaptiveDesign.P1CharacteristicLimit
+import QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw
 import QubitOracle.AdaptiveDesign.BoundedAdaptiveResponseCLT
-
+import QubitOracle.AdaptiveDesign.P1CharacteristicBounds
+import QubitOracle.AdaptiveDesign.P1CharacteristicLimit
+import QubitOracle.AdaptiveDesign.P1CharacteristicProcess
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.CramerWold
+import QubitOracle.Paper.MartingaleCLT
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
 /-! Source-free multivariate CLT for the finite P1 experiment, obtained from
 the elementary characteristic-function proof and Cramer--Wold. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

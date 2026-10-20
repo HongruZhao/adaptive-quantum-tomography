@@ -1,6 +1,5 @@
 import Mathlib.Probability.CentralLimitTheorem
 import Mathlib.Analysis.Complex.Exponential
-
 /-! Elementary uniform characteristic-function remainders for bounded finite
 experiments. This is the analytic ingredient for a direct bounded-response CLT. -/
 namespace QubitOracle.AdaptiveDesign.FiniteCharacteristicTaylor

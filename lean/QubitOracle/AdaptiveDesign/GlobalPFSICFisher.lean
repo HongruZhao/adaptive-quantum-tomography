@@ -1,6 +1,7 @@
 import QubitOracle.AdaptiveDesign.GlobalPFSIC
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
 import QubitOracle.FiniteGillMassar
-
+import QubitOracle.TwoBasis
 /-! # Exact Born Fisher information of the constructed globally identifying POVM -/
 
 namespace QubitOracle.AdaptiveDesign.GlobalPFSIC

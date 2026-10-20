@@ -1,14 +1,13 @@
-import QubitOracle.Paper.OneQubitGeneralScheduleActualSafeInformation
-
-/-!
-# A labeled three-axis qubit Born kernel
-
-An exploitation observation records both the selected axis label and the
-binary projective outcome.  Consequently one physical observation can realize
-the uniform mixture of three projective axes exactly, without requiring a
-batch size divisible by three.  Pilot actions are the degenerate special case
-concentrated on one Cartesian Pauli axis.
--/
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.ConcreteProtocolA1A3
+import QubitOracle.Paper.MixedAxisFisher
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.OneQubitAPSRLSContract
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitFixedDesignInformation
+import QubitOracle.Paper.OneQubitGeneralScheduleAdaptiveBornProtocol
+import QubitOracle.Paper.OneQubitGeneralScheduleAdaptiveScoreCondExp
+/-! Supporting definitions and proved lemmas used by the manuscript. -/
 
 namespace QubitOracle.Paper
 
@@ -176,14 +175,6 @@ theorem qubitLabeledBornResponseKernel_singleton
     simp [Measure.smul_apply, hwz]
   · simp
 
-/-- Score of the binary component at the recorded selected axis.  The label
-weight is parameter-independent and contributes no score term. -/
-def qubitLabeledScoreVector
-    (theta : OneQubitPhysicalParameter)
-    (action : QubitLabeledMeasurementAction)
-    (z : LabeledBinaryOutcome) : EuclideanSpace Real (Fin 3) :=
-  generalScheduleProspectiveScoreVector theta
-    (qubitLabeledActionAxis action z.1).1 z.2
 
 /-- Predictable Fisher matrix of one labeled action. -/
 def qubitLabeledActionFisher
@@ -194,168 +185,7 @@ def qubitLabeledActionFisher
     QubitOracle.mixedAxisFisher theta
       (qubitLabeledActionAxis action j).1
 
-/-- Exact score centering for every labeled action at an interior truth. -/
-theorem qubitLabeledScore_mean_zero
-    (theta : OneQubitPhysicalParameter)
-    (hInterior : QubitOracle.blochNormSq theta.1 < 1)
-    (action : QubitLabeledMeasurementAction) (ell : Fin 3) :
-    (∑ z : LabeledBinaryOutcome,
-      qubitLabeledBornProbability theta action z *
-        qubitLabeledScoreVector theta action z ell) = 0 := by
-  rw [Fintype.sum_prod_type]
-  apply Finset.sum_eq_zero
-  intro j hj
-  rw [sum_binaryOutcome]
-  have hthetaNonnegative : 0 <= QubitOracle.blochNormSq theta.1 := by
-    unfold QubitOracle.blochNormSq
-    exact Finset.sum_nonneg fun i hi => sq_nonneg _
-  have hregular : QubitOracle.blochDot theta.1
-      (qubitLabeledActionAxis action j).1 ^ 2 < 1 := by
-    calc
-      QubitOracle.blochDot theta.1
-          (qubitLabeledActionAxis action j).1 ^ 2 <=
-        QubitOracle.blochNormSq theta.1 *
-          QubitOracle.blochNormSq
-            (qubitLabeledActionAxis action j).1 :=
-        blochDot_sq_le_normSq_mul_normSq theta.1
-          (qubitLabeledActionAxis action j).1
-      _ <= QubitOracle.blochNormSq theta.1 * 1 :=
-        mul_le_mul_of_nonneg_left
-          (qubitLabeledActionAxis action j).2
-          hthetaNonnegative
-      _ < 1 := by simpa using hInterior
-  have hzero := generalScheduleProspectiveScore_mean_zero theta
-    (qubitLabeledActionAxis action j).1 hregular ell
-  have hzero' :
-      binaryBornProbability
-          (generalAxisBornProjection theta
-            (qubitLabeledActionAxis action j)) .plus *
-          generalScheduleProspectiveScoreVector theta
-            (qubitLabeledActionAxis action j).1 .plus ell +
-        binaryBornProbability
-          (generalAxisBornProjection theta
-            (qubitLabeledActionAxis action j)) .minus *
-          generalScheduleProspectiveScoreVector theta
-            (qubitLabeledActionAxis action j).1 .minus ell = 0 := by
-    simpa [generalAxisBornProjection, QubitOracle.blochDot, mul_comm] using hzero
-  simp only [qubitLabeledBornProbability, qubitLabeledScoreVector]
-  calc
-    qubitLabeledActionWeight action j *
-          binaryBornProbability
-            (generalAxisBornProjection theta
-              (qubitLabeledActionAxis action j)) .plus *
-          generalScheduleProspectiveScoreVector theta
-            (qubitLabeledActionAxis action j).1 .plus ell +
-        qubitLabeledActionWeight action j *
-          binaryBornProbability
-            (generalAxisBornProjection theta
-              (qubitLabeledActionAxis action j)) .minus *
-          generalScheduleProspectiveScoreVector theta
-            (qubitLabeledActionAxis action j).1 .minus ell =
-      qubitLabeledActionWeight action j *
-        (binaryBornProbability
-            (generalAxisBornProjection theta
-              (qubitLabeledActionAxis action j)) .plus *
-            generalScheduleProspectiveScoreVector theta
-              (qubitLabeledActionAxis action j).1 .plus ell +
-          binaryBornProbability
-            (generalAxisBornProjection theta
-              (qubitLabeledActionAxis action j)) .minus *
-            generalScheduleProspectiveScoreVector theta
-              (qubitLabeledActionAxis action j).1 .minus ell) := by ring
-    _ = 0 := by rw [hzero']; ring
 
-/-- Exact conditional score covariance equals the labeled-action Fisher
-matrix, entry by entry. -/
-theorem qubitLabeledScore_secondMoment_eq_fisher
-    (theta : OneQubitPhysicalParameter)
-    (hInterior : QubitOracle.blochNormSq theta.1 < 1)
-    (action : QubitLabeledMeasurementAction) (i j : Fin 3) :
-    (∑ z : LabeledBinaryOutcome,
-      qubitLabeledBornProbability theta action z *
-        qubitLabeledScoreVector theta action z i *
-        qubitLabeledScoreVector theta action z j) =
-      qubitLabeledActionFisher theta.1 action i j := by
-  rw [Fintype.sum_prod_type]
-  unfold qubitLabeledActionFisher
-  simp only [Matrix.sum_apply, Matrix.smul_apply, smul_eq_mul]
-  apply Finset.sum_congr rfl
-  intro ell hell
-  rw [sum_binaryOutcome]
-  have hthetaNonnegative : 0 <= QubitOracle.blochNormSq theta.1 := by
-    unfold QubitOracle.blochNormSq
-    exact Finset.sum_nonneg fun i hi => sq_nonneg _
-  have hregular : QubitOracle.blochDot theta.1
-      (qubitLabeledActionAxis action ell).1 ^ 2 < 1 := by
-    calc
-      QubitOracle.blochDot theta.1
-          (qubitLabeledActionAxis action ell).1 ^ 2 <=
-        QubitOracle.blochNormSq theta.1 *
-          QubitOracle.blochNormSq
-            (qubitLabeledActionAxis action ell).1 :=
-        blochDot_sq_le_normSq_mul_normSq theta.1
-          (qubitLabeledActionAxis action ell).1
-      _ <= QubitOracle.blochNormSq theta.1 * 1 :=
-        mul_le_mul_of_nonneg_left
-          (qubitLabeledActionAxis action ell).2
-          hthetaNonnegative
-      _ < 1 := by simpa using hInterior
-  have hfisher := generalScheduleProspectiveScore_secondMoment_eq_fisher
-    theta (qubitLabeledActionAxis action ell).1 hregular i j
-  have hfisher' :
-      binaryBornProbability
-          (generalAxisBornProjection theta
-            (qubitLabeledActionAxis action ell)) .plus *
-          generalScheduleProspectiveScoreVector theta
-            (qubitLabeledActionAxis action ell).1 .plus i *
-          generalScheduleProspectiveScoreVector theta
-            (qubitLabeledActionAxis action ell).1 .plus j +
-        binaryBornProbability
-          (generalAxisBornProjection theta
-            (qubitLabeledActionAxis action ell)) .minus *
-          generalScheduleProspectiveScoreVector theta
-            (qubitLabeledActionAxis action ell).1 .minus i *
-          generalScheduleProspectiveScoreVector theta
-            (qubitLabeledActionAxis action ell).1 .minus j =
-        QubitOracle.mixedAxisFisher theta.1
-          (qubitLabeledActionAxis action ell).1 i j := by
-    simpa [generalAxisBornProjection, QubitOracle.blochDot, mul_comm] using hfisher
-  simp only [qubitLabeledBornProbability, qubitLabeledScoreVector]
-  calc
-    qubitLabeledActionWeight action ell *
-            binaryBornProbability
-              (generalAxisBornProjection theta
-                (qubitLabeledActionAxis action ell)) .plus *
-            generalScheduleProspectiveScoreVector theta
-              (qubitLabeledActionAxis action ell).1 .plus i *
-          generalScheduleProspectiveScoreVector theta
-            (qubitLabeledActionAxis action ell).1 .plus j +
-        qubitLabeledActionWeight action ell *
-            binaryBornProbability
-              (generalAxisBornProjection theta
-                (qubitLabeledActionAxis action ell)) .minus *
-            generalScheduleProspectiveScoreVector theta
-              (qubitLabeledActionAxis action ell).1 .minus i *
-          generalScheduleProspectiveScoreVector theta
-            (qubitLabeledActionAxis action ell).1 .minus j =
-      qubitLabeledActionWeight action ell *
-        (binaryBornProbability
-            (generalAxisBornProjection theta
-              (qubitLabeledActionAxis action ell)) .plus *
-            generalScheduleProspectiveScoreVector theta
-              (qubitLabeledActionAxis action ell).1 .plus i *
-            generalScheduleProspectiveScoreVector theta
-              (qubitLabeledActionAxis action ell).1 .plus j +
-          binaryBornProbability
-            (generalAxisBornProjection theta
-              (qubitLabeledActionAxis action ell)) .minus *
-            generalScheduleProspectiveScoreVector theta
-              (qubitLabeledActionAxis action ell).1 .minus i *
-            generalScheduleProspectiveScoreVector theta
-              (qubitLabeledActionAxis action ell).1 .minus j) := by ring
-    _ = qubitLabeledActionWeight action ell *
-        QubitOracle.mixedAxisFisher theta.1
-          (qubitLabeledActionAxis action ell).1 i j := by rw [hfisher']
 
 /-- A pilot action has exactly the Fisher matrix of its selected Pauli
 coordinate. -/
@@ -367,17 +197,6 @@ theorem qubitLabeledActionFisher_pilot
   simp [qubitLabeledActionFisher, qubitLabeledActionWeight,
     qubitLabeledActionAxis, qubitPauliMixedMeasurementAxis]
 
-/-- One frame observation already has the exact equal-three-axis Fisher
-matrix, independently of the integer batch size. -/
-theorem qubitLabeledActionFisher_frame
-    (theta : RLSVector 3) (frame : QubitThreeAxisFrame) :
-    qubitLabeledActionFisher theta (.frame frame) =
-      generalScheduleEqualAxisInformation theta (fun j => (frame.axis j).1) := by
-  ext i j
-  simp [qubitLabeledActionFisher, qubitLabeledActionWeight,
-    qubitLabeledActionAxis, generalScheduleEqualAxisInformation,
-    Matrix.sum_apply, Matrix.smul_apply]
-  rw [Finset.mul_sum]
 
 end
 

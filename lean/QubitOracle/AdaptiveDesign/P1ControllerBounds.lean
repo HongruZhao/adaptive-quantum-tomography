@@ -1,5 +1,8 @@
 import QubitOracle.AdaptiveDesign.P1FiniteSampleBounds
-
+import QubitOracle.AdaptiveDesign.ExplorationRidgeConsistency
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.P1AdaptiveRidgePolicy
 namespace QubitOracle.AdaptiveDesign.P1Weighted
 open QubitOracle QubitOracle.Paper Filter MeasureTheory ProbabilityTheory AdaptiveResponseMoments
 open scoped BigOperators Topology InnerProductSpace

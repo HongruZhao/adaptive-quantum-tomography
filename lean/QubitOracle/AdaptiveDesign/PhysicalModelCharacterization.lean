@@ -1,7 +1,17 @@
-import QubitOracle.AdaptiveDesign.QuantumFidelityBridges
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PVMGeometry
 import QubitOracle.AdaptiveDesign.PureFiniteAtlas
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.QuantumFidelityBridges
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.OneQubitBlochPhysicalState
 import QubitOracle.Paper.OneQubitDensityMatrixBlochRepresentation
-
+import QubitOracle.Paper.QuantumDistances
+import QubitOracle.Paper.QubitFoundations
 /-! The concrete parameter types describe the physical models in the
 paper: the closed Bloch ball, and all Hermitian trace-one projectors. -/
 namespace QubitOracle.AdaptiveDesign.PhysicalModelCharacterization

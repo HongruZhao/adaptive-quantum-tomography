@@ -1,6 +1,10 @@
+import QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw
+import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
 import QubitOracle.AdaptiveDesign.BoundedResponseQuarterRate
 import QubitOracle.AdaptiveDesign.ProbabilityCalculus
-
+import QubitOracle.AdaptiveDesign.ProbabilityZeroAlgebra
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.FiniteAdaptiveBornScoreClosure
 /-! Root-n tightness of bounded adaptive responses, derived from Mathlib's
 conditional Hoeffding inequality. No moment or rate theorem is postulated. -/
 

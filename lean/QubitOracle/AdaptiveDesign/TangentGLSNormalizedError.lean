@@ -1,5 +1,28 @@
+import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
+import QubitOracle.AdaptiveDesign.BoundedResponseQuarterRate
+import QubitOracle.AdaptiveDesign.FiniteHistoryStatistics
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.ProbabilityCalculus
+import QubitOracle.AdaptiveDesign.ProbabilityZeroAlgebra
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSActualRates
+import QubitOracle.AdaptiveDesign.TangentGLSAmbient
 import QubitOracle.AdaptiveDesign.TangentGLSAsymptoticLinearization
-
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.AdaptiveDesign.TangentGLSFittedInformation
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.AdaptiveDesign.TangentGLSLinearization
+import QubitOracle.AdaptiveDesign.TangentGLSRecordIdentities
+import QubitOracle.AdaptiveDesign.TangentGLSWeightExpansion
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.PureStateFoundations
 /-! The normalized physical output has the same first-order error as the
 intrinsic tangent correction. Its leading term is the true tangent score. -/
 namespace QubitOracle.AdaptiveDesign.TangentGLS

@@ -1,7 +1,7 @@
 import QubitOracle.Paper.BoundedMartingaleAzumaStrongLaw
 import Mathlib.Analysis.PSeries
 import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
-
+import QubitOracle.Paper.BoundedConditionalSubGaussian
 /-! Quantitative bounded-martingale law used by the PVM exploration route.
 Every probability estimate is derived from conditional Hoeffding and
 Borel--Cantelli; no external statistical axiom is introduced. -/

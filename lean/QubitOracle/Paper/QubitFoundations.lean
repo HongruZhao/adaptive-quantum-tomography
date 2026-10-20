@@ -1,6 +1,6 @@
 import QubitOracle.Paper.MixedAxisFisher
 import Mathlib
-
+import QubitOracle.FiniteGillMassar
 /-!
 # Mixed-qubit matrix, SLD, and QFI foundations
 

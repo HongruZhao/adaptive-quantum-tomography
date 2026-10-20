@@ -1,7 +1,25 @@
-import QubitOracle.AdaptiveDesign.FiniteAdaptiveResponseCLT
-import QubitOracle.AdaptiveDesign.TangentGLSEstimator
 import QubitOracle.AdaptiveDesign.AdaptiveConditionalMoments
-
+import QubitOracle.AdaptiveDesign.BoundedAdaptiveResponseCLT
+import QubitOracle.AdaptiveDesign.FiniteAdaptiveResponseCLT
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GeneralPOVMBorn
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PhasePairPOVM
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.CompactLimitTransfer
+import QubitOracle.Paper.FiniteKernelPathSpace
+import QubitOracle.Paper.MartingaleCLT
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.Paper.RankOneStageContinuity
+import QubitOracle.TwoBasis
 /-!
 # Protected, centered Born score used in the efficiency proof
 

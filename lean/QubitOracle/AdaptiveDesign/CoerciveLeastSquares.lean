@@ -2,7 +2,6 @@ import Mathlib.Analysis.InnerProductSpace.PiL2
 import Mathlib.Analysis.SpecificLimits.Basic
 import Mathlib.LinearAlgebra.FiniteDimensional.Basic
 import Mathlib.Tactic
-
 /-!
 # Consistency of an actual coercive ridge least-squares estimator
 

@@ -1,7 +1,12 @@
-import QubitOracle.AdaptiveDesign.P1CharacteristicProcess
 import Mathlib.MeasureTheory.Integral.DominatedConvergence
 import Mathlib.Analysis.SpecificLimits.Normed
-
+import QubitOracle.AdaptiveDesign.FiniteCharacteristicTaylor
+import QubitOracle.AdaptiveDesign.P1CharacteristicProcess
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
 /-! Quantitative characteristic-function comparison for bounded adaptive
 responses. All bounds are proved for the actual finite Born experiment. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

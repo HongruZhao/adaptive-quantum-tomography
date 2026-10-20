@@ -1,6 +1,8 @@
 import QubitOracle.AdaptiveDesign.ExactHouseholder
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.Paper.PureMultilevelNearestPureProjection
 import QubitOracle.Paper.PureMultilevelRankOneProjectorCompact
-
+import QubitOracle.Paper.PureStateFoundations
 /-!
 # A pure-state adaptive controller independent of the unknown truth
 

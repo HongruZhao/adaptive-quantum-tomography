@@ -1,5 +1,9 @@
 import QubitOracle.AdaptiveDesign.GeneralPOVMModel
-
+import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.CompactLimitTransfer
+import QubitOracle.Paper.RankOneStageContinuity
+import QubitOracle.TwoBasis
 /-! # Reference Fisher symmetry is invariant under a correct-ray frame
 The only Fisher hypothesis is a matrix identity at ONE reference state.
 The full unitary-fiber identity is derived, not assumed.

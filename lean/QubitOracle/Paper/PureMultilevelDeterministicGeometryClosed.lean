@@ -1,5 +1,4 @@
 import QubitOracle.Paper.PureStateFoundations
-
 /-!
 # Finite-dimensional pure-state deterministic geometry
 

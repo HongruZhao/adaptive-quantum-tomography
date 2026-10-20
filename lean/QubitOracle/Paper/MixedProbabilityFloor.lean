@@ -1,5 +1,4 @@
 import Mathlib
-
 /-!
 # Mixed-qubit binary probability floor
 

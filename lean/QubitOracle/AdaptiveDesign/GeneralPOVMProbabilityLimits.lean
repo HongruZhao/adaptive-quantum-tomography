@@ -1,7 +1,22 @@
-import QubitOracle.AdaptiveDesign.TangentGLSActualRates
 import QubitOracle.AdaptiveDesign.FiniteHistoryStatistics
+import QubitOracle.AdaptiveDesign.TangentGLSActualRates
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
 import QubitOracle.AdaptiveDesign.GeneralPOVMBorn
-
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.SequentialRidgeController
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.AdaptiveDesign.TangentGLSRecordBounds
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.CompactLimitTransfer
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.Paper.RankOneStageContinuity
 /-! True probabilities become uniformly separated from the known clipping
 floor along the actual adaptive protocol. No convergence of the chosen
 unitary complement is required. -/

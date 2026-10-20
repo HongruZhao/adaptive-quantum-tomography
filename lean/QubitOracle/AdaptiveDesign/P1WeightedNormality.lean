@@ -1,5 +1,20 @@
+import QubitOracle.AdaptiveDesign.P1ObservedRidge
+import QubitOracle.AdaptiveDesign.P1PositiveBatches
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
 import QubitOracle.AdaptiveDesign.P1WeightedCLT
-
+import QubitOracle.AdaptiveDesign.P1WeightedConsistency
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.AdaptiveDesign.P1WeightedCovariance
+import QubitOracle.AdaptiveDesign.P1WeightedGeometry
+import QubitOracle.AdaptiveDesign.P1WeightedInformation
+import QubitOracle.AdaptiveDesign.P1WeightedLimits
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.FiniteAdaptiveBornScoreClosure
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
 /-! Gaussian limits for the literal, all-observation P1 ridge estimator.
 The random inverse Gram and the ridge bias are handled by Slutsky's theorem. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

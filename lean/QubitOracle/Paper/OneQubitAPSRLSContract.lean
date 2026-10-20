@@ -1,5 +1,4 @@
 import Mathlib
-
 /-!
 # Exact Abbasi--Yadkori--Pal--Szepesvari citation contract
 

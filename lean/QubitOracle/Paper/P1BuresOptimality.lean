@@ -1,9 +1,9 @@
+import Mathlib.Analysis.Matrix.Order
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.MixedOracleFeasible
+import QubitOracle.Paper.MixedOracleGeometry
 import QubitOracle.Paper.MixedOracleMatrix
 import QubitOracle.Paper.MixedRotationalTarget
-import QubitOracle.Paper.MixedOracleFeasible
-import QubitOracle.FiniteGillMassar
-import Mathlib.Analysis.Matrix.Order
-
 namespace QubitOracle.AdaptiveDesign.P1
 open scoped BigOperators MatrixOrder
 open QubitOracle.Paper

@@ -1,8 +1,21 @@
-import QubitOracle.AdaptiveDesign.ProtectedBornScore
 import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
-import QubitOracle.AdaptiveDesign.ProbabilityZeroAlgebra
+import QubitOracle.AdaptiveDesign.AdaptiveConditionalMoments
+import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
+import QubitOracle.AdaptiveDesign.BoundedAdaptiveResponseCLT
 import QubitOracle.AdaptiveDesign.FiniteAdaptiveResponseCLT
-
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.ProbabilityZeroAlgebra
+import QubitOracle.AdaptiveDesign.ProtectedBornScore
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.FiniteAdaptiveBornScoreClosure
+import QubitOracle.Paper.MartingaleCLT
+import QubitOracle.TwoBasis
 /-! The correctly normalized efficient score has covariance 2 I, including
 all records numbered 0 through n-1. The Gaussian limit follows
 from the direct bounded finite-response characteristic-function proof. -/

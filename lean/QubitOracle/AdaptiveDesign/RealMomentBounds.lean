@@ -1,5 +1,4 @@
 import QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
-
 /-! Integer moment bounds imply every smaller nonnegative real moment. -/
 namespace QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
 open MeasureTheory Filter

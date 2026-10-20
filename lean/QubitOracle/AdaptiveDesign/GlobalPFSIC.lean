@@ -1,5 +1,4 @@
 import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
-
 /-!
 # Two-latitude, four-phase globally identifying pure-state measurement
 

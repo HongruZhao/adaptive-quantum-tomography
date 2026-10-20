@@ -1,6 +1,0 @@
-import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
-
-#print axioms QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_normalEquation
-#print axioms QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_errorEquation
-#print axioms QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_error_bound
-#print axioms QubitOracle.AdaptiveDesign.CoerciveLeastSquares.ridgeEstimate_tendsto_of_averageInnovation

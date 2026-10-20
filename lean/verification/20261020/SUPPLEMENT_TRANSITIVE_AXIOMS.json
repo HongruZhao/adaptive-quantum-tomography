@@ -1,0 +1,687 @@
+{
+  "QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.exp_chord": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.mgf_partialSum_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.BoundedMartingaleHoeffding.partialSum_subGaussian": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.finite_coordinates": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_rate_ae": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_rate_of_ae_bounded": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.logarithmic_tail": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.strong_law": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate.strong_law_of_ae_bounded": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_real_moments": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.BoundedVarianceMGF.vector_uniformMoment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.assumptions_implementable": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.complete_born_law": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.effect_formula": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.identifying": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.paired_fisher": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.paired_probability_lower": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.paired_probability_lower_attained": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.paired_reference_floor": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.probability_lower": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.probability_lower_attained": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.rankOne": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.reference_probability": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.regular": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.rotated_effect_formula": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.rotation_reference_component": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.rotation_reference_row": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.ElementaryReferencePOVM.weight_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_minimum": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.GlobalPFSIC.effect_reference_probability_value": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.constants_positive": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.effect_decomposition": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.gradient_product": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_at_alignment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_continuous": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.gram_scalar": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.mean_at_alignment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.mean_continuous": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_at_alignment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_continuous": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.moment_limits": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.noise_scalar": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.phaseCoordinate_sum": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceCoordinate_effect": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceCoordinate_effect_phase_sum": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceFrame_coordinate": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.referenceFrame_projection": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.reference_gram": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.LibraryUnweighted.variance_ratio": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MartingaleCharacteristic.condExp_finite_linear_sum": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MartingaleCharacteristic.inner_sq_expansion": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum_charFun": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalizedSum_measurable": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MartingaleCharacteristic.normalized_characteristic_tendsto": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MartingaleCharacteristic.projected_variance_eq": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MartingaleCharacteristic.quadratic_expansion": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MartingaleCharacteristic.scalar_clt": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt_of_ae_bounded_covariance": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MartingaleCharacteristic.vector_clt_of_covariance": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.MultinomialGLSIdentity.covariance_identity": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.bures_inverseGram_moments": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.controller_real_moments": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.controller_uniformMoment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.frobenius_inverseGram_moments": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm_measurable": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.inverseGramNorm_of_lower": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.inverseGram_moments_of_envelope": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.inverseGram_nonempty": [
+    "propext"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.inverseGram_real_moments": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.normalizedError_inverseGram_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.raw_real_moments": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.P1Weighted.raw_uniformMoment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.POVMEstimatorMoments.corrected_uniformMoment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.POVMEstimatorMoments.correction_uniformMoment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.POVMEstimatorMoments.preliminary_uniformMoment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.POVMEstimatorMoments.raw_uniformMoment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.POVMEstimatorMoments.score_uniformMoment": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureMatrixController.matrixCommutator_norm_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_commutes": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_expansion": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureMatrixController.nearestProjector_tangent_remainder": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.PureMatrixController.tangentProjector_doubleCommutator": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SequentialRidgeController.batchBoundary_strictMono": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SequentialRidgeController.batchBoundary_succ": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SequentialRidgeController.batchRefresh_at_boundary": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SequentialRidgeController.batchRefresh_iff": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SequentialRidgeController.batchRefresh_lastRefresh_tendsto": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SequentialRidgeController.consistent_estimate_at_batch_refresh": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SequentialRidgeController.lastRefresh_at_refresh": [
+    "propext"
+  ],
+  "QubitOracle.AdaptiveDesign.SequentialRidgeController.lastRefresh_le": [
+    "propext",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SequentialRidgeController.lastRefresh_monotone": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SequentialRidgeController.lastRefresh_tendsto_of_cofinal": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SequentialRidgeController.le_batchBoundary": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SequentialRidgeController.unitBatch_refresh": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SupplementProbability.gaussian_tail": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.SupplementProbability.real_moments": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.actualCancellationError_secondOrder": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.actualPreliminaryError_rootTight": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.actualProjectorError_norm_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.actualSecondOrderForcing_tight": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.actualWeightRemainder_tight": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.amplitudeCoordinates_chart": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.amplitude_clt_of_projector_clt": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.amplitude_factor_continuousAt": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_norm_le_two": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_norm": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.preliminaryError_normal_norm_sq": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.preliminaryTangentError_norm_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.projector_real_smul": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.pureParameter_norm": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.pureProjector_norm": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_coordinate": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.referenceChart_overlap": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.referenceCoordinate_reference": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_apply": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_difference_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_lipschitz": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_norm_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.tangentProjector_norm_sq": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.tangentVector_norm_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.tangent_norm_sq": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.tangent_numerator": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.tangent_trace_zero": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.toMatrix_norm": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.trueFrame_referenceParameter": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.unnormalizedVector_eq_mulVec": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.unnormalized_projector": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_le": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.updatedState_displacement_sq": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.updatedState_exact_remainder": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.updatedState_matrix_formula": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.updatedState_overlap": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.updatedState_remainder_bound": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "QubitOracle.AdaptiveDesign.TangentGLS.updatedState_remainder_bound_global": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

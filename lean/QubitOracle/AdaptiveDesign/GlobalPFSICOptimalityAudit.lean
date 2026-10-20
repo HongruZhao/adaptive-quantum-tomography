@@ -1,5 +1,0 @@
-import QubitOracle.AdaptiveDesign.GlobalPFSICOptimality
-#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_optimal_over_finitePOVM
-#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.finitePOVM_ties_measurementPOVM_iff
-#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_infidelity_optimality
-#print axioms QubitOracle.AdaptiveDesign.GlobalPFSIC.measurementPOVM_frobenius_optimality

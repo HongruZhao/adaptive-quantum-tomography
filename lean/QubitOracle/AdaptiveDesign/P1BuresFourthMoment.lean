@@ -1,6 +1,18 @@
-import QubitOracle.AdaptiveDesign.P1FiniteSampleBounds
+import QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
 import QubitOracle.AdaptiveDesign.GoodEventMoments
-
+import QubitOracle.AdaptiveDesign.P1FiniteSampleBounds
+import QubitOracle.AdaptiveDesign.P1ObservedRidge
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedConsistency
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.AdaptiveDesign.P1WeightedEndpoints
+import QubitOracle.AdaptiveDesign.P1WeightedNormality
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
 /-! A proved fourth moment for the literal all-record mixed-qubit
 Bures ridge estimator, for every deterministic refresh schedule. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

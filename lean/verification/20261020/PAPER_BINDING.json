@@ -1,0 +1,20 @@
+{
+  "abstract_words": 194,
+  "main_pages": 34,
+  "main_pdf_sha256": "345bb120f2570fc7b334b3db0baff2afbf7edb61050f8e8130796d7527a47446",
+  "paper_mathematical_statements_and_arguments_unchanged": true,
+  "printed_main_result_count": 9,
+  "printed_statement_block_sha256": [
+    "6bebbe0b454781938c4de82109d7380cf0c0b1d950d7fe38da812244b0f50ce2",
+    "56032857b30cd5ce7c30db305f44085f770403dbdd861bfd0f6c8a62177e2344",
+    "f3c8897f214f25e9863b0fa69fa4f6af02b191415ae5f9564a849667f44741b1",
+    "a6a7477cdefd904cb7302e632c68ebbad3d9c6bf5de1e7277c0a0fa60f957fa0",
+    "4e238f62f8a87c366f993fb3e5e95742f64bece3feea14682055ee792b577efe",
+    "7b4bb2a6cef2e7f438b29315357504d7ee2430b7c621c9d70b1d568a1d3631bb",
+    "08cb2efed4fa95a477f629653247d397194389fb88052a71fb6f3cee9d8328d1",
+    "7e4d3d58968d18a4211b19741ca3934e6067b090d9b81e09fdbefadc6c394c5b",
+    "246be651af7da20902de4b95073966bc38323f3703340772b7227de0ebdd077f"
+  ],
+  "proof_source_preservation": "SOURCE_AND_STATEMENT_PRESERVATION.json",
+  "result_numbering_unchanged": true
+}

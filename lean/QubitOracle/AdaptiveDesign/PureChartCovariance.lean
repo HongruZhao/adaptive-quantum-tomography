@@ -1,6 +1,7 @@
 import QubitOracle.AdaptiveDesign.PureSmoothChartEndpoints
+import QubitOracle.AdaptiveDesign.PureMatrixController
 import QubitOracle.AdaptiveDesign.PureSLDMetric
-
+import QubitOracle.TwoBasis
 /-! Identification of the pushed-forward Gaussian covariance with twice
 the inverse SLD metric in any invertible local coordinate system. -/
 namespace QubitOracle.AdaptiveDesign.PureChartCovariance

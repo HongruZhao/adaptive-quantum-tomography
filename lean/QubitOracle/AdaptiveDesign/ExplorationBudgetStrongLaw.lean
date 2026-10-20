@@ -1,6 +1,5 @@
 import QubitOracle.AdaptiveDesign.BoundedMartingaleSecondMoment
 import QubitOracle.AdaptiveDesign.ExplorationKronecker
-
 /-! Exploration-normalized strong law. The cumulative exploration need only
 diverge; its rate relative to n is not used for consistency. -/
 namespace QubitOracle.AdaptiveDesign.ExplorationBudgetStrongLaw

@@ -1,8 +1,9 @@
 import QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw
-import QubitOracle.Paper.FiniteAdaptiveBornScoreClosure
-import QubitOracle.AdaptiveDesign.ProbabilityZeroAlgebra
 import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
-
+import QubitOracle.AdaptiveDesign.ProbabilityZeroAlgebra
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.BoundedConditionalSubGaussian
+import QubitOracle.Paper.FiniteAdaptiveBornScoreClosure
 /-!
 # A sufficient preliminary rate from bounded adaptive noise
 

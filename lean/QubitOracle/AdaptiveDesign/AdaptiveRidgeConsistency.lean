@@ -1,7 +1,7 @@
-import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
-import QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw
 import Mathlib.MeasureTheory.Function.L2Space
-
+import QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
 /-!
 # All-observation ridge consistency on a genuine adaptive experiment
 

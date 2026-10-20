@@ -1,5 +1,7 @@
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
 import QubitOracle.AdaptiveDesign.PVMGeometry
-
 /-! A single orthonormal PVM spans exactly D real Hermitian directions,
 as asserted in the reference-construction appendix. -/
 namespace QubitOracle.AdaptiveDesign.PVMGeometry

@@ -1,5 +1,21 @@
+import QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel
 import QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle
-
+import QubitOracle.AdaptiveDesign.FiniteAdaptiveOracle
+import QubitOracle.AdaptiveDesign.FiniteRegularOracle
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GeneralWeightedOracle
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.InformationCoordinateInvariance
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PureChartDomain
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.PureSLDMetric
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.QubitFoundations
+import QubitOracle.RankOneLosses
+import QubitOracle.TwoBasis
 /-!
 # Theorem 5.1 in arbitrary smooth pure-state coordinates
 

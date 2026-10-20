@@ -1,7 +1,8 @@
-import QubitOracle.AdaptiveDesign.GeneralPOVMModel
 import QubitOracle.AdaptiveDesign.TracelessHermitianDimension
-
-/-! C1 as real spanning, and its necessary number of outcomes. -/
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.FiniteGillMassar
+/-! Supporting definitions and proved lemmas used by the manuscript. -/
 namespace QubitOracle.AdaptiveDesign.ReferenceIdentificationSpanning
 open QubitOracle GeneralPOVM GlobalPFSICHermitian
 open scoped InnerProductSpace
@@ -41,10 +42,6 @@ theorem identifying_iff_real_combination {d : ℕ} {O : Type} [Fintype O]
     intro A _
     exact (Submodule.mem_span_range_iff_exists_fun ℝ).mpr (h A)
 
-theorem identifying_outcome_cardinality {d : ℕ} {O : Type} [Fintype O]
-    (F : FinitePOVM (Fin (d+1)) O) (hF : Identifying F) :
-    (d+1)^2 ≤ Fintype.card O := by
-  exact GeneralPOVM.identifying_card_bound F hF
 
 end
 end QubitOracle.AdaptiveDesign.ReferenceIdentificationSpanning

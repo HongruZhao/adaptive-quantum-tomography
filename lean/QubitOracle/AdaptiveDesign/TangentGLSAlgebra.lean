@@ -1,6 +1,5 @@
-import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
 import Mathlib.Analysis.InnerProductSpace.Projection.Basic
-
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
 /-!
 # The finite-record tangent GLS solve
 

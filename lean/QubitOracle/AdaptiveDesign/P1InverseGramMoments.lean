@@ -1,6 +1,27 @@
+import QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
+import QubitOracle.AdaptiveDesign.GoodEventMoments
+import QubitOracle.AdaptiveDesign.P1FiniteSampleBounds
 import QubitOracle.AdaptiveDesign.P1FrobeniusFourthMoment
+import QubitOracle.AdaptiveDesign.P1GramMoments
+import QubitOracle.AdaptiveDesign.P1InverseAllocationMoments
+import QubitOracle.AdaptiveDesign.P1ObservedRidge
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedCLT
+import QubitOracle.AdaptiveDesign.P1WeightedConsistency
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.AdaptiveDesign.P1WeightedGeometry
+import QubitOracle.AdaptiveDesign.P1WeightedLimits
+import QubitOracle.AdaptiveDesign.P1WeightedNormality
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
 import QubitOracle.AdaptiveDesign.RealMomentBounds
-
+import QubitOracle.AdaptiveDesign.UniformProductMoments
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
+import QubitOracle.Paper.P1AdaptiveRidgePolicy
 /-! Uniform higher moments of the literal normalized inverse ridge Gram.
 The all-history allocation envelope and Gram fluctuations may be dependent. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

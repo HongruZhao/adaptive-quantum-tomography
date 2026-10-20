@@ -1,0 +1,188 @@
+{
+  "date": "2026-10-20",
+  "scope": "Supplementary mathematical coverage; component proofs are distinguished from exact combined statements.",
+  "complete_formalization_of_every_printed_supplementary_statement": false,
+  "rows": [
+    {
+      "paper_result": "Corollary S1.1",
+      "title": "Pure-state loss distributions",
+      "module": "PureLossDistributions",
+      "source": "lean/QubitOracle/AdaptiveDesign/PureLossDistributions.lean",
+      "endpoint_identifiers": [
+        "PureLossDistributions.phasePair",
+        "doubled_gaussian_norm_law"
+      ],
+      "status": "covered main-procedure case",
+      "scope": "The actual phase-paired corrected estimator and its loss distributions."
+    },
+    {
+      "paper_result": "Lemma S3.1",
+      "title": "Bounded martingale sums",
+      "module": "BoundedMartingaleLogRate",
+      "source": "lean/QubitOracle/AdaptiveDesign/BoundedMartingaleLogRate.lean",
+      "endpoint_identifiers": [
+        "BoundedMartingaleLogRate.strong_law_of_ae_bounded",
+        "logarithmic_rate_of_ae_bounded",
+        "finite_coordinates"
+      ],
+      "status": "covered",
+      "scope": "Strong law and logarithmic rates for bounded martingale differences, extended coordinatewise."
+    },
+    {
+      "paper_result": "Lemma S3.2",
+      "title": "Freezing and averaging",
+      "module": "RidgeBatchSchedule",
+      "source": "lean/QubitOracle/AdaptiveDesign/RidgeBatchSchedule.lean",
+      "endpoint_identifiers": [
+        "SequentialRidgeController.lastRefresh_tendsto_of_cofinal",
+        "consistent_estimate_at_batch_refresh"
+      ],
+      "status": "mapped component proofs",
+      "scope": "The refresh/freezing identities and convergence are explicit. Averaging also uses Mathlib Cesaro results; there is no single combined endpoint named after the printed lemma."
+    },
+    {
+      "paper_result": "Lemma S3.3",
+      "title": "Direct adaptive asymptotic normality",
+      "module": "GeneralMartingaleCovarianceCLT",
+      "source": "lean/QubitOracle/AdaptiveDesign/GeneralMartingaleCovarianceCLT.lean",
+      "endpoint_identifiers": [
+        "MartingaleCharacteristic.vector_clt_of_ae_bounded_covariance"
+      ],
+      "status": "covered",
+      "scope": "Bounded Euclidean martingale differences with the stated conditional covariance limit, including positive-semidefinite limits."
+    },
+    {
+      "paper_result": "Lemma S4.1",
+      "title": "Projection and normalization bounds",
+      "module": "SharpTangentGeometry",
+      "source": "lean/QubitOracle/AdaptiveDesign/SharpTangentGeometry.lean",
+      "endpoint_identifiers": [
+        "TangentGLS.preliminaryError_normal_norm_sq",
+        "tangentProjector_lipschitz",
+        "updatedState_remainder_bound",
+        "PureMatrixController.nearestProjector_expansion"
+      ],
+      "status": "generality difference",
+      "scope": "Tangent/retraction identities and constants are retained. The nearest-projector expansion is proved for the implemented deterministic nearestVector selection, including ties; the printed arbitrary nearest-projector selection is broader."
+    },
+    {
+      "paper_result": "Lemma S4.2",
+      "title": "Transfer to smooth coordinates",
+      "module": "PureSmoothChartEndpoints",
+      "source": "lean/QubitOracle/AdaptiveDesign/PureSmoothChartEndpoints.lean",
+      "endpoint_identifiers": [
+        "TangentGLS.amplitude_clt_of_projector_clt",
+        "smoothChart_clt_of_amplitude_clt",
+        "PureChartCovariance.covariance_eq_twice_inverse_qfi"
+      ],
+      "status": "generality difference",
+      "scope": "The transfer endpoints assume almost-sure consistency, whereas the standalone printed lemma assumes convergence in probability. Main algorithm endpoints prove almost-sure consistency. Coordinate identities and covariance transformation are retained."
+    },
+    {
+      "paper_result": "Proposition S5.1",
+      "title": "Reference basis construction",
+      "module": "ElementaryReferencePOVM",
+      "source": "lean/QubitOracle/AdaptiveDesign/ElementaryReferencePOVM.lean",
+      "endpoint_identifiers": [
+        "ElementaryReferencePOVM.assumptions_implementable",
+        "identifying",
+        "regular",
+        "paired_fisher",
+        "paired_probability_lower_attained"
+      ],
+      "status": "covered",
+      "scope": "The concrete finite randomized-projective reference, complete law, positivity, identification and Fisher-symmetry construction."
+    },
+    {
+      "paper_result": "Lemma S6.1",
+      "title": "Multinomial score covariance",
+      "module": "MultinomialGLSIdentity",
+      "source": "lean/QubitOracle/AdaptiveDesign/MultinomialGLSIdentity.lean",
+      "endpoint_identifiers": [
+        "MultinomialGLSIdentity.covariance_identity"
+      ],
+      "status": "covered",
+      "scope": "The finite categorical score/covariance cancellation identity."
+    },
+    {
+      "paper_result": "Lemma S6.2",
+      "title": "Fitted-weight cancellation",
+      "module": "TangentGLSLinearization",
+      "source": "lean/QubitOracle/AdaptiveDesign/TangentGLSLinearization.lean",
+      "endpoint_identifiers": [
+        "TangentGLS.actualCancellationError_secondOrder",
+        "actualSecondOrderForcing_tight",
+        "actualWeightRemainder_tight"
+      ],
+      "status": "generality difference",
+      "scope": "The implemented adaptive GeneralPOVM/Algorithm 3 case is proved. The printed generic predictable rotated-POVM process with an arbitrary qualifying preliminary fit, including the generic ambient inverse-operator limit, has no exactly matching standalone endpoint."
+    },
+    {
+      "paper_result": "Lemma S7.1",
+      "title": "Bounded martingale moments",
+      "module": "SupplementProbability",
+      "source": "lean/QubitOracle/AdaptiveDesign/SupplementProbability.lean",
+      "endpoint_identifiers": [
+        "SupplementProbability.gaussian_tail",
+        "real_moments"
+      ],
+      "status": "covered",
+      "scope": "Gaussian-type tails and all positive real moments for bounded centered Euclidean martingale differences."
+    },
+    {
+      "paper_result": "Proposition S7.2",
+      "title": "Mixed-qubit moment bounds",
+      "module": "SupplementMoments",
+      "source": "lean/QubitOracle/AdaptiveDesign/SupplementMoments.lean",
+      "endpoint_identifiers": [
+        "P1Weighted.inverseGram_real_moments",
+        "raw_real_moments",
+        "controller_real_moments"
+      ],
+      "status": "covered",
+      "scope": "Inverse-Gram and actual raw/physical mixed-estimator moments of all positive real orders; fourth-moment endpoints are also retained."
+    },
+    {
+      "paper_result": "Proposition S7.3",
+      "title": "Pure-state moment bounds",
+      "module": "POVMEstimatorMoments",
+      "source": "lean/QubitOracle/AdaptiveDesign/POVMEstimatorMoments.lean",
+      "endpoint_identifiers": [
+        "POVMEstimatorMoments.raw_uniformMoment",
+        "preliminary_uniformMoment",
+        "score_uniformMoment",
+        "correction_uniformMoment",
+        "corrected_uniformMoment"
+      ],
+      "status": "mapped component proofs",
+      "scope": "All integer moment orders for the actual estimators; RealMomentBounds provides the positive-real-order interpolation used with them."
+    },
+    {
+      "paper_result": "Proposition S8.1",
+      "title": "Identification, positivity and Fisher symmetry",
+      "module": "GlobalPFSICReferenceMinimum",
+      "source": "lean/QubitOracle/AdaptiveDesign/GlobalPFSICReferenceMinimum.lean",
+      "endpoint_identifiers": [
+        "GlobalPFSIC.effect_reference_probability_value",
+        "effect_reference_probability_minimum",
+        "LibraryUnweighted.moment_limits"
+      ],
+      "status": "covered",
+      "scope": "The finite covariance-example measurement, positivity and exact minimum reference mass, with its information and identifying results."
+    },
+    {
+      "paper_result": "Lemma S8.2",
+      "title": "Tangent Gram and noise coefficients",
+      "module": "LibraryTangentFrame",
+      "source": "lean/QubitOracle/AdaptiveDesign/LibraryTangentFrame.lean",
+      "endpoint_identifiers": [
+        "LibraryUnweighted.reference_gram",
+        "noise_scalar",
+        "moment_limits",
+        "variance_ratio"
+      ],
+      "status": "covered",
+      "scope": "Finite frame/noise sums and resulting aligned covariance coefficients."
+    }
+  ]
+}

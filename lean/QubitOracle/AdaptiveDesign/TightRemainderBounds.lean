@@ -1,5 +1,4 @@
 import QubitOracle.AdaptiveDesign.ProbabilityCalculus
-
 /-! Products and pathwise localization for stochastic order bounds.
 None of these arguments assumes independence of the factors. -/
 namespace QubitOracle.AdaptiveDesign.ProbabilityCalculus

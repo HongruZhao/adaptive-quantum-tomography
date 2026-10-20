@@ -1,7 +1,10 @@
-import QubitOracle.AdaptiveDesign.PhysicalModelCharacterization
 import QubitOracle.AdaptiveDesign.P1WeightedInformation
+import QubitOracle.AdaptiveDesign.PhysicalModelCharacterization
 import Mathlib.Analysis.InnerProductSpace.LinearMap
-
+import QubitOracle.AdaptiveDesign.QuantumFidelityBridges
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.MixedAxisFisher
+import QubitOracle.Paper.QubitFoundations
 /-! Exact qubit eigenvalues and a uniform local Lipschitz bound for
 single-axis Fisher information, independent of the chosen axis. -/
 namespace QubitOracle.AdaptiveDesign.QubitLocalInformation

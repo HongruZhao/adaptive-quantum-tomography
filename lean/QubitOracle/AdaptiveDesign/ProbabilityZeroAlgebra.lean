@@ -1,6 +1,5 @@
 import Mathlib.MeasureTheory.Function.ConvergenceInMeasure
 import Mathlib.Analysis.Normed.Module.Basic
-
 /-! Elementary convergence-in-probability operations, with no statistical axiom. -/
 
 namespace QubitOracle.AdaptiveDesign.ProbabilityZeroAlgebra

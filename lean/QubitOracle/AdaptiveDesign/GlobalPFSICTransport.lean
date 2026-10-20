@@ -1,8 +1,10 @@
+import QubitOracle.AdaptiveDesign.GlobalPFSIC
 import QubitOracle.AdaptiveDesign.GlobalPFSICFisher
-import QubitOracle.Paper.RankOneStageContinuity
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
 import QubitOracle.FiniteGillMassar
-import QubitOracle.AdaptiveDesign.CompactFiberContinuity
-
+import QubitOracle.Paper.CompactLimitTransfer
+import QubitOracle.Paper.RankOneStageContinuity
+import QubitOracle.TwoBasis
 /-! Actual transported effects and their fixed-truth Fisher information.
 The controller unitary is an explicit argument throughout. -/
 namespace QubitOracle.AdaptiveDesign.GlobalPFSIC

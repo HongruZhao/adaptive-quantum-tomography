@@ -1,5 +1,4 @@
 import QubitOracle.AdaptiveDesign.SequentialRidgeController
-
 /-!
 # Every positive predetermined batch sequence is an admissible refresh rule
 

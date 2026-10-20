@@ -1,7 +1,13 @@
 import QubitOracle.AdaptiveDesign.ProjectiveStateManifold
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.PureSLDMetric
 import QubitOracle.AdaptiveDesign.PureTangentCurves
 import QubitOracle.AdaptiveDesign.PureTangentDimension
-
+import QubitOracle.AdaptiveDesign.SharpTangentGeometry
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.Paper.PureStateFoundations
 set_option autoImplicit false
 
 /-! Definition A.4 with the manuscript's Fubini--Study normalization.

@@ -1,6 +1,12 @@
-import QubitOracle.AdaptiveDesign.MartingaleCharacteristicBounds
 import QubitOracle.AdaptiveDesign.FiniteAdaptiveResponseCLT
-
+import QubitOracle.AdaptiveDesign.BoundedMartingaleSecondMoment
+import QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristicBounds
+import QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristicLimit
+import QubitOracle.AdaptiveDesign.FiniteCharacteristicTaylor
+import QubitOracle.AdaptiveDesign.MartingaleCharacteristicBounds
+import QubitOracle.Paper.CramerWold
+import QubitOracle.Paper.FiniteAdaptiveBornScoreClosure
+import QubitOracle.Paper.MartingaleCLT
 /-! A direct Gaussian limit for bounded martingale differences on arbitrary
 filtered probability spaces. Current conditional covariance converges to a
 deterministic limit; no independence, finite outcome space, or black-box

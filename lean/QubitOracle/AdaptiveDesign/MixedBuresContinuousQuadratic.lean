@@ -1,6 +1,9 @@
 import QubitOracle.AdaptiveDesign.P1ControllerBounds
+import QubitOracle.AdaptiveDesign.P1ObservedRidge
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.FiniteGillMassar
 import QubitOracle.Paper.OneQubitMixedBuresFidelityLocalRemainder
-
+import QubitOracle.Paper.P1BuresOptimality
 /-! An exact continuous quadratic representation of mixed-qubit Bures
 loss. It remains valid at pure estimated states when the truth is interior. -/
 namespace QubitOracle.AdaptiveDesign.MixedBuresContinuousQuadratic

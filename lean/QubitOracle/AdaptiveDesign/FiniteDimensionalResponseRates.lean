@@ -1,5 +1,10 @@
+import QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw
 import QubitOracle.AdaptiveDesign.AdaptiveResponseTightness
-
+import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
+import QubitOracle.AdaptiveDesign.BoundedResponseQuarterRate
+import QubitOracle.AdaptiveDesign.ProbabilityCalculus
+import QubitOracle.AdaptiveDesign.ProbabilityZeroAlgebra
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
 /-! Rates in arbitrary finite-dimensional normed spaces. In particular the
 bounded adaptive response may be a linear operator, with its operator norm. -/
 

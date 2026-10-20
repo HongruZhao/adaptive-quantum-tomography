@@ -1,7 +1,22 @@
+import QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
 import QubitOracle.AdaptiveDesign.P1ControllerFourthMoment
 import QubitOracle.AdaptiveDesign.P1GaussianQuadratic
+import QubitOracle.AdaptiveDesign.P1ObservedRidge
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.AdaptiveDesign.P1WeightedCovariance
+import QubitOracle.AdaptiveDesign.P1WeightedEndpoints
+import QubitOracle.AdaptiveDesign.P1WeightedGeometry
+import QubitOracle.AdaptiveDesign.P1WeightedOptimality
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
 import QubitOracle.AdaptiveDesign.WeakMeanLossTransfer
-
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.MixedRotationalTarget
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
+import QubitOracle.Paper.QubitFoundations
 /-! Expected quadratic loss for the actual mixed-qubit physical
 estimator. Uniform integrability is derived from its fourth moment. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

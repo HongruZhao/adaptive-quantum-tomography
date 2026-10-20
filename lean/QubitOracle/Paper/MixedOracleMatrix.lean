@@ -1,6 +1,5 @@
-import QubitOracle.Paper.MixedOracleGeometry
 import Mathlib.Algebra.Order.BigOperators.Ring.Finset
-
+import QubitOracle.Paper.MixedOracleGeometry
 /-!
 # Matrix inequalities for the mixed-state oracle
 

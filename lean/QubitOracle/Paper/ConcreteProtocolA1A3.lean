@@ -1,44 +1,11 @@
-import QubitOracle.Paper.ProtocolAudit
+import QubitOracle.FiniteGillMassar
 import QubitOracle.Paper.AdaptiveTrajectoryExperiment
-import QubitOracle.Paper.HybridPathDomination
-import QubitOracle.Paper.MixedResponseDomination
-import QubitOracle.Paper.FiniteOutcomeResponseDomination
-import QubitOracle.Paper.MixedProtocolDQM
-import QubitOracle.Paper.ProtocolInformationComposition
-import QubitOracle.Paper.ExplorationDeletionRate
-import QubitOracle.Paper.ExceptionalRounds
-import QubitOracle.Paper.MixedBuresLocal
-import QubitOracle.Paper.PureBuresLocal
-import QubitOracle.Paper.RankOneAdaptiveInformationUniform
-
-/-!
-# Concrete protocol verification of Proposition 1 assumptions (A1)--(A3)
-
-This module replaces the proposition-valued audit records in `ProtocolAudit`
-by propositions about the two protocols used in the paper.  It does not assume
-LAN, convergence to a Gaussian experiment, or an already assembled (A1)--(A3)
-bundle.
-
-The mixed-qubit result is the strongest bridge.  The protocol action is a
-Bloch axis with norm at most one.  The type of `PredictableAdaptiveProtocol`
-already proves predictable, parameter-free design selection.  The binary Born
-kernel identity gives full-path domination, the interior mixed DQM theorem
-gives summable DQM, and the mixed local-Bures theorem gives (A3).
-
-For both protocols, the remaining score assumptions are exposed below at the
-primitive level: martingale partial sums, square-integrable projected
-increments, eventual vanishing of conditional Lindeberg tails, componentwise
-information limits plus the exact conditional-variance identification, and a
-componentwise likelihood Taylor bound.  None of these hypotheses has LAN or
-the final (A1)--(A3) bundle as its conclusion.
-
-For the rank-one protocol, no protocol-specific square-root DQM theorem is yet
-available in the imported library.  Consequently its explicit nonnegative
-per-round `B / N^2` DQM rate remains a hypothesis; the generic protocol DQM
-lemma sums that rate.  Controller consistency enters through the component
-information hypotheses (and can be supplied by
-`rankOneTailInformationConvergence_of_uniformInformationBound`).
--/
+import QubitOracle.Paper.MartingaleCLT
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.ProtocolRegularity
+import QubitOracle.RankOneLosses
+import QubitOracle.TwoBasis
+/-! Supporting definitions and proved lemmas used by the manuscript. -/
 
 namespace QubitOracle.Paper
 
@@ -131,44 +98,7 @@ def FiniteBornResponseLaw
     ((protocol.response theta) action) {outcome} =
       ENNReal.ofReal (bornMass theta action outcome)
 
-/-- The mixed Born law and the interior probability floor give domination of
-all localized hybrid path measures by the base path measure. -/
-theorem mixedProtocol_fullPathDomination
-    {D : Type*} [Fintype D]
-    (protocol : PredictableAdaptiveProtocol
-      (Fin 3 -> Real) MixedMeasurementAxis BinaryOutcome)
-    (localize : Nat -> LANParameter D -> Fin 3 -> Real)
-    (theta0 : Fin 3 -> Real)
-    (hBorn : MixedBinaryBornResponseLaw protocol)
-    (hInterior : blochNorm theta0 < 1) :
-    HybridFullPathDominatedByBase protocol localize theta0 := by
-  apply mixedHybridFullPathDominatedByBase
-    protocol
-    (fun axis => QubitOracle.blochDot theta0 axis.1)
-    localize theta0 (blochNorm theta0)
-  · intro axis
-    exact abs_blochDot_le_blochNorm theta0 axis.1 axis.2
-  · exact hInterior
-  · intro axis outcome
-    exact hBorn theta0 axis outcome
 
-/-- A positive base Born mass gives rank-one full-path domination. -/
-theorem rankOneProtocol_fullPathDomination
-    {D Theta Action : Type*} {Outcome : Type}
-    [Fintype D]
-    [MeasurableSpace Action] [MeasurableSpace Outcome]
-    [MeasurableSingletonClass Outcome] [Countable Outcome]
-    (protocol : PredictableAdaptiveProtocol Theta Action Outcome)
-    (bornMass : Theta -> Action -> Outcome -> Real)
-    (localize : Nat -> LANParameter D -> Theta)
-    (theta0 : Theta)
-    (hBorn : FiniteBornResponseLaw protocol bornMass)
-    (hBasePositive : forall action outcome, 0 < bornMass theta0 action outcome) :
-    HybridFullPathDominatedByBase protocol localize theta0 := by
-  apply hybridFullPathDominatedByBase_of_base_singleton_pos
-  intro action outcome
-  rw [hBorn theta0 action outcome]
-  exact ENNReal.ofReal_pos.2 (hBasePositive action outcome)
 
 /-! ## Primitive martingale and information bridges for (A2) -/
 
@@ -230,211 +160,13 @@ theorem BoundedScoreLindebergPrimitives.toConditionalLindeberg
   intro omega
   simp [hn omega]
 
-/-- Scalar, pathwise information components for every Cramer--Wold direction.
-The final covariance convergence is not a field.  It is derived below from
-these component limits and the exact conditional-variance identification. -/
-structure ScalarInformationCompositionPrimitives
-    {D : Type*} [Fintype D]
-    (problem : MartingaleCLTProblem D)
-    (M : Matrix D D Real) where
-  epsilon : Nat -> Real
-  realized : MartingaleScoreSpace D -> problem.Omega -> Nat -> Real
-  predictable : MartingaleScoreSpace D -> problem.Omega -> Nat -> Real
-  exploitation : MartingaleScoreSpace D -> problem.Omega -> Nat -> Real
-  exploration : MartingaleScoreSpace D -> problem.Omega -> Nat -> Real
-  round_decomposition :
-    forall u omega i,
-      predictable u omega i =
-        predictableMixtureInformation epsilon
-          (exploitation u omega) (exploration u omega) i
-  exploitation_limit :
-    letI : MeasurableSpace problem.Omega := problem.measurableSpace
-    forall u,
-      ∀ᵐ omega ∂problem.mu,
-        Tendsto
-          (fun N => normalizedProtocolInformation
-            (exploitationInformation epsilon (exploitation u omega)) N)
-          atTop (nhds (martingaleScoreQuadraticForm M u))
-  exploration_limit :
-    letI : MeasurableSpace problem.Omega := problem.measurableSpace
-    forall u,
-      ∀ᵐ omega ∂problem.mu,
-        Tendsto
-          (fun N => normalizedProtocolInformation
-            (explorationInformation epsilon (exploration u omega)) N)
-          atTop (nhds 0)
-  innovation_limit :
-    letI : MeasurableSpace problem.Omega := problem.measurableSpace
-    forall u,
-      ∀ᵐ omega ∂problem.mu,
-        Tendsto
-          (fun N => normalizedProtocolInformation
-            (informationInnovation (realized u omega) (predictable u omega)) N)
-          atTop (nhds 0)
-  normalized_realized_measurable :
-    letI : MeasurableSpace problem.Omega := problem.measurableSpace
-    forall u N,
-      AEStronglyMeasurable
-        (fun omega => normalizedProtocolInformation (realized u omega) N)
-        problem.mu
-  conditional_variance_identification :
-    letI : MeasurableSpace problem.Omega := problem.measurableSpace
-    forall u N,
-      hallHeydeArrayConditionalVariance problem.mu problem.filtration
-          (problem.projectedIncrement u) N =ᵐ[problem.mu]
-        fun omega => normalizedProtocolInformation (realized u omega) N
 
-/-- Protocol information composition plus almost-sure-to-in-probability
-transfer gives the exact conditional covariance convergence required by the
-martingale CLT. -/
-theorem ScalarInformationCompositionPrimitives.toConditionalCovariance
-    {D : Type*} [Fintype D]
-    {problem : MartingaleCLTProblem D}
-    {M : Matrix D D Real}
-    (h : ScalarInformationCompositionPrimitives problem M) :
-    problem.ConditionalCovarianceConverges M := by
-  letI : MeasurableSpace problem.Omega := problem.measurableSpace
-  letI : IsProbabilityMeasure problem.mu := problem.probabilityMeasure
-  intro u
-  have hae :
-      ∀ᵐ omega ∂problem.mu,
-        Tendsto
-          (fun N => normalizedProtocolInformation (h.realized u omega) N)
-          atTop (nhds (martingaleScoreQuadraticForm M u)) :=
-    ae_normalizedProtocolInformation_tendsto_of_components
-      problem.mu (h.realized u) (h.predictable u) h.epsilon
-      (h.exploitation u) (h.exploration u)
-      (martingaleScoreQuadraticForm M u)
-      (h.round_decomposition u)
-      (h.exploitation_limit u) (h.exploration_limit u)
-      (h.innovation_limit u)
-  have hmeasure :
-      TendstoInMeasure problem.mu
-        (fun N omega => normalizedProtocolInformation (h.realized u omega) N)
-        atTop (fun _ => martingaleScoreQuadraticForm M u) :=
-    tendstoInMeasure_of_tendsto_ae
-      (h.normalized_realized_measurable u) hae
-  exact hmeasure.congr
-    (fun N => (h.conditional_variance_identification u N).symm)
-    (Filter.Eventually.of_forall fun _ => rfl)
 
 /-! ## A componentwise LAN remainder, without assuming LAN -/
 
-/-- The exact log-likelihood error appearing in the definition of LAN. -/
-def concreteProtocolLANError
-    {D : Type*} [Fintype D]
-    (E : Nat -> StatisticalExperiment (LANParameter D))
-    (J : Matrix D D Real)
-    (score : (N : Nat) -> (E N).Sample -> LANParameter D)
-    (N : Nat) (h : LANParameter D) (omega : (E N).Sample) : Real :=
-  experimentLogLikelihoodRatio (E N) h 0 omega -
-    (inner Real h (score N omega) - (1 / 2) * lanQuadraticForm J h)
 
-/-- Explicit regular/information/exceptional Taylor data.  The fields are a
-pointwise decomposition and quantitative component bounds, not a remainder
-convergence or LAN assumption. -/
-structure ComponentwiseLANRemainderPrimitives
-    {D : Type*} [Fintype D]
-    (E : Nat -> StatisticalExperiment (LANParameter D))
-    (J : Matrix D D Real)
-    (score : (N : Nat) -> (E N).Sample -> LANParameter D)
-    (expectedExceptionalCount : Nat -> Real) where
-  regularError : (N : Nat) -> LANParameter D -> (E N).Sample -> Real
-  informationError : (N : Nat) -> LANParameter D -> (E N).Sample -> Real
-  exceptionalError : (N : Nat) -> LANParameter D -> (E N).Sample -> Real
-  regularConstant : Real
-  informationBound : Nat -> Real
-  exceptionalBuresConstant : Real
-  decomposition :
-    forall N h omega,
-      concreteProtocolLANError E J score N h omega =
-        regularError N h omega + informationError N h omega +
-          exceptionalError N h omega
-  regular_bound :
-    forall N h omega,
-      |regularError N h omega| <= regularConstant / (N : Real)
-  information_bound :
-    forall N h omega,
-      |informationError N h omega| <= informationBound N
-  informationBound_tendsto_zero :
-    Tendsto informationBound atTop (nhds 0)
-  exceptional_bound :
-    forall N h omega,
-      |exceptionalError N h omega| <=
-        exceptionalBuresConstant / (N : Real) * expectedExceptionalCount N
 
-/-- A deterministic uniform bound tending to zero implies the probability
-form of the LAN remainder. -/
-theorem lanRemainder_of_uniform_protocol_error
-    {D : Type*} [Fintype D]
-    (E : Nat -> StatisticalExperiment (LANParameter D))
-    (J : Matrix D D Real)
-    (score : (N : Nat) -> (E N).Sample -> LANParameter D)
-    (bound : Nat -> Real)
-    (hbound : Tendsto bound atTop (nhds 0))
-    (herror : forall N h omega,
-      |concreteProtocolLANError E J score N h omega| <= bound N) :
-    LANRemainderConvergesInProbability E J score := by
-  intro h epsilon hepsilon
-  have heventually : ∀ᶠ N in atTop, bound N < epsilon :=
-    (tendsto_order.1 hbound).2 epsilon hepsilon
-  refine Filter.Tendsto.congr' ?_ tendsto_const_nhds
-  filter_upwards [heventually] with N hN
-  have hset :
-      {omega : (E N).Sample |
-        epsilon <= |concreteProtocolLANError E J score N h omega|} = ∅ := by
-    ext omega
-    simp only [Set.mem_setOf_eq, Set.mem_empty_iff_false, iff_false]
-    exact not_le_of_gt (lt_of_le_of_lt (herror N h omega) hN)
-  change 0 = (E N).measure 0
-      {omega : (E N).Sample |
-        epsilon <= |concreteProtocolLANError E J score N h omega|}
-  rw [hset, measure_empty]
 
-/-- The componentwise Taylor bounds and (A3)'s sublinear exceptional count
-produce the exact LAN likelihood remainder required by the primitive theorem. -/
-theorem ComponentwiseLANRemainderPrimitives.toLANRemainder
-    {D : Type*} [Fintype D]
-    {E : Nat -> StatisticalExperiment (LANParameter D)}
-    {J : Matrix D D Real}
-    {score : (N : Nat) -> (E N).Sample -> LANParameter D}
-    {expectedExceptionalCount : Nat -> Real}
-    (data : ComponentwiseLANRemainderPrimitives
-      E J score expectedExceptionalCount)
-    (hExceptional : ExceptionalCountSublinearInMean expectedExceptionalCount) :
-    LANRemainderConvergesInProbability E J score := by
-  let bound : Nat -> Real := fun N =>
-    data.regularConstant / (N : Real) + data.informationBound N +
-      data.exceptionalBuresConstant / (N : Real) * expectedExceptionalCount N
-  have hRegular :
-      Tendsto (fun N : Nat => data.regularConstant / (N : Real))
-        atTop (nhds 0) :=
-    tendsto_div_natCast_zero data.regularConstant
-  have hExceptionalBound :
-      Tendsto
-        (fun N : Nat =>
-          data.exceptionalBuresConstant / (N : Real) *
-            expectedExceptionalCount N)
-        atTop (nhds 0) :=
-    exceptionalBuresMass_tendsto_zero expectedExceptionalCount
-      data.exceptionalBuresConstant hExceptional
-  have hBound : Tendsto bound atTop (nhds 0) := by
-    simpa [bound] using
-      (hRegular.add data.informationBound_tendsto_zero).add hExceptionalBound
-  apply lanRemainder_of_uniform_protocol_error E J score bound hBound
-  intro N h omega
-  rw [data.decomposition N h omega]
-  calc
-    |data.regularError N h omega + data.informationError N h omega +
-        data.exceptionalError N h omega| <=
-        |data.regularError N h omega| + |data.informationError N h omega| +
-          |data.exceptionalError N h omega| :=
-      abs_add_three _ _ _
-    _ <= bound N := by
-      exact add_le_add
-        (add_le_add (data.regular_bound N h omega)
-          (data.information_bound N h omega))
-        (data.exceptional_bound N h omega)
 
 /-! ## Mixed-qubit protocol -/
 
@@ -446,69 +178,13 @@ def mixedProtocolPathAxis
     MixedMeasurementAxis :=
   protocol.design i (adaptiveInfinitePathPrefix i omega)
 
-/-- The exact summable square-root DQM statement for the mixed protocol. -/
-def MixedProtocolSummableDQM
-    (protocol : PredictableAdaptiveProtocol
-      (Fin 3 -> Real) MixedMeasurementAxis BinaryOutcome)
-    (theta direction : Fin 3 -> Real) : Prop :=
-  TendstoInMeasure
-    (adaptiveInfiniteTrajectoryMeasure protocol theta)
-    (fun N omega =>
-      ∑ i ∈ Finset.range N,
-        mixedProjectiveDQMDefectAt N theta direction
-          (mixedProtocolPathAxis protocol omega i).1)
-    atTop 0
 
-/-- Interior mixed-qubit DQM is unconditional once the state is interior. -/
-theorem mixedProtocol_summableDQM
-    (protocol : PredictableAdaptiveProtocol
-      (Fin 3 -> Real) MixedMeasurementAxis BinaryOutcome)
-    (theta direction : Fin 3 -> Real)
-    (hInterior : blochNorm theta < 1) :
-    MixedProtocolSummableDQM protocol theta direction := by
-  apply mixedProtocol_SDQM_tendstoInMeasure
-    (adaptiveInfiniteTrajectoryMeasure protocol theta)
-    (fun N => Finset.range N)
-    (fun _ omega i => (mixedProtocolPathAxis protocol omega i).1)
-    theta direction hInterior
-  · intro N
-    simp
-  · intro N omega i hi
-    exact (mixedProtocolPathAxis protocol omega i).2
 
 /-- The mixed protocol has no exceptional rounds. -/
 def mixedExpectedExceptionalCount : Nat -> Real := fun _ => 0
 
-/-- Zero exceptional rounds satisfy (A3) unconditionally. -/
-theorem mixedExpectedExceptionalCount_sublinear :
-    ExceptionalCountSublinearInMean mixedExpectedExceptionalCount := by
-  simp [ExceptionalCountSublinearInMean, mixedExpectedExceptionalCount]
 
-/-- Compact-uniform local Bures control used by mixed (A3). -/
-def MixedLocalBuresQuadratic (theta : Fin 3 -> Real) : Prop :=
-  forall (shots : Nat), 0 < shots -> forall a h R,
-    0 <= R -> QubitOracle.blochNormSq h <= R ->
-    a ^ 2 = ((shots : Real)⁻¹) ->
-    2 * |QubitOracle.blochDot theta (a • h)| +
-        QubitOracle.blochNormSq (a • h) <=
-      1 - QubitOracle.blochNormSq theta ->
-    mixedBlochBuresSq theta (a • h) <=
-      2 * R / (1 - QubitOracle.blochNormSq theta) / (shots : Real)
 
-/-- Mixed local Bures control follows from interiority. -/
-theorem mixedLocalBuresQuadratic_of_interior
-    (theta : Fin 3 -> Real)
-    (hInterior : blochNorm theta < 1) :
-    MixedLocalBuresQuadratic theta := by
-  have hInteriorSq : QubitOracle.blochNormSq theta < 1 := by
-    calc
-      QubitOracle.blochNormSq theta = blochNorm theta ^ 2 :=
-        (blochNorm_sq theta).symm
-      _ < 1 := by
-        nlinarith [blochNorm_nonnegative theta]
-  intro shots hshots a h R hR hradius ha hlocal
-  exact mixedBlochBuresSq_compact_upper shots hshots a theta h R
-    hInteriorSq hR hradius ha hlocal
 
 /-- The martingale problem on the actual infinite adaptive path. -/
 abbrev AdaptivePathFiltration
@@ -516,175 +192,13 @@ abbrev AdaptivePathFiltration
   Nat -> Filtration Nat
     (inferInstance : MeasurableSpace (AdaptiveInfinitePath Outcome))
 
-/-- The martingale problem on the actual infinite adaptive path. -/
-abbrev concreteHybridMartingaleProblem
-    {D Theta Action : Type*} {Outcome : Type}
-    [Fintype D]
-    [MeasurableSpace Action] [MeasurableSpace Outcome]
-    [MeasurableSingletonClass Outcome] [Countable Outcome]
-    (protocol : PredictableAdaptiveProtocol Theta Action Outcome)
-    (theta0 : Theta)
-    (filtration : AdaptivePathFiltration Outcome)
-    (increment : Nat -> Nat -> AdaptiveInfinitePath Outcome ->
-      MartingaleScoreSpace D) :
-    MartingaleCLTProblem D :=
-  fixedSampleMartingaleProblem
-    (adaptiveInfiniteTrajectoryMeasure protocol theta0)
-    (adaptiveInfiniteTrajectoryMeasure_isProbability protocol theta0)
-    filtration increment
 
-/-- Concrete mixed claims, not arbitrary proposition names. -/
-def mixedProtocolClaims
-    (protocol : PredictableAdaptiveProtocol
-      (Fin 3 -> Real) MixedMeasurementAxis BinaryOutcome)
-    (theta0 direction : Fin 3 -> Real)
-    (filtration : AdaptivePathFiltration BinaryOutcome)
-    (increment : Nat -> Nat -> AdaptiveInfinitePath BinaryOutcome ->
-      MartingaleScoreSpace (Fin 3))
-    (M : Matrix (Fin 3) (Fin 3) Real) :
-    ProtocolAudit.AdaptiveLANClaims where
-  policyPredictable := forall N, Measurable (protocol.design N)
-  externalRandomizationParameterIndependent := ParameterFreeDesign protocol
-  conditionalOutcomeLaw := MixedBinaryBornResponseLaw protocol
-  regularIndicatorPredictable :=
-    PredictableRegularIndicator
-      (allRoundsRegular (Outcome := BinaryOutcome))
-  summableDQM := MixedProtocolSummableDQM protocol theta0 direction
-  scoreConditionalMeanZero :=
-    MartingaleCLTProblem.IsSquareIntegrableMartingaleDifferenceArray
-      (concreteHybridMartingaleProblem protocol theta0 filtration increment)
-  informationConvergence :=
-    MartingaleCLTProblem.ConditionalCovarianceConverges
-      (concreteHybridMartingaleProblem protocol theta0 filtration increment) M
-  informationLimitPositiveDefinite := M.PosDef
-  martingaleLindeberg :=
-    MartingaleCLTProblem.HasConditionalLindeberg
-      (concreteHybridMartingaleProblem protocol theta0 filtration increment)
-  exceptionalRoundsSublinearInMean :=
-    ExceptionalCountSublinearInMean mixedExpectedExceptionalCount
-  localBuresQuadratic := MixedLocalBuresQuadratic theta0
 
-/-- Conditions (A1)--(A3) for the proposed mixed-qubit protocol.  No LAN field
-is assumed. -/
-theorem mixedProtocol_A1A3
-    (protocol : PredictableAdaptiveProtocol
-      (Fin 3 -> Real) MixedMeasurementAxis BinaryOutcome)
-    (theta0 direction : Fin 3 -> Real)
-    (filtration : AdaptivePathFiltration BinaryOutcome)
-    (increment : Nat -> Nat -> AdaptiveInfinitePath BinaryOutcome ->
-      MartingaleScoreSpace (Fin 3))
-    (M : Matrix (Fin 3) (Fin 3) Real)
-    (hBorn : MixedBinaryBornResponseLaw protocol)
-    (hInterior : blochNorm theta0 < 1)
-    (hM : M.PosDef)
-    (hMDS : MartingaleDifferencePrimitives
-      (concreteHybridMartingaleProblem protocol theta0 filtration increment))
-    (hLindeberg : BoundedScoreLindebergPrimitives
-      (concreteHybridMartingaleProblem protocol theta0 filtration increment))
-    (hInformation : ScalarInformationCompositionPrimitives
-      (concreteHybridMartingaleProblem protocol theta0 filtration increment) M) :
-    ProtocolAudit.AdaptiveLANConditions
-      (mixedProtocolClaims protocol theta0 direction filtration increment M) := by
-  apply ProtocolAudit.mixedProtocolEvidence_dischargesAdaptiveLAN
-  exact
-    { a1PolicyPredictable := protocol.design_measurable
-      a1ExternalRandomizationParameterIndependent :=
-        protocol_parameterFreeDesign protocol
-      a1ConditionalOutcomeLaw := hBorn
-      a1RegularIndicatorPredictable := allRoundsRegular_predictable
-      a2SummableDQM :=
-        mixedProtocol_summableDQM protocol theta0 direction hInterior
-      a2ScoreConditionalMeanZero := hMDS.toMartingaleDifferenceArray
-      a2InformationConvergence := hInformation.toConditionalCovariance
-      a2InformationLimitPositiveDefinite := hM
-      a2MartingaleLindeberg := hLindeberg.toConditionalLindeberg
-      a3ExceptionalRoundsSublinearInMean :=
-        mixedExpectedExceptionalCount_sublinear
-      a3LocalBuresQuadratic :=
-        mixedLocalBuresQuadratic_of_interior theta0 hInterior }
 
-/-- End-to-end mixed-qubit result: concrete (A1)--(A3) and the existing
-primitive adaptive LAN theorem.  The conclusion is the paper's canonical LAN
-label; neither LAN nor Gaussian convergence is an input. -/
-theorem mixedProtocol_A1A3_and_primitiveLAN
-    (protocol : PredictableAdaptiveProtocol
-      (Fin 3 -> Real) MixedMeasurementAxis BinaryOutcome)
-    (localize : Nat -> LANParameter (Fin 3) -> Fin 3 -> Real)
-    (theta0 direction : Fin 3 -> Real)
-    (filtration : AdaptivePathFiltration BinaryOutcome)
-    (increment : Nat -> Nat -> AdaptiveInfinitePath BinaryOutcome ->
-      MartingaleScoreSpace (Fin 3))
-    (M : Matrix (Fin 3) (Fin 3) Real)
-    (hBase : HasFixedLocalizedBase localize theta0)
-    (hBorn : MixedBinaryBornResponseLaw protocol)
-    (hInterior : blochNorm theta0 < 1)
-    (hM : M.PosDef)
-    (hMDS : MartingaleDifferencePrimitives
-      (concreteHybridMartingaleProblem protocol theta0 filtration increment))
-    (hLindeberg : BoundedScoreLindebergPrimitives
-      (concreteHybridMartingaleProblem protocol theta0 filtration increment))
-    (hInformation : ScalarInformationCompositionPrimitives
-      (concreteHybridMartingaleProblem protocol theta0 filtration increment) M)
-    (hTerminalMeasurable : forall N,
-      AEMeasurable (hybridInfiniteTerminalScore increment N)
-        (adaptiveInfiniteTrajectoryMeasure protocol theta0))
-    (hTaylor : ComponentwiseLANRemainderPrimitives
-      (localizedHybridInfinitePathExperimentSequence protocol localize theta0)
-      M (hybridInfiniteTerminalScore increment)
-      mixedExpectedExceptionalCount) :
-    ProtocolAudit.AdaptiveLANConditions
-        (mixedProtocolClaims protocol theta0 direction filtration increment M) ∧
-      Label.eq_adaptive_LAN
-        (localizedHybridInfinitePathExperimentSequence protocol localize theta0)
-        M (hybridInfiniteTerminalScore increment) := by
-  have hConditions := mixedProtocol_A1A3 protocol theta0 direction filtration
-    increment M hBorn hInterior hM hMDS hLindeberg hInformation
-  have hDomination :=
-    mixedProtocol_fullPathDomination protocol localize theta0 hBorn hInterior
-  have hRemainder :=
-    hTaylor.toLANRemainder mixedExpectedExceptionalCount_sublinear
-  have hLAN := adaptiveLANSequence_of_hybrid_martingale_conditions
-    protocol localize theta0 hBase hDomination filtration increment M hM
-    hMDS.toMartingaleDifferenceArray hLindeberg.toConditionalLindeberg
-    hInformation.toConditionalCovariance hTerminalMeasurable hRemainder
-  exact ⟨hConditions, hLAN⟩
 
 /-! ## Rank-one protocol -/
 
-/-- Expected exceptional count: deterministic terminal burn-in, scheduled
-exploration, and any additional safeguard failures. -/
-def rankOneExpectedExceptionalCount
-    (epsilon : Nat -> Real) (safeguardExpectedCount : Nat -> Real) :
-    Nat -> Real :=
-  fun N =>
-    (terminalBurnInCutoff N : Real) +
-      (∑ k ∈ Finset.range N, epsilon (k + 1)) +
-        safeguardExpectedCount N
 
-/-- Burn-in and exploration are already proved sublinear.  Therefore only the
-additional safeguard-failure count remains as an (A3) hypothesis. -/
-theorem rankOneExpectedExceptionalCount_sublinear
-    (epsilon : Nat -> Real)
-    (safeguardExpectedCount : Nat -> Real)
-    (hSchedule : Tendsto (explorationScheduleAverage epsilon) atTop (nhds 0))
-    (hSafeguard : ExceptionalCountSublinearInMean safeguardExpectedCount) :
-    ExceptionalCountSublinearInMean
-      (rankOneExpectedExceptionalCount epsilon safeguardExpectedCount) := by
-  have hsum :=
-    (terminalBurnInAverage_tendsto_zero.add hSchedule).add hSafeguard
-  change Tendsto
-    (fun N => rankOneExpectedExceptionalCount epsilon safeguardExpectedCount N /
-      (N : Real)) atTop (nhds 0)
-  have hsum0 :
-      Tendsto
-        (fun N => terminalBurnInAverage N + explorationScheduleAverage epsilon N +
-          safeguardExpectedCount N / (N : Real)) atTop (nhds 0) := by
-    simpa using hsum
-  apply hsum0.congr'
-  filter_upwards with N
-  simp only [terminalBurnInAverage, explorationScheduleAverage,
-    rankOneExpectedExceptionalCount]
-  ring
 
 /-- Generic square-root DQM sum for the actual rank-one history. -/
 def RankOneProtocolSummableDQM
@@ -695,22 +209,6 @@ def RankOneProtocolSummableDQM
   TendstoInMeasure mu
     (fun N omega => ∑ i ∈ rounds N, defect N omega i) atTop 0
 
-/-- An explicit nonnegative `B / N^2` per-round rank-one DQM rate sums to
-`o(1)`. -/
-theorem rankOneProtocol_summableDQM_of_rate
-    {Omega I : Type*} [MeasurableSpace Omega]
-    (mu : Measure Omega)
-    (rounds : Nat -> Finset I)
-    (defect : Nat -> Omega -> I -> Real)
-    (B : Real) (hB : 0 <= B)
-    (hCard : forall N, (rounds N).card <= N)
-    (hNonnegative : forall N omega, ∀ i ∈ rounds N,
-      0 <= defect N omega i)
-    (hRate : forall N, 0 < N -> forall omega, ∀ i ∈ rounds N,
-      defect N omega i <= B / (N : Real) ^ 2) :
-    RankOneProtocolSummableDQM mu rounds defect :=
-  protocolDQMRate_tendstoInMeasure mu rounds defect B hB hCard
-    hNonnegative hRate
 
 /-- Compact-uniform rank-one local Bures control. -/
 def RankOneLocalBuresQuadratic (n : Nat) : Prop :=
@@ -720,182 +218,10 @@ def RankOneLocalBuresQuadratic (n : Nat) : Prop :=
     a ^ 2 * tangentRadiusSq h <= 4 ->
     buresChartLoss (a • h) <= (R / 4 + R ^ 2 / 16) / (shots : Real)
 
-/-- Rank-one local Bures control is unconditional on the chart domain. -/
-theorem rankOneLocalBuresQuadratic_verified (n : Nat) :
-    RankOneLocalBuresQuadratic n := by
-  intro shots hshots a h R hR hradius ha hchart
-  exact pureProtocolBuresCompact_upper shots hshots a h R hR hradius ha hchart
 
-/-- Existing controller/information theorem for the rank-one two-basis policy.
-This alias records the intended supplier of the controller-consistency part of
-`ScalarInformationCompositionPrimitives`. -/
-abbrev rankOneControllerInformationCertificate :=
-  @rankOneTailInformationConvergence_of_uniformInformationBound
 
-/-- Concrete rank-one claims. -/
-def rankOneProtocolClaims
-    {n : Nat} {Theta L : Type*} {Y : Type}
-    [Fintype L]
-    [MeasurableSpace (RankOneSetting L)]
-    [MeasurableSpace Y] [MeasurableSingletonClass Y] [Countable Y]
-    (protocol : PredictableAdaptiveProtocol Theta (RankOneSetting L) Y)
-    (bornMass : Theta -> RankOneSetting L -> Y -> Real)
-    (regular : Nat -> AdaptiveTrajectory Y -> Bool)
-    (rounds : Nat -> Finset Nat)
-    (defect : Nat -> AdaptiveInfinitePath Y -> Nat -> Real)
-    (epsilon : Nat -> Real)
-    (safeguardExpectedCount : Nat -> Real)
-    (theta0 : Theta)
-    (filtration : AdaptivePathFiltration Y)
-    (increment : Nat -> Nat -> AdaptiveInfinitePath Y ->
-      MartingaleScoreSpace (TangentIndex n))
-    (M : Matrix (TangentIndex n) (TangentIndex n) Real) :
-    ProtocolAudit.AdaptiveLANClaims where
-  policyPredictable := forall N, Measurable (protocol.design N)
-  externalRandomizationParameterIndependent := ParameterFreeDesign protocol
-  conditionalOutcomeLaw := FiniteBornResponseLaw protocol bornMass
-  regularIndicatorPredictable := PredictableRegularIndicator regular
-  summableDQM := RankOneProtocolSummableDQM
-    (adaptiveInfiniteTrajectoryMeasure protocol theta0) rounds defect
-  scoreConditionalMeanZero :=
-    MartingaleCLTProblem.IsSquareIntegrableMartingaleDifferenceArray
-      (concreteHybridMartingaleProblem protocol theta0 filtration increment)
-  informationConvergence :=
-    MartingaleCLTProblem.ConditionalCovarianceConverges
-      (concreteHybridMartingaleProblem protocol theta0 filtration increment) M
-  informationLimitPositiveDefinite := M.PosDef
-  martingaleLindeberg :=
-    MartingaleCLTProblem.HasConditionalLindeberg
-      (concreteHybridMartingaleProblem protocol theta0 filtration increment)
-  exceptionalRoundsSublinearInMean := ExceptionalCountSublinearInMean
-    (rankOneExpectedExceptionalCount epsilon safeguardExpectedCount)
-  localBuresQuadratic := RankOneLocalBuresQuadratic n
 
-/-- Conditions (A1)--(A3) for the proposed rank-one protocol. -/
-theorem rankOneProtocol_A1A3
-    {n : Nat} {Theta L : Type*} {Y : Type}
-    [Fintype L]
-    [MeasurableSpace (RankOneSetting L)]
-    [MeasurableSpace Y] [MeasurableSingletonClass Y] [Countable Y]
-    (protocol : PredictableAdaptiveProtocol Theta (RankOneSetting L) Y)
-    (bornMass : Theta -> RankOneSetting L -> Y -> Real)
-    (regular : Nat -> AdaptiveTrajectory Y -> Bool)
-    (rounds : Nat -> Finset Nat)
-    (defect : Nat -> AdaptiveInfinitePath Y -> Nat -> Real)
-    (epsilon : Nat -> Real)
-    (safeguardExpectedCount : Nat -> Real)
-    (theta0 : Theta)
-    (filtration : AdaptivePathFiltration Y)
-    (increment : Nat -> Nat -> AdaptiveInfinitePath Y ->
-      MartingaleScoreSpace (TangentIndex n))
-    (M : Matrix (TangentIndex n) (TangentIndex n) Real)
-    (hBorn : FiniteBornResponseLaw protocol bornMass)
-    (hRegular : PredictableRegularIndicator regular)
-    (B : Real) (hB : 0 <= B)
-    (hCard : forall N, (rounds N).card <= N)
-    (hDQMNonnegative : forall N omega, ∀ i ∈ rounds N,
-      0 <= defect N omega i)
-    (hDQMRate : forall N, 0 < N -> forall omega, ∀ i ∈ rounds N,
-      defect N omega i <= B / (N : Real) ^ 2)
-    (hM : M.PosDef)
-    (hMDS : MartingaleDifferencePrimitives
-      (concreteHybridMartingaleProblem protocol theta0 filtration increment))
-    (hLindeberg : BoundedScoreLindebergPrimitives
-      (concreteHybridMartingaleProblem protocol theta0 filtration increment))
-    (hInformation : ScalarInformationCompositionPrimitives
-      (concreteHybridMartingaleProblem protocol theta0 filtration increment) M)
-    (hSchedule : Tendsto (explorationScheduleAverage epsilon) atTop (nhds 0))
-    (hSafeguard : ExceptionalCountSublinearInMean safeguardExpectedCount) :
-    ProtocolAudit.AdaptiveLANConditions
-      (rankOneProtocolClaims protocol bornMass regular rounds defect epsilon
-        safeguardExpectedCount theta0 filtration increment M) := by
-  apply ProtocolAudit.rankOneProtocolEvidence_dischargesAdaptiveLAN
-  exact
-    { a1PolicyPredictable := protocol.design_measurable
-      a1ExternalRandomizationParameterIndependent :=
-        protocol_parameterFreeDesign protocol
-      a1ConditionalOutcomeLaw := hBorn
-      a1RegularIndicatorPredictable := hRegular
-      a2SummableDQM := rankOneProtocol_summableDQM_of_rate
-        (adaptiveInfiniteTrajectoryMeasure protocol theta0) rounds defect B hB
-        hCard hDQMNonnegative hDQMRate
-      a2ScoreConditionalMeanZero := hMDS.toMartingaleDifferenceArray
-      a2InformationConvergence := hInformation.toConditionalCovariance
-      a2InformationLimitPositiveDefinite := hM
-      a2MartingaleLindeberg := hLindeberg.toConditionalLindeberg
-      a3ExceptionalRoundsSublinearInMean :=
-        rankOneExpectedExceptionalCount_sublinear epsilon
-          safeguardExpectedCount hSchedule hSafeguard
-      a3LocalBuresQuadratic := rankOneLocalBuresQuadratic_verified n }
 
-/-- End-to-end rank-one result: concrete (A1)--(A3), full-path domination,
-componentwise LAN remainder, and the primitive adaptive LAN theorem. -/
-theorem rankOneProtocol_A1A3_and_primitiveLAN
-    {n : Nat} {Theta L : Type*} {Y : Type}
-    [Fintype L] [Fintype Y]
-    [MeasurableSpace (RankOneSetting L)]
-    [MeasurableSingletonClass (RankOneSetting L)]
-    [MeasurableSpace Y] [MeasurableSingletonClass Y]
-    (protocol : PredictableAdaptiveProtocol Theta (RankOneSetting L) Y)
-    (bornMass : Theta -> RankOneSetting L -> Y -> Real)
-    (localize : Nat -> LANParameter (TangentIndex n) -> Theta)
-    (regular : Nat -> AdaptiveTrajectory Y -> Bool)
-    (rounds : Nat -> Finset Nat)
-    (defect : Nat -> AdaptiveInfinitePath Y -> Nat -> Real)
-    (epsilon : Nat -> Real)
-    (safeguardExpectedCount : Nat -> Real)
-    (theta0 : Theta)
-    (filtration : AdaptivePathFiltration Y)
-    (increment : Nat -> Nat -> AdaptiveInfinitePath Y ->
-      MartingaleScoreSpace (TangentIndex n))
-    (M : Matrix (TangentIndex n) (TangentIndex n) Real)
-    (hBase : HasFixedLocalizedBase localize theta0)
-    (hBorn : FiniteBornResponseLaw protocol bornMass)
-    (hBasePositive : forall action outcome,
-      0 < bornMass theta0 action outcome)
-    (hRegular : PredictableRegularIndicator regular)
-    (B : Real) (hB : 0 <= B)
-    (hCard : forall N, (rounds N).card <= N)
-    (hDQMNonnegative : forall N omega, ∀ i ∈ rounds N,
-      0 <= defect N omega i)
-    (hDQMRate : forall N, 0 < N -> forall omega, ∀ i ∈ rounds N,
-      defect N omega i <= B / (N : Real) ^ 2)
-    (hM : M.PosDef)
-    (hMDS : MartingaleDifferencePrimitives
-      (concreteHybridMartingaleProblem protocol theta0 filtration increment))
-    (hLindeberg : BoundedScoreLindebergPrimitives
-      (concreteHybridMartingaleProblem protocol theta0 filtration increment))
-    (hInformation : ScalarInformationCompositionPrimitives
-      (concreteHybridMartingaleProblem protocol theta0 filtration increment) M)
-    (hSchedule : Tendsto (explorationScheduleAverage epsilon) atTop (nhds 0))
-    (hSafeguard : ExceptionalCountSublinearInMean safeguardExpectedCount)
-    (hTerminalMeasurable : forall N,
-      AEMeasurable (hybridInfiniteTerminalScore increment N)
-        (adaptiveInfiniteTrajectoryMeasure protocol theta0))
-    (hTaylor : ComponentwiseLANRemainderPrimitives
-      (localizedHybridInfinitePathExperimentSequence protocol localize theta0)
-      M (hybridInfiniteTerminalScore increment)
-      (rankOneExpectedExceptionalCount epsilon safeguardExpectedCount)) :
-    ProtocolAudit.AdaptiveLANConditions
-        (rankOneProtocolClaims protocol bornMass regular rounds defect epsilon
-          safeguardExpectedCount theta0 filtration increment M) ∧
-      Label.eq_adaptive_LAN
-        (localizedHybridInfinitePathExperimentSequence protocol localize theta0)
-        M (hybridInfiniteTerminalScore increment) := by
-  have hConditions := rankOneProtocol_A1A3 protocol bornMass regular rounds
-    defect epsilon safeguardExpectedCount theta0 filtration increment M hBorn
-    hRegular B hB hCard hDQMNonnegative hDQMRate hM hMDS hLindeberg
-    hInformation hSchedule hSafeguard
-  have hDomination := rankOneProtocol_fullPathDomination protocol bornMass
-    localize theta0 hBorn hBasePositive
-  have hExceptional := rankOneExpectedExceptionalCount_sublinear epsilon
-    safeguardExpectedCount hSchedule hSafeguard
-  have hRemainder := hTaylor.toLANRemainder hExceptional
-  have hLAN := adaptiveLANSequence_of_hybrid_martingale_conditions
-    protocol localize theta0 hBase hDomination filtration increment M hM
-    hMDS.toMartingaleDifferenceArray hLindeberg.toConditionalLindeberg
-    hInformation.toConditionalCovariance hTerminalMeasurable hRemainder
-  exact ⟨hConditions, hLAN⟩
 
 end
 

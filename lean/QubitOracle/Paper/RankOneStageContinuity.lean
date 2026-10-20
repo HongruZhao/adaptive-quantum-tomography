@@ -1,11 +1,7 @@
-import QubitOracle.Paper.RankOneComplementInvariance
-import QubitOracle.Paper.CompactLimitTransfer
-import QubitOracle.Paper.PureProbabilityFloor
 import Mathlib.Analysis.CStarAlgebra.Matrix
-
-/-!
-# Continuity of moving rank-one two-basis information
--/
+import QubitOracle.Paper.CompactLimitTransfer
+import QubitOracle.TwoBasis
+/-! Supporting definitions and proved lemmas used by the manuscript. -/
 
 namespace QubitOracle
 namespace Paper
@@ -246,23 +242,6 @@ theorem controllerTauBasis_succ_apply_of_overlap_one {n : Nat}
     a.succ (Fin.succ_ne_zero a)]
   simp [tauBasis_apply, phase]
 
-/-- Rotated tangent rows for the phase-adjusted fiber complement. -/
-theorem rotatedTangentRows_fiberComplement_apply {n : Nat}
-    (F : OracleFrame n)
-    (U : Matrix (Fin (n + 1)) (Fin (n + 1)) Complex)
-    (a : Fin n) (k : Fin (n + 1)) :
-    rotatedTangentRows F (fiberComplement U) a k =
-      star (U 0 0) *
-        ∑ l : Fin n, (U a.succ l.succ * (F.W l.succ k : Complex)) := by
-  unfold rotatedTangentRows fiberComplement oracleTangentRows
-  change (∑ l : Fin n, ((star (U 0 0) * U a.succ l.succ) *
-      (F.W l.succ k : Complex))) =
-    star (U 0 0) *
-      ∑ l : Fin n, (U a.succ l.succ * (F.W l.succ k : Complex))
-  rw [Finset.mul_sum]
-  apply Finset.sum_congr rfl
-  intro l hl
-  ring
 
 /-- Both adapted bases have the uniform oracle probabilities on the exact
 true-ray fiber. -/
@@ -298,97 +277,11 @@ theorem controllerTauProbability_eq_baseProbability_of_overlap_one {n : Nat}
   simp
   ring
 
-/-- On the exact fiber, fixed-chart gradients are the arbitrarily rotated
-complement gradients from the invariant calculation. -/
-theorem controllerChiGradient_eq_rotated_of_overlap_one {n : Nat}
-    (F : OracleFrame n)
-    (U : Matrix (Fin (n + 1)) (Fin (n + 1)) Complex)
-    (hU : U ∈ Matrix.unitaryGroup (Fin (n + 1)) Complex)
-    (hoverlap : controllerTrueOverlapSq U = 1)
-    (k : Fin (n + 1)) :
-    fixedChartBasisGradient (controllerChiBasis F U) k =
-      rotatedChiGradient F (fiberComplement U) k := by
-  funext x
-  rcases x with a | a <;>
-    simp only [fixedChartBasisGradient, rotatedChiGradient] <;>
-    rw [controllerChiBasis_zero_apply_of_overlap_one F U hU hoverlap k,
-      controllerChiBasis_succ_apply_of_overlap_one F U hU hoverlap a k,
-      rotatedTangentRows_fiberComplement_apply] <;>
-    simp [star_mul', Complex.mul_re, Complex.mul_im] <;> ring
 
-theorem controllerTauGradient_eq_rotated_of_overlap_one {n : Nat}
-    (F : OracleFrame n)
-    (U : Matrix (Fin (n + 1)) (Fin (n + 1)) Complex)
-    (hU : U ∈ Matrix.unitaryGroup (Fin (n + 1)) Complex)
-    (hoverlap : controllerTrueOverlapSq U = 1)
-    (k : Fin (n + 1)) :
-    fixedChartBasisGradient (controllerTauBasis F U) k =
-      rotatedTauGradient F (fiberComplement U) k := by
-  funext x
-  rcases x with a | a <;>
-    simp only [fixedChartBasisGradient, rotatedTauGradient] <;>
-    rw [controllerTauBasis_zero_apply_of_overlap_one F U hU hoverlap k,
-      controllerTauBasis_succ_apply_of_overlap_one F U hU hoverlap a k,
-      rotatedTangentRows_fiberComplement_apply] <;>
-    simp [star_mul', Complex.mul_re, Complex.mul_im] <;> ring
 
-/-- Exact identification of the two fixed-chart Fisher matrices with the
-rotated-complement matrices. -/
-theorem controllerChiFisher_eq_rotated_of_overlap_one {n : Nat}
-    (F : OracleFrame n)
-    (U : Matrix (Fin (n + 1)) (Fin (n + 1)) Complex)
-    (hU : U ∈ Matrix.unitaryGroup (Fin (n + 1)) Complex)
-    (hoverlap : controllerTrueOverlapSq U = 1) :
-    fixedChartBasisFisher (controllerChiBasis F U) =
-      rotatedChiFisher F (fiberComplement U) := by
-  ext x y
-  unfold fixedChartBasisFisher rotatedChiFisher classicalFisher
-  apply Finset.sum_congr rfl
-  intro k hk
-  rw [controllerChiProbability_eq_baseProbability_of_overlap_one
-      F U hU hoverlap k,
-    controllerChiGradient_eq_rotated_of_overlap_one F U hU hoverlap]
 
-theorem controllerTauFisher_eq_rotated_of_overlap_one {n : Nat}
-    (F : OracleFrame n)
-    (U : Matrix (Fin (n + 1)) (Fin (n + 1)) Complex)
-    (hU : U ∈ Matrix.unitaryGroup (Fin (n + 1)) Complex)
-    (hoverlap : controllerTrueOverlapSq U = 1) :
-    fixedChartBasisFisher (controllerTauBasis F U) =
-      rotatedTauFisher F (fiberComplement U) := by
-  ext x y
-  unfold fixedChartBasisFisher rotatedTauFisher classicalFisher
-  apply Finset.sum_congr rfl
-  intro k hk
-  rw [controllerTauProbability_eq_baseProbability_of_overlap_one
-      F U hU hoverlap k,
-    controllerTauGradient_eq_rotated_of_overlap_one F U hU hoverlap]
 
-/-- On every exact true-ray fiber, the exploitation information is `I/2`,
-independently of the complement frame and controller phase. -/
-theorem rankOneStageInformation_eq_half_identity_of_overlap_one {n : Nat}
-    (F : OracleFrame n)
-    (U : Matrix (Fin (n + 1)) (Fin (n + 1)) Complex)
-    (hU : U ∈ Matrix.unitaryGroup (Fin (n + 1)) Complex)
-    (hoverlap : controllerTrueOverlapSq U = 1) :
-    rankOneStageInformation F U =
-      (1 / 2 : Real) •
-        (1 : Matrix (TangentIndex n) (TangentIndex n) Real) := by
-  unfold rankOneStageInformation
-  rw [controllerChiFisher_eq_rotated_of_overlap_one F U hU hoverlap,
-    controllerTauFisher_eq_rotated_of_overlap_one F U hU hoverlap]
-  exact rotatedEqualMixtureFisher_eq_half_identity F (fiberComplement U)
-    (fiberComplement_mem_unitary U hU hoverlap)
 
-/-- The paper's strict `1/(2d)` margin below the oracle probability `1/d`. -/
-theorem halfDimensionInv_lt_baseProbability {n : Nat}
-    (F : OracleFrame n) (k : Fin (n + 1)) :
-    1 / (2 * (n + 1 : Real)) < baseProbability F k := by
-  rw [baseProbability_eq_inv_dimension]
-  have hd : 0 < (n + 1 : Real) := by positivity
-  have htwo : 0 < (2 : Real) * (n + 1 : Real) := by positivity
-  rw [div_lt_div_iff₀ htwo hd]
-  nlinarith
 
 /-- Squared controller/true overlap is continuous. -/
 theorem continuous_controllerTrueOverlapSq {n : Nat} :
@@ -473,41 +366,6 @@ theorem continuousAt_rankOneStageInformation {n : Nat}
   unfold rankOneStageInformation
   exact (hhalf.smul hchiF).add (hhalf.smul htauF)
 
-/-- Controller-ray consistency implies convergence of the stage exploitation
-information, without any convergence of the selected complement frames. -/
-theorem rankOneStageInformation_tendsto {n : Nat}
-    (F : OracleFrame n)
-    (controllerFrame : Nat ->
-      Matrix (Fin (n + 1)) (Fin (n + 1)) Complex)
-    (hunitary : ∀ m, controllerFrame m ∈
-      Matrix.unitaryGroup (Fin (n + 1)) Complex)
-    (hoverlap : Tendsto
-      (fun m => controllerTrueOverlapSq (controllerFrame m))
-      atTop (nhds 1)) :
-    Tendsto (fun m => rankOneStageInformation F (controllerFrame m))
-      atTop (nhds ((1 / 2 : Real) •
-        (1 : Matrix (TangentIndex n) (TangentIndex n) Real))) := by
-  refine tendsto_of_compact_identified_fiber
-    {U : Matrix (Fin (n + 1)) (Fin (n + 1)) Complex |
-      U ∈ Matrix.unitaryGroup (Fin (n + 1)) Complex}
-    isCompact_unitaryMatrices controllerFrame hunitary
-    controllerTrueOverlapSq continuous_controllerTrueOverlapSq 1 hoverlap
-    (rankOneStageInformation F)
-    ((1 / 2 : Real) •
-      (1 : Matrix (TangentIndex n) (TangentIndex n) Real)) ?_
-  intro U hU hOverlap
-  constructor
-  · apply continuousAt_rankOneStageInformation F U
-    · intro k
-      rw [controllerChiProbability_eq_baseProbability_of_overlap_one
-        F U hU hOverlap k]
-      exact (baseProbability_pos F k).ne'
-    · intro k
-      rw [controllerTauProbability_eq_baseProbability_of_overlap_one
-        F U hU hOverlap k]
-      exact (baseProbability_pos F k).ne'
-  · exact rankOneStageInformation_eq_half_identity_of_overlap_one
-      F U hU hOverlap
 
 /-- Each chi probability converges to the uniform oracle probability. -/
 theorem controllerChiProbability_tendsto_base {n : Nat}
@@ -571,34 +429,6 @@ theorem controllerTauProbability_tendsto_base {n : Nat}
     controllerTauProbability_eq_baseProbability_of_overlap_one
       F U hU hOverlap k⟩
 
-/-- All `2d` exploitation outcomes eventually have the paper's probability
-margin `1/(2d)`. -/
-theorem eventually_rankOne_exploitation_probability_margin {n : Nat}
-    (F : OracleFrame n)
-    (controllerFrame : Nat ->
-      Matrix (Fin (n + 1)) (Fin (n + 1)) Complex)
-    (hunitary : ∀ m, controllerFrame m ∈
-      Matrix.unitaryGroup (Fin (n + 1)) Complex)
-    (hoverlap : Tendsto
-      (fun m => controllerTrueOverlapSq (controllerFrame m))
-      atTop (nhds 1)) :
-    ∀ᶠ m in atTop, ∀ k : Fin (n + 1),
-      1 / (2 * (n + 1 : Real)) <=
-        fixedChartBasisProbability
-          (controllerChiBasis F (controllerFrame m)) k ∧
-      1 / (2 * (n + 1 : Real)) <=
-        fixedChartBasisProbability
-          (controllerTauBasis F (controllerFrame m)) k := by
-  rw [eventually_all]
-  intro k
-  have hchi := controllerChiProbability_tendsto_base
-    F controllerFrame hunitary hoverlap k
-  have htau := controllerTauProbability_tendsto_base
-    F controllerFrame hunitary hoverlap k
-  have hlower := halfDimensionInv_lt_baseProbability F k
-  filter_upwards [(tendsto_order.1 hchi).1 _ hlower,
-    (tendsto_order.1 htau).1 _ hlower] with m hchiM htauM
-  exact ⟨hchiM.le, htauM.le⟩
 
 namespace Label
 
@@ -622,45 +452,7 @@ theorem eq_SI_stage_r1_info {n : Nat} (F : OracleFrame n)
         (1 / 2 : Real) • fixedChartBasisFisher (controllerTauBasis F U) :=
   rfl
 
-/-- `eq:SI_r1_stage_limit`: exact moving-complement stage limit. -/
-theorem eq_SI_r1_stage_limit {n : Nat}
-    (F : OracleFrame n)
-    (controllerFrame : Nat ->
-      Matrix (Fin (n + 1)) (Fin (n + 1)) Complex)
-    (hunitary : ∀ m, controllerFrame m ∈
-      Matrix.unitaryGroup (Fin (n + 1)) Complex)
-    (hoverlap : Tendsto
-      (fun m => controllerTrueOverlapSq (controllerFrame m))
-      atTop (nhds 1)) :
-    Tendsto (fun m => rankOneStageInformation F (controllerFrame m))
-      atTop (nhds ((1 / 2 : Real) •
-        (1 : Matrix (TangentIndex n) (TangentIndex n) Real))) :=
-  rankOneStageInformation_tendsto F controllerFrame hunitary hoverlap
 
-/-- `lem:SI_r1_stage`: information convergence and eventual probability
-margin, independently of all moving complement-frame rotations. -/
-theorem lem_SI_r1_stage {n : Nat}
-    (F : OracleFrame n)
-    (controllerFrame : Nat ->
-      Matrix (Fin (n + 1)) (Fin (n + 1)) Complex)
-    (hunitary : ∀ m, controllerFrame m ∈
-      Matrix.unitaryGroup (Fin (n + 1)) Complex)
-    (hoverlap : Tendsto
-      (fun m => controllerTrueOverlapSq (controllerFrame m))
-      atTop (nhds 1)) :
-    Tendsto (fun m => rankOneStageInformation F (controllerFrame m))
-        atTop (nhds ((1 / 2 : Real) •
-          (1 : Matrix (TangentIndex n) (TangentIndex n) Real))) ∧
-      (∀ᶠ m in atTop, ∀ k : Fin (n + 1),
-        1 / (2 * (n + 1 : Real)) <=
-          fixedChartBasisProbability
-            (controllerChiBasis F (controllerFrame m)) k ∧
-        1 / (2 * (n + 1 : Real)) <=
-          fixedChartBasisProbability
-            (controllerTauBasis F (controllerFrame m)) k) :=
-  ⟨rankOneStageInformation_tendsto F controllerFrame hunitary hoverlap,
-    eventually_rankOne_exploitation_probability_margin
-      F controllerFrame hunitary hoverlap⟩
 
 end Label
 

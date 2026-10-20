@@ -1,5 +1,5 @@
 import QubitOracle.AdaptiveDesign.BoundedMartingaleLogRate
-
+import QubitOracle.AdaptiveDesign.BoundedMartingaleSecondMoment
 /-! The almost-everywhere bounded and finite-coordinate versions of the
 supplement's strong law. No finite sample space or regular conditional
 distribution is assumed. -/

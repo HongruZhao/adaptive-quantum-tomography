@@ -1,6 +1,17 @@
+import QubitOracle.AdaptiveDesign.AdaptiveSingleCopyOracle
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PureAmplitudeChart
 import QubitOracle.AdaptiveDesign.PureChartCovariance
+import QubitOracle.AdaptiveDesign.PureChartDifferential
 import QubitOracle.AdaptiveDesign.PureChartDomain
-
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.PureSLDMetric
+import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.RankOneLosses
+import QubitOracle.TwoBasis
 set_option autoImplicit false
 
 /-! Smooth local coordinates in Definition A.2, expressed as a change

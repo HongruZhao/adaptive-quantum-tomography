@@ -1,5 +1,5 @@
 import QubitOracle.AdaptiveDesign.AdaptiveResponseTightness
-
+import QubitOracle.AdaptiveDesign.BoundedResponseQuarterRate
 /-! Polynomial moments from actual exponential-moment bounds. These
 proofs do not assume a martingale moment inequality. Constants are deliberately
 loose: only uniform finiteness at fixed moment orders is needed for risk. -/

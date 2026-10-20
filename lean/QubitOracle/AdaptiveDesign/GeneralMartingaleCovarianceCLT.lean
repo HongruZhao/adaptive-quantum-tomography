@@ -1,5 +1,6 @@
 import QubitOracle.AdaptiveDesign.GeneralBoundedMartingaleCLT
-
+import QubitOracle.AdaptiveDesign.MartingaleCharacteristicBounds
+import QubitOracle.Paper.MartingaleCLT
 /-! The matrix form of the supplement's Gaussian-limit lemma, including
 positive semidefinite (possibly singular) limiting covariance matrices. -/
 namespace QubitOracle.AdaptiveDesign.MartingaleCharacteristic

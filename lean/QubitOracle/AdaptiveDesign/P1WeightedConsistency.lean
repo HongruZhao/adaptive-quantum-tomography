@@ -1,5 +1,16 @@
+import QubitOracle.AdaptiveDesign.AdaptiveExplorationRate
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
+import QubitOracle.AdaptiveDesign.ExplorationRidgeConsistency
 import QubitOracle.AdaptiveDesign.P1ObservedRidge
-
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.AdaptiveDesign.P1WeightedMoments
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
 /-! Strong consistency of both literal P1 estimators, including Frobenius.
 All excitation and noise hypotheses below are proved for the adaptive protocol. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

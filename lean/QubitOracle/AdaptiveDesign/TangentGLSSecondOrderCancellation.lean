@@ -1,7 +1,31 @@
-import QubitOracle.AdaptiveDesign.TightRemainderBounds
-import QubitOracle.AdaptiveDesign.TangentGLSLinearization
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
+import QubitOracle.AdaptiveDesign.FiniteDimensionalResponseRates
+import QubitOracle.AdaptiveDesign.FiniteHistoryStatistics
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMProbabilityLimits
 import QubitOracle.AdaptiveDesign.GeneralPOVMRootRate
-
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.ProbabilityCalculus
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.SequentialRidgeController
+import QubitOracle.AdaptiveDesign.TangentGLSActualRates
+import QubitOracle.AdaptiveDesign.TangentGLSAlgebra
+import QubitOracle.AdaptiveDesign.TangentGLSAmbient
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.AdaptiveDesign.TangentGLSLinearization
+import QubitOracle.AdaptiveDesign.TangentGLSRecordBounds
+import QubitOracle.AdaptiveDesign.TangentGLSRecordIdentities
+import QubitOracle.AdaptiveDesign.TangentGLSStochasticRemainder
+import QubitOracle.AdaptiveDesign.TangentGLSWeightExpansion
+import QubitOracle.AdaptiveDesign.TightRemainderBounds
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
 /-! The actual all-record POVM correction has an O_p(n^{-1}) intrinsic
 cancellation remainder. The fitted tangent space and fitted denominators
 are allowed to depend on every observation. -/

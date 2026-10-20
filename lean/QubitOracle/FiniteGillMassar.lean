@@ -1,7 +1,6 @@
-import QubitOracle.IsotropicOptimality
 import Mathlib.Analysis.Matrix.PosDef
 import Mathlib.Algebra.Order.BigOperators.Ring.Finset
-
+import QubitOracle.TwoBasis
 /-!
 # Gill--Massar inequalities in the paper's explicit charts
 

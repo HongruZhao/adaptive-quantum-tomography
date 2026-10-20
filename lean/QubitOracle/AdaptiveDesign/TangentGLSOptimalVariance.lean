@@ -1,25 +1,31 @@
-import QubitOracle.AdaptiveDesign.TangentGLSNormalizedError
+import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
 import QubitOracle.AdaptiveDesign.EfficientBornScoreCLT
+import QubitOracle.AdaptiveDesign.FiniteHistoryStatistics
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GeneralPOVMBorn
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PhasePairPOVM
+import QubitOracle.AdaptiveDesign.ProbabilityCalculus
+import QubitOracle.AdaptiveDesign.ProtectedBornScore
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSAlgebra
+import QubitOracle.AdaptiveDesign.TangentGLSAmbient
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.AdaptiveDesign.TangentGLSNormalizedError
+import QubitOracle.AdaptiveDesign.TangentGLSRecordIdentities
 import QubitOracle.AdaptiveDesign.TangentGLSVarianceStatement
+import QubitOracle.FiniteGillMassar
 import QubitOracle.GillMassarBridge
-
-/-!
-# Optimal asymptotic covariance of the implemented all-record estimator
-
-This file proves the previously stated `OptimalVarianceStatement` for the
-literal raw-estimate / leading-ray / protected tangent-GLS / normalization
-algorithm. The fitted weights and preliminary estimator use the same data.
-The proof establishes all estimator-specific remainder bounds, information
-limits and measurability. The finite adaptive response CLT is proved
-directly. The audited endpoint has no scientific axiom dependencies.
-
-The phase-pair corollary takes an identifying, reference-regular rank-one
-seed. Its Fisher identity is a theorem, not a further supplied assumption.
-The conclusion is a pointwise Gaussian limit; no expected-loss convergence
-or uniform minimax statement is asserted here.
-`PureAmplitudeEndpoints` transfers this result to the exact amplitude
-chart printed in the paper.
--/
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.TwoBasis
+/-! Supporting definitions and proved lemmas used by the manuscript. -/
 namespace QubitOracle.AdaptiveDesign.TangentGLS
 open QubitOracle QubitOracle.Paper GlobalPFSICHermitian PureMatrixController P2Adaptive
 open GeneralPOVM Filter MeasureTheory ProbabilityTheory ProbabilityCalculus
@@ -142,16 +148,6 @@ theorem limitingCovariance_weightedTrace (g : ℝ) :
   simp only [smul_eq_mul, Nat.cast_mul, Nat.cast_ofNat]
   ring
 
-/-- Optimality for isotropic local quadratic losses among all finite
-single-copy POVMs with positive definite reference Fisher information.
-The finite-dimensional Gill--Massar bound is proved, not axiomatized. -/
-theorem limitingCovariance_optimal {Y : Type} [Fintype Y]
-    (competitor : FinitePOVM (Fin (d+1)) Y) (hpos : (referenceFisher competitor).PosDef)
-    (g : ℝ) (hg : 0 ≤ g) :
-    g * Matrix.trace ((2 : ℝ) • (1 : Matrix (TangentIndex d) (TangentIndex d) ℝ)) ≤
-      isotropicRisk g (referenceFisher competitor) := by
-  rw [limitingCovariance_weightedTrace]
-  exact finitePOVM_risk_lower_bound g competitor hg hpos
 
 end
 end QubitOracle.AdaptiveDesign.TangentGLS

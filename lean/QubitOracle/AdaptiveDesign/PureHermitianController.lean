@@ -1,6 +1,7 @@
-import QubitOracle.AdaptiveDesign.PureMatrixController
 import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
-
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.Paper.PureStateFoundations
 /-! # The pure-state controller applied to the actual Hermitian RLS estimate -/
 
 namespace QubitOracle.AdaptiveDesign.PureMatrixController

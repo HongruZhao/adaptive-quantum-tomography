@@ -1,5 +1,4 @@
 import QubitOracle.Paper.QuantumDistances
-
 set_option autoImplicit false
 
 /-! The mathematical summaries defined in Section 6. This encodes the

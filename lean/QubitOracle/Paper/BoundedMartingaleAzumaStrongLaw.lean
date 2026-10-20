@@ -1,6 +1,5 @@
-import QubitOracle.Paper.BoundedConditionalSubGaussian
 import Mathlib.MeasureTheory.OuterMeasure.BorelCantelli
-
+import QubitOracle.Paper.BoundedConditionalSubGaussian
 /-!
 # A source-free bounded martingale-difference strong law
 

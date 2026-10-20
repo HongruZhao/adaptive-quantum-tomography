@@ -1,5 +1,7 @@
 import QubitOracle.AdaptiveDesign.P1WeightedEndpoints
-
+import QubitOracle.AdaptiveDesign.P1ObservedRidge
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.FiniteGillMassar
 /-! Actual Gaussian quadratic integrals, rather than a formal name for
 the covariance contraction. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

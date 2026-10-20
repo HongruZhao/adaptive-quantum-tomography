@@ -1,7 +1,16 @@
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
+import QubitOracle.AdaptiveDesign.GlobalPFSIC
 import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
 import QubitOracle.AdaptiveDesign.PureHermitianController
+import QubitOracle.AdaptiveDesign.PureMatrixController
 import QubitOracle.AdaptiveDesign.RidgeBatchSchedule
-
+import QubitOracle.AdaptiveDesign.SequentialRidgeController
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.TwoBasis
 /-!
 # P2: the complete implemented pure-state adaptive first theorem
 

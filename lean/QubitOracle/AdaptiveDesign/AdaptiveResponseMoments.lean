@@ -1,6 +1,9 @@
-import QubitOracle.AdaptiveDesign.SubGaussianPowerMoments
 import Mathlib.MeasureTheory.Function.L2Space
-
+import QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw
+import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
+import QubitOracle.AdaptiveDesign.BoundedResponseQuarterRate
+import QubitOracle.AdaptiveDesign.SubGaussianPowerMoments
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
 /-! Uniform polynomial moments of actual finite-outcome adaptive response sums.
 The source of the moments is conditional centering and a bounded response,
 not an assumed moment bound on the estimator. -/

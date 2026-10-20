@@ -1,5 +1,4 @@
 import Mathlib
-
 /-!
 # Compact subsequence transfer for invariant adaptive limits
 -/

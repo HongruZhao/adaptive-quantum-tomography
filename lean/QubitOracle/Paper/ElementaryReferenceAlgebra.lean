@@ -1,5 +1,5 @@
 import QubitOracle.Paper.ProjectiveStateGeometry
-
+import QubitOracle.Paper.PureStateFoundations
 /-! Explicit projector identities and fixed reflection from Appendix S4.1.
 These identities are independent of the adaptive statistical proof.
 -/

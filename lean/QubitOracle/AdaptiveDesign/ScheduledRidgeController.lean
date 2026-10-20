@@ -1,6 +1,7 @@
-import QubitOracle.AdaptiveDesign.SequentialRidgeController
 import QubitOracle.AdaptiveDesign.AdaptiveExplorationRate
-
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
+import QubitOracle.AdaptiveDesign.SequentialRidgeController
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
 /-!
 # A literal all-observation ridge controller with frozen batches
 

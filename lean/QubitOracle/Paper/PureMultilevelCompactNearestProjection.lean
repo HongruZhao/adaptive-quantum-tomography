@@ -1,7 +1,6 @@
-import QubitOracle.Paper.PureMultilevelNearestPureProjection
 import Mathlib.Analysis.Normed.Group.Continuity
 import Mathlib.Topology.Order.Compact
-
+import QubitOracle.Paper.PureMultilevelNearestPureProjection
 /-!
 # Compact nearest-pure projection estimator
 

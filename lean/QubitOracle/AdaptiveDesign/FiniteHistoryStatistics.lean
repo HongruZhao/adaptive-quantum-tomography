@@ -1,5 +1,13 @@
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.RidgeBatchSchedule
+import QubitOracle.AdaptiveDesign.SequentialRidgeController
 import QubitOracle.AdaptiveDesign.TangentGLSEstimator
-
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
 /-! Measurability of arbitrary finite-history statistics. This includes the
 chosen nearest ray and the GLS solve, without requiring a continuous global
 choice of eigenvector or orthogonal complement. -/

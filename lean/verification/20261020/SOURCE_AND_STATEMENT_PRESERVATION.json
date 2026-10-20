@@ -1,0 +1,10 @@
+{
+  "changed_or_missing_blocks": [],
+  "checked_original_declaration_blocks": 2268,
+  "default_roots_reach_all_distributed_sources": true,
+  "dependency_pins_preserved": true,
+  "main_types_preserved": 498,
+  "new_proved_consequences": 7,
+  "status": "PASS",
+  "supplement_types_preserved": 131
+}

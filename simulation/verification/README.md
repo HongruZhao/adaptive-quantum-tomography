@@ -1,12 +1,3 @@
-# Numerical verification records
+# Numerical verification
 
-Original JSON/log evidence is preserved from the full numerical release and the mean-design extension. These records are dated execution evidence, not a fresh full simulation run for the documentation edition.
-
-- `results/paper/run_receipt.json` binds the original base loss experiment.
-- `EXECUTED_DESIGN_RECEIPT.json` and `EXECUTED_design.py` preserve the diagnostic replay evidence.
-- `INDEPENDENT_*` records preserve the earlier independent apparatus, array, replay and figure checks.
-- `PAPER_BINDING.json` refers to the historical manuscript snapshot.
-- `PACKAGE_REVIEW_20261018.json` records the checks newly performed for this documentation edition.
-- The current manuscript identity is [docs/PAPER_SNAPSHOT.json](../docs/PAPER_SNAPSHOT.json).
-
-See [VERIFICATION.md](../docs/VERIFICATION.md) for evidence boundaries and [REPRODUCIBILITY.md](../docs/REPRODUCIBILITY.md) for commands.
+The official evidence is dated **20 October 2026** and is in [20261020/](20261020/FRESH_SIMULATION.md). It contains the fresh full experiment, 37-test output, output checks, source hashes and independent algorithm audit. [CURRENT_PAPER_BINDING.json](CURRENT_PAPER_BINDING.json) identifies the current PDF and the unchanged numerical inputs. See [the verification guide](../docs/VERIFICATION.md) for scope and [reproduction settings](../docs/REPRODUCIBILITY.md) for commands.

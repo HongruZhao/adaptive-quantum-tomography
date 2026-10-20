@@ -1,7 +1,15 @@
-import QubitOracle.AdaptiveDesign.P1PositiveBatches
-import QubitOracle.AdaptiveDesign.AdaptiveConditionalMoments
 import QubitOracle.AdaptiveDesign.AdaptiveExplorationRate
-
+import QubitOracle.AdaptiveDesign.AdaptiveConditionalMoments
+import QubitOracle.AdaptiveDesign.P1PositiveBatches
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedAxisFisher
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitGeneralScheduleAdaptiveBornProtocol
+import QubitOracle.Paper.OneQubitGeneralScheduleAdaptiveScoreCondExp
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
+import QubitOracle.Paper.P1UniformFrameBorn
 /-! The exact six-outcome Born experiment for a weighted orthonormal triad.
 The weights are classical setting probabilities; each observed sign remains
 attached to its chosen axis. This includes both P1 design rules. -/

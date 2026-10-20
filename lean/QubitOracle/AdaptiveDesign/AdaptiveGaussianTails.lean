@@ -1,6 +1,8 @@
 import QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
+import QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw
+import QubitOracle.AdaptiveDesign.BoundedResponseQuarterRate
 import QubitOracle.AdaptiveDesign.BoundedVarianceMGF
-
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
 /-! Gaussian tails for bounded centered adaptive scalar responses,
 including the initial observation. No independence of selected actions. -/
 namespace QubitOracle.AdaptiveDesign.AdaptiveGaussianTails

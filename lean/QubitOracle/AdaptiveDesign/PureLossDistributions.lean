@@ -1,8 +1,24 @@
-import QubitOracle.AdaptiveDesign.PureAmplitudeLoss
-import QubitOracle.AdaptiveDesign.PureAmplitudeEndpoints
-import QubitOracle.Paper.PureMultilevelLossConstants
 import Mathlib.Analysis.Matrix.Order
-
+import QubitOracle.AdaptiveDesign.FiniteHistoryStatistics
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PhasePairPOVM
+import QubitOracle.AdaptiveDesign.PureAmplitudeChart
+import QubitOracle.AdaptiveDesign.PureAmplitudeEndpoints
+import QubitOracle.AdaptiveDesign.PureAmplitudeLoss
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.AdaptiveDesign.TangentGLSStrongConsistency
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.PureMultilevelDeterministicGeometryClosed
+import QubitOracle.Paper.PureMultilevelLossConstants
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.TwoBasis
 /-! Physical loss distributions of the actual corrected pure-state
 estimators. A chi-square random variable is represented by the squared
 norm of a standard Gaussian on the `2*d` real tangent coordinates. -/
@@ -133,22 +149,6 @@ theorem phasePair {d : ℕ} {O : Type} [Fintype O]
   povm (PhasePair.paired P) (PhasePair.paired_identifying P hI) (PhasePair.paired_regular P hp)
     (PhasePair.paired_fisher_of_rankOne P hp hR) truth regularization ridge hr hη batchSize hpositive
 
--- Section 5 proof route commented at the user request, 5 October 2026.
-/-
-theorem pvm [PVMPilotSchedule.Schedule] {d : ℕ} [PVMGeneralGeometry.ExplorationLibrary d]
-    (truth : PureVector d) (ridge : ℝ) (hr : 0 < ridge)
-    (batchSize : ℕ → ℕ) (hpositive : ∀ j, 0 < batchSize j) (hbudget : PVMPilotSchedule.OneStepBudget) :
-    Statement truth (fun n path => PVMPilotGLS.actualEstimate ridge hr batchSize path n)
-      (adaptiveInfiniteTrajectoryMeasure (PVMPilotAdaptive.adaptiveProtocol d batchSize) (pureParameter d truth)) := by
-  apply of_amplitude_clt
-  · intro n
-    exact PVMPilotGLS.actualStatistic_stronglyMeasurable batchSize n
-      (fun raw data => (pureParameter d
-        (estimateFromRaw raw data (PVMPilotGLS.floor d) ridge (PVMPilotGLS.floor_pos d) hr)).val)
-  · exact PVMPilotGLS.corrected_consistent truth ridge hr batchSize hpositive
-  · exact PVMPilotGLS.amplitude_optimalVariance truth ridge hr batchSize hpositive hbudget
-
--/
 
 end PureLossDistributions
 end

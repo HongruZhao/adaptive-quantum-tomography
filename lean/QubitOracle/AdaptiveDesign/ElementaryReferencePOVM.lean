@@ -1,11 +1,26 @@
-import QubitOracle.Paper.ReferenceRegularity
-import QubitOracle.AdaptiveDesign.RandomizedPVM
-import QubitOracle.AdaptiveDesign.PhasePairPOVM
 import QubitOracle.AdaptiveDesign.GeneralPOVMProbabilityLimits
-
-/-! The explicit elementary reference POVM of the current appendix,
-with its actual C1/C2 witnesses and probability bound. It is distinct
-from the older redundant frame example retained in the source tree.
+import QubitOracle.AdaptiveDesign.ElementaryPVMIdentification
+import QubitOracle.AdaptiveDesign.FiniteFrameCoercivity
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
+import QubitOracle.AdaptiveDesign.PVMGeometry
+import QubitOracle.AdaptiveDesign.PhasePairPOVM
+import QubitOracle.AdaptiveDesign.RandomizedPVM
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.ElementaryPVMBases
+import QubitOracle.Paper.ElementaryReferenceAlgebra
+import QubitOracle.Paper.ProjectiveStateGeometry
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.Paper.ReferenceReflection
+import QubitOracle.Paper.ReferenceRegularity
+/-! The elementary reference POVM, with C1/C2 witnesses and a sharp
+reference-probability bound. The finite-library covariance example is
+handled separately in the supplement.
 -/
 namespace QubitOracle.AdaptiveDesign.ElementaryReferencePOVM
 open QubitOracle QubitOracle.Paper ProjectiveStateGeometry ElementaryReferenceAlgebra

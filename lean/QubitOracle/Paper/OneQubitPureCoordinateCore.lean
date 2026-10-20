@@ -1,6 +1,6 @@
 import QubitOracle.FiniteGillMassar
-import QubitOracle.Paper.PureBuresLocal
-
+import QubitOracle.RankOneLosses
+import QubitOracle.TwoBasis
 /-!
 # Deterministic pure-qubit coordinate geometry
 

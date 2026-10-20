@@ -1,7 +1,11 @@
-import QubitOracle.AdaptiveDesign.P1WeightedBorn
-import QubitOracle.AdaptiveDesign.FiniteCharacteristicTaylor
 import Mathlib.MeasureTheory.Function.FactorsThrough
-
+import QubitOracle.AdaptiveDesign.AdaptiveResponseStrongLaw
+import QubitOracle.AdaptiveDesign.FiniteCharacteristicTaylor
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
 /-! Exact conditional characteristic-function recursion for the six-outcome
 adaptive Born experiment. No limit theorem is assumed. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

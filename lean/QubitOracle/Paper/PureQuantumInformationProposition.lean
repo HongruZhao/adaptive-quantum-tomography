@@ -1,5 +1,10 @@
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.IntrinsicInformationGeometry
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.PureSLDMetric
 import QubitOracle.AdaptiveDesign.PureTangentDimension
-
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.Paper.PureStateFoundations
 /-!
 # Main-paper Proposition 2.1: pure-state quantum information
 

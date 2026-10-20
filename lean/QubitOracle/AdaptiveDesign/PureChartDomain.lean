@@ -1,5 +1,14 @@
 import QubitOracle.AdaptiveDesign.PureChartDifferential
-
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.P2BornFisherIdentification
+import QubitOracle.AdaptiveDesign.PureAmplitudeChart
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.RankOneLosses
+import QubitOracle.TwoBasis
 /-! The chart takes the open radius-two ball to pure states, with exact
 inverse coordinates; consequently every D at least two has infinitely
 many pure projectors. -/

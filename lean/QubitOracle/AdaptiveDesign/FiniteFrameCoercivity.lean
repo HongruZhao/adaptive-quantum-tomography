@@ -1,6 +1,5 @@
 import Mathlib
 import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
-
 /-!
 # A finite identifying frame is uniformly coercive
 

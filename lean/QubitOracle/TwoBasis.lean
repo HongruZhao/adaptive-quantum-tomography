@@ -1,5 +1,4 @@
 import QubitOracle.LocalChart
-
 /-!
 # The two-basis oracle calculation
 

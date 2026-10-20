@@ -1,53 +1,35 @@
-# Adaptive quantum tomography: Lean sources
+# Adaptive quantum tomography: Lean proofs
 
-This folder contains all **633 canonical Lean source files**, together with the original toolchain, Lake configuration, and dependency pins. It includes the current result development and retained historical material. The [root formalization guide](../LEAN_FORMALIZATION.md) explains verification scope, hypotheses, and endpoint correspondence.
+This directory contains the reduced proof source tree for the accompanying main results and the supplementary statements documented in [SUPPLEMENT_RESULTS.md](../SUPPLEMENT_RESULTS.md). It contains no scientific input axioms or unfinished proof placeholders. The explicit hypotheses of the retained theorems are unchanged.
 
-## Start here
+## Run
 
-| Task | File or command |
-|---|---|
-| Match current paper results to Lean | [docs/PAPER_TO_LEAN.md](docs/PAPER_TO_LEAN.md) |
-| Read principal source entry points | [docs/CODE_GUIDE.md](docs/CODE_GUIDE.md) |
-| Check prepared-package hashes only | `python3 -B scripts/check_release.py` |
-| Reproduce selected proof and axiom checks | `LAKE_ARTIFACT_CACHE=false python3 -B scripts/verify.py --cache --replay` |
-| Inspect dated verification evidence | [verification/README.md](verification/README.md) |
-
-The paper has nine named theorems, propositions, and corollaries. Existing Lean identifiers bundle some split paper statements: `theorem_3_1` contains current Theorems 3.1 and 3.2, and `theorem_4_2` contains current Theorems 4.2 and 4.3. `Inputs` lists hypotheses; the proving theorem supplies its `Conclusions`.
-
-## Build selected current results
-
-Install Git, Python 3.9 or newer, and [elan](https://github.com/leanprover/elan). The pins specify Lean **v4.33.0-rc2** and Mathlib **641fbd329d4ffb62bef83c51f54088469056bd36**.
+Install [elan](https://github.com/leanprover/elan), Git and Python 3.9 or newer:
 
 ```sh
 python3 -B scripts/check_release.py
 LAKE_ARTIFACT_CACHE=false python3 -B scripts/verify.py --cache --replay
 ```
 
-The first command checks file integrity only. The second builds the 508-module current-result closure, builds the explicit `MainPaper` and `MainPaperAudit` roots, inspects 498 selected declaration types and axiom sets, checks dependency revisions, and replays 17 selected modules. It writes new timestamped receipts under `verification/reproduction/`. A fresh run rejects existing project proof objects; use `--incremental` only to expressly reuse them. Upstream caches are separate from project proof objects.
+The verifier builds all project modules, compares elaborated statement types, audits transitive axioms, checks dependency pins and replays the designated modules. It rejects existing project objects unless `--incremental` is requested. Receipt files are written to `verification/reproduction/`. The integrity command alone is not proof verification.
 
-For ordinary development after dependencies are installed:
+After dependencies are available, ordinary development uses:
 
 ```sh
-lake build MainPaper MainPaperAudit
-lake env lean MainPaperAudit.lean
+lake build
+lake env lean SupplementAudit.lean
 ```
 
-The original `lakefile.toml` remains unchanged. Its plain `lake build` defaults are broader: `AdaptiveTomography` and `MainPaperAudit`. Neither command claims to compile every retained historical source.
+The defaults are `MainPaperAudit` and `SupplementAudit`; all distributed modules are in their import closure. `MainPaper.lean` selects main results. `Supplement.lean` adds supporting results. `MainPaperTheorem31.lean` supplies the combined mixed-qubit endpoint.
 
-## Evidence boundary
+## Read
 
-The [fresh 20 October 2026 report](verification/20261020/README.md) records source compilation of the exact 508-module current-result closure, 498 declaration/type/axiom checks, all nine main results through 17 mapped declarations, and 17 selected-module kernel replays. Every project compiler trace/import binding was checked for freshness. Pinned upstream objects were reused; all 633 Lean sources and the original build definition/pins stayed unchanged. Historical 17 and 19 October receipts remain separately dated. A stale expected build-definition hash was corrected in verification metadata only, with the failed preflight preserved.
+- [Main results](../MAIN_RESULTS.md): printed statements, assumptions and entry points.
+- [Supplementary coverage](../SUPPLEMENT_RESULTS.md): exact checked cases and generality differences.
+- [Formalization scope](../LEAN_FORMALIZATION.md): interfaces and evidence boundaries.
+- [Code guide](docs/CODE_GUIDE.md): proof structure and reading order.
+- [Official verification](verification/20261020/README.md): current source, type, axiom and replay evidence.
 
-The audited selected declarations use only standard logical axioms. Twelve legacy scientific axiom leaves in retained imported historical material are inventoried separately and do not enter those selected endpoint dependencies. **No axiom-free claim is made for every declaration in the full 633-source tree.** This development does not mechanically verify Python code, Monte Carlo values, hardware, runtime, or literature attribution.
+Lean **v4.33.0-rc2** and Mathlib **641fbd329d4ffb62bef83c51f54088469056bd36** are pinned. Project proof objects and upstream caches are not distributed. The only transitive axioms of retained mathematical declarations are `propext`, `Classical.choice` and `Quot.sound`.
 
-## Files and license
-
-- [MainPaper.lean](MainPaper.lean): public imports for current main results.
-- [MainPaperAudit.lean](MainPaperAudit.lean): selected statement and axiom audit.
-- [AdaptiveTomography.lean](AdaptiveTomography.lean): original broader project entry.
-- `QubitOracle/Paper/`: current-result interfaces and supporting bridges.
-- `QubitOracle/AdaptiveDesign/`: estimator, adaptive policy, information, and probability arguments.
-- `docs/`: correspondence guides and current label maps.
-- `verification/`: curated dated evidence and source hashes; raw logs are omitted.
-
-The existing MIT license and original software-author metadata are preserved. The paper PDFs have not been assigned a software license by this preparation. No new build or publication follows merely from reading these saved receipts.
+The main algorithms' checked cases are distinguished from broader supplementary formulations. Lean does not verify the companion Python program. The repository and prepared Zenodo archive require explicit author approval before public release. The code retains its MIT license.

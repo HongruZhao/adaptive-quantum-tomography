@@ -1,6 +1,6 @@
-import QubitOracle.Paper.ElementaryReferenceAlgebra
 import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
-
+import QubitOracle.Paper.ElementaryReferenceAlgebra
+import QubitOracle.Paper.PureStateFoundations
 /-! The actual real/imaginary two-level bases of Appendix S4.1.
 The replacement vectors are explicit and their projectors sum to the
 identity, so the column matrices are proved unitary.

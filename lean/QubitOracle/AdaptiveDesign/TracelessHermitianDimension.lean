@@ -1,6 +1,5 @@
-import QubitOracle.AdaptiveDesign.InformationalCompletenessDimension
 import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
-
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
 /-! The D^2-1 exploration count follows from an actual dimension calculation,
 not from a supplied basis cardinality. -/
 namespace QubitOracle.AdaptiveDesign.TracelessHermitianDimension

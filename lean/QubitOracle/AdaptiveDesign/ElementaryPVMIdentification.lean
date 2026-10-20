@@ -1,6 +1,9 @@
-import QubitOracle.Paper.ElementaryPVMBases
 import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
-
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.Paper.ElementaryPVMBases
+import QubitOracle.Paper.ElementaryReferenceAlgebra
+import QubitOracle.Paper.ProjectiveStateGeometry
+import QubitOracle.Paper.PureStateFoundations
 /-! Ambient identification and real spanning for the exact, nonredundant
 coordinate/real-pair/imaginary-pair bases of Appendix S4.1.
 No identification certificate is assumed.

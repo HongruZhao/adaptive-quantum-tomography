@@ -1,7 +1,7 @@
 import MainPaper
 
-/-! Strict current-paper endpoint/type/axiom audit, including every new
-geometry and combined-results declaration. Scientific source axioms and
+/-! Main-paper endpoint, type and axiom audit, including
+geometry and combined-result declarations. Scientific source axioms and
 `sorryAx` are rejected for every selected paper entry. -/
 open Lean Elab Command Meta in
 elab "#audit_main_paper" : command => do

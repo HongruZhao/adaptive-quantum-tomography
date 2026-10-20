@@ -1,5 +1,13 @@
+import QubitOracle.AdaptiveDesign.AdaptiveExplorationRate
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
 import QubitOracle.AdaptiveDesign.P1WeightedPolicy
-
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitGeneralScheduleAdaptiveBornProtocol
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
+import QubitOracle.Paper.P1UniformFrameBorn
 /-! All stochastic inputs are derived from the exact adaptive Born law.
 In particular, the realized Gram innovations and regression residuals obey
 quantitative martingale laws before any estimator limit is assumed. -/

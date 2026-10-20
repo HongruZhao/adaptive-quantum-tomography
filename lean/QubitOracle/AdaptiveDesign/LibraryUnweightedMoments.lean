@@ -1,6 +1,11 @@
 import QubitOracle.AdaptiveDesign.TangentGLSInformation
+import QubitOracle.AdaptiveDesign.GlobalPFSIC
+import QubitOracle.AdaptiveDesign.GlobalPFSICFisher
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
 import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
-
+import QubitOracle.Paper.CompactLimitTransfer
+import QubitOracle.Paper.RankOneStageContinuity
+import QubitOracle.TwoBasis
 /-! Exact unweighted tangent moments of the optional finite-library POVM.
 These are Gram and noise moments, not Fisher information. -/
 namespace QubitOracle.AdaptiveDesign.LibraryUnweighted

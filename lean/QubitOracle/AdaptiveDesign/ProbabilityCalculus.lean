@@ -1,6 +1,5 @@
-import QubitOracle.AdaptiveDesign.ProbabilityZeroAlgebra
 import Mathlib.Analysis.Normed.Operator.Bilinear
-
+import QubitOracle.AdaptiveDesign.ProbabilityZeroAlgebra
 /-! Elementary probability calculus for the estimator remainder argument.
 Every result follows from the definition of convergence in measure. -/
 

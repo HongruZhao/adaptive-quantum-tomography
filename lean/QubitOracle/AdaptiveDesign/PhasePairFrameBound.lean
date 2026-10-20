@@ -1,5 +1,9 @@
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
+import QubitOracle.AdaptiveDesign.FiniteFrameCoercivity
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
 import QubitOracle.AdaptiveDesign.PhasePairPOVM
-
+import QubitOracle.FiniteGillMassar
 /-! The quantitative frame bound in Proposition 4.1, including both
 labelled branches. Each effect has weight one half, so its frame
 contribution has weight one quarter. Unitary transport preserves the

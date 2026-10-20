@@ -1,7 +1,32 @@
-import QubitOracle.Paper.MainPaperPureCharts
-import QubitOracle.AdaptiveDesign.GeneralPOVMRootRate
 import QubitOracle.AdaptiveDesign.PhasePairAdaptive
-
+import QubitOracle.AdaptiveDesign.GeneralPOVMRootRate
+import QubitOracle.AdaptiveDesign.EfficientBornScoreCLT
+import QubitOracle.AdaptiveDesign.FiniteHistoryStatistics
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PhasePairPOVM
+import QubitOracle.AdaptiveDesign.PureAmplitudeChart
+import QubitOracle.AdaptiveDesign.PureChartCovariance
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.PureSLDMetric
+import QubitOracle.AdaptiveDesign.PureSmoothChartEndpoints
+import QubitOracle.AdaptiveDesign.RidgeBatchSchedule
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.AdaptiveDesign.TangentGLSInformation
+import QubitOracle.AdaptiveDesign.TangentGLSNormalizedError
+import QubitOracle.AdaptiveDesign.TangentGLSOptimalVariance
+import QubitOracle.AdaptiveDesign.TangentGLSRecordIdentities
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MainPaperPureCharts
+import QubitOracle.TwoBasis
 set_option autoImplicit false
 
 /-! The literal ambient projector Gaussian limit and its covariance,

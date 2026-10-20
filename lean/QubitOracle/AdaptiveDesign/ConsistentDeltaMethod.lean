@@ -1,6 +1,5 @@
 import Mathlib.MeasureTheory.Function.ConvergenceInDistribution
 import Mathlib.Analysis.Calculus.FDeriv.Basic
-
 /-! A vector delta method for consistent statistics. The proof uses the
 normalized Frechet remainder and Slutsky, not independence of observations.
 It permits arbitrary measurable extensions of a local coordinate map. -/

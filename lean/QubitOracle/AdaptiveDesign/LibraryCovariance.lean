@@ -1,6 +1,22 @@
-import QubitOracle.AdaptiveDesign.LibraryPureNormality
 import QubitOracle.AdaptiveDesign.PureChartDifferential
-
+import QubitOracle.AdaptiveDesign.GlobalPFSIC
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.LibraryPureNormality
+import QubitOracle.AdaptiveDesign.LibraryRidgeLinearization
+import QubitOracle.AdaptiveDesign.LibraryScoreCLT
+import QubitOracle.AdaptiveDesign.LibraryUnweightedMoments
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PureAmplitudeChart
+import QubitOracle.AdaptiveDesign.PureChartCovariance
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.RidgeBatchSchedule
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
+import QubitOracle.AdaptiveDesign.TangentGLSInformation
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.TwoBasis
 /-! The covariance stated in the supplement: in any invertible smooth
 coordinate system it is gamma_D times the inverse actual SLD metric. -/
 namespace QubitOracle.AdaptiveDesign.LibraryUnweighted

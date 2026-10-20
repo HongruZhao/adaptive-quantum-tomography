@@ -1,5 +1,4 @@
 import QubitOracle.FiniteGillMassar
-
 set_option autoImplicit false
 
 /-! The all-finite-POVM class displayed at the start of Section 5.

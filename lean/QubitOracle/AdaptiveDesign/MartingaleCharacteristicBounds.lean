@@ -1,6 +1,8 @@
-import QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristicLimit
 import QubitOracle.AdaptiveDesign.BoundedVarianceMGF
-
+import QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristicLimit
+import QubitOracle.AdaptiveDesign.BoundedMartingaleSecondMoment
+import QubitOracle.AdaptiveDesign.FiniteAdaptiveCharacteristicBounds
+import QubitOracle.AdaptiveDesign.FiniteCharacteristicTaylor
 /-! Characteristic-function estimates for general bounded martingale
 differences. The underlying probability space and filtration are arbitrary. -/
 namespace QubitOracle.AdaptiveDesign.MartingaleCharacteristic

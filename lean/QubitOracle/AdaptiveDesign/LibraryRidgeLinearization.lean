@@ -1,8 +1,29 @@
-import QubitOracle.AdaptiveDesign.LibraryScoreCLT
-import QubitOracle.AdaptiveDesign.GeneralPOVMRootRate
-import QubitOracle.AdaptiveDesign.GeneralPOVMQuarterRate
+import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
+import QubitOracle.AdaptiveDesign.BoundedResponseQuarterRate
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
+import QubitOracle.AdaptiveDesign.FiniteFrameCoercivity
 import QubitOracle.AdaptiveDesign.FiniteHistoryStatistics
-
+import QubitOracle.AdaptiveDesign.GeneralPOVMQuarterRate
+import QubitOracle.AdaptiveDesign.GeneralPOVMRootRate
+import QubitOracle.AdaptiveDesign.GlobalPFSIC
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
+import QubitOracle.AdaptiveDesign.LibraryFrameLimit
+import QubitOracle.AdaptiveDesign.LibraryScoreCLT
+import QubitOracle.AdaptiveDesign.LibraryUnweightedMoments
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.ProbabilityCalculus
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.RidgeBatchSchedule
+import QubitOracle.AdaptiveDesign.SequentialRidgeController
+import QubitOracle.AdaptiveDesign.TangentGLSAmbient
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.AdaptiveDesign.TangentGLSProjection
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.PureStateFoundations
 /-! The actual ridge normal equation, root-n tightness, and tangent
 asymptotic linear representation for the optional finite library. -/
 namespace QubitOracle.AdaptiveDesign.LibraryUnweighted

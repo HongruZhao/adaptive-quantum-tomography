@@ -1,7 +1,8 @@
 import QubitOracle.AdaptiveDesign.AdaptiveBornRegularModel
+import QubitOracle.AdaptiveDesign.QubitEffectRepresentation
 import QubitOracle.AdaptiveDesign.WeightedInformationOptimization
+import QubitOracle.FiniteGillMassar
 import QubitOracle.Paper.P1BuresOptimality
-
 /-! Eigenvalue bounds for the actual qubit information relative to the
 SLD metric, for every finite complete positive measurement. -/
 namespace QubitOracle.AdaptiveDesign.MixedRelativeInformation

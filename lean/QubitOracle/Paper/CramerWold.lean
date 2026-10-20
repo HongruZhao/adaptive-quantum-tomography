@@ -1,6 +1,5 @@
 import Mathlib.MeasureTheory.Measure.LevyConvergence
 import Mathlib.MeasureTheory.Function.ConvergenceInDistribution
-
 namespace QubitOracle.Paper
 
 open Filter MeasureTheory ProbabilityTheory

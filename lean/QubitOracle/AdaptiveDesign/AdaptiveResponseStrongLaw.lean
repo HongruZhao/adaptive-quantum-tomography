@@ -1,6 +1,5 @@
 import QubitOracle.Paper.AdaptiveTrajectoryExperiment
 import QubitOracle.Paper.BoundedMartingaleAzumaStrongLaw
-
 /-!
 # Bounded response strong law on the actual adaptive experiment
 

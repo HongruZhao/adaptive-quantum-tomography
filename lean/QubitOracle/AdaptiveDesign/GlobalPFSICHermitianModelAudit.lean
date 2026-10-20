@@ -1,7 +1,0 @@
-import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
-
-#print axioms QubitOracle.AdaptiveDesign.FiniteFrameCoercivity.exists_positive_coercivity_of_injective
-#print axioms QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.referenceFrame_coercive
-#print axioms QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.conjugationIsometry
-#print axioms QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.transportedFrame_uniform_coercivity
-#print axioms QubitOracle.AdaptiveDesign.GlobalPFSICHermitian.toMatrix_continuous

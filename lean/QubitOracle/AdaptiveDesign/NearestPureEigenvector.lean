@@ -1,7 +1,10 @@
-import QubitOracle.AdaptiveDesign.NearestPureVariational
 import Mathlib.Analysis.InnerProductSpace.Rayleigh
 import Mathlib.Analysis.Matrix.Hermitian
-
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.NearestPureVariational
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
 /-! The nearest-projector selection used in the algorithm is a leading
 algebraic-eigenvalue eigenvector, including eigenvalue ties. -/
 namespace QubitOracle.AdaptiveDesign.PureMatrixController

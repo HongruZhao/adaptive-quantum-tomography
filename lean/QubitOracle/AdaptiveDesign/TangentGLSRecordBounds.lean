@@ -1,6 +1,16 @@
-import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
 import QubitOracle.AdaptiveDesign.ProtectedGLSWeightBounds
-
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSAlgebra
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.AdaptiveDesign.TangentGLSWeightExpansion
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.PureStateFoundations
 /-! The analytic bounds specialized to the Born records of the implemented
 estimator. In particular, fitting on the same records is allowed throughout. -/
 

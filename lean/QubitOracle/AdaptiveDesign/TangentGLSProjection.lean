@@ -1,5 +1,10 @@
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
 import QubitOracle.AdaptiveDesign.TangentGLSWeightExpansion
-
+import QubitOracle.Paper.PureStateFoundations
 /-!
 # Intrinsic tangent projection and the quadratic normal error
 

@@ -1,6 +1,30 @@
 import QubitOracle.AdaptiveDesign.LibraryFrameLimit
+import QubitOracle.AdaptiveDesign.AdaptiveConditionalMoments
+import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
+import QubitOracle.AdaptiveDesign.BoundedAdaptiveResponseCLT
 import QubitOracle.AdaptiveDesign.EfficientBornScoreCLT
-
+import QubitOracle.AdaptiveDesign.FiniteAdaptiveResponseCLT
+import QubitOracle.AdaptiveDesign.GeneralPOVMBorn
+import QubitOracle.AdaptiveDesign.GlobalPFSIC
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICFisher
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
+import QubitOracle.AdaptiveDesign.LibraryUnweightedMoments
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.ProbabilityZeroAlgebra
+import QubitOracle.AdaptiveDesign.PureHermitianController
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.RidgeBatchSchedule
+import QubitOracle.AdaptiveDesign.SequentialRidgeController
+import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.FiniteAdaptiveBornScoreClosure
+import QubitOracle.Paper.FiniteKernelPathSpace
+import QubitOracle.Paper.MartingaleCLT
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.TwoBasis
 /-! The literal optional-library Born experiment supplies the Gaussian
 limit for the unweighted tangent innovation, with its actual covariance. -/
 namespace QubitOracle.AdaptiveDesign.LibraryUnweighted

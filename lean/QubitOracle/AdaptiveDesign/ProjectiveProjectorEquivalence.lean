@@ -1,6 +1,9 @@
-import QubitOracle.Paper.ProjectiveStateGeometry
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
 import QubitOracle.AdaptiveDesign.PhysicalModelCharacterization
-
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.Paper.ProjectiveStateGeometry
+import QubitOracle.Paper.PureStateFoundations
 /-! The literal ray-to-projector bijection of Section 2.3.
 The set of projectors is defined by Hermitian symmetry, idempotence,
 and trace one. Surjectivity uses the proved spectral characterization,

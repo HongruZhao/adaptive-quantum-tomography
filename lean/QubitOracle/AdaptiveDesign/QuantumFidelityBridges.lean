@@ -1,8 +1,11 @@
-import QubitOracle.Paper.OneQubitBlochPhysicalState
-import QubitOracle.Paper.QuantumDistances
 import QubitOracle.AdaptiveDesign.PureChartDomain
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.OneQubitBlochPhysicalState
+import QubitOracle.Paper.PureMultilevelDeterministicGeometryClosed
 import QubitOracle.Paper.PureMultilevelMatrixTraceDistance
-
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.Paper.QuantumDistances
+import QubitOracle.Paper.QubitFoundations
 /-! Exact bridges from positive-matrix-square-root fidelity to the scalar
 qubit and pure-state formulas used by the statistical endpoints. -/
 namespace QubitOracle.AdaptiveDesign.QuantumFidelityBridges

@@ -1,5 +1,6 @@
+import QubitOracle.AdaptiveDesign.FiniteAdaptiveOracle
+import QubitOracle.AdaptiveDesign.FiniteRegularOracle
 import QubitOracle.AdaptiveDesign.GeneralWeightedOracle
-
 /-! Full matrix information, rather than only its weighted trace, for
 the literal finite adaptive product law. Zero-probability records are
 handled explicitly; no independence assumption is introduced. -/

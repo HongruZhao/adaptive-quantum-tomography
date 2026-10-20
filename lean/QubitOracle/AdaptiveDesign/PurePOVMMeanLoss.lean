@@ -1,8 +1,27 @@
-import QubitOracle.AdaptiveDesign.POVMEstimatorMoments
-import QubitOracle.AdaptiveDesign.WeakMeanLossTransfer
+import QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
+import QubitOracle.AdaptiveDesign.FiniteHistoryStatistics
 import QubitOracle.AdaptiveDesign.GaussianQuadraticMoments
+import QubitOracle.AdaptiveDesign.GeneralPOVMAdaptive
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.POVMEstimatorMoments
+import QubitOracle.AdaptiveDesign.PhasePairPOVM
 import QubitOracle.AdaptiveDesign.PureLossDistributions
-
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSEstimator
+import QubitOracle.AdaptiveDesign.TangentGLSNormalizedError
+import QubitOracle.AdaptiveDesign.TangentGLSStrongConsistency
+import QubitOracle.AdaptiveDesign.WeakMeanLossTransfer
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.PureMultilevelDeterministicGeometryClosed
+import QubitOracle.Paper.PureMultilevelLossConstants
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.TwoBasis
 /-! Expected physical losses for the actual corrected, identifying POVM
 procedure. The required fourth moment is proved for this procedure, not
 assumed in its expected-loss endpoint. -/

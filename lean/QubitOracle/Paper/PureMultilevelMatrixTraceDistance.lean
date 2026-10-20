@@ -1,6 +1,8 @@
 import QubitOracle.Paper.PureMultilevelLossConstants
+import QubitOracle.Paper.PureMultilevelDeterministicGeometryClosed
+import QubitOracle.Paper.PureMultilevelProjectorGeometry
+import QubitOracle.Paper.PureStateFoundations
 import QubitOracle.Paper.QuantumDistances
-
 /-!
 # Physical trace distance for finite-dimensional pure states
 
@@ -145,7 +147,6 @@ namespace PureMultilevelMatrixTraceDistance
 
 open scoped BigOperators ComplexOrder MatrixOrder
 open PureMultilevelDeterministicGeometry PureMultilevelProjectorGeometry
-open PureMultilevelLossConstants
 
 noncomputable section
 
@@ -235,7 +236,6 @@ namespace PureMultilevelMatrixTraceDistance
 
 open scoped BigOperators ComplexOrder MatrixOrder
 open PureMultilevelDeterministicGeometry PureMultilevelProjectorGeometry
-open PureMultilevelLossConstants
 
 noncomputable section
 
@@ -279,7 +279,6 @@ namespace PureMultilevelMatrixTraceDistance
 
 open scoped BigOperators ComplexOrder MatrixOrder
 open PureMultilevelDeterministicGeometry PureMultilevelProjectorGeometry
-open PureMultilevelLossConstants
 
 noncomputable section
 
@@ -328,7 +327,6 @@ namespace PureMultilevelMatrixTraceDistance
 
 open scoped BigOperators ComplexOrder MatrixOrder
 open PureMultilevelDeterministicGeometry PureMultilevelProjectorGeometry
-open PureMultilevelLossConstants
 
 noncomputable section
 

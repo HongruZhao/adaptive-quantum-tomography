@@ -1,5 +1,4 @@
 import QubitOracle.AdaptiveDesign.FiniteRegularOracle
-
 /-!
 # Exact composition of regular finite adaptive experiments
 

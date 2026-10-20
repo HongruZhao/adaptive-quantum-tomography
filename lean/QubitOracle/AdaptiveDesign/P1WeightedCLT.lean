@@ -1,7 +1,23 @@
-import QubitOracle.AdaptiveDesign.P1WeightedCovariance
-import QubitOracle.AdaptiveDesign.ProbabilityZeroAlgebra
+import QubitOracle.AdaptiveDesign.AdaptiveRidgeConsistency
+import QubitOracle.AdaptiveDesign.BoundedAdaptiveResponseCLT
 import QubitOracle.AdaptiveDesign.P1BoundedResponseCLT
-
+import QubitOracle.AdaptiveDesign.P1CharacteristicBounds
+import QubitOracle.AdaptiveDesign.P1ObservedRidge
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.AdaptiveDesign.P1WeightedCovariance
+import QubitOracle.AdaptiveDesign.P1WeightedGeometry
+import QubitOracle.AdaptiveDesign.P1WeightedLimits
+import QubitOracle.AdaptiveDesign.P1WeightedMoments
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
+import QubitOracle.AdaptiveDesign.ProbabilityZeroAlgebra
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.FiniteAdaptiveBornScoreClosure
+import QubitOracle.Paper.MartingaleCLT
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
 /-! The efficient influence-sum CLT for the actual P1 experiment. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted
 open QubitOracle QubitOracle.Paper Filter MeasureTheory ProbabilityTheory

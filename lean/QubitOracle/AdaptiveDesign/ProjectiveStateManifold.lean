@@ -1,5 +1,8 @@
 import QubitOracle.AdaptiveDesign.AffineProjectorCharts
-
+import QubitOracle.AdaptiveDesign.ProjectiveProjectorEquivalence
+import QubitOracle.AdaptiveDesign.ProjectiveStateTopology
+import QubitOracle.Paper.ProjectiveStateGeometry
+import QubitOracle.Paper.PureStateFoundations
 /-! The standard affine smooth structure on complex rays, and its
 identification with the matrix-defined pure-state manifold. The ray
 chart formula is proved to be the ordinary homogeneous-coordinate ratio.

@@ -1,6 +1,16 @@
 import QubitOracle.AdaptiveDesign.PureChartDomain
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.P2BornFisherIdentification
 import QubitOracle.AdaptiveDesign.PVMGeometry
-
+import QubitOracle.AdaptiveDesign.PureAmplitudeChart
+import QubitOracle.AdaptiveDesign.PureChartCoverage
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.RankOneLosses
+import QubitOracle.TwoBasis
 /-! A concrete finite atlas: the pure-state charts centred at the columns
 of any unitary basis cover all pure projectors. -/
 namespace QubitOracle.AdaptiveDesign.TangentGLS

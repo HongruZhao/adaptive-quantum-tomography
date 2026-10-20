@@ -1,8 +1,19 @@
 import QubitOracle.AdaptiveDesign.FiniteAdaptiveOracle
-import QubitOracle.AdaptiveDesign.PureChartDomain
+import QubitOracle.AdaptiveDesign.FiniteRegularOracle
 import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PureAmplitudeChart
+import QubitOracle.AdaptiveDesign.PureChartDifferential
+import QubitOracle.AdaptiveDesign.PureChartDomain
+import QubitOracle.AdaptiveDesign.PureMatrixController
 import QubitOracle.AdaptiveDesign.QubitEffectRepresentation
-
+import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.QubitFoundations
+import QubitOracle.RankOneLosses
+import QubitOracle.TwoBasis
 /-! The classical regular model is constructed from the actual Born law.
 A history fixes the selected POVM, including any classical randomization.
 Its dependence on the data is never differentiated. Local charts are

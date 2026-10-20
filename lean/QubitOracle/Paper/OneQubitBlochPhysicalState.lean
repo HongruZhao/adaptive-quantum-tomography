@@ -1,6 +1,6 @@
+import QubitOracle.FiniteGillMassar
 import QubitOracle.Paper.QuantumDistances
 import QubitOracle.Paper.QubitFoundations
-
 /-!
 # Physical Bloch-ball states
 

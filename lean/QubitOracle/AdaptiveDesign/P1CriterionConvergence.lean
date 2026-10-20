@@ -1,5 +1,20 @@
+import QubitOracle.AdaptiveDesign.P1PositiveBatches
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.AdaptiveDesign.P1WeightedCovariance
 import QubitOracle.AdaptiveDesign.P1WeightedEndpoints
-
+import QubitOracle.AdaptiveDesign.P1WeightedGeometry
+import QubitOracle.AdaptiveDesign.P1WeightedInformation
+import QubitOracle.AdaptiveDesign.P1WeightedNormality
+import QubitOracle.AdaptiveDesign.P1WeightedOptimality
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedAxisFisher
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.MixedRotationalTarget
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
 /-! Convergence of the actual inverse-information design criteria, for
 the current design and both versions of accumulated information. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

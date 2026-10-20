@@ -1,5 +1,4 @@
 import Mathlib.Probability.Moments.SubGaussian
-
 /-!
 # Bounded conditionally centered variables are conditionally sub-Gaussian
 

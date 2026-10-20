@@ -1,5 +1,4 @@
 import Mathlib.Probability.Distributions.Gaussian.Multivariate
-
 /-! The mean and square integrability of the chi-square representation
 used by the paper's physical-loss limits. -/
 namespace QubitOracle.AdaptiveDesign.GaussianQuadraticMoments

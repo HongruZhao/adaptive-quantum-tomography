@@ -1,11 +1,17 @@
-import QubitOracle.AdaptiveDesign.VectorActionLaws
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
 import QubitOracle.AdaptiveDesign.P1WeightedController
-
-/-! The manuscript lists the radial axis first. The existing finite
-protocol lists it last. This is a proved relabeling of the same design,
-not a change in the probabilities or physical measurement axes. -/
+import QubitOracle.AdaptiveDesign.P1WeightedGeometry
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.MixedAxisFisher
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.MixedRotationalTarget
+import QubitOracle.Paper.OneQubitCyclicBornPath
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
+import QubitOracle.Paper.P1UniformFrameBorn
+import QubitOracle.Paper.P1UniformFrameInformation
+/-! Supporting definitions and proved lemmas used by the manuscript. -/
 namespace QubitOracle.AdaptiveDesign.MixedPaperAxisOrder
-open QubitOracle QubitOracle.Paper P1Weighted VectorActionLaws
+open QubitOracle QubitOracle.Paper P1Weighted
 open scoped BigOperators
 noncomputable section
 
@@ -35,12 +41,6 @@ theorem reindex_fisher (theta : Fin 3 → ℝ) (a : Action) (e : Equiv.Perm (Fin
   change (∑ k, a.weight (e k) • mixedAxisFisher theta (axis a (e k))) = _
   exact Equiv.sum_comp e (fun k => a.weight k • mixedAxisFisher theta (axis a k))
 
-theorem reindex_design (a : Action) (e : Equiv.Perm (Fin 3)) :
-    mixedDesign (reindex a e) = mixedDesign a := by
-  change (∑ k, ENNReal.ofReal (a.weight (e k)) •
-    MeasureTheory.Measure.dirac (selectedAxis a (e k))) = _
-  exact Equiv.sum_comp e (fun k => ENNReal.ofReal (a.weight k) •
-    MeasureTheory.Measure.dirac (selectedAxis a k))
 
 theorem paper_frobenius_weights (r : Fin 3 → ℝ) (hr : blochNormSq r < 1) :
     (reindex (referenceAction .frobenius r hr) paperOrder).weight =

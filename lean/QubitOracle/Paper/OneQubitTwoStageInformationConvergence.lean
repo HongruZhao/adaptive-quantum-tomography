@@ -1,28 +1,8 @@
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.MixedAxisFisher
 import QubitOracle.Paper.OneQubitFixedDesignInformation
 import QubitOracle.Paper.OneQubitRotationTransport
-
-/-!
-# Deterministic two-stage information convergence for one qubit
-
-This file supplies the deterministic convergence layer for a two-stage
-controller.
-
-* A pilot stage returns orthogonal three-dimensional frames whose entries
-  converge to the truth-aligned Householder frame.
-* The mixed main stage measures complete three-axis rotated Pauli blocks.
-* The pure main stage measures the first two, truth-tangent axes of the
-  estimated frame.
-* Pilot and complete-block counts are normalized by the total sample size
-  through explicit `Tendsto` schedule assumptions.
-
-The pilot contract assumes convergence of the frame itself.  It does not
-derive that convergence by applying the Householder formula to an estimated
-state.  Consequently no continuity claim is made at the Householder branch
-point, and no non-antipodal chart premise is hidden here.
-
-Everything below is deterministic.  In particular, there is no probability
-axiom, concentration statement, or assumed final information convergence.
--/
+/-! Supporting definitions and proved lemmas used by the manuscript. -/
 
 namespace QubitOracle.Paper
 
@@ -337,58 +317,8 @@ theorem pureRotatedTangentCompleteBlockFisher_tendsto
   exact pureRotatedTangentCompleteBlockFisher_entry_tendsto
     hTruthUnit pilot i j
 
-/-- At the truth-aligned frame, the explicit approximate-axis formula is the
-exact `4 I_2` complete block already proved in the fixed-design module. -/
-theorem pureRotatedTangentCompleteBlockFisher_oracle_eq
-    (r : Fin 3 -> Real) (hTruthUnit : blochNormSq r = 1) :
-    pureRotatedTangentCompleteBlockFisher r
-        (qubitTruthAlignedHouseholderFrame r) =
-      pureTruthCompleteBlockFisher r := by
-  have ht0 := pureTruthTangentCoordinateAxis_tangent
-    r (0 : Fin 2) hTruthUnit
-  have ht1 := pureTruthTangentCoordinateAxis_tangent
-    r (1 : Fin 2) hTruthUnit
-  ext i j
-  fin_cases i <;> fin_cases j <;>
-    simp [pureRotatedTangentCompleteBlockFisher,
-      pureRotatedTangentAxisFisher,
-      qubitTruthAlignedHouseholderFrame_finTwo_axis,
-      pureTruthTangentCoordinateAxis_dot,
-      pureTruthCompleteBlockFisher_apply r hTruthUnit,
-      ht0, ht1, Fin.sum_univ_succ]
 
-/-- Matrix convergence to the exact fixed-design pure oracle block. -/
-theorem pureRotatedTangentCompleteBlockFisher_tendsto_oracle
-    {r : Fin 3 -> Real} (hTruthUnit : blochNormSq r = 1)
-    (pilot : QubitPilotFrameConvergence r) :
-    Tendsto
-      (fun n => pureRotatedTangentCompleteBlockFisher
-        r (pilot.estimatedFrame n))
-      atTop (nhds (pureTruthCompleteBlockFisher r)) := by
-  rw [← pureRotatedTangentCompleteBlockFisher_oracle_eq r hTruthUnit]
-  exact pureRotatedTangentCompleteBlockFisher_tendsto hTruthUnit pilot
 
-/-- Convergence of pure per-observation information to `2 I_2`. -/
-theorem pureRotatedTangentPerObservationInformation_tendsto
-    {r : Fin 3 -> Real} (hTruthUnit : blochNormSq r = 1)
-    (pilot : QubitPilotFrameConvergence r) :
-    Tendsto
-      (fun n => (1 / 2 : Real) •
-        pureRotatedTangentCompleteBlockFisher
-          r (pilot.estimatedFrame n))
-      atTop
-      (nhds ((1 / 2 : Real) • pureTruthCompleteBlockFisher r)) := by
-  apply tendsto_pi_nhds.2
-  intro i
-  apply tendsto_pi_nhds.2
-  intro j
-  have hEntry :=
-    pureRotatedTangentCompleteBlockFisher_entry_tendsto
-      hTruthUnit pilot i j
-  rw [pureRotatedTangentCompleteBlockFisher_oracle_eq r hTruthUnit] at hEntry
-  simpa only [Matrix.smul_apply, smul_eq_mul] using
-    Tendsto.const_mul (1 / 2 : Real)
-      hEntry
 
 /-! ## Explicit two-stage schedules -/
 
@@ -494,79 +424,10 @@ def pureTwoStageNormalizedInformation
     normalizedStageCount schedule.completeBlocks n •
       pureRotatedTangentCompleteBlockFisher r (pilot.estimatedFrame n)
 
-theorem pureTwoStageNormalizedInformation_entry_tendsto
-    (schedule : PureQubitTwoStageSchedule)
-    (pilotPerObservation : Matrix (Fin 2) (Fin 2) Real)
-    {r : Fin 3 -> Real} (hTruthUnit : blochNormSq r = 1)
-    (pilot : QubitPilotFrameConvergence r) (i j : Fin 2) :
-    Tendsto
-      (fun n => pureTwoStageNormalizedInformation
-        schedule pilotPerObservation r pilot n i j)
-      atTop
-      (nhds (((1 / 2 : Real) • pureTruthCompleteBlockFisher r) i j)) := by
-  have hpilot := Tendsto.mul_const (pilotPerObservation i j)
-    schedule.pilot_fraction_tendsto_zero
-  have hEntry :=
-    pureRotatedTangentCompleteBlockFisher_entry_tendsto
-      hTruthUnit pilot i j
-  rw [pureRotatedTangentCompleteBlockFisher_oracle_eq r hTruthUnit] at hEntry
-  have hmain := schedule.block_fraction_tendsto_one_half.mul
-    hEntry
-  simpa [pureTwoStageNormalizedInformation,
-    Matrix.add_apply, Matrix.smul_apply, smul_eq_mul] using
-    hpilot.add hmain
 
-/-- The `o(n)` pilot fraction does not change the pure normalized limit,
-which is exactly the previously computed `2 I_2` oracle matrix. -/
-theorem pureTwoStageNormalizedInformation_tendsto
-    (schedule : PureQubitTwoStageSchedule)
-    (pilotPerObservation : Matrix (Fin 2) (Fin 2) Real)
-    {r : Fin 3 -> Real} (hTruthUnit : blochNormSq r = 1)
-    (pilot : QubitPilotFrameConvergence r) :
-    Tendsto
-      (fun n => pureTwoStageNormalizedInformation
-        schedule pilotPerObservation r pilot n)
-      atTop
-      (nhds ((1 / 2 : Real) • pureTruthCompleteBlockFisher r)) := by
-  apply tendsto_pi_nhds.2
-  intro i
-  apply tendsto_pi_nhds.2
-  intro j
-  exact pureTwoStageNormalizedInformation_entry_tendsto
-    schedule pilotPerObservation hTruthUnit pilot i j
 
 namespace Label
 
-/-- Honest deterministic two-stage information endpoint.  Its premises are
-frame convergence, physical state constraints, and the two explicit schedule
-limits; neither final information convergence is a premise. -/
-theorem eq_SI_two_stage_information_convergence_qubit_reduction
-    (mixedSchedule : MixedQubitTwoStageSchedule)
-    (pureSchedule : PureQubitTwoStageSchedule)
-    (mixedPilotInformation : Matrix (Fin 3) (Fin 3) Real)
-    (purePilotInformation : Matrix (Fin 2) (Fin 2) Real)
-    {mixedDirection pureTruth : Fin 3 -> Real}
-    (mixedPilot : QubitPilotFrameConvergence mixedDirection)
-    (purePilot : QubitPilotFrameConvergence pureTruth)
-    (theta : Fin 3 -> Real) (hInterior : blochNormSq theta < 1)
-    (hPureUnit : blochNormSq pureTruth = 1) :
-    Tendsto
-        (fun n => mixedTwoStageNormalizedInformation mixedSchedule
-          mixedPilotInformation theta mixedPilot n)
-        atTop
-        (nhds ((1 / 3 : Real) •
-          mixedRotatedPauliCompleteBlockFisher theta
-            (qubitTruthAlignedHouseholderFrame mixedDirection))) ∧
-      Tendsto
-        (fun n => pureTwoStageNormalizedInformation pureSchedule
-          purePilotInformation pureTruth purePilot n)
-        atTop
-        (nhds ((1 / 2 : Real) •
-          pureTruthCompleteBlockFisher pureTruth)) := by
-  exact ⟨mixedTwoStageNormalizedInformation_tendsto mixedSchedule
-      mixedPilotInformation mixedPilot theta hInterior,
-    pureTwoStageNormalizedInformation_tendsto pureSchedule
-      purePilotInformation hPureUnit purePilot⟩
 
 end Label
 

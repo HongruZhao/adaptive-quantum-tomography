@@ -1,6 +1,10 @@
-import QubitOracle.Paper.ReferenceReflection
 import QubitOracle.AdaptiveDesign.ElementaryPVMIdentification
-
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.Paper.ElementaryPVMBases
+import QubitOracle.Paper.ElementaryReferenceAlgebra
+import QubitOracle.Paper.ProjectiveStateGeometry
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.Paper.ReferenceReflection
 /-! The explicit positive overlap and its attained lower bound, for the
 exact elementary basis family in Appendix S4.1. The normalizer is the
 sum of squares of the positive, distinct integer coordinates.

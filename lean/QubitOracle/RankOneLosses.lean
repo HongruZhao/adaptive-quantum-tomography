@@ -1,5 +1,4 @@
 import QubitOracle.TwoBasis
-
 /-!
 # Rank-one local loss geometry
 

@@ -1,5 +1,4 @@
 import Mathlib.Analysis.Normed.Group.Basic
-
 /-!
 # Consistency of nearest pure-state projection
 

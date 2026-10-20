@@ -1,6 +1,12 @@
-import QubitOracle.AdaptiveDesign.P1WeightedLimits
 import QubitOracle.Paper.P1BuresOptimality
-
+import QubitOracle.AdaptiveDesign.P1WeightedLimits
+import QubitOracle.AdaptiveDesign.P1ObservedRidge
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.AdaptiveDesign.P1WeightedGeometry
+import QubitOracle.AdaptiveDesign.P1WeightedInformation
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.MixedRotationalTarget
 /-! Exact inverse-information and least-squares sandwich identities. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted
 open QubitOracle QubitOracle.Paper Filter MeasureTheory

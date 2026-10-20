@@ -1,6 +1,17 @@
-import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.FiniteFrameCoercivity
 import QubitOracle.AdaptiveDesign.GeneralPOVMBorn
-
+import QubitOracle.AdaptiveDesign.GeneralPOVMModel
+import QubitOracle.AdaptiveDesign.GeneralPOVMTransport
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSProjection
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.TwoBasis
 /-! Fixed, true-frame coordinates for the variance calculation. These maps
 are used only in the proof; the estimator itself remains intrinsic. -/
 

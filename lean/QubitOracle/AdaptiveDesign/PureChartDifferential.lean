@@ -1,7 +1,15 @@
 import QubitOracle.AdaptiveDesign.PureChartCoverage
-import QubitOracle.AdaptiveDesign.PureSLDMetric
 import Mathlib.Analysis.Calculus.FDeriv.OfCompLeft
-
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PureAmplitudeChart
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.PureSLDMetric
+import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.RankOneLosses
+import QubitOracle.TwoBasis
 /-! Fréchet derivative of the actual normalized amplitude chart. This
 identifies the SLD normalization with the chart, rather than merely with
 an abstract linear tangent map. -/

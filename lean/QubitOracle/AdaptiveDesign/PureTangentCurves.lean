@@ -1,6 +1,8 @@
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
 import QubitOracle.AdaptiveDesign.TangentGLSRetraction
-import QubitOracle.Paper.LiteralMatrixCalculus
-
+import QubitOracle.Paper.PureStateFoundations
 /-! Every intrinsic tangent matrix is the derivative of an actual smooth
 curve of rank-one, trace-one projectors. This proves the prose assertion
 used to relate directional and coordinate SLDs in Section 2.4.

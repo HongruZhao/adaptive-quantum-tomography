@@ -1,5 +1,7 @@
+import QubitOracle.AdaptiveDesign.GlobalPFSICBornModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
 import QubitOracle.AdaptiveDesign.PVMGeometry
-
+import QubitOracle.FiniteGillMassar
 /-! A recorded random PVM setting is exactly a POVM, in Born probability.
 This proves the probabilistic implementation assertion in Section 4.2
 and Appendix S4.1, including zero probabilities and arbitrary input states.

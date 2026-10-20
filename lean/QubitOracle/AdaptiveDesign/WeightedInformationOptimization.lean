@@ -1,5 +1,4 @@
 import QubitOracle.AdaptiveDesign.GeneralWeightedOracle
-
 /-! The matrix optimization behind the weighted Gill--Massar constant.
 Positive weights have an explicit positive-definite minimizer. -/
 namespace QubitOracle.AdaptiveDesign.WeightedInformationOptimization

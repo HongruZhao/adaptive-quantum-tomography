@@ -1,5 +1,17 @@
+import QubitOracle.AdaptiveDesign.GeneralPOVMBorn
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.P2BornFisherIdentification
+import QubitOracle.AdaptiveDesign.PureAmplitudeChart
 import QubitOracle.AdaptiveDesign.PureAmplitudeLoss
-
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.RankOneLosses
+import QubitOracle.TwoBasis
 /-! The amplitude chart covers exactly the pure rays with nonzero overlap
 with its centre. In particular, the inverse used by the statistical
 endpoints is a genuine local coordinate map in both directions. -/

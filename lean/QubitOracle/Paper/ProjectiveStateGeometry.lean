@@ -1,5 +1,4 @@
 import QubitOracle.Paper.PureStateFoundations
-
 /-! Algebraic projective-state assertions in Section 2.3.
 
 The nonzero-vector quotient is Mathlib's actual `Projectivization`.

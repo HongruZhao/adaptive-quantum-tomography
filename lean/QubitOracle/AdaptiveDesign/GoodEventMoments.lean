@@ -1,6 +1,5 @@
-import QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
 import Mathlib.Topology.Order.LiminfLimsup
-
+import QubitOracle.AdaptiveDesign.AdaptiveResponseMoments
 /-! Transfer of fourth moments from a good-history bound. Exceptional
 sets may be replaced by measurable envelopes with the same outer measure. -/
 namespace QubitOracle.AdaptiveDesign.AdaptiveResponseMoments

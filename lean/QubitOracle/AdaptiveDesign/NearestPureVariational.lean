@@ -1,5 +1,9 @@
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
+import QubitOracle.AdaptiveDesign.PureMatrixController
 import QubitOracle.AdaptiveDesign.TangentGLSBounds
-
+import QubitOracle.Paper.PureStateFoundations
 /-! The exact variational meaning of the preliminary nearest-pure
 selection. For Hermitian data it maximizes the Rayleigh quotient over
 unit vectors. No positivity or spectral-gap hypothesis is used. -/

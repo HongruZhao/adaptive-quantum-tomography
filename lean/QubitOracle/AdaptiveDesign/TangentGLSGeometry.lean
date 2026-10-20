@@ -1,6 +1,10 @@
-import QubitOracle.AdaptiveDesign.TangentGLSAlgebra
 import QubitOracle.AdaptiveDesign.PureHermitianController
-
+import QubitOracle.AdaptiveDesign.TangentGLSAlgebra
+import QubitOracle.AdaptiveDesign.ExactHouseholder
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.Paper.PureStateFoundations
 /-!
 # The update h -> h + Delta h -> normalization
 

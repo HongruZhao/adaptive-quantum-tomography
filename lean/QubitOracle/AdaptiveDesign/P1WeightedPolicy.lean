@@ -1,5 +1,12 @@
+import QubitOracle.AdaptiveDesign.ExplorationRidgeConsistency
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
 import QubitOracle.AdaptiveDesign.P1WeightedController
-
+import QubitOracle.AdaptiveDesign.SequentialRidgeController
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.AdaptiveTrajectoryExperiment
+import QubitOracle.Paper.MixedProbabilityFloor
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
+import QubitOracle.Paper.P1AdaptiveRidgePolicy
 /-! Literal observed-axis ridge statistics. Both the frame and its allocation
 are recomputed only at prescribed batch boundaries; all records enter the fit. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted

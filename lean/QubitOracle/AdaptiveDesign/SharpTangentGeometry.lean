@@ -1,5 +1,16 @@
+import QubitOracle.AdaptiveDesign.GlobalPFSICHermitianModel
+import QubitOracle.AdaptiveDesign.GlobalPFSICLibrary
+import QubitOracle.AdaptiveDesign.GlobalPFSICTransport
+import QubitOracle.AdaptiveDesign.P2AdaptiveTheorem
 import QubitOracle.AdaptiveDesign.PureAmplitudeLoss
-
+import QubitOracle.AdaptiveDesign.PureMatrixController
+import QubitOracle.AdaptiveDesign.TangentGLSBounds
+import QubitOracle.AdaptiveDesign.TangentGLSCoordinates
+import QubitOracle.AdaptiveDesign.TangentGLSGeometry
+import QubitOracle.AdaptiveDesign.TangentGLSRetraction
+import QubitOracle.AdaptiveDesign.TangentGLSWeightExpansion
+import QubitOracle.Paper.PureStateFoundations
+import QubitOracle.TwoBasis
 /-! Exact Frobenius identities behind the intrinsic correction. These
 identities concern the implemented projector and normalization maps. -/
 namespace QubitOracle.AdaptiveDesign.TangentGLS

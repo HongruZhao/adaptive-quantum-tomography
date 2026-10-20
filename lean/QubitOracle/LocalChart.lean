@@ -1,5 +1,4 @@
 import Mathlib
-
 /-!
 # Normalized directional paths
 

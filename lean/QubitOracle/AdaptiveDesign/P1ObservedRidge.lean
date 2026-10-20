@@ -1,5 +1,11 @@
 import QubitOracle.AdaptiveDesign.P1WeightedMoments
-
+import QubitOracle.AdaptiveDesign.CoerciveLeastSquares
+import QubitOracle.AdaptiveDesign.P1WeightedBorn
+import QubitOracle.AdaptiveDesign.P1WeightedController
+import QubitOracle.AdaptiveDesign.P1WeightedPolicy
+import QubitOracle.FiniteGillMassar
+import QubitOracle.Paper.OneQubitLabeledThreeAxisBornKernel
+import QubitOracle.Paper.P1UniformFrameBorn
 /-! Coercivity and consistency of the observed-axis ridge normal equation.
 The Gram matrix here is the realized matrix, not its predictable average. -/
 namespace QubitOracle.AdaptiveDesign.P1Weighted
