@@ -8,7 +8,7 @@ An unknown density matrix is estimated from independently prepared copies. The m
 
 Two models are studied:
 
-- Interior mixed qubits, with Bloch parameter $\theta_0\in\mathbb R^3$ and $\|\theta_0\|<1$.
+- Interior mixed qubits, with Bloch parameter $\theta_0\in\mathbb R^3$ and $\lVert\theta_0\rVert<1$.
 - Pure states in dimension $D\ge2$, represented by rank-one projectors, with real parameter dimension $2d$ and $d=D-1$.
 
 Fix positive finite batch sizes $m_1,m_2,\ldots$ in advance and write $N_j=\sum_{k=1}^j m_k$. All data collected before a batch select its measurement design. Estimation limits are taken along completed batches $n=N_j$. Single-copy updates are included. Data-dependent stopping or batching is not included by this schedule assumption.
@@ -17,13 +17,13 @@ Fix positive finite batch sizes $m_1,m_2,\ldots$ in advance and write $N_j=\sum_
 
 A safeguarded ridge least-squares estimate fitted to all accumulated observations selects the measurement axes and supplies the reported estimate. The Bures rule uses equal allocation over three orthogonal axes. The Frobenius rule also adapts the radial-versus-transverse allocation. A real Householder construction specifies the Bloch axes; it is not itself a physical two-dimensional qubit gate.
 
-Let $H=H(\theta_0)$ be the symmetric logarithmic derivative quantum Fisher information and let $s_0=\sqrt{1-\|\theta_0\|^2}$. The limiting classical information targets are
+Let $H=H(\theta_0)$ be the symmetric logarithmic derivative quantum Fisher information and let $s_0=\sqrt{1-\lVert\theta_0\rVert^2}$. The limiting classical information targets are
 
-$$
+```math
 \mathcal I_B^\star=H/3,
 \qquad
 \mathcal I_F^\star=H^{1/2}/(2+s_0).
-$$
+```
 
 The procedures are strongly consistent, their conditional information converges to the corresponding target, and their reported estimates are asymptotically normal with covariance $(\mathcal I_L^\star)^{-1}$. The conclusions include the maximally mixed state. These allocations have established precedents; the paper analyzes the specified repeatedly updated ridge procedures rather than claiming invention of their information targets.
 
@@ -35,9 +35,9 @@ At a reporting horizon, inverse-probability weighted least squares on the fitted
 
 The preliminary and corrected projectors are strongly consistent, and conditional information converges to $H/2$ in any fixed local coordinates. The corrected estimator has limiting covariance
 
-$$
+```math
 \Sigma=2H^{-1}=(H/2)^{-1}.
-$$
+```
 
 In Frobenius-orthonormal tangent coordinates, this covariance is the identity; in the normalized amplitude coordinates used in the paper, it is twice the identity. These statements use different coordinate normalizations of the same limit.
 
@@ -47,19 +47,19 @@ Optimal measurement information alone does not make the unweighted preliminary f
 
 For either model, let $W\succeq0$ be the coordinate loss weight and $H\succ0$ the quantum information at the truth. Under the conditional-likelihood assumptions in main Appendix B, any finite-valued coordinate estimator $T_n$ locally unbiased at $\theta_0$ satisfies, for every $n\ge1$,
 
-$$
+```math
 n\,\mathbb E_{\theta_0}
 \left[(T_n-\theta_0)^{\mathsf T}W(T_n-\theta_0)\right]
 \ge C_{\mathrm{GM}}(W,H),
-$$
+```
 
 where
 
-$$
+```math
 C_{\mathrm{GM}}(W,H)
 =\frac{\left[\operatorname{tr}\!\left\{
 (H^{-1/2}WH^{-1/2})^{1/2}\right\}\right]^2}{D-1}.
-$$
+```
 
 The policy may select any finite single-copy POVM as a parameter-independent function of the complete past records. Random setting choice is included by recording the setting and readout together. The bound also permits singular $W$ and does not require inversion of the classical record information.
 

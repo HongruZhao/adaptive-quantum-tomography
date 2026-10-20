@@ -10,11 +10,11 @@ A good measurement design and an efficient estimator are different requirements.
 
 Writing $\mathcal I^\star$ for the limiting single-copy information in the same local coordinates as the parameter $\theta$, the reported estimator satisfies
 
-$$
+```math
 \sqrt n(\widehat\theta_n-\theta_0)
 \;\Longrightarrow\;
 \mathcal N\!\left(0,(\mathcal I^\star)^{-1}\right).
-$$
+```
 
 The conclusions are pointwise at each fixed truth and dimension. Measurements may be updated after any predetermined positive finite batch sizes; reporting limits are taken at completed batches. Proved moment bounds also give the corresponding expected squared Bures and Frobenius loss limits. These are not uniform minimax or finite-sample optimality claims.
 
