@@ -1,6 +1,6 @@
 # Adaptive quantum tomography: simulations
 
-Python implementation of Algorithms 1–3 for **Adaptive quantum tomography by least squares with optimal asymptotic covariance**, by Hongru Zhao and Robert Oliver VandenBerg. The [main paper](../ejs_main.pdf) has 34 pages. This repository is private.
+Python implementation of Algorithms 1–3 for **Adaptive quantum tomography by least squares with optimal asymptotic covariance**, by Hongru Zhao and Robert Oliver VandenBerg. The [main paper](../ejs_main.pdf) has 34 pages.
 
 ## Install and test
 
