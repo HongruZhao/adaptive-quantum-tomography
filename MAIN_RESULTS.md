@@ -265,4 +265,4 @@ The [correspondence ledger](lean/docs/MAIN_PAPER_CORRESPONDENCE.json) has 43 cla
 
 The distributed mathematical proof tree contains no scientific input axioms or unfinished proof placeholders. All retained mathematical declarations depend only on `propext`, `Classical.choice` and `Quot.sound`. This verifies the documented Lean statements under their explicit hypotheses. The current supplementary lemmas use those specialized scopes, with component correspondence reviewed separately. See [LEAN_FORMALIZATION.md](LEAN_FORMALIZATION.md) for that distinction and reproduction commands.
 
-The repository is private. Public GitHub or Zenodo release requires explicit author approval.
+The versioned [Lean-only source archive](https://doi.org/10.5281/zenodo.23523803) accompanies the proof sources and verification reports in this repository.

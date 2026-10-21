@@ -50,7 +50,7 @@
     }
   ],
   "protected_Lean_code_and_build_input_files": 276,
-  "publication_authorized": false,
+  "publication_authorized": true,
   "simulation_code_configs_and_data_unchanged": true,
   "status": "PASS",
   "supplement_pages": 26,

@@ -31,4 +31,4 @@ LAKE_ARTIFACT_CACHE=false python3 -B scripts/verify.py --cache --replay
 
 The second command requires an empty project build directory; `--incremental` permits and records reuse. It writes new timestamped reports to `verification/reproduction/`. The toolchain is Lean v4.33.0-rc2 with Mathlib commit `641fbd329d4ffb62bef83c51f54088469056bd36`.
 
-This repository is private. Public GitHub or Zenodo release requires explicit author approval.
+The corresponding Lean-only source archive is available on [Zenodo](https://doi.org/10.5281/zenodo.23523803).

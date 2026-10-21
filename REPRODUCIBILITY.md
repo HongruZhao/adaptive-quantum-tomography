@@ -1,6 +1,6 @@
 # Reproducibility
 
-The [main paper](ejs_main.pdf), Lean proofs and Python experiments are available to authorized collaborators in this private repository. Proof checking, numerical tests, fresh sampling and saved-data plotting establish different facts.
+The [main paper](ejs_main.pdf), Lean proofs and Python experiments are available in this repository. Proof checking, numerical tests, fresh sampling and saved-data plotting establish different facts.
 
 ## Lean
 

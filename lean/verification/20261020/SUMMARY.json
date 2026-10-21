@@ -22,7 +22,7 @@
   "preserved_original_declaration_blocks": 2268,
   "preserved_supplement_declaration_types": 131,
   "project_import_bindings_checked": 10369,
-  "public_release_authorized": false,
+  "public_release_authorized": true,
   "replayed_modules": [
     "MainPaper",
     "MainPaperAudit",

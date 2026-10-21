@@ -32,4 +32,4 @@ The defaults are `MainPaperAudit` and `SupplementAudit`; all distributed modules
 
 Lean **v4.33.0-rc2** and Mathlib **641fbd329d4ffb62bef83c51f54088469056bd36** are pinned. Project proof objects and upstream caches are not distributed. The only transitive axioms of retained mathematical declarations are `propext`, `Classical.choice` and `Quot.sound`.
 
-The current supplement uses the fixed selection, almost-sure consistency and actual-procedure cases represented by the unchanged Lean code; the scope audit distinguishes component proofs from combined endpoints. Lean does not verify the companion Python program. The repository and prepared Zenodo archive require explicit author approval before public release. The code retains its MIT license.
+The current supplement uses the fixed selection, almost-sure consistency and actual-procedure cases represented by the unchanged Lean code; the scope audit distinguishes component proofs from combined endpoints. Lean does not verify the companion Python program. The versioned Lean-only source archive is available on [Zenodo](https://doi.org/10.5281/zenodo.23523803). The code retains its MIT license.

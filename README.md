@@ -2,7 +2,7 @@
 
 Lean proofs and Python simulations accompanying **Adaptive quantum tomography by least squares with optimal asymptotic covariance**, by **Hongru Zhao** and **Robert Oliver VandenBerg**.
 
-**[Read the main paper](https://github.com/HongruZhao/adaptive-quantum-tomography/blob/main/ejs_main.pdf).** This repository is private. Public release of this repository or a Zenodo record requires the authors' explicit approval. The supplement PDF is not hosted here.
+**[Read the main paper](https://github.com/HongruZhao/adaptive-quantum-tomography/blob/main/ejs_main.pdf).** This repository contains the manuscript, Lean formalization and reproducible Python simulations. The versioned [Lean-only archive](https://doi.org/10.5281/zenodo.23523803) is deposited on Zenodo.
 
 The paper studies interior mixed qubits and pure states in fixed finite dimension. Learning a loss-optimal measurement design and estimating the state efficiently are separate tasks. The pure-state procedure uses a tangent-space correction to achieve inverse-information covariance.
 

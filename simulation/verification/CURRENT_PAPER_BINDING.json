@@ -1,12 +1,13 @@
 {
   "abstract_words": 194,
   "all_numerical_inputs_unchanged": true,
+  "code_availability_updated_for_public_release": true,
   "date": "2026-10-20",
   "fresh_full_run_evidence": "20261020/FULL_RUN_RECEIPT.json",
   "main_pages": 34,
   "main_pdf": "../../ejs_main.pdf",
-  "main_pdf_pixel_identical_to_previous": true,
-  "main_pdf_sha256": "7366aebf1080b9738ec7ed7f0ad1e10cb64c119008a34e7cf9b405d97365e9d4",
+  "main_pdf_pixel_identical_to_previous": false,
+  "main_pdf_sha256": "6757faebc34af7c7bb1b3c8764d2ca36e8dcf6fcd62881fb90540e3cfd80c318",
   "main_scientific_sources_unchanged": true,
   "numerical_input_sha256": {
     "configs/historical_full_run_20261017.json": "9fc225bc2e0605f4c44378ebf697b302707fd97fb674c3741ac55bf1c407f5be",
@@ -28,5 +29,6 @@
     "tests/test_growing_batches.py": "4010ac9130007489d29d93c813e794a02e7aa3859ee8dccb73ec94ace29c59f6",
     "tests/test_paper_algorithms.py": "b9075108f431f1916cdbbf9db73ab159d58875be7d26e9bfdbd3342c55e2ce1e"
   },
+  "paper_change_scope": "Code availability paragraph and archive DOI only; numerical study, algorithms, results and figure inputs unchanged.",
   "typesetting_update_is_not_a_new_full_simulation": true
 }

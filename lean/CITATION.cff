@@ -7,7 +7,9 @@ authors:
   - family-names: Zhao
     given-names: Hongru
 version: "2026.10.20"
-date-released: 2026-10-20
+doi: "10.5281/zenodo.23523803"
+url: "https://doi.org/10.5281/zenodo.23523803"
+date-released: 2026-10-21
 license: MIT
 
 preferred-citation:
@@ -19,3 +21,4 @@ preferred-citation:
     - family-names: VandenBerg
       given-names: Robert Oliver
   year: 2026
+  url: "https://github.com/HongruZhao/adaptive-quantum-tomography/blob/main/ejs_main.pdf"

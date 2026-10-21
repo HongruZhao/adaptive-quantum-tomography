@@ -41,4 +41,4 @@ A fresh run rejects existing project proof objects. `--incremental` permits thei
 
 The toolchain is Lean **v4.33.0-rc2**, with Mathlib commit **641fbd329d4ffb62bef83c51f54088469056bd36**. The theorem statements and hypotheses are preserved. Import cleanup and removal of unused declarations do not establish additional mathematical claims.
 
-Lean verification does not cover the Python implementation, random-number generators, physical apparatus, runtime, bibliography or priority claims. The repository and prepared Lean-only Zenodo archive require explicit author approval before public release.
+Lean verification does not cover the Python implementation, random-number generators, physical apparatus, runtime, bibliography or priority claims. The versioned Lean-only source archive is available on [Zenodo](https://doi.org/10.5281/zenodo.23523803).
