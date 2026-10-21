@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "Please cite the accompanying paper when using these proof sources."
-title: "Adaptive quantum tomography by least squares with optimal asymptotic covariance: Lean formalization"
+title: 'Lean Verification for "Adaptive quantum tomography by least squares with optimal asymptotic covariance"'
 type: software
 repository-code: "https://github.com/HongruZhao/adaptive-quantum-tomography"
 authors:

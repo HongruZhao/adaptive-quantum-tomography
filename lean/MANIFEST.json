@@ -4,7 +4,7 @@
   "public_release_authorized": true,
   "sha256": {
     ".gitignore": "917fbd845d40e4f6fdc7190d5a5a98e895e9d9ac5287107daf511ae3b956ed45",
-    "CITATION.cff": "5c268ec78fd5914c74653dcd52768992da4413db4ded0cf312807f8c85e79929",
+    "CITATION.cff": "a23ac00bee471e5acbaeaeec1e820db9ee44b40f913a72e86ba67aea47a381d1",
     "LICENSE": "72380798af61d6131287b0dd3c8dc5345535df641002fece3a02d7ef109c5f8e",
     "MainPaper.lean": "8656331e8a7c147946c9cab2e197e3a99857b1514cdf099c5db8fee18951c281",
     "MainPaperAudit.lean": "f63df02e9ce0f219fdae669cf684d70a17ae45f3eb5be682a5639d7fa334aeaa",
